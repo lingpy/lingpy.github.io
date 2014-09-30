@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.3',
+        VERSION:     '2.4.dev',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -53,6 +53,9 @@ LingPy
  
       </ul>
     </div>
+
+<br/><p>This documentation is for version <b>2.4.dev</b>, which is
+  not released yet.</p>
 
   
 
@@ -785,7 +788,7 @@ stored in the attribute <tt class="docutils literal"><span class="pre">swap_inde
 
 <dl class="function">
 <dt id="lingpy.align.multiple.mult_align">
-<tt class="descclassname">lingpy.align.multiple.</tt><tt class="descname">mult_align</tt><big>(</big><em>seqs</em>, <em>gop=-1</em>, <em>scale=0.5</em>, <em>tree_calc='upgma'</em>, <em>pprint=False</em><big>)</big><a class="headerlink" href="#lingpy.align.multiple.mult_align" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">lingpy.align.multiple.</tt><tt class="descname">mult_align</tt><big>(</big><em>seqs</em>, <em>gop=-1</em>, <em>scale=0.5</em>, <em>tree_calc='upgma'</em>, <em>scoredict=False</em>, <em>pprint=False</em><big>)</big><a class="headerlink" href="#lingpy.align.multiple.mult_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>A short-cut method for multiple alignment analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1381,7 +1384,7 @@ the analysis.</p>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.get_consensus">
-<tt class="descname">get_consensus</tt><big>(</big><em>tree=False</em>, <em>gaps=False</em>, <em>classes=False</em>, <em>consensus='consensus'</em>, <em>counterpart='ipa'</em>, <em>weights=</em>, <span class="optional">[</span><span class="optional">]</span><em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_consensus</tt><big>(</big><em>tree=False</em>, <em>gaps=False</em>, <em>classes=False</em>, <em>consensus='consensus'</em>, <em>counterpart='ipa'</em>, <em>weights=[]</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of all MSAs in the wordlist.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1501,9 +1504,15 @@ diphtongs, or whether they should be kept separated during the
 analysis.</p>
 </div></blockquote>
 <p><strong>comment</strong> : char (default=&#8217;#&#8217;)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The comment character which, inserted in the beginning of a line,
 prevents that line from being read.</p>
+</div></blockquote>
+<p><strong>normalize</strong> : bool (default=True)</p>
+<blockquote class="last">
+<div><p>Normalize the alignment, that is, add gap characters for all sequences
+which are shorter than the longest sequence, and delete all columns
+from the alignment in which only gaps occur.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1821,7 +1830,7 @@ excluded.</p>
 
 
   <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

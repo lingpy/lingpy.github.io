@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.3',
+        VERSION:     '2.4.dev',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -53,6 +53,9 @@ LingPy
  
       </ul>
     </div>
+
+<br/><p>This documentation is for version <b>2.4.dev</b>, which is
+  not released yet.</p>
 
   
 
@@ -173,8 +176,14 @@ out.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.read.csv.csv2multidict">
+<tt class="descclassname">lingpy.read.csv.</tt><tt class="descname">csv2multidict</tt><big>(</big><em>filename</em>, <em>comment='#'</em>, <em>sep='\t'</em><big>)</big><a class="headerlink" href="#lingpy.read.csv.csv2multidict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function reads a csv-file into a multi-dimensional dictionary structure.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.read.csv.read_asjp">
-<tt class="descclassname">lingpy.read.csv.</tt><tt class="descname">read_asjp</tt><big>(</big><em>infile</em>, <em>family='Indo-European'</em>, <em>classification='hh'</em>, <em>max_synonyms=2</em>, <em>min_population=&lt;function &lt;lambda&gt; at 0x7ffe8517e510&gt;</em>, <em>merge_vowels=True</em>, <em>evaluate=False</em><big>)</big><a class="headerlink" href="#lingpy.read.csv.read_asjp" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">lingpy.read.csv.</tt><tt class="descname">read_asjp</tt><big>(</big><em>infile</em>, <em>family='Indo-European'</em>, <em>classification='hh'</em>, <em>max_synonyms=2</em>, <em>min_population=&lt;function &lt;lambda&gt; at 0x7f2553a13e18&gt;</em>, <em>merge_vowels=True</em>, <em>evaluate=False</em><big>)</big><a class="headerlink" href="#lingpy.read.csv.read_asjp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -261,13 +270,22 @@ ignored.</p>
 <span id="qlc-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">qlc</span></tt> Module<a class="headerlink" href="#module-lingpy.read.qlc" title="Permalink to this headline">¶</a></h2>
 <p>Module provides basic functions for the reading of text files in QLC format.</p>
 <dl class="function">
+<dt id="lingpy.read.qlc.normalize_alignment">
+<tt class="descclassname">lingpy.read.qlc.</tt><tt class="descname">normalize_alignment</tt><big>(</big><em>alignment</em><big>)</big><a class="headerlink" href="#lingpy.read.qlc.normalize_alignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function normalizes an alignment.</p>
+<p>Normalization here means that columns consisting only of gaps will be
+deleted, and all sequences will be stretched to equal length by adding
+additional gap characters in the end of smaller sequences.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.read.qlc.qlc2dict">
 <tt class="descclassname">lingpy.read.qlc.</tt><tt class="descname">qlc2dict</tt><big>(</big><em>infile</em><big>)</big><a class="headerlink" href="#lingpy.read.qlc.qlc2dict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.read.qlc.read_msa">
-<tt class="descclassname">lingpy.read.qlc.</tt><tt class="descname">read_msa</tt><big>(</big><em>infile</em>, <em>comment='#'</em>, <em>ids=False</em>, <em>header=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.read.qlc.read_msa" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">lingpy.read.qlc.</tt><tt class="descname">read_msa</tt><big>(</big><em>infile</em>, <em>comment='#'</em>, <em>ids=False</em>, <em>header=True</em>, <em>normalize=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.read.qlc.read_msa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simple function to load an MSA object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -406,7 +424,7 @@ of the input file. The header is given 0 as a specific key.</p>
 
 
   <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

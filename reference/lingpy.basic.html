@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.3',
+        VERSION:     '2.4.dev',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -53,6 +53,9 @@ LingPy
  
       </ul>
     </div>
+
+<br/><p>This documentation is for version <b>2.4.dev</b>, which is
+  not released yet.</p>
 
   
 
@@ -303,7 +306,7 @@ input data into IPA tokens.</p>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.clean_taxnames">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">clean_taxnames</tt><big>(</big><em>wordlist</em>, <em>column='doculect'</em>, <em>f=&lt;function &lt;lambda&gt; at 0x7ffe851080d0&gt;</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">clean_taxnames</tt><big>(</big><em>wordlist</em>, <em>column='doculect'</em>, <em>f=&lt;function &lt;lambda&gt; at 0x7f2553988ae8&gt;</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function cleans taxon names in order to make sure they can be used in Newick files.</p>
 </dd></dl>
 
@@ -311,6 +314,28 @@ input data into IPA tokens.</p>
 <dt id="lingpy.basic.ops.renumber">
 <tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">renumber</tt><big>(</big><em>wordlist</em>, <em>source</em>, <em>target=''</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.renumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create numerical identifiers from string identifiers.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.basic.ops.triple2tsv">
+<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">triple2tsv</tt><big>(</big><em>infile</em>, <em>output='table'</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.triple2tsv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function reads in a triple file and converts it to a tabular data structure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.basic.ops.tsv2triple">
+<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">tsv2triple</tt><big>(</big><em>wordlist</em>, <em>outfile</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.tsv2triple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function converts a wordlist to a triple data structure.</p>
+<p class="rubric">Notes</p>
+<dl class="docutils">
+<dt>The basic values of which the triples consist are:</dt>
+<dd><ul class="first last simple">
+<li>ID (the ID in the TSV file)</li>
+<li>COLUMN (the column in the TSV file)</li>
+<li>VALUE (the entry in the TSV file)</li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -426,13 +451,13 @@ given a spreadsheet matrix.</p>
 
 <dl class="method">
 <dt id="lingpy.basic.spreadsheet.Spreadsheet.pprint">
-<tt class="descname">pprint</tt><big>(</big><em>matrix</em>, <em>delimit='t'</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.pprint" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pprint</tt><big>(</big><em>matrix</em>, <em>delimit='\t'</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.pprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenice method to pretty print a 2D array.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.basic.spreadsheet.Spreadsheet.pprint_matrix">
-<tt class="descname">pprint_matrix</tt><big>(</big><em>delim='t'</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.pprint_matrix" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pprint_matrix</tt><big>(</big><em>delim='\t'</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.pprint_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pretty print the spreadsheet matrix</p>
 </dd></dl>
 
@@ -1015,7 +1040,7 @@ input data into IPA tokens.</p>
 
 
   <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.3',
+        VERSION:     '2.4.dev',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -53,6 +53,9 @@ LingPy
  
       </ul>
     </div>
+
+<br/><p>This documentation is for version <b>2.4.dev</b>, which is
+  not released yet.</p>
 
   
 
@@ -176,6 +179,11 @@ stems for model parameterisation should be done using the
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.bifurcating">
 <tt class="descname">bifurcating</tt><big>(</big><em>constructor=None</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.bifurcating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.compareByPartitions">
+<tt class="descname">compareByPartitions</tt><big>(</big><em>other</em>, <em>debug=False</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.compareByPartitions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -389,13 +397,13 @@ tips first.</p>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.copy">
-<tt class="descname">copy</tt><big>(</big><em>memo=None</em>, <em>_nil=</em>, <span class="optional">[</span><span class="optional">]</span><em>constructor='ignored'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copy" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">copy</tt><big>(</big><em>memo=None</em>, <em>_nil=[]</em>, <em>constructor='ignored'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of self using an iterative approach</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive">
-<tt class="descname">copyRecursive</tt><big>(</big><em>memo=None</em>, <em>_nil=</em>, <span class="optional">[</span><span class="optional">]</span><em>constructor='ignored'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">copyRecursive</tt><big>(</big><em>memo=None</em>, <em>_nil=[]</em>, <em>constructor='ignored'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns copy of self&#8217;s structure, including shallow copy of attrs.</p>
 <p>constructor is ignored; required to support old tree unit tests.</p>
 </dd></dl>
@@ -412,7 +420,7 @@ faster than the copy() method.</p>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.deepcopy">
-<tt class="descname">deepcopy</tt><big>(</big><em>memo=None</em>, <em>_nil=</em>, <span class="optional">[</span><span class="optional">]</span><em>constructor='ignored'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.deepcopy" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">deepcopy</tt><big>(</big><em>memo=None</em>, <em>_nil=[]</em>, <em>constructor='ignored'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.deepcopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of self using an iterative approach</p>
 </dd></dl>
 
@@ -852,7 +860,7 @@ specific tips the distance is between</p>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.sorted">
-<tt class="descname">sorted</tt><big>(</big><em>sort_order=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.sorted" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">sorted</tt><big>(</big><em>sort_order=[]</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.sorted" title="Permalink to this definition">¶</a></dt>
 <dd><p>An equivalent tree sorted into a standard order. If this is not
 specified then alphabetical order is used.  At each node starting from
 root, the algorithm will try to put the descendant which contains the
@@ -1035,7 +1043,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
 
 
   <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

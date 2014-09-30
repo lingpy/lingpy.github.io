@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.3',
+        VERSION:     '2.4.dev',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -53,6 +53,9 @@ LingPy
  
       </ul>
     </div>
+
+<br/><p>This documentation is for version <b>2.4.dev</b>, which is
+  not released yet.</p>
 
   
 
@@ -143,8 +146,8 @@ should be either passed as lists or as tuples.</p>
 
 <dl class="class">
 <dt id="lingpy.sequence.generate.MCPhon">
-<em class="property">class </em><tt class="descclassname">lingpy.sequence.generate.</tt><tt class="descname">MCPhon</tt><big>(</big><em>words</em>, <em>tokens=False</em>, <em>prostrings=</em>, <span class="optional">[</span><span class="optional">]</span><em>classes=False</em>, <em>class_model=&lt;sca-model &quot;sca&quot;&gt;</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../docu/sequence/lingpy.sequence.generate.MCBasic.html#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.sequence.generate.MCBasic</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">lingpy.sequence.generate.</tt><tt class="descname">MCPhon</tt><big>(</big><em>words</em>, <em>tokens=False</em>, <em>prostrings=[]</em>, <em>classes=False</em>, <em>class_model=&lt;sca-model &quot;sca&quot;&gt;</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.sequence.generate.MCBasic</span></tt></a></p>
 <p>Class for the creation of phonetic sequences (&#8220;pseudo words&#8221;).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -386,6 +389,12 @@ alignment of the class string.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.sequence.sound_classes.fourgrams">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">fourgrams</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.fourgrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a given sequence into a sequence of trigrams.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.sequence.sound_classes.get_all_ngrams">
 <tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">get_all_ngrams</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns all possible n-grams of a given sequence.</p>
@@ -413,6 +422,12 @@ length.</p>
 <span class="go">[&#39;abcde&#39;, &#39;bcde&#39;, &#39;abcd&#39;, &#39;cde&#39;, &#39;abc&#39;, &#39;bcd&#39;, &#39;ab&#39;, &#39;de&#39;, &#39;cd&#39;, &#39;bc&#39;, &#39;a&#39;, &#39;e&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;]</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.get_n_ngrams">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">get_n_ngrams</tt><big>(</big><em>sequence</em>, <em>ngram=4</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.get_n_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert a given sequence into a sequence of ngrams.</p>
 </dd></dl>
 
 <dl class="function">
@@ -739,7 +754,7 @@ the gap score of a given segment in alignment analyses (see <tt class="docutils 
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>orthography_profile</strong> : string (default = None)</p>
 <blockquote class="last">
-<div><p>Filename (without extension) of the a document source-specific orthography profile and rules file.</p>
+<div><p>Filename of the a document source-specific orthography profile and rules file.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -756,7 +771,7 @@ thererfore it should be chunked as so. Given an orthography profile and
 some data to parse, the process would look like this:</p>
 <p>input string example: uubo uubo
 output string example: uu b o # uu b o</p>
-<p>See also the test_orthography script in lingpy/scripts/orthography/</p>
+<p>See also the tokenizer examples in lingpy/scripts/tokenize</p>
 <p>Additionally, the Tokenizer provides functionality to transform graphemes 
 into associated character(s) specified in additional columns in the orthography 
 profile. A dictionary is created that keeps a mapping between source-specific 
@@ -785,6 +800,18 @@ expressions, e.g. this rule replaces a vowel followed by an &lt;n&gt;
 followed by &lt;space&gt; followed by a second vowel with first vowel 
 &lt;space&gt; &lt;n&gt; &lt;space&gt; second vowel, e.g.:</p>
 <p>([a|á|e|é|i|í|o|ó|u|ú])(n)(s)([a|á|e|é|i|í|o|ó|u|ú]),   </p>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence.tokenizer</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">(</span><span class="s">&quot;test.prf&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s">&quot;baach&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">characters</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+<span class="go">b a a c h</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">graphemes</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+<span class="go">b aa ch</span>
+<span class="go">    &gt;&gt;&gt; print(t.transform(word, &quot;ipa&quot;))</span>
+<span class="go">    b aː tʃ    </span>
+</pre></div>
+</div>
 <dl class="method">
 <dt id="lingpy.sequence.tokenizer.Tokenizer.characters">
 <tt class="descname">characters</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.characters" title="Permalink to this definition">¶</a></dt>
@@ -845,14 +872,30 @@ group Unicode modifier letters with their preceeding base characters.</p>
 <dd><p>Given a string tokenized into characters, return a characters
 tokenized string where each character missing from the orthography 
 profile is replaced with a question mark &lt;?&gt;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>A character tokenized string.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>Result of the tokenization.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters">
 <tt class="descname">grapheme_clusters</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters" title="Permalink to this definition">¶</a></dt>
-<dd><p>See: Unicode Standard Annex #29: UNICODE TEXT SEGMENTATION
-<a class="reference external" href="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</a></p>
-<p>Given a string as input, return a space-delimited string of Unicode graphemes using the &#8220;X&#8221; regular expression.</p>
+<dd><p>Given a string as input, return a space-delimited string of Unicode graphemes using the &#8220;X&#8221; regular expression.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -874,6 +917,8 @@ The string is in NFD.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>Input is first normalized according to Normalization Ford D(ecomposition).</p>
+<p>See: Unicode Standard Annex #29: UNICODE TEXT SEGMENTATION
+<a class="reference external" href="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</a></p>
 </dd></dl>
 
 <dl class="method">
@@ -962,8 +1007,7 @@ or rules.</p>
 <dl class="method">
 <dt id="lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa">
 <tt class="descname">tokenize_ipa</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa" title="Permalink to this definition">¶</a></dt>
-<dd><p>Experimental method for tokenizing IPA.</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.sequence.tokenizer.Tokenizer.transform">
@@ -1000,6 +1044,24 @@ profile grapheme tokenized string.</p>
 <tt class="descname">transform_rules</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.transform_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience function that first tokenizes a string into orthographic profile-
 specified graphemes and then applies the orthography profile rules.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>The input string to be transformed.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>Result of the transformation.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -1142,7 +1204,7 @@ specified graphemes and then applies the orthography profile rules.</p>
 
 
   <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.3',
+        VERSION:     '2.4.dev',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -54,6 +54,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.4.dev</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -82,9 +85,15 @@ diphtongs, or whether they should be kept separated during the
 analysis.</p>
 </div></blockquote>
 <p><strong>comment</strong> : char (default=&#8217;#&#8217;)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The comment character which, inserted in the beginning of a line,
 prevents that line from being read.</p>
+</div></blockquote>
+<p><strong>normalize</strong> : bool (default=True)</p>
+<blockquote class="last">
+<div><p>Normalize the alignment, that is, add gap characters for all sequences
+which are shorter than the longest sequence, and delete all columns
+from the alignment in which only gaps occur.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -229,7 +238,7 @@ class.</p>
 
 
   <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
