@@ -1,0 +1,1167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sequence Package &mdash; LingPy</title>
+    
+    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="top" title="LingPy" href="../index.html" />
+<link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+
+  </head>
+  <body>
+<div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
+LingPy
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sequence-package">
+<h1>sequence Package<a class="headerlink" href="#sequence-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">sequence</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-lingpy.sequence"></span><p>Module provides methods and functions for dealing with linguistic sequences.</p>
+<dl class="function">
+<dt id="lingpy.sequence.tokenize">
+<tt class="descclassname">lingpy.sequence.</tt><tt class="descname">tokenize</tt><big>(</big><em>sequence</em>, <em>orthography='fuzzy'</em>, <em>model=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : str</p>
+<blockquote>
+<div><p>The input sequence that shall be tokenized.</p>
+</div></blockquote>
+<p><strong>orthography</strong> : {&#8220;asjp&#8221;,&#8221;fyzzy_ipa&#8221;,&#8221;plain_ipa&#8221;}(default=&#8221;fuzzy_ipa&#8221;)</p>
+<blockquote>
+<div><p>The name of the orthography that is assumed for the input string.</p>
+</div></blockquote>
+<p><strong>model</strong> : {&#8220;sca&#8221;,&#8221;dolgo&#8221;,&#8221;asjp&#8221;}</p>
+<blockquote>
+<div><p>The name of the sound-class model according to whicht the string shall
+be converted.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Specify, whether vowels shall be merged (only works with &#8220;asjp&#8221; and
+&#8220;ipa&#8221; as orthography).</p>
+</div></blockquote>
+<p><strong>tokenizer</strong> : &#8220;str&#8221;</p>
+<blockquote class="last">
+<div><p>Name of the orthography profile that shall be used for tokenization
+(does currently not support the conversion into sound class models).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seq</span> <span class="o">=</span> <span class="s">&quot;p͡fyt͡sə&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenize</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<span class="go">[&#39;p͡f&#39;, &#39;y&#39;, &#39;t͡s&#39;, &#39;ə&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenize</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">model</span><span class="o">=</span><span class="s">&#39;sca&#39;</span><span class="p">)</span>
+<span class="go">[&#39;B&#39;, &#39;Y&#39;, &#39;C&#39;, &#39;E&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.sequence.generate">
+<span id="generate-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">generate</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.generate" title="Permalink to this headline">¶</a></h2>
+<p>Module provides simple basic classes for sequence generation using Markov models.</p>
+<dl class="class">
+<dt id="lingpy.sequence.generate.MCBasic">
+<em class="property">class </em><tt class="descclassname">lingpy.sequence.generate.</tt><tt class="descname">MCBasic</tt><big>(</big><em>seqs</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Basic class for creating Markov chains from sequence training data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seq</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of sequences. Sequences are assumed to be tokenized, i.e. they
+should be either passed as lists or as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lingpy.sequence.generate.MCBasic.walk">
+<tt class="descname">walk</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCBasic.walk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create random sequence from the distribution.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.sequence.generate.MCPhon">
+<em class="property">class </em><tt class="descclassname">lingpy.sequence.generate.</tt><tt class="descname">MCPhon</tt><big>(</big><em>words</em>, <em>tokens=False</em>, <em>prostrings=</em>, <span class="optional">[</span><span class="optional">]</span><em>classes=False</em>, <em>class_model=&lt;sca-model &quot;sca&quot;&gt;</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.sequence.generate.MCBasic</span></tt></a></p>
+<p>Class for the creation of phonetic sequences (&#8220;pseudo words&#8221;).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>words</strong> : list</p>
+<blockquote>
+<div><p>List of phonetic sequences. This list can contain tokenized
+sequences (lists or tuples), or simple untokenized IPA strings.</p>
+</div></blockquote>
+<p><strong>tokens</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>If set to True, no tokenization of input sequences is carried out.</p>
+</div></blockquote>
+<p><strong>prostring</strong> : list (default=[])</p>
+<blockquote class="last">
+<div><p>List containing the prosodic profiles of the input sequences. If the
+list is empty, the profiles are generated automatically.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lingpy.sequence.generate.MCPhon.evaluate_string">
+<tt class="descname">evaluate_string</tt><big>(</big><em>string</em>, <em>tokens=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.evaluate_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.generate.MCPhon.get_string">
+<tt class="descname">get_string</tt><big>(</big><em>new=True</em>, <em>tokens=False</em>, <em>**keywordstokens2class</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.get_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a string from the Markov chain created from the training data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>new</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Determine whether the string created should be different from the
+training data or not.</p>
+</div></blockquote>
+<p><strong>tokens</strong> : bool (default=False)</p>
+<blockquote class="last">
+<div><p>If set to <em>True</em> he full list of tokens that was internally used to
+represent the sequences as a Markov chain is returned.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.sequence.ngram">
+<span id="ngram-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">ngram</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.ngram" title="Permalink to this headline">¶</a></h2>
+<p>This module provides some basic ngram functions, such as parsing QLC-string formatted strings into ngrams sequences and generating unigram models for intial orthography profiles.</p>
+<dl class="function">
+<dt id="lingpy.sequence.ngram.character_model">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">character_model</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.character_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method counts characters and their frequences given a list of words.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.extended_unicode_model">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">extended_unicode_model</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.extended_unicode_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes as input a list of QLC-formatted words and outputs a unigram model.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.formatted_string_from_ngrams">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">formatted_string_from_ngrams</tt><big>(</big><em>ngrams_tuple</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.formatted_string_from_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a tuple of tuples to a list of strings, and return joined string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.ngrams_from_graphemes">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">ngrams_from_graphemes</tt><big>(</big><em>graphemes</em>, <em>n=1</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.ngrams_from_graphemes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a tuple of (orthographically parsed) graphemes and returns a tuple of ngrams.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>graphemes</strong> : tuple</p>
+<blockquote>
+<div><p>a tuple of grapheme strings from which the tuple of ngrams is extracted</p>
+</div></blockquote>
+<p><strong>n</strong> : int (default = 1)</p>
+<blockquote class="last">
+<div><p>the number of graphemes that have to be looked at for the ngram</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Default is 1 ngram, i.e. methods will return a tuple of unigrams.</p>
+<p>Note: a word in a dataset should never have less than three elements, 
+e.g. if a word is composed of only one sound (represented by one grapheme, 
+then with the word boundaries (&#8220;#&#8221;), the length of the word should 
+be at least 3: &#8220;#u#&#8221;. Therefore a tuple of length three will be returned: 
+(&#8220;#&#8221;, &#8220;u&#8221;, &#8220;#&#8221;). This script will fail if the input tuple is length less 
+than 3.</p>
+<p>Note also that one element tuples (as casted from a list) contain a comma, e.g.:
+&gt;&gt;&gt; l = [&#8220;1&#8221;]
+&gt;&gt;&gt; print tuple(l)
+(&#8216;1&#8217;,)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.split_formatted_string_from_ngrams">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">split_formatted_string_from_ngrams</tt><big>(</big><em>ngrams_tuple</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.split_formatted_string_from_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a tuple of tuples to a list of strings, split on unigrams, and return joined string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.unicode_categories">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">unicode_categories</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.unicode_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of unicode categories and their characters, e.g.</p>
+<p>Ll (Letter, Lowercase): a, b, c, d, e...
+Lm (Letter, Modifier): &#8216;, :, ...</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.unigram_model">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">unigram_model</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.unigram_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes as input a list of QLC tokenized words and outputs a unigram model.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.words_ngrams_list_for_graphemes_list">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">words_ngrams_list_for_graphemes_list</tt><big>(</big><em>graphemes_list</em>, <em>n=1</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.words_ngrams_list_for_graphemes_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngram.words_ngrams_matrix_for_graphemes_list">
+<tt class="descclassname">lingpy.sequence.ngram.</tt><tt class="descname">words_ngrams_matrix_for_graphemes_list</tt><big>(</big><em>graphemes_list</em>, <em>n=1</em><big>)</big><a class="headerlink" href="#lingpy.sequence.ngram.words_ngrams_matrix_for_graphemes_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Goes through the list of graphemes and gathers all the ngrams</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>grapheme_list: list of strings</strong> :</p>
+<blockquote>
+<div><p>a list of strings from which the list of ngrams is extracted</p>
+</div></blockquote>
+<p><strong>n: integer</strong> :</p>
+<blockquote>
+<div><p>the number of graphemes that have to be looked at for the ngram
+default: n = 2 (bigram mode)</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>row_names: list</strong> :</p>
+<blockquote>
+<div><p>list of strings from the input list (row names of the matrix)</p>
+</div></blockquote>
+<p><strong>ngrams_list: list</strong> :</p>
+<blockquote>
+<div><p>list of ngrams that occur in the matrix</p>
+</div></blockquote>
+<p><strong>matrix: array</strong> :</p>
+<blockquote class="last">
+<div><p>a matrix of ngrams with the list of graphemes as its rows, the
+list of n-grams as its columns and the counts of each ngram for
+the respective word in the cells</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.sequence.sound_classes">
+<span id="sound-classes-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">sound_classes</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
+<p>Module provides various methods for the handling of sound classes.</p>
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.bigrams">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">bigrams</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.bigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a given sequence into a sequence of bigrams.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.check_tokens">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">check_tokens</tt><big>(</big><em>tokens</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.check_tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function checks whether tokens are given in a consistent input format.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.class2tokens">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">class2tokens</tt><big>(</big><em>tokens</em>, <em>classes</em>, <em>gap_char='-'</em>, <em>local=False</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.class2tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn aligned sound-class sequences into an aligned sequences of IPA tokens.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tokens</strong> : list</p>
+<blockquote>
+<div><p>The list of tokens corresponding to the unaligned IPA string.</p>
+</div></blockquote>
+<p><strong>classes</strong> : string or list</p>
+<blockquote>
+<div><p>The aligned class string.</p>
+</div></blockquote>
+<p><strong>gap_char</strong> : string (default=&#8221;-&#8221;)</p>
+<blockquote>
+<div><p>The character which indicates gaps in the output string.</p>
+</div></blockquote>
+<p><strong>local</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>If set to <em>True</em> a local alignment with prefix and suffix can be
+converted.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of tokens with gaps at the positions where they occured in the
+alignment of the class string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><tt class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></tt></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><tt class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></tt></a></p>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aligned_sequence</span> <span class="o">=</span> <span class="s">&#39;CU-KE&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class2tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="n">aligned_sequence</span><span class="p">))</span>
+<span class="go">t͡s, ɔy, -, ɡ, ə</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.get_all_ngrams">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">get_all_ngrams</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns all possible n-grams of a given sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : list or str</p>
+<blockquote>
+<div><p>The sequence that shall be converted into it&#8217;s ngram-representation.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of all ngrams of the input word, sorted in decreasing order of
+length.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_all_ngrams</span><span class="p">(</span><span class="s">&#39;abcde&#39;</span><span class="p">)</span>
+<span class="go">[&#39;abcde&#39;, &#39;bcde&#39;, &#39;abcd&#39;, &#39;cde&#39;, &#39;abc&#39;, &#39;bcd&#39;, &#39;ab&#39;, &#39;de&#39;, &#39;cd&#39;, &#39;bc&#39;, &#39;a&#39;, &#39;e&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.ipa2tokens">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">ipa2tokens</tt><big>(</big><em>istring</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.ipa2tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tokenize IPA-encoded strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seq</strong> : str</p>
+<blockquote>
+<div><p>The input sequence that shall be tokenized.</p>
+</div></blockquote>
+<p><strong>diacritics</strong> : {str, None} (default=None)</p>
+<blockquote>
+<div><p>A string containing all diacritics which shall be considered in the
+respective analysis. When set to <em>None</em>, the default diacritic string
+will be used.</p>
+</div></blockquote>
+<p><strong>vowels</strong> : {str, None} (default=None)</p>
+<blockquote>
+<div><p>A string containing all vowel symbols which shall be considered in the
+respective analysis. When set to <em>None</em>, the default vowel string will
+be used.</p>
+</div></blockquote>
+<p><strong>tones</strong> : {str, None} (default=None)</p>
+<blockquote>
+<div><p>A string indicating all tone letter symbals which shall be considered
+in the respective analysis. When set to <em>None</em>, the default tone string
+will be used.</p>
+</div></blockquote>
+<p><strong>combiners</strong> : str (default=&#8221;͜͡&#8221;)</p>
+<blockquote>
+<div><p>A string with characters that are used to combine two separate
+characters (compare affricates such as t͡s).</p>
+</div></blockquote>
+<p><strong>breaks</strong> : str (default=&#8221;-.&#8221;)</p>
+<blockquote>
+<div><p>A string containing the characters that indicate that a new token
+starts right after them. These can be used to indicate that two
+consecutive vowels should not be treated as diphtongs or for diacritics
+that are put before the following letter.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool</p>
+<blockquote>
+<div><p>Indicate, whether vowels should be merged into diphtongs
+(default=True), or whether each vowel symbol should be considered
+separately.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tokens</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of IPA tokens.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><tt class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></tt></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><tt class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></tt></a></p>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myseq</span> <span class="o">=</span> <span class="s">&#39;t͡sɔyɡə&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ipa2tokens</span><span class="p">(</span><span class="n">myseq</span><span class="p">)</span>
+<span class="go">[&#39;t͡s&#39;, &#39;ɔy&#39;, &#39;ɡ&#39;, &#39;ə&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.pgrams">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">pgrams</tt><big>(</big><em>sequence</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.pgrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a given sequence into bigrams consisting of prosodic string symbols and the tokens of the original sequence.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.pid">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">pid</tt><big>(</big><em>almA</em>, <em>almB</em>, <em>mode=2</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the Percentage Identity (PID) score for aligned sequence pairs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>almA, almB</strong> : string or list</p>
+<blockquote>
+<div><p>The aligned sequences which can be either a string or a list.</p>
+</div></blockquote>
+<p><strong>mode</strong> : { 1, 2, 3, 4, 5 }</p>
+<blockquote>
+<div><p>Indicate which of the four possible PID scores described in <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></tt>
+should be calculated, the fifth possibility is added for linguistic
+purposes:</p>
+<ol class="arabic simple">
+<li>identical positions / (aligned positions + internal gap positions),</li>
+<li>identical positions / aligned positions,</li>
+<li>identical positions / shortest sequence, or</li>
+<li>identical positions / shortest sequence (including internal gap
+pos.)</li>
+<li>identical positions / (aligned positions + 2 * number of gaps)</li>
+</ol>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>score</strong> : float</p>
+<blockquote class="last">
+<div><p>The PID score of the given alignment as a floating point number between
+0 and 1.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.compare.Multiple.get_pid</span></tt>, <tt class="xref py py-obj docutils literal"></tt></p>
+</div>
+<p class="rubric">Notes</p>
+<p>The PID score is a common measure for the diversity of a given alignment.
+The implementation employed by LingPy follows the description of
+<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></tt> where four different variants of PID scores are
+distinguished. Essentially, the PID score is based on the comparison of
+identical residue pairs with the total number of residue pairs in a given
+alignment.</p>
+<p class="rubric">Examples</p>
+<p>Load an alignment from the test suite.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="n">PSA</span><span class="p">(</span><span class="n">get_file</span><span class="p">(</span><span class="s">&#39;test.psa&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Extract the alignments of the first aligned sequence pair.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">,</span><span class="n">score</span> <span class="o">=</span> <span class="n">pairs</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Calculate the PID score of the alignment.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">pid</span><span class="p">(</span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">)</span>
+<span class="go">0.44444444444444442</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.prosodic_string">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">prosodic_string</tt><big>(</big><em>string</em>, <em>_output=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.prosodic_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a prosodic string of the sonority profile of a sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>prostring</strong> : string</p>
+<blockquote class="last">
+<div><p>A prosodic string corresponding to the sonority profile of the
+underlying sequence.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>A prosodic string is a sequence of specific characters which indicating
+their resprective prosodic context (see <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></tt> or
+<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></tt> for a detailed description). 
+In contrast to the previous model, the current implementation allows for a
+more fine-graded distinction between different prosodic segments. The
+current scheme distinguishes 9 prosodic positions:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">A</span></tt>: sequence-initial consonant</li>
+<li><tt class="docutils literal"><span class="pre">B</span></tt>: syllable-initial, non-sequence initial consonant in a context of
+ascending sonority</li>
+<li><tt class="docutils literal"><span class="pre">C</span></tt>: non-syllable, non-initial consonant in ascending sonority context</li>
+<li><tt class="docutils literal"><span class="pre">L</span></tt>: non-syllable-final consonant in descending environment</li>
+<li><tt class="docutils literal"><span class="pre">M</span></tt>: syllable-final consonant in descending environment</li>
+<li><tt class="docutils literal"><span class="pre">N</span></tt>: word-final consonant</li>
+<li><tt class="docutils literal"><span class="pre">X</span></tt>: first vowel in a word</li>
+<li><tt class="docutils literal"><span class="pre">Y</span></tt>: non-final vowel in a word</li>
+<li><tt class="docutils literal"><span class="pre">Z</span></tt>: vowel occuring in the last position of a word</li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_string</span><span class="p">(</span><span class="n">ipa2tokens</span><span class="p">(</span><span class="s">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
+<span class="go">&#39;AXBZ&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.prosodic_weights">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">prosodic_weights</tt><big>(</big><em>prostring</em>, <em>_transform={}</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.prosodic_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate prosodic weights for each position of a sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>prostring</strong> : string</p>
+<blockquote>
+<div><p>A prosodic string as it is returned by <a class="reference internal" href="#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><tt class="xref py py-func docutils literal"><span class="pre">prosodic_string()</span></tt></a>.</p>
+</div></blockquote>
+<p><strong>_transform</strong> : dict</p>
+<blockquote>
+<div><p>A dictionary that determines how prosodic strings should be transformed
+into prosodic weights. Use this dictionary to adjust the prosodic
+strings to your own user-defined prosodic weight schema.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>weights</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of floats reflecting the modification of the weight for each position.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><tt class="xref py py-obj docutils literal"><span class="pre">prosodic_string</span></tt></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>Prosodic weights are specific scaling factors which decrease or increase
+the gap score of a given segment in alignment analyses (see <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></tt> or
+<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></tt> for a detailed description).</p>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prostring</span> <span class="o">=</span> <span class="s">&#39;#vC&gt;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_weights</span><span class="p">(</span><span class="n">prostring</span><span class="p">)</span>
+<span class="go">[2.0, 1.3, 1.5, 0.7]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.sampa2uni">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">sampa2uni</tt><big>(</big><em>seq</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.sampa2uni" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert sequence in IPA-sampa-format to IPA-unicode.</p>
+<p class="rubric">Notes</p>
+<p>This function is based on code taken from Peter Kleiweg
+(<a class="reference external" href="http://www.let.rug.nl/~kleiweg/L04/devel/python/xsampa.html">http://www.let.rug.nl/~kleiweg/L04/devel/python/xsampa.html</a>).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.token2class">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">token2class</tt><big>(</big><em>token</em>, <em>model</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.token2class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a single token into a sound-class.</p>
+<dl class="docutils">
+<dt>tokens <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>A token (IPA-string).</dd>
+<dt>model <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a></span></dt>
+<dd>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a> object.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>c</strong> : str</p>
+<blockquote class="last">
+<div><p>The corresponding sound-class value.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.tokens2class">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">tokens2class</tt><big>(</big><em>tstring</em>, <em>model</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert tokenized IPA strings into their respective class strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tokens</strong> : list</p>
+<blockquote>
+<div><p>A list of tokens as they are returned from <a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><tt class="xref py py-func docutils literal"><span class="pre">ipa2tokens()</span></tt></a>.</p>
+</div></blockquote>
+<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a></p>
+<blockquote>
+<div><p>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a> object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>classes</strong> : string</p>
+<blockquote class="last">
+<div><p>A sound-class representation of the tokenized IPA string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><tt class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></tt></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><tt class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></tt></a></p>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classes</span> <span class="o">=</span> <span class="n">tokens2class</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="s">&#39;sca&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">classes</span><span class="p">)</span>
+<span class="go">CUKE</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.trigrams">
+<tt class="descclassname">lingpy.sequence.sound_classes.</tt><tt class="descname">trigrams</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="#lingpy.sequence.sound_classes.trigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a given sequence into a sequence of trigrams.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.sequence.tokenizer">
+<span id="tokenizer-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">tokenizer</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.tokenizer" title="Permalink to this headline">¶</a></h2>
+<p>This module provides graphemic and orthographic tokenization using with orthography profiles.</p>
+<dl class="class">
+<dt id="lingpy.sequence.tokenizer.Tokenizer">
+<em class="property">class </em><tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">Tokenizer</tt><big>(</big><em>orthography_profile=None</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Class for orthographic parsing using orthography profiles as designed for the QLC project.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>orthography_profile</strong> : string (default = None)</p>
+<blockquote class="last">
+<div><p>Filename (without extension) of the a document source-specific orthography profile and rules file.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The Tokenizer reads in an orthography profile and calls a helper 
+class to build a trie data structure, which stores the possible Unicode 
+character combinations that are specified in the orthography profile 
+and appear in the data source.</p>
+<p>For example, an orthography profile might specify that in source X 
+&lt;uu&gt; is a single grapheme (Unicode parlance: tailored grapheme) and 
+thererfore it should be chunked as so. Given an orthography profile and 
+some data to parse, the process would look like this:</p>
+<p>input string example: uubo uubo
+output string example: uu b o # uu b o</p>
+<p>See also the test_orthography script in lingpy/scripts/orthography/</p>
+<p>Additionally, the Tokenizer provides functionality to transform graphemes 
+into associated character(s) specified in additional columns in the orthography 
+profile. A dictionary is created that keeps a mapping between source-specific 
+graphemes and their counterparts (e.g. an IPA column in the orthography profile).</p>
+<p>The tokenizer can also be used for pure Unicode character and grapheme 
+tokenization, i.e. it uses the Unicode standard grapheme parsing rules, as 
+implemented in the Python regex package by Matthew Barnett, to do basic tokenization 
+with the &#8220;X&#8221; grapheme regular expression match. This grapheme match 
+combines one or more Combining Diacritical Marks to their base character. 
+These are called &#8220;Grapheme clusters&#8221; in Unicode parlance. With these functions 
+the Tokenizer is meant to do basic rudimentary parsing for things like getting 
+an additional unigram model (segments and their counts) in an input data source.</p>
+<p>An additional method (in its infancy) called combine_modifiers handles the 
+case where there are Unicode Spacing Modifier Letters, which are not explicitly 
+combined to their base character in the Unicode Standard. These graphemes 
+are called &#8220;Tailored grapheme clusters&#8221; in Unicode. For more information 
+see the Unicode Standard Annex #29: Unicode Text Segmentation:</p>
+<p><a class="reference external" href="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</a></p>
+<p>Lastly, the Tokenizer can be used to transformation as specified in an 
+orthography rules file. These transformations are specified in a separate 
+file from the orthography profile (that specifics the document specific graphemes, 
+and possibly their IPA counterparts) and the orthography rules should 
+be applied to the output of an OrthographyParser.</p>
+<p>In an orthography rules file, rules are given in order in regular 
+expressions, e.g. this rule replaces a vowel followed by an &lt;n&gt; 
+followed by &lt;space&gt; followed by a second vowel with first vowel 
+&lt;space&gt; &lt;n&gt; &lt;space&gt; second vowel, e.g.:</p>
+<p>([a|á|e|é|i|í|o|ó|u|ú])(n)(s)([a|á|e|é|i|í|o|ó|u|ú]),   </p>
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.characters">
+<tt class="descname">characters</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.characters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a string as input, return a space-delimited string of Unicode characters (code points rendered as glyphs).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>A Unicode string to be parsed into graphemes.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>String returned is space-delimited on Unicode characters and contains &#8220;#&#8221; to mark word boundaries.
+The string is in NFD.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Input is first normalized according to Normalization Ford D(ecomposition).
+String returned contains &#8220;#&#8221; to mark word boundaries.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.combine_modifiers">
+<tt class="descname">combine_modifiers</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.combine_modifiers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a string that is space-delimited on Unicode grapheme cluters, 
+group Unicode modifier letters with their preceeding base characters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>A Unicode string tokenized into grapheme clusters to be tokenized into simple IPA.</p>
+</div></blockquote>
+<p class="last"><strong>.. todo:: check if we need to apply NDF after string is parsed</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.exists_multiple_columns">
+<tt class="descname">exists_multiple_columns</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.exists_multiple_columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns boolean of whether multiple columns exist in the orthography profile, e.g. graphemes and IPA and x, etc.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.find_missing_characters">
+<tt class="descname">find_missing_characters</tt><big>(</big><em>char_tokenized_string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.find_missing_characters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a string tokenized into characters, return a characters
+tokenized string where each character missing from the orthography 
+profile is replaced with a question mark &lt;?&gt;.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters">
+<tt class="descname">grapheme_clusters</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>See: Unicode Standard Annex #29: UNICODE TEXT SEGMENTATION
+<a class="reference external" href="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</a></p>
+<p>Given a string as input, return a space-delimited string of Unicode graphemes using the &#8220;X&#8221; regular expression.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>A Unicode string to be parsed into graphemes.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>String returned is space-delimited on Unicode graphemes and contains &#8220;#&#8221; to mark word boundaries.
+The string is in NFD.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Input is first normalized according to Normalization Ford D(ecomposition).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.graphemes">
+<tt class="descname">graphemes</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.graphemes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tokenizes strings given an orthograhy profile that specifies graphemes in a source doculect.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>The str to be parsed and formatted.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>The result of the parsed and QLC formatted str.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.remove_spaces">
+<tt class="descname">remove_spaces</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.remove_spaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.rules">
+<tt class="descname">rules</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to parse input string and return output of str with ortho rules applied.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>The input string to be parsed.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>Result of the orthography rules applied to the input str.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.tokenize">
+<tt class="descname">tokenize</tt><big>(</big><em>string</em>, <em>column='graphemes'</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function determines what to do given any combination 
+of orthography profiles and rules or not orthography profiles
+or rules.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>The input string to be tokenized.</p>
+</div></blockquote>
+<p><strong>column</strong> : str (default = &#8220;graphemes&#8221;)</p>
+<blockquote>
+<div><p>The column label for the transformation, if specified.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>Result of the tokenization.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa">
+<tt class="descname">tokenize_ipa</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Experimental method for tokenizing IPA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.transform">
+<tt class="descname">transform</tt><big>(</big><em>string</em>, <em>column='graphemes'</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform a string&#8217;s graphemes into the mappings given in a different column 
+in the orthography profile. By default this function returns an orthography 
+profile grapheme tokenized string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>string</strong> : str</p>
+<blockquote>
+<div><p>The input string to be parsed.</p>
+</div></blockquote>
+<p><strong>conversion</strong> : str (default = &#8220;graphemes&#8221;)</p>
+<blockquote>
+<div><p>The label of the column to transform to. Default it to tokenize with orthography profile.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : str</p>
+<blockquote class="last">
+<div><p>Result of the transformation.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.Tokenizer.transform_rules">
+<tt class="descname">transform_rules</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer.transform_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function that first tokenizes a string into orthographic profile-
+specified graphemes and then applies the orthography profile rules.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.sequence.tokenizer.TreeNode">
+<em class="property">class </em><tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">TreeNode</tt><big>(</big><em>char</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Private class that creates the trie data structure from the orthography profile for parsing.</p>
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.TreeNode.addChild">
+<tt class="descname">addChild</tt><big>(</big><em>char</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode.addChild" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.TreeNode.getChar">
+<tt class="descname">getChar</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode.getChar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.TreeNode.getChild">
+<tt class="descname">getChild</tt><big>(</big><em>char</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode.getChild" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.TreeNode.getChildren">
+<tt class="descname">getChildren</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode.getChildren" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.TreeNode.isSentinel">
+<tt class="descname">isSentinel</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode.isSentinel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.tokenizer.TreeNode.makeSentinel">
+<tt class="descname">makeSentinel</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.TreeNode.makeSentinel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tokenizer.createTree">
+<tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">createTree</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.createTree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tokenizer.getParse">
+<tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">getParse</tt><big>(</big><em>root</em>, <em>line</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.getParse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tokenizer.getParseInternal">
+<tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">getParseInternal</tt><big>(</big><em>root</em>, <em>line</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.getParseInternal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tokenizer.printMultigraphs">
+<tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">printMultigraphs</tt><big>(</big><em>root</em>, <em>line</em>, <em>result</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.printMultigraphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tokenizer.printTree">
+<tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">printTree</tt><big>(</big><em>root</em>, <em>path</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.printTree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sequence Package</a><ul>
+<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">sequence</span></tt> Package</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.generate"><tt class="docutils literal"><span class="pre">generate</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.ngram"><tt class="docutils literal"><span class="pre">ngram</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.sound_classes"><tt class="docutils literal"><span class="pre">sound_classes</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.tokenizer"><tt class="docutils literal"><span class="pre">tokenizer</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/reference/lingpy.sequence.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+ <div id="footer">
+   <div class="fleft">
+     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+   </div>
+  <div class="fleft">
+    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  </div>
+
+
+  <div class="fcenter">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+      This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
+      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+        <img alt="Creative Commons License" style="border-width:0;width:100px;"
+		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+  </div>
+
+  <div class="fright">
+    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
+ </div>
+  <div class="fright">
+    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+  </div>
+  <div class="fright">
+    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+</div>
+</div>
+
+  </body>
+</html>

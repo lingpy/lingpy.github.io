@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>lingpy.meaning.BasVoc &mdash; LingPy</title>
+    
+    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="top" title="LingPy" href="../../index.html" />
+<link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+
+  </head>
+  <body>
+<div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
+LingPy
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lingpy-meaning-basvoc">
+<h1>lingpy.meaning.BasVoc<a class="headerlink" href="#lingpy-meaning-basvoc" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="lingpy.meaning.BasVoc">
+<em class="property">class </em><tt class="descclassname">lingpy.meaning.</tt><tt class="descname">BasVoc</tt><big>(</big><em>infile=''</em>, <em>col='list'</em>, <em>row='key'</em>, <em>conf=''</em><big>)</big><a class="headerlink" href="#lingpy.meaning.BasVoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a comparative collection of Swadesh lists (concepticon).</p>
+<p class="rubric">Notes</p>
+<p>This collection may be useful for retrieving a subset of a given dataset,
+or for converting between conceptual items.</p>
+<p class="rubric">Examples</p>
+<p>Load a BasVoc object without arguments in order to get the default object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning</span> <span class="kn">import</span> <span class="n">BasVoc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">concepticon</span> <span class="o">=</span> <span class="n">BasVoc</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Alternatively, load a pre-compiled object from LingPy:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning</span> <span class="kn">import</span> <span class="n">concepticon</span>
+</pre></div>
+</div>
+<p>Retrieve all original words in Jachontov&#8217;s list concept list:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">concepticon</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="s">&#39;jachontov&#39;</span><span class="p">,</span><span class="s">&#39;number&#39;</span><span class="p">,</span><span class="s">&#39;item&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>[[&#8216;94&#8217;, &#8216;water&#8217;],</dt>
+<dd>[&#8216;25&#8217;, &#8216;eye&#8217;],
+[&#8216;45&#8217;, &#8216;know&#8217;],
+[&#8216;86&#8217;, &#8216;this&#8217;],
+[&#8216;84&#8217;, &#8216;tail&#8217;],
+[&#8216;87&#8217;, &#8216;thou&#8217;],
+[&#8216;28&#8217;, &#8216;fire&#8217;],
+[&#8216;89&#8217;, &#8216;tooth&#8217;],
+[&#8216;63&#8217;, &#8216;one&#8217;],
+[&#8216;32&#8217;, &#8216;full&#8217;],
+[&#8216;59&#8217;, &#8216;new&#8217;],
+[&#8216;42&#8217;, &#8216;I&#8217;],
+[&#8216;96&#8217;, &#8216;what&#8217;],
+[&#8216;82&#8217;, &#8216;sun&#8217;],
+[&#8216;61&#8217;, &#8216;nose&#8217;],
+[&#8216;37&#8217;, &#8216;hand&#8217;],
+[&#8216;18&#8217;, &#8216;dog&#8217;],
+[&#8216;24&#8217;, &#8216;egg&#8217;],
+[&#8216;81&#8217;, &#8216;stone&#8217;],
+[&#8216;88&#8217;, &#8216;tongue&#8217;],
+[&#8216;54&#8217;, &#8216;moon&#8217;],
+[&#8216;108&#8217;, &#8216;wind&#8217;],
+[&#8216;98&#8217;, &#8216;who&#8217;],
+[&#8216;104&#8217;, &#8216;salt&#8217;],
+[&#8216;50&#8217;, &#8216;louse&#8217;],
+[&#8216;91&#8217;, &#8216;two&#8217;],
+[&#8216;29&#8217;, &#8216;fish&#8217;],
+[&#8216;21&#8217;, &#8216;ear&#8217;],
+[&#8216;41&#8217;, &#8216;horn&#8217;],
+[&#8216;9&#8217;, &#8216;blood&#8217;],
+[&#8216;17&#8217;, &#8216;die&#8217;],
+[&#8216;110&#8217;, &#8216;year&#8217;],
+[&#8216;57&#8217;, &#8216;name&#8217;],
+[&#8216;10&#8217;, &#8216;bone&#8217;],
+[&#8216;33&#8217;, &#8216;give&#8217;]]</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.basvoc.BasVoc.get_list" title="lingpy.meaning.basvoc.BasVoc.get_list"><tt class="xref py py-obj docutils literal"><span class="pre">get_list</span></tt></a>(swadlist,&nbsp;*entries)</td>
+<td>Return a given concept list with the specified entries.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.basvoc.BasVoc.get_sublist" title="lingpy.meaning.basvoc.BasVoc.get_sublist"><tt class="xref py py-obj docutils literal"><span class="pre">get_sublist</span></tt></a>(sublist,&nbsp;baselist,&nbsp;*entries)</td>
+<td>Return the entries of one list that also occur in another list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.basvoc.BasVoc.get_dict" title="lingpy.meaning.basvoc.BasVoc.get_dict"><tt class="xref py py-obj docutils literal"><span class="pre">get_dict</span></tt></a>([col,&nbsp;row,&nbsp;entry])</td>
+<td>Return a dictionary representation for a given concept list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
+            </a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/docu/meaning/lingpy.meaning.BasVoc.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+ <div id="footer">
+   <div class="fleft">
+     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+   </div>
+  <div class="fleft">
+    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  </div>
+
+
+  <div class="fcenter">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+      This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
+      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+        <img alt="Creative Commons License" style="border-width:0;width:100px;"
+		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+  </div>
+
+  <div class="fright">
+    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
+ </div>
+  <div class="fright">
+    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+  </div>
+  <div class="fright">
+    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+</div>
+</div>
+
+  </body>
+</html>

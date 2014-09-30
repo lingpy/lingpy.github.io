@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cognate Detection (LexStat) &mdash; LingPy</title>
+    
+    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="top" title="LingPy" href="../../index.html" />
+<link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+
+  </head>
+  <body>
+<div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
+LingPy
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cognate-detection-lexstat">
+<h1>Cognate Detection (<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><tt class="xref py py-class docutils literal"><span class="pre">LexStat</span></tt></a>)<a class="headerlink" href="#cognate-detection-lexstat" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="lingpy.compare.lexstat.LexStat">
+<em class="property">class </em><tt class="descclassname">lingpy.compare.lexstat.</tt><tt class="descname">LexStat</tt><big>(</big><em>filename</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.compare.lexstat.LexStat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic class for automatic cognate detection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>filename</strong> : str</p>
+<blockquote>
+<div><p>The name of the file that shall be loaded.</p>
+</div></blockquote>
+<p><strong>model</strong> : <a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a></p>
+<blockquote>
+<div><p>The sound-class model that shall be used for the analysis. Defaults to
+the SCA sound-class model.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Indicate whether consecutive vowels should be merged into single tokens or kept
+apart as separate tokens.</p>
+</div></blockquote>
+<p><strong>transform</strong> : dict</p>
+<blockquote>
+<div><p>A dictionary that indicates how prosodic strings should be simplified
+(or generally transformed), using a simple key-value structure with the
+key referring to the original prosodic context and the value to the new
+value.
+Currently, prosodic strings (see
+<a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><tt class="xref py py-meth docutils literal"><span class="pre">prosodic_string()</span></tt></a>) offer 11
+different prosodic contexts. Since not all these are helpful in
+preliminary analyses for cognate detection, it is useful to merge some
+of these contexts into one. The default settings distinguish only 5
+instead of 11 available contexts, namely:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">C</span></tt> for all consonants in prosodically ascending position,</li>
+<li><tt class="docutils literal"><span class="pre">c</span></tt> for all consonants in prosodically descending position,</li>
+<li><tt class="docutils literal"><span class="pre">V</span></tt> for all vowels,</li>
+<li><tt class="docutils literal"><span class="pre">T</span></tt> for all tones, and</li>
+<li><tt class="docutils literal"><span class="pre">_</span></tt> for word-breaks.</li>
+</ul>
+</div></blockquote>
+<p><strong>check</strong> : bool (default=False)</p>
+<blockquote class="last">
+<div><p>If set to c{True}, the input file will first be checked for errors
+before the calculation is carried out. Errors will be written to the
+file <tt class="docutils literal"><span class="pre">errors.log</span></tt>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Instantiating this class does not require a lot of parameters. However,
+the user may modify its behaviour by providing additional attributes in the
+input file.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><tt class="xref py py-obj docutils literal"><span class="pre">pickle</span></tt></a>()</td>
+<td>Store a dump of the data in a binary file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><tt class="xref py py-obj docutils literal"><span class="pre">add_entries</span></tt></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
+<td>Add new entry-types to the word list by modifying given ones.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><tt class="xref py py-obj docutils literal"><span class="pre">calculate</span></tt></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
+<td>Function calculates specific data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><tt class="xref py py-obj docutils literal"><span class="pre">export</span></tt></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
+<td>Export the wordlist to specific fileformats.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><tt class="xref py py-obj docutils literal"><span class="pre">get_dict</span></tt></a>([col,&nbsp;row,&nbsp;entry])</td>
+<td>Function returns dictionaries of the cells matched by the indices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_entries" title="lingpy.basic.wordlist.Wordlist.get_entries"><tt class="xref py py-obj docutils literal"><span class="pre">get_entries</span></tt></a>(entry)</td>
+<td>Return all entries matching the given entry-type as a two-dimensional list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><tt class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></tt></a>([ref,&nbsp;entry,&nbsp;loans,&nbsp;fuzzy])</td>
+<td>Return an etymological dictionary representation of the word list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><tt class="xref py py-obj docutils literal"><span class="pre">get_list</span></tt></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<td>Function returns lists of rows and columns specified by their name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><tt class="xref py py-obj docutils literal"><span class="pre">get_paps</span></tt></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;loans])</td>
+<td>Function returns a list of present-absent-patterns of a given word list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><tt class="xref py py-obj docutils literal"><span class="pre">output</span></tt></a>(fileformat,&nbsp;**keywords)</td>
+<td>Write wordlist to file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><tt class="xref py py-obj docutils literal"><span class="pre">renumber</span></tt></a>(source[,&nbsp;target])</td>
+<td>Renumber a given set of string identifiers by replacing the ids by integers.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.tokenize" title="lingpy.basic.wordlist.Wordlist.tokenize"><tt class="xref py py-obj docutils literal"><span class="pre">tokenize</span></tt></a>([orthography_profile,&nbsp;source,&nbsp;...])</td>
+<td>Tokenize the data with help of orthography profiles.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.align_pairs" title="lingpy.compare.lexstat.LexStat.align_pairs"><tt class="xref py py-obj docutils literal"><span class="pre">align_pairs</span></tt></a>(idxA,&nbsp;idxB[,&nbsp;concept])</td>
+<td>Align all or some words of a given pair of languages.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.cluster" title="lingpy.compare.lexstat.LexStat.cluster"><tt class="xref py py-obj docutils literal"><span class="pre">cluster</span></tt></a>([method,&nbsp;cluster_method,&nbsp;threshold,&nbsp;...])</td>
+<td>Function for flat clustering of words into cognate sets.</td>
+</tr>
+<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">export</span></tt>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
+<td>Export the wordlist to specific fileformats.</td>
+</tr>
+<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">get_dict</span></tt>([col,&nbsp;row,&nbsp;entry])</td>
+<td>Function returns dictionaries of the cells matched by the indices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_distances" title="lingpy.compare.lexstat.LexStat.get_distances"><tt class="xref py py-obj docutils literal"><span class="pre">get_distances</span></tt></a>([method,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;...])</td>
+<td>Method calculates different distance estimates for language pairs.</td>
+</tr>
+<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">get_entries</span></tt>(entry)</td>
+<td>Return all entries matching the given entry-type as a two-dimensional list.</td>
+</tr>
+<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></tt>([ref,&nbsp;entry,&nbsp;loans,&nbsp;fuzzy])</td>
+<td>Return an etymological dictionary representation of the word list.</td>
+</tr>
+<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">get_list</span></tt>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<td>Function returns lists of rows and columns specified by their name.</td>
+</tr>
+<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">get_paps</span></tt>([ref,&nbsp;entry,&nbsp;missing,&nbsp;loans])</td>
+<td>Function returns a list of present-absent-patterns of a given word list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_random_distances" title="lingpy.compare.lexstat.LexStat.get_random_distances"><tt class="xref py py-obj docutils literal"><span class="pre">get_random_distances</span></tt></a>([method,&nbsp;runs,&nbsp;mode,&nbsp;...])</td>
+<td>Method calculates randoms scores for unrelated words in a dataset.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><tt class="xref py py-obj docutils literal"><span class="pre">get_scorer</span></tt></a>(**keywords)</td>
+<td>Create a scoring function based on sound correspondences.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.output" title="lingpy.compare.lexstat.LexStat.output"><tt class="xref py py-obj docutils literal"><span class="pre">output</span></tt></a>(fileformat,&nbsp;**keywords)</td>
+<td>Write data for lexstat to file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
+            </a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/docu/compare/lexstat.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+ <div id="footer">
+   <div class="fleft">
+     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+   </div>
+  <div class="fleft">
+    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  </div>
+
+
+  <div class="fcenter">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+      This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
+      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+        <img alt="Creative Commons License" style="border-width:0;width:100px;"
+		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+  </div>
+
+  <div class="fright">
+    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
+ </div>
+  <div class="fright">
+    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+  </div>
+  <div class="fright">
+    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+</div>
+</div>
+
+  </body>
+</html>

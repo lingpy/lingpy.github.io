@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>cython Package &mdash; LingPy</title>
+    
+    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="top" title="LingPy" href="../index.html" />
+<link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+
+  </head>
+  <body>
+<div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
+LingPy
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cython-package">
+<h1>cython Package<a class="headerlink" href="#cython-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">cython</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-lingpy.algorithm.cython"></span><p>Package provides modules for time-consuming routines.</p>
+</div>
+<div class="section" id="module-lingpy.algorithm.cython._calign">
+<span id="calign-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">_calign</span></tt> Module<a class="headerlink" href="#module-lingpy.algorithm.cython._calign" title="Permalink to this headline">¶</a></h2>
+<p>Basic module for sound-class based alignment analyses.</p>
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.align_pair">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">align_pair</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>gop</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>mode</em>, <em>restricted_chars</em>, <em>distance=0</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.align_pair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align a pair of sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.align_pairs">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">align_pairs</tt><big>(</big><em>seqs</em>, <em>gops</em>, <em>pros</em>, <em>gop</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>mode</em>, <em>restricted_chars</em>, <em>distance=0</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.align_pairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align multiple sequence pairs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.align_pairwise">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">align_pairwise</tt><big>(</big><em>seqs</em>, <em>gops</em>, <em>pros</em>, <em>gop</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>restricted_chars</em>, <em>mode</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.align_pairwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align a list of sequences pairwise.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.align_profile">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">align_profile</tt><big>(</big><em>profileA</em>, <em>profileB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>gop</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>restricted_chars</em>, <em>mode</em>, <em>gap_weight</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.align_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align two profiles using the basic modes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.corrdist">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">corrdist</tt><big>(</big><em>threshold</em>, <em>seqs</em>, <em>gops</em>, <em>pros</em>, <em>gop</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>mode</em>, <em>restricted_chars</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.corrdist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a correspondence distribution for a given language pair.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.dialign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">dialign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.dialign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.globalign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">globalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.globalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.localign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">localign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.localign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.score_profile">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">score_profile</tt><big>(</big><em>colA</em>, <em>colB</em>, <em>scorer</em>, <em>gap_weight=0.0</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.score_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic function for the scoring of profiles.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.secondary_dialign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">secondary_dialign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>r</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.secondary_dialign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.secondary_globalign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">secondary_globalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>r</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.secondary_globalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.secondary_localign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">secondary_localign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>r</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.secondary_localign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.secondary_semi_globalign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">secondary_semi_globalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em>, <em>r</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.secondary_semi_globalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.semi_globalign">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">semi_globalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gopA</em>, <em>gopB</em>, <em>proA</em>, <em>proB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>factor</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.semi_globalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._calign.swap_score_profile">
+<tt class="descclassname">lingpy.algorithm.cython._calign.</tt><tt class="descname">swap_score_profile</tt><big>(</big><em>colA</em>, <em>colB</em>, <em>scorer</em>, <em>gap_weight=0.0</em>, <em>swap_penalty=-5</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._calign.swap_score_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic function for the scoring of profiles.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.algorithm.cython._cluster">
+<span id="cluster-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">_cluster</span></tt> Module<a class="headerlink" href="#module-lingpy.algorithm.cython._cluster" title="Permalink to this headline">¶</a></h2>
+<p>This module provides functions for basic cluster algorithms.</p>
+<dl class="function">
+<dt id="lingpy.algorithm.cython._cluster.flat_cluster">
+<tt class="descclassname">lingpy.algorithm.cython._cluster.</tt><tt class="descname">flat_cluster</tt><big>(</big><em>method</em>, <em>threshold</em>, <em>matrix</em>, <em>taxa=</em>, <span class="optional">[</span><span class="optional">]</span><em>revert=False</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._cluster.flat_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out a flat cluster analysis based on the UPGMA algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : str { &#8216;upgma&#8217;, &#8216;single&#8217;, &#8216;complete&#8217; }</p>
+<blockquote>
+<div><p>Select between &#8216;ugpma&#8217;, &#8216;single&#8217;, and &#8216;complete&#8217;.</p>
+</div></blockquote>
+<p><strong>threshold</strong> : float</p>
+<blockquote>
+<div><p>The threshold which terminates the algorithm.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list or <tt class="xref py py-class docutils literal"><span class="pre">numpy.array</span></tt></p>
+<blockquote>
+<div><p>A two-dimensional list containing the distances.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list (default = [])</p>
+<blockquote>
+<div><p>A list containing the names of the taxa. If the list is left empty, the
+indices of the taxa will be returned instead of their names.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
+<blockquote class="last">
+<div><p>A dictionary with cluster-IDs as keys and a list of the taxa
+corresponding to the respective ID as values.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.clusters.upgma</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.clusters.neighbor</span></tt></p>
+</div>
+<p class="rubric">Examples</p>
+<p>The function is automatically imported along with LingPy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Create a list of arbitrary taxa.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;German&#39;</span><span class="p">,</span><span class="s">&#39;Swedish&#39;</span><span class="p">,</span><span class="s">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s">&#39;English&#39;</span><span class="p">,</span><span class="s">&#39;Dutch&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Create an arbitrary distance matrix.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
+<span class="go">array([[ 0.  ,  0.5 ,  0.67,  0.8 ,  0.2 ],</span>
+<span class="go">       [ 0.5 ,  0.  ,  0.4 ,  0.7 ,  0.6 ],</span>
+<span class="go">       [ 0.67,  0.4 ,  0.  ,  0.8 ,  0.8 ],</span>
+<span class="go">       [ 0.8 ,  0.7 ,  0.8 ,  0.  ,  0.3 ],</span>
+<span class="go">       [ 0.2 ,  0.6 ,  0.8 ,  0.3 ,  0.  ]])</span>
+</pre></div>
+</div>
+<p>Carry out the flat cluster analysis.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<span class="go">{0: [&#39;German&#39;, &#39;Dutch&#39;, &#39;English&#39;], 1: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._cluster.flat_upgma">
+<tt class="descclassname">lingpy.algorithm.cython._cluster.</tt><tt class="descname">flat_upgma</tt><big>(</big><em>threshold</em>, <em>matrix</em>, <em>taxa=</em>, <span class="optional">[</span><span class="optional">]</span><em>revert=False</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._cluster.flat_upgma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out a flat cluster analysis based on the UPGMA algorithm     (<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></tt>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<blockquote>
+<div><p>The threshold which terminates the algorithm.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list or <tt class="xref py py-class docutils literal"><span class="pre">numpy.array</span></tt></p>
+<blockquote>
+<div><p>A two-dimensional list containing the distances.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list (default = [])</p>
+<blockquote>
+<div><p>A list containing the names of the taxa. If the list is left empty, the
+indices of the taxa will be returned instead of their names.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
+<blockquote class="last">
+<div><p>A dictionary with cluster-IDs as keys and a list of the taxa
+corresponding to the respective ID as values.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.clusters.upgma</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.clusters.neighbor</span></tt></p>
+</div>
+<p class="rubric">Examples</p>
+<p>The function is automatically imported along with LingPy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Create a list of arbitrary taxa.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;German&#39;</span><span class="p">,</span><span class="s">&#39;Swedish&#39;</span><span class="p">,</span><span class="s">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s">&#39;English&#39;</span><span class="p">,</span><span class="s">&#39;Dutch&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Create an arbitrary distance matrix.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
+<span class="go">array([[ 0.  ,  0.5 ,  0.67,  0.8 ,  0.2 ],</span>
+<span class="go">       [ 0.5 ,  0.  ,  0.4 ,  0.7 ,  0.6 ],</span>
+<span class="go">       [ 0.67,  0.4 ,  0.  ,  0.8 ,  0.8 ],</span>
+<span class="go">       [ 0.8 ,  0.7 ,  0.8 ,  0.  ,  0.3 ],</span>
+<span class="go">       [ 0.2 ,  0.6 ,  0.8 ,  0.3 ,  0.  ]])</span>
+</pre></div>
+</div>
+<p>Carry out the flat cluster analysis.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<span class="go">{0: [&#39;German&#39;, &#39;Dutch&#39;, &#39;English&#39;], 1: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._cluster.neighbor">
+<tt class="descclassname">lingpy.algorithm.cython._cluster.</tt><tt class="descname">neighbor</tt><big>(</big><em>matrix</em>, <em>taxa</em>, <em>distances=True</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._cluster.neighbor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function clusters data according to the Neighbor-Joining algorithm     (<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></tt>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list or <tt class="xref py py-class docutils literal"><span class="pre">numpy.array</span></tt></p>
+<blockquote>
+<div><p>A two-dimensional list containing the distances.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>An list containing the names of all taxa corresponding to the distances
+in the matrix.</p>
+</div></blockquote>
+<p><strong>distances</strong> : bool</p>
+<blockquote>
+<div><p>If set to <tt class="docutils literal"><span class="pre">False</span></tt>, only the topology of the tree will be returned.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newick</strong> : str</p>
+<blockquote class="last">
+<div><p>A string in newick-format which can be further used in biological
+software packages to view and plot the tree.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.cluster.upgma</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.cluster.flat_upgma</span></tt></p>
+</div>
+<p class="rubric">Examples</p>
+<p>Function is automatically imported when importing lingpy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Create an arbitrary list of taxa.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Norwegian&#39;</span><span class="p">,</span><span class="s">&#39;Swedish&#39;</span><span class="p">,</span><span class="s">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s">&#39;Dutch&#39;</span><span class="p">,</span><span class="s">&#39;English&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Create an arbitrary matrix.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Carry out the cluster analysis.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">neighbor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<span class="go">&#39;(((Norwegian,(Swedish,Icelandic)),English),Dutch);&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._cluster.upgma">
+<tt class="descclassname">lingpy.algorithm.cython._cluster.</tt><tt class="descname">upgma</tt><big>(</big><em>matrix</em>, <em>taxa</em>, <em>distances=True</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._cluster.upgma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out a cluster analysis based on the UPGMA algorithm     (<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></tt>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list or <tt class="xref py py-class docutils literal"><span class="pre">numpy.array</span></tt></p>
+<blockquote>
+<div><p>A two-dimensional list containing the distances.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>An list containing the names of all taxa corresponding to the distances
+in the matrix.</p>
+</div></blockquote>
+<p><strong>distances</strong> : bool</p>
+<blockquote>
+<div><p>If set to <tt class="docutils literal"><span class="pre">False</span></tt>, only the topology of the tree will be returned.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newick</strong> : str</p>
+<blockquote class="last">
+<div><p>A string in newick-format which can be further used in biological
+software packages to view and plot the tree.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.cluster.neighbor</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">lingpy.algorithm.cluster.flat_upgma</span></tt></p>
+</div>
+<p class="rubric">Examples</p>
+<p>Function is automatically imported when importing lingpy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Create an arbitrary list of taxa.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;German&#39;</span><span class="p">,</span><span class="s">&#39;Swedish&#39;</span><span class="p">,</span><span class="s">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s">&#39;English&#39;</span><span class="p">,</span><span class="s">&#39;Dutch&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Create an arbitrary matrix.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Carry out the cluster analysis.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">upgma</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="n">distances</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="go">&#39;((Swedish,Icelandic),(English,(German,Dutch)));&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.algorithm.cython._malign">
+<span id="malign-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">_malign</span></tt> Module<a class="headerlink" href="#module-lingpy.algorithm.cython._malign" title="Permalink to this headline">¶</a></h2>
+<p>Module provides miscellaneous alignment algorithms.</p>
+<dl class="function">
+<dt id="lingpy.algorithm.cython._malign.edit_dist">
+<tt class="descclassname">lingpy.algorithm.cython._malign.</tt><tt class="descname">edit_dist</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>normalized</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._malign.edit_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the edit-distance between two strings.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._malign.nw_align">
+<tt class="descclassname">lingpy.algorithm.cython._malign.</tt><tt class="descname">nw_align</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>scorer</em>, <em>gap</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._malign.nw_align" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align two sequences using the Needleman-Wunsch algorithm.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._malign.restricted_edit_dist">
+<tt class="descclassname">lingpy.algorithm.cython._malign.</tt><tt class="descname">restricted_edit_dist</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>resA</em>, <em>resB</em>, <em>normalized</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._malign.restricted_edit_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the restricted edit-distance between two strings.</p>
+<p class="rubric">Notes</p>
+<p>Restrictions follow the definition of <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></tt>: Segments that
+are not allowed to match are given a penalty of <img class="math" src="../_images/math/91de26172b6cdc7da38314176fcc8023e48525e8.png" alt="\infty"/>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._malign.structalign">
+<tt class="descclassname">lingpy.algorithm.cython._malign.</tt><tt class="descname">structalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>restricted_char=''</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._malign.structalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out a structural alignment analysis using Dijkstra&#8217;s algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA,seqB</strong> : str</p>
+<blockquote>
+<div><p>The input sequences.</p>
+</div></blockquote>
+<p><strong>restricted_chars</strong> : str (default = &#8220;&#8221;)</p>
+<blockquote class="last">
+<div><p>The characters which are used to separate secondary from primary
+segments in the input sequences. Currently, the use of restricted chars
+may fail to yield an alignment.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._malign.sw_align">
+<tt class="descclassname">lingpy.algorithm.cython._malign.</tt><tt class="descname">sw_align</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>scorer</em>, <em>gap</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._malign.sw_align" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align two sequences using the Smith-Waterman algorithm.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._malign.we_align">
+<tt class="descclassname">lingpy.algorithm.cython._malign.</tt><tt class="descname">we_align</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>scorer</em>, <em>gap</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._malign.we_align" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align two sequences using the Waterman-Eggert algorithm.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.algorithm.cython._misc">
+<span id="misc-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">_misc</span></tt> Module<a class="headerlink" href="#module-lingpy.algorithm.cython._misc" title="Permalink to this headline">¶</a></h2>
+<p>Module provides miscellaneous functions and routines.</p>
+<dl class="class">
+<dt id="lingpy.algorithm.cython._misc.ScoreDict">
+<em class="property">class </em><tt class="descclassname">lingpy.algorithm.cython._misc.</tt><tt class="descname">ScoreDict</tt><big>(</big><em>chars</em>, <em>matrix</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._misc.ScoreDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Class allows quick access to scoring functions with using dictionary     syntax.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>chars</strong> : list</p>
+<blockquote>
+<div><p>The list of all character tokens for the scoring dictionary.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list</p>
+<blockquote class="last">
+<div><p>A two-dimensional scoring matrix.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._misc.squareform">
+<tt class="descclassname">lingpy.algorithm.cython._misc.</tt><tt class="descname">squareform</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._misc.squareform" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simplified version of the <tt class="xref py py-func docutils literal"><span class="pre">scipy.spatial.distance.squareform()</span></tt>     function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : <tt class="xref py py-class docutils literal"><span class="pre">numpy.array</span></tt> or list</p>
+<blockquote>
+<div><p>The one-dimensional flat representation of a symmetrix distance matrix.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>matrix</strong> : <tt class="xref py py-class docutils literal"><span class="pre">numpy.array</span></tt></p>
+<blockquote class="last">
+<div><p>The two-dimensional redundant representation of a symmetric distance matrix.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._misc.transpose">
+<tt class="descclassname">lingpy.algorithm.cython._misc.</tt><tt class="descname">transpose</tt><big>(</big><em>matrix</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._misc.transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transpose a matrix along its two dimensions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list</p>
+<blockquote class="last">
+<div><p>A two-dimensional list.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.algorithm.cython._talign">
+<span id="talign-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">_talign</span></tt> Module<a class="headerlink" href="#module-lingpy.algorithm.cython._talign" title="Permalink to this headline">¶</a></h2>
+<p>Basic module for sound-class based alignment analyses.</p>
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.align_pair">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">align_pair</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em>, <em>mode</em>, <em>distance=0</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.align_pair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align a pair of sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.align_pairs">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">align_pairs</tt><big>(</big><em>seqs</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em>, <em>mode</em>, <em>distance=0</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.align_pairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align multiple sequence pairs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.align_pairwise">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">align_pairwise</tt><big>(</big><em>seqs</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em>, <em>mode</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.align_pairwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align a list of sequences pairwise.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.align_profile">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">align_profile</tt><big>(</big><em>profileA</em>, <em>profileB</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em>, <em>mode</em>, <em>gap_weight</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.align_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align two profiles using the basic modes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.dialign">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">dialign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>M</em>, <em>N</em>, <em>scale</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.dialign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.globalign">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">globalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>M</em>, <em>N</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.globalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.localign">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">localign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>M</em>, <em>N</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.localign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.score_profile">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">score_profile</tt><big>(</big><em>colA</em>, <em>colB</em>, <em>scorer</em>, <em>gop</em>, <em>gap_weight=0.0</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.score_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic function for the scoring of profiles.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.semi_globalign">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">semi_globalign</tt><big>(</big><em>seqA</em>, <em>seqB</em>, <em>M</em>, <em>N</em>, <em>gop</em>, <em>scale</em>, <em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.semi_globalign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out semi-global alignment of two sequences.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cython._talign.swap_score_profile">
+<tt class="descclassname">lingpy.algorithm.cython._talign.</tt><tt class="descname">swap_score_profile</tt><big>(</big><em>colA</em>, <em>colB</em>, <em>scorer</em>, <em>gap_weight=0.0</em>, <em>swap_penalty=-1</em><big>)</big><a class="headerlink" href="#lingpy.algorithm.cython._talign.swap_score_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic function for the scoring of profiles.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.algorithm.cython.compilePYX">
+<span id="compilepyx-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">compilePYX</span></tt> Module<a class="headerlink" href="#module-lingpy.algorithm.cython.compilePYX" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">cython Package</a><ul>
+<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">cython</span></tt> Package</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cython._calign"><tt class="docutils literal"><span class="pre">_calign</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cython._cluster"><tt class="docutils literal"><span class="pre">_cluster</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cython._malign"><tt class="docutils literal"><span class="pre">_malign</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cython._misc"><tt class="docutils literal"><span class="pre">_misc</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cython._talign"><tt class="docutils literal"><span class="pre">_talign</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cython.compilePYX"><tt class="docutils literal"><span class="pre">compilePYX</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/reference/lingpy.algorithm.cython.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
+	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
+	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
+	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
+	<li><a href="modules.html">Reference</a> |&nbsp;</li>
+        <li><a href="../download.html">Download </a> </li>
+
+ 
+      </ul>
+    </div>
+ <div id="footer">
+   <div class="fleft">
+     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+   </div>
+  <div class="fleft">
+    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  </div>
+
+
+  <div class="fcenter">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on June 5, 2014.<br>
+      This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
+      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+        <img alt="Creative Commons License" style="border-width:0;width:100px;"
+		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+  </div>
+
+  <div class="fright">
+    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
+ </div>
+  <div class="fright">
+    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+  </div>
+  <div class="fright">
+    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+</div>
+</div>
+
+  </body>
+</html>
