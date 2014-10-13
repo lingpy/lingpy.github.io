@@ -5,7 +5,7 @@ Sound Classes (:py:mod:`~lingpy.sequence.sound_classes`)
 .. currentmodule:: lingpy.sequence.sound_classes
 
 This module provides functions and classes to deal with sound-class sequences. Sound classes go back
-to an approach :evobib:`Dolgopolsky1964`. The basic idea behind sound classes is to reduce the IPA
+to an early idea by :evobib:`Dolgopolsky1964`. The basic idea behind sound classes is to reduce the IPA
 space of possible phonetic segments in order to guarantee both the comparability of sounds between
 languages, but also to give some assessment regarding the probability that sounds belonging to the
 same class occur in correspondence relations in genetically related languages. More recently, 

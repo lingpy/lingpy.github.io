@@ -5,7 +5,7 @@ Borrowing Detection (:py:mod:`~lingpy.compare.phylogeny`)
 
 .. autoclass:: PhyBo
     
-   .. rubric:: ethods
+   .. rubric:: Methods
    .. autosummary::
    
       ~lingpy.basic.parser.QLCParser.pickle

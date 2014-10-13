@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sound Classes (sound_classes) &mdash; LingPy</title>
+    <title>String Comparison (:py:mode:`~lingpy.compare.strings`) &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -64,16 +64,9 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="sound-classes-sound-classes">
-<h1>Sound Classes (<a class="reference internal" href="../../reference/lingpy.sequence.html#module-lingpy.sequence.sound_classes" title="lingpy.sequence.sound_classes"><tt class="xref py py-mod docutils literal"><span class="pre">sound_classes</span></tt></a>)<a class="headerlink" href="#sound-classes-sound-classes" title="Permalink to this headline">¶</a></h1>
-<p>This module provides functions and classes to deal with sound-class sequences. Sound classes go back
-to an early idea by <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1964"><span class="pre">Dolgopolsky1964</span></a></tt>. The basic idea behind sound classes is to reduce the IPA
-space of possible phonetic segments in order to guarantee both the comparability of sounds between
-languages, but also to give some assessment regarding the probability that sounds belonging to the
-same class occur in correspondence relations in genetically related languages. More recently,
-sound classes have been applied in a couple of approaches, including phonetic alignment (see
-<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></tt>), and automatic cognate detection (see <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Turchin2012"><span class="pre">Turchin2012</span></a></tt>,
-<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></tt>).</p>
+  <div class="section" id="string-comparison-py-mode-lingpy-compare-strings">
+<h1>String Comparison (<a href="#id1"><span class="problematic" id="id2">:py:mode:`~lingpy.compare.strings`</span></a>)<a class="headerlink" href="#string-comparison-py-mode-lingpy-compare-strings" title="Permalink to this headline">¶</a></h1>
+<p>This module provides basic functions for various ways of string comparison.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
@@ -82,43 +75,11 @@ sound classes have been applied in a couple of approaches, including phonetic al
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><tt class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></tt></a>(istring,&nbsp;**keywords)</td>
-<td>Tokenize IPA-encoded strings.</td>
+<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">ldn</span></tt></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><tt class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></tt></a>(tstring,&nbsp;model,&nbsp;**keywords)</td>
-<td>Convert tokenized IPA strings into their respective class strings.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><tt class="xref py py-obj docutils literal"><span class="pre">prosodic_string</span></tt></a>(string[,&nbsp;_output])</td>
-<td>Create a prosodic string of the sonority profile of a sequence.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_weights" title="lingpy.sequence.sound_classes.prosodic_weights"><tt class="xref py py-obj docutils literal"><span class="pre">prosodic_weights</span></tt></a>(prostring[,&nbsp;_transform])</td>
-<td>Calculate prosodic weights for each position of a sequence.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><tt class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></tt></a>(tokens,&nbsp;classes[,&nbsp;gap_char,&nbsp;local])</td>
-<td>Turn aligned sound-class sequences into an aligned sequences of IPA tokens.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.pid" title="lingpy.sequence.sound_classes.pid"><tt class="xref py py-obj docutils literal"><span class="pre">pid</span></tt></a>(almA,&nbsp;almB[,&nbsp;mode])</td>
-<td>Calculate the Percentage Identity (PID) score for aligned sequence pairs.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.get_all_ngrams" title="lingpy.sequence.sound_classes.get_all_ngrams"><tt class="xref py py-obj docutils literal"><span class="pre">get_all_ngrams</span></tt></a>(sequence)</td>
-<td>Function returns all possible n-grams of a given sequence.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.sampa2uni" title="lingpy.sequence.sound_classes.sampa2uni"><tt class="xref py py-obj docutils literal"><span class="pre">sampa2uni</span></tt></a>(seq)</td>
-<td>Convert sequence in IPA-sampa-format to IPA-unicode.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-obj docutils literal"><span class="pre">Model</span></tt></a>(model[,&nbsp;path])</td>
-<td>Class for the handling of sound-class models.</td>
+<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">ldn_swap</span></tt></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -136,16 +97,15 @@ sound classes have been applied in a couple of approaches, including phonetic al
             </a></p>
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Sound Classes (<tt class="docutils literal"><span class="pre">sound_classes</span></tt>)</a><ul>
+<li><a class="reference internal" href="#">String Comparison (:py:mode:`~lingpy.compare.strings`)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
-<li><a class="reference internal" href="#classes">Classes</a></li>
 </ul>
 </li>
 </ul>
 
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/sequence/sound_classes.txt"
+    <li><a href="../../_sources/docu/compare/strings.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
