@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>data Package &mdash; LingPy</title>
+    <title>lingpy.data package &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -64,53 +64,26 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="data-package">
-<h1>data Package<a class="headerlink" href="#data-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">data</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-lingpy.data"></span><p>LingPy comes along with many different kinds of predefined data. When loading
-the library, the following dictionary is automatically loaded and employed by
-all LingPy modules:</p>
-<blockquote>
-<div><dl class="data">
-<dt>
-<tt class="descname">rcParams : dict</tt></dt>
-<dd><p>As an alternative to all global variables, this dictionary
-contains all these variables, and additional ones. This dictionary is used
-for internal coding purposes and stores parameters that are globally set (if
-not defined otherwise by the user), such as</p>
-<blockquote>
-<div><ul class="simple">
-<li>specific debugging messages (warnings, messages, errors)</li>
-<li>specific flags (verbose, debug)</li>
-<li>default values, such as &#8220;gop&#8221; (gap opening penalty), &#8220;scale&#8221; (scaling factor</li>
-<li>by which extended gaps are penalized), or &#8220;figsize&#8221; (the default size of</li>
-<li>figures if data is plotted using matplotlib).</li>
+  <div class="section" id="lingpy-data-package">
+<h1>lingpy.data package<a class="headerlink" href="#lingpy-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lingpy.data.ipa.html">lingpy.data.ipa package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.data.ipa.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.data.ipa.html#module-lingpy.data.ipa.sampa">lingpy.data.ipa.sampa module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.data.ipa.html#module-lingpy.data.ipa">Module contents</a></li>
 </ul>
-</div></blockquote>
-<p>These default values can be changed with help of the <tt class="docutils literal"><span class="pre">rc</span></tt> function that takes any
-keyword and any variable as input and adds or modifies the specific key of the
-rcParams dictionary, but also provides more complex functions that change whole
-sets of variables, such as the following statement:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s">&quot;asjp&quot;</span><span class="p">)</span>
-</pre></div>
+</li>
+</ul>
 </div>
-<p>which switches the variables &#8220;asjp&#8221;, &#8220;dolgo&#8221;, etc. to the ASCII-based
-transcription system of the ASJP project.</p>
-<p>If you want to change the content of c{rcParams} directly, you need to
-import the dictionary explicitly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="kn">import</span> <span class="n">rcParams</span>
-</pre></div>
 </div>
-<p>However, changing the values in the dictionary randomly can produce
-unexpected behavior and we recommend to use the regular <tt class="docutils literal"><span class="pre">rc</span></tt> function
-for this purpose.</p>
-</dd></dl>
-
-</div></blockquote>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-lingpy.data.derive">
-<span id="derive-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">derive</span></tt> Module<a class="headerlink" href="#module-lingpy.data.derive" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-data-derive-module"></span><h2>lingpy.data.derive module<a class="headerlink" href="#module-lingpy.data.derive" title="Permalink to this headline">¶</a></h2>
 <p>Module for the derivation of sound class models.</p>
 <p>The module provides functions for the customized compilation of sound-class models.
 All models are defined in simple text files. In order to guarantee their quick
@@ -241,7 +214,7 @@ and functions provided by the library.</p>
 
 </div>
 <div class="section" id="module-lingpy.data.model">
-<span id="model-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">model</span></tt> Module<a class="headerlink" href="#module-lingpy.data.model" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-data-model-module"></span><h2>lingpy.data.model module<a class="headerlink" href="#module-lingpy.data.model" title="Permalink to this headline">¶</a></h2>
 <p>Module for handling sequence models.</p>
 <dl class="class">
 <dt id="lingpy.data.model.Model">
@@ -259,7 +232,7 @@ Select between:</p>
 <ul class="simple">
 <li>&#8216;sca&#8217; - the SCA sound-class model (see <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></tt>),</li>
 <li>&#8216;dolgo&#8217; - the DOLGO sound-class model (see:
-:evobib:<a href="#id2"><span class="problematic" id="id3">`</span></a>Dolgopolsky1986&#8217;),</li>
+:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986&#8217;),</li>
 <li>&#8216;asjp&#8217; - the ASJP sound-class model (see
 <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></tt> and <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></tt>),</li>
 <li>&#8216;art - the sound-class model which is used for the calculation of
@@ -361,16 +334,48 @@ from wich the model is loaded.</td>
 </dd></dl>
 
 </div>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="lingpy.data.ipa.html">ipa Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.data.ipa.html#module-lingpy.data.ipa.sampa"><tt class="docutils literal"><span class="pre">sampa</span></tt> Module</a></li>
+<div class="section" id="module-lingpy.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.data" title="Permalink to this headline">¶</a></h2>
+<p>LingPy comes along with many different kinds of predefined data. When loading
+the library, the following dictionary is automatically loaded and employed by
+all LingPy modules:</p>
+<blockquote>
+<div><dl class="data">
+<dt>
+<tt class="descname">rcParams : dict</tt></dt>
+<dd><p>As an alternative to all global variables, this dictionary
+contains all these variables, and additional ones. This dictionary is used
+for internal coding purposes and stores parameters that are globally set (if
+not defined otherwise by the user), such as</p>
+<blockquote>
+<div><ul class="simple">
+<li>specific debugging messages (warnings, messages, errors)</li>
+<li>specific flags (verbose, debug)</li>
+<li>default values, such as &#8220;gop&#8221; (gap opening penalty), &#8220;scale&#8221; (scaling factor</li>
+<li>by which extended gaps are penalized), or &#8220;figsize&#8221; (the default size of</li>
+<li>figures if data is plotted using matplotlib).</li>
 </ul>
-</li>
-</ul>
+</div></blockquote>
+<p>These default values can be changed with help of the <tt class="docutils literal"><span class="pre">rc</span></tt> function that takes any
+keyword and any variable as input and adds or modifies the specific key of the
+rcParams dictionary, but also provides more complex functions that change whole
+sets of variables, such as the following statement:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s">&quot;asjp&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
+<p>which switches the variables &#8220;asjp&#8221;, &#8220;dolgo&#8221;, etc. to the ASCII-based
+transcription system of the ASJP project.</p>
+<p>If you want to change the content of c{rcParams} directly, you need to
+import the dictionary explicitly:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="kn">import</span> <span class="n">rcParams</span>
+</pre></div>
+</div>
+<p>However, changing the values in the dictionary randomly can produce
+unexpected behavior and we recommend to use the regular <tt class="docutils literal"><span class="pre">rc</span></tt> function
+for this purpose.</p>
+</dd></dl>
+
+</div></blockquote>
 </div>
 </div>
 
@@ -385,11 +390,12 @@ from wich the model is loaded.</td>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">data Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">data</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-lingpy.data.derive"><tt class="docutils literal"><span class="pre">derive</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.data.model"><tt class="docutils literal"><span class="pre">model</span></tt> Module</a></li>
+<li><a class="reference internal" href="#">lingpy.data package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.data.derive">lingpy.data.derive module</a></li>
+<li><a class="reference internal" href="#module-lingpy.data.model">lingpy.data.model module</a></li>
+<li><a class="reference internal" href="#module-lingpy.data">Module contents</a></li>
 </ul>
 </li>
 </ul>

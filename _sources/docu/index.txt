@@ -30,6 +30,7 @@ Sequence Comparison
 .. toctree::
    :maxdepth: 1
    
+   compare/strings
    align/pairwise
    align/multiple
 

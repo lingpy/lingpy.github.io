@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sequence Package &mdash; LingPy</title>
+    <title>lingpy.sequence package &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -64,59 +64,13 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="sequence-package">
-<h1>sequence Package<a class="headerlink" href="#sequence-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">sequence</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-lingpy.sequence"></span><p>Module provides methods and functions for dealing with linguistic sequences.</p>
-<dl class="function">
-<dt id="lingpy.sequence.tokenize">
-<tt class="descclassname">lingpy.sequence.</tt><tt class="descname">tokenize</tt><big>(</big><em>sequence</em>, <em>orthography='fuzzy'</em>, <em>model=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenize" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : str</p>
-<blockquote>
-<div><p>The input sequence that shall be tokenized.</p>
-</div></blockquote>
-<p><strong>orthography</strong> : {&#8220;asjp&#8221;,&#8221;fyzzy_ipa&#8221;,&#8221;plain_ipa&#8221;}(default=&#8221;fuzzy_ipa&#8221;)</p>
-<blockquote>
-<div><p>The name of the orthography that is assumed for the input string.</p>
-</div></blockquote>
-<p><strong>model</strong> : {&#8220;sca&#8221;,&#8221;dolgo&#8221;,&#8221;asjp&#8221;}</p>
-<blockquote>
-<div><p>The name of the sound-class model according to whicht the string shall
-be converted.</p>
-</div></blockquote>
-<p><strong>merge_vowels</strong> : bool (default=True)</p>
-<blockquote>
-<div><p>Specify, whether vowels shall be merged (only works with &#8220;asjp&#8221; and
-&#8220;ipa&#8221; as orthography).</p>
-</div></blockquote>
-<p><strong>tokenizer</strong> : &#8220;str&#8221;</p>
-<blockquote class="last">
-<div><p>Name of the orthography profile that shall be used for tokenization
-(does currently not support the conversion into sound class models).</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">seq</span> <span class="o">=</span> <span class="s">&quot;p͡fyt͡sə&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenize</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
-<span class="go">[&#39;p͡f&#39;, &#39;y&#39;, &#39;t͡s&#39;, &#39;ə&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenize</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">model</span><span class="o">=</span><span class="s">&#39;sca&#39;</span><span class="p">)</span>
-<span class="go">[&#39;B&#39;, &#39;Y&#39;, &#39;C&#39;, &#39;E&#39;]</span>
-</pre></div>
-</div>
-</dd></dl>
-
+  <div class="section" id="lingpy-sequence-package">
+<h1>lingpy.sequence package<a class="headerlink" href="#lingpy-sequence-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-lingpy.sequence.generate">
-<span id="generate-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">generate</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.generate" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-sequence-generate-module"></span><h2>lingpy.sequence.generate module<a class="headerlink" href="#module-lingpy.sequence.generate" title="Permalink to this headline">¶</a></h2>
 <p>Module provides simple basic classes for sequence generation using Markov models.</p>
 <dl class="class">
 <dt id="lingpy.sequence.generate.MCBasic">
@@ -204,7 +158,7 @@ represent the sequences as a Markov chain is returned.</p>
 
 </div>
 <div class="section" id="module-lingpy.sequence.ngram">
-<span id="ngram-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">ngram</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.ngram" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-sequence-ngram-module"></span><h2>lingpy.sequence.ngram module<a class="headerlink" href="#module-lingpy.sequence.ngram" title="Permalink to this headline">¶</a></h2>
 <p>This module provides some basic ngram functions, such as parsing QLC-string formatted strings into ngrams sequences and generating unigram models for intial orthography profiles.</p>
 <dl class="function">
 <dt id="lingpy.sequence.ngram.character_model">
@@ -324,7 +278,7 @@ the respective word in the cells</p>
 
 </div>
 <div class="section" id="module-lingpy.sequence.sound_classes">
-<span id="sound-classes-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">sound_classes</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-sequence-sound-classes-module"></span><h2>lingpy.sequence.sound_classes module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
 <p>Module provides various methods for the handling of sound classes.</p>
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.bigrams">
@@ -741,7 +695,7 @@ the gap score of a given segment in alignment analyses (see <tt class="docutils 
 
 </div>
 <div class="section" id="module-lingpy.sequence.tokenizer">
-<span id="tokenizer-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">tokenizer</span></tt> Module<a class="headerlink" href="#module-lingpy.sequence.tokenizer" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-sequence-tokenizer-module"></span><h2>lingpy.sequence.tokenizer module<a class="headerlink" href="#module-lingpy.sequence.tokenizer" title="Permalink to this headline">¶</a></h2>
 <p>This module provides graphemic and orthographic tokenization using with orthography profiles.</p>
 <dl class="class">
 <dt id="lingpy.sequence.tokenizer.Tokenizer">
@@ -1129,6 +1083,55 @@ specified graphemes and then applies the orthography profile rules.</p>
 <dd></dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.sequence">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.sequence" title="Permalink to this headline">¶</a></h2>
+<p>Module provides methods and functions for dealing with linguistic sequences.</p>
+<dl class="function">
+<dt id="lingpy.sequence.tokenize">
+<tt class="descclassname">lingpy.sequence.</tt><tt class="descname">tokenize</tt><big>(</big><em>sequence</em>, <em>orthography='fuzzy'</em>, <em>model=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : str</p>
+<blockquote>
+<div><p>The input sequence that shall be tokenized.</p>
+</div></blockquote>
+<p><strong>orthography</strong> : {&#8220;asjp&#8221;,&#8221;fyzzy_ipa&#8221;,&#8221;plain_ipa&#8221;}(default=&#8221;fuzzy_ipa&#8221;)</p>
+<blockquote>
+<div><p>The name of the orthography that is assumed for the input string.</p>
+</div></blockquote>
+<p><strong>model</strong> : {&#8220;sca&#8221;,&#8221;dolgo&#8221;,&#8221;asjp&#8221;}</p>
+<blockquote>
+<div><p>The name of the sound-class model according to whicht the string shall
+be converted.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Specify, whether vowels shall be merged (only works with &#8220;asjp&#8221; and
+&#8220;ipa&#8221; as orthography).</p>
+</div></blockquote>
+<p><strong>tokenizer</strong> : &#8220;str&#8221;</p>
+<blockquote class="last">
+<div><p>Name of the orthography profile that shall be used for tokenization
+(does currently not support the conversion into sound class models).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seq</span> <span class="o">=</span> <span class="s">&quot;p͡fyt͡sə&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenize</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<span class="go">[&#39;p͡f&#39;, &#39;y&#39;, &#39;t͡s&#39;, &#39;ə&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenize</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">model</span><span class="o">=</span><span class="s">&#39;sca&#39;</span><span class="p">)</span>
+<span class="go">[&#39;B&#39;, &#39;Y&#39;, &#39;C&#39;, &#39;E&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -1142,12 +1145,13 @@ specified graphemes and then applies the orthography profile rules.</p>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">sequence Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">sequence</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-lingpy.sequence.generate"><tt class="docutils literal"><span class="pre">generate</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.sequence.ngram"><tt class="docutils literal"><span class="pre">ngram</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.sequence.sound_classes"><tt class="docutils literal"><span class="pre">sound_classes</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.sequence.tokenizer"><tt class="docutils literal"><span class="pre">tokenizer</span></tt> Module</a></li>
+<li><a class="reference internal" href="#">lingpy.sequence package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.generate">lingpy.sequence.generate module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.ngram">lingpy.sequence.ngram module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.sound_classes">lingpy.sequence.sound_classes module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.tokenizer">lingpy.sequence.tokenizer module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence">Module contents</a></li>
 </ul>
 </li>
 </ul>

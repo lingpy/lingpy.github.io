@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>linkcomm Package &mdash; LingPy</title>
+    <title>lingpy.thirdparty.linkcomm package &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -64,15 +64,13 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="linkcomm-package">
-<h1>linkcomm Package<a class="headerlink" href="#linkcomm-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">linkcomm</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-lingpy.thirdparty.linkcomm"></span><p>Module provides a simple py3 port for link community analyses, following the
-algorithm by James Bagrow, Yong-Yeol Ahn.</p>
+  <div class="section" id="lingpy-thirdparty-linkcomm-package">
+<h1>lingpy.thirdparty.linkcomm package<a class="headerlink" href="#lingpy-thirdparty-linkcomm-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-lingpy.thirdparty.linkcomm.link_clustering">
-<span id="link-clustering-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">link_clustering</span></tt> Module<a class="headerlink" href="#module-lingpy.thirdparty.linkcomm.link_clustering" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-thirdparty-linkcomm-link-clustering-module"></span><h2>lingpy.thirdparty.linkcomm.link_clustering module<a class="headerlink" href="#module-lingpy.thirdparty.linkcomm.link_clustering" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>changes 2010-08-27:</dt>
 <dd><ul class="first simple">
@@ -123,7 +121,7 @@ mapping node -&gt; set of neighbors and a list of edges</p>
 <tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">read_edgelist_weighted</tt><big>(</big><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em>, <em>weighttype=&lt;class 'float'&gt;</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_weighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>same as read_edgelist_unweighted except the input file now has three
 columns: node_i&lt;delimiter&gt;node_j&lt;delimiter&gt;weight_ij&lt;newline&gt;
-and the output includes a dict <a href="#id2"><span class="problematic" id="id3">`</span></a>ij2wij&#8217; mapping edge tuple (i,j) to w_ij</p>
+and the output includes a dict <a href="#id1"><span class="problematic" id="id2">`</span></a>ij2wij&#8217; mapping edge tuple (i,j) to w_ij</p>
 </dd></dl>
 
 <dl class="function">
@@ -136,7 +134,7 @@ Output is a list of decorated edge-pairs, (1-sim,eij,eik), ordered by similarity
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted">
 <tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">similarities_weighted</tt><big>(</big><em>adj</em>, <em>ij2wij</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Same as similarities_unweighted but using tanimoto coefficient. <a href="#id4"><span class="problematic" id="id5">`</span></a>adj&#8217; is a dict
+<dd><p>Same as similarities_unweighted but using tanimoto coefficient. <a href="#id3"><span class="problematic" id="id4">`</span></a>adj&#8217; is a dict
 mapping nodes to sets of neighbors, ij2wij is a dict mapping an edge (ni,nj) tuple
 to the weight wij of that edge.</p>
 </dd></dl>
@@ -153,6 +151,11 @@ to the weight wij of that edge.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.thirdparty.linkcomm">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.thirdparty.linkcomm" title="Permalink to this headline">¶</a></h2>
+<p>Module provides a simple py3 port for link community analyses, following the
+algorithm by James Bagrow, Yong-Yeol Ahn.</p>
+</div>
 </div>
 
 
@@ -166,9 +169,10 @@ to the weight wij of that edge.</p>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">linkcomm Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">linkcomm</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-lingpy.thirdparty.linkcomm.link_clustering"><tt class="docutils literal"><span class="pre">link_clustering</span></tt> Module</a></li>
+<li><a class="reference internal" href="#">lingpy.thirdparty.linkcomm package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.thirdparty.linkcomm.link_clustering">lingpy.thirdparty.linkcomm.link_clustering module</a></li>
+<li><a class="reference internal" href="#module-lingpy.thirdparty.linkcomm">Module contents</a></li>
 </ul>
 </li>
 </ul>

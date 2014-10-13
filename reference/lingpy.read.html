@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>read Package &mdash; LingPy</title>
+    <title>lingpy.read package &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -64,13 +64,13 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="read-package">
-<h1>read Package<a class="headerlink" href="#read-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">read</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-lingpy.read"></span></div>
+  <div class="section" id="lingpy-read-package">
+<h1>lingpy.read package<a class="headerlink" href="#lingpy-read-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="module-lingpy.read.csv">
-<span id="csv-module"></span><h2><a class="reference external" href="http://docs.python.org/library/csv.html#module-csv" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">csv</span></tt></a> Module<a class="headerlink" href="#module-lingpy.read.csv" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-read-csv-module"></span><h2>lingpy.read.csv module<a class="headerlink" href="#module-lingpy.read.csv" title="Permalink to this headline">¶</a></h2>
 <p>Module provides functions for reading csv-files.</p>
 <dl class="function">
 <dt id="lingpy.read.csv.csv2dict">
@@ -183,7 +183,7 @@ out.</p>
 
 <dl class="function">
 <dt id="lingpy.read.csv.read_asjp">
-<tt class="descclassname">lingpy.read.csv.</tt><tt class="descname">read_asjp</tt><big>(</big><em>infile</em>, <em>family='Indo-European'</em>, <em>classification='hh'</em>, <em>max_synonyms=2</em>, <em>min_population=&lt;function &lt;lambda&gt; at 0x7f1e48d67840&gt;</em>, <em>merge_vowels=True</em>, <em>evaluate=False</em><big>)</big><a class="headerlink" href="#lingpy.read.csv.read_asjp" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">lingpy.read.csv.</tt><tt class="descname">read_asjp</tt><big>(</big><em>infile</em>, <em>family='Indo-European'</em>, <em>classification='hh'</em>, <em>max_synonyms=2</em>, <em>min_population=&lt;function &lt;lambda&gt; at 0x7fb9200d49d8&gt;</em>, <em>merge_vowels=True</em>, <em>evaluate=False</em><big>)</big><a class="headerlink" href="#lingpy.read.csv.read_asjp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -233,7 +233,7 @@ ignored.</p>
 
 </div>
 <div class="section" id="module-lingpy.read.phylip">
-<span id="phylip-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">phylip</span></tt> Module<a class="headerlink" href="#module-lingpy.read.phylip" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-read-phylip-module"></span><h2>lingpy.read.phylip module<a class="headerlink" href="#module-lingpy.read.phylip" title="Permalink to this headline">¶</a></h2>
 <p>Module provides functions to read in various formats from the Phylip package.</p>
 <dl class="function">
 <dt id="lingpy.read.phylip.read_dst">
@@ -267,7 +267,7 @@ ignored.</p>
 
 </div>
 <div class="section" id="module-lingpy.read.qlc">
-<span id="qlc-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">qlc</span></tt> Module<a class="headerlink" href="#module-lingpy.read.qlc" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-read-qlc-module"></span><h2>lingpy.read.qlc module<a class="headerlink" href="#module-lingpy.read.qlc" title="Permalink to this headline">¶</a></h2>
 <p>Module provides basic functions for the reading of text files in QLC format.</p>
 <dl class="function">
 <dt id="lingpy.read.qlc.normalize_alignment">
@@ -350,6 +350,19 @@ of the input file. The header is given 0 as a specific key.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.read.starling">
+<span id="lingpy-read-starling-module"></span><h2>lingpy.read.starling module<a class="headerlink" href="#module-lingpy.read.starling" title="Permalink to this headline">¶</a></h2>
+<p>Basic parser for Starling data.</p>
+<dl class="function">
+<dt id="lingpy.read.starling.star2qlc">
+<tt class="descclassname">lingpy.read.starling.</tt><tt class="descname">star2qlc</tt><big>(</big><em>filename</em>, <em>clean_taxnames=False</em>, <em>debug=False</em><big>)</big><a class="headerlink" href="#lingpy.read.starling.star2qlc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a file directly output from starling to LingPy-QLC format.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.read">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.read" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -363,11 +376,13 @@ of the input file. The header is given 0 as a specific key.</p>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">read Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">read</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-lingpy.read.csv"><tt class="docutils literal"><span class="pre">csv</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.read.phylip"><tt class="docutils literal"><span class="pre">phylip</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.read.qlc"><tt class="docutils literal"><span class="pre">qlc</span></tt> Module</a></li>
+<li><a class="reference internal" href="#">lingpy.read package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.read.csv">lingpy.read.csv module</a></li>
+<li><a class="reference internal" href="#module-lingpy.read.phylip">lingpy.read.phylip module</a></li>
+<li><a class="reference internal" href="#module-lingpy.read.qlc">lingpy.read.qlc module</a></li>
+<li><a class="reference internal" href="#module-lingpy.read.starling">lingpy.read.starling module</a></li>
+<li><a class="reference internal" href="#module-lingpy.read">Module contents</a></li>
 </ul>
 </li>
 </ul>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>compare Package &mdash; LingPy</title>
+    <title>lingpy.compare package &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -64,14 +64,13 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="compare-package">
-<h1>compare Package<a class="headerlink" href="#compare-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">compare</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-lingpy.compare"></span><p>Basic module for language comparison.</p>
+  <div class="section" id="lingpy-compare-package">
+<h1>lingpy.compare package<a class="headerlink" href="#lingpy-compare-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-lingpy.compare.lexstat">
-<span id="lexstat-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">lexstat</span></tt> Module<a class="headerlink" href="#module-lingpy.compare.lexstat" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-compare-lexstat-module"></span><h2>lingpy.compare.lexstat module<a class="headerlink" href="#module-lingpy.compare.lexstat" title="Permalink to this headline">¶</a></h2>
 <p>LexStat algorithm for automatic cognate detection.</p>
 <dl class="class">
 <dt id="lingpy.compare.lexstat.LexStat">
@@ -168,7 +167,7 @@ average distance of unrelated sequences (use with care).</p>
 <blockquote>
 <div><p>Select the factor for extra scores for identical prosodic segments.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id2"><span class="problematic" id="id3">T_</span></a>&#8221;)</p>
+<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id1"><span class="problematic" id="id2">T_</span></a>&#8221;)</p>
 <blockquote>
 <div><p>Select the restricted chars (boundary markers) in the prosodic
 strings in order to enable secondary alignment.</p>
@@ -240,7 +239,7 @@ of the longest sequence, as described in <tt class="docutils literal"><a class="
 <blockquote>
 <div><p>Select the factor for extra scores for identical prosodic segments.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id4"><span class="problematic" id="id5">T_</span></a>&#8221;)</p>
+<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id3"><span class="problematic" id="id4">T_</span></a>&#8221;)</p>
 <blockquote>
 <div><p>Select the restricted chars (boundary markers) in the prosodic
 strings in order to enable secondary alignment.</p>
@@ -294,7 +293,7 @@ taxa in the data.</p>
 <blockquote>
 <div><p>Select the factor for extra scores for identical prosodic segments.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id6"><span class="problematic" id="id7">T_</span></a>&#8221;)</p>
+<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id5"><span class="problematic" id="id6">T_</span></a>&#8221;)</p>
 <blockquote>
 <div><p>Select the restricted chars (boundary markers) in the prosodic
 strings in order to enable secondary alignment.</p>
@@ -488,7 +487,7 @@ output format, the method that is used to calculate the tree.</p>
 
 </div>
 <div class="section" id="module-lingpy.compare.phylogeny">
-<span id="phylogeny-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">phylogeny</span></tt> Module<a class="headerlink" href="#module-lingpy.compare.phylogeny" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-compare-phylogeny-module"></span><h2>lingpy.compare.phylogeny module<a class="headerlink" href="#module-lingpy.compare.phylogeny" title="Permalink to this headline">¶</a></h2>
 <p>Tree-based detection of borrowings in lexicostatistical wordlists.</p>
 <dl class="class">
 <dt id="lingpy.compare.phylogeny.PhyBo">
@@ -879,6 +878,175 @@ also outperformed other approaches by finding more parsimonious solutions.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.compare.strings">
+<span id="lingpy-compare-strings-module"></span><h2>lingpy.compare.strings module<a class="headerlink" href="#module-lingpy.compare.strings" title="Permalink to this headline">¶</a></h2>
+<p>Created on Feb 6, 2012
+&#64;author: PhyloStar
+Implements the string similarity measures from &#64;Kondrak 2005:
+&lt;N -Gram Similarity and Distance&gt;
+By default each measure returns unnormalized distance between two strings.</p>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<p>seqs : Two sequence tuples</p>
+<dl class="function">
+<dt id="lingpy.compare.strings.bidist1">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">bidist1</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.bidist1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes bigram-based distance. The binary version.
+Checks if two bigrams are equal or not.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.bidist2">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">bidist2</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.bidist2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes bigram based distance. The comprehensive version of the
+bigram distance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.bidist3">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">bidist3</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.bidist3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes bigram based distance. Computes the positional version of the
+bigrams. Assigns a partial distance between two bigrams based on positional
+similarity of bigrams.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.bisim1">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">bisim1</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.bisim1" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the binary version of bigram similarity.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.bisim2">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">bisim2</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.bisim2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes bigram similarity &#8220;the comprehensive version&#8221;. Computes the
+number of common 1-grams between two n-grams.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.bisim3">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">bisim3</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.bisim3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes bi-sim the positional version. The partial similarity between two
+bigrams is defined as the number of matching 1-grams at each position.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.dice">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">dice</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.dice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the Dice measure that measures the number of common bigrams.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.ident">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">ident</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the identity between two strings. If yes,
+returns 1, else, returns 0.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.jcd">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">jcd</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.jcd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the bigram-based jaccard index.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.jcdn">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">jcdn</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.jcdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the bigram and trigram-based jaccard index</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.lcs">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">lcs</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.lcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the longest common subsequence between two strings.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.ldn">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">ldn</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.ldn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic Levenshtein distance without swap operation (all operations are equal costs).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.ldn_swap">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">ldn_swap</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.ldn_swap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic Levenshtein distance with swap operation included (identifies metathesis).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.prefix">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">prefix</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the longest common prefix between two strings.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.tridist1">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">tridist1</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.tridist1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes trigram-based distance: The binary version.
+Checks if two trigrams are equal or not.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.tridist2">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">tridist2</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.tridist2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes bigram based distance. The comprehensive version of the
+bigram distance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.tridist3">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">tridist3</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.tridist3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes trigram based distance. Computes the positional version of the
+trigrams. Assigns a partial distance between two trigrams based on positional
+similarity of trigrams.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.trigram">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">trigram</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.trigram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the number of common trigrams between two strings.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.trisim1">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">trisim1</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.trisim1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the binary version of trigram similarity.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.trisim2">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">trisim2</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.trisim2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes tri-sim &#8220;the comprehensive version&#8221;. Simply computes the
+number of common 1-grams between two n-grams instead of calling LCS as should
+be done in &#64;Kondrak:2005 paper. Note that the LCS for a trigram can be computed
+in O(n) time if we asssume that list lookup is in constant time.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.trisim3">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">trisim3</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.trisim3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes tri-sim the &#8220;positional version&#8221;. Simply computes the
+number of matching 1-grams in each position.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.xdice">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">xdice</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.xdice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the skip 1 character version of Dice.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.strings.xxdice">
+<tt class="descclassname">lingpy.compare.strings.</tt><tt class="descname">xxdice</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.compare.strings.xxdice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the XXDice between two strings. From &#64;Brew:1996</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-lingpy.compare">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.compare" title="Permalink to this headline">¶</a></h2>
+<p>Basic module for language comparison.</p>
+</div>
 </div>
 
 
@@ -892,10 +1060,15 @@ also outperformed other approaches by finding more parsimonious solutions.</p>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">compare Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">compare</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-lingpy.compare.lexstat"><tt class="docutils literal"><span class="pre">lexstat</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.compare.phylogeny"><tt class="docutils literal"><span class="pre">phylogeny</span></tt> Module</a></li>
+<li><a class="reference internal" href="#">lingpy.compare package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.compare.lexstat">lingpy.compare.lexstat module</a></li>
+<li><a class="reference internal" href="#module-lingpy.compare.phylogeny">lingpy.compare.phylogeny module</a></li>
+<li><a class="reference internal" href="#module-lingpy.compare.strings">lingpy.compare.strings module</a><ul>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-lingpy.compare">Module contents</a></li>
 </ul>
 </li>
 </ul>

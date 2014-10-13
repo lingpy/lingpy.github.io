@@ -1,4 +1,4 @@
-String Comparison (:py:mode:`~lingpy.compare.strings`)
+String Comparison (:py:mod:`~lingpy.compare.strings`)
 ======================================================
 
 .. currentmodule:: lingpy.compare.strings

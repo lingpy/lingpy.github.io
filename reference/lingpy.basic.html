@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>basic Package &mdash; LingPy</title>
+    <title>lingpy.basic package &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -64,80 +64,13 @@ LingPy
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="basic-package">
-<h1>basic Package<a class="headerlink" href="#basic-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">basic</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-lingpy.basic"></span><p>This module provides basic classes for the handling of linguistic data.</p>
-<p>The basic idea is to provide classes that allow the user to handle basic
-linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
-</div>
-<div class="section" id="module-lingpy.basic.parser">
-<span id="parser-module"></span><h2><a class="reference external" href="http://docs.python.org/library/parser.html#module-parser" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">parser</span></tt></a> Module<a class="headerlink" href="#module-lingpy.basic.parser" title="Permalink to this headline">¶</a></h2>
-<p>Basic parser for text files in QLC format.</p>
-<dl class="class">
-<dt id="lingpy.basic.parser.QLCParser">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.parser.</tt><tt class="descname">QLCParser</tt><big>(</big><em>filename</em>, <em>conf=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
-<p>Basic class for the handling of text files in QLC format.</p>
-<dl class="method">
-<dt id="lingpy.basic.parser.QLCParser.add_entries">
-<tt class="descname">add_entries</tt><big>(</big><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser.add_entries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add new entry-types to the word list by modifying given ones.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>entry</strong> : string</p>
-<blockquote>
-<div><p>A string specifying the name of the new entry-type to be added to the
-word list.</p>
-</div></blockquote>
-<p><strong>source</strong> : string</p>
-<blockquote>
-<div><p>A string specifying the basic entry-type that shall be modified. If
-multiple entry-types shall be used to create a new entry, they
-should be passed in a simple string separated by a comma.</p>
-</div></blockquote>
-<p><strong>function</strong> : function</p>
-<blockquote>
-<div><p>A function which is used to convert the source into the target
-value.</p>
-</div></blockquote>
-<p><strong>keywords</strong> : {dict}</p>
-<blockquote class="last">
-<div><p>A dictionary of keywords that are passed as parameters to the
-function.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This method can be used to add new entry-types to the data by
-converting given ones. There are a lot of possibilities for adding new
-entries, but the most basic procedure is to use an existing entry-type
-and to modify it with help of a function.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.parser.QLCParser.pickle">
-<tt class="descname">pickle</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser.pickle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Store a dump of the data in a binary file.</p>
-<p class="rubric">Notes</p>
-<p>The function creates a folder <tt class="docutils literal"><span class="pre">__lingpy__</span></tt> on your system containing a
-binary file called <tt class="docutils literal"><span class="pre">FILENAME.bin</span></tt> with <tt class="docutils literal"><span class="pre">FILENAME</span></tt> corresponding to
-the name of the original CSV-file. Instantiating the same
-<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> instance again will first
-check for already compiled binary files and, if they are there, load
-them instead of the CSV-file.</p>
-</dd></dl>
-
-</dd></dl>
-
+  <div class="section" id="lingpy-basic-package">
+<h1>lingpy.basic package<a class="headerlink" href="#lingpy-basic-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-lingpy.basic.dictionary">
-<span id="dictionary-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">dictionary</span></tt> Module<a class="headerlink" href="#module-lingpy.basic.dictionary" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-basic-dictionary-module"></span><h2>lingpy.basic.dictionary module<a class="headerlink" href="#module-lingpy.basic.dictionary" title="Permalink to this headline">¶</a></h2>
 <p>This module provides a basic class for the handling of dictionaries.</p>
 <dl class="class">
 <dt id="lingpy.basic.dictionary.Dictionary">
@@ -279,7 +212,7 @@ input data into IPA tokens.</p>
 
 </div>
 <div class="section" id="module-lingpy.basic.ops">
-<span id="ops-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">ops</span></tt> Module<a class="headerlink" href="#module-lingpy.basic.ops" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-basic-ops-module"></span><h2>lingpy.basic.ops module<a class="headerlink" href="#module-lingpy.basic.ops" title="Permalink to this headline">¶</a></h2>
 <p>Module provides basic operations on Wordlist-Objects.</p>
 <dl class="function">
 <dt id="lingpy.basic.ops.calculate_data">
@@ -306,7 +239,7 @@ input data into IPA tokens.</p>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.clean_taxnames">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">clean_taxnames</tt><big>(</big><em>wordlist</em>, <em>column='doculect'</em>, <em>f=&lt;function &lt;lambda&gt; at 0x7f1e48cdd510&gt;</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">clean_taxnames</tt><big>(</big><em>wordlist</em>, <em>column='doculect'</em>, <em>f=&lt;function &lt;lambda&gt; at 0x7fb92004c6a8&gt;</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function cleans taxon names in order to make sure they can be used in Newick files.</p>
 </dd></dl>
 
@@ -362,8 +295,72 @@ input data into IPA tokens.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.basic.parser">
+<span id="lingpy-basic-parser-module"></span><h2>lingpy.basic.parser module<a class="headerlink" href="#module-lingpy.basic.parser" title="Permalink to this headline">¶</a></h2>
+<p>Basic parser for text files in QLC format.</p>
+<dl class="class">
+<dt id="lingpy.basic.parser.QLCParser">
+<em class="property">class </em><tt class="descclassname">lingpy.basic.parser.</tt><tt class="descname">QLCParser</tt><big>(</big><em>filename</em>, <em>conf=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Basic class for the handling of text files in QLC format.</p>
+<dl class="method">
+<dt id="lingpy.basic.parser.QLCParser.add_entries">
+<tt class="descname">add_entries</tt><big>(</big><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser.add_entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new entry-types to the word list by modifying given ones.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>entry</strong> : string</p>
+<blockquote>
+<div><p>A string specifying the name of the new entry-type to be added to the
+word list.</p>
+</div></blockquote>
+<p><strong>source</strong> : string</p>
+<blockquote>
+<div><p>A string specifying the basic entry-type that shall be modified. If
+multiple entry-types shall be used to create a new entry, they
+should be passed in a simple string separated by a comma.</p>
+</div></blockquote>
+<p><strong>function</strong> : function</p>
+<blockquote>
+<div><p>A function which is used to convert the source into the target
+value.</p>
+</div></blockquote>
+<p><strong>keywords</strong> : {dict}</p>
+<blockquote class="last">
+<div><p>A dictionary of keywords that are passed as parameters to the
+function.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>This method can be used to add new entry-types to the data by
+converting given ones. There are a lot of possibilities for adding new
+entries, but the most basic procedure is to use an existing entry-type
+and to modify it with help of a function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.basic.parser.QLCParser.pickle">
+<tt class="descname">pickle</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser.pickle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store a dump of the data in a binary file.</p>
+<p class="rubric">Notes</p>
+<p>The function creates a folder <tt class="docutils literal"><span class="pre">__lingpy__</span></tt> on your system containing a
+binary file called <tt class="docutils literal"><span class="pre">FILENAME.bin</span></tt> with <tt class="docutils literal"><span class="pre">FILENAME</span></tt> corresponding to
+the name of the original CSV-file. Instantiating the same
+<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> instance again will first
+check for already compiled binary files and, if they are there, load
+them instead of the CSV-file.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-lingpy.basic.spreadsheet">
-<span id="spreadsheet-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">spreadsheet</span></tt> Module<a class="headerlink" href="#module-lingpy.basic.spreadsheet" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-basic-spreadsheet-module"></span><h2>lingpy.basic.spreadsheet module<a class="headerlink" href="#module-lingpy.basic.spreadsheet" title="Permalink to this headline">¶</a></h2>
 <p>Class for reading and tokenizing tabular data. e.g. csv data exported from a spreadsheet.</p>
 <dl class="class">
 <dt id="lingpy.basic.spreadsheet.Spreadsheet">
@@ -431,7 +428,7 @@ ignored.</p>
 given a spreadsheet matrix.</p>
 <p>It returns a 2D matrix type of the type requested below.</p>
 <p class="rubric">Notes</p>
-<p><a href="#id2"><span class="problematic" id="id3">*</span></a>args:</p>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>args:</p>
 <p>&#8220;characters&#8221; = return a 2D matrix of chars (y) and counts in languages (x)
 &#8220;graphemes&#8221; = return a 2D matrix of graphemes (y) by counts in languages (x)
 &#8220;words&#8221; = return a 2D matrix of words by counts in languages</p>
@@ -481,8 +478,84 @@ given a spreadsheet matrix.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.basic.tree">
+<span id="lingpy-basic-tree-module"></span><h2>lingpy.basic.tree module<a class="headerlink" href="#module-lingpy.basic.tree" title="Permalink to this headline">¶</a></h2>
+<p>Basic module for the handling of language trees.</p>
+<dl class="class">
+<dt id="lingpy.basic.tree.Tree">
+<em class="property">class </em><tt class="descclassname">lingpy.basic.tree.</tt><tt class="descname">Tree</tt><big>(</big><em>tree</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lingpy.thirdparty.cogent.html#lingpy.thirdparty.cogent.tree.PhyloNode" title="lingpy.thirdparty.cogent.tree.PhyloNode"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.thirdparty.cogent.tree.PhyloNode</span></tt></a></p>
+<p>Basic class for the handling of phylogenetic trees.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tree</strong> : {str file}</p>
+<blockquote class="last">
+<div><p>A string or a file containing trees in NEWICK format.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lingpy.basic.tree.Tree.createTransitionMatrix">
+<tt class="descname">createTransitionMatrix</tt><big>(</big><em>states</em>, <em>tmat</em>, <em>random=True</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.createTransitionMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.basic.tree.Tree.getDistanceToRoot">
+<tt class="descname">getDistanceToRoot</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.getDistanceToRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.basic.tree.Tree.getTransitionMatrix">
+<tt class="descname">getTransitionMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.getTransitionMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a matrix with two columns for each node in the tree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.basic.tree.Tree.get_distance">
+<tt class="descname">get_distance</tt><big>(</big><em>other</em>, <em>distance='grf'</em>, <em>debug=False</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.get_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns the Robinson Fould distance between the two trees.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>other</strong> : lingpy.basic.tree.Tree</p>
+<blockquote>
+<div><p>A tree object. It should have the same number of taxa as the
+intitial tree.</p>
+</div></blockquote>
+<p><strong>distance</strong> : { &#8220;grf&#8221;, &#8220;rf&#8221;, &#8220;branch&#8221;, &#8220;symmetric&#8221;} (default=&#8221;grf&#8221;)</p>
+<blockquote class="last">
+<div><p>The distance which shall be calculated. Select between:</p>
+<ul>
+<li><p class="first">&#8220;grf&#8221;: the generalized Robinson Fould Distance</p>
+</li>
+<li><p class="first">&#8220;rf&#8221;: the Robinson Fould Distance</p>
+</li>
+<li><p class="first">&#8220;branch&#8221;: the distance in terms of branch lengths</p>
+</li>
+<li><dl class="first docutils">
+<dt>&#8220;symmetric&#8221;: the symmetric difference between all partitions of</dt>
+<dd><p class="first last">the trees</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-lingpy.basic.wordlist">
-<span id="wordlist-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">wordlist</span></tt> Module<a class="headerlink" href="#module-lingpy.basic.wordlist" title="Permalink to this headline">¶</a></h2>
+<span id="lingpy-basic-wordlist-module"></span><h2>lingpy.basic.wordlist module<a class="headerlink" href="#module-lingpy.basic.wordlist" title="Permalink to this headline">¶</a></h2>
 <p>This module provides a basic class for the handling of word lists.</p>
 <dl class="class">
 <dt id="lingpy.basic.wordlist.Wordlist">
@@ -964,6 +1037,41 @@ input data into IPA tokens.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.basic.workflow">
+<span id="lingpy-basic-workflow-module"></span><h2>lingpy.basic.workflow module<a class="headerlink" href="#module-lingpy.basic.workflow" title="Permalink to this headline">¶</a></h2>
+<p>Package provides generic workflow modules for LingPy.</p>
+<dl class="class">
+<dt id="lingpy.basic.workflow.Workflow">
+<em class="property">class </em><tt class="descclassname">lingpy.basic.workflow.</tt><tt class="descname">Workflow</tt><big>(</big><em>infile</em><big>)</big><a class="headerlink" href="#lingpy.basic.workflow.Workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Class provides access to generic workflows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>infile</strong> : str</p>
+<blockquote class="last">
+<div><p>A tsv-file providing the input data for the given workflow.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lingpy.basic.workflow.Workflow.cognate_detection">
+<tt class="descname">cognate_detection</tt><big>(</big><em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.workflow.Workflow.cognate_detection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method runs a cognate detection analysis.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.basic">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.basic" title="Permalink to this headline">¶</a></h2>
+<p>This module provides basic classes for the handling of linguistic data.</p>
+<p>The basic idea is to provide classes that allow the user to handle basic
+linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
+</div>
 </div>
 
 
@@ -977,13 +1085,16 @@ input data into IPA tokens.</p>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">basic Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">basic</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.parser"><tt class="docutils literal"><span class="pre">parser</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.dictionary"><tt class="docutils literal"><span class="pre">dictionary</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.ops"><tt class="docutils literal"><span class="pre">ops</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.spreadsheet"><tt class="docutils literal"><span class="pre">spreadsheet</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.wordlist"><tt class="docutils literal"><span class="pre">wordlist</span></tt> Module</a></li>
+<li><a class="reference internal" href="#">lingpy.basic package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.dictionary">lingpy.basic.dictionary module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.ops">lingpy.basic.ops module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.parser">lingpy.basic.parser module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.spreadsheet">lingpy.basic.spreadsheet module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.tree">lingpy.basic.tree module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.wordlist">lingpy.basic.wordlist module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic.workflow">lingpy.basic.workflow module</a></li>
+<li><a class="reference internal" href="#module-lingpy.basic">Module contents</a></li>
 </ul>
 </li>
 </ul>
