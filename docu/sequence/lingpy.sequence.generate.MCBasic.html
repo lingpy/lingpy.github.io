@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,21 +54,18 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-sequence-generate-mcbasic">
 <h1>lingpy.sequence.generate.MCBasic<a class="headerlink" href="#lingpy-sequence-generate-mcbasic" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.sequence.generate.MCBasic">
-<em class="property">class </em><tt class="descclassname">lingpy.sequence.generate.</tt><tt class="descname">MCBasic</tt><big>(</big><em>seqs</em><big>)</big><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.sequence.generate.</code><code class="descname">MCBasic</code><span class="sig-paren">(</span><em>seqs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic class for creating Markov chains from sequence training data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -90,10 +87,10 @@ should be either passed as lists or as tuples.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">__init__</span></tt>(seqs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code>(seqs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.generate.MCBasic.walk" title="lingpy.sequence.generate.MCBasic.walk"><tt class="xref py py-obj docutils literal"><span class="pre">walk</span></tt></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.generate.MCBasic.walk" title="lingpy.sequence.generate.MCBasic.walk"><code class="xref py py-obj docutils literal"><span class="pre">walk</span></code></a>()</td>
 <td>Create random sequence from the distribution.</td>
 </tr>
 </tbody>
@@ -106,17 +103,19 @@ should be either passed as lists or as tuples.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/sequence/lingpy.sequence.generate.MCBasic.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/sequence/lingpy.sequence.generate.MCBasic.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -133,7 +132,7 @@ should be either passed as lists or as tuples.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -153,17 +152,18 @@ should be either passed as lists or as tuples.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -173,14 +173,12 @@ should be either passed as lists or as tuples.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

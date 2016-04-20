@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-tests-compare-package">
 <h1>lingpy.tests.compare package<a class="headerlink" href="#lingpy-tests-compare-package" title="Permalink to this headline">¶</a></h1>
@@ -71,29 +68,73 @@ LingPy
 </div>
 <div class="section" id="module-lingpy.tests.compare.test_lexstat">
 <span id="lingpy-tests-compare-test-lexstat-module"></span><h2>lingpy.tests.compare.test_lexstat module<a class="headerlink" href="#module-lingpy.tests.compare.test_lexstat" title="Permalink to this headline">¶</a></h2>
-<p>Test lexstat module.</p>
 <dl class="class">
 <dt id="lingpy.tests.compare.test_lexstat.TestLexStat">
-<em class="property">class </em><tt class="descclassname">lingpy.tests.compare.test_lexstat.</tt><tt class="descname">TestLexStat</tt><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_lexstat.</code><code class="descname">TestLexStat</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lingpy.tests.html#lingpy.tests.util.WithTempDir" title="lingpy.tests.util.WithTempDir"><code class="xref py py-class docutils literal"><span class="pre">lingpy.tests.util.WithTempDir</span></code></a></p>
 <dl class="method">
-<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.setup">
-<tt class="descname">setup</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.setup" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.setUp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_align_pairs">
-<tt class="descname">test_align_pairs</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_align_pairs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_align_pairs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_align_pairs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_cluster">
-<tt class="descname">test_cluster</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_cluster</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_cluster" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_correctness">
+<code class="descname">test_correctness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_correctness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_get_distances">
+<code class="descname">test_get_distances</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_get_distances" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_get_frequencies">
+<code class="descname">test_get_frequencies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_get_frequencies" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_get_scorer">
-<tt class="descname">test_get_scorer</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_get_scorer" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_get_scorer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_get_scorer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_get_subset">
+<code class="descname">test_get_subset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_get_subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_getitem">
+<code class="descname">test_getitem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_getitem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_init">
+<code class="descname">test_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_init2">
+<code class="descname">test_init2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_init2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_init3">
+<code class="descname">test_init3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_init3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_lexstat.TestLexStat.test_output">
+<code class="descname">test_output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_lexstat.TestLexStat.test_output" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -103,12 +144,82 @@ LingPy
 <span id="lingpy-tests-compare-test-phylogeny-module"></span><h2>lingpy.tests.compare.test_phylogeny module<a class="headerlink" href="#module-lingpy.tests.compare.test_phylogeny" title="Permalink to this headline">¶</a></h2>
 <p>Test the TreBor borrowing detection algorithm.</p>
 <dl class="class">
-<dt id="lingpy.tests.compare.test_phylogeny.TestPhyBo">
-<em class="property">class </em><tt class="descclassname">lingpy.tests.compare.test_phylogeny.</tt><tt class="descname">TestPhyBo</tt><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.TestPhyBo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dt id="lingpy.tests.compare.test_phylogeny.Bmp">
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_phylogeny.</code><code class="descname">Bmp</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Bmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">mock.mock.MagicMock</span></code></p>
 <dl class="method">
-<dt id="lingpy.tests.compare.test_phylogeny.TestPhyBo.setup">
-<tt class="descname">setup</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.TestPhyBo.setup" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.compare.test_phylogeny.Bmp.Basemap">
+<code class="descname">Basemap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Bmp.Basemap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.tests.compare.test_phylogeny.Graph">
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_phylogeny.</code><code class="descname">Graph</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">mock.mock.MagicMock</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.Graph.nodes">
+<code class="descname">nodes</code><span class="sig-paren">(</span><em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Graph.nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.tests.compare.test_phylogeny.Nx">
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_phylogeny.</code><code class="descname">Nx</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Nx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">mock.mock.MagicMock</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.Nx.Graph">
+<code class="descname">Graph</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Nx.Graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.Nx.generate_gml">
+<code class="descname">generate_gml</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Nx.generate_gml" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.tests.compare.test_phylogeny.Plt">
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_phylogeny.</code><code class="descname">Plt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Plt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">mock.mock.MagicMock</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.Plt.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Plt.plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.tests.compare.test_phylogeny.Sp">
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_phylogeny.</code><code class="descname">Sp</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Sp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">mock.mock.MagicMock</span></code></p>
+<dl class="attribute">
+<dt id="lingpy.tests.compare.test_phylogeny.Sp.stats">
+<code class="descname">stats</code><em class="property"> = &lt;MagicMock id='140421268237112'&gt;</em><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.Sp.stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.tests.compare.test_phylogeny.TestPhyBo">
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_phylogeny.</code><code class="descname">TestPhyBo</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.TestPhyBo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lingpy.tests.html#lingpy.tests.util.WithTempDir" title="lingpy.tests.util.WithTempDir"><code class="xref py py-class docutils literal"><span class="pre">lingpy.tests.util.WithTempDir</span></code></a></p>
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.TestPhyBo.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.TestPhyBo.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.TestPhyBo.test_get_GLS">
+<code class="descname">test_get_GLS</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.TestPhyBo.test_get_GLS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.compare.test_phylogeny.TestPhyBo.test_plot">
+<code class="descname">test_plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_phylogeny.TestPhyBo.test_plot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -116,129 +227,128 @@ LingPy
 </div>
 <div class="section" id="module-lingpy.tests.compare.test_strings">
 <span id="lingpy-tests-compare-test-strings-module"></span><h2>lingpy.tests.compare.test_strings module<a class="headerlink" href="#module-lingpy.tests.compare.test_strings" title="Permalink to this headline">¶</a></h2>
-<p>Test routines for string comparisons.</p>
 <dl class="class">
 <dt id="lingpy.tests.compare.test_strings.TestStrings">
-<em class="property">class </em><tt class="descclassname">lingpy.tests.compare.test_strings.</tt><tt class="descname">TestStrings</tt><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">lingpy.tests.compare.test_strings.</code><code class="descname">TestStrings</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
-<dt id="lingpy.tests.compare.test_strings.TestStrings.setup">
-<tt class="descname">setup</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.setup" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.compare.test_strings.TestStrings.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.setUp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_bidist1">
-<tt class="descname">test_bidist1</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bidist1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_bidist1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bidist1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_bidist2">
-<tt class="descname">test_bidist2</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bidist2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_bidist2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bidist2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_bidist3">
-<tt class="descname">test_bidist3</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bidist3" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_bidist3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bidist3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_bisim1">
-<tt class="descname">test_bisim1</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bisim1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_bisim1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bisim1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_bisim2">
-<tt class="descname">test_bisim2</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bisim2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_bisim2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bisim2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_bisim3">
-<tt class="descname">test_bisim3</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bisim3" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_bisim3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_bisim3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_dice">
-<tt class="descname">test_dice</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_dice" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_dice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_dice" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_ident">
-<tt class="descname">test_ident</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_ident" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_ident</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_ident" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_jcd">
-<tt class="descname">test_jcd</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_jcd" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_jcd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_jcd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_jcdn">
-<tt class="descname">test_jcdn</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_jcdn" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_jcdn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_jcdn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_lcs">
-<tt class="descname">test_lcs</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_lcs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_lcs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_lcs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_ldn">
-<tt class="descname">test_ldn</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_ldn" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_ldn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_ldn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_ldn_swap">
-<tt class="descname">test_ldn_swap</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_ldn_swap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_ldn_swap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_ldn_swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_prefix">
-<tt class="descname">test_prefix</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_prefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_prefix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_tridist1">
-<tt class="descname">test_tridist1</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_tridist1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_tridist1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_tridist1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_tridist2">
-<tt class="descname">test_tridist2</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_tridist2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_tridist2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_tridist2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_tridist3">
-<tt class="descname">test_tridist3</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_tridist3" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_tridist3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_tridist3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_trigram">
-<tt class="descname">test_trigram</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trigram" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_trigram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trigram" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_trisim1">
-<tt class="descname">test_trisim1</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trisim1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_trisim1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trisim1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_trisim2">
-<tt class="descname">test_trisim2</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trisim2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_trisim2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trisim2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_trisim3">
-<tt class="descname">test_trisim3</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trisim3" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_trisim3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_trisim3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_xdice">
-<tt class="descname">test_xdice</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_xdice" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_xdice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_xdice" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.compare.test_strings.TestStrings.test_xxdice">
-<tt class="descname">test_xxdice</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_xxdice" title="Permalink to this definition">¶</a></dt>
+<code class="descname">test_xxdice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.compare.test_strings.TestStrings.test_xxdice" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -253,7 +363,7 @@ LingPy
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -270,12 +380,14 @@ LingPy
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/reference/lingpy.tests.compare.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/lingpy.tests.compare.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -292,7 +404,7 @@ LingPy
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -312,17 +424,18 @@ LingPy
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -332,14 +445,12 @@ LingPy
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

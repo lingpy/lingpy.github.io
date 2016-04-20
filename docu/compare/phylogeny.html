@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,21 +54,18 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="borrowing-detection-phylogeny">
-<h1>Borrowing Detection (<a class="reference internal" href="../../reference/lingpy.compare.html#module-lingpy.compare.phylogeny" title="lingpy.compare.phylogeny"><tt class="xref py py-mod docutils literal"><span class="pre">phylogeny</span></tt></a>)<a class="headerlink" href="#borrowing-detection-phylogeny" title="Permalink to this headline">¶</a></h1>
+<h1>Borrowing Detection (<a class="reference internal" href="../../reference/lingpy.compare.html#module-lingpy.compare.phylogeny" title="lingpy.compare.phylogeny"><code class="xref py py-mod docutils literal"><span class="pre">phylogeny</span></code></a>)<a class="headerlink" href="#borrowing-detection-phylogeny" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.compare.phylogeny.PhyBo">
-<em class="property">class </em><tt class="descclassname">lingpy.compare.phylogeny.</tt><tt class="descname">PhyBo</tt><big>(</big><em>dataset</em>, <em>tree=None</em>, <em>paps='pap'</em>, <em>ref='cogid'</em>, <em>tree_calc='neighbor'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.compare.phylogeny.</code><code class="descname">PhyBo</code><span class="sig-paren">(</span><em>dataset</em>, <em>tree=None</em>, <em>paps='pap'</em>, <em>ref='cogid'</em>, <em>tree_calc='neighbor'</em>, <em>output_dir=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic class for calculations using the TreBor method.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -111,89 +108,89 @@ language. If set to 0, missing data is treated as absence.</p>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
+<p class="rubric">ethods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><tt class="xref py py-obj docutils literal"><span class="pre">pickle</span></tt></a>()</td>
-<td>Store a dump of the data in a binary file.</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><code class="xref py py-obj docutils literal"><span class="pre">pickle</span></code></a>([filename])</td>
+<td>Store the QLCParser instance in a pickle file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><tt class="xref py py-obj docutils literal"><span class="pre">add_entries</span></tt></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">add_entries</span></code></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
 <td>Add new entry-types to the word list by modifying given ones.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><tt class="xref py py-obj docutils literal"><span class="pre">calculate</span></tt></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal"><span class="pre">calculate</span></code></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
 <td>Function calculates specific data.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><tt class="xref py py-obj docutils literal"><span class="pre">export</span></tt></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
 <td>Export the wordlist to specific fileformats.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><tt class="xref py py-obj docutils literal"><span class="pre">get_dict</span></tt></a>([col,&nbsp;row,&nbsp;entry])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
 <td>Function returns dictionaries of the cells matched by the indices.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_entries" title="lingpy.basic.wordlist.Wordlist.get_entries"><tt class="xref py py-obj docutils literal"><span class="pre">get_entries</span></tt></a>(entry)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code>(entry)</td>
 <td>Return all entries matching the given entry-type as a two-dimensional list.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><tt class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></tt></a>([ref,&nbsp;entry,&nbsp;loans,&nbsp;fuzzy])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;loans])</td>
 <td>Return an etymological dictionary representation of the word list.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><tt class="xref py py-obj docutils literal"><span class="pre">get_list</span></tt></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
 <td>Function returns lists of rows and columns specified by their name.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><tt class="xref py py-obj docutils literal"><span class="pre">get_paps</span></tt></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;loans])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;loans])</td>
 <td>Function returns a list of present-absent-patterns of a given word list.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><tt class="xref py py-obj docutils literal"><span class="pre">output</span></tt></a>(fileformat,&nbsp;**keywords)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
 <td>Write wordlist to file.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><tt class="xref py py-obj docutils literal"><span class="pre">renumber</span></tt></a>(source[,&nbsp;target])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal"><span class="pre">renumber</span></code></a>(source[,&nbsp;target,&nbsp;override])</td>
 <td>Renumber a given set of string identifiers by replacing the ids by integers.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.tokenize" title="lingpy.basic.wordlist.Wordlist.tokenize"><tt class="xref py py-obj docutils literal"><span class="pre">tokenize</span></tt></a>([orthography_profile,&nbsp;source,&nbsp;...])</td>
-<td>Tokenize the data with help of orthography profiles.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist.tokenize</span></code></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.analyze" title="lingpy.compare.phylogeny.PhyBo.analyze"><tt class="xref py py-obj docutils literal"><span class="pre">analyze</span></tt></a>([runs,&nbsp;mixed,&nbsp;output_gml,&nbsp;tar,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.analyze" title="lingpy.compare.phylogeny.PhyBo.analyze"><code class="xref py py-obj docutils literal"><span class="pre">analyze</span></code></a>([runs,&nbsp;mixed,&nbsp;output_gml,&nbsp;tar,&nbsp;...])</td>
 <td>Carry out a full analysis using various parameters.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_AVSD" title="lingpy.compare.phylogeny.PhyBo.get_AVSD"><tt class="xref py py-obj docutils literal"><span class="pre">get_AVSD</span></tt></a>(glm,&nbsp;**keywords)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_AVSD" title="lingpy.compare.phylogeny.PhyBo.get_AVSD"><code class="xref py py-obj docutils literal"><span class="pre">get_AVSD</span></code></a>(glm,&nbsp;**keywords)</td>
 <td>Function retrieves all pap s for ancestor languages in a given tree.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_CVSD" title="lingpy.compare.phylogeny.PhyBo.get_CVSD"><tt class="xref py py-obj docutils literal"><span class="pre">get_CVSD</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_CVSD" title="lingpy.compare.phylogeny.PhyBo.get_CVSD"><code class="xref py py-obj docutils literal"><span class="pre">get_CVSD</span></code></a>()</td>
 <td>Calculate the Contemporary Vocabulary Size Distribution (CVSD).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_GLS" title="lingpy.compare.phylogeny.PhyBo.get_GLS"><tt class="xref py py-obj docutils literal"><span class="pre">get_GLS</span></tt></a>([mode,&nbsp;ratio,&nbsp;restriction,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_GLS" title="lingpy.compare.phylogeny.PhyBo.get_GLS"><code class="xref py py-obj docutils literal"><span class="pre">get_GLS</span></code></a>([mode,&nbsp;ratio,&nbsp;restriction,&nbsp;...])</td>
 <td>Create gain-loss-scenarios for all non-singleton paps in the data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_IVSD" title="lingpy.compare.phylogeny.PhyBo.get_IVSD"><tt class="xref py py-obj docutils literal"><span class="pre">get_IVSD</span></tt></a>([output_gml,&nbsp;output_plot,&nbsp;tar,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_IVSD" title="lingpy.compare.phylogeny.PhyBo.get_IVSD"><code class="xref py py-obj docutils literal"><span class="pre">get_IVSD</span></code></a>([output_gml,&nbsp;output_plot,&nbsp;tar,&nbsp;...])</td>
 <td>Calculate VSD on the basis of each item.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_MLN" title="lingpy.compare.phylogeny.PhyBo.get_MLN"><tt class="xref py py-obj docutils literal"><span class="pre">get_MLN</span></tt></a>(glm[,&nbsp;threshold,&nbsp;method])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_MLN" title="lingpy.compare.phylogeny.PhyBo.get_MLN"><code class="xref py py-obj docutils literal"><span class="pre">get_MLN</span></code></a>(glm[,&nbsp;threshold,&nbsp;method])</td>
 <td>Compute an Minimal Lateral Network for a given model.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_MSN" title="lingpy.compare.phylogeny.PhyBo.get_MSN"><tt class="xref py py-obj docutils literal"><span class="pre">get_MSN</span></tt></a>([glm,&nbsp;fileformat,&nbsp;external_edges,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_MSN" title="lingpy.compare.phylogeny.PhyBo.get_MSN"><code class="xref py py-obj docutils literal"><span class="pre">get_MSN</span></code></a>([glm,&nbsp;fileformat,&nbsp;external_edges,&nbsp;...])</td>
 <td>Plot the Minimal Spatial Network.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_PDC" title="lingpy.compare.phylogeny.PhyBo.get_PDC"><tt class="xref py py-obj docutils literal"><span class="pre">get_PDC</span></tt></a>(glm,&nbsp;**keywords)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_PDC" title="lingpy.compare.phylogeny.PhyBo.get_PDC"><code class="xref py py-obj docutils literal"><span class="pre">get_PDC</span></code></a>(glm,&nbsp;**keywords)</td>
 <td>Calculate Patchily Distributed Cognates.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_edge" title="lingpy.compare.phylogeny.PhyBo.get_edge"><tt class="xref py py-obj docutils literal"><span class="pre">get_edge</span></tt></a>(glm,&nbsp;nodeA,&nbsp;nodeB[,&nbsp;entries,&nbsp;mln])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_edge" title="lingpy.compare.phylogeny.PhyBo.get_edge"><code class="xref py py-obj docutils literal"><span class="pre">get_edge</span></code></a>(glm,&nbsp;nodeA,&nbsp;nodeB[,&nbsp;entries,&nbsp;mln])</td>
 <td>Return the edge data for a given gain-loss model.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_stats" title="lingpy.compare.phylogeny.PhyBo.get_stats"><tt class="xref py py-obj docutils literal"><span class="pre">get_stats</span></tt></a>(glm[,&nbsp;subset,&nbsp;filename])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.get_stats" title="lingpy.compare.phylogeny.PhyBo.get_stats"><code class="xref py py-obj docutils literal"><span class="pre">get_stats</span></code></a>(glm[,&nbsp;subset,&nbsp;filename])</td>
 <td>Calculate basic statistics for a given gain-loss model.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_MLN" title="lingpy.compare.phylogeny.PhyBo.plot_MLN"><tt class="xref py py-obj docutils literal"><span class="pre">plot_MLN</span></tt></a>([glm,&nbsp;fileformat,&nbsp;threshold,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_MLN" title="lingpy.compare.phylogeny.PhyBo.plot_MLN"><code class="xref py py-obj docutils literal"><span class="pre">plot_MLN</span></code></a>([glm,&nbsp;fileformat,&nbsp;threshold,&nbsp;...])</td>
 <td>Plot the MLN with help of Matplotlib.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_MSN" title="lingpy.compare.phylogeny.PhyBo.plot_MSN"><tt class="xref py py-obj docutils literal"><span class="pre">plot_MSN</span></tt></a>([glm,&nbsp;fileformat,&nbsp;threshold,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_MSN" title="lingpy.compare.phylogeny.PhyBo.plot_MSN"><code class="xref py py-obj docutils literal"><span class="pre">plot_MSN</span></code></a>([glm,&nbsp;fileformat,&nbsp;threshold,&nbsp;...])</td>
 <td>Plot a minimal spatial network.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_concept_evolution" title="lingpy.compare.phylogeny.PhyBo.plot_concept_evolution"><tt class="xref py py-obj docutils literal"><span class="pre">plot_concept_evolution</span></tt></a>(glm[,&nbsp;concept,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_concept_evolution" title="lingpy.compare.phylogeny.PhyBo.plot_concept_evolution"><code class="xref py py-obj docutils literal"><span class="pre">plot_concept_evolution</span></code></a>(glm[,&nbsp;concept,&nbsp;...])</td>
 <td>Plot the evolution of specific concepts along the reference tree.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_concepts" title="lingpy.compare.phylogeny.PhyBo.plot_concepts"><tt class="xref py py-obj docutils literal"><span class="pre">plot_concepts</span></tt></a>(concept,&nbsp;cogA,&nbsp;cogB[,&nbsp;labels,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.phylogeny.PhyBo.plot_concepts" title="lingpy.compare.phylogeny.PhyBo.plot_concepts"><code class="xref py py-obj docutils literal"><span class="pre">plot_concepts</span></code></a>(concept,&nbsp;cogA,&nbsp;cogB[,&nbsp;labels,&nbsp;...])</td>
 <td>Plot the Minimal Spatial Network.</td>
 </tr>
 </tbody>
@@ -206,17 +203,19 @@ language. If set to 0, missing data is treated as absence.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/compare/phylogeny.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/compare/phylogeny.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -233,7 +232,7 @@ language. If set to 0, missing data is treated as absence.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -253,17 +252,18 @@ language. If set to 0, missing data is treated as absence.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -273,14 +273,12 @@ language. If set to 0, missing data is treated as absence.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

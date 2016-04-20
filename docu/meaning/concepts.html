@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,18 +54,15 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="concept-comparison-meaning">
-<h1>Concept comparison (<tt class="xref py py-mod docutils literal"><span class="pre">meaning</span></tt>)<a class="headerlink" href="#concept-comparison-meaning" title="Permalink to this headline">¶</a></h1>
+<h1>Concept comparison (<a class="reference internal" href="../../reference/lingpy.meaning.html#module-lingpy.meaning" title="lingpy.meaning"><code class="xref py py-mod docutils literal"><span class="pre">meaning</span></code></a>)<a class="headerlink" href="#concept-comparison-meaning" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
@@ -74,11 +71,20 @@ LingPy
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.meaning.concept.spanish_swadesh_list</span></tt></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.glosses.parse_gloss" title="lingpy.meaning.glosses.parse_gloss"><code class="xref py py-obj docutils literal"><span class="pre">parse_gloss</span></code></a>(gloss[,&nbsp;output])</td>
+<td>Parse a gloss into its constituents by applying some general logic.</td>
 </tr>
-<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.meaning.concept.extract_component_as_wordlist</span></tt></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.glosses.compare_concepts" title="lingpy.meaning.glosses.compare_concepts"><code class="xref py py-obj docutils literal"><span class="pre">compare_concepts</span></code></a>(c1,&nbsp;c2)</td>
+<td>Debug-function for concept comparison.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.glosses.compare_conceptlists" title="lingpy.meaning.glosses.compare_conceptlists"><code class="xref py py-obj docutils literal"><span class="pre">compare_conceptlists</span></code></a>(list1,&nbsp;list2[,&nbsp;output,&nbsp;...])</td>
+<td>Function compares two concept lists and outputs suggestions for mapping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.colexification.colexification_network" title="lingpy.meaning.colexification.colexification_network"><code class="xref py py-obj docutils literal"><span class="pre">colexification_network</span></code></a>(wordlist[,&nbsp;entry,&nbsp;...])</td>
+<td>Calculate a colexification network from a given wordlist object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.colexification.partition_colexifications" title="lingpy.meaning.colexification.partition_colexifications"><code class="xref py py-obj docutils literal"><span class="pre">partition_colexifications</span></code></a>(G[,&nbsp;weight])</td>
+<td>Use a simple partition algorithm to cluster the nodes.</td>
 </tr>
 </tbody>
 </table>
@@ -91,19 +97,7 @@ LingPy
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="lingpy.meaning.ConceptGraph.html#lingpy.meaning.ConceptGraph" title="lingpy.meaning.ConceptGraph"><tt class="xref py py-obj docutils literal"><span class="pre">ConceptGraph</span></tt></a>(concepts,&nbsp;pivot_lang_iso,&nbsp;...)</td>
-<td>Basic class to represent concepts and lexical items in a network.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="lingpy.meaning.ConceptComparerBase.html#lingpy.meaning.ConceptComparerBase" title="lingpy.meaning.ConceptComparerBase"><tt class="xref py py-obj docutils literal"><span class="pre">ConceptComparerBase</span></tt></a></td>
-<td>Base class for semantic comparison.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="lingpy.meaning.ConceptComparerStringMatch.html#lingpy.meaning.ConceptComparerStringMatch" title="lingpy.meaning.ConceptComparerStringMatch"><tt class="xref py py-obj docutils literal"><span class="pre">ConceptComparerStringMatch</span></tt></a>([complete])</td>
-<td>Implementation of a concept comparer based on a stemmer for spanish.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="lingpy.meaning.ConceptComparerSpanishStem.html#lingpy.meaning.ConceptComparerSpanishStem" title="lingpy.meaning.ConceptComparerSpanishStem"><tt class="xref py py-obj docutils literal"><span class="pre">ConceptComparerSpanishStem</span></tt></a>()</td>
-<td>Implementation of a concept comparer based on a stemmer for spanish.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="lingpy.meaning.BasVoc.html#lingpy.meaning.BasVoc" title="lingpy.meaning.BasVoc"><tt class="xref py py-obj docutils literal"><span class="pre">BasVoc</span></tt></a>([infile,&nbsp;col,&nbsp;row,&nbsp;conf])</td>
+<tr class="row-odd"><td><a class="reference internal" href="lingpy.meaning.BasVoc.html#lingpy.meaning.BasVoc" title="lingpy.meaning.BasVoc"><code class="xref py py-obj docutils literal"><span class="pre">BasVoc</span></code></a>([infile,&nbsp;col,&nbsp;row,&nbsp;conf])</td>
 <td>Load a comparative collection of Swadesh lists (concepticon).</td>
 </tr>
 </tbody>
@@ -115,26 +109,28 @@ LingPy
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Concept comparison (<tt class="docutils literal"><span class="pre">meaning</span></tt>)</a><ul>
+<li><a class="reference internal" href="#">Concept comparison (<code class="docutils literal"><span class="pre">meaning</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 </ul>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/meaning/concepts.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/meaning/concepts.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -151,7 +147,7 @@ LingPy
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -171,17 +167,18 @@ LingPy
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -191,14 +188,12 @@ LingPy
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

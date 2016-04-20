@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,109 +54,34 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-meaning-conceptgraph">
 <h1>lingpy.meaning.ConceptGraph<a class="headerlink" href="#lingpy-meaning-conceptgraph" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="lingpy.meaning.ConceptGraph">
-<em class="property">class </em><tt class="descclassname">lingpy.meaning.</tt><tt class="descname">ConceptGraph</tt><big>(</big><em>concepts</em>, <em>pivot_lang_iso</em>, <em>concept_comparer</em><big>)</big><a class="headerlink" href="#lingpy.meaning.ConceptGraph" title="Permalink to this definition">¶</a></dt>
-<dd><p>Basic class to represent concepts and lexical items in a network.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>concepts</strong> : list</p>
-<blockquote>
-<div><p>A list of concepts to initialize the network. The type of the concecpts
-is str, in the standard case, but concepts might be encoded by
-any type that can be used as a dictionary key. In any case the user
-has to make sure that the ConceptComparer class uses the same type for
-semantic comparison.</p>
-</div></blockquote>
-<p><strong>pivot_lang_iso</strong> : str</p>
-<blockquote>
-<div><p>The ISO 639-2 code of the pivot language. The code is used when the user
-adds a new dictionary, to extract the correct entries for comparison
-from the dictionary.</p>
-</div></blockquote>
-<p><strong>concept_comparer: ConceptComparerBase</strong> :</p>
-<blockquote class="last">
-<div><p>A sub-class of ConceptComparerBase, that is used to compare lexical
-items against the concepts.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="lingpy.meaning.ConceptComparerBase.html#lingpy.meaning.ConceptComparerBase" title="lingpy.meaning.ConceptComparerBase"><tt class="xref py py-obj docutils literal"><span class="pre">ConceptComparerBase</span></tt></a>, <a class="reference internal" href="lingpy.meaning.ConceptComparerSpanishStem.html#lingpy.meaning.ConceptComparerSpanishStem" title="lingpy.meaning.ConceptComparerSpanishStem"><tt class="xref py py-obj docutils literal"><span class="pre">ConceptComparerSpanishStem</span></tt></a>, <a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.dictionary.Dictionary" title="lingpy.basic.dictionary.Dictionary"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.basic.dictionary.Dictionary</span></tt></a>, <a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></tt></a></p>
-</div>
-<p class="rubric">Notes</p>
-<p>The ConceptGraph class is used to represent a network of concepts and
-lexical items. At the moment it is used to connect a number of
-<tt class="xref py py-class docutils literal"><span class="pre">Dictionary</span></tt>
-via their translation. For example, if two or more dictionaries share one
-language on the head or translation side (e.g. all have translations in
-Spanish), the entries can be linked via this pivot language.</p>
-<p>Initially the ConceptGraph consists only of nodes for the concepts (for
-example the concept of a Swadesh list). Then, lexical items can be linked
-to those concepts based on semantic comparison. To carry out the semantic
-comparison you will use a sub-class of
-<a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.concepts.ConceptComparerBase" title="lingpy.meaning.concepts.ConceptComparerBase"><tt class="xref py py-class docutils literal"><span class="pre">ConceptComparerBase</span></tt></a>. Lingpy currently
-provides one implementation for semantic comparison based on the comparison
-of Spanish word stems agains the stems of the Spanish Swadesh List. The
-class <a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.concepts.ConceptComparerSpanishStem" title="lingpy.meaning.concepts.ConceptComparerSpanishStem"><tt class="xref py py-class docutils literal"><span class="pre">ConceptComparerSpanishStem</span></tt></a>
-provides this implentation.</p>
-<p>When all lexical items are linked against the concept the result can be
-exported as a lingpy <tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt>.</p>
-<p class="rubric">Examples</p>
-<p>See script in <cite>scripts/dictionary/extract_component_as_wordlist.py</cite>, which
-extracts a wordlist from several qlc dictionaries. This is a nice
-demonstration of the whole workflow.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.concepts.ConceptGraph.add_dictionary" title="lingpy.meaning.concepts.ConceptGraph.add_dictionary"><tt class="xref py py-obj docutils literal"><span class="pre">add_dictionary</span></tt></a>(dictionary)</td>
-<td>Adds the lexical items of a dictionary to the concept graph.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.meaning.html#lingpy.meaning.concepts.ConceptGraph.output_wordlist" title="lingpy.meaning.concepts.ConceptGraph.output_wordlist"><tt class="xref py py-obj docutils literal"><span class="pre">output_wordlist</span></tt></a>(stream)</td>
-<td>Export a wordlist from the concept graph.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 
 
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/meaning/lingpy.meaning.ConceptGraph.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/meaning/lingpy.meaning.ConceptGraph.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -173,7 +98,7 @@ demonstration of the whole workflow.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -193,17 +118,18 @@ demonstration of the whole workflow.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -213,14 +139,12 @@ demonstration of the whole workflow.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

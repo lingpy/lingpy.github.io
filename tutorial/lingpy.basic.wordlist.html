@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="handling-wordlists">
 <h1>Handling Wordlists<a class="headerlink" href="#handling-wordlists" title="Permalink to this headline">¶</a></h1>
@@ -73,7 +70,7 @@ languages are structured in such a way that <strong>words</strong> are ordered i
 columns according to the <strong>language</strong> to which they belong and the <strong>concept</strong> they
 denote. A simple word list could thus be displayed as a simple tab-delimited
 text file:</p>
-<div class="highlight-python"><div class="highlight"><pre>CONCEPT     GERMAN      ENGLISH     RUSSIAN     UKRAINIAN
+<div class="highlight-python"><div class="highlight"><pre><span></span>CONCEPT     GERMAN      ENGLISH     RUSSIAN     UKRAINIAN
 hand        Hand        hand        рука        рука
 leg         Bein        leg         нога        нога
 Woldemort   Waldemar    Woldemort   Владимир    Володимир
@@ -84,7 +81,7 @@ Harry       Harald      Harry       Гарри       Гаррi
 can have multiple manifestations in our data. Thus, the same word list could
 look like this, if we preferred to have the words represented in phonetic
 transcription:</p>
-<div class="highlight-python"><div class="highlight"><pre>CONCEPT     GERMAN      ENGLISH     RUSSIAN     UKRAINIAN
+<div class="highlight-python"><div class="highlight"><pre><span></span>CONCEPT     GERMAN      ENGLISH     RUSSIAN     UKRAINIAN
 hand        hant        hænd        ruka        ruka
 leg         bain        lɛg         noga        noga
 Woldemort   valdəmar    wɔldəmɔrt   vladimir    volodimir
@@ -94,7 +91,7 @@ Harry       haralt      hæri        gari        gari
 <p>And if we wanted to display only which of the words are cognate, we could
 represent it in a numerical format, where all words sharing the same number are
 cognate:</p>
-<div class="highlight-python"><div class="highlight"><pre>CONCEPT     GERMAN      ENGLISH     RUSSIAN     UKRAINIAN
+<div class="highlight-python"><div class="highlight"><pre><span></span>CONCEPT     GERMAN      ENGLISH     RUSSIAN     UKRAINIAN
 hand        1           1           2           2
 leg         3           4           5           5
 Woldemort   6           6           6           6
@@ -105,7 +102,7 @@ Harry       7           7           7           7
 two-dimensional representation format. A solution is to use a simple csv-format
 with a header which specifies not only the concept and the language, but also
 all different possible <strong>entry-types</strong> a word can have, just as in the file <a class="reference external" href="examples/harry_potter.csv">harry_potter.csv</a>:</p>
-<div class="highlight-python"><div class="highlight"><pre>@author: Potter, Harry
+<div class="highlight-python"><div class="highlight"><pre><span></span>@author: Potter, Harry
 @date: 2012-11-07
 #
 ID   CONCEPT     COUNTERPART   IPA         DOCULECT     COGID
@@ -130,7 +127,7 @@ ID   CONCEPT     COUNTERPART   IPA         DOCULECT     COGID
 <p>This format is, of course, much more redundant, than the word list format, but
 it allows to display multiple entry-types for the counterparts of a given
 concept in a given language. Moreover, this format is the basic of the
-<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> class in LingPy, which makes it easy
+<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> class in LingPy, which makes it easy
 to handle word lists with multiple entry-types of words.</p>
 </div>
 <div class="section" id="basic-operations-with-help-of-wordlists">
@@ -138,13 +135,13 @@ to handle word lists with multiple entry-types of words.</p>
 <p>The above-given csv-file <a class="reference external" href="examples/harry_potter.csv">harry_potter.csv</a> is available in the test folder of LingPy.
 In order to get it loaded, we simply pass it as first argument to the Wordlist
 class:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If one wants to access only the IPA values in tabular format, all one has to do
 is:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">ipa</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">ipa</span>
 <span class="go">[[&#39;wɔldemɔrt&#39;, &#39;valdemar&#39;, &#39;vladimir&#39;, &#39;volodimir&#39;],</span>
 <span class="go"> [&#39;hæri&#39;, &#39;haralt&#39;, &#39;gari&#39;, &#39;hari&#39;],</span>
 <span class="go"> [&#39;lɛg&#39;, &#39;bain&#39;, &#39;noga&#39;, &#39;noha&#39;],</span>
@@ -152,12 +149,12 @@ is:</p>
 </pre></div>
 </div>
 <p>The same for cognates:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">cognate</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">cognate</span>
 <span class="go">[[6, 6, 6, 6], [7, 7, 7, 7], [4, 3, 5, 5], [1, 1, 2, 2]]</span>
 </pre></div>
 </div>
 <p>Or for the languages and the concepts in the dataset:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">language</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">language</span>
 <span class="go">[&#39;English&#39;, &#39;German&#39;, &#39;Russian&#39;, &#39;Ukrainian&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">concept</span>
 <span class="go">[&#39;Harry&#39;, &#39;Woldemort&#39;, &#39;hand&#39;, &#39;leg&#39;]</span>
@@ -165,10 +162,10 @@ is:</p>
 </div>
 <p>Furthermore, using specific functions, even more concise samples of the data can
 be extracted, thus, using the
-<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><tt class="xref py py-class docutils literal"><span class="pre">get_dict</span></tt></a> function, we can specify a
+<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-class docutils literal"><span class="pre">get_dict</span></code></a> function, we can specify a
 given language and extract all phonetic transcriptions corresponding to a given
 concept as a dictionary:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;German&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&quot;ipa&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">&quot;German&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;ipa&quot;</span><span class="p">)</span>
 <span class="go">{&#39;Harry&#39;: [&#39;haralt&#39;],</span>
 <span class="go"> &#39;Woldemort&#39;: [&#39;valdemar&#39;],</span>
 <span class="go"> &#39;hand&#39;: [&#39;hant&#39;],</span>
@@ -176,14 +173,14 @@ concept as a dictionary:</p>
 </pre></div>
 </div>
 <p>We can likewise extract all cognate IDs corresponding to a given concept by
-using the function <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><tt class="xref py py-class docutils literal"><span class="pre">get_list</span></tt></a>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="s">&quot;hand&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&quot;cogid&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+using the function <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-class docutils literal"><span class="pre">get_list</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="s2">&quot;hand&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;cogid&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="go">[1, 1, 2, 2]</span>
 </pre></div>
 </div>
 <p>Other entry-types can be added:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.misc</span> <span class="kn">import</span> <span class="n">ipa2tokens</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">add_entries</span><span class="p">(</span><span class="s">&quot;tokens&quot;</span><span class="p">,</span><span class="s">&quot;ipa&quot;</span><span class="p">,</span><span class="n">ipa2tokens</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.misc</span> <span class="kn">import</span> <span class="n">ipa2tokens</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">add_entries</span><span class="p">(</span><span class="s2">&quot;tokens&quot;</span><span class="p">,</span><span class="s2">&quot;ipa&quot;</span><span class="p">,</span><span class="n">ipa2tokens</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">tokens</span>
 <span class="go">[[[&#39;w&#39;, &#39;ɔ&#39;, &#39;l&#39;, &#39;d&#39;, &#39;e&#39;, &#39;m&#39;, &#39;ɔ&#39;, &#39;r&#39;, &#39;t&#39;],</span>
 <span class="go">  [&#39;v&#39;, &#39;a&#39;, &#39;l&#39;, &#39;d&#39;, &#39;e&#39;, &#39;m&#39;, &#39;a&#39;, &#39;r&#39;],</span>
@@ -208,15 +205,15 @@ using the function <a class="reference internal" href="../reference/lingpy.basic
 <h2>The wordlist.rc file<a class="headerlink" href="#the-wordlist-rc-file" title="Permalink to this headline">¶</a></h2>
 <p>The structure of word lists is defined by the configuration file <a class="reference external" href="examples/wordlist.rc">wordlist.rc</a>. This file is
 automatically loaded when initializing a Wordlist instance:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It can, however, also be passed by the user:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">conf</span><span class="o">=</span><span class="s">&quot;path_to_file&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">conf</span><span class="o">=</span><span class="s2">&quot;path_to_file&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The file is a simple tab-delimited csv-file and has the following structure:</p>
-<div class="highlight-python"><div class="highlight"><pre>cogid       int                     cognateid,cogid,cognateset
+<div class="highlight-python"><div class="highlight"><pre><span></span>cogid       int                     cognateid,cogid,cognateset
 entry       str                     counterpart,word,entry,words
 taxon       str                     language,doculect,dialect,taxon,languages
 gloss       str                     gloss,concept
@@ -235,7 +232,7 @@ indicates aliases that can be used to address the datatype when using it in calc
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -250,12 +247,14 @@ indicates aliases that can be used to address the datatype when using it in calc
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/tutorial/lingpy.basic.wordlist.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutorial/lingpy.basic.wordlist.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -272,7 +271,7 @@ indicates aliases that can be used to address the datatype when using it in calc
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -292,17 +291,18 @@ indicates aliases that can be used to address the datatype when using it in calc
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -312,14 +312,12 @@ indicates aliases that can be used to address the datatype when using it in calc
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

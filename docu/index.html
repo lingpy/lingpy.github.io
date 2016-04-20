@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
@@ -70,11 +67,10 @@ LingPy
 <h2>Sequence Modelling<a class="headerlink" href="#sequence-modelling" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="sequence/sound_classes.html">Sound Classes (<tt class="docutils literal"><span class="pre">sound_classes</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sequence/tokenizer.html">Tokenizer (<tt class="docutils literal"><span class="pre">Tokenizer</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sequence/generate.html">Generate Random Sequences (<tt class="docutils literal"><span class="pre">generate</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data/data.html">Predefined Datasets (<tt class="docutils literal"><span class="pre">data</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data/derive.html">Creating Sound-Class Models (<tt class="docutils literal"><span class="pre">derive</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequence/sound_classes.html">Sound Classes (<code class="docutils literal"><span class="pre">sound_classes</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequence/generate.html">Generate Random Sequences (<code class="docutils literal"><span class="pre">generate</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data/data.html">Predefined Datasets (<code class="docutils literal"><span class="pre">data</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data/derive.html">Creating Sound-Class Models (<code class="docutils literal"><span class="pre">derive</span></code>)</a></li>
 </ul>
 </div>
 </div>
@@ -82,8 +78,7 @@ LingPy
 <h2>Dataset Handling<a class="headerlink" href="#dataset-handling" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="basic/dictionary.html">Dictionaries (<tt class="docutils literal"><span class="pre">Dictionary</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic/wordlist.html">Wordlists (<tt class="docutils literal"><span class="pre">Wordlist</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/wordlist.html">Wordlists (<code class="docutils literal"><span class="pre">Wordlist</span></code>)</a></li>
 </ul>
 </div>
 </div>
@@ -91,9 +86,8 @@ LingPy
 <h2>Sequence Comparison<a class="headerlink" href="#sequence-comparison" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="compare/strings.html">String Comparison (<tt class="docutils literal"><span class="pre">strings</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="align/pairwise.html">Pairwise Alignment (<tt class="docutils literal"><span class="pre">pairwise</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="align/multiple.html">Multiple Alignment (<tt class="docutils literal"><span class="pre">multiple</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="align/pairwise.html">Pairwise Alignment (<code class="docutils literal"><span class="pre">pairwise</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="align/multiple.html">Multiple Alignment (<code class="docutils literal"><span class="pre">multiple</span></code>)</a></li>
 </ul>
 </div>
 </div>
@@ -101,7 +95,7 @@ LingPy
 <h2>Handling Concepts<a class="headerlink" href="#handling-concepts" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="meaning/concepts.html">Concept comparison (<tt class="docutils literal"><span class="pre">meaning</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meaning/concepts.html">Concept comparison (<code class="docutils literal"><span class="pre">meaning</span></code>)</a></li>
 </ul>
 </div>
 </div>
@@ -109,9 +103,17 @@ LingPy
 <h2>Language Comparison<a class="headerlink" href="#language-comparison" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="algorithm/clustering.html">Cluster Algorithms (<tt class="docutils literal"><span class="pre">clustering</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compare/lexstat.html">Cognate Detection (<tt class="docutils literal"><span class="pre">LexStat</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compare/phylogeny.html">Borrowing Detection (<tt class="docutils literal"><span class="pre">phylogeny</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithm/clustering.html">Cluster Algorithms (<code class="docutils literal"><span class="pre">clustering</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compare/lexstat.html">Cognate Detection (<code class="docutils literal"><span class="pre">LexStat</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compare/phylogeny.html">Borrowing Detection (<code class="docutils literal"><span class="pre">phylogeny</span></code>)</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="handling-phylogenetic-trees">
+<h2>Handling Phylogenetic Trees<a class="headerlink" href="#handling-phylogenetic-trees" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basic/tree.html">Trees (<code class="docutils literal"><span class="pre">Tree</span></code>)</a></li>
 </ul>
 </div>
 </div>
@@ -119,7 +121,7 @@ LingPy
 <h2>Plotting Data<a class="headerlink" href="#plotting-data" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="convert/plot.html">Plotting Data and Results (<tt class="docutils literal"><span class="pre">plot</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert/plot.html">Plotting Data and Results (<code class="docutils literal"><span class="pre">plot</span></code>)</a></li>
 </ul>
 </div>
 </div>
@@ -127,16 +129,16 @@ LingPy
 <h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="evaluate/acd.html">Automatic Cognate Detection (<tt class="docutils literal"><span class="pre">acd</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evaluate/alr.html">Automatic Linguistic Reconstruction (<tt class="docutils literal"><span class="pre">acd</span></tt>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evaluate/apa.html">Automatic Phonetic Alignment (<tt class="docutils literal"><span class="pre">apa</span></tt>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluate/acd.html">Automatic Cognate Detection (<code class="docutils literal"><span class="pre">acd</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluate/alr.html">Automatic Linguistic Reconstruction (<code class="docutils literal"><span class="pre">acd</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluate/apa.html">Automatic Phonetic Alignment (<code class="docutils literal"><span class="pre">apa</span></code>)</a></li>
 </ul>
 </div>
 <div class="section" id="what-s-next">
 <h3>What&#8217;s Next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../reference/modules.html">lingpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/modules.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 </ul>
 </div>
@@ -150,7 +152,7 @@ LingPy
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -163,6 +165,7 @@ LingPy
 <li><a class="reference internal" href="#sequence-comparison">Sequence Comparison</a></li>
 <li><a class="reference internal" href="#handling-concepts">Handling Concepts</a></li>
 <li><a class="reference internal" href="#language-comparison">Language Comparison</a></li>
+<li><a class="reference internal" href="#handling-phylogenetic-trees">Handling Phylogenetic Trees</a></li>
 <li><a class="reference internal" href="#plotting-data">Plotting Data</a></li>
 <li><a class="reference internal" href="#evaluation">Evaluation</a><ul>
 <li><a class="reference internal" href="#what-s-next">What&#8217;s Next?</a><ul>
@@ -174,12 +177,14 @@ LingPy
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/docu/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docu/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -196,7 +201,7 @@ LingPy
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -216,17 +221,18 @@ LingPy
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -236,14 +242,12 @@ LingPy
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

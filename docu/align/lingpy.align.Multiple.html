@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,21 +54,18 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-align-multiple">
 <h1>lingpy.align.Multiple<a class="headerlink" href="#lingpy-align-multiple" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.align.Multiple">
-<em class="property">class </em><tt class="descclassname">lingpy.align.</tt><tt class="descname">Multiple</tt><big>(</big><em>seqs</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.align.Multiple" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.align.</code><code class="descname">Multiple</code><span class="sig-paren">(</span><em>seqs</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.Multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic class for multiple sequence alignment analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -92,37 +89,37 @@ specified that manage how the items get tokenized.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.get_pairwise_alignments" title="lingpy.align.multiple.Multiple.get_pairwise_alignments"><tt class="xref py py-obj docutils literal"><span class="pre">get_pairwise_alignments</span></tt></a>(**keywords)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.get_pairwise_alignments" title="lingpy.align.multiple.Multiple.get_pairwise_alignments"><code class="xref py py-obj docutils literal"><span class="pre">get_pairwise_alignments</span></code></a>(**keywords)</td>
 <td>Function creates a dictionary of all pairwise alignments  scores.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.get_peaks" title="lingpy.align.multiple.Multiple.get_peaks"><tt class="xref py py-obj docutils literal"><span class="pre">get_peaks</span></tt></a>([gap_weight])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.get_peaks" title="lingpy.align.multiple.Multiple.get_peaks"><code class="xref py py-obj docutils literal"><span class="pre">get_peaks</span></code></a>([gap_weight])</td>
 <td>Calculate the profile score for each column of the alignment.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.get_pid" title="lingpy.align.multiple.Multiple.get_pid"><tt class="xref py py-obj docutils literal"><span class="pre">get_pid</span></tt></a>([mode])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.get_pid" title="lingpy.align.multiple.Multiple.get_pid"><code class="xref py py-obj docutils literal"><span class="pre">get_pid</span></code></a>([mode])</td>
 <td>Return the Percentage Identity (PID) score of the calculated MSA.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><tt class="xref py py-obj docutils literal"><span class="pre">iterate_all_sequences</span></tt></a>([check,&nbsp;mode,&nbsp;gop,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal"><span class="pre">iterate_all_sequences</span></code></a>([check,&nbsp;mode,&nbsp;gop,&nbsp;...])</td>
 <td>Iterative refinement based on a complete realignment of all sequences.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><tt class="xref py py-obj docutils literal"><span class="pre">iterate_clusters</span></tt></a>(threshold[,&nbsp;check,&nbsp;mode,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal"><span class="pre">iterate_clusters</span></code></a>(threshold[,&nbsp;check,&nbsp;mode,&nbsp;...])</td>
 <td>Iterative refinement based on a flat cluster analysis of the data.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_orphans" title="lingpy.align.multiple.Multiple.iterate_orphans"><tt class="xref py py-obj docutils literal"><span class="pre">iterate_orphans</span></tt></a>([check,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_orphans" title="lingpy.align.multiple.Multiple.iterate_orphans"><code class="xref py py-obj docutils literal"><span class="pre">iterate_orphans</span></code></a>([check,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;...])</td>
 <td>Iterate over the most divergent sequences in the sample.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><tt class="xref py py-obj docutils literal"><span class="pre">iterate_similar_gap_sites</span></tt></a>([check,&nbsp;mode,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal"><span class="pre">iterate_similar_gap_sites</span></code></a>([check,&nbsp;mode,&nbsp;...])</td>
 <td>Iterative refinement based on the <em>Similar Gap Sites</em> heuristic.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.lib_align" title="lingpy.align.multiple.Multiple.lib_align"><tt class="xref py py-obj docutils literal"><span class="pre">lib_align</span></tt></a>(**keywords)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.lib_align" title="lingpy.align.multiple.Multiple.lib_align"><code class="xref py py-obj docutils literal"><span class="pre">lib_align</span></code></a>(**keywords)</td>
 <td>Carry out a library-based progressive alignment analysis of the sequences.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.prog_align" title="lingpy.align.multiple.Multiple.prog_align"><tt class="xref py py-obj docutils literal"><span class="pre">prog_align</span></tt></a>(**keywords)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.prog_align" title="lingpy.align.multiple.Multiple.prog_align"><code class="xref py py-obj docutils literal"><span class="pre">prog_align</span></code></a>(**keywords)</td>
 <td>Carry out a progressive alignment analysis of the input sequences.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.sum_of_pairs" title="lingpy.align.multiple.Multiple.sum_of_pairs"><tt class="xref py py-obj docutils literal"><span class="pre">sum_of_pairs</span></tt></a>([alm_matrix,&nbsp;mat,&nbsp;gap_weight,&nbsp;gop])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.sum_of_pairs" title="lingpy.align.multiple.Multiple.sum_of_pairs"><code class="xref py py-obj docutils literal"><span class="pre">sum_of_pairs</span></code></a>([alm_matrix,&nbsp;mat,&nbsp;gap_weight,&nbsp;gop])</td>
 <td>Calculate the sum-of-pairs score for a given alignment analysis.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.swap_check" title="lingpy.align.multiple.Multiple.swap_check"><tt class="xref py py-obj docutils literal"><span class="pre">swap_check</span></tt></a>([swap_penalty,&nbsp;score_mode])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple.swap_check" title="lingpy.align.multiple.Multiple.swap_check"><code class="xref py py-obj docutils literal"><span class="pre">swap_check</span></code></a>([swap_penalty,&nbsp;score_mode])</td>
 <td>Check for possibly swapped sites in the alignment.</td>
 </tr>
 </tbody>
@@ -135,17 +132,19 @@ specified that manage how the items get tokenized.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/align/lingpy.align.Multiple.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/align/lingpy.align.Multiple.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -162,7 +161,7 @@ specified that manage how the items get tokenized.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -182,17 +181,18 @@ specified that manage how the items get tokenized.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -202,14 +202,12 @@ specified that manage how the items get tokenized.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

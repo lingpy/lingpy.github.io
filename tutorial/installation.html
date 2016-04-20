@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="installation-instructions">
 <span id="id1"></span><h1>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this headline">¶</a></h1>
@@ -71,7 +68,7 @@ LingPy
 <p>We recommend to use the (hopefully) stable version of LingPy (2.0).  In order to install this
 version, simply download it, unpack the directory, than &#8220;cd&#8221; into it, and type in the prompt:</p>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python setup.py install
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ python setup.py install
 </pre></div>
 </div>
 </div></blockquote>
@@ -82,7 +79,7 @@ If you use Python3 and Cython is also installed on your system, you can install 
 along with the regular LingPy package. Using these modules will result in better performance. In
 order to tell the setup-script to install the C-modules, simply type:</p>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python setup.py install --with-c
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ python setup.py install --with-c
 </pre></div>
 </div>
 </div></blockquote>
@@ -101,14 +98,14 @@ LingPy in the same way in which one would otherwise install it on Linux or Mac m
 <h2>Workarounds<a class="headerlink" href="#workarounds" title="Permalink to this headline">¶</a></h2>
 <p>To use the library without compiling it,
 you don&#8217;t have to run the setup-command, but you can directly put it into your Python-path (under
-<tt class="docutils literal"><span class="pre">site-packages</span></tt>, somewhere in your system).
-Alternatively, you can make a symlink in the <tt class="docutils literal"><span class="pre">site-packages</span></tt>-folder, that you call <tt class="docutils literal"><span class="pre">lingpy</span></tt>
-and link it to <tt class="docutils literal"><span class="pre">lingpy-2.0/lingpy/</span></tt>. For example:</p>
+<code class="docutils literal"><span class="pre">site-packages</span></code>, somewhere in your system).
+Alternatively, you can make a symlink in the <code class="docutils literal"><span class="pre">site-packages</span></code>-folder, that you call <code class="docutils literal"><span class="pre">lingpy</span></code>
+and link it to <code class="docutils literal"><span class="pre">lingpy-2.0/lingpy/</span></code>. For example:</p>
 <ol class="arabic simple">
 <li>Start the Python interpreter (make sure you are using Python3):</li>
 </ol>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ python
 </pre></div>
 </div>
 </div></blockquote>
@@ -116,7 +113,7 @@ and link it to <tt class="docutils literal"><span class="pre">lingpy-2.0/lingpy/
 <li>At the prompt, locate the site-packages folder:</li>
 </ol>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<div><div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 <span class="go">[&#39;&#39;, &#39;/opt/local/Library/Frameworks/Python.framework/Versions/3.2/lib/python3.2&#39;, &#39;/opt/local/Library/Frameworks/Python.framework/Versions/3.2/lib/python3.2/site-packages&#39;]</span>
 </pre></div>
@@ -126,7 +123,7 @@ and link it to <tt class="docutils literal"><span class="pre">lingpy-2.0/lingpy/
 <li>Create the symlink (you may need sudo):</li>
 </ol>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre>ln -s /path/to/lingpy/lingpy /path/to/site-packages/symlink
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>ln -s /path/to/lingpy/lingpy /path/to/site-packages/symlink
 </pre></div>
 </div>
 </div></blockquote>
@@ -134,17 +131,17 @@ and link it to <tt class="docutils literal"><span class="pre">lingpy-2.0/lingpy/
 <li>Test in interpreter:</li>
 </ol>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ python
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lingpy</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lingpy</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>Another, simple way, to use LingPy is to include it in your sys-path just before you call the
 library:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path_to_lingpy&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;path_to_lingpy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -154,7 +151,7 @@ library:</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -169,12 +166,14 @@ library:</p>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/tutorial/installation.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutorial/installation.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -191,7 +190,7 @@ library:</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -211,17 +210,18 @@ library:</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -231,14 +231,12 @@ library:</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

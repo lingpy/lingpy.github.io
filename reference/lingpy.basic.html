@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,169 +54,24 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-basic-package">
 <h1>lingpy.basic package<a class="headerlink" href="#lingpy-basic-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-lingpy.basic.dictionary">
-<span id="lingpy-basic-dictionary-module"></span><h2>lingpy.basic.dictionary module<a class="headerlink" href="#module-lingpy.basic.dictionary" title="Permalink to this headline">¶</a></h2>
-<p>This module provides a basic class for the handling of dictionaries.</p>
-<dl class="class">
-<dt id="lingpy.basic.dictionary.Dictionary">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.dictionary.</tt><tt class="descname">Dictionary</tt><big>(</big><em>filename</em>, <em>row='head'</em>, <em>col='translation'</em>, <em>conf=''</em><big>)</big><a class="headerlink" href="#lingpy.basic.dictionary.Dictionary" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParser" title="lingpy.basic.parser.QLCParser"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.basic.parser.QLCParser</span></tt></a></p>
-<p>Basic class for the handling of multilingual word lists.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>filename</strong> : { string dict }</p>
-<blockquote>
-<div><p>The input file that contains the data. Otherwise a dictionary with
-consecutive integers as keys and lists as values with the key 0
-specifying the header.</p>
-</div></blockquote>
-<p><strong>row</strong> : str (default = &#8220;head&#8221;)</p>
-<blockquote>
-<div><p>A string indicating the name of the row that shall be taken as the
-basis for the tabular representation of the dictionary.</p>
-</div></blockquote>
-<p><strong>col</strong> : str (default = &#8220;translation&#8221;)</p>
-<blockquote>
-<div><p>A string indicating the name of the column that shall be taken as the
-basis for the tabular representation of the dictionary.</p>
-</div></blockquote>
-<p><strong>conf</strong> : string (default=&#8217;&#8216;)</p>
-<blockquote class="last">
-<div><p>A string defining the path to the configuration file.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>A dictionary is created from a CSV file containing the data. Two keywords
-(head and translation) define, which of the dimensions of the original data
-should be used as heads and as translations of the dictionary content. A
-configuration file can be used to change basic names and aliases for the
-data being used, and the classes (data types) of the entries.</p>
-<dl class="method">
-<dt id="lingpy.basic.dictionary.Dictionary.add_entries">
-<tt class="descname">add_entries</tt><big>(</big><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.dictionary.Dictionary.add_entries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add new entry-types to the dictionary by modifying given ones.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>entry</strong> : string</p>
-<blockquote>
-<div><p>A string specifying the name of the new entry-type to be added to the
-dictionary.</p>
-</div></blockquote>
-<p><strong>source</strong> : string</p>
-<blockquote>
-<div><p>A string specifying the basic entry-type that shall be modified. If
-multiple entry-types shall be used to create a new entry, they
-should be passed in a simple string separated by a comma.</p>
-</div></blockquote>
-<p><strong>function</strong> : function</p>
-<blockquote>
-<div><p>A function which is used to convert the source into the target
-value.</p>
-</div></blockquote>
-<p><strong>keywords</strong> : {dict}</p>
-<blockquote class="last">
-<div><p>A dictionary of keywords that are passed as parameters to the
-function.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This method can be used to add new entry-types to the data by
-converting given ones. There are a lot of possibilities for adding new
-entries, but the most basic procedure is to use an existing entry-type
-and to modify it with help of a function.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.dictionary.Dictionary.get_tuples">
-<tt class="descname">get_tuples</tt><big>(</big><em>columns=['head', 'translation']</em><big>)</big><a class="headerlink" href="#lingpy.basic.dictionary.Dictionary.get_tuples" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return tuples from all entries for the given columns.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>columns</strong> : list</p>
-<blockquote>
-<div><p>A list of the column names to extract from each entry.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>entries</strong> : list</p>
-<blockquote class="last">
-<div><p>A list of all the extracted columns. If there are more than
-one columns then each entry is a tuple. If there is only one column
-then each entry is a string.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.dictionary.Dictionary.tokenize">
-<tt class="descname">tokenize</tt><big>(</big><em>orthography_profile=''</em>, <em>source='head'</em>, <em>target='tokens'</em>, <em>column='graphemes'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.dictionary.Dictionary.tokenize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tokenize the data with help of orthography profiles.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ortho_profile</strong> : str (default=&#8217;&#8216;)</p>
-<blockquote>
-<div><p>Path to the orthographic profile used to convert and tokenize the 
-input data into IPA tokens.</p>
-</div></blockquote>
-<p><strong>source</strong> : str (default=&#8221;translation&#8221;)</p>
-<blockquote>
-<div><p>The source data that shall be used for the tokenization procedures.</p>
-</div></blockquote>
-<p><strong>target</strong> : str (default=&#8221;tokens&#8221;)</p>
-<blockquote>
-<div><p>The name of the target column that will be added to the wordlist.</p>
-</div></blockquote>
-<p><strong>column</strong> : str (default=&#8221;graphemes&#8221;)</p>
-<blockquote class="last">
-<div><p>Tokenization target.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-lingpy.basic.ops">
 <span id="lingpy-basic-ops-module"></span><h2>lingpy.basic.ops module<a class="headerlink" href="#module-lingpy.basic.ops" title="Permalink to this headline">¶</a></h2>
 <p>Module provides basic operations on Wordlist-Objects.</p>
 <dl class="function">
 <dt id="lingpy.basic.ops.calculate_data">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">calculate_data</tt><big>(</big><em>wordlist</em>, <em>data</em>, <em>taxa='taxa'</em>, <em>concepts='concepts'</em>, <em>ref='cogid'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.calculate_data" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">calculate_data</code><span class="sig-paren">(</span><em>wordlist</em>, <em>data</em>, <em>taxa='taxa'</em>, <em>concepts='concepts'</em>, <em>ref='cogid'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.calculate_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manipulate a wordlist object by adding different kinds of data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -239,25 +94,36 @@ input data into IPA tokens.</p>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.clean_taxnames">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">clean_taxnames</tt><big>(</big><em>wordlist</em>, <em>column='doculect'</em>, <em>f=&lt;function &lt;lambda&gt; at 0x7fb92004c6a8&gt;</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">clean_taxnames</code><span class="sig-paren">(</span><em>wordlist</em>, <em>column='doculect'</em>, <em>f=&lt;function &lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function cleans taxon names in order to make sure they can be used in Newick files.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.basic.ops.coverage">
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">coverage</code><span class="sig-paren">(</span><em>wordlist</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.coverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the average coverage of a wordlist.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.basic.ops.get_score">
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">get_score</code><span class="sig-paren">(</span><em>wl</em>, <em>ref</em>, <em>mode</em>, <em>taxA</em>, <em>taxB</em>, <em>concepts_attr='concepts'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.get_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="lingpy.basic.ops.renumber">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">renumber</tt><big>(</big><em>wordlist</em>, <em>source</em>, <em>target=''</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.renumber" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">renumber</code><span class="sig-paren">(</span><em>wordlist</em>, <em>source</em>, <em>target=''</em>, <em>override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.renumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create numerical identifiers from string identifiers.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.triple2tsv">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">triple2tsv</tt><big>(</big><em>infile</em>, <em>output='table'</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.triple2tsv" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">triple2tsv</code><span class="sig-paren">(</span><em>triples_or_fname</em>, <em>output='table'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.triple2tsv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reads in a triple file and converts it to a tabular data structure.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.tsv2triple">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">tsv2triple</tt><big>(</big><em>wordlist</em>, <em>outfile</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.tsv2triple" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">tsv2triple</code><span class="sig-paren">(</span><em>wordlist</em>, <em>outfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.tsv2triple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a wordlist to a triple data structure.</p>
 <p class="rubric">Notes</p>
 <dl class="docutils">
@@ -273,24 +139,30 @@ input data into IPA tokens.</p>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.wl2csv">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">wl2csv</tt><big>(</big><em>header</em>, <em>data</em>, <em>filename=''</em>, <em>formatter='concept'</em>, <em>verbose=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.wl2csv" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2csv</code><span class="sig-paren">(</span><em>header</em>, <em>data</em>, <em>filename=''</em>, <em>formatter='concept'</em>, <em>verbose=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2csv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.wl2dict">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">wl2dict</tt><big>(</big><em>wordlist</em>, <em>sections</em>, <em>entries</em>, <em>exclude=None</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.wl2dict" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2dict</code><span class="sig-paren">(</span><em>wordlist</em>, <em>sections</em>, <em>entries</em>, <em>exclude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a wordlist to a complex dictionary with headings as keys.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.basic.ops.wl2dst">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">wl2dst</tt><big>(</big><em>wl</em>, <em>taxa='taxa'</em>, <em>concepts='concepts'</em>, <em>ref='cogid'</em>, <em>refB=''</em>, <em>mode='swadesh'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.wl2dst" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2dst</code><span class="sig-paren">(</span><em>wl</em>, <em>taxa='taxa'</em>, <em>concepts='concepts'</em>, <em>ref='cogid'</em>, <em>refB=''</em>, <em>mode='swadesh'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts wordlist to distance matrix.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.basic.ops.wl2multistate">
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2multistate</code><span class="sig-paren">(</span><em>wordlist</em>, <em>ref</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2multistate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function converts a wordlist to multistate format (compatible with PAUP).</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.basic.ops.wl2qlc">
-<tt class="descclassname">lingpy.basic.ops.</tt><tt class="descname">wl2qlc</tt><big>(</big><em>header</em>, <em>data</em>, <em>filename=''</em>, <em>formatter='concept'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.ops.wl2qlc" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2qlc</code><span class="sig-paren">(</span><em>header</em>, <em>data</em>, <em>filename=''</em>, <em>formatter='concept'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2qlc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the basic data of a wordlist to file.</p>
 </dd></dl>
 
@@ -300,12 +172,12 @@ input data into IPA tokens.</p>
 <p>Basic parser for text files in QLC format.</p>
 <dl class="class">
 <dt id="lingpy.basic.parser.QLCParser">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.parser.</tt><tt class="descname">QLCParser</tt><big>(</big><em>filename</em>, <em>conf=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">lingpy.basic.parser.</code><code class="descname">QLCParser</code><span class="sig-paren">(</span><em>filename</em>, <em>conf=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Basic class for the handling of text files in QLC format.</p>
 <dl class="method">
 <dt id="lingpy.basic.parser.QLCParser.add_entries">
-<tt class="descname">add_entries</tt><big>(</big><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser.add_entries" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_entries</code><span class="sig-paren">(</span><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser.add_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add new entry-types to the word list by modifying given ones.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -345,134 +217,45 @@ and to modify it with help of a function.</p>
 
 <dl class="method">
 <dt id="lingpy.basic.parser.QLCParser.pickle">
-<tt class="descname">pickle</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.parser.QLCParser.pickle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Store a dump of the data in a binary file.</p>
+<code class="descname">pickle</code><span class="sig-paren">(</span><em>filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser.pickle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store the QLCParser instance in a pickle file.</p>
 <p class="rubric">Notes</p>
-<p>The function creates a folder <tt class="docutils literal"><span class="pre">__lingpy__</span></tt> on your system containing a
-binary file called <tt class="docutils literal"><span class="pre">FILENAME.bin</span></tt> with <tt class="docutils literal"><span class="pre">FILENAME</span></tt> corresponding to
-the name of the original CSV-file. Instantiating the same
-<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> instance again will first
-check for already compiled binary files and, if they are there, load
-them instead of the CSV-file.</p>
+<p>The function stores a binary file called <code class="docutils literal"><span class="pre">FILENAME.pkl</span></code> with <code class="docutils literal"><span class="pre">FILENAME</span></code>
+corresponding to the name of the original file in the
+<a class="reference external" href="https://github.com/ActiveState/appdirs#some-example-output">user cache dir</a>
+for lingpy on your system.
+To restore the instance from the pickle call
+<a class="reference internal" href="#lingpy.basic.parser.QLCParser.unpickle" title="lingpy.basic.parser.QLCParser.unpickle"><code class="xref py py-meth docutils literal"><span class="pre">unpickle()</span></code></a>.</p>
 </dd></dl>
+
+<dl class="staticmethod">
+<dt id="lingpy.basic.parser.QLCParser.unpickle">
+<em class="property">static </em><code class="descname">unpickle</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser.unpickle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.basic.spreadsheet">
-<span id="lingpy-basic-spreadsheet-module"></span><h2>lingpy.basic.spreadsheet module<a class="headerlink" href="#module-lingpy.basic.spreadsheet" title="Permalink to this headline">¶</a></h2>
-<p>Class for reading and tokenizing tabular data. e.g. csv data exported from a spreadsheet.</p>
 <dl class="class">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.spreadsheet.</tt><tt class="descname">Spreadsheet</tt><big>(</big><em>filename</em>, <em>fileformat=None</em>, <em>dtype=None</em>, <em>comment='#'</em>, <em>sep='t'</em>, <em>language_id='NAME'</em>, <em>meanings='CONCEPT'</em>, <em>blacklist=''</em>, <em>cellsep=';'</em>, <em>skip_empty_concepts=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
-<p>Basic class to read tabular data (e.g. csv exported from spreadsheet), apply blacklist and pass to LingPy Wordlist.</p>
-<p>This module provides a basic class for reading in a simple spreadsheet (delimited text file) 
-for concepts and words in a set of languages. An optional blacklist can be used to remove / replace 
-characters, items, words, etc., from the input data. Some simple analyses of</p>
+<dt id="lingpy.basic.parser.QLCParserWithRowsAndCols">
+<em class="property">class </em><code class="descclassname">lingpy.basic.parser.</code><code class="descname">QLCParserWithRowsAndCols</code><span class="sig-paren">(</span><em>filename</em>, <em>row</em>, <em>col</em>, <em>conf</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParser" title="lingpy.basic.parser.QLCParser"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.parser.QLCParser</span></code></a></p>
+<dl class="method">
+<dt id="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries">
+<code class="descname">get_entries</code><span class="sig-paren">(</span><em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all entries matching the given entry-type as a two-dimensional list.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>filename</strong> : str</p>
-<blockquote>
-<div><p>Name of the input file.</p>
-</div></blockquote>
-<p><strong>fileformat</strong> : {None str}</p>
-<blockquote>
-<div><p>If not specified the file &lt;filename&gt; will be loaded. Otherwise, the
-fileformat is interpreted as the specific extension of the input file.</p>
-</div></blockquote>
-<p><strong>dtype</strong> : {list}</p>
-<blockquote>
-<div><p>If not specified, all data will be loaded as strings. Otherwise, a
-list specifying the data for each line should be provided.</p>
-</div></blockquote>
-<p><strong>comment</strong> : string (default=&#8221;#&#8221;)</p>
-<blockquote>
-<div><p>Comment character in the begin of a line forces this line to be
-ignored.</p>
-</div></blockquote>
-<p><strong>sep</strong> : string (default = &#8221;   &#8221;)</p>
-<blockquote>
-<div><p>Specify the separator for the CSV-file.</p>
-</div></blockquote>
-<p><strong>language_id</strong> : string (default = &#8220;NAME&#8221;)</p>
-<blockquote>
-<div><p>A qualifier for columns in the input that contain language data.</p>
-</div></blockquote>
-<p><strong>meanings</strong> : string (default = &#8220;CONCEPT&#8221;)</p>
-<blockquote>
-<div><p>A qualifier for the concepts column in the input data.</p>
-</div></blockquote>
-<p><strong>blacklist</strong> : string (default = &#8220;&#8221;)</p>
-<blockquote>
-<div><p>Path and filename to the blacklist file.</p>
-</div></blockquote>
-<p><strong>cellsep</strong> : string (default = &#8221;;&#8221;)</p>
-<blockquote>
-<div><p>The character(s) indiciating the separtor between multiple linguistic forms in the same cell.</p>
-</div></blockquote>
-<p><strong>skip_empty_cells</strong> : boolean (default = True)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>entry</strong> : string</p>
 <blockquote class="last">
-<div><p>Flag for skipping empty cells in the input.</p>
+<div><p>The entry-type of the data that shall be returned in tabular
+format.</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.analyze">
-<tt class="descname">analyze</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.analyze" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method analyses the character types, grapheme types and word types, 
-given a spreadsheet matrix.</p>
-<p>It returns a 2D matrix type of the type requested below.</p>
-<p class="rubric">Notes</p>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>args:</p>
-<p>&#8220;characters&#8221; = return a 2D matrix of chars (y) and counts in languages (x)
-&#8220;graphemes&#8221; = return a 2D matrix of graphemes (y) by counts in languages (x)
-&#8220;words&#8221; = return a 2D matrix of words by counts in languages</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.get_full_rows">
-<tt class="descname">get_full_rows</tt><big>(</big><em>matrix</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.get_full_rows" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a 2D matrix from only the full rows in the spreadsheet.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.output">
-<tt class="descname">output</tt><big>(</big><em>fileformat</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.output" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write Spreadsheet to different formats.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.pprint">
-<tt class="descname">pprint</tt><big>(</big><em>matrix</em>, <em>delimit='\t'</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.pprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenice method to pretty print a 2D array.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.pprint_matrix">
-<tt class="descname">pprint_matrix</tt><big>(</big><em>delim='\t'</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.pprint_matrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pretty print the spreadsheet matrix</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.print_doculect_character_counts">
-<tt class="descname">print_doculect_character_counts</tt><big>(</big><em>doculects=1</em><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.print_doculect_character_counts" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.print_qlc_format">
-<tt class="descname">print_qlc_format</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.print_qlc_format" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print &#8220;simple&#8221; QLC format.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.spreadsheet.Spreadsheet.stats">
-<tt class="descname">stats</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.spreadsheet.Spreadsheet.stats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience function to get some stats data about the spreadsheet</p>
 </dd></dl>
 
 </dd></dl>
@@ -483,16 +266,25 @@ given a spreadsheet matrix.</p>
 <p>Basic module for the handling of language trees.</p>
 <dl class="class">
 <dt id="lingpy.basic.tree.Tree">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.tree.</tt><tt class="descname">Tree</tt><big>(</big><em>tree</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="lingpy.thirdparty.cogent.html#lingpy.thirdparty.cogent.tree.PhyloNode" title="lingpy.thirdparty.cogent.tree.PhyloNode"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.thirdparty.cogent.tree.PhyloNode</span></tt></a></p>
+<em class="property">class </em><code class="descclassname">lingpy.basic.tree.</code><code class="descname">Tree</code><span class="sig-paren">(</span><em>tree</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lingpy.thirdparty.cogent.html#lingpy.thirdparty.cogent.tree.PhyloNode" title="lingpy.thirdparty.cogent.tree.PhyloNode"><code class="xref py py-class docutils literal"><span class="pre">lingpy.thirdparty.cogent.tree.PhyloNode</span></code></a></p>
 <p>Basic class for the handling of phylogenetic trees.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tree</strong> : {str file}</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tree</strong> : {str file list}</p>
+<blockquote>
+<div><p>A string or a file containing trees in Newick format. As an
+alternative, you can also simply pass a list containing taxon names. In
+that case, a random tree will be created from the list of taxa.</p>
+</div></blockquote>
+<p><strong>branch_lengths</strong> : bool (default=False)</p>
 <blockquote class="last">
-<div><p>A string or a file containing trees in NEWICK format.</p>
+<div><p>When set to <em>True</em>, and a list of taxa is passed instead of a Newick
+string or a file containing a Newick string, a random tree with random
+branch lengths will be created with the branch lengths being in order
+of the maximum number of the total number of internal branches.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -500,23 +292,23 @@ given a spreadsheet matrix.</p>
 </table>
 <dl class="method">
 <dt id="lingpy.basic.tree.Tree.createTransitionMatrix">
-<tt class="descname">createTransitionMatrix</tt><big>(</big><em>states</em>, <em>tmat</em>, <em>random=True</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.createTransitionMatrix" title="Permalink to this definition">¶</a></dt>
+<code class="descname">createTransitionMatrix</code><span class="sig-paren">(</span><em>states</em>, <em>tmat</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.createTransitionMatrix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.basic.tree.Tree.getDistanceToRoot">
-<tt class="descname">getDistanceToRoot</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.getDistanceToRoot" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getDistanceToRoot</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.getDistanceToRoot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.basic.tree.Tree.getTransitionMatrix">
-<tt class="descname">getTransitionMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.getTransitionMatrix" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getTransitionMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.getTransitionMatrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a matrix with two columns for each node in the tree.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.basic.tree.Tree.get_distance">
-<tt class="descname">get_distance</tt><big>(</big><em>other</em>, <em>distance='grf'</em>, <em>debug=False</em><big>)</big><a class="headerlink" href="#lingpy.basic.tree.Tree.get_distance" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_distance</code><span class="sig-paren">(</span><em>other</em>, <em>distance='grf'</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.get_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns the Robinson Fould distance between the two trees.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -553,14 +345,45 @@ intitial tree.</p>
 
 </dd></dl>
 
+<dl class="function">
+<dt id="lingpy.basic.tree.random_tree">
+<code class="descclassname">lingpy.basic.tree.</code><code class="descname">random_tree</code><span class="sig-paren">(</span><em>taxa</em>, <em>branch_lengths=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.random_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a random tree from a list of taxa.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>The list containing the names of the taxa from which the tree will be
+created.</p>
+</div></blockquote>
+<p><strong>branch_lengths</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>When set to <em>True</em>, a random tree with random branch lengths will be
+created with the branch lengths being in order of the maximum number of
+the total number of internal branches.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tree_string</strong> : str</p>
+<blockquote class="last">
+<div><p>A string representation of the random tree in Newick format.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.basic.wordlist">
 <span id="lingpy-basic-wordlist-module"></span><h2>lingpy.basic.wordlist module<a class="headerlink" href="#module-lingpy.basic.wordlist" title="Permalink to this headline">¶</a></h2>
 <p>This module provides a basic class for the handling of word lists.</p>
 <dl class="class">
 <dt id="lingpy.basic.wordlist.Wordlist">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.wordlist.</tt><tt class="descname">Wordlist</tt><big>(</big><em>filename</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=''</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParser" title="lingpy.basic.parser.QLCParser"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.basic.parser.QLCParser</span></tt></a></p>
+<em class="property">class </em><code class="descclassname">lingpy.basic.wordlist.</code><code class="descname">Wordlist</code><span class="sig-paren">(</span><em>filename</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="lingpy.basic.parser.QLCParserWithRowsAndCols"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.parser.QLCParserWithRowsAndCols</span></code></a></p>
 <p>Basic class for the handling of multilingual word lists.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -605,7 +428,7 @@ transcriptions, both the orthographical source and the IPA transcriptions
 can be easily accessed as two separate two-dimensional lists.</p>
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.add_entries">
-<tt class="descname">add_entries</tt><big>(</big><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_entries</code><span class="sig-paren">(</span><em>entry</em>, <em>source</em>, <em>function</em>, <em>override=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add new entry-types to the word list by modifying given ones.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -645,7 +468,7 @@ and to modify it with help of a function.</p>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.calculate">
-<tt class="descname">calculate</tt><big>(</big><em>data</em>, <em>taxa='taxa'</em>, <em>concepts='concepts'</em>, <em>ref='cogid'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.calculate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">calculate</code><span class="sig-paren">(</span><em>data</em>, <em>taxa='taxa'</em>, <em>concepts='concepts'</em>, <em>ref='cogid'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function calculates specific data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -667,8 +490,14 @@ and to modify it with help of a function.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="lingpy.basic.wordlist.Wordlist.coverage">
+<code class="descname">coverage</code><span class="sig-paren">(</span><em>stats='absolute'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.coverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function determines the coverage of a wordlist.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.export">
-<tt class="descname">export</tt><big>(</big><em>fileformat</em>, <em>sections=None</em>, <em>entries=None</em>, <em>entry_sep=''</em>, <em>item_sep=''</em>, <em>template=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.export" title="Permalink to this definition">¶</a></dt>
+<code class="descname">export</code><span class="sig-paren">(</span><em>fileformat</em>, <em>sections=None</em>, <em>entries=None</em>, <em>entry_sep=''</em>, <em>item_sep=''</em>, <em>template=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export the wordlist to specific fileformats.</p>
 <p class="rubric">Notes</p>
 <p>The difference between export and output is that the latter mostly
@@ -679,7 +508,7 @@ example, HTML or LaTeX files from the wordlist data.</p>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_dict">
-<tt class="descname">get_dict</tt><big>(</big><em>col=''</em>, <em>row=''</em>, <em>entry=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_dict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_dict</code><span class="sig-paren">(</span><em>col=''</em>, <em>row=''</em>, <em>entry=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns dictionaries of the cells matched by the indices.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -689,14 +518,14 @@ example, HTML or LaTeX files from the wordlist data.</p>
 <blockquote>
 <div><p>The column index evaluated by the method. It should contain one of the
 values in the row of the
-<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> instance, usually a
+<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> instance, usually a
 taxon (language) name.</p>
 </div></blockquote>
 <p><strong>row</strong> : string (default=&#8221;&#8221;)</p>
 <blockquote>
 <div><p>The row index evaluated by the method. It should contain one of the
 values in the row of the
-<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> instance, usually a
+<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> instance, usually a
 taxon (language) name.</p>
 </div></blockquote>
 <p><strong>entry</strong> : string (default=&#8221;&#8221;)</p>
@@ -720,35 +549,35 @@ keyword.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><tt class="xref py py-obj docutils literal"><span class="pre">Wordlist.get_list</span></tt></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><tt class="xref py py-obj docutils literal"><span class="pre">Wordlist.add_entries</span></tt></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.get_list</span></code></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.add_entries</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The &#8220;col&#8221; and &#8220;row&#8221; keywords in the function are all aliased according
-to the description in the <tt class="docutils literal"><span class="pre">wordlist.rc</span></tt> file. Thus, instead of
+to the description in the <code class="docutils literal"><span class="pre">wordlist.rc</span></code> file. Thus, instead of
 using these attributes, the aliases can also be taken. For selecting a
 language, one may type something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s">&#39;LANGUAGE&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and for the selection of a concept, one may type something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s">&#39;CONCEPT&#39;</span><span class="p">)</span>    
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s1">&#39;CONCEPT&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>See the examples below for details.</p>
 <p class="rubric">Examples</p>
-<p>Load the <tt class="docutils literal"><span class="pre">harry_potter.csv</span></tt> file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
+<p>Load the <code class="docutils literal"><span class="pre">harry_potter.csv</span></code> file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Select all IPA-entries for the language &#8220;German&#8221;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&#39;ipa&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span><span class="p">)</span>
 <span class="go">{&#39;Harry&#39;: [&#39;haralt&#39;], &#39;hand&#39;: [&#39;hant&#39;], &#39;leg&#39;: [&#39;bain&#39;]}</span>
 </pre></div>
 </div>
 <p>Select all words (orthographical representation) for the concept
 &#8220;Harry&#8221;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&quot;words&quot;</span><span class="p">)</span>
-<span class="go">{&#39;English&#39;: [&#39;hæri&#39;], &#39;German&#39;: [&#39;haralt&#39;], &#39;Russian&#39;: [&#39;gari&#39;], &#39;Ukrainian&#39;: [&#39;gari&#39;]}</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
+<span class="go">{&#39;English&#39;: [&#39;hæri&#39;], &#39;German&#39;: [&#39;haralt&#39;], &#39;Russian&#39;: [&#39;gari&#39;],             &#39;Ukrainian&#39;: [&#39;gari&#39;]}</span>
 </pre></div>
 </div>
 <p>Note that the values of the dictionary that is returned are always
@@ -757,27 +586,8 @@ lists, since it is possible that the original file contains synonyms
 </dd></dl>
 
 <dl class="method">
-<dt id="lingpy.basic.wordlist.Wordlist.get_entries">
-<tt class="descname">get_entries</tt><big>(</big><em>entry</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_entries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return all entries matching the given entry-type as a two-dimensional list.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>entry</strong> : string</p>
-<blockquote class="last">
-<div><p>The entry-type of the data that shall be returned in tabular
-format.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_etymdict">
-<tt class="descname">get_etymdict</tt><big>(</big><em>ref='cogid'</em>, <em>entry=''</em>, <em>loans=False</em>, <em>fuzzy=False</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_etymdict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_etymdict</code><span class="sig-paren">(</span><em>ref='cogid'</em>, <em>entry=''</em>, <em>loans=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_etymdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an etymological dictionary representation of the word list.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -797,10 +607,6 @@ format.</p>
 Negative IDs can be used to indicate borrowings, or, more
 accurately, xenologs.</p>
 </div></blockquote>
-<p><strong>fuzzy</strong> : bool (default=False)</p>
-<blockquote>
-<div><p>d</p>
-</div></blockquote>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>etym_dict</strong> : dict</p>
@@ -814,12 +620,15 @@ accurately, xenologs.</p>
 <p class="rubric">Notes</p>
 <p>In contrast to the word-list representation of the data, an
 etymological dictionary representation sorts the counterparts according to
-the cognate sets of which they are reflexes.</p>
+the cognate sets of which they are reflexes. If more than one cognate
+ID are assigned to an entry, for example in cases of fuzzy cognate IDs
+or partial cognate IDs, the etymological dictionary will return one
+cognate set for each of the IDs.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_list">
-<tt class="descname">get_list</tt><big>(</big><em>row=''</em>, <em>col=''</em>, <em>entry=''</em>, <em>flat=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_list" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_list</code><span class="sig-paren">(</span><em>row=''</em>, <em>col=''</em>, <em>entry=''</em>, <em>flat=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns lists of rows and columns specified by their name.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -855,28 +664,28 @@ data.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><tt class="xref py py-obj docutils literal"><span class="pre">Wordlist.get_list</span></tt></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><tt class="xref py py-obj docutils literal"><span class="pre">Wordlist.add_entries</span></tt></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.get_list</span></code></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.add_entries</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The &#8216;col&#8217; and &#8216;row&#8217; keywords in the function are all aliased according
-to the description in the <tt class="docutils literal"><span class="pre">wordlist.rc</span></tt> file. Thus, instead of
+to the description in the <code class="docutils literal"><span class="pre">wordlist.rc</span></code> file. Thus, instead of
 using these attributes, the aliases can also be taken. For selecting a
 language, one may type something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s">&#39;LANGUAGE&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and for the selection of a concept, one may type something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s">&#39;CONCEPT&#39;</span><span class="p">)</span>    
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s1">&#39;CONCEPT&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>See the examples below for details.</p>
 <p class="rubric">Examples</p>
-<p>Load the <tt class="docutils literal"><span class="pre">harry_potter.csv</span></tt> file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
+<p>Load the <code class="docutils literal"><span class="pre">harry_potter.csv</span></code> file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Select all IPA-entries for the language &#8220;German&#8221;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&#39;ipa&#39;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span>
 <span class="go">[&#39;bain&#39;, &#39;hant&#39;, &#39;haralt&#39;]</span>
 </pre></div>
 </div>
@@ -885,8 +694,8 @@ don&#8217;t have a word in the given language). If one wants to avoid this,
 the &#8216;flat&#8217; keyword should be set to <em>True</em>.</p>
 <p>Select all words (orthographical representation) for the concept
 &#8220;Harry&#8221;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&quot;words&quot;</span><span class="p">)</span>
-<span class="go">[[&#39;Harry&#39;, &#39;Harald&#39;, &#39;Гари&#39;, &#39;Гарi&#39;]]            </span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
+<span class="go">[[&#39;Harry&#39;, &#39;Harald&#39;, &#39;Гари&#39;, &#39;Гарi&#39;]]</span>
 </pre></div>
 </div>
 <p>Note that the values of the list that is returned are always
@@ -895,7 +704,7 @@ lists, since it is possible that the original file contains synonyms
 (multiple words corresponding to the same concept). If one wants to
 have a flat representation of the entries, the &#8216;flat&#8217; keyword should be
 set to <em>True</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s">&quot;words&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="go">[&#39;hæri&#39;, &#39;haralt&#39;, &#39;gari&#39;, &#39;hari&#39;]</span>
 </pre></div>
 </div>
@@ -903,7 +712,7 @@ set to <em>True</em>:</p>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_paps">
-<tt class="descname">get_paps</tt><big>(</big><em>ref='cogid'</em>, <em>entry='concept'</em>, <em>missing=0</em>, <em>loans=False</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_paps" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_paps</code><span class="sig-paren">(</span><em>ref='cogid'</em>, <em>entry='concept'</em>, <em>missing=0</em>, <em>loans=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_paps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns a list of present-absent-patterns of a given word list.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -929,13 +738,13 @@ set to <em>True</em>:</p>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.output">
-<tt class="descname">output</tt><big>(</big><em>fileformat</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">output</code><span class="sig-paren">(</span><em>fileformat</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write wordlist to file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : {&#8220;qlc&#8221;, &#8220;tre&#8221;,&#8221;nwk&#8221;,&#8221;dst&#8221;, &#8220;taxa&#8221;, &#8220;starling&#8221;, &#8220;paps.nex&#8221;, &#8220;paps.csv&#8221;}</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : {&#8220;qlc&#8221;,&#8221;tre&#8221;,&#8221;nwk&#8221;,&#8221;dst&#8221;, &#8220;taxa&#8221;, &#8220;starling&#8221;, &#8220;paps.nex&#8221;, &#8220;paps.csv&#8221;}</p>
 <blockquote>
 <div><p>The format that is written to file. This corresponds to the file
 extension, thus &#8216;qlc&#8217; creates a file in qlc-format, &#8216;dst&#8217; creates
@@ -993,45 +802,36 @@ output format, the method that is used to calculate the tree.</p>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.renumber">
-<tt class="descname">renumber</tt><big>(</big><em>source</em>, <em>target=''</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.renumber" title="Permalink to this definition">¶</a></dt>
+<code class="descname">renumber</code><span class="sig-paren">(</span><em>source</em>, <em>target=''</em>, <em>override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.renumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Renumber a given set of string identifiers by replacing the ids by integers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>source</strong> : str</p>
+<blockquote>
+<div><p>The source column to be manipulated.</p>
+</div></blockquote>
+<p><strong>target</strong> : str (default=&#8217;&#8216;)</p>
+<blockquote>
+<div><p>The name of the target colummn. If no name is chosen, the target
+column will be manipulated by adding &#8220;id&#8221; to the name of the source
+column.</p>
+</div></blockquote>
+<p><strong>override</strong> : bool (default=False)</p>
+<blockquote class="last">
+<div><p>Force to overwrite the data if the target column already exists.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Notes</p>
 <p>In addition to a new column, an further entry is added to the &#8220;_meta&#8221;
 attribute of the wordlist by which newly coined ids can be retrieved
 from the former string attributes. This attribute is called
 &#8220;source2target&#8221; and can be accessed either via the &#8220;_meta&#8221; dictionary
 or directly as an attribute of the wordlist.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.basic.wordlist.Wordlist.tokenize">
-<tt class="descname">tokenize</tt><big>(</big><em>orthography_profile=''</em>, <em>source='counterpart'</em>, <em>target='tokens'</em>, <em>column='graphemes'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.tokenize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tokenize the data with help of orthography profiles.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ortho_profile</strong> : str (default=&#8217;&#8216;)</p>
-<blockquote>
-<div><p>Path to the orthographic profile used to convert and tokenize the 
-input data into IPA tokens.</p>
-</div></blockquote>
-<p><strong>source</strong> : str (default=&#8221;translation&#8221;)</p>
-<blockquote>
-<div><p>The source data that shall be used for the tokenization procedures.</p>
-</div></blockquote>
-<p><strong>target</strong> : str (default=&#8221;tokens&#8221;)</p>
-<blockquote>
-<div><p>The name of the target column that will be added to the wordlist.</p>
-</div></blockquote>
-<p><strong>column</strong> : str (default=&#8221;graphemes&#8221;)</p>
-<blockquote class="last">
-<div><p>Tokenization target.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 </dd></dl>
@@ -1042,8 +842,8 @@ input data into IPA tokens.</p>
 <p>Package provides generic workflow modules for LingPy.</p>
 <dl class="class">
 <dt id="lingpy.basic.workflow.Workflow">
-<em class="property">class </em><tt class="descclassname">lingpy.basic.workflow.</tt><tt class="descname">Workflow</tt><big>(</big><em>infile</em><big>)</big><a class="headerlink" href="#lingpy.basic.workflow.Workflow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">lingpy.basic.workflow.</code><code class="descname">Workflow</code><span class="sig-paren">(</span><em>infile</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.workflow.Workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Class provides access to generic workflows.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1059,7 +859,7 @@ input data into IPA tokens.</p>
 </table>
 <dl class="method">
 <dt id="lingpy.basic.workflow.Workflow.cognate_detection">
-<tt class="descname">cognate_detection</tt><big>(</big><em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.basic.workflow.Workflow.cognate_detection" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cognate_detection</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.workflow.Workflow.cognate_detection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method runs a cognate detection analysis.</p>
 </dd></dl>
 
@@ -1078,7 +878,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -1087,10 +887,8 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
   <ul>
 <li><a class="reference internal" href="#">lingpy.basic package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.dictionary">lingpy.basic.dictionary module</a></li>
 <li><a class="reference internal" href="#module-lingpy.basic.ops">lingpy.basic.ops module</a></li>
 <li><a class="reference internal" href="#module-lingpy.basic.parser">lingpy.basic.parser module</a></li>
-<li><a class="reference internal" href="#module-lingpy.basic.spreadsheet">lingpy.basic.spreadsheet module</a></li>
 <li><a class="reference internal" href="#module-lingpy.basic.tree">lingpy.basic.tree module</a></li>
 <li><a class="reference internal" href="#module-lingpy.basic.wordlist">lingpy.basic.wordlist module</a></li>
 <li><a class="reference internal" href="#module-lingpy.basic.workflow">lingpy.basic.workflow module</a></li>
@@ -1099,12 +897,14 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/reference/lingpy.basic.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/lingpy.basic.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -1121,7 +921,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1141,17 +941,18 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -1161,14 +962,12 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

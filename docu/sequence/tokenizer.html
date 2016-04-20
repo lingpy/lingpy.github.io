@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,21 +54,18 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="tokenizer-tokenizer">
-<h1>Tokenizer (<a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer" title="lingpy.sequence.tokenizer.Tokenizer"><tt class="xref py py-class docutils literal"><span class="pre">Tokenizer</span></tt></a>)<a class="headerlink" href="#tokenizer-tokenizer" title="Permalink to this headline">¶</a></h1>
+<h1>Tokenizer (<a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer" title="lingpy.sequence.tokenizer.Tokenizer"><code class="xref py py-class docutils literal"><span class="pre">Tokenizer</span></code></a>)<a class="headerlink" href="#tokenizer-tokenizer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.sequence.tokenizer.Tokenizer">
-<em class="property">class </em><tt class="descclassname">lingpy.sequence.tokenizer.</tt><tt class="descname">Tokenizer</tt><big>(</big><em>orthography_profile=None</em><big>)</big><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.sequence.tokenizer.</code><code class="descname">Tokenizer</code><span class="sig-paren">(</span><em>orthography_profile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tokenizer.Tokenizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for orthographic parsing using orthography profiles as designed for the QLC project.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -84,12 +81,12 @@ LingPy
 </table>
 <p class="rubric">Notes</p>
 <p>The Tokenizer reads in an orthography profile and calls a helper 
-class to build a trie data structure, which stores the possible Unicode 
+class to build a tree data structure, which stores the possible Unicode 
 character combinations that are specified in the orthography profile 
 and appear in the data source.</p>
 <p>For example, an orthography profile might specify that in source X 
 &lt;uu&gt; is a single grapheme (Unicode parlance: tailored grapheme) and 
-thererfore it should be chunked as so. Given an orthography profile and 
+therefore it should be chunked as so. Given an orthography profile and 
 some data to parse, the process would look like this:</p>
 <p>input string example: uubo uubo
 output string example: uu b o # uu b o</p>
@@ -123,9 +120,9 @@ followed by &lt;space&gt; followed by a second vowel with first vowel
 &lt;space&gt; &lt;n&gt; &lt;space&gt; second vowel, e.g.:</p>
 <p>([a|á|e|é|i|í|o|ó|u|ú])(n)(s)([a|á|e|é|i|í|o|ó|u|ú]),   </p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence.tokenizer</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">(</span><span class="s">&quot;test.prf&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s">&quot;baach&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence.tokenizer</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">(</span><span class="s2">&quot;test.prf&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;baach&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">characters</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
 <span class="go">b a a c h</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">graphemes</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
@@ -141,40 +138,40 @@ followed by &lt;space&gt; followed by a second vowel with first vowel
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.characters" title="lingpy.sequence.tokenizer.Tokenizer.characters"><tt class="xref py py-obj docutils literal"><span class="pre">characters</span></tt></a>(string)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.characters" title="lingpy.sequence.tokenizer.Tokenizer.characters"><code class="xref py py-obj docutils literal"><span class="pre">characters</span></code></a>(string)</td>
 <td>Given a string as input, return a space-delimited string of Unicode characters (code points rendered as glyphs).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.combine_modifiers" title="lingpy.sequence.tokenizer.Tokenizer.combine_modifiers"><tt class="xref py py-obj docutils literal"><span class="pre">combine_modifiers</span></tt></a>(string)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.combine_modifiers" title="lingpy.sequence.tokenizer.Tokenizer.combine_modifiers"><code class="xref py py-obj docutils literal"><span class="pre">combine_modifiers</span></code></a>(string)</td>
 <td>Given a string that is space-delimited on Unicode grapheme cluters,  group Unicode modifier letters with their preceeding base characters.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.exists_multiple_columns" title="lingpy.sequence.tokenizer.Tokenizer.exists_multiple_columns"><tt class="xref py py-obj docutils literal"><span class="pre">exists_multiple_columns</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.exists_multiple_columns" title="lingpy.sequence.tokenizer.Tokenizer.exists_multiple_columns"><code class="xref py py-obj docutils literal"><span class="pre">exists_multiple_columns</span></code></a>()</td>
 <td>Returns boolean of whether multiple columns exist in the orthography profile, e.g.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.find_missing_characters" title="lingpy.sequence.tokenizer.Tokenizer.find_missing_characters"><tt class="xref py py-obj docutils literal"><span class="pre">find_missing_characters</span></tt></a>(char_tokenized_string)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.find_missing_characters" title="lingpy.sequence.tokenizer.Tokenizer.find_missing_characters"><code class="xref py py-obj docutils literal"><span class="pre">find_missing_characters</span></code></a>(char_tokenized_string)</td>
 <td>Given a string tokenized into characters, return a characters tokenized string where each character missing from the orthography  profile is replaced with a question mark &lt;?&gt;.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters" title="lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters"><tt class="xref py py-obj docutils literal"><span class="pre">grapheme_clusters</span></tt></a>(string)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters" title="lingpy.sequence.tokenizer.Tokenizer.grapheme_clusters"><code class="xref py py-obj docutils literal"><span class="pre">grapheme_clusters</span></code></a>(string)</td>
 <td>Given a string as input, return a space-delimited string of Unicode graphemes using the &#8220;X&#8221; regular expression.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.graphemes" title="lingpy.sequence.tokenizer.Tokenizer.graphemes"><tt class="xref py py-obj docutils literal"><span class="pre">graphemes</span></tt></a>(string)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.graphemes" title="lingpy.sequence.tokenizer.Tokenizer.graphemes"><code class="xref py py-obj docutils literal"><span class="pre">graphemes</span></code></a>(string)</td>
 <td>Tokenizes strings given an orthograhy profile that specifies graphemes in a source doculect.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.remove_spaces" title="lingpy.sequence.tokenizer.Tokenizer.remove_spaces"><tt class="xref py py-obj docutils literal"><span class="pre">remove_spaces</span></tt></a>(string)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.remove_spaces" title="lingpy.sequence.tokenizer.Tokenizer.remove_spaces"><code class="xref py py-obj docutils literal"><span class="pre">remove_spaces</span></code></a>(string)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.rules" title="lingpy.sequence.tokenizer.Tokenizer.rules"><tt class="xref py py-obj docutils literal"><span class="pre">rules</span></tt></a>(string)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.rules" title="lingpy.sequence.tokenizer.Tokenizer.rules"><code class="xref py py-obj docutils literal"><span class="pre">rules</span></code></a>(string)</td>
 <td>Function to parse input string and return output of str with ortho rules applied.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.tokenize" title="lingpy.sequence.tokenizer.Tokenizer.tokenize"><tt class="xref py py-obj docutils literal"><span class="pre">tokenize</span></tt></a>(string[,&nbsp;column])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.tokenize" title="lingpy.sequence.tokenizer.Tokenizer.tokenize"><code class="xref py py-obj docutils literal"><span class="pre">tokenize</span></code></a>(string[,&nbsp;column])</td>
 <td>This function determines what to do given any combination  of orthography profiles and rules or not orthography profiles or rules.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa" title="lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa"><tt class="xref py py-obj docutils literal"><span class="pre">tokenize_ipa</span></tt></a>(string)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa" title="lingpy.sequence.tokenizer.Tokenizer.tokenize_ipa"><code class="xref py py-obj docutils literal"><span class="pre">tokenize_ipa</span></code></a>(string)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.transform" title="lingpy.sequence.tokenizer.Tokenizer.transform"><tt class="xref py py-obj docutils literal"><span class="pre">transform</span></tt></a>(string[,&nbsp;column])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.transform" title="lingpy.sequence.tokenizer.Tokenizer.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(string[,&nbsp;column])</td>
 <td>Transform a string&#8217;s graphemes into the mappings given in a different column  in the orthography profile.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.transform_rules" title="lingpy.sequence.tokenizer.Tokenizer.transform_rules"><tt class="xref py py-obj docutils literal"><span class="pre">transform_rules</span></tt></a>(string)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.tokenizer.Tokenizer.transform_rules" title="lingpy.sequence.tokenizer.Tokenizer.transform_rules"><code class="xref py py-obj docutils literal"><span class="pre">transform_rules</span></code></a>(string)</td>
 <td>Convenience function that first tokenizes a string into orthographic profile- specified graphemes and then applies the orthography profile rules.</td>
 </tr>
 </tbody>
@@ -187,17 +184,19 @@ followed by &lt;space&gt; followed by a second vowel with first vowel
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/sequence/tokenizer.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/sequence/tokenizer.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -214,7 +213,7 @@ followed by &lt;space&gt; followed by a second vowel with first vowel
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -234,17 +233,18 @@ followed by &lt;space&gt; followed by a second vowel with first vowel
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -254,14 +254,12 @@ followed by &lt;space&gt; followed by a second vowel with first vowel
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

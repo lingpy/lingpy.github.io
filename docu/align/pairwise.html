@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,18 +54,15 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="pairwise-alignment-pairwise">
-<h1>Pairwise Alignment (<a class="reference internal" href="../../reference/lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><tt class="xref py py-mod docutils literal"><span class="pre">pairwise</span></tt></a>)<a class="headerlink" href="#pairwise-alignment-pairwise" title="Permalink to this headline">¶</a></h1>
+<h1>Pairwise Alignment (<a class="reference internal" href="../../reference/lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-mod docutils literal"><span class="pre">pairwise</span></code></a>)<a class="headerlink" href="#pairwise-alignment-pairwise" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
@@ -74,19 +71,19 @@ LingPy
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.nw_align" title="lingpy.align.pairwise.nw_align"><tt class="xref py py-obj docutils literal"><span class="pre">nw_align</span></tt></a>(seqA,&nbsp;seqB[,&nbsp;scorer,&nbsp;gap])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.nw_align" title="lingpy.align.pairwise.nw_align"><code class="xref py py-obj docutils literal"><span class="pre">nw_align</span></code></a>(seqA,&nbsp;seqB[,&nbsp;scorer,&nbsp;gap])</td>
 <td>Carry out the traditional Needleman-Wunsch algorithm.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.sw_align" title="lingpy.align.pairwise.sw_align"><tt class="xref py py-obj docutils literal"><span class="pre">sw_align</span></tt></a>(seqA,&nbsp;seqB[,&nbsp;scorer,&nbsp;gap])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.sw_align" title="lingpy.align.pairwise.sw_align"><code class="xref py py-obj docutils literal"><span class="pre">sw_align</span></code></a>(seqA,&nbsp;seqB[,&nbsp;scorer,&nbsp;gap])</td>
 <td>Carry out the traditional Smith-Waterman algorithm.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.we_align" title="lingpy.align.pairwise.we_align"><tt class="xref py py-obj docutils literal"><span class="pre">we_align</span></tt></a>(seqA,&nbsp;seqB[,&nbsp;scorer,&nbsp;gap])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.we_align" title="lingpy.align.pairwise.we_align"><code class="xref py py-obj docutils literal"><span class="pre">we_align</span></code></a>(seqA,&nbsp;seqB[,&nbsp;scorer,&nbsp;gap])</td>
 <td>Carry out the traditional Waterman-Eggert algorithm.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.edit_dist" title="lingpy.align.pairwise.edit_dist"><tt class="xref py py-obj docutils literal"><span class="pre">edit_dist</span></tt></a>(seqA,&nbsp;seqB[,&nbsp;normalized,&nbsp;restriction])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.pairwise.edit_dist" title="lingpy.align.pairwise.edit_dist"><code class="xref py py-obj docutils literal"><span class="pre">edit_dist</span></code></a>(seqA,&nbsp;seqB[,&nbsp;normalized,&nbsp;restriction])</td>
 <td>Return the edit distance between two strings.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.sca.SCA" title="lingpy.align.sca.SCA"><tt class="xref py py-obj docutils literal"><span class="pre">SCA</span></tt></a>(infile,&nbsp;**keywords)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.sca.SCA" title="lingpy.align.sca.SCA"><code class="xref py py-obj docutils literal"><span class="pre">SCA</span></code></a>(infile,&nbsp;**keywords)</td>
 <td>Method returns alignment objects depending on input file or input data.</td>
 </tr>
 </tbody>
@@ -100,10 +97,10 @@ LingPy
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="lingpy.align.Pairwise.html#lingpy.align.Pairwise" title="lingpy.align.Pairwise"><tt class="xref py py-obj docutils literal"><span class="pre">Pairwise</span></tt></a>(seqs[,&nbsp;seqB])</td>
+<tr class="row-odd"><td><a class="reference internal" href="lingpy.align.Pairwise.html#lingpy.align.Pairwise" title="lingpy.align.Pairwise"><code class="xref py py-obj docutils literal"><span class="pre">Pairwise</span></code></a>(seqs[,&nbsp;seqB])</td>
 <td>Basic class for the handling of pairwise sequence alignments (PSA).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="lingpy.align.PSA.html#lingpy.align.PSA" title="lingpy.align.PSA"><tt class="xref py py-obj docutils literal"><span class="pre">PSA</span></tt></a>(infile,&nbsp;**keywords)</td>
+<tr class="row-even"><td><a class="reference internal" href="lingpy.align.PSA.html#lingpy.align.PSA" title="lingpy.align.PSA"><code class="xref py py-obj docutils literal"><span class="pre">PSA</span></code></a>(infile,&nbsp;**keywords)</td>
 <td>Basic class for dealing with the pairwise alignment of sequences.</td>
 </tr>
 </tbody>
@@ -115,26 +112,28 @@ LingPy
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Pairwise Alignment (<tt class="docutils literal"><span class="pre">pairwise</span></tt>)</a><ul>
+<li><a class="reference internal" href="#">Pairwise Alignment (<code class="docutils literal"><span class="pre">pairwise</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 </ul>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/align/pairwise.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/align/pairwise.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -151,7 +150,7 @@ LingPy
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -171,17 +170,18 @@ LingPy
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -191,14 +191,12 @@ LingPy
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

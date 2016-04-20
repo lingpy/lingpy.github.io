@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,29 +54,26 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-evaluate-evalpsa">
 <h1>lingpy.evaluate.EvalPSA<a class="headerlink" href="#lingpy-evaluate-evalpsa" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.evaluate.EvalPSA">
-<em class="property">class </em><tt class="descclassname">lingpy.evaluate.</tt><tt class="descname">EvalPSA</tt><big>(</big><em>gold</em>, <em>test</em><big>)</big><a class="headerlink" href="#lingpy.evaluate.EvalPSA" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.evaluate.</code><code class="descname">EvalPSA</code><span class="sig-paren">(</span><em>gold</em>, <em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.EvalPSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for the evaluation of automatic pairwise sequence analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gold, test</strong> : <a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.sca.PSA" title="lingpy.align.sca.PSA"><tt class="xref py py-class docutils literal"><span class="pre">lingpy.align.sca.PSA</span></tt></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gold, test</strong> : <a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.sca.PSA" title="lingpy.align.sca.PSA"><code class="xref py py-class docutils literal"><span class="pre">lingpy.align.sca.PSA</span></code></a></p>
 <blockquote class="last">
-<div><p>The <tt class="xref py py-class docutils literal"><span class="pre">Pairwise</span></tt> objects which shall be
+<div><p>The <code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code> objects which shall be
 compared. The first object should be the gold standard and the second
 object should be the test set.</p>
 </div></blockquote>
@@ -86,13 +83,13 @@ object should be the test set.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalMSA" title="lingpy.evaluate.apa.EvalMSA"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalMSA</span></tt></a></p>
+<p class="last"><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalMSA" title="lingpy.evaluate.apa.EvalMSA"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalMSA</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>Moste of the scores which can be calculated with help of this class are standard
 evaluation scores in evolutionary biology. For a close description on how
-these scores are calculated, see, for example, <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></tt>,
-<tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></tt>, and <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></tt>.</p>
+these scores are calculated, see, for example, <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
+<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -100,19 +97,19 @@ these scores are calculated, see, for example, <tt class="docutils literal"><a c
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.c_score" title="lingpy.evaluate.apa.EvalPSA.c_score"><tt class="xref py py-obj docutils literal"><span class="pre">c_score</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.c_score" title="lingpy.evaluate.apa.EvalPSA.c_score"><code class="xref py py-obj docutils literal"><span class="pre">c_score</span></code></a>()</td>
 <td>Calculate column (C) score.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.r_score" title="lingpy.evaluate.apa.EvalPSA.r_score"><tt class="xref py py-obj docutils literal"><span class="pre">r_score</span></tt></a>([mode])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.r_score" title="lingpy.evaluate.apa.EvalPSA.r_score"><code class="xref py py-obj docutils literal"><span class="pre">r_score</span></code></a>([mode])</td>
 <td>Compute the percentage of identical rows (PIR) score.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.sp_score" title="lingpy.evaluate.apa.EvalPSA.sp_score"><tt class="xref py py-obj docutils literal"><span class="pre">sp_score</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.sp_score" title="lingpy.evaluate.apa.EvalPSA.sp_score"><code class="xref py py-obj docutils literal"><span class="pre">sp_score</span></code></a>()</td>
 <td>Calculate the sum-of-pairs (SP) score.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.jc_score" title="lingpy.evaluate.apa.EvalPSA.jc_score"><tt class="xref py py-obj docutils literal"><span class="pre">jc_score</span></tt></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.jc_score" title="lingpy.evaluate.apa.EvalPSA.jc_score"><code class="xref py py-obj docutils literal"><span class="pre">jc_score</span></code></a>()</td>
 <td>Calculate the Jaccard (JC) score.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.diff" title="lingpy.evaluate.apa.EvalPSA.diff"><tt class="xref py py-obj docutils literal"><span class="pre">diff</span></tt></a>(**keywords)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.evaluate.html#lingpy.evaluate.apa.EvalPSA.diff" title="lingpy.evaluate.apa.EvalPSA.diff"><code class="xref py py-obj docutils literal"><span class="pre">diff</span></code></a>(**keywords)</td>
 <td>Write all differences between two sets to a file.</td>
 </tr>
 </tbody>
@@ -125,17 +122,19 @@ these scores are calculated, see, for example, <tt class="docutils literal"><a c
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/lingpy-logo.svg" alt="Logo"/>
             </a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/docu/evaluate/lingpy.evaluate.EvalPSA.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/docu/evaluate/lingpy.evaluate.EvalPSA.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -152,7 +151,7 @@ these scores are calculated, see, for example, <tt class="docutils literal"><a c
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -172,17 +171,18 @@ these scores are calculated, see, for example, <tt class="docutils literal"><a c
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -192,14 +192,12 @@ these scores are calculated, see, for example, <tt class="docutils literal"><a c
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

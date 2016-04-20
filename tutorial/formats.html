@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="basic-formats">
 <h1>Basic Formats<a class="headerlink" href="#basic-formats" title="Permalink to this headline">¶</a></h1>
@@ -71,12 +68,12 @@ are taken as input formats, or that they are produced as output from the classes
 provided by LingPy.</p>
 <div class="section" id="wordlist-format-basic-format-for-storing-large-datasets">
 <span id="wordlist-format"></span><h2>Wordlist-Format: Basic Format for Storing Large Datasets<a class="headerlink" href="#wordlist-format-basic-format-for-storing-large-datasets" title="Permalink to this headline">¶</a></h2>
-<p>For the <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><tt class="xref py py-class docutils literal"><span class="pre">Wordlist</span></tt></a> class (and also for all classes that inherit
-from it, such as <a class="reference internal" href="../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><tt class="xref py py-class docutils literal"><span class="pre">LexStat</span></tt></a>,
-<tt class="xref py py-class docutils literal"><span class="pre">PhyBo</span></tt>, <a class="reference internal" href="../reference/lingpy.align.html#lingpy.align.sca.Alignments" title="lingpy.align.sca.Alignments"><tt class="xref py py-class docutils literal"><span class="pre">Alignments</span></tt></a>), a
+<p>For the <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> class (and also for all classes that inherit
+from it, such as <a class="reference internal" href="../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>,
+<code class="xref py py-class docutils literal"><span class="pre">PhyBo</span></code>, <a class="reference internal" href="../reference/lingpy.align.html#lingpy.align.sca.Alignments" title="lingpy.align.sca.Alignments"><code class="xref py py-class docutils literal"><span class="pre">Alignments</span></code></a>), a
 simple csv-format is used. This format is a simple tab-delimited text file in which the header
 specifies all entry types in a given dataset:</p>
-<div class="highlight-python"><div class="highlight"><pre>ID   CONCEPT     COUNTERPART   IPA         DOCULECT     COGID
+<div class="highlight-python"><div class="highlight"><pre><span></span>ID   CONCEPT     COUNTERPART   IPA         DOCULECT     COGID
 1    hand        Hand          hant        German       1
 2    hand        hand          hænd        English      1
 3    hand        рука          ruka        Russian      2
@@ -97,7 +94,7 @@ specifies all entry types in a given dataset:</p>
 </div>
 <p>This format can be further extended by adding key-value pairs in the lines before the header, such
 as, for example, information regarding the author, the data, or general notes:</p>
-<div class="highlight-python"><div class="highlight"><pre>@author: Potter, Harry
+<div class="highlight-python"><div class="highlight"><pre><span></span>@author: Potter, Harry
 @date: 2012-11-07
 @note: Be careful with this data, it might have been charmed...
 #
@@ -110,9 +107,9 @@ ID   CONCEPT     COUNTERPART   IPA         DOCULECT     COGID
 </div>
 <p>This format is, of course, rather redundant, but it allows to display multiple entry-types for
 language data. Furthermore, the data can be easily extended. Thus, one can add multiple alignments,
-using the standard formats for multiple alignments, as described under <a class="reference internal" href="#msa-formats"><em>Multiple Alignments (MSQ and MSA)</em></a>,
+using the standard formats for multiple alignments, as described under <a class="reference internal" href="#msa-formats"><span>Multiple Alignments (MSQ and MSA)</span></a>,
 by enclosing them in specific html-tags and placing them before the real data:</p>
-<div class="highlight-python"><div class="highlight"><pre>@author: Potter, Harry
+<div class="highlight-python"><div class="highlight"><pre><span></span>@author: Potter, Harry
 @date: 2012-11-07
 @note: Be careful with this data, it might have been charmed...
 #
@@ -139,7 +136,7 @@ ID   CONCEPT     COUNTERPART   IPA         DOCULECT     COGID
 <div class="section" id="pairwise-alignments-psq-and-psa">
 <span id="psa-formats"></span><h2>Pairwise Alignments (PSQ and PSA)<a class="headerlink" href="#pairwise-alignments-psq-and-psa" title="Permalink to this headline">¶</a></h2>
 <p>The input format for text files containing unaligned sequence pairs is called PSQ-format. Files
-in this format should have the extension <tt class="docutils literal"><span class="pre">psq</span></tt>. The first line of a PSQ-file contains information
+in this format should have the extension <code class="docutils literal"><span class="pre">psq</span></code>. The first line of a PSQ-file contains information
 regarding the dataset. The sequence pairs are given in triplets, with a sequence identifier in the
 first line of a triplet (containing the meaning, or orthographical information) and the two
 sequences in the second and third line, whereas the first column of each sequence line contains the
@@ -161,7 +158,7 @@ empty line. As an example, consider the file <a class="reference external" href=
 <span class="LineNr">12 </span><span class="msaTaxa">German</span>      <span class="dolgoGlides">w</span> <span class="dolgoVowels">a</span> <span class="dolgoLaterals">l</span> d <span class="dolgoVowels">e</span> <span class="dolgoMy">m</span> <span class="dolgoVowels">a</span> <span class="dolgoLaterals">r</span>
 </pre>
 <p>The output counterpart of the PSQ-format is the PSA-format. It is a specific format for text files
-containing already aligned sequence pairs. Files in this format should have the extension <tt class="docutils literal"><span class="pre">psa</span></tt>. The
+containing already aligned sequence pairs. Files in this format should have the extension <code class="docutils literal"><span class="pre">psa</span></code>. The
 first line of a PSA-file contains information regarding the dataset. The sequence pairs are given in
 triplets, with a sequence identifier in the first line of a triplet (containing the meaning, or
 orthographical information) and the aligned sequences in the second and third line, whith the name
@@ -189,7 +186,7 @@ tabstops. All triplets are divided by one empty line. As an example, consider th
 <span id="msa-formats"></span><h2>Multiple Alignments (MSQ and MSA)<a class="headerlink" href="#multiple-alignments-msq-and-msa" title="Permalink to this headline">¶</a></h2>
 <p>A specific format for text files containing multiple unaligned sequences is the MSQ-format.
 Files in this
-format should have the extension <tt class="docutils literal"><span class="pre">msq</span></tt>. The first line of an msq-file contains information regarding
+format should have the extension <code class="docutils literal"><span class="pre">msq</span></code>. The first line of an msq-file contains information regarding
 the dataset. The second line contains information regarding the sequence (meaning, identifier), and
 the following lines contain the name of the taxa in the first column and the sequences in IPA format
 in the second column, separated by a tabstop. As an example, consider the file <a class="reference external" href="examples/harry_potter.msq">harry_potter.msq</a>:</p>
@@ -202,7 +199,7 @@ in the second column, separated by a tabstop. As an example, consider the file <
 <span class="LineNr">5 </span><span class="msaTaxa">Russian</span>     <span class="dolgoGlides">v</span> <span class="dolgoLaterals">l</span> <span class="dolgoVowels">a</span> <span class="dolgoDentals">d</span> <span class="dolgoVowels">i</span> <span class="dolgoMy">m</span> <span class="dolgoVowels">i</span> <span class="dolgoLaterals">r</span>
 </pre>
 <p>The msa-format is a specific format for text files containing already aligned sequence pairs. Files
-in this format should have the extension <tt class="docutils literal"><span class="pre">msa</span></tt>. The first line of a MSA-file contains information
+in this format should have the extension <code class="docutils literal"><span class="pre">msa</span></code>. The first line of a MSA-file contains information
 regarding the dataset. The second line contains information regarding the sequence (its meaning, the
 protoform corresponding to the cognate set, etc.). The aligned sequences are given in the following
 lines, whereas the taxa are given in the first column and the aligned segments in the following
@@ -230,7 +227,7 @@ example, consider the file <a class="reference external" href="examples/harry_po
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -246,12 +243,14 @@ example, consider the file <a class="reference external" href="examples/harry_po
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/tutorial/formats.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutorial/formats.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -268,7 +267,7 @@ example, consider the file <a class="reference external" href="examples/harry_po
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -288,17 +287,18 @@ example, consider the file <a class="reference external" href="examples/harry_po
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -308,14 +308,12 @@ example, consider the file <a class="reference external" href="examples/harry_po
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

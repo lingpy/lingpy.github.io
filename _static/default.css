@@ -231,7 +231,7 @@ pre {
     border-right: none;
 }
 
-tt {
+code {
     background-color: #ecf0f3;
     padding: 0 1px 0 1px;
     font-size: 0.95em;
@@ -241,11 +241,11 @@ th {
     background-color: #ede;
 }
 
-.warning tt {
+.warning code {
     background: #efc2c2;
 }
 
-.note tt {
+.note code {
     background: #d6d6d6;
 }
 
@@ -257,4 +257,9 @@ div.viewcode-block:target {
     background-color: #f4debf;
     border-top: 1px solid #ac9;
     border-bottom: 1px solid #ac9;
+}
+
+div.code-block-caption {
+    color: #efefef;
+    background-color: #1c4e63;
 }

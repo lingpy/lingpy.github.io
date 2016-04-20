@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-convert-package">
 <h1>lingpy.convert package<a class="headerlink" href="#lingpy-convert-package" title="Permalink to this headline">¶</a></h1>
@@ -74,7 +71,7 @@ LingPy
 <p>Conversion routines for the GML format.</p>
 <dl class="function">
 <dt id="lingpy.convert.graph.gls2gml">
-<tt class="descclassname">lingpy.convert.graph.</tt><tt class="descname">gls2gml</tt><big>(</big><em>gls</em>, <em>graph</em>, <em>tree</em>, <em>filename=''</em>, <em>verbose=True</em><big>)</big><a class="headerlink" href="#lingpy.convert.graph.gls2gml" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">gls2gml</code><span class="sig-paren">(</span><em>gls</em>, <em>graph</em>, <em>tree</em>, <em>filename=''</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.gls2gml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create GML-representation of a given gain-loss-scenario (GLS).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -99,8 +96,19 @@ LingPy
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.convert.graph.igraph2networkx">
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">igraph2networkx</code><span class="sig-paren">(</span><em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.igraph2networkx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.convert.graph.networkx2igraph">
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">networkx2igraph</code><span class="sig-paren">(</span><em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.networkx2igraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function converts networkx graph to igraph graph object.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.convert.graph.nwk2gml">
-<tt class="descclassname">lingpy.convert.graph.</tt><tt class="descname">nwk2gml</tt><big>(</big><em>treefile</em>, <em>filename=''</em>, <em>verbose=True</em><big>)</big><a class="headerlink" href="#lingpy.convert.graph.nwk2gml" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">nwk2gml</code><span class="sig-paren">(</span><em>treefile</em>, <em>filename=''</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.nwk2gml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a tree in newick format to a network in gml-format.</p>
 <dl class="docutils">
 <dt>treefile <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
@@ -108,7 +116,7 @@ LingPy
 Newick-format, or the tree-string itself.</dd>
 <dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;lingpy&#8217;)</span></dt>
 <dd>The name of the output GML-file. If filename is set to c{None}, the
-function returns a <tt class="xref py py-class docutils literal"><span class="pre">Graph</span></tt>.</dd>
+function returns a <code class="xref py py-class docutils literal"><span class="pre">Graph</span></code>.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -122,7 +130,7 @@ function returns a <tt class="xref py py-class docutils literal"><span class="pr
 
 <dl class="function">
 <dt id="lingpy.convert.graph.radial_layout">
-<tt class="descclassname">lingpy.convert.graph.</tt><tt class="descname">radial_layout</tt><big>(</big><em>treestring</em>, <em>change=&lt;function &lt;lambda&gt; at 0x7fb9105712f0&gt;</em>, <em>degree=100</em>, <em>filename=''</em>, <em>start=0</em>, <em>root='root'</em><big>)</big><a class="headerlink" href="#lingpy.convert.graph.radial_layout" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">radial_layout</code><span class="sig-paren">(</span><em>treestring</em>, <em>change=&lt;function &lt;lambda&gt;&gt;</em>, <em>degree=100</em>, <em>filename=''</em>, <em>start=0</em>, <em>root='root'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.radial_layout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function calculates a simple radial tree layout.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -162,8 +170,8 @@ graphics-attribute of the nodes.</p>
 <p>Basic functions for HTML-plots.</p>
 <dl class="function">
 <dt id="lingpy.convert.html.alm2html">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">alm2html</tt><big>(</big><em>infile</em>, <em>title=''</em>, <em>shorttitle=''</em>, <em>filename=''</em>, <em>colored=False</em>, <em>verbose=True</em>, <em>show=True</em>, <em>main_template=''</em>, <em>table_template=''</em>, <em>dataset=''</em>, <em>confidence=False</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.alm2html" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert files in <tt class="docutils literal"><span class="pre">alm</span></tt>-format into colored <tt class="docutils literal"><span class="pre">html</span></tt>-format.</p>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">alm2html</code><span class="sig-paren">(</span><em>infile</em>, <em>title=''</em>, <em>shorttitle=''</em>, <em>filename=''</em>, <em>colored=False</em>, <em>verbose=True</em>, <em>show=True</em>, <em>main_template=''</em>, <em>table_template=''</em>, <em>dataset=''</em>, <em>confidence=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.alm2html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert files in <code class="docutils literal"><span class="pre">alm</span></code>-format into colored <code class="docutils literal"><span class="pre">html</span></code>-format.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -171,12 +179,12 @@ graphics-attribute of the nodes.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>title</strong> : str</p>
 <blockquote>
 <div><p>Define the title of the output file. If no title is provided, the
-default title <tt class="docutils literal"><span class="pre">LexStat</span> <span class="pre">-</span> <span class="pre">Automatic</span> <span class="pre">Cognate</span> <span class="pre">Judgments</span></tt> will be used.</p>
+default title <code class="docutils literal"><span class="pre">LexStat</span> <span class="pre">-</span> <span class="pre">Automatic</span> <span class="pre">Cognate</span> <span class="pre">Judgments</span></code> will be used.</p>
 </div></blockquote>
 <p><strong>shorttitle</strong> : str</p>
 <blockquote class="last">
-<div><p>Define the shorttitle of the <tt class="docutils literal"><span class="pre">html</span></tt>-page. If no title is provided,
-the default title <tt class="docutils literal"><span class="pre">LexStat</span></tt> will be used.</p>
+<div><p>Define the shorttitle of the <code class="docutils literal"><span class="pre">html</span></code>-page. If no title is provided,
+the default title <code class="docutils literal"><span class="pre">LexStat</span></code> will be used.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -184,18 +192,18 @@ the default title <tt class="docutils literal"><span class="pre">LexStat</span><
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.convert.html.msa2html" title="lingpy.convert.html.msa2html"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.convert.html.msa2html</span></tt></a>, <a class="reference internal" href="#lingpy.convert.html.msa2tex" title="lingpy.convert.html.msa2tex"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.convert.html.msa2tex</span></tt></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.convert.html.msa2html" title="lingpy.convert.html.msa2html"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.convert.html.msa2html</span></code></a>, <a class="reference internal" href="#lingpy.convert.html.msa2tex" title="lingpy.convert.html.msa2tex"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.convert.html.msa2tex</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The coloring of sound segments with respect to the sound class they belong
 to is based on the definitions given in the
-<tt class="docutils literal"><span class="pre">color</span></tt> <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a>. It can easily be changed
+<code class="docutils literal"><span class="pre">color</span></code> <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a>. It can easily be changed
 and adapted.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.colorRange">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">colorRange</tt><big>(</big><em>number</em>, <em>brightness=300</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.colorRange" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">colorRange</code><span class="sig-paren">(</span><em>number</em>, <em>brightness=300</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.colorRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns different colors for the given range.</p>
 <p class="rubric">Notes</p>
 <p>Idea taken from
@@ -204,8 +212,8 @@ and adapted.</p>
 
 <dl class="function">
 <dt id="lingpy.convert.html.msa2html">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">msa2html</tt><big>(</big><em>msa</em>, <em>shorttitle=''</em>, <em>filename=''</em>, <em>template=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.msa2html" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert files in <tt class="docutils literal"><span class="pre">msa</span></tt>-format into colored <tt class="docutils literal"><span class="pre">html</span></tt>-format.</p>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">msa2html</code><span class="sig-paren">(</span><em>msa</em>, <em>shorttitle=''</em>, <em>filename=''</em>, <em>template=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert files in <code class="docutils literal"><span class="pre">msa</span></code>-format into colored <code class="docutils literal"><span class="pre">html</span></code>-format.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -216,8 +224,8 @@ and adapted.</p>
 </div></blockquote>
 <p><strong>shorttitle</strong> : str</p>
 <blockquote>
-<div><p>Define the shorttitle of the <tt class="docutils literal"><span class="pre">html</span></tt>-page. If no title is provided,
-the default title <tt class="docutils literal"><span class="pre">SCA</span></tt> will be used.</p>
+<div><p>Define the shorttitle of the <code class="docutils literal"><span class="pre">html</span></code>-page. If no title is provided,
+the default title <code class="docutils literal"><span class="pre">SCA</span></code> will be used.</p>
 </div></blockquote>
 <p><strong>filename</strong> : str (default=&#8221;&#8221;)</p>
 <blockquote>
@@ -228,7 +236,7 @@ the input file will be taken as a default.</p>
 <blockquote class="last">
 <div><p>The path to the template file. If no name is defined, the basic
 template will be used. The basic template currently used can be found
-under <tt class="docutils literal"><span class="pre">lingpy/data/templates/msa2html.html</span></tt>.</p>
+under <code class="docutils literal"><span class="pre">lingpy/data/templates/msa2html.html</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -236,23 +244,23 @@ under <tt class="docutils literal"><span class="pre">lingpy/data/templates/msa2h
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.convert.html.alm2html" title="lingpy.convert.html.alm2html"><tt class="xref py py-obj docutils literal"><span class="pre">lingpy.convert.html.alm2html</span></tt></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.convert.html.alm2html" title="lingpy.convert.html.alm2html"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.convert.html.alm2html</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The coloring of sound segments with respect to the sound class they belong
-to is based on the definitions given in the <tt class="docutils literal"><span class="pre">color</span></tt>
-<a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><tt class="xref py py-class docutils literal"><span class="pre">Model</span></tt></a>. It can easily be changed and adapted.</p>
+to is based on the definitions given in the <code class="docutils literal"><span class="pre">color</span></code>
+<a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a>. It can easily be changed and adapted.</p>
 <p class="rubric">Examples</p>
 <p>Load the libary.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
-<p>Load an <tt class="docutils literal"><span class="pre">msq</span></tt>-file from the test-sets.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span> <span class="o">=</span> <span class="n">MSA</span><span class="p">(</span><span class="s">&#39;harry.msq&#39;</span><span class="p">)</span>
+<p>Load an <code class="docutils literal"><span class="pre">msq</span></code>-file from the test-sets.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span> <span class="o">=</span> <span class="n">MSA</span><span class="p">(</span><span class="s1">&#39;harry.msq&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Align the data progressively and carry out a check for swapped sites.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">msa</span><span class="p">)</span>
 <span class="go">w    o    l    -    d    e    m    o    r    t</span>
@@ -260,60 +268,82 @@ to is based on the definitions given in the <tt class="docutils literal"><span c
 <span class="go">v    -    l    a    d    i    m    i    r    -</span>
 </pre></div>
 </div>
-<p>Save the data to the file <tt class="docutils literal"><span class="pre">harry.msa</span></tt>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s">&#39;msa&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s">&#39;harry&#39;</span><span class="p">)</span>
+<p>Save the data to the file <code class="docutils literal"><span class="pre">harry.msa</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;msa&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Save the <tt class="docutils literal"><span class="pre">msa</span></tt>-object as <tt class="docutils literal"><span class="pre">html</span></tt>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s">&#39;html&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s">&#39;harry&#39;</span><span class="p">)</span>
+<p>Save the <code class="docutils literal"><span class="pre">msa</span></code>-object as <code class="docutils literal"><span class="pre">html</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.msa2tex">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">msa2tex</tt><big>(</big><em>infile</em>, <em>template=''</em>, <em>path=''</em>, <em>filename=''</em>, <em>verbose=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.msa2tex" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">msa2tex</code><span class="sig-paren">(</span><em>infile</em>, <em>template=''</em>, <em>path=''</em>, <em>filename=''</em>, <em>verbose=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2tex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an MSA to a tabular representation which can easily be used in
 LaTeX documents.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.psa2html">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">psa2html</tt><big>(</big><em>filename</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.psa2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">psa2html</code><span class="sig-paren">(</span><em>filename</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.psa2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a PSA-file into colored html-format.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.string2html">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">string2html</tt><big>(</big><em>taxon</em>, <em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em>, <em>path=''</em>, <em>template=''</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.string2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">string2html</code><span class="sig-paren">(</span><em>taxon</em>, <em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em>, <em>path=''</em>, <em>template=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.string2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an (aligned) string into colored html-format.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.tokens2html">
-<tt class="descclassname">lingpy.convert.html.</tt><tt class="descname">tokens2html</tt><big>(</big><em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em>, <em>path=''</em>, <em>template=''</em><big>)</big><a class="headerlink" href="#lingpy.convert.html.tokens2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">tokens2html</code><span class="sig-paren">(</span><em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em>, <em>path=''</em>, <em>template=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.tokens2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an (aligned) string into colored html-format.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="module-lingpy.convert.plot">
 <span id="lingpy-convert-plot-module"></span><h2>lingpy.convert.plot module<a class="headerlink" href="#module-lingpy.convert.plot" title="Permalink to this headline">¶</a></h2>
-<p>Module provides functions for the transformation of text data into visually appealing format.</p>
+<p>Module provides functions for the transformation of text data into visually appealing
+format.</p>
 <dl class="function">
 <dt id="lingpy.convert.plot.plot_concept_evolution">
-<tt class="descclassname">lingpy.convert.plot.</tt><tt class="descname">plot_concept_evolution</tt><big>(</big><em>scenarios</em>, <em>tree</em>, <em>fileformat='pdf'</em>, <em>degree=90</em>, <em>verbose=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.plot.plot_concept_evolution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot the evolution of</p>
+<code class="descclassname">lingpy.convert.plot.</code><code class="descname">plot_concept_evolution</code><span class="sig-paren">(</span><em>scenarios</em>, <em>tree</em>, <em>fileformat='pdf'</em>, <em>degree=90</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_concept_evolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the evolution according to the MLN method of all words for a given concept.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tree</strong> : str</p>
+<blockquote>
+<div><p>A tree representation in Newick format.</p>
+</div></blockquote>
+<p><strong>fileformat</strong> : str (default=&#8221;pdf&#8221;)</p>
+<blockquote>
+<div><p>A valid fileformat according to Matplotlib.</p>
+</div></blockquote>
+<p><strong>degree</strong> : int (default=90)</p>
+<blockquote class="last">
+<div><p>The degree by which the tree is drawn. 360 yields a circular tree, 180
+yields a tree filling half of the space of a circle.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.plot.plot_gls">
-<tt class="descclassname">lingpy.convert.plot.</tt><tt class="descname">plot_gls</tt><big>(</big><em>gls</em>, <em>treestring</em>, <em>degree=90</em>, <em>fileformat='pdf'</em>, <em>verbose=True</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.plot.plot_gls" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.plot.</code><code class="descname">plot_gls</code><span class="sig-paren">(</span><em>gls</em>, <em>treestring</em>, <em>degree=90</em>, <em>fileformat='pdf'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_gls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a gain-loss scenario for a given reference tree.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.plot.plot_heatmap">
-<tt class="descclassname">lingpy.convert.plot.</tt><tt class="descname">plot_heatmap</tt><big>(</big><em>wordlist</em>, <em>filename='heatmap'</em>, <em>fileformat='pdf'</em>, <em>ref='cogid'</em>, <em>normalized=False</em>, <em>refB=''</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.plot.plot_heatmap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.plot.</code><code class="descname">plot_heatmap</code><span class="sig-paren">(</span><em>wordlist</em>, <em>filename='heatmap'</em>, <em>fileformat='pdf'</em>, <em>ref='cogid'</em>, <em>normalized=False</em>, <em>refB=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_heatmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a heatmap-representation of shared cognates for a given wordlist.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -340,7 +370,7 @@ LaTeX documents.</p>
 <div><p>If set to c{False}, don&#8217;t normalize the data. Otherwise, select the
 normalization method, choose between:</p>
 <ul class="simple">
-<li>&#8220;jaccard&#8221; for the Jaccard-distance (see <tt class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bategelj1995"><span class="pre">Bategelj1995</span></a></tt> for
+<li>&#8220;jaccard&#8221; for the Jaccard-distance (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bategelj1995"><span class="pre">Bategelj1995</span></a></code> for
 details), and</li>
 <li>&#8220;swadesh&#8221; for traditional lexicostatistical calculation of shared
 cognate percentages.</li>
@@ -381,8 +411,8 @@ the method looks for a tree object in the Wordlist.</p>
 
 <dl class="function">
 <dt id="lingpy.convert.plot.plot_tree">
-<tt class="descclassname">lingpy.convert.plot.</tt><tt class="descname">plot_tree</tt><big>(</big><em>treestring</em>, <em>degree=90</em>, <em>fileformat='pdf'</em>, <em>root='root'</em>, <em>**keywords</em><big>)</big><a class="headerlink" href="#lingpy.convert.plot.plot_tree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot a newick tree to PDF or other graphical formats.</p>
+<code class="descclassname">lingpy.convert.plot.</code><code class="descname">plot_tree</code><span class="sig-paren">(</span><em>treestring</em>, <em>degree=90</em>, <em>fileformat='pdf'</em>, <em>root='root'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a Newick tree to PDF or other graphical formats.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -421,31 +451,131 @@ Defaults to a timestamp.</p>
 <p>Basic functions for the conversion of Python-internal data into strings.</p>
 <dl class="function">
 <dt id="lingpy.convert.strings.matrix2dst">
-<tt class="descclassname">lingpy.convert.strings.</tt><tt class="descname">matrix2dst</tt><big>(</big><em>matrix</em>, <em>taxa=None</em>, <em>stamp=''</em>, <em>filename=''</em>, <em>taxlen='10'</em><big>)</big><a class="headerlink" href="#lingpy.convert.strings.matrix2dst" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">matrix2dst</code><span class="sig-paren">(</span><em>matrix</em>, <em>taxa=None</em>, <em>stamp=''</em>, <em>filename=''</em>, <em>taxlen=10</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.matrix2dst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert matrix to dst-format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>taxa</strong> : {None, list}</p>
+<blockquote>
+<div><p>List of taxon names corresponding to the distances. Make sure that you
+only use alphanumeric characters and the understroke for assigning the
+taxon names. Especially avoid the usage of brackets, since this will
+confuse many phylogenetic programs.</p>
+</div></blockquote>
+<p><strong>stamp</strong> : str (default=&#8217;&#8216;)</p>
+<blockquote>
+<div><p>Convenience stamp passed as a comment that can be used to indicate how
+the matrix was created.</p>
+</div></blockquote>
+<p><strong>filename</strong> : str</p>
+<blockquote>
+<div><p>If you specify a filename, the data will be written to file.</p>
+</div></blockquote>
+<p><strong>taxlen</strong> : int (default=10)</p>
+<blockquote>
+<div><p>Indicate how long the taxon names are allowed to be. The Phylip package
+only allows taxon names consisting of maximally 10 characters. Other
+packages, however, allow more. If Phylip compatibility is not important
+for you and you just want to allow for as long taxon names as possible,
+set this value to 0.</p>
+</div></blockquote>
+<p><strong>comment</strong> : str (default = &#8216;#&#8217;)</p>
+<blockquote>
+<div><p>The comment character to be used when adding additional information in
+the &#8220;stamp&#8221;.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>output</strong> : {str or file}</p>
+<blockquote class="last">
+<div><p>Depending on your settings, this function returns a string in DST
+(=Phylip) format, or a file containing the string.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.strings.msa2str">
-<tt class="descclassname">lingpy.convert.strings.</tt><tt class="descname">msa2str</tt><big>(</big><em>msa</em>, <em>wordlist=False</em>, <em>comment='#'</em>, <em>_arange='{stamp}{comment}\n{meta}{comment}\n{body}'</em>, <em>merge=False</em><big>)</big><a class="headerlink" href="#lingpy.convert.strings.msa2str" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">msa2str</code><span class="sig-paren">(</span><em>msa</em>, <em>wordlist=False</em>, <em>comment='#'</em>, <em>_arange='{stamp}{comment}\n{meta}{comment}\n{body}'</em>, <em>merge=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.msa2str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an MSA object into a string.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.convert.strings.multistate2nex">
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">multistate2nex</code><span class="sig-paren">(</span><em>taxa</em>, <em>matrix</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.multistate2nex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the data in a given wordlist to NEXUS-format for multistate analyses in PAUP.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>The list of taxa that shall be written to file.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list</p>
+<blockquote>
+<div><p>The multi-state matrix with the first dimension indicating the taxa,
+and the second their states.</p>
+</div></blockquote>
+<p><strong>filename</strong> : str (default=&#8221;&#8221;)</p>
+<blockquote class="last">
+<div><p>If not specified, the filename of the Wordlist will be taken,
+otherwise, it specifies the name of the file to which the data will be
+written.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.convert.strings.pap2csv">
-<tt class="descclassname">lingpy.convert.strings.</tt><tt class="descname">pap2csv</tt><big>(</big><em>taxa</em>, <em>paps</em>, <em>filename=''</em><big>)</big><a class="headerlink" href="#lingpy.convert.strings.pap2csv" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">pap2csv</code><span class="sig-paren">(</span><em>taxa</em>, <em>paps</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2csv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write paps created by the Wordlist class to a csv-file.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.strings.pap2nex">
-<tt class="descclassname">lingpy.convert.strings.</tt><tt class="descname">pap2nex</tt><big>(</big><em>taxa</em>, <em>paps</em>, <em>missing=0</em>, <em>filename=''</em><big>)</big><a class="headerlink" href="#lingpy.convert.strings.pap2nex" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">pap2nex</code><span class="sig-paren">(</span><em>taxa</em>, <em>paps</em>, <em>missing=0</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2nex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a list of paps into nexus file format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>List of taxa.</p>
+</div></blockquote>
+<p><strong>paps</strong> : {list, dict}</p>
+<blockquote>
+<div><p>A two-dimensional list with the first dimension being identical to the
+number of taxa and the second dimension being identical to the number
+of paps. If a dictionary is passed, each key represents a given pap.
+The following two structures will thus be treated identically:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">paps</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span> <span class="c1"># two languages, three paps</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">paps</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]}</span> <span class="c1"># two languages, three paps</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>missing</strong> : {str, int} (default=0)</p>
+<blockquote class="last">
+<div><p>Indicate how missing characters are represented in the original data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.strings.scorer2str">
-<tt class="descclassname">lingpy.convert.strings.</tt><tt class="descname">scorer2str</tt><big>(</big><em>scorer</em><big>)</big><a class="headerlink" href="#lingpy.convert.strings.scorer2str" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">scorer2str</code><span class="sig-paren">(</span><em>scorer</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.scorer2str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a scoring function to a string.</p>
 </dd></dl>
 
@@ -455,19 +585,19 @@ Defaults to a timestamp.</p>
 <p>Functions for tree calculations and working with trees.</p>
 <dl class="function">
 <dt id="lingpy.convert.tree.constructSubtree">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">constructSubtree</tt><big>(</big><em>paths</em>, <em>index</em>, <em>curNode</em>, <em>indexMap</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.constructSubtree" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">constructSubtree</code><span class="sig-paren">(</span><em>paths</em>, <em>index</em>, <em>curNode</em>, <em>indexMap</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.constructSubtree" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.tree.nwk2guidetree">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">nwk2guidetree</tt><big>(</big><em>newick</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.nwk2guidetree" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">nwk2guidetree</code><span class="sig-paren">(</span><em>newick</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.nwk2guidetree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a tree matrix for a guide tree given in Newick format.
 Input is a binary tree with zero-based integer names at the leaves.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.tree.nwk2tree_matrix">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">nwk2tree_matrix</tt><big>(</big><em>newick</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.nwk2tree_matrix" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">nwk2tree_matrix</code><span class="sig-paren">(</span><em>newick</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.nwk2tree_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a newick file to a tree matrix.</p>
 <p class="rubric">Notes</p>
 <p>This is an additional function that can be used for plots with help of
@@ -477,22 +607,22 @@ that scipy&#8217;s linkage functions create.</p>
 
 <dl class="function">
 <dt id="lingpy.convert.tree.selectNodes">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">selectNodes</tt><big>(</big><em>tree</em>, <em>selIndices</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.selectNodes" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">selectNodes</code><span class="sig-paren">(</span><em>tree</em>, <em>selIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.selectNodes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.tree.subGuideTree">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">subGuideTree</tt><big>(</big><em>tree</em>, <em>selIndices</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.subGuideTree" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">subGuideTree</code><span class="sig-paren">(</span><em>tree</em>, <em>selIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.subGuideTree" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.tree.treePath">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">treePath</tt><big>(</big><em>node</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.treePath" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">treePath</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.treePath" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.tree.xml2nwk">
-<tt class="descclassname">lingpy.convert.tree.</tt><tt class="descname">xml2nwk</tt><big>(</big><em>infile</em>, <em>filename=''</em>, <em>tax_name='pri-name'</em><big>)</big><a class="headerlink" href="#lingpy.convert.tree.xml2nwk" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.tree.</code><code class="descname">xml2nwk</code><span class="sig-paren">(</span><em>infile</em>, <em>filename=''</em>, <em>tax_name='pri-name'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.xml2nwk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert xml-based MultiTree format to Newick-format.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -535,7 +665,7 @@ order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -554,12 +684,14 @@ order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/reference/lingpy.convert.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/lingpy.convert.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -576,7 +708,7 @@ order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -596,17 +728,18 @@ order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -616,14 +749,12 @@ order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

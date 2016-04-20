@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,76 +54,93 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-tests-meaning-package">
 <h1>lingpy.tests.meaning package<a class="headerlink" href="#lingpy-tests-meaning-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-lingpy.tests.meaning.test_concepts">
-<span id="lingpy-tests-meaning-test-concepts-module"></span><h2>lingpy.tests.meaning.test_concepts module<a class="headerlink" href="#module-lingpy.tests.meaning.test_concepts" title="Permalink to this headline">¶</a></h2>
-<p>This contains the test classes and functions for concepts.py.</p>
+<div class="section" id="module-lingpy.tests.meaning.test_basvoc">
+<span id="lingpy-tests-meaning-test-basvoc-module"></span><h2>lingpy.tests.meaning.test_basvoc module<a class="headerlink" href="#module-lingpy.tests.meaning.test_basvoc" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptComparerSpanishStem">
-<em class="property">class </em><tt class="descclassname">lingpy.tests.meaning.test_concepts.</tt><tt class="descname">TestConceptComparerSpanishStem</tt><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptComparerSpanishStem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dt id="lingpy.tests.meaning.test_basvoc.TestBasVoc">
+<em class="property">class </em><code class="descclassname">lingpy.tests.meaning.test_basvoc.</code><code class="descname">TestBasVoc</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestBasVoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptComparerSpanishStem.setup">
-<tt class="descname">setup</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptComparerSpanishStem.setup" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.meaning.test_basvoc.TestBasVoc.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestBasVoc.setUp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptComparerSpanishStem.test_compare_to_concept">
-<tt class="descname">test_compare_to_concept</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptComparerSpanishStem.test_compare_to_concept" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.meaning.test_basvoc.TestBasVoc.test_get_list">
+<code class="descname">test_get_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestBasVoc.test_get_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.meaning.test_basvoc.TestBasVoc.test_get_sublist">
+<code class="descname">test_get_sublist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestBasVoc.test_get_sublist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.meaning.test_basvoc.TestBasVoc.test_init">
+<code class="descname">test_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestBasVoc.test_init" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptComparerStringMatch">
-<em class="property">class </em><tt class="descclassname">lingpy.tests.meaning.test_concepts.</tt><tt class="descname">TestConceptComparerStringMatch</tt><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptComparerStringMatch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dt id="lingpy.tests.meaning.test_basvoc.TestConcepticon">
+<em class="property">class </em><code class="descclassname">lingpy.tests.meaning.test_basvoc.</code><code class="descname">TestConcepticon</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestConcepticon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptComparerStringMatch.setup">
-<tt class="descname">setup</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptComparerStringMatch.setup" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.meaning.test_basvoc.TestConcepticon.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestConcepticon.setUp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptComparerStringMatch.test_compare_to_concept">
-<tt class="descname">test_compare_to_concept</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptComparerStringMatch.test_compare_to_concept" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptGraph">
-<em class="property">class </em><tt class="descclassname">lingpy.tests.meaning.test_concepts.</tt><tt class="descname">TestConceptGraph</tt><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptGraph" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
-<dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptGraph.setup">
-<tt class="descname">setup</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptGraph.setup" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.meaning.test_basvoc.TestConcepticon.test_compare">
+<code class="descname">test_compare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestConcepticon.test_compare" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptGraph.test_add_dictionary">
-<tt class="descname">test_add_dictionary</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptGraph.test_add_dictionary" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.meaning.test_basvoc.TestConcepticon.test_getitem">
+<code class="descname">test_getitem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestConcepticon.test_getitem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="lingpy.tests.meaning.test_concepts.TestConceptGraph.test_output_wordlist">
-<tt class="descname">test_output_wordlist</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.tests.meaning.test_concepts.TestConceptGraph.test_output_wordlist" title="Permalink to this definition">¶</a></dt>
+<dt id="lingpy.tests.meaning.test_basvoc.TestConcepticon.test_repr">
+<code class="descname">test_repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestConcepticon.test_repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.meaning.test_basvoc.TestConcepticon.test_str">
+<code class="descname">test_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_basvoc.TestConcepticon.test_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.tests.meaning.test_colexification">
+<span id="lingpy-tests-meaning-test-colexification-module"></span><h2>lingpy.tests.meaning.test_colexification module<a class="headerlink" href="#module-lingpy.tests.meaning.test_colexification" title="Permalink to this headline">¶</a></h2>
+<p>Tests for colexification module.</p>
+</div>
+<div class="section" id="module-lingpy.tests.meaning.test_glosses">
+<span id="lingpy-tests-meaning-test-glosses-module"></span><h2>lingpy.tests.meaning.test_glosses module<a class="headerlink" href="#module-lingpy.tests.meaning.test_glosses" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lingpy.tests.meaning.test_glosses.test_conceptlists">
+<code class="descclassname">lingpy.tests.meaning.test_glosses.</code><code class="descname">test_conceptlists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_glosses.test_conceptlists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.tests.meaning.test_glosses.test_parse_gloss">
+<code class="descclassname">lingpy.tests.meaning.test_glosses.</code><code class="descname">test_parse_gloss</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.meaning.test_glosses.test_parse_gloss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 <div class="section" id="module-lingpy.tests.meaning">
@@ -135,7 +152,7 @@ LingPy
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -144,18 +161,22 @@ LingPy
   <ul>
 <li><a class="reference internal" href="#">lingpy.tests.meaning package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-lingpy.tests.meaning.test_concepts">lingpy.tests.meaning.test_concepts module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.meaning.test_basvoc">lingpy.tests.meaning.test_basvoc module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.meaning.test_colexification">lingpy.tests.meaning.test_colexification module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.meaning.test_glosses">lingpy.tests.meaning.test_glosses module</a></li>
 <li><a class="reference internal" href="#module-lingpy.tests.meaning">Module contents</a></li>
 </ul>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/reference/lingpy.tests.meaning.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/lingpy.tests.meaning.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -172,7 +193,7 @@ LingPy
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -192,17 +213,18 @@ LingPy
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -212,14 +234,12 @@ LingPy
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 

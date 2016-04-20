@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4.dev',
+        VERSION:     '2.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -28,12 +28,12 @@
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body>
+  <body role="document">
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,15 +54,12 @@ LingPy
       </ul>
     </div>
 
-<br/><p>This documentation is for version <b>2.4.dev</b>, which is
-  not released yet.</p>
-
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="lingpy-thirdparty-linkcomm-package">
 <h1>lingpy.thirdparty.linkcomm package<a class="headerlink" href="#lingpy-thirdparty-linkcomm-package" title="Permalink to this headline">¶</a></h1>
@@ -84,41 +81,41 @@ LingPy
 </dl>
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.Dc">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">Dc</tt><big>(</big><em>m</em>, <em>n</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.Dc" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">Dc</code><span class="sig-paren">(</span><em>m</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.Dc" title="Permalink to this definition">¶</a></dt>
 <dd><p>partition density</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.HLC">
-<em class="property">class </em><tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">HLC</tt><big>(</big><em>adj</em>, <em>edges</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">HLC</code><span class="sig-paren">(</span><em>adj</em>, <em>edges</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.HLC.initialize_edges">
-<tt class="descname">initialize_edges</tt><big>(</big><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.initialize_edges" title="Permalink to this definition">¶</a></dt>
+<code class="descname">initialize_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.initialize_edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.HLC.merge_comms">
-<tt class="descname">merge_comms</tt><big>(</big><em>edge1</em>, <em>edge2</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.merge_comms" title="Permalink to this definition">¶</a></dt>
+<code class="descname">merge_comms</code><span class="sig-paren">(</span><em>edge1</em>, <em>edge2</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.merge_comms" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.HLC.single_linkage">
-<tt class="descname">single_linkage</tt><big>(</big><em>threshold=None</em>, <em>w=None</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.single_linkage" title="Permalink to this definition">¶</a></dt>
+<code class="descname">single_linkage</code><span class="sig-paren">(</span><em>threshold=None</em>, <em>w=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.single_linkage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_unweighted">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">read_edgelist_unweighted</tt><big>(</big><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_unweighted" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">read_edgelist_unweighted</code><span class="sig-paren">(</span><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_unweighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>reads two-column edgelist, returns dictionary
 mapping node -&gt; set of neighbors and a list of edges</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_weighted">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">read_edgelist_weighted</tt><big>(</big><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em>, <em>weighttype=&lt;class 'float'&gt;</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_weighted" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">read_edgelist_weighted</code><span class="sig-paren">(</span><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em>, <em>weighttype=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_weighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>same as read_edgelist_unweighted except the input file now has three
 columns: node_i&lt;delimiter&gt;node_j&lt;delimiter&gt;weight_ij&lt;newline&gt;
 and the output includes a dict <a href="#id1"><span class="problematic" id="id2">`</span></a>ij2wij&#8217; mapping edge tuple (i,j) to w_ij</p>
@@ -126,14 +123,14 @@ and the output includes a dict <a href="#id1"><span class="problematic" id="id2"
 
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.similarities_unweighted">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">similarities_unweighted</tt><big>(</big><em>adj</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_unweighted" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">similarities_unweighted</code><span class="sig-paren">(</span><em>adj</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_unweighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all the edge similarities. Input dict maps nodes to sets of neighbors.
 Output is a list of decorated edge-pairs, (1-sim,eij,eik), ordered by similarity.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">similarities_weighted</tt><big>(</big><em>adj</em>, <em>ij2wij</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">similarities_weighted</code><span class="sig-paren">(</span><em>adj</em>, <em>ij2wij</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same as similarities_unweighted but using tanimoto coefficient. <a href="#id3"><span class="problematic" id="id4">`</span></a>adj&#8217; is a dict
 mapping nodes to sets of neighbors, ij2wij is a dict mapping an edge (ni,nj) tuple
 to the weight wij of that edge.</p>
@@ -141,12 +138,12 @@ to the weight wij of that edge.</p>
 
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.swap">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">swap</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.swap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">swap</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.write_edge2cid">
-<tt class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</tt><tt class="descname">write_edge2cid</tt><big>(</big><em>e2c</em>, <em>filename</em>, <em>delimiter='\t'</em><big>)</big><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.write_edge2cid" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">write_edge2cid</code><span class="sig-paren">(</span><em>e2c</em>, <em>filename</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.write_edge2cid" title="Permalink to this definition">¶</a></dt>
 <dd><p>writes the .edge2comm, .comm2edges, and .comm2nodes files</p>
 </dd></dl>
 
@@ -162,7 +159,7 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
@@ -177,12 +174,14 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/reference/lingpy.thirdparty.linkcomm.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/lingpy.thirdparty.linkcomm.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -199,7 +198,7 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -219,17 +218,18 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
  
       </ul>
     </div>
- <div id="footer">
-   <div class="fleft">
-     <a href="http://www.hhu.de/"><img width="120px" src="http://www.hhu.de/home/fileadmin/images/uni_duesseldorf_logo.gif" alt="HHUD" /></a>
+ <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
+
+   <div>
+     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
-  <div class="fleft">
-    <a href="http://www.uni-marburg.de/"><img width="120px" src="http://www.uni-marburg.de/bilder/logo_uni1.gif" alt="PUD" /></a>
+  <div>
+    <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
   </div>
 
-
-  <div class="fcenter">
-    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated on September 30, 2014.<br>
+  <div style="max-width:300px;">
+    <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
+    on Apr 20, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
@@ -239,14 +239,12 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
 		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
   </div>
 
-  <div class="fright">
-    <a href="http://www.bmbf.de/"><img width="100px" src="http://www.bmbf.de/_img/common/BMBF_Logo.png" alt="BMBF" /></a>
- </div>
-  <div class="fright">
+  <div>
     <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
   </div>
-  <div class="fright">
-    <a href="http://www.uni-tuebingen.de"><img width="120px" src="http://www.uni-tuebingen.de/fileadmin/pics/logo-uni-tuebingen.png" alt="logo_tuebingen" /></a>
+  <div style="max-width:150px;text-align:right;">
+    <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
+    <a href="https://github.com/"><img width="100px" src="../_static/GitHub_Logo.png" alt="github logo" /></a>
 </div>
 </div>
 
