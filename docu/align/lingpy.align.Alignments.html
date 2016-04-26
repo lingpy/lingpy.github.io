@@ -65,7 +65,7 @@ LingPy
 <h1>lingpy.align.Alignments<a class="headerlink" href="#lingpy-align-alignments" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.align.Alignments">
-<em class="property">class </em><code class="descclassname">lingpy.align.</code><code class="descname">Alignments</code><span class="sig-paren">(</span><em>infile</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=''</em>, <em>ref='cogid'</em>, <em>loans=True</em>, <em>_interactive=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.Alignments" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.align.</code><code class="descname">Alignments</code><span class="sig-paren">(</span><em>infile</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=''</em>, <em>modify_ref=False</em>, <em>_interactive=True</em>, <em>ref='cogid'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.Alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class handles Wordlists for the purpose of alignment analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -95,19 +95,24 @@ basis for the tabular representation of the word list.</p>
 <blockquote>
 <div><p>The name of the column that stores the cognate IDs.</p>
 </div></blockquote>
-<p><strong>loans</strong> : bool (default=True)</p>
+<p><strong>modify_ref</strong> : function (default=False)</p>
 <blockquote class="last">
-<div><p>Specify whether loans should be included in the cognate sets.</p>
+<div><p>Use a function to modify the reference. If your cognate identifiers
+are numerical, for example, and negative values are assigned as
+loans, but you want to suppress this behaviour, just set this
+keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+absolute value.</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>This class inherits from <a class="reference internal" href="../basic/wordlist.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> and
+<p>This class inherits from <a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> and
 additionally creates instances of the
 <a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a> class for all cognate sets that
 are specified by the <em>ref</em> keyword.</p>
+<p class="rubric">Attributes</p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -124,40 +129,49 @@ are specified by the <em>ref</em> keyword.</p>
 <tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.align.html#lingpy.align.sca.Alignments.output" title="lingpy.align.sca.Alignments.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
 <td>Write wordlist to file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">add_entries</span></code></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
-<td>Add new entry-types to the word list by modifying given ones.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal"><span class="pre">calculate</span></code></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
-<td>Function calculates specific data.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
-<td>Export the wordlist to specific fileformats.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
-<td>Function returns dictionaries of the cells matched by the indices.</td>
+</tbody>
+</table>
+<p class="rubric">Inherited Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><code class="xref py py-obj docutils literal"><span class="pre">pickle</span></code></a>([filename])</td>
+<td>Store the QLCParser instance in a pickle file.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries"><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code></a>(entry)</td>
 <td>Return all entries matching the given entry-type as a two-dimensional list.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;loans])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">add_entries</span></code></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
+<td>Add new entry-types to the word list by modifying given ones.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal"><span class="pre">calculate</span></code></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
+<td>Function calculates specific data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
+<td>Export the wordlist to specific fileformats.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
+<td>Function returns dictionaries of the cells matched by the indices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
 <td>Return an etymological dictionary representation of the word list.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
 <td>Function returns lists of rows and columns specified by their name.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;loans])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
 <td>Function returns a list of present-absent-patterns of a given word list.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
 <td>Write wordlist to file.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><code class="xref py py-obj docutils literal"><span class="pre">pickle</span></code></a>([filename])</td>
-<td>Store the QLCParser instance in a pickle file.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal"><span class="pre">renumber</span></code></a>(source[,&nbsp;target,&nbsp;override])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal"><span class="pre">renumber</span></code></a>(source[,&nbsp;target,&nbsp;override])</td>
 <td>Renumber a given set of string identifiers by replacing the ids by integers.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist.tokenize</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist.tokenize</span></code></td>
 <td></td>
 </tr>
 </tbody>
@@ -230,7 +244,7 @@ are specified by the <em>ref</em> keyword.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

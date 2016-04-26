@@ -1240,7 +1240,7 @@ sequence perspective deals with unaligned sequences. The <em>alignment</em>
 perspective deals with aligned sequences.</p>
 <dl class="class">
 <dt id="lingpy.align.sca.Alignments">
-<em class="property">class </em><code class="descclassname">lingpy.align.sca.</code><code class="descname">Alignments</code><span class="sig-paren">(</span><em>infile</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=''</em>, <em>ref='cogid'</em>, <em>loans=True</em>, <em>_interactive=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">lingpy.align.sca.</code><code class="descname">Alignments</code><span class="sig-paren">(</span><em>infile</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=''</em>, <em>modify_ref=False</em>, <em>_interactive=True</em>, <em>ref='cogid'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Class handles Wordlists for the purpose of alignment analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1271,9 +1271,13 @@ basis for the tabular representation of the word list.</p>
 <blockquote>
 <div><p>The name of the column that stores the cognate IDs.</p>
 </div></blockquote>
-<p><strong>loans</strong> : bool (default=True)</p>
+<p><strong>modify_ref</strong> : function (default=False)</p>
 <blockquote class="last">
-<div><p>Specify whether loans should be included in the cognate sets.</p>
+<div><p>Use a function to modify the reference. If your cognate identifiers
+are numerical, for example, and negative values are assigned as
+loans, but you want to suppress this behaviour, just set this
+keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+absolute value.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1284,6 +1288,13 @@ basis for the tabular representation of the word list.</p>
 additionally creates instances of the
 <a class="reference internal" href="#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a> class for all cognate sets that
 are specified by the <em>ref</em> keyword.</p>
+<p class="rubric">Attributes</p>
+<dl class="method">
+<dt id="lingpy.align.sca.Alignments.add_alignments">
+<code class="descname">add_alignments</code><span class="sig-paren">(</span><em>ref=False</em>, <em>modify_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function adds a new set of alignments to the data.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.align">
 <code class="descname">align</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.align" title="Permalink to this definition">¶</a></dt>
@@ -1524,7 +1535,7 @@ contains a direct reference to the word via its ID in the wordlist.</p>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.reduce_alignments">
-<code class="descname">reduce_alignments</code><span class="sig-paren">(</span><em>alignment='alignment'</em>, <em>ref='cogid'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reduce_alignments</code><span class="sig-paren">(</span><em>alignment=False</em>, <em>ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reduces alignments which contain columns that are marked to be                 ignored by the user.</p>
 </dd></dl>
 
@@ -1748,7 +1759,7 @@ alignment object of the respective type.</p>
 
 <dl class="function">
 <dt id="lingpy.align.sca.get_consensus">
-<code class="descclassname">lingpy.align.sca.</code><code class="descname">get_consensus</code><span class="sig-paren">(</span><em>msa</em>, <em>tree=False</em>, <em>gaps=False</em>, <em>taxa=False</em>, <em>classes=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.get_consensus" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.align.sca.</code><code class="descname">get_consensus</code><span class="sig-paren">(</span><em>msa</em>, <em>gaps=False</em>, <em>taxa=False</em>, <em>classes=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of a given MSA.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1757,11 +1768,6 @@ alignment object of the respective type.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>msa</strong> : {c{list} ~lingpy.align.multiple.Multiple}</p>
 <blockquote>
 <div><p>Either an MSA object or an MSA matrix.</p>
-</div></blockquote>
-<p><strong>tree</strong> : {c{str} ~lingpy.thirdparty.cogent.PhyloNode}</p>
-<blockquote>
-<div><p>A tree object or a Newick string along which the consensus shall be
-calculated.</p>
 </div></blockquote>
 <p><strong>gaps</strong> : c{bool} (default=False)</p>
 <blockquote>
@@ -1884,7 +1890,7 @@ excluded.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

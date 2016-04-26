@@ -291,39 +291,8 @@ textfile in GML format.</p>
 
 <dl class="function">
 <dt id="lingpy.meaning.colexification.evaluate_colexifications">
-<code class="descclassname">lingpy.meaning.colexification.</code><code class="descname">evaluate_colexifications</code><span class="sig-paren">(</span><em>G</em>, <em>weight='word_weight'</em>, <em>outfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.evaluate_colexifications" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.meaning.colexification.</code><code class="descname">evaluate_colexifications</code><span class="sig-paren">(</span><em>G</em>, <em>weight='wordWeight'</em>, <em>outfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.evaluate_colexifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function calculates most frequent colexifications in a wordlist.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.meaning.colexification.partition_colexifications">
-<code class="descclassname">lingpy.meaning.colexification.</code><code class="descname">partition_colexifications</code><span class="sig-paren">(</span><em>G</em>, <em>weight='weight'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.partition_colexifications" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use a simple partition algorithm to cluster the nodes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>G</strong> : <code class="xref py py-class docutils literal"><span class="pre">networkx.Graph</span></code></p>
-<blockquote>
-<div><p>A networkx-Graph object, as produced by the 
-<a class="reference internal" href="#lingpy.meaning.colexification.colexification_network" title="lingpy.meaning.colexification.colexification_network"><code class="xref py py-class docutils literal"><span class="pre">lingpy.meaning.colexification.colexification_network</span></code></a>
-method.</p>
-</div></blockquote>
-<p><strong>weight</strong> : str (default=&#8221;weight&#8221;)</p>
-<blockquote>
-<div><p>The name of the attribute storing the weights.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple consisting of two dictionaries, one with integers for
-partitions as keys and one with nodes as keys and partitions as values.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 </div>
@@ -332,7 +301,7 @@ partitions as keys and one with nodes as keys and partitions as values.</p>
 <p>Module provides functions for the handling of concept glosses in linguistic datasets.</p>
 <dl class="function">
 <dt id="lingpy.meaning.glosses.compare_conceptlists">
-<code class="descclassname">lingpy.meaning.glosses.</code><code class="descname">compare_conceptlists</code><span class="sig-paren">(</span><em>list1</em>, <em>list2</em>, <em>output=''</em>, <em>match=None</em>, <em>filename='matches'</em>, <em>debug=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.glosses.compare_conceptlists" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.meaning.glosses.</code><code class="descname">compare_conceptlists</code><span class="sig-paren">(</span><em>list1</em>, <em>list2</em>, <em>output=''</em>, <em>match=None</em>, <em>filename='matches'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.glosses.compare_conceptlists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function compares two concept lists and outputs suggestions for mapping.</p>
 <p class="rubric">Notes</p>
 <p>Idea is to take one conceptlist as the basic list and then to search for a
@@ -518,7 +487,7 @@ the keys as specified in brackets above.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

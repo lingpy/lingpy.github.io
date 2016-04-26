@@ -71,7 +71,7 @@ LingPy
 <p>Conversion routines for the GML format.</p>
 <dl class="function">
 <dt id="lingpy.convert.graph.gls2gml">
-<code class="descclassname">lingpy.convert.graph.</code><code class="descname">gls2gml</code><span class="sig-paren">(</span><em>gls</em>, <em>graph</em>, <em>tree</em>, <em>filename=''</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.gls2gml" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">gls2gml</code><span class="sig-paren">(</span><em>gls</em>, <em>graph</em>, <em>tree</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.gls2gml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create GML-representation of a given gain-loss-scenario (GLS).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -108,7 +108,7 @@ LingPy
 
 <dl class="function">
 <dt id="lingpy.convert.graph.nwk2gml">
-<code class="descclassname">lingpy.convert.graph.</code><code class="descname">nwk2gml</code><span class="sig-paren">(</span><em>treefile</em>, <em>filename=''</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.nwk2gml" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.graph.</code><code class="descname">nwk2gml</code><span class="sig-paren">(</span><em>treefile</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.nwk2gml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a tree in newick format to a network in gml-format.</p>
 <dl class="docutils">
 <dt>treefile <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
@@ -170,7 +170,7 @@ graphics-attribute of the nodes.</p>
 <p>Basic functions for HTML-plots.</p>
 <dl class="function">
 <dt id="lingpy.convert.html.alm2html">
-<code class="descclassname">lingpy.convert.html.</code><code class="descname">alm2html</code><span class="sig-paren">(</span><em>infile</em>, <em>title=''</em>, <em>shorttitle=''</em>, <em>filename=''</em>, <em>colored=False</em>, <em>verbose=True</em>, <em>show=True</em>, <em>main_template=''</em>, <em>table_template=''</em>, <em>dataset=''</em>, <em>confidence=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.alm2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">alm2html</code><span class="sig-paren">(</span><em>infile</em>, <em>title=''</em>, <em>shorttitle=''</em>, <em>filename=''</em>, <em>colored=False</em>, <em>main_template=''</em>, <em>table_template=''</em>, <em>dataset=''</em>, <em>confidence=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.alm2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert files in <code class="docutils literal"><span class="pre">alm</span></code>-format into colored <code class="docutils literal"><span class="pre">html</span></code>-format.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -280,27 +280,32 @@ to is based on the definitions given in the <code class="docutils literal"><span
 
 <dl class="function">
 <dt id="lingpy.convert.html.msa2tex">
-<code class="descclassname">lingpy.convert.html.</code><code class="descname">msa2tex</code><span class="sig-paren">(</span><em>infile</em>, <em>template=''</em>, <em>path=''</em>, <em>filename=''</em>, <em>verbose=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2tex" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">msa2tex</code><span class="sig-paren">(</span><em>infile</em>, <em>template=''</em>, <em>filename=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2tex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an MSA to a tabular representation which can easily be used in
 LaTeX documents.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.psa2html">
-<code class="descclassname">lingpy.convert.html.</code><code class="descname">psa2html</code><span class="sig-paren">(</span><em>filename</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.psa2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">psa2html</code><span class="sig-paren">(</span><em>infile</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.psa2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a PSA-file into colored html-format.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.string2html">
-<code class="descclassname">lingpy.convert.html.</code><code class="descname">string2html</code><span class="sig-paren">(</span><em>taxon</em>, <em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em>, <em>path=''</em>, <em>template=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.string2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">string2html</code><span class="sig-paren">(</span><em>taxon</em>, <em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.string2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an (aligned) string into colored html-format.</p>
+<p>&#64;deprecated</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.convert.html.tokens2html">
-<code class="descclassname">lingpy.convert.html.</code><code class="descname">tokens2html</code><span class="sig-paren">(</span><em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em>, <em>path=''</em>, <em>template=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.tokens2html" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.html.</code><code class="descname">tokens2html</code><span class="sig-paren">(</span><em>string</em>, <em>swaps=[]</em>, <em>tax_len=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.tokens2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an (aligned) string into colored html-format.</p>
+<p class="rubric">Notes</p>
+<p>This function is currently not used by any other program. So it might be
+useful to just deprecate it.</p>
+<p>&#64;deprecated</p>
 </dd></dl>
 
 </div>
@@ -584,18 +589,6 @@ The following two structures will thus be treated identically:</p>
 <span id="lingpy-convert-tree-module"></span><h2>lingpy.convert.tree module<a class="headerlink" href="#module-lingpy.convert.tree" title="Permalink to this headline">¶</a></h2>
 <p>Functions for tree calculations and working with trees.</p>
 <dl class="function">
-<dt id="lingpy.convert.tree.constructSubtree">
-<code class="descclassname">lingpy.convert.tree.</code><code class="descname">constructSubtree</code><span class="sig-paren">(</span><em>paths</em>, <em>index</em>, <em>curNode</em>, <em>indexMap</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.constructSubtree" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.convert.tree.nwk2guidetree">
-<code class="descclassname">lingpy.convert.tree.</code><code class="descname">nwk2guidetree</code><span class="sig-paren">(</span><em>newick</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.nwk2guidetree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Build a tree matrix for a guide tree given in Newick format.
-Input is a binary tree with zero-based integer names at the leaves.</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="lingpy.convert.tree.nwk2tree_matrix">
 <code class="descclassname">lingpy.convert.tree.</code><code class="descname">nwk2tree_matrix</code><span class="sig-paren">(</span><em>newick</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.nwk2tree_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a newick file to a tree matrix.</p>
@@ -603,55 +596,6 @@ Input is a binary tree with zero-based integer names at the leaves.</p>
 <p>This is an additional function that can be used for plots with help of
 matplotlibs functions. The tree_matrix is compatible with those matrices
 that scipy&#8217;s linkage functions create.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.convert.tree.selectNodes">
-<code class="descclassname">lingpy.convert.tree.</code><code class="descname">selectNodes</code><span class="sig-paren">(</span><em>tree</em>, <em>selIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.selectNodes" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.convert.tree.subGuideTree">
-<code class="descclassname">lingpy.convert.tree.</code><code class="descname">subGuideTree</code><span class="sig-paren">(</span><em>tree</em>, <em>selIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.subGuideTree" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.convert.tree.treePath">
-<code class="descclassname">lingpy.convert.tree.</code><code class="descname">treePath</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.treePath" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.convert.tree.xml2nwk">
-<code class="descclassname">lingpy.convert.tree.</code><code class="descname">xml2nwk</code><span class="sig-paren">(</span><em>infile</em>, <em>filename=''</em>, <em>tax_name='pri-name'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.xml2nwk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert xml-based MultiTree format to Newick-format.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>infile</strong> : str</p>
-<blockquote>
-<div><p>Name of the input file.</p>
-</div></blockquote>
-<p><strong>filename</strong> : str (default=&#8221;&#8221;)</p>
-<blockquote>
-<div><p>If string is empty, the data will be returned as string, if a full
-string is passed, the data will be written to a file with that name.</p>
-</div></blockquote>
-<p><strong>tax_name</strong> : str (default=&#8221;pri-name&#8221;)</p>
-<blockquote>
-<div><p>Name of the value that shall be used to create the tree. Use &#8220;code&#8221; in
-order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newick</strong> : str</p>
-<blockquote class="last">
-<div><p>A newick-string, if filename is not left empty.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 </div>
@@ -739,7 +683,7 @@ order to get the iso-code, &#8220;pri-name&#8221; will get the primary name.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

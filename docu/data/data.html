@@ -77,7 +77,6 @@ not defined otherwise by the user), such as</p>
 <blockquote>
 <div><ul class="simple">
 <li>specific debugging messages (warnings, messages, errors)</li>
-<li>specific flags (verbose, debug)</li>
 <li>default values, such as &#8220;gop&#8221; (gap opening penalty), &#8220;scale&#8221; (scaling factor</li>
 <li>by which extended gaps are penalized), or &#8220;figsize&#8221; (the default size of</li>
 <li>figures if data is plotted using matplotlib).</li>
@@ -116,23 +115,11 @@ for this purpose.</p>
 <div><p>Use this keyword to specify a return-value for the rc-function.</p>
 </div></blockquote>
 <p><strong>schema</strong> : {&#8220;ipa&#8221;, &#8220;asjp&#8221;}</p>
-<blockquote>
+<blockquote class="last">
 <div><p>Change the basic schema for sequence comparison. When switching to
 &#8220;asjp&#8221;, this means that sequences will be treated as sequences in ASJP
 code, otherwise, they will be treated as sequences written in basic
 IPA.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool (default=False)</p>
-<blockquote>
-<div><p>Use this keyword in order to switch to verbose output. This will be
-useful when using complex methods, in order to understand what the
-program is actually doing.</p>
-</div></blockquote>
-<p><strong>debug</strong> : bool (default=False)</p>
-<blockquote class="last">
-<div><p>Use this keyword to switch to debug-mode. It will give specific,
-internal output that is much more technical than the output resulting
-from &#8220;verbose&#8221;.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -152,9 +139,16 @@ unexpected behavior.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
-<p>Change basic values. Switch to verbose output, for example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="go">Successfully changed parameters.</span>
+<p>Switch from IPA transcriptions to ASJP transcriptions:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can check which &#8220;basic orthography&#8221; is currently loaded:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
+<span class="go">&#39;asjp&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
+<span class="go">&#39;fuzzy&#39;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -247,7 +241,7 @@ unexpected behavior.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

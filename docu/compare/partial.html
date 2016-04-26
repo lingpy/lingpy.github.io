@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Cognate Detection (LexStat) &mdash; LingPy</title>
+    <title>Partial Cognate Detection (Partial) &mdash; LingPy</title>
     
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -61,12 +61,12 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="cognate-detection-lexstat">
-<h1>Cognate Detection (<a class="reference internal" href="#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>)<a class="headerlink" href="#cognate-detection-lexstat" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="partial-cognate-detection-partial">
+<h1>Partial Cognate Detection (<a class="reference internal" href="#lingpy.compare.partial.Partial" title="lingpy.compare.partial.Partial"><code class="xref py py-class docutils literal"><span class="pre">Partial</span></code></a>)<a class="headerlink" href="#partial-cognate-detection-partial" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="lingpy.compare.lexstat.LexStat">
-<em class="property">class </em><code class="descclassname">lingpy.compare.lexstat.</code><code class="descname">LexStat</code><span class="sig-paren">(</span><em>filename</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Basic class for automatic cognate detection.</p>
+<dt id="lingpy.compare.partial.Partial">
+<em class="property">class </em><code class="descclassname">lingpy.compare.partial.</code><code class="descname">Partial</code><span class="sig-paren">(</span><em>infile</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extended class for automatic detection of partial cognates.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -148,10 +148,6 @@ you use the &#8220;lexstat&#8221; method, however, this needs to be set to
 </tr>
 </tbody>
 </table>
-<p class="rubric">Notes</p>
-<p>Instantiating this class does not require a lot of parameters. However,
-the user may modify its behaviour by providing additional attributes in the
-input file.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -224,26 +220,11 @@ also be accessed directly as an attribute of the LexStat class
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.align_pairs" title="lingpy.compare.lexstat.LexStat.align_pairs"><code class="xref py py-obj docutils literal"><span class="pre">align_pairs</span></code></a>(idxA,&nbsp;idxB[,&nbsp;concept])</td>
-<td>Align all or some words of a given pair of languages.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">partial_cluster</span></code>([method,&nbsp;threshold,&nbsp;scale,&nbsp;...])</td>
+<td>Cluster the words into partial cognate sets.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.cluster" title="lingpy.compare.lexstat.LexStat.cluster"><code class="xref py py-obj docutils literal"><span class="pre">cluster</span></code></a>([method,&nbsp;cluster_method,&nbsp;threshold,&nbsp;...])</td>
-<td>Function for flat clustering of words into cognate sets.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_distances" title="lingpy.compare.lexstat.LexStat.get_distances"><code class="xref py py-obj docutils literal"><span class="pre">get_distances</span></code></a>([method,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;...])</td>
-<td>Method calculates different distance estimates for language pairs.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code>(entry)</td>
-<td>Return all entries matching the given entry-type as a two-dimensional list.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_random_distances" title="lingpy.compare.lexstat.LexStat.get_random_distances"><code class="xref py py-obj docutils literal"><span class="pre">get_random_distances</span></code></a>([method,&nbsp;runs,&nbsp;mode,&nbsp;...])</td>
-<td>Method calculates randoms scores for unrelated words in a dataset.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-obj docutils literal"><span class="pre">get_scorer</span></code></a>(**keywords)</td>
-<td>Create a scoring function based on sound correspondences.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.output" title="lingpy.compare.lexstat.LexStat.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
-<td>Write data for lexstat to file.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">add_cognate_ids</span></code>(source,&nbsp;target[,&nbsp;idtype,&nbsp;...])</td>
+<td>Compute normal cognate identifiers from partial cognate sets.</td>
 </tr>
 </tbody>
 </table>
@@ -254,53 +235,74 @@ also be accessed directly as an attribute of the LexStat class
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><code class="xref py py-obj docutils literal"><span class="pre">pickle</span></code></a>([filename])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pickle</span></code>([filename])</td>
 <td>Store the QLCParser instance in a pickle file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries"><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code></a>(entry)</td>
-<td>Return all entries matching the given entry-type as a two-dimensional list.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">add_entries</span></code></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">add_entries</span></code>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
 <td>Add new entry-types to the word list by modifying given ones.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal"><span class="pre">calculate</span></code></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">calculate</span></code>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
 <td>Function calculates specific data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">export</span></code>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
 <td>Export the wordlist to specific fileformats.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
-<td>Export the wordlist to specific fileformats.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code>([col,&nbsp;row,&nbsp;entry])</td>
 <td>Function returns dictionaries of the cells matched by the indices.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
-<td>Function returns dictionaries of the cells matched by the indices.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code>(entry)</td>
+<td>Return all entries matching the given entry-type as a two-dimensional list.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
 <td>Return an etymological dictionary representation of the word list.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
-<td>Return an etymological dictionary representation of the word list.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
 <td>Function returns lists of rows and columns specified by their name.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
-<td>Function returns lists of rows and columns specified by their name.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
 <td>Function returns a list of present-absent-patterns of a given word list.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
-<td>Function returns a list of present-absent-patterns of a given word list.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">output</span></code>(fileformat,&nbsp;**keywords)</td>
 <td>Write wordlist to file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal"><span class="pre">renumber</span></code></a>(source[,&nbsp;target,&nbsp;override])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">renumber</span></code>(source[,&nbsp;target,&nbsp;override])</td>
 <td>Renumber a given set of string identifiers by replacing the ids by integers.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">align_pairs</span></code>(idxA,&nbsp;idxB[,&nbsp;concept])</td>
+<td>Align all or some words of a given pair of languages.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">cluster</span></code>([method,&nbsp;cluster_method,&nbsp;threshold,&nbsp;...])</td>
+<td>Function for flat clustering of words into cognate sets.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">export</span></code>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;...])</td>
+<td>Export the wordlist to specific fileformats.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code>([col,&nbsp;row,&nbsp;entry])</td>
+<td>Function returns dictionaries of the cells matched by the indices.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_distances</span></code>([method,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;...])</td>
+<td>Method calculates different distance estimates for language pairs.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code>(entry)</td>
+<td>Return all entries matching the given entry-type as a two-dimensional list.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
+<td>Return an etymological dictionary representation of the word list.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<td>Function returns lists of rows and columns specified by their name.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
+<td>Function returns a list of present-absent-patterns of a given word list.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get_random_distances</span></code>([method,&nbsp;runs,&nbsp;mode,&nbsp;...])</td>
+<td>Method calculates randoms scores for unrelated words in a dataset.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_scorer</span></code>(**keywords)</td>
+<td>Create a scoring function based on sound correspondences.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">output</span></code>(fileformat,&nbsp;**keywords)</td>
+<td>Write data for lexstat to file.</td>
 </tr>
 </tbody>
 </table>
@@ -320,7 +322,7 @@ also be accessed directly as an attribute of the LexStat class
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/docu/compare/lexstat.txt"
+      <li><a href="../../_sources/docu/compare/partial.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>

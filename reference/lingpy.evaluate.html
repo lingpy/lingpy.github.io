@@ -71,16 +71,17 @@ LingPy
 <p>Evaluation methods for automatic cognate detection.</p>
 <dl class="function">
 <dt id="lingpy.evaluate.acd.bcubes">
-<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">bcubes</code><span class="sig-paren">(</span><em>lex</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>loans=False</em>, <em>pprint=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.bcubes" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">bcubes</code><span class="sig-paren">(</span><em>lex</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>modify_ref=False</em>, <em>pprint=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.bcubes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute B-Cubed scores for test and reference datasets.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <blockquote>
-<div><p>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
-computation. It should have two columns indicating cognate IDs.</p>
+<div><p>A <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a> class or a daughter class,
+(like the <a class="reference internal" href="../docu/compare/lexstat.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
+computation). It should have two columns indicating cognate IDs.</p>
 </div></blockquote>
 <p><strong>gold</strong> : str (default=&#8217;cogid&#8217;)</p>
 <blockquote>
@@ -92,11 +93,13 @@ assignments.</p>
 <div><p>The name of the column containing the automatically implemented cognate
 assignments.</p>
 </div></blockquote>
-<p><strong>loans</strong> : bool (default=True)</p>
+<p><strong>modify_ref</strong> : function (default=False)</p>
 <blockquote>
-<div><p>If set to c{False}, loans (indicated by negative IDs in the gold
-standard) will be treated as separate cognates, otherwise, loans will
-be treated as cognates.</p>
+<div><p>Use a function to modify the reference. If your cognate identifiers
+are numerical, for example, and negative values are assigned as
+loans, but you want to suppress this behaviour, just set this
+keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+absolute value.</p>
 </div></blockquote>
 <p><strong>pprint</strong> : bool (default=True)</p>
 <blockquote>
@@ -126,11 +129,11 @@ scores first to the task of automatic cognate detection.</p>
 
 <dl class="function">
 <dt id="lingpy.evaluate.acd.diff">
-<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">diff</code><span class="sig-paren">(</span><em>lex</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>loans=False</em>, <em>pprint=True</em>, <em>filename=''</em>, <em>tofile=True</em>, <em>fuzzy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.diff" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">diff</code><span class="sig-paren">(</span><em>lex</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>modify_ref=False</em>, <em>pprint=True</em>, <em>filename=''</em>, <em>tofile=True</em>, <em>fuzzy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write differences in classifications on an item-basis to file.</p>
 <dl class="docutils">
-<dt>lex <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></span></dt>
-<dd>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
+<dt>lex <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="../docu/compare/lexstat.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></span></dt>
+<dd>The <a class="reference internal" href="../docu/compare/lexstat.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
 computation. It should have two columns indicating cognate IDs.</dd>
 <dt>gold <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;cogid&#8217;)</span></dt>
 <dd>The name of the column containing the gold standard cognate
@@ -138,15 +141,17 @@ assignments.</dd>
 <dt>test <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;lexstatid&#8217;)</span></dt>
 <dd>The name of the column containing the automatically implemented cognate
 assignments.</dd>
-<dt>loans <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
-<dd>If set to c{False}, loans (indicated by negative IDs in the gold
-standard) will be treated as separate cognates, otherwise, loans will
-be treated as cognates.</dd>
+<dt>modify_ref <span class="classifier-delimiter">:</span> <span class="classifier">function (default=False)</span></dt>
+<dd>Use a function to modify the reference. If your cognate identifiers
+are numerical, for example, and negative values are assigned as
+loans, but you want to suppress this behaviour, just set this
+keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+absolute value.</dd>
 <dt>pprint <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
 <dd>Print out the results</dd>
 <dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;&#8216;)</span></dt>
 <dd>Name of the output file. If not specified, it is identical with the
-name of the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>, but with the
+name of the <a class="reference internal" href="../docu/compare/lexstat.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>, but with the
 extension <code class="docutils literal"><span class="pre">diff</span></code>.</dd>
 <dt>tofile <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
 <dd>If set to c{False}, no data will be written to file, but instead, the
@@ -158,7 +163,7 @@ data will be returned.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>t</strong> : tuple</p>
 <blockquote class="last">
-<div><p>A nested tuple consisting of two further tuples. The first 
+<div><p>A nested tuple consisting of two further tuples. The first
 containing precision, recall, and harmonic mean
 (F-scores), the second containing the same values for the pair-scores.</p>
 </div></blockquote>
@@ -180,30 +185,42 @@ the words involved in these wrong decisions.</p>
 
 <dl class="function">
 <dt id="lingpy.evaluate.acd.pairs">
-<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">pairs</code><span class="sig-paren">(</span><em>lex</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>loans=False</em>, <em>pprint=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.pairs" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">pairs</code><span class="sig-paren">(</span><em>lex</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>modify_ref=False</em>, <em>pprint=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute pair scores for the evaluation of cognate detection algorithms.</p>
-<dl class="docutils">
-<dt>lex <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></span></dt>
-<dd>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
-computation. It should have two columns indicating cognate IDs.</dd>
-<dt>gold <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;cogid&#8217;)</span></dt>
-<dd>The name of the column containing the gold standard cognate
-assignments.</dd>
-<dt>test <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;lexstatid&#8217;)</span></dt>
-<dd>The name of the column containing the automatically implemented cognate
-assignments.</dd>
-<dt>loans <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
-<dd>If set to c{False}, loans (indicated by negative IDs in the gold
-standard) will be treated as separate cognates, otherwise, loans will
-be treated as cognates.</dd>
-<dt>pprint <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
-<dd>Print out the results</dd>
-</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>t</strong> : tuple</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="../docu/compare/lexstat.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
+<blockquote>
+<div><p>The <a class="reference internal" href="../docu/compare/lexstat.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
+computation. It should have two columns indicating cognate IDs.</p>
+</div></blockquote>
+<p><strong>gold</strong> : str (default=&#8217;cogid&#8217;)</p>
+<blockquote>
+<div><p>The name of the column containing the gold standard cognate
+assignments.</p>
+</div></blockquote>
+<p><strong>test</strong> : str (default=&#8217;lexstatid&#8217;)</p>
+<blockquote>
+<div><p>The name of the column containing the automatically implemented cognate
+assignments.</p>
+</div></blockquote>
+<p><strong>modify_ref</strong> : function (default=False)</p>
+<blockquote>
+<div><p>Use a function to modify the reference. If your cognate identifiers
+are numerical, for example, and negative values are assigned as
+loans, but you want to suppress this behaviour, just set this
+keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+absolute value.</p>
+</div></blockquote>
+<p><strong>pprint</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Print out the results</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>t</strong> : tuple</p>
 <blockquote class="last">
 <div><p>A tuple consisting of the precision, the recall, and the harmonic mean
 (F-scores).</p>
@@ -219,6 +236,57 @@ be treated as cognates.</dd>
 <p class="rubric">Notes</p>
 <p>Pair-scores can be computed in different ways, with often different
 results. This variant follows the description by <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bouchard-Cote2013"><span class="pre">Bouchard-Cote2013</span></a></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.evaluate.acd.partial_bcubes">
+<code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">partial_bcubes</code><span class="sig-paren">(</span><em>wordlist</em>, <em>gold</em>, <em>test</em>, <em>pprint=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.partial_bcubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute B-Cubed scores for test and reference datasets for partial cognate            detection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a></p>
+<blockquote>
+<div><p>A <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a>, or one of it&#8217;s daughter
+classes (like, e.g., the <a class="reference internal" href="../docu/compare/partial.html#lingpy.compare.partial.Partial" title="lingpy.compare.partial.Partial"><code class="xref py py-class docutils literal"><span class="pre">Partial</span></code></a>
+class used for computation of partial cognates. It should have two
+columns indicating cognate IDs.</p>
+</div></blockquote>
+<p><strong>gold</strong> : str (default=&#8217;cogid&#8217;)</p>
+<blockquote>
+<div><p>The name of the column containing the gold standard cognate
+assignments.</p>
+</div></blockquote>
+<p><strong>test</strong> : str (default=&#8217;lexstatid&#8217;)</p>
+<blockquote>
+<div><p>The name of the column containing the automatically implemented cognate
+assignments.</p>
+</div></blockquote>
+<p><strong>pprint</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Print out the results</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>t</strong> : tuple</p>
+<blockquote class="last">
+<div><p>A tuple consisting of the precision, the recall, and the harmonic mean
+(F-scores).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal"><span class="pre">bcubes</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal"><span class="pre">pairs</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>B-Cubed scores were first described by <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1998"><span class="pre">Bagga1998</span></a></code> as part of an
+algorithm. Later on, <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Amigo2009"><span class="pre">Amigo2009</span></a></code> showed that they can also used as
+to compare cluster decisions. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Hauer2011"><span class="pre">Hauer2011</span></a></code> applied the B-Cubed
+scores first to the task of automatic cognate detection.</p>
 </dd></dl>
 
 </div>
@@ -295,10 +363,6 @@ object should be the test set.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.apa.EvalPSA" title="lingpy.evaluate.apa.EvalPSA"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalPSA</span></code></a></p>
-</div>
 <p class="rubric">Notes</p>
 <p>Most of the scores which can be calculated with help of this class are standard
 evaluation scores in evolutionary biology. For a close description on how
@@ -344,10 +408,6 @@ where <em>p</em> is the precision (mode <code class="docutils literal"><span cla
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.apa.EvalPSA.c_score" title="lingpy.evaluate.apa.EvalPSA.c_score"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalPSA.c_score</span></code></a></p>
-</div>
 <p class="rubric">Notes</p>
 <p>The different c-</p>
 </dd></dl>
@@ -426,10 +486,6 @@ the size of the union of residue pairs in reference and test alignment.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.apa.EvalPSA.r_score" title="lingpy.evaluate.apa.EvalPSA.r_score"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalPSA.r_score</span></code></a></p>
-</div>
 <p class="rubric">Notes</p>
 <p>The R score is the number of identical rows (sequences) in reference and test
 alignment divided by the total number of rows.</p>
@@ -471,10 +527,6 @@ and test alignment.</li>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.apa.EvalPSA.sp_score" title="lingpy.evaluate.apa.EvalPSA.sp_score"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalPSA.sp_score</span></code></a></p>
-</div>
 <p class="rubric">Notes</p>
 <p>The SP score (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>) is calculated by dividing the number of
 identical residue pairs in reference and test alignment by the total
@@ -502,10 +554,6 @@ object should be the test set.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.apa.EvalMSA" title="lingpy.evaluate.apa.EvalMSA"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalMSA</span></code></a></p>
-</div>
 <p class="rubric">Notes</p>
 <p>Moste of the scores which can be calculated with help of this class are standard
 evaluation scores in evolutionary biology. For a close description on how
@@ -527,10 +575,6 @@ these scores are calculated, see, for example, <code class="docutils literal"><a
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.test.evaluate.EvalMSA.c_score</span></code></p>
-</div>
 <p class="rubric">Notes</p>
 <p>The C score, as it is described in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>, is calculated by
 dividing the number of columns which are identical in the gold
@@ -572,10 +616,6 @@ test alignment.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.test.evaluate.EvalMSA.jc_score</span></code></p>
-</div>
 <p class="rubric">Notes</p>
 <p>The Jaccard score (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>) is calculated by dividing the size of
 the intersection of residue pairs in reference and test alignment by
@@ -606,10 +646,6 @@ compared.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.apa.EvalMSA.r_score" title="lingpy.evaluate.apa.EvalMSA.r_score"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.evaluate.apa.EvalMSA.r_score</span></code></a></p>
-</div>
 <p class="rubric">Notes</p>
 <p>The PIR score is the number of identical rows (sequences) in reference and test
 alignment divided by the total number of rows.</p>
@@ -631,10 +667,6 @@ alignment divided by the total number of rows.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.test.evaluate.EvalMSA.sp_score</span></code></p>
-</div>
 </dd></dl>
 
 </dd></dl>
@@ -722,7 +754,7 @@ alignment divided by the total number of rows.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

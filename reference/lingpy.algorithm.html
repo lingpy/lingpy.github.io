@@ -145,9 +145,10 @@ dataset. So we recommend to use it with great care.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { &#8220;upgma&#8221;, &#8220;single&#8221;, &#8220;complete&#8221; }</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { &#8220;upgma&#8221;, &#8220;single&#8221;, &#8220;complete&#8221;, &#8220;ward&#8221;}</p>
 <blockquote>
-<div><p>Select between &#8216;ugpma&#8217;, &#8216;single&#8217;, and &#8216;complete&#8217;.</p>
+<div><p>Select between &#8216;ugpma&#8217;, &#8216;single&#8217;, and &#8216;complete&#8217;. You can also test
+&#8220;ward&#8221;, but there&#8217;s no guarantee that this is the correct algorithm.</p>
 </div></blockquote>
 <p><strong>threshold</strong> : float</p>
 <blockquote>
@@ -718,109 +719,148 @@ software packages to view and plot the tree.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-lingpy.algorithm.distance">
-<span id="lingpy-algorithm-distance-module"></span><h2>lingpy.algorithm.distance module<a class="headerlink" href="#module-lingpy.algorithm.distance" title="Permalink to this headline">¶</a></h2>
-<p>This module provides functions to calculate basic distance measures.</p>
-<dl class="function">
-<dt id="lingpy.algorithm.distance.euclidean">
-<code class="descclassname">lingpy.algorithm.distance.</code><code class="descname">euclidean</code><span class="sig-paren">(</span><em>p</em>, <em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.distance.euclidean" title="Permalink to this definition">¶</a></dt>
-<dd><p>Distance between two points (p, q) in any dimension of space.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.distance.hamming">
-<code class="descclassname">lingpy.algorithm.distance.</code><code class="descname">hamming</code><span class="sig-paren">(</span><em>str1</em>, <em>str2</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.distance.hamming" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the Hamming distance between two strings.</p>
-<p>The Hamming distance (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Hamming1950"><span class="pre">Hamming1950</span></a></code>) is defined as the
-number of bits that are different between two vectors.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>str1</strong> : str</p>
-<blockquote>
-<div><p>str to be compared to str2</p>
-</div></blockquote>
-<p><strong>str2</strong> : str</p>
-<blockquote>
-<div><p>str to be compared to str1</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>_</strong> : int</p>
-<blockquote class="last">
-<div><p>the hamming distance</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.distance.jaccard">
-<code class="descclassname">lingpy.algorithm.distance.</code><code class="descname">jaccard</code><span class="sig-paren">(</span><em>set1</em>, <em>set2</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.distance.jaccard" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computer the Jaccard distance between two sets.</p>
-<p>Jaccard distance measures the dissimilarity between sample sets.
-It is complementary to the Jaccard coefficient and is obtained by
-subtracting the Jaccard coefficient from 1, or, equivalently, by
-dividing the difference of the sizes of the union and the intersection
-of two sets by the size of the union:</p>
-<p>J(A,B) = 1 - J(A,B) = |A ∪ B| - |A ∩ B| / |A ∪ B|</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>set1</strong> : set</p>
-<blockquote>
-<div><p>set to be compared to set2</p>
-</div></blockquote>
-<p><strong>set2</strong> : set</p>
-<blockquote>
-<div><p>set to be compared to set1</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>_</strong> : float</p>
-<blockquote class="last">
-<div><p>the Jaccard distance</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.distance.pearson">
-<code class="descclassname">lingpy.algorithm.distance.</code><code class="descname">pearson</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.distance.pearson" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pearson correlation coefficient.</p>
-<p>n = len(x)
-values = range(n)</p>
-<p>sum_x = sum([float(x[i]) for i in values])
-sum_y = sum([float(y[i]) for i in values])</p>
-<p>sqr_sum_x = sum([x[i]**2.0 for i in values])
-sqr_sum_y = sum([y[i]**2.0 for i in values])</p>
-<p>p_sum = ([x[i]*y[i] for i in values])</p>
-<p>num = p_sum-(sum_x * sum_y / n)
-den = ((sqr_sum_x - pow(sum_x,2)/n) * (sqr_sum_y - pow(sum_y,2)/n))**.5</p>
-<dl class="docutils">
-<dt>if den == 0:</dt>
-<dd>return 0</dd>
-</dl>
-<p>r = dum/den</p>
-<p>return r</p>
-</dd></dl>
-
-</div>
 <div class="section" id="module-lingpy.algorithm.extra">
 <span id="lingpy-algorithm-extra-module"></span><h2>lingpy.algorithm.extra module<a class="headerlink" href="#module-lingpy.algorithm.extra" title="Permalink to this headline">¶</a></h2>
-<p>MagicMock is a subclass of Mock with default implementations
-of most of the magic methods. You can use MagicMock without having to
-configure the magic methods yourself.</p>
-<p>If you use the <cite>spec</cite> or <cite>spec_set</cite> arguments then <em>only</em> magic
-methods that exist in the spec will be created.</p>
-<p>Attributes and the return value of a <cite>MagicMock</cite> will also be <cite>MagicMocks</cite>.</p>
+<p>Adapting specific cluster algorithms from scikit-learn to LingPy.</p>
+<dl class="function">
+<dt id="lingpy.algorithm.extra.affinity_propagation">
+<code class="descclassname">lingpy.algorithm.extra.</code><code class="descname">affinity_propagation</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.affinity_propagation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute affinity propagation from the matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<blockquote>
+<div><p>The threshold for clustering you want to use.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list</p>
+<blockquote>
+<div><p>The two-dimensional matrix passed as list or array.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>The list of taxon names. If set to &#8220;False&#8221; a fake list of taxon names
+will be created, giving a positive numerical ID in increasing order for
+each column in the matrix.</p>
+</div></blockquote>
+<p><strong>revert</strong> : bool</p>
+<blockquote>
+<div><p>If set to &#8220;False&#8221;, don&#8217;t return taxon names but simply the language
+identifiers and their labels as a dictionary. Otherwise returns a
+dictionary with labels as keys and list of taxon names as values.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
+<blockquote class="last">
+<div><p>Either a dictionary of taxon identifiers and labels, or a dictionary of
+labels and taxon names.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Affinity propagation is a clustering method originally proposed by
+<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Frey2007"><span class="pre">Frey2007</span></a></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.extra.dbscan">
+<code class="descclassname">lingpy.algorithm.extra.</code><code class="descname">dbscan</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>revert=False</em>, <em>min_samples=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.dbscan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute DBSCAN cluster analysis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<blockquote>
+<div><p>The threshold for clustering you want to use.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list</p>
+<blockquote>
+<div><p>The two-dimensional matrix passed as list or array.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>The list of taxon names. If set to &#8220;False&#8221; a fake list of taxon names
+will be created, giving a positive numerical ID in increasing order for
+each column in the matrix.</p>
+</div></blockquote>
+<p><strong>revert</strong> : bool</p>
+<blockquote>
+<div><p>If set to &#8220;False&#8221;, don&#8217;t return taxon names but simply the language
+identifiers and their labels as a dictionary. Otherwise returns a
+dictionary with labels as keys and list of taxon names as values.</p>
+</div></blockquote>
+<p><strong>min_samples</strong> : int (default=1)</p>
+<blockquote>
+<div><p>The minimal samples parameter of the DBCSCAN method from the SKLEARN
+package.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
+<blockquote class="last">
+<div><p>Either a dictionary of taxon identifiers and labels, or a dictionary of
+labels and taxon names.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>This method does not work as expected, probably since it normally requires
+distances between points as input. We list it only for completeness here,
+but urge to be careful when using the code and checking properly our
+implementation in the source code.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.extra.infomap_clustering">
+<code class="descclassname">lingpy.algorithm.extra.</code><code class="descname">infomap_clustering</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa=False</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.infomap_clustering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the Infomap clustering analysis of the data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<blockquote>
+<div><p>The threshold for clustering you want to use.</p>
+</div></blockquote>
+<p><strong>matrix</strong> : list</p>
+<blockquote>
+<div><p>The two-dimensional matrix passed as list or array.</p>
+</div></blockquote>
+<p><strong>taxa</strong> : list</p>
+<blockquote>
+<div><p>The list of taxon names. If set to &#8220;False&#8221; a fake list of taxon names
+will be created, giving a positive numerical ID in increasing order for
+each column in the matrix.</p>
+</div></blockquote>
+<p><strong>revert</strong> : bool</p>
+<blockquote>
+<div><p>If set to &#8220;False&#8221;, don&#8217;t return taxon names but simply the language
+identifiers and their labels as a dictionary. Otherwise returns a
+dictionary with labels as keys and list of taxon names as values.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
+<blockquote class="last">
+<div><p>Either a dictionary of taxon identifiers and labels, or a dictionary of
+labels and taxon names.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Infomap clustering is a community detection method originally proposed by
+<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosvall2008"><span class="pre">Rosvall2008</span></a></code>.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.algorithm">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.algorithm" title="Permalink to this headline">¶</a></h2>
@@ -843,7 +883,6 @@ methods that exist in the spec will be created.</p>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.clustering">lingpy.algorithm.clustering module</a></li>
-<li><a class="reference internal" href="#module-lingpy.algorithm.distance">lingpy.algorithm.distance module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.extra">lingpy.algorithm.extra module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm">Module contents</a></li>
 </ul>
@@ -905,7 +944,7 @@ methods that exist in the spec will be created.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

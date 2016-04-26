@@ -102,35 +102,6 @@ often useful to suppress this behavior.</p>
 </div>
 <div class="section" id="module-lingpy.thirdparty.cogent.tree">
 <span id="lingpy-thirdparty-cogent-tree-module"></span><h2>lingpy.thirdparty.cogent.tree module<a class="headerlink" href="#module-lingpy.thirdparty.cogent.tree" title="Permalink to this headline">¶</a></h2>
-<p>Classes for storing and manipulating a phylogenetic tree.</p>
-<p>These trees can be either strictly binary, or have polytomies
-(multiple children to a parent node).</p>
-<p>Trees consist of Nodes (or branches) that connect two nodes. The Tree can
-be created only from a newick formatted string read either from file or from a
-string object. Other formats will be added as time permits.</p>
-<dl class="docutils">
-<dt>Tree can:</dt>
-<dd><ul class="first last simple">
-<li>Deal with either rooted or unrooted tree&#8217;s and can
-convert between these types.</li>
-<li>Return a sub-tree given a list of tip-names</li>
-<li>Identify an edge given two tip names. This method facilitates the
-statistical modelling by simplyifying the syntax for specifying
-sub-regions of a tree.</li>
-<li>Assess whether two Tree instances represent the same topology.</li>
-</ul>
-</dd>
-<dt>Definition of relevant terms or abbreviations:</dt>
-<dd><ul class="first last simple">
-<li>edge: also known as a branch on a tree.</li>
-<li>node: the point at which two edges meet</li>
-<li>tip: a sequence or species</li>
-<li>clade: all and only the nodes (including tips) that descend
-from a node</li>
-<li>stem: the edge immediately preceeding a clade</li>
-</ul>
-</dd>
-</dl>
 <dl class="function">
 <dt id="lingpy.thirdparty.cogent.tree.LoadTree">
 <code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">LoadTree</code><span class="sig-paren">(</span><em>filename=None</em>, <em>treestring=None</em>, <em>tip_names=None</em>, <em>underscore_unmunge=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.LoadTree" title="Permalink to this definition">¶</a></dt>
@@ -144,7 +115,8 @@ from a node</li>
 </ul>
 </dd>
 </dl>
-<p>Note: underscore_unmunging is turned off by default, although it is part
+<p class="rubric">Notes</p>
+<p>Underscore_unmunging is turned off by default, although it is part
 of the Newick format. Set underscore_unmunge to True to replace underscores
 with spaces in all names read.</p>
 </dd></dl>
@@ -162,14 +134,12 @@ with spaces in all names read.</p>
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.balanced">
 <code class="descname">balanced</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.balanced" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tree &#8216;rooted&#8217; here with no neighbour having &gt; 50% of the edges.</p>
-<dl class="docutils">
-<dt>Usage:</dt>
-<dd>Using a balanced tree can substantially improve performance of
+<p class="rubric">Notes</p>
+<p>Using a balanced tree can substantially improve performance of
 the likelihood calculations. Note that the resulting tree has a
 different orientation with the effect that specifying clades or
 stems for model parameterisation should be done using the
-&#8216;outgroup_name&#8217; argument.</dd>
-</dl>
+&#8216;outgroup_name&#8217; argument.</p>
 </dd></dl>
 
 <dl class="method">
@@ -354,12 +324,28 @@ self._parent! (or, if you must, remember to clean up the refs).</p>
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.asciiArt">
 <code class="descname">asciiArt</code><span class="sig-paren">(</span><em>show_internal=True</em>, <em>compact=False</em>, <em>labels=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.asciiArt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a string containing an ascii drawing of the tree.</p>
-<p>Arguments:
-- show_internal: includes internal edge names.
-- compact: use exactly one line per tip.
-- labels: specify specific labels for all nodes in the tree.</p>
-<p>Notes:
-The labels-keyword was added to the function by JML.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>show_internal: bool</strong> :</p>
+<blockquote>
+<div><p>includes internal edge names.</p>
+</div></blockquote>
+<p><strong>compact: bool</strong> :</p>
+<blockquote>
+<div><p>use exactly one line per tip.</p>
+</div></blockquote>
+<p><strong>labels: {bool, list}</strong> :</p>
+<blockquote class="last">
+<div><p>specify specific labels for all nodes in the tree.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The labels-keyword was added to the function by JML.</p>
 </dd></dl>
 
 <dl class="method">
@@ -380,7 +366,8 @@ The labels-keyword was added to the function by JML.</p>
 <code class="descname">compareBySubsets</code><span class="sig-paren">(</span><em>other</em>, <em>exclude_absent_taxa=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareBySubsets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns fraction of overlapping subsets where self and other differ.</p>
 <p>Other is expected to be a tree object compatible with PhyloNode.</p>
-<p>Note: names present in only one of the two trees will count as 
+<p class="rubric">Notes</p>
+<p>Names present in only one of the two trees will count as 
 mismatches: if you don&#8217;t want this behavior, strip out the non-matching
 tips first.</p>
 </dd></dl>
@@ -799,14 +786,6 @@ nodes : specific nodes for renaming (such as just tips, etc...)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.removeDeleted">
-<code class="descname">removeDeleted</code><span class="sig-paren">(</span><em>is_deleted</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.removeDeleted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes all nodes where is_deleted tests true.</p>
-<p>Internal nodes that have no children as a result of removing deleted
-are also removed.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.removeNode">
 <code class="descname">removeNode</code><span class="sig-paren">(</span><em>target</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.removeNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes node by identity instead of value.</p>
@@ -851,7 +830,8 @@ specific tips the distance is between</p>
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.siblings">
 <code class="descname">siblings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.siblings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all nodes that are children of the same parent as self.</p>
-<p>Note: excludes self from the list. Dynamically calculated.</p>
+<p class="rubric">Notes</p>
+<p>Excludes self from the list. Dynamically calculated.</p>
 </dd></dl>
 
 <dl class="method">
@@ -900,6 +880,7 @@ confusing in some cases).</p>
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.traverse">
 <code class="descname">traverse</code><span class="sig-paren">(</span><em>self_before=True</em>, <em>self_after=False</em>, <em>include_self=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.traverse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns iterator over descendants. Iterative: safe for large trees.</p>
+<p class="rubric">Notes</p>
 <p>self_before includes each node before its descendants if True.
 self_after includes each node after its descendants if True.
 include_self includes the initial node if True.</p>
@@ -916,6 +897,7 @@ would depend on the data in the tree and are not handled here.</p>
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.traverse_recursive">
 <code class="descname">traverse_recursive</code><span class="sig-paren">(</span><em>self_before=True</em>, <em>self_after=False</em>, <em>include_self=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.traverse_recursive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns iterator over descendants. IMPORTANT: read notes below.</p>
+<p class="rubric">Notes</p>
 <p>traverse_recursive is slower than traverse, and can lead to stack
 errors. However, you _must_ use traverse_recursive if you plan to
 modify the tree topology as you walk over it (e.g. in post-order),
@@ -1047,7 +1029,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

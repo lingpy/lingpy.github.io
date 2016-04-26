@@ -129,7 +129,7 @@ list is empty, the profiles are generated automatically.</p>
 
 <dl class="method">
 <dt id="lingpy.sequence.generate.MCPhon.get_string">
-<code class="descname">get_string</code><span class="sig-paren">(</span><em>new=True</em>, <em>tokens=False</em>, <em>**keywordstokens2class</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.get_string" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_string</code><span class="sig-paren">(</span><em>new=True</em>, <em>tokens=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.get_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a string from the Markov chain created from the training data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -156,6 +156,7 @@ represent the sequences as a Markov chain is returned.</p>
 </div>
 <div class="section" id="module-lingpy.sequence.sound_classes">
 <span id="lingpy-sequence-sound-classes-module"></span><h2>lingpy.sequence.sound_classes module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
+<p>Module provides various methods for the handling of sound classes.</p>
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.asjp2tokens">
 <code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">asjp2tokens</code><span class="sig-paren">(</span><em>seq</em>, <em>merge_vowels=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.asjp2tokens" title="Permalink to this definition">¶</a></dt>
@@ -356,7 +357,7 @@ brackets are removed along with the brackets, and</p>
 
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.ono_parse">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">ono_parse</code><span class="sig-paren">(</span><em>word</em>, <em>output=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.ono_parse" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">ono_parse</code><span class="sig-paren">(</span><em>word</em>, <em>output=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.ono_parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a rough onset-nucleus-offset parse of a word in IPA.</p>
 <p class="rubric">Notes</p>
 <p>Method is an approximation and not supposed to do without flaws. It is,
@@ -376,7 +377,8 @@ in which 7 different contexts for each word are distinguished:</p>
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.pgrams">
 <code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">pgrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.pgrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a given sequence into bigrams consisting of prosodic string symbols and the tokens of the original sequence.</p>
+<dd><p>Convert a given sequence into bigrams consisting of prosodic string symbols and the
+tokens of the original sequence.</p>
 </dd></dl>
 
 <dl class="function">
@@ -471,7 +473,7 @@ underlying sequence.</p>
 <p class="rubric">Notes</p>
 <p>A prosodic string is a sequence of specific characters which indicating
 their resprective prosodic context (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description). 
+<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description).
 In contrast to the previous model, the current implementation allows for a
 more fine-graded distinction between different prosodic segments. The
 current scheme distinguishes 9 prosodic positions:</p>
@@ -656,7 +658,8 @@ to split it into syllables.</p>
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.tokens2morphemes">
 <code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">tokens2morphemes</code><span class="sig-paren">(</span><em>tokens</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2morphemes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function splits a list of tokens into subsequent lists of morphemes if the list contains morpheme separators.</p>
+<dd><p>Function splits a list of tokens into subsequent lists of morphemes if the list
+contains morpheme separators.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -690,6 +693,7 @@ to split it into syllables.</p>
 </div>
 <div class="section" id="module-lingpy.sequence">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.sequence" title="Permalink to this headline">¶</a></h2>
+<p>Module provides methods and functions for dealing with linguistic sequences.</p>
 </div>
 </div>
 
@@ -768,7 +772,7 @@ to split it into syllables.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>

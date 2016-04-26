@@ -138,11 +138,6 @@ LingPy
 </dd></dl>
 
 <dl class="function">
-<dt id="lingpy.basic.ops.wl2csv">
-<code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2csv</code><span class="sig-paren">(</span><em>header</em>, <em>data</em>, <em>filename=''</em>, <em>formatter='concept'</em>, <em>verbose=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2csv" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
 <dt id="lingpy.basic.ops.wl2dict">
 <code class="descclassname">lingpy.basic.ops.</code><code class="descname">wl2dict</code><span class="sig-paren">(</span><em>wordlist</em>, <em>sections</em>, <em>entries</em>, <em>exclude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a wordlist to a complex dictionary with headings as keys.</p>
@@ -587,7 +582,7 @@ lists, since it is possible that the original file contains synonyms
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_etymdict">
-<code class="descname">get_etymdict</code><span class="sig-paren">(</span><em>ref='cogid'</em>, <em>entry=''</em>, <em>loans=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_etymdict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_etymdict</code><span class="sig-paren">(</span><em>ref='cogid'</em>, <em>entry=''</em>, <em>modify_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_etymdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an etymological dictionary representation of the word list.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -601,11 +596,13 @@ lists, since it is possible that the original file contains synonyms
 <blockquote>
 <div><p>The entry-type which shall be selected.</p>
 </div></blockquote>
-<p><strong>loans</strong> : bool (default=False)</p>
+<p><strong>modify_ref</strong> : function (default=False)</p>
 <blockquote>
-<div><p>Treat all negative cognate ids as if they were positive ones.
-Negative IDs can be used to indicate borrowings, or, more
-accurately, xenologs.</p>
+<div><p>Use a function to modify the reference. If your cognate identifiers
+are numerical, for example, and negative values are assigned as
+loans, but you want to suppress this behaviour, just set this
+keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+absolute value.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -712,7 +709,7 @@ set to <em>True</em>:</p>
 
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_paps">
-<code class="descname">get_paps</code><span class="sig-paren">(</span><em>ref='cogid'</em>, <em>entry='concept'</em>, <em>missing=0</em>, <em>loans=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_paps" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_paps</code><span class="sig-paren">(</span><em>ref='cogid'</em>, <em>entry='concept'</em>, <em>missing=0</em>, <em>modify_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_paps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns a list of present-absent-patterns of a given word list.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -952,7 +949,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 20, 2016<br>
+    on Apr 26, 2016<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
       Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
