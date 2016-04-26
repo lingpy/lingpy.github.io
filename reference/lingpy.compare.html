@@ -117,7 +117,7 @@ identical with the ones you define in your transform dictionary.</p>
 <p><strong>vowels</strong> : str (default=&#8221;<a href="#id1"><span class="problematic" id="id2">VT_</span></a>&#8221;)</p>
 <blockquote>
 <div><p>For scoring function creation using the
-~lingpy.compare.lexstat.LexStat.get_scorer function, you have the
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function, you have the
 possibility to use reduced scores for the matching of tones and vowels
 by modifying the &#8220;vscale&#8221; parameter, which is set to 0.5 as a default.
 In order to make sure that vowels and tones are properly detected, make
@@ -125,7 +125,7 @@ sure your prosodic string representation of vowels matches the one in
 this keyword. Thus, if you change the prosodic strings using the
 &#8220;transform&#8221; keyword, you also need to change the vowel string, to make
 sure that &#8220;vscale&#8221; works as wanted in the
-~lingpy.compare.lexstat.LexStat.get_scorer function.</p>
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function.</p>
 </div></blockquote>
 <p><strong>check</strong> : bool (default=False)</p>
 <blockquote>
@@ -715,13 +715,12 @@ apart as separate tokens.</p>
 <div><p>A dictionary that indicates how prosodic strings should be simplified
 (or generally transformed), using a simple key-value structure with the
 key referring to the original prosodic context and the value to the new
-value.
-Currently, prosodic strings (see
+value.  Currently, prosodic strings (see
 <a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal"><span class="pre">prosodic_string()</span></code></a>) offer 11
 different prosodic contexts. Since not all these are helpful in
-preliminary analyses for cognate detection, it is useful to merge some
-of these contexts into one. The default settings distinguish only 5
-instead of 11 available contexts, namely:</p>
+preliminary analyses for cognate detection, it is useful to merge
+some of these contexts into one. The default settings distinguish only
+5 instead of 11 available contexts, namely:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
 <li><code class="docutils literal"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
@@ -733,18 +732,18 @@ instead of 11 available contexts, namely:</p>
 object, since the symbols you use for vowels and tones should be
 identical with the ones you define in your transform dictionary.</p>
 </div></blockquote>
-<p><strong>vowels</strong> : str (default=&#8221;<a href="#id11"><span class="problematic" id="id12">VT_</span></a>&#8221;)</p>
+<p><strong>vowels</strong> : str (default=&#8221;VT_&#8221;)</p>
 <blockquote>
 <div><p>For scoring function creation using the
-~lingpy.compare.lexstat.LexStat.get_scorer function, you have the
-possibility to use reduced scores for the matching of tones and vowels
-by modifying the &#8220;vscale&#8221; parameter, which is set to 0.5 as a default.
-In order to make sure that vowels and tones are properly detected, make
-sure your prosodic string representation of vowels matches the one in
-this keyword. Thus, if you change the prosodic strings using the
-&#8220;transform&#8221; keyword, you also need to change the vowel string, to make
-sure that &#8220;vscale&#8221; works as wanted in the
-~lingpy.compare.lexstat.LexStat.get_scorer function.</p>
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function, you
+have the possibility to use reduced scores for the matching of tones
+and vowels by modifying the &#8220;vscale&#8221; parameter, which is set to 0.5 as
+a default.  In order to make sure that vowels and tones are properly
+detected, make sure your prosodic string representation of vowels
+matches the one in this keyword. Thus, if you change the prosodic
+strings using the &#8220;transform&#8221; keyword, you also need to change the
+vowel string, to make sure that &#8220;vscale&#8221; works as wanted in the
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function.</p>
 </div></blockquote>
 <p><strong>check</strong> : bool (default=False)</p>
 <blockquote>
@@ -773,6 +772,9 @@ you use the &#8220;lexstat&#8221; method, however, this needs to be set to
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>This method automatically infers partial cognate sets from data which was
+previously morphologically segmented.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -908,7 +910,7 @@ average distance of unrelated sequences (use with care).</p>
 <blockquote>
 <div><p>Select the factor for extra scores for identical prosodic segments.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id13"><span class="problematic" id="id14">T_</span></a>&#8221;)</p>
+<p><strong>restricted_chars</strong> : str (default=&#8221;<a href="#id11"><span class="problematic" id="id12">T_</span></a>&#8221;)</p>
 <blockquote>
 <div><p>Select the restricted chars (boundary markers) in the prosodic
 strings in order to enable secondary alignment.</p>
