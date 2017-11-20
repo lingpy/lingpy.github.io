@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.align package &mdash; LingPy</title>
-    
+    <title>lingpy.align package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -72,7 +72,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.align.multiple.Multiple">
 <em class="property">class </em><code class="descclassname">lingpy.align.multiple.</code><code class="descname">Multiple</code><span class="sig-paren">(</span><em>seqs</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">clldutils.misc.UnicodeMixin</span></code></p>
 <p>Basic class for multiple sequence alignment analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -89,6 +89,11 @@ LingPy
 <p class="rubric">Notes</p>
 <p>Depending on the structure of the sequences, further keywords can be
 specified that manage how the items get tokenized.</p>
+<dl class="method">
+<dt id="lingpy.align.multiple.Multiple.align">
+<code class="descname">align</code><span class="sig-paren">(</span><em>method</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.align" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.get_local_peaks">
 <code class="descname">get_local_peaks</code><span class="sig-paren">(</span><em>threshold=2</em>, <em>gap_weight=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_local_peaks" title="Permalink to this definition">¶</a></dt>
@@ -125,28 +130,28 @@ specified that manage how the items get tokenized.</p>
 beginning, or whether already conducted analyses should be carried
 out.</p>
 </div></blockquote>
-<p><strong>model</strong> : string (default=&#8221;sca&#8221;)</p>
+<p><strong>model</strong> : string (default=”sca”)</p>
 <blockquote>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>&#8220;dolgo&#8221; &#8211; a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>&#8220;sca&#8221; &#8211; an extension of the &#8220;dolgo&#8221; sound-class model based on
+<li>“dolgo” – a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
+<li>“sca” – an extension of the “dolgo” sound-class model based on
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>&#8220;asjp&#8221; &#8211; an independent sound-class model which is based on the
+<li>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
 </ul>
 </div></blockquote>
-<p><strong>mode</strong> : string (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : string (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8220;global&#8221; &#8211; traditional global alignment analysis based on the
+<li>“global” – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8220;dialign&#8221; &#8211; global alignment analysis which seeks to maximize
+<li>“dialign” – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
 </ul>
 </div></blockquote>
@@ -173,11 +178,11 @@ calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : string (default=&#8221;T&#8221;)</p>
+<p><strong>restricted_chars</strong> : string (default=”T”)</p>
 <blockquote class="last">
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
-should therefore be aligned specifically. This defaults to &#8220;T&#8221;,
+should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
@@ -262,22 +267,22 @@ pos.)</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : { &#8220;final&#8221;, &#8220;immediate&#8221; } (default=&#8221;final&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : { “final”, “immediate” } (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
-iteration (&#8220;immediate&#8221;) or after all iterations have been carried
-out (&#8220;final&#8221;).</p>
+iteration (“immediate”) or after all iterations have been carried
+out (“final”).</p>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8220;global&#8221;, &#8220;overlap&#8221;, &#8220;dialign&#8221; } (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : { “global”, “overlap”, “dialign” } (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8220;global&#8221; &#8211; traditional global alignment analysis based on the
+<li>“global” – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8220;dialign&#8221; &#8211; global alignment analysis which seeks to maximize
+<li>“dialign” – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>&#8220;overlap&#8221; &#8211; semi-global alignment, where gaps introduced in the
+<li>“overlap” – semi-global alignment, where gaps introduced in the
 beginning and the end of a sequence do not score.</li>
 </ul>
 </div></blockquote>
@@ -330,22 +335,22 @@ calculated.</p>
 <blockquote>
 <div><p>The threshold for the flat cluster analysis.</p>
 </div></blockquote>
-<p><strong>check</strong> : string (default=&#8221;final&#8221;)</p>
+<p><strong>check</strong> : string (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
-iteration (&#8220;immediate&#8221;) or after all iterations have been carried
-out (&#8220;final&#8221;).</p>
+iteration (“immediate”) or after all iterations have been carried
+out (“final”).</p>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8220;global&#8221;, &#8220;overlap&#8221;, &#8220;dialign&#8221; } (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : { “global”, “overlap”, “dialign” } (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8216;global&#8217; &#8211; traditional global alignment analysis based on the
+<li>‘global’ – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8216;dialign&#8217; &#8211; global alignment analysis which seeks to maximize
+<li>‘dialign’ – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>&#8216;overlap&#8217; &#8211; semi-global alignment, where gaps introduced in the
+<li>‘overlap’ – semi-global alignment, where gaps introduced in the
 beginning and the end of a sequence do not score.</li>
 </ul>
 </div></blockquote>
@@ -393,22 +398,22 @@ function in order to retrieve a flat cluster of the data.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : string (default=&#8221;final&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : string (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
-iteration (&#8220;immediate&#8221;) or after all iterations have been carried
-out (&#8220;final&#8221;).</p>
+iteration (“immediate”) or after all iterations have been carried
+out (“final”).</p>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8220;global&#8221;, &#8220;overlap&#8221;, &#8220;dialign&#8221; } (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : { “global”, “overlap”, “dialign” } (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8220;global&#8221; &#8211; traditional global alignment analysis based on the
+<li>“global” – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8220;dialign&#8221; &#8211; global alignment analysis which seeks to maximize
+<li>“dialign” – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>&#8220;overlap&#8221; &#8211; semi-global alignment, where gaps introduced in the
+<li>“overlap” – semi-global alignment, where gaps introduced in the
 beginning and the end of a sequence do not score.</li>
 </ul>
 </div></blockquote>
@@ -456,22 +461,22 @@ other sequences is above the average distance of all sequence pairs.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : { &#8220;final&#8221;, &#8220;immediate&#8221; } (default=&#8221;final&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : { “final”, “immediate” } (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
-iteration (&#8220;immediate&#8221;) or after all iterations have been carried
-out (&#8220;final&#8221;).</p>
+iteration (“immediate”) or after all iterations have been carried
+out (“final”).</p>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8220;global&#8221;, &#8220;overlap&#8221;, &#8220;dialign&#8221; } (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : { “global”, “overlap”, “dialign” } (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8216;global&#8217; &#8211; traditional global alignment analysis based on the
+<li>‘global’ – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8216;dialign&#8217; &#8211; global alignment analysis which seeks to maximize
+<li>‘dialign’ – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>&#8216;overlap&#8217; &#8211; semi-global alignment, where gaps introduced in the
+<li>‘overlap’ – semi-global alignment, where gaps introduced in the
 beginning and the end of a sequence do not score.</li>
 </ul>
 </div></blockquote>
@@ -519,32 +524,32 @@ MSA into partitions with identical gap sites.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { &#8220;dolgo&#8221;, &#8220;sca&#8221;, &#8220;asjp&#8221; } (default=&#8221;sca&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { “dolgo”, “sca”, “asjp” } (default=”sca”)</p>
 <blockquote>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>&#8220;dolgo&#8221; &#8211; a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>&#8220;sca&#8221; &#8211; an extension of the &#8220;dolgo&#8221; sound-class model based on
+<li>“dolgo” – a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
+<li>“sca” – an extension of the “dolgo” sound-class model based on
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>&#8220;asjp&#8221; &#8211; an independent sound-class model which is based on the
+<li>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
 </ul>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8220;global&#8221;, &#8220;dialign&#8221; } (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : { “global”, “dialign” } (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8220;global&#8221; &#8211; traditional global alignment analysis based on the
+<li>“global” – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8220;dialign&#8221; &#8211; global alignment analysis which seeks to maximize
+<li>“dialign” – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
 </ul>
 </div></blockquote>
-<p><strong>modes</strong> : list (default=[(&#8220;global&#8221;,-10,0.6),(&#8220;local&#8221;,-1,0.6)])</p>
+<p><strong>modes</strong> : list (default=[(“global”,-10,0.6),(“local”,-1,0.6)])</p>
 <blockquote>
 <div><p>Indicate the mode, the gap opening penalties (GOP), and the gap extension
 scale (GEP scale), of the pairwise alignment analyses which
@@ -566,7 +571,7 @@ algorithm for affine gap penalties <code class="docutils literal"><a class="refe
 <div><p>The factor by which the initial and the descending position shall
 be modified.</p>
 </div></blockquote>
-<p><strong>tree_calc</strong> : { &#8220;neighbor&#8221;, &#8220;upgma&#8221; } (default=&#8221;upgma&#8221;)</p>
+<p><strong>tree_calc</strong> : { “neighbor”, “upgma” } (default=”upgma”)</p>
 <blockquote>
 <div><p>The cluster algorithm which shall be used for the calculation of
 the guide tree. Select between <code class="docutils literal"><span class="pre">neighbor</span></code>, the Neighbor-Joining
@@ -586,11 +591,11 @@ calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : string (default=&#8221;T&#8221;)</p>
+<p><strong>restricted_chars</strong> : string (default=”T”)</p>
 <blockquote class="last">
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
-should therefore be aligned specifically. This defaults to &#8220;T&#8221;,
+should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
@@ -616,28 +621,28 @@ progressive phase.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { &#8220;dolgo&#8221;, &#8220;sca&#8221;, &#8220;asjp&#8221; } (defaul=&#8221;sca&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { “dolgo”, “sca”, “asjp” } (defaul=”sca”)</p>
 <blockquote>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>&#8220;dolgo&#8221; &#8211; a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>&#8220;sca&#8221; &#8211; an extension of the &#8220;dolgo&#8221; sound-class model based on
+<li>“dolgo” – a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
+<li>“sca” – an extension of the “dolgo” sound-class model based on
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>&#8220;asjp&#8221; &#8211; an independent sound-class model which is based on the
+<li>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
 </ul>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8220;global&#8221;, &#8220;dialign&#8221; } (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : { “global”, “dialign” } (default=”global”)</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8220;global&#8221; &#8211; traditional global alignment analysis based on the
+<li>“global” – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8220;dialign&#8221; &#8211; global alignment analysis which seeks to maximize
+<li>“dialign” – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
 </ul>
 </div></blockquote>
@@ -657,7 +662,7 @@ algorithm for affine gap penalties <code class="docutils literal"><a class="refe
 <div><p>The factor by which the initial and the descending position shall
 be modified.</p>
 </div></blockquote>
-<p><strong>tree_calc</strong> : { &#8220;neighbor&#8221;, &#8220;upgma&#8221; } (default=&#8221;upgma&#8221;)</p>
+<p><strong>tree_calc</strong> : { “neighbor”, “upgma” } (default=”upgma”)</p>
 <blockquote>
 <div><p>The cluster algorithm which shall be used for the calculation of
 the guide tree. Select between <code class="docutils literal"><span class="pre">neighbor</span></code>, the Neighbor-Joining
@@ -677,11 +682,11 @@ calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : string (default=&#8221;T&#8221;)</p>
+<p><strong>restricted_chars</strong> : string (default=”T”)</p>
 <blockquote class="last">
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
-should therefore be aligned specifically. This defaults to &#8220;T&#8221;,
+should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
@@ -699,13 +704,13 @@ strings of sequences.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>alm_matrix</strong> : { &#8220;self&#8221;, &#8220;other&#8221; } (default=&#8221;self&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>alm_matrix</strong> : { “self”, “other” } (default=”self”)</p>
 <blockquote>
 <div><p>Indicate for which MSA the sum-of-pairs score shall be calculated.</p>
 </div></blockquote>
 <p><strong>mat</strong> : { None, list }</p>
 <blockquote>
-<div><p>If &#8220;other&#8221; is chosen as an option for <strong>alm_matrix</strong>, define for
+<div><p>If “other” is chosen as an option for <strong>alm_matrix</strong>, define for
 which matrix the sum-of-pairs score shall be calculated.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : float (default=0)</p>
@@ -736,7 +741,7 @@ as much as other characters.</p>
 <blockquote>
 <div><p>Specify the penalty for swaps in the alignment.</p>
 </div></blockquote>
-<p><strong>score_mode</strong> : { &#8220;classes&#8221;, &#8220;library&#8221; } (default=&#8221;classes&#8221;)</p>
+<p><strong>score_mode</strong> : { “classes”, “library” } (default=”classes”)</p>
 <blockquote>
 <div><p>Define the score-mode of the calculation which is either based on
 sound classes proper, or on the specific scores derived from the
@@ -758,21 +763,21 @@ stored in the attribute <code class="docutils literal"><span class="pre">swap_in
 <p>The method for swap detection is described in detail in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>.</p>
 <p class="rubric">Examples</p>
 <p>Define a set of strings whose alignment contans a swap.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span> <span class="o">=</span> <span class="n">Multiple</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;wladimir&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Align the data, using the progressive approach.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Check for swaps.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
 <span class="go">True</span>
 </pre></div>
 </div>
 <p>Print the alignment</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
 <span class="go">w   o   l   -   d   e   m   o   r   t</span>
 <span class="go">w   a   l   -   d   e   m   a   r   -</span>
 <span class="go">v   -   l   a   d   i   m   i   r   -</span>
@@ -802,7 +807,7 @@ stored in the attribute <code class="docutils literal"><span class="pre">swap_in
 <blockquote>
 <div><p>The scaling factor by which penalties for gap extensions are decreased.</p>
 </div></blockquote>
-<p><strong>tree_calc</strong> : { &#8220;upgma&#8221; &#8220;neighbor&#8221; } (default=&#8221;upgma&#8221;)</p>
+<p><strong>tree_calc</strong> : { “upgma” “neighbor” } (default=”upgma”)</p>
 <blockquote>
 <div><p>The algorithm which is used for the calculation of the guide tree.</p>
 </div></blockquote>
@@ -822,7 +827,7 @@ tokens.</p>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">mult_align</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;vladimir&quot;</span><span class="p">],</span> <span class="n">pprint</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">mult_align</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;vladimir&quot;</span><span class="p">],</span> <span class="n">pprint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">w   o   l   -   d   e   m   o   r   t</span>
 <span class="go">w   a   l   -   d   e   m   a   r   -</span>
 <span class="go">-   v   l   a   d   i   m   i   r   -</span>
@@ -837,7 +842,7 @@ tokens.</p>
 <dl class="class">
 <dt id="lingpy.align.pairwise.Pairwise">
 <em class="property">class </em><code class="descclassname">lingpy.align.pairwise.</code><code class="descname">Pairwise</code><span class="sig-paren">(</span><em>seqs</em>, <em>seqB=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Basic class for the handling of pairwise sequence alignments (PSA).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -874,7 +879,7 @@ sequence, if only two sequences shall be compared.</p>
 <div><p>The gap extension penalty (GEP), calculated with help of a scaling
 factor.</p>
 </div></blockquote>
-<p><strong>mode</strong> : {&#8220;global&#8221;,&#8221;local&#8221;,&#8221;overlap&#8221;,&#8221;dialign&#8221;}</p>
+<p><strong>mode</strong> : {“global”,”local”,”overlap”,”dialign”}</p>
 <blockquote>
 <div><p>The alignment mode, see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for details.</p>
 </div></blockquote>
@@ -883,7 +888,7 @@ factor.</p>
 <div><p>The factor by which matches in identical prosodic position are
 increased.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : str (default=&#8221;T_&#8221;)</p>
+<p><strong>restricted_chars</strong> : str (default=”T_”)</p>
 <blockquote>
 <div><p>The restricted chars that function as an indicator of syllable or
 morpheme breaks for secondary alignment, see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012c"><span class="pre">List2012c</span></a></code>
@@ -933,7 +938,7 @@ the length of the longer string. If <em>restriction</em> is set to <em>cv</em>
 (consonant-vowel), the edit distance is normalized by the length of the
 alignment.</p>
 </div></blockquote>
-<p><strong>restriction</strong> : {&#8220;cv&#8221;} (default=&#8221;&#8221;)</p>
+<p><strong>restriction</strong> : {“cv”} (default=”“)</p>
 <blockquote>
 <div><p>Specify the restrictions to be used. Currently, only <code class="docutils literal"><span class="pre">cv</span></code> is
 supported. This prohibits matches of vowels with consonants.</p>
@@ -954,12 +959,16 @@ and an integer otherwise.</p>
 (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Levenshtein1965"><span class="pre">Levenshtein1965</span></a></code>). The first algorithm to compute the edit
 distance was proposed by Wagner and Fisher (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Wagner1974"><span class="pre">Wagner1974</span></a></code>).</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">setB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
+<dl class="docutils">
+<dt>Align two sequences::</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">edit_dist</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">3</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -1008,34 +1017,36 @@ sequence, and the alignment score.</p>
 <p>The Needleman-Wunsch algorithm (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>) returns a global
 alignment of two sequences.</p>
 <dl class="docutils">
-<dt>&#8216;+&#8217; &#8216;.join(almB), &#8220;(sim={0})&#8221;.format(sim))</dt>
-<dd><p class="first">a b a b -
-- b a b a (sim=1)</p>
+<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt>
+<dd><blockquote class="first">
+<div>a b a b -
+- b a b a (sim=1)</div></blockquote>
 <p>Nothing unexpected so far, you could reach the same result without the
-scorer. But now let&#8217;s make a scorer that favors mismatches for our little
-two-letter alphabet.</p>
-<div class="last highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
+scorer. But now let’s make a scorer that favors mismatches for our little
+two-letter alphabet:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;abab&#39;</span><span class="p">,</span> <span class="s1">&#39;baba&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span> <span class="n">almB</span><span class="p">,</span> <span class="n">sim</span> <span class="o">=</span> <span class="n">nw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">scorer</span><span class="o">=</span><span class="n">scorer</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">almA</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">almA</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </dd>
-<dt>&#8216;+&#8217; &#8216;.join(almB), &#8220;(sim={0})&#8221;.format(sim))</dt>
-<dd><p class="first">a b a b
-b a b a (sim=4)</p>
-<p>Now, let&#8217;s analyse two strings which are completely different, but where we
+<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt>
+<dd><blockquote class="first">
+<div>a b a b
+b a b a (sim=4)</div></blockquote>
+<p>Now, let’s analyse two strings which are completely different, but where we
 use the scorer to define mappings between the segments. We simply do this
 by using lower case letters in one and upper case letters in the other
 case, which will, of course, be treated as different symbols in Python:</p>
-<div class="last highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;ABAB&#39;</span><span class="p">,</span> <span class="s1">&#39;aa&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span> <span class="n">almB</span><span class="p">,</span> <span class="n">sim</span> <span class="o">=</span> <span class="n">nw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">scorer</span><span class="o">=</span><span class="n">scorer</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">almA</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">almA</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </dd>
-<dt>&#8216;+&#8217; &#8216;.join(almB), &#8220;(sim={0})&#8221;.format(sim))</dt>
+<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt>
 <dd>A B A B
 a - a - (sim=0)</dd>
 </dl>
@@ -1067,10 +1078,10 @@ all segment matches between the input strings.</p>
 <p><strong>scale</strong> : float (default=0.5)</p>
 <blockquote>
 <div><p>The gap extension scale. This scale is similar to the gap extension
-penalty, but in contrast to the traditional GEP, it &#8220;scales&#8221; the gap
+penalty, but in contrast to the traditional GEP, it “scales” the gap
 opening penalty.</p>
 </div></blockquote>
-<p><strong>mode</strong> : {&#8220;global&#8221;, &#8220;local&#8221;, &#8220;diagonal&#8221;, &#8220;overlap&#8221;} (default=&#8221;global&#8221;)</p>
+<p><strong>mode</strong> : {“global”, “local”, “dialign”, “overlap”} (default=”global”)</p>
 <blockquote>
 <div><p>Select between one of the four different alignment modes regularly
 implemented in LingPy, see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for details.</p>
@@ -1085,14 +1096,18 @@ implemented in LingPy, see <code class="docutils literal"><a class="reference ex
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">setB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
+<dl class="docutils">
+<dt>Align two words using the dialign algorithm::</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;dialign&#39;</span><span class="p">)</span>
 <span class="go">([&#39;f&#39;, &#39;a&#39;, &#39;t&#39;, &#39; &#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;],</span>
 <span class="go"> [&#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;, &#39;f&#39;, &#39;a&#39;, &#39;t&#39;],</span>
 <span class="go"> 3.0)</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -1140,14 +1155,18 @@ the second sequence, and the alignment score.</p>
 alignment between two sequences. A local alignment is an alignment of those
 subsequences of the input sequences that yields the highest score.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">setB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
+<dl class="docutils">
+<dt>Align two sequences::</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">(([], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], [&#39; &#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;]),</span>
 <span class="go"> ([&#39;c&#39;, &#39;a&#39;, &#39;t&#39;], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], []),</span>
 <span class="go"> 3.0)</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -1163,7 +1182,7 @@ subsequences of the input sequences that yields the highest score.</p>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
 </div></blockquote>
-<p><strong>model</strong> : {&#8220;asjp&#8221;, &#8220;sca&#8221;, &#8220;dolgo&#8221;} (default=&#8221;dolgo&#8221;)</p>
+<p><strong>model</strong> : {“asjp”, “sca”, “dolgo”} (default=”dolgo”)</p>
 <blockquote>
 <div><p>A sound-class model instance or a string that denotes one of the
 standard sound class models used in LingPy.</p>
@@ -1221,13 +1240,17 @@ the score of the alignment.</p>
 <p>The Waterman-Eggert algorithm (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Waterman1987"><span class="pre">Waterman1987</span></a></code>) returns <em>all</em>
 local matches between two sequences.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">setB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
+<dl class="docutils">
+<dt>Align two sequences::</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">we_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">[([&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], 3.0),</span>
 <span class="go"> ([&#39;c&#39;, &#39;a&#39;, &#39;t&#39;], [&#39;c&#39;, &#39;a&#39;, &#39;t&#39;], 3.0)]</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -1253,21 +1276,21 @@ perspective deals with aligned sequences.</p>
 the <cite>~lingpy.basic.wordlist.Wordlist</cite> class and define a specific ID
 for cognate sets.</p>
 </div></blockquote>
-<p><strong>row</strong> : str (default = &#8220;concept&#8221;)</p>
+<p><strong>row</strong> : str (default = “concept”)</p>
 <blockquote>
 <div><p>A string indicating the name of the row that shall be taken as the
 basis for the tabular representation of the word list.</p>
 </div></blockquote>
-<p><strong>col</strong> : str (default = &#8220;doculect&#8221;)</p>
+<p><strong>col</strong> : str (default = “doculect”)</p>
 <blockquote>
 <div><p>A string indicating the name of the column that shall be taken as the
 basis for the tabular representation of the word list.</p>
 </div></blockquote>
-<p><strong>conf</strong> : string (default=&#8217;&#8216;)</p>
+<p><strong>conf</strong> : string (default=’‘)</p>
 <blockquote>
 <div><p>A string defining the path to the configuration file.</p>
 </div></blockquote>
-<p><strong>ref</strong> : string (default=&#8217;cogid&#8217;)</p>
+<p><strong>ref</strong> : string (default=’cogid’)</p>
 <blockquote>
 <div><p>The name of the column that stores the cognate IDs.</p>
 </div></blockquote>
@@ -1276,7 +1299,7 @@ basis for the tabular representation of the word list.</p>
 <div><p>Use a function to modify the reference. If your cognate identifiers
 are numerical, for example, and negative values are assigned as
 loans, but you want to suppress this behaviour, just set this
-keyword to &#8220;abs&#8221;, and all cognate IDs will be converted to their
+keyword to “abs”, and all cognate IDs will be converted to their
 absolute value.</p>
 </div></blockquote>
 </td>
@@ -1289,10 +1312,46 @@ additionally creates instances of the
 <a class="reference internal" href="#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a> class for all cognate sets that
 are specified by the <em>ref</em> keyword.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="5%" />
+<col width="91%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>msa</td>
+<td>dict</td>
+<td>A dictionary storing multiple alignments as dictionaries which can be
+directly opened and aligned with help of the ~lingpy.align.sca.SCA
+function. The alignment objects are referenced by a key which is
+identical with the “reference” (ref-keyword) of the alignment, that is
+the name of the column which contains the cognate identifiers.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.add_alignments">
-<code class="descname">add_alignments</code><span class="sig-paren">(</span><em>ref=False</em>, <em>modify_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_alignments</code><span class="sig-paren">(</span><em>ref=False</em>, <em>modify_ref=False</em>, <em>fuzzy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function adds a new set of alignments to the data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ref: str (default=False)</strong> :</p>
+<blockquote>
+<div><p>Use this to set the name of the column which contains the cognate
+sets.</p>
+</div></blockquote>
+<p><strong>fuzzy: bool (default=False)</strong> :</p>
+<blockquote class="last">
+<div><p>If set to true, force the algorithm to treat the cognate sets as
+fuzzy cognate sets, i.e., as multiple cognate sets which are in
+order assigned to a word (proper “partial cognates”).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -1303,7 +1362,7 @@ are specified by the <em>ref</em> keyword.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { &#8220;progressive&#8221;, &#8220;library&#8221; } (default=&#8221;progressive&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { “progressive”, “library” } (default=”progressive”)</p>
 <blockquote>
 <div><p>Select the method to use for the analysis.</p>
 </div></blockquote>
@@ -1315,32 +1374,32 @@ are specified by the <em>ref</em> keyword.</p>
 <blockquote>
 <div><p>Set to c{True} in order to carry out a swap-check.</p>
 </div></blockquote>
-<p><strong>model</strong> : { &#8216;dolgo&#8217;, &#8216;sca&#8217;, &#8216;asjp&#8217; }</p>
+<p><strong>model</strong> : { ‘dolgo’, ‘sca’, ‘asjp’ }</p>
 <blockquote>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>&#8220;dolgo&#8221; &#8211; a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>&#8220;sca&#8221; &#8211; an extension of the &#8220;dolgo&#8221; sound-class model based on
+<li>“dolgo” – a sound-class model based on <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
+<li>“sca” – an extension of the “dolgo” sound-class model based on
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>&#8220;asjp&#8221; &#8211; an independent sound-class model which is based on the
+<li>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
 </ul>
 </div></blockquote>
-<p><strong>mode</strong> : { &#8216;global&#8217;, &#8216;dialign&#8217; }</p>
+<p><strong>mode</strong> : { ‘global’, ‘dialign’ }</p>
 <blockquote>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>&#8220;global&#8221; &#8211; traditional global alignment analysis based on the
+<li>“global” – traditional global alignment analysis based on the
 Needleman-Wunsch algorithm <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>&#8220;dialign&#8221; &#8211; global alignment analysis which seeks to maximize
+<li>“dialign” – global alignment analysis which seeks to maximize
 local similarities <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
 </ul>
 </div></blockquote>
-<p><strong>modes</strong> : list (default=[(&#8216;global&#8217;,-2,0.5),(&#8216;local&#8217;,-1,0.5)])</p>
+<p><strong>modes</strong> : list (default=[(‘global’,-2,0.5),(‘local’,-1,0.5)])</p>
 <blockquote>
 <div><p>Indicate the mode, the gap opening penalties (GOP), and the gap
 extension scale (GEP scale), of the pairwise alignment analyses
@@ -1362,7 +1421,7 @@ algorithm for affine gap penalties <code class="docutils literal"><a class="refe
 <div><p>The factor by which the initial and the descending position shall
 be modified.</p>
 </div></blockquote>
-<p><strong>tree_calc</strong> : { &#8216;neighbor&#8217;, &#8216;upgma&#8217; } (default=&#8217;upgma&#8217;)</p>
+<p><strong>tree_calc</strong> : { ‘neighbor’, ‘upgma’ } (default=’upgma’)</p>
 <blockquote>
 <div><p>The cluster algorithm which shall be used for the calculation of
 the guide tree. Select between <code class="docutils literal"><span class="pre">neighbor</span></code>, the Neighbor-Joining
@@ -1376,11 +1435,11 @@ calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : string (default=&#8221;T&#8221;)</p>
+<p><strong>restricted_chars</strong> : string (default=”T”)</p>
 <blockquote class="last">
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
-should therefore be aligned specifically. This defaults to &#8220;T&#8221;,
+should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
@@ -1403,7 +1462,7 @@ strings of sequences.</p>
 <div><p>A <em>ScoreDict</em> object which gives similarity scores for all segments in
 the alignment.</p>
 </div></blockquote>
-<p><strong>ref</strong> : str (default=&#8221;lexstatid&#8221;)</p>
+<p><strong>ref</strong> : str (default=”lexstatid”)</p>
 <blockquote>
 <div><p>The reference entry-type, referring to the cognate-set to be used for
 the analysis.</p>
@@ -1420,7 +1479,7 @@ the analysis.</p>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.get_consensus">
-<code class="descname">get_consensus</code><span class="sig-paren">(</span><em>tree=False</em>, <em>gaps=False</em>, <em>classes=False</em>, <em>consensus='consensus'</em>, <em>counterpart='ipa'</em>, <em>weights=[]</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_consensus</code><span class="sig-paren">(</span><em>tree=False</em>, <em>gaps=False</em>, <em>classes=False</em>, <em>consensus='consensus'</em>, <em>counterpart='ipa'</em>, <em>weights=[]</em>, <em>return_data=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of all MSAs in the wordlist.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1444,15 +1503,25 @@ calculated.</p>
 <div><p>Specify whether sound classes shall be used to calculate the consensus.</p>
 </div></blockquote>
 <p><strong>model</strong> : ~lingpy.data.model.Model</p>
-<blockquote class="last">
+<blockquote>
 <div><p>A sound class model according to which the IPA strings shall be
 converted to sound-class strings.</p>
+</div></blockquote>
+<p><strong>return_data</strong> : c{bool} (default=False)</p>
+<blockquote class="last">
+<div><p>Return the data instead of adding it in a column to the wordlist
+object.</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
+
+<dl class="method">
+<dt id="lingpy.align.sca.Alignments.get_msa">
+<code class="descname">get_msa</code><span class="sig-paren">(</span><em>ref</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_msa" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.output">
@@ -1462,17 +1531,17 @@ converted to sound-class strings.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : {&#8220;qlc&#8221;, &#8220;msa&#8221;, &#8220;tre&#8221;, &#8220;nwk&#8221;, &#8220;dst&#8221;, &#8220;taxa&#8221;, &#8220;starling&#8221;, &#8220;paps.nex&#8221;,</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : {“tsv”, “msa”, “tre”, “nwk”, “dst”, “taxa”, “starling”, “paps.nex”,</p>
 <blockquote>
-<div><p>&#8220;paps.csv&#8221; &#8220;html&#8221;}
+<div><p>“paps.csv” “html”}
 The format that is written to file. This corresponds to the file
-extension, thus &#8216;csv&#8217; creates a file in csv-format, &#8216;dst&#8217; creates
+extension, thus ‘tsv’ creates a file in tsv-format, ‘dst’ creates
 a file in Phylip-distance format, etc. Specific output is created
-for the formats &#8220;html&#8221; and &#8220;msa&#8221;:</p>
+for the formats “html” and “msa”:</p>
 <ul class="simple">
-<li>&#8220;msa&#8221; will create a folder containing all alignments of all
-cognate sets in &#8220;msa&#8221;-format</li>
-<li>&#8220;html&#8221; will create html-output in which words are sorted
+<li>“msa” will create a folder containing all alignments of all
+cognate sets in “msa”-format</li>
+<li>“html” will create html-output in which words are sorted
 according to meaning, cognate set, and all cognate words are
 aligned</li>
 </ul>
@@ -1485,7 +1554,7 @@ indicates the creation date).</p>
 <p><strong>subset</strong> : bool (default=False)</p>
 <blockquote>
 <div><p>If set to c{True}, return only a subset of the data. Which subset
-is specified in the keywords &#8216;cols&#8217; and &#8216;rows&#8217;.</p>
+is specified in the keywords ‘cols’ and ‘rows’.</p>
 </div></blockquote>
 <p><strong>cols</strong> : list</p>
 <blockquote>
@@ -1496,36 +1565,51 @@ written to the csv-file.</p>
 <blockquote>
 <div><p>If <em>subset</em> is set to c{True}, use a dictionary consisting of keys
 that specify a column and values that give a Python-statement in
-raw text, such as, e.g., &#8220;== &#8216;hand&#8217;&#8221;. The content of the specified
+raw text, such as, e.g., “== ‘hand’”. The content of the specified
 column will then be checked against statement passed in the
 dictionary, and if it is evaluated to c{True}, the respective row
 will be written to file.</p>
 </div></blockquote>
-<p><strong>cognates</strong> : str</p>
+<p><strong>ref</strong> : str</p>
 <blockquote>
-<div><p>Name of the column that contains the cognate IDs if &#8216;starling&#8217; is
+<div><p>Name of the column that contains the cognate IDs if ‘starling’ is
 chosen as an output format.</p>
 </div></blockquote>
 <p><strong>missing</strong> : { str, int } (default=0)</p>
 <blockquote>
-<div><p>If &#8216;paps.nex&#8217; or &#8216;paps.csv&#8217; is chosen as fileformat, this character
+<div><p>If ‘paps.nex’ or ‘paps.csv’ is chosen as fileformat, this character
 will be inserted as an indicator of missing data.</p>
 </div></blockquote>
-<p><strong>tree_calc</strong> : {&#8216;neighbor&#8217;, &#8216;upgma&#8217;}</p>
+<p><strong>tree_calc</strong> : {‘neighbor’, ‘upgma’}</p>
 <blockquote>
-<div><p>If no tree has been calculated and &#8216;tre&#8217; or &#8216;nwk&#8217; is chosen as
+<div><p>If no tree has been calculated and ‘tre’ or ‘nwk’ is chosen as
 output format, the method that is used to calculate the tree.</p>
 </div></blockquote>
 <p><strong>threshold</strong> : float (default=0.6)</p>
 <blockquote>
 <div><p>The threshold that is used to carry out a flat cluster analysis if
-&#8216;groups&#8217; or &#8216;cluster&#8217; is chosen as output format.</p>
+‘groups’ or ‘cluster’ is chosen as output format.</p>
 </div></blockquote>
-<p><strong>style</strong> : str (default=&#8221;id&#8221;)</p>
-<blockquote class="last">
-<div><p>If &#8220;msa&#8221; is chosen as output format, this will write the alignments
+<p><strong>style</strong> : str (default=”id”)</p>
+<blockquote>
+<div><p>If “msa” is chosen as output format, this will write the alignments
 for each msa-file in a specific format in which the first column
 contains a direct reference to the word via its ID in the wordlist.</p>
+</div></blockquote>
+<p><strong>ignore</strong> : { list, “all” }</p>
+<blockquote>
+<div><p>Modifies the output format in “tsv” output and allows to ignore
+certain blocks in extended “tsv”, like “msa”, “taxa”, “json”, etc.,
+which should be passed as a list. If you choose “all” as a plain
+string and not a list, this will ignore all additional blocks and
+output only plain “tsv”.</p>
+</div></blockquote>
+<p><strong>prettify</strong> : bool (default=True)</p>
+<blockquote class="last">
+<div><p>Inserts comment characters between concepts in the “tsv” file
+output format, which makes it easier to see blocks of words
+denoting the same concept. Switching this off will output the file
+in plain “tsv”.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1537,6 +1621,14 @@ contains a direct reference to the word via its ID in the wordlist.</p>
 <dt id="lingpy.align.sca.Alignments.reduce_alignments">
 <code class="descname">reduce_alignments</code><span class="sig-paren">(</span><em>alignment=False</em>, <em>ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reduces alignments which contain columns that are marked to be                 ignored by the user.</p>
+<p class="rubric">Notes</p>
+<p>This function changes the data only internally: All alignments are
+checked as to whether they contain data that should be ignored. If this
+is the case, the alignments are then reduced, and stored in a specific
+item of the alignment string. If the method doesn’t find any instances
+for reduction, it still makes the copies of the alignments in order to
+guarantee that the alignments with with we want to work are at the same
+place in the dictionary.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1560,7 +1652,7 @@ contains a direct reference to the word via its ID in the wordlist.</p>
 diphtongs, or whether they should be kept separated during the
 analysis.</p>
 </div></blockquote>
-<p><strong>comment</strong> : char (default=&#8217;#&#8217;)</p>
+<p><strong>comment</strong> : char (default=’#’)</p>
 <blockquote>
 <div><p>The comment character which, inserted in the beginning of a line,
 prevents that line from being read.</p>
@@ -1577,25 +1669,25 @@ from the alignment in which only gaps occur.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>There are two possible input formats for this class: the MSQ-format, and
-the MSA-format (see <a class="reference internal" href="../tutorial/formats.html#msa-formats"><span>Multiple Alignments (MSQ and MSA)</span></a> for details). This class directly
+the MSA-format (see <a class="reference internal" href="../tutorial/formats.html#msa-formats"><span class="std std-ref">Multiple Alignments (MSQ and MSA)</span></a> for details). This class directly
 inherits all methods of the <a class="reference internal" href="#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>
 class.</p>
 <p class="rubric">Examples</p>
 <p>Get the path to a file from the testset.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s2">&quot;test_path&quot;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;harry.msq&#39;</span>
 </pre></div>
 </div>
 <p>Load the file into the Multiple class.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span> <span class="o">=</span> <span class="n">Multiple</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span> <span class="o">=</span> <span class="n">Multiple</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Carry out a progressive alignment analysis of the sequences.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Print the result to the screen:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
 <span class="go">w    o    l    -    d    e    m    o    r    t</span>
 <span class="go">w    a    l    -    d    e    m    a    r    -</span>
 <span class="go">v    -    l    a    d    i    m    i    r    -</span>
@@ -1609,7 +1701,7 @@ class.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : str (default=&#8217;sca&#8217;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : str (default=’sca’)</p>
 <blockquote class="last">
 <div><p>The sound-class model according to which the sequences shall be
 converted.</p>
@@ -1631,14 +1723,14 @@ conducted alignment analyses was loaded.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : { &#8220;psa&#8221;, &#8220;msa&#8221;, &#8220;msq&#8221; }</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : { “psa”, “msa”, “msq” }</p>
 <blockquote>
 <div><p>Indicate which data should be written to file. Select between:</p>
 <ul class="simple">
-<li>&#8220;psa&#8221; &#8211; output of all pairwise alignments in <code class="docutils literal"><span class="pre">psa</span></code>-format,</li>
-<li>&#8220;msa&#8221; &#8211; output of the multiple alignment in <code class="docutils literal"><span class="pre">msa</span></code>-format, or</li>
-<li>&#8220;msq&#8221; &#8211; output of the multiple sequences in <code class="docutils literal"><span class="pre">msq</span></code>-format.</li>
-<li>&#8220;html&#8221; &#8211; output of the multiple alignment in <code class="docutils literal"><span class="pre">html</span></code>-format.</li>
+<li>“psa” – output of all pairwise alignments in <code class="docutils literal"><span class="pre">psa</span></code>-format,</li>
+<li>“msa” – output of the multiple alignment in <code class="docutils literal"><span class="pre">msa</span></code>-format, or</li>
+<li>“msq” – output of the multiple sequences in <code class="docutils literal"><span class="pre">msq</span></code>-format.</li>
+<li>“html” – output of the multiple alignment in <code class="docutils literal"><span class="pre">html</span></code>-format.</li>
 </ul>
 </div></blockquote>
 <p><strong>filename</strong> : str</p>
@@ -1649,7 +1741,7 @@ the infile will be taken by default.</p>
 <p><strong>sorted_seqs</strong> : bool</p>
 <blockquote>
 <div><p>Indicate whether the sequences should be sorted or not (applys only
-to &#8216;msa&#8217; and &#8216;msq&#8217; output.</p>
+to ‘msa’ and ‘msq’ output.</p>
 </div></blockquote>
 <p><strong>unique_seqs</strong> : bool</p>
 <blockquote class="last">
@@ -1683,7 +1775,7 @@ not.</p>
 diphtongs, or whether they should be kept separated during the
 analysis.</p>
 </div></blockquote>
-<p><strong>comment</strong> : char (default=&#8217;#&#8217;)</p>
+<p><strong>comment</strong> : char (default=’#’)</p>
 <blockquote class="last">
 <div><p>The comment character which, inserted in the beginning of a line,
 prevents that line from being read.</p>
@@ -1695,7 +1787,7 @@ prevents that line from being read.</p>
 <p class="rubric">Notes</p>
 <p>In order to read in data from text files, two different file formats can be
 used along with this class: the PSQ-format, and the PSA-format (see
-<a class="reference internal" href="../tutorial/formats.html#psa-formats"><span>Pairwise Alignments (PSQ and PSA)</span></a> for details). This class inherits the methods of the
+<a class="reference internal" href="../tutorial/formats.html#psa-formats"><span class="std std-ref">Pairwise Alignments (PSQ and PSA)</span></a> for details). This class inherits the methods of the
 <a class="reference internal" href="#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a> class.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
@@ -1727,12 +1819,12 @@ used along with this class: the PSQ-format, and the PSA-format (see
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : { &#8216;psa&#8217;, &#8216;psq&#8217; }</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : { ‘psa’, ‘psq’ }</p>
 <blockquote>
 <div><p>Indicate which data should be written to file. Select between:</p>
 <ul class="simple">
-<li>&#8216;psa&#8217; &#8211; output of all pairwise alignments in <code class="docutils literal"><span class="pre">psa</span></code>-format,</li>
-<li>&#8216;psq&#8217; &#8211; output of the multiple sequences in <code class="docutils literal"><span class="pre">psq</span></code>-format.</li>
+<li>‘psa’ – output of all pairwise alignments in <code class="docutils literal"><span class="pre">psa</span></code>-format,</li>
+<li>‘psq’ – output of the multiple sequences in <code class="docutils literal"><span class="pre">psq</span></code>-format.</li>
 </ul>
 </div></blockquote>
 <p><strong>filename</strong> : str</p>
@@ -1787,12 +1879,12 @@ strings.</p>
 <div><p>A sound class model according to which the IPA strings shall be
 converted to sound-class strings.</p>
 </div></blockquote>
-<p><strong>local</strong> : { c{bool}, &#8220;peaks&#8221;, &#8220;gaps&#8221; }(default=False)</p>
+<p><strong>local</strong> : { c{bool}, “peaks”, “gaps” }(default=False)</p>
 <blockquote>
 <div><p>Specify whether local pre-processing should be applied to the data. If
 set to c{peaks}, the average alignment score of each column is taken as
 reference to remove low-scoring columns from the alignment. If set to
-&#8220;gaps&#8221;, the columns with the highest proportion of gaps will be
+“gaps”, the columns with the highest proportion of gaps will be
 excluded.</p>
 </div></blockquote>
 </td>
@@ -1821,7 +1913,7 @@ excluded.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -1838,21 +1930,18 @@ excluded.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.align.txt"
+      <li><a href="../_sources/reference/lingpy.align.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1869,6 +1958,7 @@ excluded.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -1882,7 +1972,7 @@ excluded.</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -1890,18 +1980,18 @@ excluded.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

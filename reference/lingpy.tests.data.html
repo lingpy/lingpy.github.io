@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.tests.data package &mdash; LingPy</title>
-    
+    <title>lingpy.tests.data package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -71,7 +71,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.tests.data.test_derive.TestDerive">
 <em class="property">class </em><code class="descclassname">lingpy.tests.data.test_derive.</code><code class="descname">TestDerive</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.data.test_derive.TestDerive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="lingpy.tests.html#lingpy.tests.util.WithTempDir" title="lingpy.tests.util.WithTempDir"><code class="xref py py-class docutils literal"><span class="pre">lingpy.tests.util.WithTempDir</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">clldutils.testing.WithTempDir</span></code></p>
 <dl class="method">
 <dt id="lingpy.tests.data.test_derive.TestDerive.setUp">
 <code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.data.test_derive.TestDerive.setUp" title="Permalink to this definition">¶</a></dt>
@@ -95,7 +95,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.tests.data.test_sound_class_models.Tests">
 <em class="property">class </em><code class="descclassname">lingpy.tests.data.test_sound_class_models.</code><code class="descname">Tests</code><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="attribute">
 <dt id="lingpy.tests.data.test_sound_class_models.Tests.failures">
 <code class="descname">failures</code><em class="property"> = defaultdict(&lt;class 'list'&gt;, {})</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.failures" title="Permalink to this definition">¶</a></dt>
@@ -113,17 +113,17 @@ LingPy
 
 <dl class="attribute">
 <dt id="lingpy.tests.data.test_sound_class_models.Tests.segment">
-<code class="descname">segment</code><em class="property"> = 'æ'</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.segment" title="Permalink to this definition">¶</a></dt>
+<code class="descname">segment</code><em class="property"> = 'o'</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.segment" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.data.test_sound_class_models.Tests.segments">
-<code class="descname">segments</code><em class="property"> = {'¹⁴', 'a', '²²', '²', 'ɛ', '₁', 'ǵ', 'q', 'ṇ', 'ᵐp', 'ǐ', '₆', 'ᴇ', '+', 'pf', '₀', 'ě', 'ๅ', 'å', '⁵', 't͡ɕ', 'ɩ', 'ň', '₂', 'õ', '¹⁵', '˧', 'n', 'ń', 'è', 'ɓ', 'ś', 'ɬ', 'Ɂ', 'ŭ', 'ʕ', 'd͜ʐ', 'd͡ʐ', 'ǒ', 'Ɵ', 'c', 'ä', 'ũ', 'y', '²³', 'ẓ', '⁴', 'р', 'ý', 'œ', 'ʄ', '₄', 'm', 'ƀ', '₅₁', 'ɶ', 'ɯ', 'f', 'ô', 'ɿ', 'ï', 'ȯ', 'ɰ', 'ṿ', '⁵⁵', 'ɚ', 'd͡ʑ', '₃₄', 'ɖ', 'ȶ', 'b͡v', 'p͡f', 'ñ', '₁₅', 'ᴀ', '⁴³', 'á', '₅', 'v', 'ḳ', '₃', 'ⱱ', 'ḏ', 'z', 'ż', 'ᵲ', 'ɸ', '¹¹', 'd͡z', 'ɭ', 'ɫ', 't͜ʂ', '⁴⁵', 't͡ʃ', 'd͡ʒ', 'ḛ', 'ĭ', 'ʐ', 'š', '₃₃', 'ā', 'е', 'à', 'ǔ', 'ʋ', 'ɲ', 'č', '₄₂', '#', 't͜s', '⁵³', 'ḡ', 'ɐ', '⁴⁴', 't͜θ', '⁻', '₁₄', 'ɜ', 'ɕ', 't͜ʃ', 'j', 'x', 'ʟ', 'ö', 'ɵ', 'ʀ', 's', 'ă', '₅₅', '³', 'ţ', '₁₂', '₁₃', 'ȴ', 'ʔ', 'ó', 'ù', 't͡ʂ', 'ṭ', 'ṃ', '³¹', 'ḭ', 'ў', 'ṋ', 'ɞ', 'ļ', '₄₅', 'ò', '⁴¹', 'ῃ', 'ố', 'ē', '³⁴', 'ħ', 'w', 'ʒ', '³³', 'ʁ', 'ɮ', 'ɣ', 'ɡ', 'ɤ', 'ȓ', 'ᵐb', 'î', 'û', '¹', 't͡s', 'ʉ', 'ž', 'ɨ', 'ð', 'ʑ', 'ɴ', 'ǝ', 'ɦ', '₂₂', 'ß', 'í', '¹³', 'ỳ', '¹²', 'ᴜ', 'ȡ', 'Œ', 'ř', 't͜ɕ', 'ʏ', 'ɔ', 'ū', 'ʙ', 'ì', 'ɽ', 'ê', 'ɒ', 'l', 'ʅ', '⁵⁴', 'þ', 'ō', 'ʦ', 'ʂ', 'ị', 'ŝ', 'ḷ', 'd͜ʑ', '²¹', 'ṣ', 'd͜z', 'ɢ', '₅₄', 'θ', 'ṳ', 'p', '³⁵', '₅₃', 'ə', 'é', '₂₅', '₃₁', 'ł', 'ŋ', 'ṛ', 'ĵ', 'h', '⁵¹', 'ī', 'ḇ', 'ʈ', '₄₄', '₃₂', '₁₁', 'ɑ', 'o', 'ʍ', '₅₂', 'ǫ', 'Ɉ', 'ɪ', '₃₅', 'ṵ', 'ʝ', 'ḍ', 'ʥ', 'ʧ', 'ȵ', 'ú', 'ʃ', '⁴²', '²⁴', 'ɻ', '˦', 'ŏ', 'ɥ', 'ẽ', 'ã', 'ʡ', 'b', 'β', 'ε', 'ë', 'ɱ', '₂₁', 'ç', 'ü', 'g', 'ę', 'ṱ', 'ʮ', 't͡θ', 'ʣ', 'ṛ́', 'ŧ', 'ʌ', 'ǰ', 'ỹ', 'ʨ', 'ɹ', 't', 'ʎ', '₄₁', 'ø', '-', 'ɐ̯', 'ĕ', 'bv', '₄₃', 'ĩ', 'ņ', 'e', 'ụ', &quot;'ʷ&quot;, 'ɺ', '˥', 'а', 'ḥ', 'd͜ʒ', '³²', 'ạ', 'đ', 'ɷ', 'ọ', 'ǎ', 'i', 'ɳ', '_', 'ɾ', 'χ', '⁵²', '₂₄', 'ʤ', 'u', 'ɧ', '⁰', 'ɗ', '²⁵', '◦', 'ʊ', 'k', '₂₃', 'p͜f', 'd', '˨', 'ɘ', 'r', 'â', 'ı', '∫', 'ǥ', '∼', 'ɟ', 'т', 'æ'}</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.segments" title="Permalink to this definition">¶</a></dt>
+<code class="descname">segments</code><em class="property"> = {'₅₄', '#', 'ŏ', 'ᴀ', 'ɽ', '₃₄', 'ɜ', 'ħ', 'ń', 'à', '₅₂', 'ô', '³²', '₄', 'j', 'ŭ', 'ʉ', '₃₂', 'œ', 'ü', 'w', 'þ', 'ň', 'tɕ', 'ȶ', 'ọ', 'χ', 'f', 'ö', 'bv', 'ß', 't͡ʂ', 'đ', 'ɲ', 'ⱱ', 'å', 'u', 'm', 'ʂ', 'tɕʰ', 'ṣ', '₂', 'ʐ', 'ṹ', 'ũ', 'ḭ', 'd͜z', 'ę', '₀', 'а', 'û', 'p͜f', '₁₅', 'ts', 'k', '⁴²', 'ı', '₄₂', 'ɿ', '⁴', 'ǰ', '¹⁵', 'ǐ', 'ʏ', 'ụ', 'v', 'd͜ʐ', 'ạ', '₁₁', 'ṛ', 'n', 'ῃ', 'ê', '_', 'ɛ', 'ỹ', 'i', 'ṳ', '◦', '⁻', 'β', 'pf', 't͡ɕ', '₃₃', '₃₁', 'ṃ', '²⁴', '₁₄', 'ǥ', 'ɮ', 'ĵ', 'ṋ', 'ɶ', '₄₁', 'd͜ʒ', 'ʮ', 'ố', 'ɻ', 'ḳ', 'ḷ', 'ǝ', 'ē', 'θ', 'è', 'р', '˨', '₂₅', 'ř', 'ž', 'ì', 'd͜ʑ', '¹¹', 'ō', '⁵⁴', 'ṇ', 'ʋ', 'ĭ', 'dʑ', 'ā', '₆', 'ʈʂʰ', 'ʧ', 'е', 'ʑ', '⁰', 'ɓ', '-', 'ȗ', 't͜s', '∼', 'ū', 'ɱ', '˧', 'î', 'ȴ', 'Ɵ', 'ᵐb', 'ị', '˦', 'ɢ', 'ɗ', 'ʌ', 'ɯ', 'ł', 'ï', 'ɖʐ', '¹²', 'ʤ', '·', '₅₁', 'õ', 'd͡ʒ', '⁵⁵', 'ǫ', 'ð', 's', '₅₃', 'ɹ', '₁₂', 'ɵ', 't͜θ', 'r', '₂₃', 'ś', 'ë', '⁵³', 'ɪ', 'ú', 'ż', 'ò', 'ø', 't͜ɕ', 'ɫ', 'ʍ', 'ʀ', 'ȯ', '˥', '⁵²', 'p', 'ţ', 'ʃ', '³¹', '₃₅', 'ʒ', 'ʈʂ', 't', 'ʈ', 'ƀ', 'ḡ', 't͜ʂ', 't͡θ', 'Œ', 'ȵ', 'υ', 'ù', 'ᵐp', '¹⁴', 'ʡ', 'ẓ', 't͡ʃ', 'ɩ', 'á', 'ě', '₅', 'ʝ', 'ʣ', 'ў', 'Ɉ', 'ỳ', '∫', 'ɕ', 'ʔ', 'ɡ', '¹', 'ṱ', '⁵', 'ṙ', 'b', '²', '¹³', 'ʅ', '²³', '²¹', 'ļ', '₁₃', 'ĕ', 'ʎ', 'ã', 'x', '³⁴', 'ɞ', 'ʟ', 'ʁ', 'æ', 'd͡ʑ', 'ᵲ', 'e', 'Ɂ', 'ɘ', 'ȓ', 'ṽ', '³⁵', 'ɤ', 'a', 'ɟ', '₂₁', '₄₃', 'ǎ', 'ŝ', 'ȡ', '₄₄', 'ǒ', 'ṭ', 'ɦ', '²⁵', 'd͡z', 'ǔ', 'ʕ', 'ɷ', 'ó', 'ʄ', 'ǵ', 'т', 'ṿ', 'ʨ', 'h', 'ḏ', 'ẽ', 'ŋ', 'd͡ʐ', 'ḇ', 'ɨ', '₁', 'ḍ', 'ɳ', 'ʙ', 'd', '₃', 'ᴇ', 'q', 'ɣ', 'ɥ', 'ə', 'ý', 'č', 'ʥ', '⁴¹', 'â', 'ɔ', 'ĩ', 'ṍ', &quot;'ʷ&quot;, 'ɒ', '₄₅', 'é', 'l', 'ɭ', 'ɐ̯', '+', 'b͡v', 'ɚ', '³', 'y', 'ī', 'ḛ', 'ç', 'ṛ́', 'ɾ', 't͡s', 'ε', 'š', 'í', '²²', '₅₅', 'z', 'ᴜ', 'ṵ', 'ɖ', 'ɴ', 'ɬ', 'ɸ', '₂₂', '⁴⁵', 'ɑ', 'g', 'ʊ', 'ๅ', 'ä', 'dz', 'ȇ', '₂₄', 'ñ', 'ŧ', 'c', 'ņ', 'ɐ', '⁴⁴', 'ɰ', 'ʦ', 'tsʰ', 'ɧ', '³³', '⁵¹', 'p͡f', 'ă', 'ḥ', '⁴³', 't͜ʃ', 'ɺ', 'o'}</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.segments" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.data.test_sound_class_models.Tests.values">
-<code class="descname">values</code><em class="property"> = ['¹⁴', 'a', 'ʎ', 'i', '²²', '²', 'ṛ', 'ɛ', 'ĵ', '₁', 'ǵ', 'e', 'q', 'ǐ', 'ṇ', 'ᵐp', 'ʄ', '₀', 'ê', 'ๅ', 'ḍ', 'å', '⁵', 't͡ɕ', '³²', 'ň', 'ń', 'õ', 'bv', 'ú', '˧', 'n', 'è', 'ȶ', 'ɓ', 'ś', 'ɬ', 'Ɂ', 'ɑ', 'ʕ', 'd͡ʐ', 'c', 'ä', 'ũ', 'y', '²³', 'ẓ', '⁴', '₁₂', 'ʍ', 'р', 'ý', 'á', 'f', '₄', 'm', 'ƀ', '₄₂', 'ʂ', '₅₁', 'ɶ', 'ô', 'ɿ', 'ɭ', '₄₃', 'ï', 'ɰ', 'ṿ', '⁵⁵', 'ɚ', 'd͡ʑ', 'ɴ', '₂₂', 'ȯ', '₃₄', 'ɖ', 'b͡v', 'p͡f', 'ñ', '₁₅', 'ɣ', '⁴³', 'ħ', 'v', 'ḳ', '₃', 'ⱱ', 'ḏ', 'ţ', '₆', 'ʌ', '⁴⁴', 'ᵲ', 'ɸ', 'ă', 'ɫ', '₂', 'z', '⁴⁵', 'ḛ', 'd͡ʒ', 'ĭ', '⁵¹', 'ʐ', 'š', '₃₃', 'ā', 'à', 'ǔ', 'ʋ', 'ɲ', 'pf', 'ɕ', 'ě', 'č', '#', 't͜s', 'ɻ', 'ī', 'ɐ', '¹²', 't͜θ', 'j', '⁻', 'ɜ', 't͜ʃ', 'x', 'ʟ', 'ɵ', 'ʀ', 'ȡ', 's', '₅₅', '³', 'ȴ', 'Œ', '⁵²', 'ʔ', 'ó', 'ù', 'ɩ', 'ṭ', 'ə', 'ў', 'ṋ', 'ɞ', 't͜ɕ', 'ļ', '₄₅', '⁴¹', 'ῃ', 'ḇ', 'ē', '³⁴', 'т', 'w', 'ʒ', 'ż', 'ʁ', 'ɮ', 'ɯ', 'ṳ', 'ᵐb', 'þ', 'd', 'ᴀ', 'û', '¹', 't͡ʂ', 'ḥ', 't͡s', 'ʉ', 'ž', 'ɨ', 'ð', 'ʑ', 'ǝ', 'ɦ', '˦', 'ß', '¹³', 'b', 'ʦ', 'ỳ', 'ɒ', 'ᴜ', '¹⁵', 'ř', 'ɥ', 'ʏ', 'ɔ', 'ū', 'ẽ', 'ʙ', 'ì', 'l', 'ʅ', '⁵⁴', 'ʊ', 'ō', 'ɢ', 'ị', 'ṃ', 'ḷ', 'd͜ʑ', 'Ɵ', 'h', 'd͜z', '₅₄', 'θ', 'p', '³⁵', '₅₃', '³¹', 'ɤ', '²¹', 'é', 'ŝ', '⁰', '₂₃', 'ł', 'î', 'ŋ', 'ŭ', 'ʈ', '₄₄', 'ö', '₃₂', '₁₁', 'o', '₅₂', '¹¹', 'ᴇ', 'ǫ', 'Ɉ', 'ɪ', '₃₅', 'ǒ', 'ṵ', 'ʝ', '₅', 'ŏ', 'ʥ', 'ʧ', 'ʃ', '⁴²', '²⁴', '˥', 'ã', 'œ', 'ü', 'ʡ', 'β', 'ò', 'ε', 'ë', 'ɱ', '₂₁', 'ŧ', 'ɳ', 'ç', 'g', 'ę', 'ṱ', 'ʮ', 'ʣ', 'ṛ́', '₃₁', 'ǰ', 't͡ʃ', 'ʨ', 'ɹ', 'ố', 'ỹ', 't', '₄₁', 'ø', 'ɐ̯', 'd͜ʐ', 'ĕ', '²⁵', '⁵³', 'ĩ', 'ņ', 'ɽ', 'ɡ', 'ụ', &quot;'ʷ&quot;, 'ɺ', 'd͡z', 'а', 'đ', 'd͜ʒ', '₁₃', 'ạ', 'í', 'ɷ', 'ọ', '³³', 't͡θ', 'ǎ', 'ȵ', 'u', '_', 'ɾ', 'χ', '₂₄', 'ʤ', '₁₄', 'ɧ', 'ɗ', '◦', 'ȓ', 'е', '₂₅', '+', 'k', 'æ', '˨', 'ḡ', 'ɘ', 'ṣ', 'r', 'â', 'ı', 'ḭ', '∫', 'ǥ', '∼', 'ɟ', 'p͜f', 't͜ʂ']</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.values" title="Permalink to this definition">¶</a></dt>
+<code class="descname">values</code><em class="property"> = ['ū', 'ʈʂ', '₅₄', '#', 't', 'ŏ', 'ʈ', 'ᴀ', 'ƀ', 'ḡ', '₃₄', 'ɜ', 't͜ʂ', 'ħ', 'ń', 'ɴ', 't͡θ', 'à', '₅₂', 'Œ', 'ȵ', 'é', 'υ', 'ô', 'ù', '³²', 'ᵐp', '¹⁴', 'ʡ', '₄', 'ẓ', 'j', 'ŭ', 'ʉ', 'œ', 't͡ʃ', 'ɩ', 'á', 'ě', 'ü', 'w', 'þ', '₅', 'ň', 'tɕ', 'ʝ', 'ỹ', 'ɽ', 'ȶ', 'ʣ', 'ọ', 'ў', 'ỳ', 'ɕ', 'f', 'ʔ', 'ö', 'bv', 'ß', 'ɡ', 't͡ʂ', 'đ', 'ɲ', '⁵', 'å', 'm', 'ʂ', '₃₁', 'ṙ', 'tɕʰ', 'b', '¹³', 'g', 'ṣ', 'ɐ̯', '₂', 'ʅ', '²³', 'ʐ', 'ṹ', '²¹', '₁₃', 'ḭ', 'd͜z', 'ũ', 'ę', '₀', '₂₃', 'а', 'ĕ', 'û', 'ts', 'χ', 'ʎ', 'ã', 'k', 'x', '³⁴', '₄₄', '⁴²', '₂₅', 'ı', '⁴⁵', 'ɞ', 'ʟ', 'ò', 'ʁ', '₄₂', 'æ', 'd͡ʑ', 'ɿ', 'ǰ', '¹⁵', 'ᵲ', 'ǐ', 'ụ', 'v', 'd͜ʐ', 'ạ', 'e', '₁₁', 'n', 'ɘ', 'ῃ', 'ȓ', 'ṽ', '³⁵', 't͡ɕ', 'ɤ', 'a', 'ɟ', 'ɦ', '₂₁', '₄₃', '_', 'ɛ', 'ǎ', 'ị', 'ŝ', 'ṵ', 'ɫ', 'ȡ', 'i', 'ṳ', '◦', '⁻', 'β', 'pf', 'ǒ', 'ṭ', 'p͜f', '²⁵', 'd͡z', '₃₃', 'ǔ', 'ʕ', 'ɷ', 'o', 'ó', 'ʄ', 'ǵ', 'т', 'ṃ', '²⁴', 'ṿ', '₁₄', 'ǥ', 'ɮ', '₁₅', 'ḏ', 'ʋ', 'ĵ', 'ṋ', 'ɶ', '₄₁', 'd͡ʐ', 'd͜ʒ', 'ḇ', 'ɨ', 'ʮ', 'ố', 'ɻ', 'ȇ', 'ḳ', 'ǝ', 'ē', 'θ', 'è', 'ñ', '₁', 'р', '₃₂', 'ɐ', '˨', 'ḍ', 'ř', 'ļ', 'ž', 'ì', 'd͜ʑ', 'ⱱ', '¹¹', 'ō', 'ɖʐ', '⁵⁴', 'ṇ', 'ɳ', 'ʨ', 'ʙ', 'd', '₃', 'ᴇ', 'ĭ', 'ʤ', 'q', 'dʑ', 'ā', '₆', 'ʈʂʰ', 'ɣ', 'ɥ', 'ʧ', 'е', 'ə', 'ý', 'č', 'ʥ', '⁰', '⁴¹', 'ɓ', 'â', 'ɔ', 'ĩ', 'ȗ', 't͜s', '∼', 'ɒ', 'ɱ', '₄₅', '˧', 'l', 'î', 'ɭ', '⁴', '+', 'ʦ', 'b͡v', 'ú', 'ɚ', 'ȴ', 'Ɵ', 'ᵐb', '³', 'y', 'h', 'ẽ', 'ī', '˦', 'ɢ', 'ŋ', 'ḛ', 'ɗ', 'ʌ', 'ç', 'ɯ', 'ṛ́', 'ł', 'ï', '¹²', '·', 'ɾ', '₅₁', 'õ', 't͡s', 'd͡ʒ', '⁵⁵', 'ǫ', 'ʏ', '²', 'ε', 'ʑ', 'ð', 'š', 'í', '²²', '₅₅', 's', '₅₃', 'z', 'ᴜ', 'ɹ', '₁₂', 'ɵ', 't͜θ', 'r', 'ɖ', 'ɬ', 'ɸ', 'Ɉ', '¹', 'ś', 'ë', '⁵³', 'ɪ', 'ɑ', 'ʊ', 'ż', 'ṱ', 'ๅ', 'Ɂ', 'ø', 'ṛ', '₂₂', 't͜ɕ', 'ê', '₃₅', 'ʍ', 'ä', 'dz', 'ʀ', 'ȯ', '˥', '⁴³', '⁵²', '₂₄', 'ṍ', 'p', 'ţ', 'ʃ', 'ŧ', 'c', 'ņ', '⁴⁴', 'ɰ', &quot;'ʷ&quot;, 'tsʰ', '³¹', 'ɧ', '³³', '⁵¹', 'u', 'p͡f', '∫', 'ă', 'ḥ', 't͜ʃ', 'ḷ', 'ɺ', 'ʒ']</em><a class="headerlink" href="#lingpy.tests.data.test_sound_class_models.Tests.values" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -141,7 +141,7 @@ LingPy
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -157,21 +157,18 @@ LingPy
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.tests.data.txt"
+      <li><a href="../_sources/reference/lingpy.tests.data.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -188,6 +185,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -201,7 +199,7 @@ LingPy
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -209,18 +207,18 @@ LingPy
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

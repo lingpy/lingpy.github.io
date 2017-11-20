@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.thirdparty.cogent package &mdash; LingPy</title>
-    
+    <title>lingpy.thirdparty.cogent package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -77,7 +77,7 @@ LingPy
 Quoted labels
 Inner node labels
 Lengths
-[ ... ] Comments (discarded)
+[ … ] Comments (discarded)
 Unlabeled tips</dd>
 <dt>also:</dt>
 <dd>Double quotes can be used.
@@ -95,7 +95,7 @@ Spaces and quote marks are OK inside unquoted labels.</dd>
 <dd><p>Parses a Newick-format string, using specified constructor for tree.</p>
 <p>Calls constructor(children, name, attributes)</p>
 <p>Note: underscore_unmunge, if True, replaces underscores with spaces in
-the data that&#8217;s read in. This is part of the Newick format, but it is
+the data that’s read in. This is part of the Newick format, but it is
 often useful to suppress this behavior.</p>
 </dd></dl>
 
@@ -133,13 +133,13 @@ with spaces in all names read.</p>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.balanced">
 <code class="descname">balanced</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.balanced" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tree &#8216;rooted&#8217; here with no neighbour having &gt; 50% of the edges.</p>
+<dd><p>Tree ‘rooted’ here with no neighbour having &gt; 50% of the edges.</p>
 <p class="rubric">Notes</p>
 <p>Using a balanced tree can substantially improve performance of
 the likelihood calculations. Note that the resulting tree has a
 different orientation with the effect that specifying clades or
 stems for model parameterisation should be done using the
-&#8216;outgroup_name&#8217; argument.</p>
+‘outgroup_name’ argument.</p>
 </dd></dl>
 
 <dl class="method">
@@ -186,7 +186,7 @@ and Branch lengths will be made to reflect change.</p>
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.rootAtMidpoint">
 <code class="descname">rootAtMidpoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootAtMidpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>return a new tree rooted at midpoint of the two tips farthest apart</p>
-<p>this fn doesn&#8217;t preserve the internal node naming or structure,
+<p>this fn doesn’t preserve the internal node naming or structure,
 but does keep tip to tip distances correct.  uses unrootedDeepcopy()</p>
 </dd></dl>
 
@@ -204,7 +204,7 @@ that reflects knowledge of the true root location.</dd>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.rootedWithTip">
 <code class="descname">rootedWithTip</code><span class="sig-paren">(</span><em>outgroup_name</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootedWithTip" title="Permalink to this definition">¶</a></dt>
-<dd><p>A new tree with the named tip as one of the root&#8217;s children</p>
+<dd><p>A new tree with the named tip as one of the root’s children</p>
 </dd></dl>
 
 <dl class="method">
@@ -238,13 +238,6 @@ confusing in some cases).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.tipsWithinDistance">
-<code class="descname">tipsWithinDistance</code><span class="sig-paren">(</span><em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.tipsWithinDistance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns tips within specified distance from self</p>
-<p>Branch lengths of None will be interpreted as 0</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.totalDescendingBranchLength">
 <code class="descname">totalDescendingBranchLength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.totalDescendingBranchLength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns total descending branch length from self</p>
@@ -266,7 +259,7 @@ confusing in some cases).</p>
 <dl class="class">
 <dt id="lingpy.thirdparty.cogent.tree.TreeBuilder">
 <em class="property">class </em><code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">TreeBuilder</code><span class="sig-paren">(</span><em>mutable=False</em>, <em>constructor=&lt;class 'lingpy.thirdparty.cogent.tree.PhyloNode'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge">
 <code class="descname">createEdge</code><span class="sig-paren">(</span><em>children</em>, <em>name</em>, <em>params</em>, <em>nameLoaded=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge" title="Permalink to this definition">¶</a></dt>
@@ -290,12 +283,12 @@ confusing in some cases).</p>
 <dl class="class">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode">
 <em class="property">class </em><code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">TreeNode</code><span class="sig-paren">(</span><em>Name=None</em>, <em>Children=None</em>, <em>Parent=None</em>, <em>Params=None</em>, <em>NameLoaded=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Store information about a tree node. Mutable.</p>
 <dl class="docutils">
 <dt>Parameters:</dt>
 <dd>Name: label for the node, assumed to be unique.
-Children: list of the node&#8217;s children.
+Children: list of the node’s children.
 Params: dict containing arbitrary parameters for the node.
 NameLoaded: ?</dd>
 </dl>
@@ -304,7 +297,7 @@ NameLoaded: ?</dd>
 <code class="descname">Parent</code><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.Parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Accessor for parent.</p>
 <p>If using an algorithm that accesses Parent a lot, it will be much
-faster to access self._parent directly, but don&#8217;t do it if mutating
+faster to access self._parent directly, but don’t do it if mutating
 self._parent! (or, if you must, remember to clean up the refs).</p>
 </dd></dl>
 
@@ -368,7 +361,7 @@ self._parent! (or, if you must, remember to clean up the refs).</p>
 <p>Other is expected to be a tree object compatible with PhyloNode.</p>
 <p class="rubric">Notes</p>
 <p>Names present in only one of the two trees will count as 
-mismatches: if you don&#8217;t want this behavior, strip out the non-matching
+mismatches: if you don’t want this behavior, strip out the non-matching
 tips first.</p>
 </dd></dl>
 
@@ -387,7 +380,7 @@ tips first.</p>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive">
 <code class="descname">copyRecursive</code><span class="sig-paren">(</span><em>memo=None</em>, <em>_nil=[]</em>, <em>constructor='ignored'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns copy of self&#8217;s structure, including shallow copy of attrs.</p>
+<dd><p>Returns copy of self’s structure, including shallow copy of attrs.</p>
 <p>constructor is ignored; required to support old tree unit tests.</p>
 </dd></dl>
 
@@ -496,15 +489,12 @@ method <cite>setParamRule()</cite> along with the parameter name etc..</dd>
 <dd><p>Return the newick string for this tree.</p>
 <dl class="docutils">
 <dt>Arguments:</dt>
-<dd><ul class="first last">
-<li><p class="first">with_distances: whether branch lengths are included.</p>
-</li>
-<li><p class="first">semicolon: end tree string with a semicolon</p>
-</li>
+<dd><ul class="first last simple">
+<li>with_distances: whether branch lengths are included.</li>
+<li>semicolon: end tree string with a semicolon</li>
 <li><dl class="first docutils">
-<dt>escape_name: if any of these characters []&#8217;&#8221;(),:;_ exist in a</dt>
-<dd><p class="first last">nodes name, wrap the name in single quotes</p>
-</dd>
+<dt>escape_name: if any of these characters []’”(),:;_ exist in a</dt>
+<dd>nodes name, wrap the name in single quotes</dd>
 </dl>
 </li>
 </ul>
@@ -521,15 +511,12 @@ by Zongzhi Liu</p>
 <dd><p>Return the newick string for this edge.</p>
 <dl class="docutils">
 <dt>Arguments:</dt>
-<dd><ul class="first last">
-<li><p class="first">with_distances: whether branch lengths are included.</p>
-</li>
-<li><p class="first">semicolon: end tree string with a semicolon</p>
-</li>
+<dd><ul class="first last simple">
+<li>with_distances: whether branch lengths are included.</li>
+<li>semicolon: end tree string with a semicolon</li>
 <li><dl class="first docutils">
-<dt>escape_name: if any of these characters []&#8217;&#8221;(),:;_ exist in a</dt>
-<dd><p class="first last">nodes name, wrap the name in single quotes</p>
-</dd>
+<dt>escape_name: if any of these characters []’”(),:;_ exist in a</dt>
+<dd>nodes name, wrap the name in single quotes</dd>
 </dl>
 </li>
 </ul>
@@ -569,7 +556,7 @@ be listed in the natural traverse order.</p>
 <dd><p>A new instance of a sub tree that contains all the otus that are
 listed in name_list.</p>
 <p>ignore_missing: if False, getSubTree will raise a ValueError if 
-name_list contains names that aren&#8217;t nodes in the tree</p>
+name_list contains names that aren’t nodes in the tree</p>
 <p>keep_root: if False, the root of the subtree will be the last common
 ancestor of all nodes kept in the subtree. Root to tip distance is
 then (possibly) different from the original tree
@@ -581,12 +568,6 @@ have one child node.</p>
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.getTipNames">
 <code class="descname">getTipNames</code><span class="sig-paren">(</span><em>includeself=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getTipNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>return the list of the names of all tips contained by this edge</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getXML">
-<code class="descname">getXML</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getXML" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return XML formatted tree string.</p>
 </dd></dl>
 
 <dl class="method">
@@ -730,7 +711,7 @@ value for referencing.</p>
 <p>This is somewhat inelegant compared to saving the node and its index
 on the stack, but is 30% faster in the average case and 3x faster in
 the worst case (for a comb tree).</p>
-<p>Zongzhi Liu&#8217;s slower but more compact version is:</p>
+<p>Zongzhi Liu’s slower but more compact version is:</p>
 <dl class="docutils">
 <dt>def postorder_zongzhi(self):</dt>
 <dd><p class="first">stack = [[self, 0]]
@@ -775,7 +756,7 @@ will be made to reflect change.</p>
 <code class="descname">reassignNames</code><span class="sig-paren">(</span><em>mapping</em>, <em>nodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.reassignNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reassigns node names based on a mapping dict</p>
 <p>mapping : dict, old_name -&gt; new_name
-nodes : specific nodes for renaming (such as just tips, etc...)</p>
+nodes : specific nodes for renaming (such as just tips, etc…)</p>
 </dd></dl>
 
 <dl class="method">
@@ -823,7 +804,7 @@ specific tips the distance is between</p>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.setParamValue">
 <code class="descname">setParamValue</code><span class="sig-paren">(</span><em>param</em>, <em>edge</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.setParamValue" title="Permalink to this definition">¶</a></dt>
-<dd><p>set&#8217;s the value for param at named edge</p>
+<dd><p>set’s the value for param at named edge</p>
 </dd></dl>
 
 <dl class="method">
@@ -859,15 +840,6 @@ lowest scoring tip on the left.</p>
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode.tipChildren">
 <code class="descname">tipChildren</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.tipChildren" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns direct children of self that are tips.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.tipToTipDistances">
-<code class="descname">tipToTipDistances</code><span class="sig-paren">(</span><em>default_length=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.tipToTipDistances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns distance matrix between all pairs of tips, and a tip order.</p>
-<p>Warning: .__start and .__stop added to self and its descendants.</p>
-<p>tip_order contains the actual node objects, not their names (may be
-confusing in some cases).</p>
 </dd></dl>
 
 <dl class="method">
@@ -950,7 +922,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
 </div>
 <div class="section" id="module-lingpy.thirdparty.cogent">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.thirdparty.cogent" title="Permalink to this headline">¶</a></h2>
-<p>Simple py3-port of PyCogent&#8217;s (<a class="reference external" href="http://pycogent.sourceforge.net">http://pycogent.sourceforge.net</a>) Tree classes.</p>
+<p>Simple py3-port of PyCogent’s (<a class="reference external" href="http://pycogent.sourceforge.net">http://pycogent.sourceforge.net</a>) Tree classes.</p>
 </div>
 </div>
 
@@ -961,7 +933,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -977,21 +949,18 @@ This version from Raymond Hettinger, 2006/03/23</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.thirdparty.cogent.txt"
+      <li><a href="../_sources/reference/lingpy.thirdparty.cogent.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1008,6 +977,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -1021,7 +991,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -1029,18 +999,18 @@ This version from Raymond Hettinger, 2006/03/23</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

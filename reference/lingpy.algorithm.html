@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.algorithm package &mdash; LingPy</title>
-    
+    <title>lingpy.algorithm package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -83,6 +83,149 @@ LingPy
 </div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lingpy.algorithm.cluster_util">
+<span id="lingpy-algorithm-cluster-util-module"></span><h2>lingpy.algorithm.cluster_util module<a class="headerlink" href="#module-lingpy.algorithm.cluster_util" title="Permalink to this headline">¶</a></h2>
+<p>Various utility functions which are useful for algorithmic operations</p>
+<dl class="function">
+<dt id="lingpy.algorithm.cluster_util.generate_all_clusters">
+<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">generate_all_clusters</code><span class="sig-paren">(</span><em>numbers</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate all possible clusters for a number of elements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clr</strong> : iterator</p>
+<blockquote class="last">
+<div><p>An iterator that will yield the next of all possible clusters.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cluster_util.generate_random_cluster">
+<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">generate_random_cluster</code><span class="sig-paren">(</span><em>numbers</em>, <em>bias=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a random cluster for a number of elements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>numbers</strong> : int</p>
+<blockquote>
+<div><p>Number of separate entities which should be clustered.</p>
+</div></blockquote>
+<p><strong>bias</strong> : str (default=False)</p>
+<blockquote>
+<div><p>When set to “lumper” will tend to create larger groups, when set to
+“splitter” it will tend to produce smaller groups.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cluster</strong> : list</p>
+<blockquote class="last">
+<div><p>A list with consecutive ordering of clusters, starting from zero.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cluster_util.mutate_cluster">
+<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">mutate_cluster</code><span class="sig-paren">(</span><em>clr</em>, <em>chance=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutate a cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>clr</strong> : cluster</p>
+<blockquote>
+<div><p>A list with ordered clusters.</p>
+</div></blockquote>
+<p><strong>chance</strong> : float (default=0.5)</p>
+<blockquote>
+<div><p>The mutation rate for each element in a cluster. If set to 0.5, this
+means that in 50% of the cases, an element will be assigned to another
+cluster or a new cluster.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>valid_cluster</strong> : list</p>
+<blockquote class="last">
+<div><p>A newly clustered list in consecutive order.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cluster_util.order_cluster">
+<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">order_cluster</code><span class="sig-paren">(</span><em>clr</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.order_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Order a cluster into the form of a valid cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>clr</strong> : list</p>
+<blockquote>
+<div><p>A list with clusters assigned by given each element a specific clusuter
+ID.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>valid_cluster</strong> : list</p>
+<blockquote class="last">
+<div><p>A list in which the IDs start from zero and increase consecutively with
+each new cluster introduced.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.algorithm.cluster_util.valid_cluster">
+<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">valid_cluster</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.valid_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only allow to have sequences which have consecutive ordering of elements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : list</p>
+<blockquote>
+<div><p>A cluster sequence in which elements should be consecutively ordered, starting from
+0, and identical segments in the sequence retrieve the same number.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>valid_cluster</strong> : bool</p>
+<blockquote class="last">
+<div><p>True, if the cluster is valid, and False if it judged to be invalid.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>We define a valid and an invalid cluster sequence:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">clrA</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clrB</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="c1"># should be [0, 0, 1, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.utils</span> <span class="k">import</span> <span class="n">valid_cluster</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">valid_cluster</span><span class="p">(</span><span class="n">clrA</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">valid_cluster</span><span class="p">(</span><span class="n">clrB</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.algorithm.clustering">
 <span id="lingpy-algorithm-clustering-module"></span><h2>lingpy.algorithm.clustering module<a class="headerlink" href="#module-lingpy.algorithm.clustering" title="Permalink to this headline">¶</a></h2>
@@ -145,10 +288,10 @@ dataset. So we recommend to use it with great care.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { &#8220;upgma&#8221;, &#8220;single&#8221;, &#8220;complete&#8221;, &#8220;ward&#8221;}</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { “upgma”, “single”, “complete”, “ward”}</p>
 <blockquote>
-<div><p>Select between &#8216;ugpma&#8217;, &#8216;single&#8217;, and &#8216;complete&#8217;. You can also test
-&#8220;ward&#8221;, but there&#8217;s no guarantee that this is the correct algorithm.</p>
+<div><p>Select between ‘ugpma’, ‘single’, and ‘complete’. You can also test
+“ward”, but there’s no guarantee that this is the correct algorithm.</p>
 </div></blockquote>
 <p><strong>threshold</strong> : float</p>
 <blockquote>
@@ -180,16 +323,16 @@ corresponding to the respective ID as values.</p>
 </div>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="kn">import</span> <span class="n">squareform</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="k">import</span> <span class="n">squareform</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">[[0.0, 0.5, 0.67, 0.8, 0.2],</span>
 <span class="go"> [0.5, 0.0, 0.4, 0.7, 0.6],</span>
@@ -199,7 +342,7 @@ corresponding to the respective ID as values.</p>
 </pre></div>
 </div>
 <p>Carry out the flat cluster analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_cluster</span><span class="p">(</span><span class="s1">&#39;upgma&#39;</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_cluster</span><span class="p">(</span><span class="s1">&#39;upgma&#39;</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{0: [&#39;German&#39;, &#39;Dutch&#39;, &#39;English&#39;], 1: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
 </pre></div>
 </div>
@@ -243,16 +386,16 @@ corresponding to the respective ID as values.</p>
 </div>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="kn">import</span> <span class="n">squareform</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="k">import</span> <span class="n">squareform</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">[[0.0, 0.5, 0.67, 0.8, 0.2],</span>
 <span class="go"> [0.5, 0.0, 0.4, 0.7, 0.6],</span>
@@ -262,7 +405,7 @@ corresponding to the respective ID as values.</p>
 </pre></div>
 </div>
 <p>Carry out the flat cluster analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{0: [&#39;German&#39;, &#39;Dutch&#39;, &#39;English&#39;], 1: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
 </pre></div>
 </div>
@@ -289,13 +432,13 @@ corresponding to the respective ID as values.</p>
 <div><p>An list containing the names of all taxa corresponding to the distances
 in the matrix.</p>
 </div></blockquote>
-<p><strong>method</strong> : { &#8220;upgma&#8221;, &#8220;single&#8221;, &#8220;complete&#8221; } (default=&#8221;upgma&#8221;)</p>
+<p><strong>method</strong> : { “upgma”, “single”, “complete” } (default=”upgma”)</p>
 <blockquote>
 <div><p>Select the method for the flat cluster analysis.</p>
 </div></blockquote>
 <p><strong>distances</strong> : bool</p>
 <blockquote>
-<div><p>If set to &#8220;False&#8221;, only the topology of the tree will be returned.</p>
+<div><p>If set to “False”, only the topology of the tree will be returned.</p>
 </div></blockquote>
 <p><strong>revert</strong> : bool (default=False)</p>
 <blockquote>
@@ -320,20 +463,20 @@ the taxa that are assigned to a given cluster-ID.</p>
 <p>This is a very simple fuzzy clustering algorithm. It basically does nothing
 else than removing taxa successively from the matrix, flat-clustering the
 remaining taxa with the corresponding threshold, and then returning a
-combined &#8220;consensus&#8221; cluster in which taxa may be assigned to multiple
+combined “consensus” cluster in which taxa may be assigned to multiple
 clusters.</p>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="go">from lingpy.algorithm import squareform</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">[[0.0, 0.5, 0.67, 0.8, 0.2],</span>
 <span class="go"> [0.5, 0.0, 0.4, 0.7, 0.6],</span>
@@ -343,7 +486,7 @@ clusters.</p>
 </pre></div>
 </div>
 <p>Carry out the fuzzy flat cluster analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fuzzy</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fuzzy</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{1: [&#39;Swedish&#39;, &#39;Icelandic&#39;], 2: [&#39;Dutch&#39;, &#39;German&#39;], 3: [&#39;Dutch&#39;, &#39;English&#39;]}</span>
 </pre></div>
 </div>
@@ -377,11 +520,11 @@ in the matrix.</p>
 <div><p>The threshold that shall be used for the internal clustering of the
 data.</p>
 </div></blockquote>
-<p><strong>matrix_type</strong> : {&#8220;distances&#8221;,&#8221;similarities&#8221;,&#8221;weights&#8221;} (default=&#8221;distances&#8221;)</p>
+<p><strong>matrix_type</strong> : {“distances”,”similarities”,”weights”} (default=”distances”)</p>
 <blockquote>
 <div><p>Specify the type of the matrix. If the matrix contains distance data,
-it will be adapted to similarity data. If it contains &#8220;similarities&#8221;,
-no adaptation is needed. If it contains &#8220;weights&#8221;, a weighted version
+it will be adapted to similarity data. If it contains “similarities”,
+no adaptation is needed. If it contains “weights”, a weighted version
 of link clustering (see the supplementary in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Ahn2010"><span class="pre">Ahn2010</span></a></code> for
 details) ]will be carried out.</p>
 </div></blockquote>
@@ -402,16 +545,16 @@ the taxa that are assigned to a given cluster-ID.</p>
 </div>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="kn">import</span> <span class="n">squareform</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="k">import</span> <span class="n">squareform</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">[[0.0, 0.5, 0.67, 0.8, 0.2],</span>
 <span class="go"> [0.5, 0.0, 0.4, 0.7, 0.6],</span>
@@ -421,7 +564,7 @@ the taxa that are assigned to a given cluster-ID.</p>
 </pre></div>
 </div>
 <p>Carry out the link-clustering analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">link_clustering</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">link_clustering</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{1: [&#39;Dutch&#39;, &#39;English&#39;, &#39;German&#39;], 2: [&#39;Icelandic&#39;, &#39;Swedish&#39;]}</span>
 </pre></div>
 </div>
@@ -447,7 +590,7 @@ the taxa that are assigned to a given cluster-ID.</p>
 <blockquote>
 <div><p>A list of the taxa in the distance matrix.</p>
 </div></blockquote>
-<p><strong>cluster_method</strong> : {&#8220;upgma&#8221;, &#8220;mcl&#8221;, &#8220;single&#8221;, &#8220;complete&#8221;} (default=&#8221;upgma&#8221;)</p>
+<p><strong>cluster_method</strong> : {“upgma”, “mcl”, “single”, “complete”} (default=”upgma”)</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>groups</strong> : dict</p>
@@ -479,12 +622,12 @@ not recommended for further use.</p>
 <blockquote>
 <div><p>A list of the taxa in the distance matrix.</p>
 </div></blockquote>
-<p><strong>tree_calc</strong> : str (default=&#8221;neighbor&#8221;)</p>
+<p><strong>tree_calc</strong> : str (default=”neighbor”)</p>
 <blockquote>
 <div><p>The method for tree calculation that shall be used. Select between:</p>
 <ul class="simple">
-<li>&#8220;neighbor&#8221;: Neighbor-joining method (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>)</li>
-<li>&#8220;upgma&#8221; : UPGMA method (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>)</li>
+<li>“neighbor”: Neighbor-joining method (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>)</li>
+<li>“upgma” : UPGMA method (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>)</li>
 </ul>
 </div></blockquote>
 <p><strong>distances</strong> : bool (default=True)</p>
@@ -492,7 +635,7 @@ not recommended for further use.</p>
 <div><p>If set to c{True}, distances will be included in the
 tree-representation.</p>
 </div></blockquote>
-<p><strong>filename</strong> : str (default=&#8217;&#8216;)</p>
+<p><strong>filename</strong> : str (default=’‘)</p>
 <blockquote>
 <div><p>If a filename is specified, the data will be written to that file.</p>
 </div></blockquote>
@@ -558,10 +701,10 @@ be assigned as weight to the graph. If set to c{False} all weights will
 be set to 1. Use a custom function to define individual ways to
 calculate the weights.</p>
 </div></blockquote>
-<p><strong>matrix_type</strong> : { &#8220;distances&#8221;, &#8220;similarities&#8221; }</p>
+<p><strong>matrix_type</strong> : { “distances”, “similarities” }</p>
 <blockquote class="last">
 <div><p>Specify the type of the matrix. If the matrix contains distance data,
-it will be adapted to similarity data. If it contains &#8220;similarities&#8221;,
+it will be adapted to similarity data. If it contains “similarities”,
 no adaptation is needed.</p>
 </div></blockquote>
 </td>
@@ -570,16 +713,16 @@ no adaptation is needed.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="kn">import</span> <span class="n">squareform</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="k">import</span> <span class="n">squareform</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">[[0.0, 0.5, 0.67, 0.8, 0.2],</span>
 <span class="go"> [0.5, 0.0, 0.4, 0.7, 0.6],</span>
@@ -589,7 +732,7 @@ no adaptation is needed.</p>
 </pre></div>
 </div>
 <p>Carry out the link-clustering analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mcl</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mcl</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{1: [&#39;German&#39;, &#39;English&#39;, &#39;Dutch&#39;], 2: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
 </pre></div>
 </div>
@@ -633,20 +776,20 @@ software packages to view and plot the tree.</p>
 </div>
 <p class="rubric">Examples</p>
 <p>Function is automatically imported when importing lingpy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="kn">import</span> <span class="n">squareform</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="k">import</span> <span class="n">squareform</span>
 </pre></div>
 </div>
 <p>Create an arbitrary list of taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Norwegian&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Norwegian&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Carry out the cluster analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">neighbor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">neighbor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">&#39;(((Norwegian,(Swedish,Icelandic)),English),Dutch);&#39;</span>
 </pre></div>
 </div>
@@ -699,20 +842,20 @@ software packages to view and plot the tree.</p>
 </div>
 <p class="rubric">Examples</p>
 <p>Function is automatically imported when importing lingpy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="kn">import</span> <span class="n">squareform</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm</span> <span class="k">import</span> <span class="n">squareform</span>
 </pre></div>
 </div>
 <p>Create an arbitrary list of taxa.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary matrix.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Carry out the cluster analysis.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgma</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="n">distances</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgma</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="n">distances</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="go">&#39;((Swedish,Icelandic),(English,(German,Dutch)));&#39;</span>
 </pre></div>
 </div>
@@ -740,13 +883,13 @@ software packages to view and plot the tree.</p>
 </div></blockquote>
 <p><strong>taxa</strong> : list</p>
 <blockquote>
-<div><p>The list of taxon names. If set to &#8220;False&#8221; a fake list of taxon names
+<div><p>The list of taxon names. If set to “False” a fake list of taxon names
 will be created, giving a positive numerical ID in increasing order for
 each column in the matrix.</p>
 </div></blockquote>
 <p><strong>revert</strong> : bool</p>
 <blockquote>
-<div><p>If set to &#8220;False&#8221;, don&#8217;t return taxon names but simply the language
+<div><p>If set to “False”, don’t return taxon names but simply the language
 identifiers and their labels as a dictionary. Otherwise returns a
 dictionary with labels as keys and list of taxon names as values.</p>
 </div></blockquote>
@@ -764,6 +907,7 @@ labels and taxon names.</p>
 <p class="rubric">Notes</p>
 <p>Affinity propagation is a clustering method originally proposed by
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Frey2007"><span class="pre">Frey2007</span></a></code>.</p>
+<p>Requires the scikitlearn package, downloadable from <a class="reference external" href="http://scikit-learn.org/">http://scikit-learn.org/</a>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -784,13 +928,13 @@ labels and taxon names.</p>
 </div></blockquote>
 <p><strong>taxa</strong> : list</p>
 <blockquote>
-<div><p>The list of taxon names. If set to &#8220;False&#8221; a fake list of taxon names
+<div><p>The list of taxon names. If set to “False” a fake list of taxon names
 will be created, giving a positive numerical ID in increasing order for
 each column in the matrix.</p>
 </div></blockquote>
 <p><strong>revert</strong> : bool</p>
 <blockquote>
-<div><p>If set to &#8220;False&#8221;, don&#8217;t return taxon names but simply the language
+<div><p>If set to “False”, don’t return taxon names but simply the language
 identifiers and their labels as a dictionary. Otherwise returns a
 dictionary with labels as keys and list of taxon names as values.</p>
 </div></blockquote>
@@ -815,6 +959,7 @@ labels and taxon names.</p>
 distances between points as input. We list it only for completeness here,
 but urge to be careful when using the code and checking properly our
 implementation in the source code.</p>
+<p>Requires the scikitlearn package, downloadable from <a class="reference external" href="http://scikit-learn.org/">http://scikit-learn.org/</a>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -835,13 +980,13 @@ implementation in the source code.</p>
 </div></blockquote>
 <p><strong>taxa</strong> : list</p>
 <blockquote>
-<div><p>The list of taxon names. If set to &#8220;False&#8221; a fake list of taxon names
+<div><p>The list of taxon names. If set to “False” a fake list of taxon names
 will be created, giving a positive numerical ID in increasing order for
 each column in the matrix.</p>
 </div></blockquote>
 <p><strong>revert</strong> : bool</p>
 <blockquote>
-<div><p>If set to &#8220;False&#8221;, don&#8217;t return taxon names but simply the language
+<div><p>If set to “False”, don’t return taxon names but simply the language
 identifiers and their labels as a dictionary. Otherwise returns a
 dictionary with labels as keys and list of taxon names as values.</p>
 </div></blockquote>
@@ -859,6 +1004,7 @@ labels and taxon names.</p>
 <p class="rubric">Notes</p>
 <p>Infomap clustering is a community detection method originally proposed by
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosvall2008"><span class="pre">Rosvall2008</span></a></code>.</p>
+<p>Requires the igraph package is required, downloadable from <a class="reference external" href="http://igraph.org/">http://igraph.org/</a>.</p>
 </dd></dl>
 
 </div>
@@ -875,13 +1021,14 @@ labels and taxon names.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.algorithm package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.algorithm.cluster_util">lingpy.algorithm.cluster_util module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.clustering">lingpy.algorithm.clustering module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.extra">lingpy.algorithm.extra module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm">Module contents</a></li>
@@ -892,21 +1039,18 @@ labels and taxon names.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.algorithm.txt"
+      <li><a href="../_sources/reference/lingpy.algorithm.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -923,6 +1067,7 @@ labels and taxon names.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -936,7 +1081,7 @@ labels and taxon names.</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -944,18 +1089,18 @@ labels and taxon names.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

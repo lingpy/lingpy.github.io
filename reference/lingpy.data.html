@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.data package &mdash; LingPy</title>
-    
+    <title>lingpy.data package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -148,11 +148,11 @@ to define specific characteristics, like the <code class="docutils literal"><spa
 this can be done by employing a key-value structure in which the key is
 preceded by an <code class="docutils literal"><span class="pre">&#64;</span></code> and followed by a colon and the value is written
 right next to the key in the same line, e.g.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>@source: Dolgopolsky (1986)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@source</span><span class="p">:</span> <span class="n">Dolgopolsky</span> <span class="p">(</span><span class="mi">1986</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="last">This information will then be read from the <code class="docutils literal"><span class="pre">INFO</span></code> file and rendered
-when printing the model to screen with help of the <a class="reference external" href="http://docs.python.org/library/functions.html#print" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>
+when printing the model to screen with help of the <a class="reference external" href="https://docs.python.org/2/library/functions.html#print" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>
 function.</p>
 </dd>
 <dt><code class="file docutils literal"><span class="pre">converter</span></code></dt>
@@ -160,11 +160,11 @@ function.</p>
 with their respective sound values. Each line is reserved for one
 class, precede by the key (preferably an ASCII-letter) representing the
 class:</p>
-<div class="last highlight-python"><div class="highlight"><pre><span></span>B : ɸ, β, f, p͡f, p͜f, ƀ
-E : ɛ, æ, ɜ, ɐ, ʌ, e, ᴇ, ə, ɘ, ɤ, è, é, ē, ě, ê, ɚ
-D : θ, ð, ŧ, þ, đ
-G : x, ɣ, χ
-...
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="p">:</span> <span class="n">ɸ</span><span class="p">,</span> <span class="n">β</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">p͡f</span><span class="p">,</span> <span class="n">p͜f</span><span class="p">,</span> <span class="n">ƀ</span>
+<span class="n">E</span> <span class="p">:</span> <span class="n">ɛ</span><span class="p">,</span> <span class="n">æ</span><span class="p">,</span> <span class="n">ɜ</span><span class="p">,</span> <span class="n">ɐ</span><span class="p">,</span> <span class="n">ʌ</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">ᴇ</span><span class="p">,</span> <span class="n">ə</span><span class="p">,</span> <span class="n">ɘ</span><span class="p">,</span> <span class="n">ɤ</span><span class="p">,</span> <span class="n">è</span><span class="p">,</span> <span class="n">é</span><span class="p">,</span> <span class="n">ē</span><span class="p">,</span> <span class="n">ě</span><span class="p">,</span> <span class="n">ê</span><span class="p">,</span> <span class="n">ɚ</span>
+<span class="n">D</span> <span class="p">:</span> <span class="n">θ</span><span class="p">,</span> <span class="n">ð</span><span class="p">,</span> <span class="n">ŧ</span><span class="p">,</span> <span class="n">þ</span><span class="p">,</span> <span class="n">đ</span>
+<span class="n">G</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">ɣ</span><span class="p">,</span> <span class="n">χ</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 </dd>
@@ -174,10 +174,10 @@ characters defined by the model. The scoring is structured as a simple
 tab-delimited text file. The first cell contains the character names,
 the following cells contain the scores in redundant form (with both
 triangles being filled):</p>
-<div class="last highlight-python"><div class="highlight"><pre><span></span>B  10.0 -10.0   5.0 ...
-E -10.0   5.0 -10.0 ...
-F   5.0 -10.0  10.0 ...
-...
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">B</span>  <span class="mf">10.0</span> <span class="o">-</span><span class="mf">10.0</span>   <span class="mf">5.0</span> <span class="o">...</span>
+<span class="n">E</span> <span class="o">-</span><span class="mf">10.0</span>   <span class="mf">5.0</span> <span class="o">-</span><span class="mf">10.0</span> <span class="o">...</span>
+<span class="n">F</span>   <span class="mf">5.0</span> <span class="o">-</span><span class="mf">10.0</span>  <span class="mf">10.0</span> <span class="o">...</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 </dd>
@@ -190,12 +190,12 @@ represents vowels, consonants, or tones), and by the classes it is
 directly connected to. The strength of this connection is indicated by
 digits (the smaller the value, the shorter the path between the
 classes):</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>A : v, E:1, O:1
-C : c, S:2
-B : c, W:2
-E : v, A:1, I:1
-D : c, S:2
-...
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="p">:</span> <span class="n">v</span><span class="p">,</span> <span class="n">E</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">O</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">C</span> <span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="n">S</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">B</span> <span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="n">W</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">E</span> <span class="p">:</span> <span class="n">v</span><span class="p">,</span> <span class="n">A</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">I</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">D</span> <span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="n">S</span><span class="p">:</span><span class="mi">2</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 <p class="last">The information in such a file is automatically converted into a
@@ -216,25 +216,25 @@ and functions provided by the library.</p>
 <dl class="class">
 <dt id="lingpy.data.model.Model">
 <em class="property">class </em><code class="descclassname">lingpy.data.model.</code><code class="descname">Model</code><span class="sig-paren">(</span><em>model</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Class for the handling of sound-class models.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { &#8216;sca&#8217;, &#8216;dolgo&#8217;, &#8216;asjp&#8217;, &#8216;art&#8217;, &#8216;_color&#8217; }</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { ‘sca’, ‘dolgo’, ‘asjp’, ‘art’, ‘_color’ }</p>
 <blockquote class="last">
 <div><p>A string indicating the name of the model which shall be loaded.
 Select between:</p>
 <ul class="simple">
-<li>&#8216;sca&#8217; - the SCA sound-class model (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code>),</li>
-<li>&#8216;dolgo&#8217; - the DOLGO sound-class model (see:
-:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986&#8217;),</li>
-<li>&#8216;asjp&#8217; - the ASJP sound-class model (see
+<li>‘sca’ - the SCA sound-class model (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code>),</li>
+<li>‘dolgo’ - the DOLGO sound-class model (see:
+:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986’),</li>
+<li>‘asjp’ - the ASJP sound-class model (see
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code>),</li>
-<li>&#8216;art - the sound-class model which is used for the calculation of
+<li>‘art’ - the sound-class model which is used for the calculation of
 sonority profiles and prosodic strings (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>), and</li>
-<li>&#8216;_color&#8221; - the sound-class model which is used for the coloring of
+<li>‘_color’ - the sound-class model which is used for the coloring of
 sound-tokens when creating html-output.</li>
 </ul>
 </div></blockquote>
@@ -251,9 +251,9 @@ sound-tokens when creating html-output.</li>
 <code class="file docutils literal"><span class="pre">data/models/</span></code> folder of the LingPy package. A model has two
 essential attributes:</p>
 <ul class="simple">
-<li><code class="xref py py-attr docutils literal"><span class="pre">converter</span></code> &#8211; a dictionary with IPA-tokens as keys and
+<li><code class="xref py py-attr docutils literal"><span class="pre">converter</span></code> – a dictionary with IPA-tokens as keys and
 sound-class characters as values, and</li>
-<li><code class="xref py py-attr docutils literal"><span class="pre">scorer</span></code> &#8211; a scoring dictionary with tuples of sound-class
+<li><code class="xref py py-attr docutils literal"><span class="pre">scorer</span></code> – a scoring dictionary with tuples of sound-class
 characters as keys and scores (integers or floats) as values.</li>
 </ul>
 <p class="rubric">Examples</p>
@@ -261,22 +261,21 @@ characters as keys and scores (integers or floats) as values.</li>
 are automatically loaded, and they are accessible via the
 <a class="reference internal" href="#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-func docutils literal"><span class="pre">rc()</span></code></a> function for
 global settings:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
 <span class="go">&lt;sca-model &quot;asjp&quot;&gt;</span>
 </pre></div>
 </div>
 <p>Define variables for the standard models for convenience:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">asjp</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">asjp</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sca</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;sca&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dolgo</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;dolgo&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">art</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;art&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Check, how the letter <code class="docutils literal"><span class="pre">a</span></code> is converted in the various models:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="n">asjp</span><span class="p">,</span><span class="n">sca</span><span class="p">,</span><span class="n">dolgo</span><span class="p">,</span><span class="n">art</span><span class="p">]:</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="n">asjp</span><span class="p">,</span><span class="n">sca</span><span class="p">,</span><span class="n">dolgo</span><span class="p">,</span><span class="n">art</span><span class="p">]:</span>
-<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{0} &gt; {1} ({2})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">converter</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<p>Check how the letter <code class="docutils literal"><span class="pre">a</span></code> is converted in the various models:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="n">asjp</span><span class="p">,</span><span class="n">sca</span><span class="p">,</span><span class="n">dolgo</span><span class="p">,</span><span class="n">art</span><span class="p">]:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> &gt; </span><span class="si">{1}</span><span class="s1"> (</span><span class="si">{2}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">converter</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
 <span class="gp">...</span>
 <span class="go">a &gt; a (asjp)</span>
 <span class="go">a &gt; A (sca)</span>
@@ -285,7 +284,7 @@ global settings:</p>
 </pre></div>
 </div>
 <p>Retrieve basic information of a given model:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">sca</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sca</span><span class="p">)</span>
 <span class="go">Model:    sca</span>
 <span class="go">Info:     Extended sound class model based on Dolgopolsky (1986)</span>
 <span class="go">Source:   List (2012)</span>
@@ -347,8 +346,8 @@ not defined otherwise by the user), such as</p>
 <blockquote>
 <div><ul class="simple">
 <li>specific debugging messages (warnings, messages, errors)</li>
-<li>default values, such as &#8220;gop&#8221; (gap opening penalty), &#8220;scale&#8221; (scaling factor</li>
-<li>by which extended gaps are penalized), or &#8220;figsize&#8221; (the default size of</li>
+<li>default values, such as “gop” (gap opening penalty), “scale” (scaling factor</li>
+<li>by which extended gaps are penalized), or “figsize” (the default size of</li>
 <li>figures if data is plotted using matplotlib).</li>
 </ul>
 </div></blockquote>
@@ -356,14 +355,14 @@ not defined otherwise by the user), such as</p>
 keyword and any variable as input and adds or modifies the specific key of the
 rcParams dictionary, but also provides more complex functions that change whole
 sets of variables, such as the following statement:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>which switches the variables &#8220;asjp&#8221;, &#8220;dolgo&#8221;, etc. to the ASCII-based
+<p>which switches the variables “asjp”, “dolgo”, etc. to the ASCII-based
 transcription system of the ASJP project.</p>
 <p>If you want to change the content of c{rcParams} directly, you need to
 import the dictionary explicitly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="k">import</span> <span class="n">rcParams</span>
 </pre></div>
 </div>
 <p>However, changing the values in the dictionary randomly can produce
@@ -384,10 +383,10 @@ for this purpose.</p>
 <blockquote>
 <div><p>Use this keyword to specify a return-value for the rc-function.</p>
 </div></blockquote>
-<p><strong>schema</strong> : {&#8220;ipa&#8221;, &#8220;asjp&#8221;}</p>
+<p><strong>schema</strong> : {“ipa”, “asjp”}</p>
 <blockquote class="last">
 <div><p>Change the basic schema for sequence comparison. When switching to
-&#8220;asjp&#8221;, this means that sequences will be treated as sequences in ASJP
+“asjp”, this means that sequences will be treated as sequences in ASJP
 code, otherwise, they will be treated as sequences written in basic
 IPA.</p>
 </div></blockquote>
@@ -399,22 +398,22 @@ IPA.</p>
 <p>This function is the standard way to communicate with the <em>rcParams</em>
 dictionary which is not imported as a default. If you want to see which
 parameters there are, you can load the rcParams dictonary directly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="k">import</span> <span class="n">rcParams</span>
 </pre></div>
 </div>
 <p>However, be careful when changing the values. They might produce some
 unexpected behavior.</p>
 <p class="rubric">Examples</p>
 <p>Import LingPy:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Switch from IPA transcriptions to ASJP transcriptions:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can check which &#8220;basic orthography&#8221; is currently loaded:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
+<p>You can check which “basic orthography” is currently loaded:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
 <span class="go">&#39;asjp&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
@@ -433,7 +432,7 @@ unexpected behavior.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -450,21 +449,18 @@ unexpected behavior.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.data.txt"
+      <li><a href="../_sources/reference/lingpy.data.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -481,6 +477,7 @@ unexpected behavior.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -494,7 +491,7 @@ unexpected behavior.</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -502,18 +499,18 @@ unexpected behavior.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

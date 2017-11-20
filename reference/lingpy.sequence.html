@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.sequence package &mdash; LingPy</title>
-    
+    <title>lingpy.sequence package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -72,7 +72,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.sequence.generate.MCBasic">
 <em class="property">class </em><code class="descclassname">lingpy.sequence.generate.</code><code class="descname">MCBasic</code><span class="sig-paren">(</span><em>seqs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Basic class for creating Markov chains from sequence training data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -99,7 +99,7 @@ should be either passed as lists or as tuples.</p>
 <dt id="lingpy.sequence.generate.MCPhon">
 <em class="property">class </em><code class="descclassname">lingpy.sequence.generate.</code><code class="descname">MCPhon</code><span class="sig-paren">(</span><em>words</em>, <em>tokens=False</em>, <em>prostrings=[]</em>, <em>classes=False</em>, <em>class_model=&lt;sca-model &quot;sca&quot;&gt;</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><code class="xref py py-class docutils literal"><span class="pre">lingpy.sequence.generate.MCBasic</span></code></a></p>
-<p>Class for the creation of phonetic sequences (&#8220;pseudo words&#8221;).</p>
+<p>Class for the creation of phonetic sequences (“pseudo words”).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -154,6 +154,165 @@ represent the sequences as a Markov chain is returned.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.sequence.profile">
+<span id="lingpy-sequence-profile-module"></span><h2>lingpy.sequence.profile module<a class="headerlink" href="#module-lingpy.sequence.profile" title="Permalink to this headline">¶</a></h2>
+<p>Module provides methods for the handling of orthography profiles.</p>
+<dl class="function">
+<dt id="lingpy.sequence.profile.context_profile">
+<code class="descclassname">lingpy.sequence.profile.</code><code class="descname">context_profile</code><span class="sig-paren">(</span><em>wordlist</em>, <em>ref='ipa'</em>, <em>col='doculect'</em>, <em>semi_diacritics='hsʃ̢ɕʂʐʑʒw'</em>, <em>merge_vowels=False</em>, <em>brackets=None</em>, <em>splitters='/</em>, <em>;~'</em>, <em>merge_geminates=True</em>, <em>clts=False</em>, <em>bad_word='&lt;???&gt;'</em>, <em>bad_sound='&lt;?&gt;'</em>, <em>unknown_sound='!{0}'</em>, <em>examples=2</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.profile.context_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an advanced Orthography Profile with context and doculect information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<blockquote>
+<div><p>A wordlist from which you want to derive an initial
+orthography profile.</p>
+</div></blockquote>
+<p><strong>ref</strong> : str (default=”ipa”)</p>
+<blockquote>
+<div><p>The name of the reference column in which the words are stored.</p>
+</div></blockquote>
+<p><strong>col</strong> : str (default=”doculect”)</p>
+<blockquote>
+<div><p>Indicate in which column the information on the language variety is
+stored.</p>
+</div></blockquote>
+<p><strong>semi_diacritics</strong> : str</p>
+<blockquote>
+<div><p>Indicate characters which can occur both as “diacritics” (second part
+in a sound) or alone.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Indicate whether consecutive vowels should be merged.</p>
+</div></blockquote>
+<p><strong>brackets</strong> : dict</p>
+<blockquote>
+<div><p>A dictionary with opening brackets as key and closing brackets as
+values. Defaults to a pre-defined set of frequently occurring brackets.</p>
+</div></blockquote>
+<p><strong>splitters</strong> : str</p>
+<blockquote>
+<div><p>The characters which force the automatic splitting of an entry.</p>
+</div></blockquote>
+<p><strong>clts</strong> : dict (default=None)</p>
+<blockquote>
+<div><p>A dictionary(like) object that converts a given source sound into a
+potential target sound, using the get()-method of the dictionary.
+Normally, we think of a CLTS instance here (that is: a cross-linguistic
+transcription system as defined in the pyclts package).</p>
+</div></blockquote>
+<p><strong>bad_word</strong> : str (default=”«???»”)</p>
+<blockquote>
+<div><p>Indicate how words that could not be parsed should be handled. Note
+that both “bad_word” and “bad_sound” are format-strings, so you can add
+formatting information here.</p>
+</div></blockquote>
+<p><strong>bad_sound</strong> : str (default=”«?»”)</p>
+<blockquote>
+<div><p>Indicate how sounds that could not be converted to a sound class be
+handled. Note that both “bad_word” and “bad_sound” are format-strings,
+so you can add formatting information here.</p>
+</div></blockquote>
+<p><strong>unknown_sound</strong> : str (default=”!{0}”)</p>
+<blockquote>
+<div><p>If with_clts is set to True, use this string to indicate that sounds
+are classified as “unknown sound” in the CLTS framework.</p>
+</div></blockquote>
+<p><strong>examples</strong> : int(default=2)</p>
+<blockquote>
+<div><p>Indicate the number of examples that should be printed out.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>profile</strong> : generator</p>
+<blockquote class="last">
+<div><p>A generator of tuples (three items), indicating the segment, its frequency,
+the conversion to sound classes in the Dolgopolsky sound-class model,
+and the unicode-codepoints.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.profile.simple_profile">
+<code class="descclassname">lingpy.sequence.profile.</code><code class="descname">simple_profile</code><span class="sig-paren">(</span><em>wordlist</em>, <em>ref='ipa'</em>, <em>semi_diacritics='hsʃ̢ɕʂʐʑʒw'</em>, <em>merge_vowels=False</em>, <em>brackets=None</em>, <em>splitters='/</em>, <em>;~'</em>, <em>merge_geminates=True</em>, <em>bad_word='&lt;???&gt;'</em>, <em>bad_sound='&lt;?&gt;'</em>, <em>clts=None</em>, <em>unknown_sound='!{0}'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.profile.simple_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an initial Orthography Profile using Lingpy’s clean_string procedure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<blockquote>
+<div><p>A wordlist from which you want to derive an initial
+orthography profile.</p>
+</div></blockquote>
+<p><strong>ref</strong> : str (default=”ipa”)</p>
+<blockquote>
+<div><p>The name of the reference column in which the words are stored.</p>
+</div></blockquote>
+<p><strong>semi_diacritics</strong> : str</p>
+<blockquote>
+<div><p>Indicate characters which can occur both as “diacritics” (second part
+in a sound) or alone.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Indicate whether consecutive vowels should be merged.</p>
+</div></blockquote>
+<p><strong>brackets</strong> : dict</p>
+<blockquote>
+<div><p>A dictionary with opening brackets as key and closing brackets as
+values. Defaults to a pre-defined set of frequently occurring brackets.</p>
+</div></blockquote>
+<p><strong>splitters</strong> : str</p>
+<blockquote>
+<div><p>The characters which force the automatic splitting of an entry.</p>
+</div></blockquote>
+<p><strong>clts</strong> : dict (default=None)</p>
+<blockquote>
+<div><p>A dictionary(like) object that converts a given source sound into a
+potential target sound, using the get()-method of the dictionary.
+Normally, we think of a CLTS instance here (that is: a cross-linguistic
+transcription system as defined in the pyclts package).</p>
+</div></blockquote>
+<p><strong>bad_word</strong> : str (default=”«???»”)</p>
+<blockquote>
+<div><p>Indicate how words that could not be parsed should be handled. Note
+that both “bad_word” and “bad_sound” are format-strings, so you can add
+formatting information here.</p>
+</div></blockquote>
+<p><strong>bad_sound</strong> : str (default=”«?»”)</p>
+<blockquote>
+<div><p>Indicate how sounds that could not be converted to a sound class be
+handled. Note that both “bad_word” and “bad_sound” are format-strings,
+so you can add formatting information here.</p>
+</div></blockquote>
+<p><strong>unknown_sound</strong> : str (default=”!{0}”)</p>
+<blockquote>
+<div><p>If with_clts is set to True, use this string to indicate that sounds
+are classified as “unknown sound” in the CLTS framework.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>profile</strong> : generator</p>
+<blockquote class="last">
+<div><p>A generator of tuples (three items), indicating the segment, its frequency,
+the conversion to sound classes in the Dolgopolsky sound-class model,
+and the unicode-codepoints.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="module-lingpy.sequence.sound_classes">
 <span id="lingpy-sequence-sound-classes-module"></span><h2>lingpy.sequence.sound_classes module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
 <p>Module provides various methods for the handling of sound classes.</p>
@@ -190,7 +349,7 @@ represent the sequences as a Markov chain is returned.</p>
 <blockquote>
 <div><p>The aligned class string.</p>
 </div></blockquote>
-<p><strong>gap_char</strong> : string (default=&#8221;-&#8221;)</p>
+<p><strong>gap_char</strong> : string (default=”-“)</p>
 <blockquote>
 <div><p>The character which indicates gaps in the output string.</p>
 </div></blockquote>
@@ -215,13 +374,83 @@ alignment of the class string.</p>
 <p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">aligned_sequence</span> <span class="o">=</span> <span class="s1">&#39;CU-KE&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class2tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="n">aligned_sequence</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class2tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="n">aligned_sequence</span><span class="p">))</span>
 <span class="go">t͡s, ɔy, -, ɡ, ə</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.clean_string">
+<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">clean_string</code><span class="sig-paren">(</span><em>sequence</em>, <em>semi_diacritics='hsʃ̢ɕʂʐʑʒw'</em>, <em>merge_vowels=False</em>, <em>segmentized=False</em>, <em>rules=None</em>, <em>ignore_brackets=True</em>, <em>brackets=None</em>, <em>split_entries=True</em>, <em>splitters='/</em>, <em>;~'</em>, <em>preparse=None</em>, <em>merge_geminates=True</em>, <em>normalization_form='NFC'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.clean_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function exhaustively checks how well a sequence is understood by             LingPy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>semi_diacritics</strong> : str</p>
+<blockquote>
+<div><p>Indicate characters which can occur both as “diacritics” (second part
+in a sound) or alone.</p>
+</div></blockquote>
+<p><strong>merge_vowels</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Indicate whether consecutive vowels should be merged.</p>
+</div></blockquote>
+<p><strong>segmentized</strong> : False</p>
+<blockquote>
+<div><p>Indicate whether the input string is already segmentized or not. If set
+to True, items in brackets can no longer be ignored.</p>
+</div></blockquote>
+<p><strong>rules</strong> : dict</p>
+<blockquote>
+<div><p>Replacement rules to be applied to a segmentized string.</p>
+</div></blockquote>
+<p><strong>ignore_brackets</strong> : bool</p>
+<blockquote>
+<div><p>If set to True, ignore all content within a given bracket.</p>
+</div></blockquote>
+<p><strong>brackets</strong> : dict</p>
+<blockquote>
+<div><p>A dictionary with opening brackets as key and closing brackets as
+values. Defaults to a pre-defined set of frequently occurring brackets.</p>
+</div></blockquote>
+<p><strong>split_entries</strong> : bool (default=True)</p>
+<blockquote>
+<div><p>Indicate whether multiple entries (with a comma etc.) should be split
+into separate entries.</p>
+</div></blockquote>
+<p><strong>splitters</strong> : str</p>
+<blockquote>
+<div><p>The characters which force the automatic splitting of an entry.</p>
+</div></blockquote>
+<p><strong>prepares</strong> : list</p>
+<blockquote>
+<div><p>List of tuples, giving simple replacement patterns (source and target),
+which are applied before every processing starts.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cleaned_strings</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of cleaned strings which are segmented by space characters. If
+splitters are encountered, indicating that the entry contains two
+variants, the list will contain one for each element in a separate
+entry. If there are no splitters, the list has only size one.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.sound_classes.codepoint">
+<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">codepoint</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.codepoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return unicode codepoint(s) for a character set.</p>
 </dd></dl>
 
 <dl class="function">
@@ -240,7 +469,7 @@ alignment of the class string.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : list or str</p>
 <blockquote>
-<div><p>The sequence that shall be converted into it&#8217;s ngram-representation.</p>
+<div><p>The sequence that shall be converted into it’s ngram-representation.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -254,7 +483,7 @@ length.</p>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_all_ngrams</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_all_ngrams</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
 <span class="go">[&#39;abcde&#39;, &#39;bcde&#39;, &#39;abcd&#39;, &#39;cde&#39;, &#39;abc&#39;, &#39;bcd&#39;, &#39;ab&#39;, &#39;de&#39;, &#39;cd&#39;, &#39;bc&#39;, &#39;a&#39;, &#39;e&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;]</span>
 </pre></div>
 </div>
@@ -296,12 +525,12 @@ be used.</p>
 in the respective analysis. When set to <em>None</em>, the default tone string
 will be used.</p>
 </div></blockquote>
-<p><strong>combiners</strong> : str (default=&#8221;͜͡&#8221;)</p>
+<p><strong>combiners</strong> : str (default=”͜͡”)</p>
 <blockquote>
 <div><p>A string with characters that are used to combine two separate
 characters (compare affricates such as t͡s).</p>
 </div></blockquote>
-<p><strong>breaks</strong> : str (default=&#8221;-.&#8221;)</p>
+<p><strong>breaks</strong> : str (default=”-.”)</p>
 <blockquote>
 <div><p>A string containing the characters that indicate that a new token
 starts right after them. These can be used to indicate that two
@@ -320,9 +549,9 @@ separately.</p>
 rather be kept separate.</p>
 </div></blockquote>
 <p><strong>expand_nasals</strong> : bool (default=False)</p>
-<p><strong>semi_diacritics: str (default=&#8217;&#8216;)</strong> :</p>
+<p><strong>semi_diacritics: str (default=’‘)</strong> :</p>
 <blockquote>
-<div><p>Indicate which symbols shall be treated as &#8220;semi-diacritics&#8221;, that is,
+<div><p>Indicate which symbols shall be treated as “semi-diacritics”, that is,
 as symbols which can occur on their own, but which eventually, when
 preceded by a consonant, will form clusters with it. If you want to
 disable this features, just set the keyword to an empty string.</p>
@@ -347,7 +576,7 @@ brackets are removed along with the brackets, and</p>
 <p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">myseq</span> <span class="o">=</span> <span class="s1">&#39;t͡sɔyɡə&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ipa2tokens</span><span class="p">(</span><span class="n">myseq</span><span class="p">)</span>
 <span class="go">[&#39;t͡s&#39;, &#39;ɔy&#39;, &#39;ɡ&#39;, &#39;ə&#39;]</span>
@@ -364,13 +593,13 @@ brackets are removed along with the brackets, and</p>
 however, rather helpful in most instances. It defines a so far simple model
 in which 7 different contexts for each word are distinguished:</p>
 <ul class="simple">
-<li>&#8220;#&#8221;: onset cluster in a word&#8217;s initial</li>
-<li>&#8220;C&#8221;: onset cluster in a word&#8217;s non-initial</li>
-<li>&#8220;V&#8221;: nucleus vowel in a word&#8217;s initial syllable</li>
-<li>&#8220;v&#8221;: nucleus vowel in a word&#8217;s non-initial and non-final syllable</li>
-<li>&#8220;&gt;&#8221;: nucleus vowel in a word&#8217;s final syllable</li>
-<li>&#8220;c&#8221;: offset cluster in a word&#8217;s non-final syllable</li>
-<li>&#8220;$&#8221;: offset cluster in a word&#8217;s final syllable</li>
+<li>“#”: onset cluster in a word’s initial</li>
+<li>“C”: onset cluster in a word’s non-initial</li>
+<li>“V”: nucleus vowel in a word’s initial syllable</li>
+<li>“v”: nucleus vowel in a word’s non-initial and non-final syllable</li>
+<li>“&gt;”: nucleus vowel in a word’s final syllable</li>
+<li>“c”: offset cluster in a word’s non-final syllable</li>
+<li>“$”: offset cluster in a word’s final syllable</li>
 </ul>
 </dd></dl>
 
@@ -431,16 +660,16 @@ identical residue pairs with the total number of residue pairs in a given
 alignment.</p>
 <p class="rubric">Examples</p>
 <p>Load an alignment from the test suite.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="n">PSA</span><span class="p">(</span><span class="n">get_file</span><span class="p">(</span><span class="s1">&#39;test.psa&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Extract the alignments of the first aligned sequence pair.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">,</span><span class="n">score</span> <span class="o">=</span> <span class="n">pairs</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">,</span><span class="n">score</span> <span class="o">=</span> <span class="n">pairs</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Calculate the PID score of the alignment.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pid</span><span class="p">(</span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pid</span><span class="p">(</span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">)</span>
 <span class="go">0.44444444444444442</span>
 </pre></div>
 </div>
@@ -458,6 +687,28 @@ alignment.</p>
 <blockquote>
 <div><p>A list of integers indicating the sonority of the tokens of the
 underlying sequence.</p>
+</div></blockquote>
+<p><strong>stress</strong> : str (default=rcParams[‘stress’])</p>
+<blockquote>
+<div><p>A string containing the stress symbols used in the analysis. Defaults
+to the stress as defined in ~lingpy.settings.rcParams.</p>
+</div></blockquote>
+<p><strong>diacritics</strong> : str (default=rcParams[‘diacritics’])</p>
+<blockquote>
+<div><p>A string containing diacritic symbols used in the analysis. Defaults to
+the diacritic symbolds defined in ~lingpy.settings.rcParams.</p>
+</div></blockquote>
+<p><strong>cldf</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>If set to True, this will allow for a specific treatment of phonetic
+symbols which cannot be completely resolved (e.g., laryngeal h₂ in
+Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
+specifications (in particular the specifications for writing
+transcriptions in segmented strings, as employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in cases of insecurity
+of pronunciation, users can adopt a <code class="docutils literal"><span class="pre">`source/target`</span></code> style, where
+the source is the symbol used, e.g., in a reconstruction system, and
+the target is a proposed phonetic interpretation. This practice is also
+accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -488,9 +739,11 @@ ascending sonority</li>
 <li><code class="docutils literal"><span class="pre">X</span></code>: first vowel in a word</li>
 <li><code class="docutils literal"><span class="pre">Y</span></code>: non-final vowel in a word</li>
 <li><code class="docutils literal"><span class="pre">Z</span></code>: vowel occuring in the last position of a word</li>
+<li><code class="docutils literal"><span class="pre">T</span></code>: tone</li>
+<li><code class="docutils literal"><span class="pre">_</span></code>: word break</li>
 </ul>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_string</span><span class="p">(</span><span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_string</span><span class="p">(</span><span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
 <span class="go">&#39;AXBZ&#39;</span>
 </pre></div>
 </div>
@@ -533,7 +786,7 @@ strings to your own user-defined prosodic weight schema.</p>
 the gap score of a given segment in alignment analyses (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
 <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description).</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">prostring</span> <span class="o">=</span> <span class="s1">&#39;#vC&gt;&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_weights</span><span class="p">(</span><span class="n">prostring</span><span class="p">)</span>
 <span class="go">[2.0, 1.3, 1.5, 0.7]</span>
@@ -558,21 +811,14 @@ the gap score of a given segment in alignment analyses (see <code class="docutil
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>output: {&#8220;flat&#8221;, &#8220;breakpoints&#8221;, &#8220;nested&#8221;} (default=&#8221;flat&#8221;)</strong> :</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>output: {“flat”, “breakpoints”, “nested”} (default=”flat”)</strong> :</p>
 <blockquote>
 <div><p>Define how to output the syllabification. Select between:
-* &#8220;flat&#8221;: A syllable separator is introduced to mark the syllable</p>
-<blockquote>
-<div><p>boundaries</p>
+* “flat”: A syllable separator is introduced to mark the syllable boundaries
+* “breakpoins”: A tuple consisting of indices that slice the original sequence into syllables is returned.
+* “nested”: A nested list reflecting the syllable structure is returned.</p>
 </div></blockquote>
-<ul class="simple">
-<li>&#8220;breakpoins&#8221;: A tuple consisting of indices that slice the original
-sequence into syllables is returned.</li>
-<li>&#8220;nested&#8221;: A nested list reflecting the syllable structure is
-returned.</li>
-</ul>
-</div></blockquote>
-<p><strong>sep</strong> : str (default=&#8221;◦&#8221;)</p>
+<p><strong>sep</strong> : str (default=”◦”)</p>
 <blockquote>
 <div><p>Select your preferred syllable separator.</p>
 </div></blockquote>
@@ -589,35 +835,63 @@ to split it into syllables.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>When analyzing the sequence, we start a new syllable in all cases where we
+reach a deepest point in the sonority hierarchy of the sonority profile of
+the sequence. When passing an aligned string to this function, the gaps
+will be ignored when computing boundaries, but later on re-introduced, if
+the alignment is passed in segmented form.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.token2class">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">token2class</code><span class="sig-paren">(</span><em>token</em>, <em>model</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.token2class" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">token2class</code><span class="sig-paren">(</span><em>token</em>, <em>model</em>, <em>stress=None</em>, <em>diacritics=None</em>, <em>cldf=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.token2class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a single token into a sound-class.</p>
 <dl class="docutils">
 <dt>tokens <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd>A token (IPA-string).</dd>
+<dd>A token (phonetic segment).</dd>
 <dt>model <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></span></dt>
 <dd>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object.</dd>
+<dt>stress <span class="classifier-delimiter">:</span> <span class="classifier">str (default=rcParams[‘stress’])</span></dt>
+<dd>A string containing the stress symbols used in the analysis. Defaults
+to the stress as defined in ~lingpy.settings.rcParams.</dd>
+<dt>diacritics <span class="classifier-delimiter">:</span> <span class="classifier">str (default=rcParams[‘diacritics’])</span></dt>
+<dd>A string containing diacritic symbols used in the analysis. Defaults to
+the diacritic symbolds defined in ~lingpy.settings.rcParams.</dd>
+<dt>cldf <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=False)</span></dt>
+<dd>If set to True, this will allow for a specific treatment of phonetic
+symbols which cannot be completely resolved (e.g., laryngeal h₂ in
+Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a> specifications (in particular the
+specifications for writing transcriptions in segmented strings, as
+employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in
+cases of insecurity of pronunciation, users can adopt a
+<code class="docutils literal"><span class="pre">`source/target`</span></code> style, where the source is the symbol used, e.g.,
+in a reconstruction system, and the target is a proposed phonetic
+interpretation. This practice is also accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>c</strong> : str</p>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>sound_class</strong> : str</p>
 <blockquote class="last">
-<div><p>The corresponding sound-class value.</p>
+<div><p>A sound-class representation of the phonetic segment. If the segment
+cannot be resolved, the respective string will be rendered as “0”
+(zero).</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal"><span class="pre">token2class</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.tokens2class">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">tokens2class</code><span class="sig-paren">(</span><em>tstring</em>, <em>model</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">tokens2class</code><span class="sig-paren">(</span><em>tokens</em>, <em>model</em>, <em>stress=None</em>, <em>diacritics=None</em>, <em>cldf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert tokenized IPA strings into their respective class strings.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -631,11 +905,35 @@ to split it into syllables.</p>
 <blockquote>
 <div><p>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object.</p>
 </div></blockquote>
+<p><strong>stress</strong> : str (default=rcParams[‘stress’])</p>
+<blockquote>
+<div><p>A string containing the stress symbols used in the analysis. Defaults
+to the stress as defined in ~lingpy.settings.rcParams.</p>
+</div></blockquote>
+<p><strong>diacritics</strong> : str (default=rcParams[‘diacritics’])</p>
+<blockquote>
+<div><p>A string containing diacritic symbols used in the analysis. Defaults to
+the diacritic symbolds defined in ~lingpy.settings.rcParams.</p>
+</div></blockquote>
+<p><strong>cldf</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>If set to True, this will allow for a specific treatment of phonetic
+symbols which cannot be completely resolved (e.g., laryngeal h₂ in
+Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a> specifications (in particular the
+specifications for writing transcriptions in segmented strings, as
+employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in
+cases of insecurity of pronunciation, users can adopt a
+<code class="docutils literal"><span class="pre">`source/target`</span></code> style, where the source is the symbol used, e.g.,
+in a reconstruction system, and the target is a proposed phonetic
+interpretation. This practice is also accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
+</div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>classes</strong> : string</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>classes</strong> : list</p>
 <blockquote class="last">
-<div><p>A sound-class representation of the tokenized IPA string.</p>
+<div><p>A sound-class representation of the tokenized IPA string in form of a
+list. If sound classes cannot be resolved, the respective string will
+be rendered as “0” (zero).</p>
 </div></blockquote>
 </td>
 </tr>
@@ -643,13 +941,13 @@ to split it into syllables.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal"><span class="pre">token2class</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">classes</span> <span class="o">=</span> <span class="n">tokens2class</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="s1">&#39;sca&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">classes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">classes</span><span class="p">)</span>
 <span class="go">CUKE</span>
 </pre></div>
 </div>
@@ -664,11 +962,11 @@ contains morpheme separators.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sep</strong> : str (default=&#8221;◦&#8221;)</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sep</strong> : str (default=”◦”)</p>
 <blockquote>
 <div><p>Select your morpheme separator.</p>
 </div></blockquote>
-<p><strong>word_sep: str (default=&#8221;_&#8221;)</strong> :</p>
+<p><strong>word_sep: str (default=”_”)</strong> :</p>
 <blockquote>
 <div><p>Select your word separator.</p>
 </div></blockquote>
@@ -691,6 +989,59 @@ contains morpheme separators.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.sequence.tiers">
+<span id="lingpy-sequence-tiers-module"></span><h2>lingpy.sequence.tiers module<a class="headerlink" href="#module-lingpy.sequence.tiers" title="Permalink to this headline">¶</a></h2>
+<p>Module provides tools to handle transcriptions as multi-tiered sequences.</p>
+<dl class="function">
+<dt id="lingpy.sequence.tiers.cvcv">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">cvcv</code><span class="sig-paren">(</span><em>sequence</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.cvcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a CV-template representation out of a sound sequence.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.get_stress">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">get_stress</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.get_stress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.is_consonant">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_consonant</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_consonant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.is_sound">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_sound</code><span class="sig-paren">(</span><em>sound</em>, <em>what</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a sound is a vowel or not.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.is_stressed">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_stressed</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_stressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quick check for stress.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.is_tone">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_tone</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_tone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.is_vowel">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_vowel</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_vowel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.remove_stress">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">remove_stress</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.remove_stress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tiers.sound_type">
+<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">sound_type</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.sound_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut to determine basic sound type (C, V, or T).</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-lingpy.sequence">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.sequence" title="Permalink to this headline">¶</a></h2>
 <p>Module provides methods and functions for dealing with linguistic sequences.</p>
@@ -704,14 +1055,16 @@ contains morpheme separators.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.sequence package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence.generate">lingpy.sequence.generate module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.profile">lingpy.sequence.profile module</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence.sound_classes">lingpy.sequence.sound_classes module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.tiers">lingpy.sequence.tiers module</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence">Module contents</a></li>
 </ul>
 </li>
@@ -720,21 +1073,18 @@ contains morpheme separators.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.sequence.txt"
+      <li><a href="../_sources/reference/lingpy.sequence.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -751,6 +1101,7 @@ contains morpheme separators.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -764,7 +1115,7 @@ contains morpheme separators.</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -772,18 +1123,18 @@ contains morpheme separators.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

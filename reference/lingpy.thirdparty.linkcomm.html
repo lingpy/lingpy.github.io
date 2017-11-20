@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.thirdparty.linkcomm package &mdash; LingPy</title>
-    
+    <title>lingpy.thirdparty.linkcomm package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -75,7 +75,7 @@ LingPy
 <li>comm2nodes and comm2edges both present the cid as the first</li>
 </ul>
 <p class="last">entry of each line.  Previously only comm2nodes did this.
-* implemented weighted version, added &#8216;-w&#8217; switch
+* implemented weighted version, added ‘-w’ switch
 * expanded help string to explain input and outputs</p>
 </dd>
 </dl>
@@ -88,7 +88,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.HLC">
 <em class="property">class </em><code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">HLC</code><span class="sig-paren">(</span><em>adj</em>, <em>edges</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.HLC.initialize_edges">
 <code class="descname">initialize_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.HLC.initialize_edges" title="Permalink to this definition">¶</a></dt>
@@ -107,21 +107,6 @@ LingPy
 </dd></dl>
 
 <dl class="function">
-<dt id="lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_unweighted">
-<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">read_edgelist_unweighted</code><span class="sig-paren">(</span><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_unweighted" title="Permalink to this definition">¶</a></dt>
-<dd><p>reads two-column edgelist, returns dictionary
-mapping node -&gt; set of neighbors and a list of edges</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_weighted">
-<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">read_edgelist_weighted</code><span class="sig-paren">(</span><em>filename</em>, <em>delimiter=None</em>, <em>nodetype=&lt;class 'str'&gt;</em>, <em>weighttype=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.read_edgelist_weighted" title="Permalink to this definition">¶</a></dt>
-<dd><p>same as read_edgelist_unweighted except the input file now has three
-columns: node_i&lt;delimiter&gt;node_j&lt;delimiter&gt;weight_ij&lt;newline&gt;
-and the output includes a dict <a href="#id1"><span class="problematic" id="id2">`</span></a>ij2wij&#8217; mapping edge tuple (i,j) to w_ij</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.similarities_unweighted">
 <code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">similarities_unweighted</code><span class="sig-paren">(</span><em>adj</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_unweighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all the edge similarities. Input dict maps nodes to sets of neighbors.
@@ -131,7 +116,7 @@ Output is a list of decorated edge-pairs, (1-sim,eij,eik), ordered by similarity
 <dl class="function">
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted">
 <code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">similarities_weighted</code><span class="sig-paren">(</span><em>adj</em>, <em>ij2wij</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.similarities_weighted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Same as similarities_unweighted but using tanimoto coefficient. <a href="#id3"><span class="problematic" id="id4">`</span></a>adj&#8217; is a dict
+<dd><p>Same as similarities_unweighted but using tanimoto coefficient. <a href="#id1"><span class="problematic" id="id2">`</span></a>adj’ is a dict
 mapping nodes to sets of neighbors, ij2wij is a dict mapping an edge (ni,nj) tuple
 to the weight wij of that edge.</p>
 </dd></dl>
@@ -140,12 +125,6 @@ to the weight wij of that edge.</p>
 <dt id="lingpy.thirdparty.linkcomm.link_clustering.swap">
 <code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">swap</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.thirdparty.linkcomm.link_clustering.write_edge2cid">
-<code class="descclassname">lingpy.thirdparty.linkcomm.link_clustering.</code><code class="descname">write_edge2cid</code><span class="sig-paren">(</span><em>e2c</em>, <em>filename</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.linkcomm.link_clustering.write_edge2cid" title="Permalink to this definition">¶</a></dt>
-<dd><p>writes the .edge2comm, .comm2edges, and .comm2nodes files</p>
-</dd></dl>
 
 </div>
 <div class="section" id="module-lingpy.thirdparty.linkcomm">
@@ -162,7 +141,7 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -177,21 +156,18 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.thirdparty.linkcomm.txt"
+      <li><a href="../_sources/reference/lingpy.thirdparty.linkcomm.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -208,6 +184,7 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -221,7 +198,7 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -229,18 +206,18 @@ algorithm by James Bagrow, Yong-Yeol Ahn.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy.convert package &mdash; LingPy</title>
-    
+    <title>lingpy.convert package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -65,6 +65,87 @@ LingPy
 <h1>lingpy.convert package<a class="headerlink" href="#lingpy-convert-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lingpy.convert.cldf">
+<span id="lingpy-convert-cldf-module"></span><h2>lingpy.convert.cldf module<a class="headerlink" href="#module-lingpy.convert.cldf" title="Permalink to this headline">¶</a></h2>
+<p>Basic functions for the conversion from LingPy to CLDF and vice versa.</p>
+<dl class="function">
+<dt id="lingpy.convert.cldf.from_cldf">
+<code class="descclassname">lingpy.convert.cldf.</code><code class="descname">from_cldf</code><span class="sig-paren">(</span><em>path</em>, <em>to=&lt;class 'lingpy.basic.wordlist.Wordlist'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.cldf.from_cldf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load data from CLDF into a LingPy Wordlist object or similar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>path</strong> : str</p>
+<blockquote>
+<div><p>The path to the metadata-file of your CLDF dataset.</p>
+</div></blockquote>
+<p><strong>to</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<blockquote class="last">
+<div><p>A ~lingpy.basic.wordlist.Wordlist object or one of the descendants
+(LexStat, Alignmnent).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.convert.cldf.to_cldf">
+<code class="descclassname">lingpy.convert.cldf.</code><code class="descname">to_cldf</code><span class="sig-paren">(</span><em>wordlist</em>, <em>path='cldf'</em>, <em>source_path=None</em>, <em>ref='cogid'</em>, <em>segments='tokens'</em>, <em>form='ipa'</em>, <em>note='note'</em>, <em>form_in_source='value'</em>, <em>source=None</em>, <em>alignment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.cldf.to_cldf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a wordlist in LingPy to CLDF.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<blockquote>
+<div><p>A regular Wordlist object (or similar).</p>
+</div></blockquote>
+<p><strong>path</strong> : str (default=’cldf’)</p>
+<blockquote>
+<div><p>The name of the directory to which the files will be written.</p>
+</div></blockquote>
+<p><strong>source_path</strong> : str (default=None)</p>
+<blockquote>
+<div><p>If available, specify the path of your BibTex file with the sources.</p>
+</div></blockquote>
+<p><strong>ref</strong> : str (default=”cogid”)</p>
+<blockquote>
+<div><p>The column in which the cognate sets are stored.</p>
+</div></blockquote>
+<p><strong>segments</strong> : str (default=”tokens”)</p>
+<blockquote>
+<div><p>The column in which the segmented phonetic strings are stored.</p>
+</div></blockquote>
+<p><strong>form</strong> : str (default=”ipa”)</p>
+<blockquote>
+<div><p>The column in which the unsegmented phonetic strings are stored.</p>
+</div></blockquote>
+<p><strong>note</strong> : str (default=None)</p>
+<blockquote>
+<div><p>The column in which you store your comments.</p>
+</div></blockquote>
+<p><strong>form_in_source</strong> : str (default=None)</p>
+<blockquote>
+<div><p>The column in which you store the original form in the source.</p>
+</div></blockquote>
+<p><strong>source</strong> : str (default=None)</p>
+<blockquote>
+<div><p>The column in which you store your source information.</p>
+</div></blockquote>
+<p><strong>alignment</strong> : str (default=”alignment”)</p>
+<blockquote class="last">
+<div><p>The column in which you store the alignments.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.convert.graph">
 <span id="lingpy-convert-graph-module"></span><h2>lingpy.convert.graph module<a class="headerlink" href="#module-lingpy.convert.graph" title="Permalink to this headline">¶</a></h2>
@@ -114,7 +195,7 @@ LingPy
 <dt>treefile <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
 <dd>Either a str defining the path to a file containing the tree in
 Newick-format, or the tree-string itself.</dd>
-<dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=&#8217;lingpy&#8217;)</span></dt>
+<dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’lingpy’)</span></dt>
 <dd>The name of the output GML-file. If filename is set to c{None}, the
 function returns a <code class="xref py py-class docutils literal"><span class="pre">Graph</span></code>.</dd>
 </dl>
@@ -162,6 +243,9 @@ graphics-attribute of the nodes.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>This function creates a radial tree-layout from a given tree specified in
+Newick format.</p>
 </dd></dl>
 
 </div>
@@ -227,12 +311,12 @@ and adapted.</p>
 <div><p>Define the shorttitle of the <code class="docutils literal"><span class="pre">html</span></code>-page. If no title is provided,
 the default title <code class="docutils literal"><span class="pre">SCA</span></code> will be used.</p>
 </div></blockquote>
-<p><strong>filename</strong> : str (default=&#8221;&#8221;)</p>
+<p><strong>filename</strong> : str (default=”“)</p>
 <blockquote>
 <div><p>Define the name of the output file. If no name is defined, the name of
 the input file will be taken as a default.</p>
 </div></blockquote>
-<p><strong>template</strong> : str (default=&#8221;&#8221;)</p>
+<p><strong>template</strong> : str (default=”“)</p>
 <blockquote class="last">
 <div><p>The path to the template file. If no name is defined, the basic
 template will be used. The basic template currently used can be found
@@ -252,28 +336,28 @@ to is based on the definitions given in the <code class="docutils literal"><span
 <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a>. It can easily be changed and adapted.</p>
 <p class="rubric">Examples</p>
 <p>Load the libary.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Load an <code class="docutils literal"><span class="pre">msq</span></code>-file from the test-sets.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span> <span class="o">=</span> <span class="n">MSA</span><span class="p">(</span><span class="s1">&#39;harry.msq&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span> <span class="o">=</span> <span class="n">MSA</span><span class="p">(</span><span class="s1">&#39;harry.msq&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Align the data progressively and carry out a check for swapped sites.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">msa</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">msa</span><span class="p">)</span>
 <span class="go">w    o    l    -    d    e    m    o    r    t</span>
 <span class="go">w    a    l    -    d    e    m    a    r    -</span>
 <span class="go">v    -    l    a    d    i    m    i    r    -</span>
 </pre></div>
 </div>
 <p>Save the data to the file <code class="docutils literal"><span class="pre">harry.msa</span></code>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;msa&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;msa&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Save the <code class="docutils literal"><span class="pre">msa</span></code>-object as <code class="docutils literal"><span class="pre">html</span></code>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -325,7 +409,7 @@ format.</p>
 <blockquote>
 <div><p>A tree representation in Newick format.</p>
 </div></blockquote>
-<p><strong>fileformat</strong> : str (default=&#8221;pdf&#8221;)</p>
+<p><strong>fileformat</strong> : str (default=”pdf”)</p>
 <blockquote>
 <div><p>A valid fileformat according to Matplotlib.</p>
 </div></blockquote>
@@ -358,26 +442,26 @@ yields a tree filling half of the space of a circle.</p>
 <blockquote>
 <div><p>A Wordlist object containing cognate IDs.</p>
 </div></blockquote>
-<p><strong>filename</strong> : str (default=&#8221;heatmap&#8221;)</p>
+<p><strong>filename</strong> : str (default=”heatmap”)</p>
 <blockquote>
 <div><p>Name of the file to which the heatmap will be written.</p>
 </div></blockquote>
-<p><strong>fileformat</strong> : str (default=&#8221;pdf&#8221;)</p>
+<p><strong>fileformat</strong> : str (default=”pdf”)</p>
 <blockquote>
 <div><p>A regular matplotlib-fileformat (pdf, png, pgf, svg).</p>
 </div></blockquote>
-<p><strong>ref</strong> : str (default=&#8221;cogid&#8217;)</p>
+<p><strong>ref</strong> : str (default=”cogid’)</p>
 <blockquote>
 <div><p>The name of the column that contains the cognate identifiers.</p>
 </div></blockquote>
 <p><strong>normalized</strong> : {bool str} (default=True)</p>
 <blockquote>
-<div><p>If set to c{False}, don&#8217;t normalize the data. Otherwise, select the
+<div><p>If set to c{False}, don’t normalize the data. Otherwise, select the
 normalization method, choose between:</p>
 <ul class="simple">
-<li>&#8220;jaccard&#8221; for the Jaccard-distance (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bategelj1995"><span class="pre">Bategelj1995</span></a></code> for
+<li>“jaccard” for the Jaccard-distance (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bategelj1995"><span class="pre">Bategelj1995</span></a></code> for
 details), and</li>
-<li>&#8220;swadesh&#8221; for traditional lexicostatistical calculation of shared
+<li>“swadesh” for traditional lexicostatistical calculation of shared
 cognate percentages.</li>
 </ul>
 </div></blockquote>
@@ -401,7 +485,7 @@ cognate percentages.</li>
 <blockquote>
 <div><p>Specify the size of the figure.</p>
 </div></blockquote>
-<p><strong>tree</strong> : str (default=&#8217;&#8216;)</p>
+<p><strong>tree</strong> : str (default=’‘)</p>
 <blockquote class="last">
 <div><p>A tree passed for the taxa in Newick-format. If no tree is specified,
 the method looks for a tree object in the Wordlist.</p>
@@ -428,10 +512,10 @@ the method looks for a tree object in the Wordlist.</p>
 </div></blockquote>
 <p><strong>degree</strong> : int</p>
 <blockquote>
-<div><p>Determine the degree of the tree (this determines how &#8220;circular&#8221; the
+<div><p>Determine the degree of the tree (this determines how “circular” the
 tree will be).</p>
 </div></blockquote>
-<p><strong>fileformat</strong> : str (default=&#8221;pdf&#8221;)</p>
+<p><strong>fileformat</strong> : str (default=”pdf”)</p>
 <blockquote>
 <div><p>Select the fileformat to which the tree shall be written.</p>
 </div></blockquote>
@@ -469,7 +553,7 @@ only use alphanumeric characters and the understroke for assigning the
 taxon names. Especially avoid the usage of brackets, since this will
 confuse many phylogenetic programs.</p>
 </div></blockquote>
-<p><strong>stamp</strong> : str (default=&#8217;&#8216;)</p>
+<p><strong>stamp</strong> : str (default=’‘)</p>
 <blockquote>
 <div><p>Convenience stamp passed as a comment that can be used to indicate how
 the matrix was created.</p>
@@ -486,10 +570,10 @@ packages, however, allow more. If Phylip compatibility is not important
 for you and you just want to allow for as long taxon names as possible,
 set this value to 0.</p>
 </div></blockquote>
-<p><strong>comment</strong> : str (default = &#8216;#&#8217;)</p>
+<p><strong>comment</strong> : str (default = ‘#’)</p>
 <blockquote>
 <div><p>The comment character to be used when adding additional information in
-the &#8220;stamp&#8221;.</p>
+the “stamp”.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -512,7 +596,7 @@ the &#8220;stamp&#8221;.</p>
 
 <dl class="function">
 <dt id="lingpy.convert.strings.multistate2nex">
-<code class="descclassname">lingpy.convert.strings.</code><code class="descname">multistate2nex</code><span class="sig-paren">(</span><em>taxa</em>, <em>matrix</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.multistate2nex" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">multistate2nex</code><span class="sig-paren">(</span><em>taxa</em>, <em>matrix</em>, <em>filename=''</em>, <em>missing='?'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.multistate2nex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the data in a given wordlist to NEXUS-format for multistate analyses in PAUP.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -527,7 +611,7 @@ the &#8220;stamp&#8221;.</p>
 <div><p>The multi-state matrix with the first dimension indicating the taxa,
 and the second their states.</p>
 </div></blockquote>
-<p><strong>filename</strong> : str (default=&#8221;&#8221;)</p>
+<p><strong>filename</strong> : str (default=”“)</p>
 <blockquote class="last">
 <div><p>If not specified, the filename of the Wordlist will be taken,
 otherwise, it specifies the name of the file to which the data will be
@@ -547,7 +631,7 @@ written.</p>
 
 <dl class="function">
 <dt id="lingpy.convert.strings.pap2nex">
-<code class="descclassname">lingpy.convert.strings.</code><code class="descname">pap2nex</code><span class="sig-paren">(</span><em>taxa</em>, <em>paps</em>, <em>missing=0</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2nex" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">pap2nex</code><span class="sig-paren">(</span><em>taxa</em>, <em>paps</em>, <em>missing=0</em>, <em>filename=''</em>, <em>datatype='STANDARD'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2nex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a list of paps into nexus file format.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -563,7 +647,7 @@ written.</p>
 number of taxa and the second dimension being identical to the number
 of paps. If a dictionary is passed, each key represents a given pap.
 The following two structures will thus be treated identically:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">paps</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span> <span class="c1"># two languages, three paps</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">paps</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span> <span class="c1"># two languages, three paps</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">paps</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]}</span> <span class="c1"># two languages, three paps</span>
 </pre></div>
 </div>
@@ -584,6 +668,88 @@ The following two structures will thus be treated identically:</p>
 <dd><p>Convert a scoring function to a string.</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="lingpy.convert.strings.write_nexus">
+<code class="descclassname">lingpy.convert.strings.</code><code class="descname">write_nexus</code><span class="sig-paren">(</span><em>wordlist</em>, <em>mode='mrbayes'</em>, <em>filename='mrbayes.nex'</em>, <em>ref='cogid'</em>, <em>missing='?'</em>, <em>gap='-'</em>, <em>custom=None</em>, <em>custom_name='lingpy'</em>, <em>commands=None</em>, <em>commands_name='mrbayes'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.write_nexus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a nexus file for phylogenetic analyses.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : lingpy.basic.wordlist.Wordlist</p>
+<blockquote>
+<div><p>A Wordlist object containing cognate IDs.</p>
+</div></blockquote>
+<p><strong>mode</strong> : str (default=”mrbayes”)</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>The name of the output nexus style. Valid values are:</dt>
+<dd><ul class="first last simple">
+<li>‘MRBAYES’: a MrBayes formatted nexus file</li>
+<li>‘BEAST’: a BEAST formatted nexus file</li>
+<li><dl class="first docutils">
+<dt>‘BEASTWORDS’: a BEAST-formatted nexus for word-partitioned</dt>
+<dd>analyses.</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>filename</strong> : str (default=None)</p>
+<blockquote>
+<div><p>Name of the file to which the nexus file will be written.
+If set to c{None}, then this function will not write the nexus ontent
+to a file, but simply return the content as a string.</p>
+</div></blockquote>
+<p><strong>ref: str (default=”cogid”)</strong> :</p>
+<blockquote>
+<div><p>Column in which you store the cognate sets in your data.</p>
+</div></blockquote>
+<p><strong>gap</strong> : str (default=”-“)</p>
+<blockquote>
+<div><p>The symbol for gaps (not relevant for linguistic analyses).</p>
+</div></blockquote>
+<p><strong>missing</strong> : str (default=”?”)</p>
+<blockquote>
+<div><p>The symbol for missing characters.</p>
+</div></blockquote>
+<p><strong>custom</strong> : list {default=None)</p>
+<blockquote>
+<div><p>This information allows to add custom information to the nexus file, like, for
+example, the structure of the characters, their original concept, or their
+type, and it will be written into a custom block in the nexus file. The name of
+the custom block can be specified with help of the <cite>custom_name</cite> keyword. The
+content is a list of strings which will be written line by line into the custom
+block.</p>
+</div></blockquote>
+<p><strong>custom_name</strong> : str (default=”lingpy”)</p>
+<blockquote>
+<div><p>The name of the custom block which will be written to the file.</p>
+</div></blockquote>
+<p><strong>commands</strong> : list (default=None)</p>
+<blockquote>
+<div><p>If specified, will write an additional block containing commands for
+phylogenetic software. The commands are passed as a list, containing
+strings. The name of the block is given by the keywords commands_name.</p>
+</div></blockquote>
+<p><strong>commands_name</strong> : str (default=”mrbayes”)</p>
+<blockquote>
+<div><p>Determines how the block will be called to which the commands will be
+written.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>nexus</strong> : str</p>
+<blockquote class="last">
+<div><p>A string containing nexus file output</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.convert.tree">
 <span id="lingpy-convert-tree-module"></span><h2>lingpy.convert.tree module<a class="headerlink" href="#module-lingpy.convert.tree" title="Permalink to this headline">¶</a></h2>
@@ -595,7 +761,7 @@ The following two structures will thus be treated identically:</p>
 <p class="rubric">Notes</p>
 <p>This is an additional function that can be used for plots with help of
 matplotlibs functions. The tree_matrix is compatible with those matrices
-that scipy&#8217;s linkage functions create.</p>
+that scipy’s linkage functions create.</p>
 </dd></dl>
 
 </div>
@@ -612,12 +778,13 @@ that scipy&#8217;s linkage functions create.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.convert package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lingpy.convert.cldf">lingpy.convert.cldf module</a></li>
 <li><a class="reference internal" href="#module-lingpy.convert.graph">lingpy.convert.graph module</a></li>
 <li><a class="reference internal" href="#module-lingpy.convert.html">lingpy.convert.html module</a></li>
 <li><a class="reference internal" href="#module-lingpy.convert.plot">lingpy.convert.plot module</a></li>
@@ -631,21 +798,18 @@ that scipy&#8217;s linkage functions create.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.convert.txt"
+      <li><a href="../_sources/reference/lingpy.convert.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -662,6 +826,7 @@ that scipy&#8217;s linkage functions create.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -675,7 +840,7 @@ that scipy&#8217;s linkage functions create.</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -683,18 +848,18 @@ that scipy&#8217;s linkage functions create.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 

@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>lingpy package &mdash; LingPy</title>
-    
+    <title>LingPy Reference &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.4',
+        VERSION:     '2.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-    <link rel="top" title="LingPy" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
   </head>
-  <body role="document">
+  <body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -43,6 +42,7 @@ LingPy
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -61,8 +61,8 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-package">
-<h1>lingpy package<a class="headerlink" href="#lingpy-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lingpy-reference">
+<h1>LingPy Reference<a class="headerlink" href="#lingpy-reference" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -83,6 +83,7 @@ LingPy
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.algorithm.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.algorithm.html#module-lingpy.algorithm.cluster_util">lingpy.algorithm.cluster_util module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.algorithm.html#module-lingpy.algorithm.clustering">lingpy.algorithm.clustering module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.algorithm.html#module-lingpy.algorithm.extra">lingpy.algorithm.extra module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.algorithm.html#module-lingpy.algorithm">Module contents</a></li>
@@ -102,7 +103,6 @@ LingPy
 <li class="toctree-l2"><a class="reference internal" href="lingpy.basic.html#module-lingpy.basic.parser">lingpy.basic.parser module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.basic.html#module-lingpy.basic.tree">lingpy.basic.tree module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.basic.html#module-lingpy.basic.wordlist">lingpy.basic.wordlist module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.basic.html#module-lingpy.basic.workflow">lingpy.basic.workflow module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.basic.html#module-lingpy.basic">Module contents</a></li>
 </ul>
 </li>
@@ -111,15 +111,15 @@ LingPy
 <li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.lexstat">lingpy.compare.lexstat module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.partial">lingpy.compare.partial module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.phylogeny">lingpy.compare.phylogeny module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.strings">lingpy.compare.strings module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="lingpy.compare.html#parameters">Parameters</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.sanity">lingpy.compare.sanity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.strings">lingpy.compare.strings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare.util">lingpy.compare.util module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.compare.html#module-lingpy.compare">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lingpy.convert.html">lingpy.convert package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.convert.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.convert.html#module-lingpy.convert.cldf">lingpy.convert.cldf module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.convert.html#module-lingpy.convert.graph">lingpy.convert.graph module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.convert.html#module-lingpy.convert.html">lingpy.convert.html module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.convert.html#module-lingpy.convert.plot">lingpy.convert.plot module</a></li>
@@ -148,7 +148,7 @@ LingPy
 <li class="toctree-l2"><a class="reference internal" href="lingpy.evaluate.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.evaluate.html#module-lingpy.evaluate.acd">lingpy.evaluate.acd module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.evaluate.html#module-lingpy.evaluate.alr">lingpy.evaluate.alr module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.evaluate.html#lingpy-evaluate-apa-module">lingpy.evaluate.apa module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.evaluate.html#module-lingpy.evaluate.apa">lingpy.evaluate.apa module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.evaluate.html#module-lingpy.evaluate">Module contents</a></li>
 </ul>
 </li>
@@ -158,12 +158,6 @@ LingPy
 <li class="toctree-l2"><a class="reference internal" href="lingpy.meaning.html#module-lingpy.meaning.colexification">lingpy.meaning.colexification module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.meaning.html#module-lingpy.meaning.glosses">lingpy.meaning.glosses module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.meaning.html#module-lingpy.meaning">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="lingpy.model.html">lingpy.model package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.model.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.model.html#module-lingpy.model.sound_change">lingpy.model.sound_change module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lingpy.model.html#module-lingpy.model">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lingpy.read.html">lingpy.read package</a><ul>
@@ -178,7 +172,9 @@ LingPy
 <li class="toctree-l1"><a class="reference internal" href="lingpy.sequence.html">lingpy.sequence package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.sequence.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.sequence.html#module-lingpy.sequence.generate">lingpy.sequence.generate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.sequence.html#module-lingpy.sequence.profile">lingpy.sequence.profile module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.sequence.html#module-lingpy.sequence.sound_classes">lingpy.sequence.sound_classes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.sequence.html#module-lingpy.sequence.tiers">lingpy.sequence.tiers module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.sequence.html#module-lingpy.sequence">Module contents</a></li>
 </ul>
 </li>
@@ -186,6 +182,7 @@ LingPy
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="lingpy.tests.algorithm.html">lingpy.tests.algorithm package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.algorithm.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.algorithm.html#module-lingpy.tests.algorithm.test_cluster_util">lingpy.tests.algorithm.test_cluster_util module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.algorithm.html#module-lingpy.tests.algorithm.test_clustering">lingpy.tests.algorithm.test_clustering module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.algorithm.html#module-lingpy.tests.algorithm.test_cython">lingpy.tests.algorithm.test_cython module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.algorithm.html#module-lingpy.tests.algorithm.test_extra">lingpy.tests.algorithm.test_extra module</a></li>
@@ -206,21 +203,23 @@ LingPy
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.basic.html#module-lingpy.tests.basic.test_parser">lingpy.tests.basic.test_parser module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.basic.html#module-lingpy.tests.basic.test_tree">lingpy.tests.basic.test_tree module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.basic.html#module-lingpy.tests.basic.test_wordlist">lingpy.tests.basic.test_wordlist module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.basic.html#module-lingpy.tests.basic.test_workflow">lingpy.tests.basic.test_workflow module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.basic.html#module-lingpy.tests.basic">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lingpy.tests.compare.html">lingpy.tests.compare package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare.test__phylogeny">lingpy.tests.compare.test__phylogeny module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare.test_lexstat">lingpy.tests.compare.test_lexstat module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare.test_partial">lingpy.tests.compare.test_partial module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare.test_phylogeny">lingpy.tests.compare.test_phylogeny module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare.test_sanity">lingpy.tests.compare.test_sanity module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare.test_strings">lingpy.tests.compare.test_strings module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.compare.html#module-lingpy.tests.compare">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lingpy.tests.convert.html">lingpy.tests.convert package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.convert.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.convert.html#module-lingpy.tests.convert.test_cldf">lingpy.tests.convert.test_cldf module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.convert.html#module-lingpy.tests.convert.test_graph">lingpy.tests.convert.test_graph module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.convert.html#module-lingpy.tests.convert.test_html">lingpy.tests.convert.test_html module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.convert.html#module-lingpy.tests.convert.test_plot">lingpy.tests.convert.test_plot module</a></li>
@@ -249,6 +248,7 @@ LingPy
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning.test_basvoc">lingpy.tests.meaning.test_basvoc module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning.test_colexification">lingpy.tests.meaning.test_colexification module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning.test_glosses">lingpy.tests.meaning.test_glosses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning.test_init">lingpy.tests.meaning.test_init module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning">Module contents</a></li>
 </ul>
 </li>
@@ -264,6 +264,7 @@ LingPy
 <li class="toctree-l3"><a class="reference internal" href="lingpy.tests.sequence.html">lingpy.tests.sequence package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.sequence.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.sequence.html#module-lingpy.tests.sequence.test_generate">lingpy.tests.sequence.test_generate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.sequence.html#module-lingpy.tests.sequence.test_profile">lingpy.tests.sequence.test_profile module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.sequence.html#module-lingpy.tests.sequence.test_sound_classes">lingpy.tests.sequence.test_sound_classes module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.sequence.html#module-lingpy.tests.sequence">Module contents</a></li>
 </ul>
@@ -271,6 +272,7 @@ LingPy
 <li class="toctree-l3"><a class="reference internal" href="lingpy.tests.thirdparty.html">lingpy.tests.thirdparty package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.thirdparty.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.thirdparty.html#module-lingpy.tests.thirdparty.test_cogent">lingpy.tests.thirdparty.test_cogent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lingpy.tests.thirdparty.html#module-lingpy.tests.thirdparty.test_linkcomm">lingpy.tests.thirdparty.test_linkcomm module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lingpy.tests.thirdparty.html#module-lingpy.tests.thirdparty">Module contents</a></li>
 </ul>
 </li>
@@ -338,7 +340,7 @@ results of these operations.</p>
 <dl class="class">
 <dt id="lingpy.cli.Command">
 <em class="property">class </em><code class="descclassname">lingpy.cli.</code><code class="descname">Command</code><a class="headerlink" href="#lingpy.cli.Command" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Base class for subcommands of the lingpy command line interface.</p>
 <dl class="attribute">
 <dt id="lingpy.cli.Command.help">
@@ -361,7 +363,7 @@ results of these operations.</p>
 <dl class="class">
 <dt id="lingpy.cli.CommandMeta">
 <em class="property">class </em><code class="descclassname">lingpy.cli.</code><code class="descname">CommandMeta</code><span class="sig-paren">(</span><em>name</em>, <em>bases</em>, <em>dct</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.cli.CommandMeta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">type</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#type" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">type</span></code></a></p>
 <p>A metaclass which keeps track of subclasses, if they have all-lowercase names.</p>
 </dd></dl>
 
@@ -492,6 +494,17 @@ results of these operations.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="lingpy.cli.profile">
+<em class="property">class </em><code class="descclassname">lingpy.cli.</code><code class="descname">profile</code><a class="headerlink" href="#lingpy.cli.profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.cli.Command" title="lingpy.cli.Command"><code class="xref py py-class docutils literal"><span class="pre">lingpy.cli.Command</span></code></a></p>
+<dl class="classmethod">
+<dt id="lingpy.cli.profile.subparser">
+<em class="property">classmethod </em><code class="descname">subparser</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.cli.profile.subparser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="lingpy.cli.settings">
 <em class="property">class </em><code class="descclassname">lingpy.cli.</code><code class="descname">settings</code><a class="headerlink" href="#lingpy.cli.settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.cli.Command" title="lingpy.cli.Command"><code class="xref py py-class docutils literal"><span class="pre">lingpy.cli.Command</span></code></a></p>
@@ -523,7 +536,7 @@ results of these operations.</p>
 <span id="lingpy-config-module"></span><h2>lingpy.config module<a class="headerlink" href="#module-lingpy.config" title="Permalink to this headline">¶</a></h2>
 <p>Configuration management for lingpy.</p>
 <p>Various aspects of lingpy can be configured and customized by the user. This is done with
-configuration files in the user&#8217;s config dir.</p>
+configuration files in the user’s config dir.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference external" href="https://pypi.python.org/pypi/appdirs/">https://pypi.python.org/pypi/appdirs/</a></p>
@@ -541,12 +554,19 @@ configuration files in the user&#8217;s config dir.</p>
 <dl class="class">
 <dt id="lingpy.log.CustomFilter">
 <em class="property">class </em><code class="descclassname">lingpy.log.</code><code class="descname">CustomFilter</code><span class="sig-paren">(</span><em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.log.CustomFilter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/logging.html#logging.Filter" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">logging.Filter</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/logging.html#logging.Filter" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">logging.Filter</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.log.CustomFilter.filter">
 <code class="descname">filter</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.log.CustomFilter.filter" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="lingpy.log.Logging">
+<em class="property">class </em><code class="descclassname">lingpy.log.</code><code class="descname">Logging</code><span class="sig-paren">(</span><em>level=10</em>, <em>logger=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.log.Logging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>A context manager to execute a block of code at a specific logging level.</p>
 </dd></dl>
 
 <dl class="function">
@@ -584,9 +604,9 @@ configuration files in the user&#8217;s config dir.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>config_dir</strong> &#8211; Directory in which to look for/create the log config file.</li>
-<li><strong>force_default_config</strong> &#8211; Configure the logger using the default config.</li>
-<li><strong>test</strong> &#8211; Force reconfiguration of the logger.</li>
+<li><strong>config_dir</strong> – Directory in which to look for/create the log config file.</li>
+<li><strong>force_default_config</strong> – Configure the logger using the default config.</li>
+<li><strong>test</strong> – Force reconfiguration of the logger.</li>
 </ul>
 </td>
 </tr>
@@ -628,10 +648,10 @@ configuration files in the user&#8217;s config dir.</p>
 <blockquote>
 <div><p>Use this keyword to specify a return-value for the rc-function.</p>
 </div></blockquote>
-<p><strong>schema</strong> : {&#8220;ipa&#8221;, &#8220;asjp&#8221;}</p>
+<p><strong>schema</strong> : {“ipa”, “asjp”}</p>
 <blockquote class="last">
 <div><p>Change the basic schema for sequence comparison. When switching to
-&#8220;asjp&#8221;, this means that sequences will be treated as sequences in ASJP
+“asjp”, this means that sequences will be treated as sequences in ASJP
 code, otherwise, they will be treated as sequences written in basic
 IPA.</p>
 </div></blockquote>
@@ -643,22 +663,22 @@ IPA.</p>
 <p>This function is the standard way to communicate with the <em>rcParams</em>
 dictionary which is not imported as a default. If you want to see which
 parameters there are, you can load the rcParams dictonary directly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.settings</span> <span class="k">import</span> <span class="n">rcParams</span>
 </pre></div>
 </div>
 <p>However, be careful when changing the values. They might produce some
 unexpected behavior.</p>
 <p class="rubric">Examples</p>
 <p>Import LingPy:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Switch from IPA transcriptions to ASJP transcriptions:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s2">&quot;asjp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can check which &#8220;basic orthography&#8221; is currently loaded:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
+<p>You can check which “basic orthography” is currently loaded:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
 <span class="go">&#39;asjp&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="n">basic_orthography</span><span class="p">)</span>
@@ -671,65 +691,21 @@ unexpected behavior.</p>
 <div class="section" id="module-lingpy.util">
 <span id="lingpy-util-module"></span><h2>lingpy.util module<a class="headerlink" href="#module-lingpy.util" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="lingpy.util.ProgressBar">
-<em class="property">class </em><code class="descclassname">lingpy.util.</code><code class="descname">ProgressBar</code><span class="sig-paren">(</span><em>title</em>, <em>task_count</em>, <em>cols=100</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.ProgressBar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
-<p>A progress bar using console output.</p>
-<p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="s1">&#39;here is the title&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="k">as</span> <span class="n">pb</span><span class="p">:</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
-<span class="gp">&gt;&gt;&gt; </span>        <span class="c1"># do stuff</span>
-<span class="gp">&gt;&gt;&gt; </span>        <span class="n">pb</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="lingpy.util.ProgressBar.update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.ProgressBar.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="lingpy.util.TemporaryPath">
 <em class="property">class </em><code class="descclassname">lingpy.util.</code><code class="descname">TemporaryPath</code><span class="sig-paren">(</span><em>suffix=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.TemporaryPath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.util.TextFile">
 <em class="property">class </em><code class="descclassname">lingpy.util.</code><code class="descname">TextFile</code><span class="sig-paren">(</span><em>path</em>, <em>log=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.TextFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 </dd></dl>
 
-<dl class="class">
-<dt id="lingpy.util.cached_property">
-<em class="property">class </em><code class="descclassname">lingpy.util.</code><code class="descname">cached_property</code><a class="headerlink" href="#lingpy.util.cached_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="http://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
-<p>Decorator for read-only properties evaluated only once.</p>
-<p>It can be used to create a cached property like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="c1"># the class containing the property must be a new-style class</span>
-<span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="c1"># create property whose value is cached</span>
-    <span class="nd">@cached_property</span><span class="p">()</span>
-    <span class="k">def</span> <span class="nf">randint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># will only be evaluated once.</span>
-        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>The value is cached  in the &#8216;_cache&#8217; attribute of the object instance that
-has the property getter method wrapped by this decorator. The &#8216;_cache&#8217;
-attribute value is a dictionary which has a key for every property of the
-object which is wrapped by this decorator. Each entry in the cache is
-created only when the property is accessed for the first time and is the last
-computed property value.</p>
-<p>To expire a cached property value manually just do:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>del instance._cache[&lt;property name&gt;]
-</pre></div>
-</div>
-<p>inspired by the recipe by Christopher Arndt in the PythonDecoratorLibrary</p>
-</dd></dl>
+<dl class="function">
+<dt id="lingpy.util.as_string">
+<code class="descclassname">lingpy.util.</code><code class="descname">as_string</code><span class="sig-paren">(</span><em>obj</em>, <em>pprint=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.as_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.util.charstring">
@@ -743,23 +719,6 @@ computed property value.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="lingpy.util.confirm">
-<code class="descclassname">lingpy.util.</code><code class="descname">confirm</code><span class="sig-paren">(</span><em>question</em>, <em>default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.confirm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Ask user a yes/no question and return their response as True or False.</p>
-<p><code class="docutils literal"><span class="pre">question</span></code> should be a simple, grammatically complete question such as
-&#8220;Do you wish to continue?&#8221;, and will have a string similar to &#8221; [Y/n] &#8221;
-appended automatically. This function will <em>not</em> append a question mark for
-you.</p>
-<p>By default, when the user presses Enter without typing anything, or the user
-is not recognized as &#8220;yes&#8221; or &#8220;no&#8221;, &#8220;no&#8221; is assumed. This can be changed by
-specifying <code class="docutils literal"><span class="pre">default=True</span></code>.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Adapted from fabric.contrib.console.confirm</p>
-</div>
-</dd></dl>
-
-<dl class="function">
 <dt id="lingpy.util.identity">
 <code class="descclassname">lingpy.util.</code><code class="descname">identity</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.identity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -768,42 +727,8 @@ specifying <code class="docutils literal"><span class="pre">default=True</span><
 <dt id="lingpy.util.join">
 <code class="descclassname">lingpy.util.</code><code class="descname">join</code><span class="sig-paren">(</span><em>sep</em>, <em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">An implicit conversion of objects to strings is performed as well.</p>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.util.jsondump">
-<code class="descclassname">lingpy.util.</code><code class="descname">jsondump</code><span class="sig-paren">(</span><em>obj</em>, <em>path</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.jsondump" title="Permalink to this definition">¶</a></dt>
-<dd><p>python 2 + 3 compatible version of json.dump.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>obj</strong> &#8211; The object to be dumped.</li>
-<li><strong>path</strong> &#8211; The path of the JSON file to be written.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.util.jsonload">
-<code class="descclassname">lingpy.util.</code><code class="descname">jsonload</code><span class="sig-paren">(</span><em>path</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.jsonload" title="Permalink to this definition">¶</a></dt>
-<dd><p>python 2 + 3 compatible version of json.load.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The python object read from path.</td>
-</tr>
-</tbody>
-</table>
+<p class="rubric">Notes</p>
+<p>An implicit conversion of objects to strings is performed as well.</p>
 </dd></dl>
 
 <dl class="function">
@@ -824,6 +749,31 @@ specifying <code class="docutils literal"><span class="pre">default=True</span><
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.util.nexus_slug">
+<code class="descclassname">lingpy.util.</code><code class="descname">nexus_slug</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.nexus_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a string to a nexus “safe” representation (i.e. removes
+many unicode characters and removes some punctuation characters).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>s</strong> : str</p>
+<blockquote>
+<div><p>A string to convert to a nexus safe format.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>s</strong> : str</p>
+<blockquote class="last">
+<div><p>A string containing a nexus safe label.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.util.read_config_file">
 <code class="descclassname">lingpy.util.</code><code class="descname">read_config_file</code><span class="sig-paren">(</span><em>path</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.util.read_config_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read lines of a file ignoring commented lines and empty lines.</p>
@@ -837,18 +787,31 @@ specifying <code class="docutils literal"><span class="pre">default=True</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>:param path: File-system path of the file.</strong> :</p>
-<p><strong>:param normalize: If not `None` a valid unicode normalization mode must be passed.</strong> :</p>
-<p><strong>:param lines: Flag signalling whether to return a list of lines (without</strong> :</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>path</strong> : { Path, str }</p>
 <blockquote>
-<div><p>the line-separation character).</p>
+<div><p>File-system path of the file.</p>
 </div></blockquote>
-<p><strong>:return: File content as unicode object or list of lines as unicode objects.</strong> :</p>
-<p class="last"><strong>.. note:: The whole file is read into memory.</strong> :</p>
+<p><strong>normalize</strong> : { None, “NFC”, “NFC” }</p>
+<blockquote>
+<div><p>If not <cite>None</cite> a valid unicode normalization mode must be passed.</p>
+</div></blockquote>
+<p><strong>lines</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>Flag signalling whether to return a list of lines (without
+the line-separation character).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>file_content</strong> : { list, str }</p>
+<blockquote class="last">
+<div><p>File content as unicode object or list of lines as unicode objects.</p>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>The whole file is read into memory.</p>
 </dd></dl>
 
 <dl class="function">
@@ -859,10 +822,14 @@ specifying <code class="docutils literal"><span class="pre">default=True</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>d</strong> &#8211; Dictionary to be updated.</li>
-<li><strong>kw</strong> &#8211; Dictionary with default values.</li>
-</ul>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>d</strong> : dict</p>
+<blockquote>
+<div><p>Dictionary to be updated.</p>
+</div></blockquote>
+<p><strong>kw</strong> : dict</p>
+<blockquote class="last">
+<div><p>Dictionary with default values.</p>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -877,13 +844,23 @@ specifying <code class="docutils literal"><span class="pre">default=True</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>path</strong> &#8211; File-system path of the file.</li>
-<li><strong>normalize</strong> &#8211; If not <cite>None</cite> a valid unicode normalization mode must be passed.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Content:</th><td class="field-body"><p class="first last">The text content to be written.</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>path</strong> : str</p>
+<blockquote>
+<div><p>File-system path of the file.</p>
+</div></blockquote>
+<p><strong>content</strong> : str</p>
+<blockquote>
+<div><p>The text content to be written.</p>
+</div></blockquote>
+<p><strong>normalize</strong> : { None, “NFC”, “NFD” } (default=False)</p>
+<blockquote>
+<div><p>If not <cite>None</cite> a valid unicode normalization mode must be passed.</p>
+</div></blockquote>
+<p><strong>log</strong> : bool (default=True)</p>
+<blockquote class="last">
+<div><p>Indicate whether you want to log the result of the file writing
+process.</p>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -898,16 +875,16 @@ specifying <code class="docutils literal"><span class="pre">default=True</span><
 at <a class="reference external" href="http://lingpy.org">http://lingpy.org</a></p>
 <div class="section" id="id1">
 <h3>Subpackages<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>algorithm  &#8212; Basic Algorithms for Sequence Comparison
-align      &#8212; Specific Algorithms Alignment Analyses
-basic      &#8212; Basic Classes for Language Comparison
-compare    &#8212; Basic Modules for Language Comparison
-convert    &#8212; Functions for Format Conversion
-data       &#8212; Data Handling
-evaluate   &#8212; Basic Classes and Functions for Algorithm Evaluation
-read       &#8212; Basic Functions for Data Input
-sequence   &#8212; Basic Functions for Sequence Modeling
-thirdparty &#8212; Temporary Forks of Third-Party-Modules</p>
+<p>algorithm  — Basic Algorithms for Sequence Comparison
+align      — Specific Algorithms Alignment Analyses
+basic      — Basic Classes for Language Comparison
+compare    — Basic Modules for Language Comparison
+convert    — Functions for Format Conversion
+data       — Data Handling
+evaluate   — Basic Classes and Functions for Algorithm Evaluation
+read       — Basic Functions for Data Input
+sequence   — Basic Functions for Sequence Modeling
+thirdparty — Temporary Forks of Third-Party-Modules</p>
 </div>
 </div>
 </div>
@@ -919,11 +896,11 @@ thirdparty &#8212; Temporary Forks of Third-Party-Modules</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/lingpy-logo.svg" alt="Logo"/>
+              <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">lingpy package</a><ul>
+<li><a class="reference internal" href="#">LingPy Reference</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-lingpy.cache">lingpy.cache module</a></li>
@@ -944,21 +921,18 @@ thirdparty &#8212; Temporary Forks of Third-Party-Modules</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lingpy.txt"
+      <li><a href="../_sources/reference/lingpy.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -975,6 +949,7 @@ thirdparty &#8212; Temporary Forks of Third-Party-Modules</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
 	<li><a href="../index.html">Home</a> |&nbsp;</li>
+	<li><a href="../news.html">News</a> |&nbsp;</li>
 	<li><a href="../intro.html">Introduction</a> |&nbsp;</li>
 	<li><a href="../examples.html">Examples</a> |&nbsp;</li>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
@@ -988,7 +963,7 @@ thirdparty &#8212; Temporary Forks of Third-Party-Modules</p>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
 
    <div>
-     <a href="http://ssh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
+     <a href="http://shh.mpg.de"><img width="60px" src="../_static/minerva.png" alt="MPG-SSH" /></a>
    </div>
   <div>
     <a href="http://dfg.de/"><img width="80px" src="../_static/dfg_logo_schwarz.jpg" alt="DFG" /></a>
@@ -996,18 +971,18 @@ thirdparty &#8212; Temporary Forks of Third-Party-Modules</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Apr 26, 2016<br>
+    on Nov 20, 2017<br>
       This work is licensed under a <a rel="license"
-        href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative
-      Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+      Commons Attributio 4.0 International License</a>.</p>
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="Creative Commons License" style="border-width:0;width:100px;"
-		    src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a> </p>
+		    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> </p>
   </div>
 
   <div>
-    <a href="http://erc.europa.eu/"><img width="80px" src="http://quanthistling.info/theme/qhl/images/logo_erc.png" alt="ERC" /></a>
+    <a href="http://erc.europa.eu/"><img width="80px" src="../_static/European_Research_Council_logo.svg" alt="ERC" /></a>
   </div>
   <div style="max-width:150px;text-align:right;">
     <a href="http://github.com/lingpy/lingpy/">Application source on</a> 
