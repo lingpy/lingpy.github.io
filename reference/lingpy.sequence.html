@@ -861,13 +861,13 @@ the diacritic symbolds defined in ~lingpy.settings.rcParams.</dd>
 <dt>cldf <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=False)</span></dt>
 <dd>If set to True, this will allow for a specific treatment of phonetic
 symbols which cannot be completely resolved (e.g., laryngeal h₂ in
-Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a> specifications (in particular the
-specifications for writing transcriptions in segmented strings, as
-employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in
-cases of insecurity of pronunciation, users can adopt a
-<code class="docutils literal"><span class="pre">`source/target`</span></code> style, where the source is the symbol used, e.g.,
-in a reconstruction system, and the target is a proposed phonetic
-interpretation. This practice is also accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</dd>
+Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
+specifications (in particular the specifications for writing
+transcriptions in segmented strings, as employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in cases of insecurity
+of pronunciation, users can adopt a <code class="docutils literal"><span class="pre">`source/target`</span></code> style, where
+the source is the symbol used, e.g., in a reconstruction system, and
+the target is a proposed phonetic interpretation. This practice is also
+accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -943,6 +943,13 @@ be rendered as “0” (zero).</p>
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal"><span class="pre">token2class</span></code></a></p>
 </div>
+<p class="rubric">Notes</p>
+<p>The function ~lingpy.sequence.sound_classes.token2class returns a “0”
+(zero) if the sound is not recognized by LingPy’s sound class models. While
+an unknown sound in a longer sequence is no problem for alignment
+algorithms, we have some unwanted and often even unforeseeable behavior,
+if the sequence is completely unknown. For this reason, this function
+raises a ValueError, if a resulting sequence only contains unknown sounds.</p>
 <p class="rubric">Examples</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
@@ -1123,7 +1130,7 @@ contains morpheme separators.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 20, 2017<br>
+    on Nov 22, 2017<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

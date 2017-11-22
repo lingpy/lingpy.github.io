@@ -76,8 +76,8 @@ version of LingPy in which the complete data structure is refactored, also allow
 dependencies like NumPy which bother our users at times.</p>
 <div class="section" id="bugfixes-in-wordlist-class">
 <h2>Bugfixes in Wordlist Class<a class="headerlink" href="#bugfixes-in-wordlist-class" title="Permalink to this headline">¶</a></h2>
-<p>We fixed some problems related to the ~lingpy.basic.wordlist.Wordlist class in LingPy. First, if you
-make the transition from a Wordlist object to a ~lingpy.compare.lexstat.LexStat object, the data
+<p>We fixed some problems related to the <a class="reference internal" href="reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> class in LingPy. First, if you
+make the transition from a Wordlist object to a <a class="reference internal" href="reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> object, the data
 will be deep-copied. As a result, writing:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
@@ -100,7 +100,7 @@ script.</p>
 </div>
 <div class="section" id="sanity-checks-of-linguistic-data">
 <h2>Sanity Checks of Linguistic Data<a class="headerlink" href="#sanity-checks-of-linguistic-data" title="Permalink to this headline">¶</a></h2>
-<p>We introduce a new module, called ~lingpy.compare.sanity. In this module, we provide a couple of new
+<p>We introduce a new module, called <a class="reference internal" href="reference/lingpy.compare.html#module-lingpy.compare.sanity" title="lingpy.compare.sanity"><code class="xref py py-mod docutils literal"><span class="pre">sanity</span></code></a>. In this module, we provide a couple of new
 functions which you can use to check the consistency of your data. One specific focus, given that
 LingPy is focused on sequence comparison, is the <em>coverage</em> of words in a wordlist. Coverage is
 hereby understood as the minimal number of words shared per meaning slot in each language pair.
@@ -119,8 +119,8 @@ class. Mutual coverage can be computed in a straightforward manner:</p>
 </pre></div>
 </div>
 <p>We highly recommend all users which deal with spotty and patchy data to have a closer look at the
-coverage functions offered in the ~lingpy.compare.sanity module. You may also want to check out the
-~lingpy.compare.sanity.synonymy function which computes the number of synonyms in your dataset. Here
+coverage functions offered in the <a class="reference internal" href="reference/lingpy.compare.html#module-lingpy.compare.sanity" title="lingpy.compare.sanity"><code class="xref py py-mod docutils literal"><span class="pre">sanity</span></code></a> module. You may also want to check out the
+<a class="reference internal" href="reference/lingpy.compare.html#lingpy.compare.sanity.synonymy" title="lingpy.compare.sanity.synonymy"><code class="xref py py-func docutils literal"><span class="pre">synonymy()</span></code></a> function which computes the number of synonyms in your dataset. Here
 again, we recommend to pay specific attention to not exceed a value of maximally three words per
 concept and language.</p>
 </div>
@@ -134,7 +134,7 @@ won’t be aligned, and not clustered together with other words which have ident
 <div class="section" id="random-clusters-lumper-and-splitter">
 <h2>Random Clusters, Lumper, and Splitter<a class="headerlink" href="#random-clusters-lumper-and-splitter" title="Permalink to this headline">¶</a></h2>
 <p>We added a new experimental module, in which we added a couple of functions that help to deal with
-random clusters. The module ~lingpy.algorithm.cluster_util offers ways to mutate a given cluster, to
+random clusters. The module <a class="reference internal" href="reference/lingpy.algorithm.html#module-lingpy.algorithm.cluster_util" title="lingpy.algorithm.cluster_util"><code class="xref py py-mod docutils literal"><span class="pre">cluster_util</span></code></a> offers ways to mutate a given cluster, to
 create a random cluster, or to create all possible clusters for a given size of entities. This
 module was originally prepared to allow to add random cognate sets to a wordlist in order to compare
 this random output with non-random algorithms for cognate detection:</p>
@@ -294,7 +294,7 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 20, 2017<br>
+    on Nov 22, 2017<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>
