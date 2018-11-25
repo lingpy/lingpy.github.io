@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Plotting Data and Results (plot) &#8212; LingPy</title>
+    <title>Methods for generating and manipulating ngrams (ngrams) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
@@ -54,16 +54,21 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="plotting-data-and-results-plot">
-<h1>Plotting Data and Results (<a class="reference internal" href="../../reference/lingpy.convert.html#module-lingpy.convert.plot" title="lingpy.convert.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">plot</span></code></a>)<a class="headerlink" href="#plotting-data-and-results-plot" title="Permalink to this headline">¶</a></h1>
-<p>The plot-module provides some general and some specific functions for the plotting of data and
-results. This module is not imported as a default, so you need to import it explicitly by typing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.convert.plot</span> <span class="k">import</span> <span class="o">*</span>
-</pre></div>
-</div>
-<p>Or by typing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.convert</span> <span class="k">import</span> <span class="n">plot</span>
-</pre></div>
+  <div class="section" id="methods-for-generating-and-manipulating-ngrams-ngrams">
+<h1>Methods for generating and manipulating ngrams (<a class="reference internal" href="../../reference/lingpy.sequence.html#module-lingpy.sequence.ngrams" title="lingpy.sequence.ngrams"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ngrams</span></code></a>)<a class="headerlink" href="#methods-for-generating-and-manipulating-ngrams-ngrams" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.NgramModel" title="lingpy.sequence.ngrams.NgramModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NgramModel</span></code></a>([pre_order,&nbsp;post_order,&nbsp;…])</td>
+<td>Class for operation upon sequences using ngrams models.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
@@ -73,17 +78,23 @@ results. This module is not imported as a default, so you need to import it expl
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_gls" title="lingpy.convert.plot.plot_gls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_gls</span></code></a>(gls,&nbsp;treestring[,&nbsp;degree,&nbsp;fileformat])</td>
-<td>Plot a gain-loss scenario for a given reference tree.</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_n_ngrams" title="lingpy.sequence.ngrams.get_n_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_n_ngrams</span></code></a>(sequence,&nbsp;order[,&nbsp;pad_symbol])</td>
+<td>Build an iterator for collecting all ngrams of a given order.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_tree" title="lingpy.convert.plot.plot_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tree</span></code></a>(treestring[,&nbsp;degree,&nbsp;fileformat,&nbsp;root])</td>
-<td>Plot a Newick tree to PDF or other graphical formats.</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_ngrams_by_order" title="lingpy.sequence.ngrams.get_all_ngrams_by_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams_by_order</span></code></a>(sequence[,&nbsp;orders,&nbsp;…])</td>
+<td>Build an iterator for collecting all ngrams of a given set of orders.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_concept_evolution" title="lingpy.convert.plot.plot_concept_evolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_concept_evolution</span></code></a>(scenarios,&nbsp;tree[,&nbsp;…])</td>
-<td>Plot the evolution according to the MLN method of all words for a given concept.</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_skipngrams" title="lingpy.sequence.ngrams.get_skipngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_skipngrams</span></code></a>(sequence,&nbsp;order,&nbsp;max_gaps[,&nbsp;…])</td>
+<td>Build an iterator for collecting all skip ngrams of a given length.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_heatmap" title="lingpy.convert.plot.plot_heatmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_heatmap</span></code></a>(wordlist[,&nbsp;filename,&nbsp;…])</td>
-<td>Create a heatmap-representation of shared cognates for a given wordlist.</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_posngrams" title="lingpy.sequence.ngrams.get_posngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_posngrams</span></code></a>(sequence[,&nbsp;pre_order,&nbsp;…])</td>
+<td>Build an iterator for collecting all positional ngrams of a sequence.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_posngrams" title="lingpy.sequence.ngrams.get_all_posngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_posngrams</span></code></a>(sequence,&nbsp;pre_orders,&nbsp;…)</td>
+<td>Build an iterator for collecting all positional ngrams of a sequence.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_ngrams" title="lingpy.sequence.ngrams.get_all_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams</span></code></a>(sequence[,&nbsp;sort])</td>
+<td>Function returns all possible n-grams of a given sequence.</td>
 </tr>
 </tbody>
 </table>
@@ -101,7 +112,8 @@ results. This module is not imported as a default, so you need to import it expl
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Plotting Data and Results (<code class="docutils literal notranslate"><span class="pre">plot</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Methods for generating and manipulating ngrams (<code class="docutils literal notranslate"><span class="pre">ngrams</span></code>)</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
@@ -110,7 +122,7 @@ results. This module is not imported as a default, so you need to import it expl
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/docu/convert/plot.rst.txt"
+      <li><a href="../../_sources/docu/sequence/ngrams.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>

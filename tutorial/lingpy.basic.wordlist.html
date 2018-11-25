@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Handling Wordlists &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -70,7 +63,7 @@ languages are structured in such a way that <strong>words</strong> are ordered i
 columns according to the <strong>language</strong> to which they belong and the <strong>concept</strong> they
 denote. A simple word list could thus be displayed as a simple tab-delimited
 text file:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CONCEPT</span>     <span class="n">GERMAN</span>      <span class="n">ENGLISH</span>     <span class="n">RUSSIAN</span>     <span class="n">UKRAINIAN</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONCEPT</span>     <span class="n">GERMAN</span>      <span class="n">ENGLISH</span>     <span class="n">RUSSIAN</span>     <span class="n">UKRAINIAN</span>
 <span class="n">hand</span>        <span class="n">Hand</span>        <span class="n">hand</span>        <span class="n">рука</span>        <span class="n">рука</span>
 <span class="n">leg</span>         <span class="n">Bein</span>        <span class="n">leg</span>         <span class="n">нога</span>        <span class="n">нога</span>
 <span class="n">Woldemort</span>   <span class="n">Waldemar</span>    <span class="n">Woldemort</span>   <span class="n">Владимир</span>    <span class="n">Володимир</span>
@@ -81,7 +74,7 @@ text file:</p>
 can have multiple manifestations in our data. Thus, the same word list could
 look like this, if we preferred to have the words represented in phonetic
 transcription:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CONCEPT</span>     <span class="n">GERMAN</span>      <span class="n">ENGLISH</span>     <span class="n">RUSSIAN</span>     <span class="n">UKRAINIAN</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONCEPT</span>     <span class="n">GERMAN</span>      <span class="n">ENGLISH</span>     <span class="n">RUSSIAN</span>     <span class="n">UKRAINIAN</span>
 <span class="n">hand</span>        <span class="n">hant</span>        <span class="n">hænd</span>        <span class="n">ruka</span>        <span class="n">ruka</span>
 <span class="n">leg</span>         <span class="n">bain</span>        <span class="n">lɛg</span>         <span class="n">noga</span>        <span class="n">noga</span>
 <span class="n">Woldemort</span>   <span class="n">valdəmar</span>    <span class="n">wɔldəmɔrt</span>   <span class="n">vladimir</span>    <span class="n">volodimir</span>
@@ -91,7 +84,7 @@ transcription:</p>
 <p>And if we wanted to display only which of the words are cognate, we could
 represent it in a numerical format, where all words sharing the same number are
 cognate:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CONCEPT</span>     <span class="n">GERMAN</span>      <span class="n">ENGLISH</span>     <span class="n">RUSSIAN</span>     <span class="n">UKRAINIAN</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONCEPT</span>     <span class="n">GERMAN</span>      <span class="n">ENGLISH</span>     <span class="n">RUSSIAN</span>     <span class="n">UKRAINIAN</span>
 <span class="n">hand</span>        <span class="mi">1</span>           <span class="mi">1</span>           <span class="mi">2</span>           <span class="mi">2</span>
 <span class="n">leg</span>         <span class="mi">3</span>           <span class="mi">4</span>           <span class="mi">5</span>           <span class="mi">5</span>
 <span class="n">Woldemort</span>   <span class="mi">6</span>           <span class="mi">6</span>           <span class="mi">6</span>           <span class="mi">6</span>
@@ -102,7 +95,7 @@ cognate:</p>
 two-dimensional representation format. A solution is to use a simple csv-format
 with a header which specifies not only the concept and the language, but also
 all different possible <strong>entry-types</strong> a word can have, just as in the file <a class="reference external" href="examples/harry_potter.csv">harry_potter.csv</a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@author</span><span class="p">:</span> <span class="n">Potter</span><span class="p">,</span> <span class="n">Harry</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@author</span><span class="p">:</span> <span class="n">Potter</span><span class="p">,</span> <span class="n">Harry</span>
 <span class="nd">@date</span><span class="p">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">07</span>
 <span class="c1">#</span>
 <span class="n">ID</span>   <span class="n">CONCEPT</span>     <span class="n">COUNTERPART</span>   <span class="n">IPA</span>         <span class="n">DOCULECT</span>     <span class="n">COGID</span>
@@ -127,7 +120,7 @@ all different possible <strong>entry-types</strong> a word can have, just as in 
 <p>This format is, of course, much more redundant, than the word list format, but
 it allows to display multiple entry-types for the counterparts of a given
 concept in a given language. Moreover, this format is the basic of the
-<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> class in LingPy, which makes it easy
+<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> class in LingPy, which makes it easy
 to handle word lists with multiple entry-types of words.</p>
 </div>
 <div class="section" id="basic-operations-with-help-of-wordlists">
@@ -135,13 +128,13 @@ to handle word lists with multiple entry-types of words.</p>
 <p>The above-given csv-file <a class="reference external" href="examples/harry_potter.csv">harry_potter.csv</a> is available in the test folder of LingPy.
 In order to get it loaded, we simply pass it as first argument to the Wordlist
 class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If one wants to access only the IPA values in tabular format, all one has to do
 is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">ipa</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">ipa</span>
 <span class="go">[[&#39;wɔldemɔrt&#39;, &#39;valdemar&#39;, &#39;vladimir&#39;, &#39;volodimir&#39;],</span>
 <span class="go"> [&#39;hæri&#39;, &#39;haralt&#39;, &#39;gari&#39;, &#39;hari&#39;],</span>
 <span class="go"> [&#39;lɛg&#39;, &#39;bain&#39;, &#39;noga&#39;, &#39;noha&#39;],</span>
@@ -149,12 +142,12 @@ is:</p>
 </pre></div>
 </div>
 <p>The same for cognates:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">cognate</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">cognate</span>
 <span class="go">[[6, 6, 6, 6], [7, 7, 7, 7], [4, 3, 5, 5], [1, 1, 2, 2]]</span>
 </pre></div>
 </div>
 <p>Or for the languages and the concepts in the dataset:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">language</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">language</span>
 <span class="go">[&#39;English&#39;, &#39;German&#39;, &#39;Russian&#39;, &#39;Ukrainian&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">concept</span>
 <span class="go">[&#39;Harry&#39;, &#39;Woldemort&#39;, &#39;hand&#39;, &#39;leg&#39;]</span>
@@ -162,10 +155,10 @@ is:</p>
 </div>
 <p>Furthermore, using specific functions, even more concise samples of the data can
 be extracted, thus, using the
-<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-class docutils literal"><span class="pre">get_dict</span></code></a> function, we can specify a
+<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_dict</span></code></a> function, we can specify a
 given language and extract all phonetic transcriptions corresponding to a given
 concept as a dictionary:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">&quot;German&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;ipa&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">&quot;German&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;ipa&quot;</span><span class="p">)</span>
 <span class="go">{&#39;Harry&#39;: [&#39;haralt&#39;],</span>
 <span class="go"> &#39;Woldemort&#39;: [&#39;valdemar&#39;],</span>
 <span class="go"> &#39;hand&#39;: [&#39;hant&#39;],</span>
@@ -173,13 +166,13 @@ concept as a dictionary:</p>
 </pre></div>
 </div>
 <p>We can likewise extract all cognate IDs corresponding to a given concept by
-using the function <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-class docutils literal"><span class="pre">get_list</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="s2">&quot;hand&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;cogid&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+using the function <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_list</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="s2">&quot;hand&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;cogid&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">[1, 1, 2, 2]</span>
 </pre></div>
 </div>
 <p>Other entry-types can be added:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.misc</span> <span class="k">import</span> <span class="n">ipa2tokens</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.misc</span> <span class="k">import</span> <span class="n">ipa2tokens</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">add_entries</span><span class="p">(</span><span class="s2">&quot;tokens&quot;</span><span class="p">,</span><span class="s2">&quot;ipa&quot;</span><span class="p">,</span><span class="n">ipa2tokens</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">tokens</span>
 <span class="go">[[[&#39;w&#39;, &#39;ɔ&#39;, &#39;l&#39;, &#39;d&#39;, &#39;e&#39;, &#39;m&#39;, &#39;ɔ&#39;, &#39;r&#39;, &#39;t&#39;],</span>
@@ -205,11 +198,11 @@ using the function <a class="reference internal" href="../reference/lingpy.basic
 <h2>The wordlist.rc file<a class="headerlink" href="#the-wordlist-rc-file" title="Permalink to this headline">¶</a></h2>
 <p>The structure of word lists is defined by the configuration file <a class="reference external" href="examples/wordlist.rc">wordlist.rc</a>. This file is
 automatically loaded when initializing a Wordlist instance:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It can, however, also be passed by the user:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">conf</span><span class="o">=</span><span class="s2">&quot;path_to_file&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">conf</span><span class="o">=</span><span class="s2">&quot;path_to_file&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All rc-files (which are used for different wordlist-like object in LingPy)
@@ -222,7 +215,7 @@ a simple tab-separated structure of four three columns:</p>
 </ol>
 <p>As an example, consider the following minimal rc-file for a
 wordlist object:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ipa</span>     <span class="nb">str</span>    <span class="n">ipa</span><span class="p">,</span><span class="n">orthography</span><span class="p">,</span><span class="n">transcription</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipa</span>     <span class="nb">str</span>    <span class="n">ipa</span><span class="p">,</span><span class="n">orthography</span><span class="p">,</span><span class="n">transcription</span>
 <span class="n">tokens</span>  <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="n">tokens</span><span class="p">,</span><span class="n">segments</span>
 <span class="n">cogid</span>   <span class="nb">int</span>     <span class="n">cognate_set_id</span><span class="p">,</span><span class="n">cognates</span><span class="p">,</span><span class="n">cogid</span>
 </pre></div>
@@ -246,7 +239,7 @@ you output the file. It will split all entries in the column “tokens” (or
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Handling Wordlists</a><ul>
 <li><a class="reference internal" href="#what-is-a-word-list">What is a Word List?</a></li>
@@ -265,12 +258,14 @@ you output the file. It will split all entries in the column “tokens” (or
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -309,7 +304,7 @@ you output the file. It will split all entries in the column “tokens” (or
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

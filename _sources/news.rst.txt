@@ -2,20 +2,54 @@
 Whats New in Version |version|?
 ===============================
 
-Version |version| of LingPy does not introduce many new algorithms. Instead it provides the most
-stable version of LingPy we had so far. While we are still working on new algorithms and new
-approaches we want to introduce at some point, we decided that we want to offer a version that
-presents LingPy in a state in which it can be used without creating too much disappointment with
-users due to some unforeseen bugs or insufficient testing. For this reason, we have worked hard to
-increase test coverage and make sure that the different classes and functions in LingPy run as
-smoothly as possible. Apart from potential bug fixes in this 2.6 version, we plan adding new
-algorithms to a future 2.7 version to be released some time in 2018. With this version, we hope to
-find time and enough assistance of new developers joining the team, so that we can work on a new
-version of LingPy in which the complete data structure is refactored, also allowing us to reduce
-dependencies like NumPy which bother our users at times.
+Version |version| of LingPy introduces a couple of refinements of LingPy, but it does not introduce
+many new algorithms. New algorithms can now mostly be found in additional packages, such as SinoPy
+(https://github.com/lingpy/sinopy) or LingRex (https://github.com/lingpy/lingrex). While SinoPy is a
+very specialized package to be used for manipulation of SEA and Chinese language data, LingRex
+offers a couple of new algorithms that we may consider including in a future version of LingPy, but
+which have not been sufficiently tested to be included right now.
 
-Bugfixes in Wordlist Class
---------------------------
+What was introduced in this new version, is a new module to manipulate ngrams and Markov Models (provided by
+Tiago Tresoldi) and a new function to import CLDF data with help of the Wordlist class and its
+derivatives.
+
+In the following, we list both the new features introduced in version 2.6.3, as well as the new
+functions from the new version 2.6.4.
+
+Loading CLDF Data from Wordlist Objects (2.6.4)
+-----------------------------------------------
+
+Instead of using the `from_cldf` function, you can now simply use the `Wordlist` class to load a
+CLDF dataset::
+  
+  >>> from lingpy import *
+  >>> wl = Wordlist.from_cldf('path/to/metadata/json')
+
+
+Handling Ngrams (2.6.4)
+-----------------------
+
+This module offers a general class to handle Markov Models and many utility functions for the
+manipulation of ngrams::
+
+  >>> from lingpy.sequence.ngrams import *
+  >>> list(get_n_ngrams('LingPy', 3))
+  [('$$$', '$$$', '$$$', 'L'),
+   ('$$$', '$$$', 'L', 'i'),
+   ('$$$', 'L', 'i', 'n'),
+   ('L', 'i', 'n', 'g'),
+   ('i', 'n', 'g', 'P'),
+   ('n', 'g', 'P', 'y'),
+   ('g', 'P', 'y', '$$$'),
+   ('P', 'y', '$$$', '$$$'),
+   ('y', '$$$', '$$$', '$$$')]
+
+So as you can see, this function allows you to retrieve as many ngrams from a given string as you
+want. The new module also inherits the functions that one could find in the `sound_classes` module
+before, including shortcuts for creating bigrams and trigrams.
+
+Bugfixes in Wordlist Class (2.6.3)
+----------------------------------
 
 We fixed some problems related to the :py:class:`~lingpy.basic.wordlist.Wordlist` class in LingPy. First, if you
 make the transition from a Wordlist object to a :py:class:`~lingpy.compare.lexstat.LexStat` object, the data
@@ -39,8 +73,8 @@ You can now also easily access the header of a wordlist in its current order::
 This is specifically convenient if you construct a Wordlist by creating a dictionary inside a Python
 script.
 
-Sanity Checks of Linguistic Data
---------------------------------
+Sanity Checks of Linguistic Data (2.6.3)
+----------------------------------------
 
 We introduce a new module, called :py:mod:`~lingpy.compare.sanity`. In this module, we provide a couple of new
 functions which you can use to check the consistency of your data. One specific focus, given that
@@ -66,16 +100,16 @@ coverage functions offered in the :py:mod:`~lingpy.compare.sanity` module. You m
 again, we recommend to pay specific attention to not exceed a value of maximally three words per
 concept and language.
 
-Alignments and Cognate Sets
----------------------------
+Alignments and Cognate Sets (2.6.3)
+-----------------------------------
 
 This is again a small change, but to allow for a more consistent integration with external tools, we
 now allow to use the cognate set identifier "0" to account for cases where not decision has yet been
 made. That means, if you assign cognate sets IDs ("COGID") to your data, and one is set to "0", this
 won't be aligned, and not clustered together with other words which have identifier "0".
 
-Random Clusters, Lumper, and Splitter
--------------------------------------
+Random Clusters, Lumper, and Splitter (2.6.3)
+---------------------------------------------
 
 We added a new experimental module, in which we added a couple of functions that help to deal with
 random clusters. The module :py:mod:`~lingpy.algorithm.cluster_util` offers ways to mutate a given cluster, to
@@ -99,8 +133,8 @@ nature of your data. In some datasets, the lumper will receive evaluation scores
 only because the cognate density is so high in the data. This means in turn, if your algorithm does
 not perform much better than 73% in these cases, it does not mean that it is performing quite well.
 
-Adding Support to Read CLDF
----------------------------
+Adding Support to Read CLDF (2.6.3)
+-----------------------------------
 
 The cross-linguistic data formats (`CLDF <http://cldf.clld.org>`_) initiative (:evobib:`Forkel2017a`)
 provides standardized formats for wordlists and cognate judgments. The `pycldf
@@ -114,8 +148,8 @@ into CLDF format. LingPy now also provides support to read CLDF-files and conver
    >>> wl = from_cldf('cldf/Wordlist-metadata.json')
 
 
-Adding Nexus Output
--------------------
+Adding Nexus Output (2.6.3)
+---------------------------
 
 We had nexus output before, but now, Simon Greenhill has helped us to provide a stable export to
 both MrBayes and Beast, also including the situation where you want to calculate rates for each
@@ -127,8 +161,8 @@ concept class::
   >>> beast = write_nexus(wl, 'beastwords', filename='ksl-beast.nex')
 
 
-Orthography Profile Creation
-----------------------------
+Orthography Profile Creation (2.6.3)
+------------------------------------
 
 We introduced the commandline of LingPy in version 2.5, but have not really worked on it since then,
 as we think that cognate detection analyses should not go on silent by just typing a command into
@@ -143,8 +177,8 @@ If you choose the "---context" option, this means that LingPy will add informati
 shows which pattern, and whether this occurs in the beginning ("^") or the end ("$") of a given
 phonetic sequence. More information can also be found in [this](https://zenodo.org/badge/latestdoi/109654333) tutorial on LingPy and EDICTOR.
 
-LingPy Cookbook
----------------
+LingPy Cookbook (2.6.3)
+-----------------------
 
 We decided that we will start introducing LingPy in bits and bytes, since the full reference may at
 times overwhel new users. We started collecting some little howtos on our LingPy Cookbook, which you

@@ -1,11 +1,11 @@
-lingpy\.meaning package
-=======================
+lingpy.meaning package
+======================
 
 Submodules
 ----------
 
-lingpy\.meaning\.colexification module
---------------------------------------
+lingpy.meaning.colexification module
+------------------------------------
 
 .. automodule:: lingpy.meaning.colexification
     :members:

@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cognate Detection (LexStat) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -62,7 +55,7 @@ LingPy
           <div class="body" role="main">
             
   <div class="section" id="cognate-detection-lexstat">
-<h1>Cognate Detection (<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>)<a class="headerlink" href="#cognate-detection-lexstat" title="Permalink to this headline">¶</a></h1>
+<h1>Cognate Detection (<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a>)<a class="headerlink" href="#cognate-detection-lexstat" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.compare.lexstat.LexStat">
 <em class="property">class </em><code class="descclassname">lingpy.compare.lexstat.</code><code class="descname">LexStat</code><span class="sig-paren">(</span><em>filename</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat" title="Permalink to this definition">¶</a></dt>
@@ -75,7 +68,7 @@ LingPy
 <blockquote>
 <div><p>The name of the file that shall be loaded.</p>
 </div></blockquote>
-<p><strong>model</strong> : <a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></p>
+<p><strong>model</strong> : <a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p>
 <blockquote>
 <div><p>The sound-class model that shall be used for the analysis. Defaults to
 the SCA sound-class model.</p>
@@ -92,17 +85,17 @@ tokens or kept apart as separate tokens.</p>
 key referring to the original prosodic context and the value to the new
 value.
 Currently, prosodic strings (see
-<a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal"><span class="pre">prosodic_string()</span></code></a>) offer 11
+<a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal notranslate"><span class="pre">prosodic_string()</span></code></a>) offer 11
 different prosodic contexts. Since not all these are helpful in
 preliminary analyses for cognate detection, it is useful to merge some
 of these contexts into one. The default settings distinguish only 5
 instead of 11 available contexts, namely:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
-<li><code class="docutils literal"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
-<li><code class="docutils literal"><span class="pre">V</span></code> for all vowels,</li>
-<li><code class="docutils literal"><span class="pre">T</span></code> for all tones, and</li>
-<li><code class="docutils literal"><span class="pre">_</span></code> for word-breaks.</li>
+<li><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
+<li><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
+<li><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</li>
+<li><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</li>
+<li><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</li>
 </ul>
 <p>Make sure to check also the “vowel” keyword when initialising a LexStat
 object, since the symbols you use for vowels and tones should be
@@ -111,7 +104,7 @@ identical with the ones you define in your transform dictionary.</p>
 <p><strong>vowels</strong> : str (default=”<a href="#id1"><span class="problematic" id="id2">VT_</span></a>”)</p>
 <blockquote>
 <div><p>For scoring function creation using the
-<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function, you
+<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_scorer</span></code></a> function, you
 have the possibility to use reduced scores for the matching of tones
 and vowels by modifying the “vscale” parameter, which is set to 0.5 as
 a default.  In order to make sure that vowels and tones are properly
@@ -119,14 +112,14 @@ detected, make sure your prosodic string representation of vowels
 matches the one in this keyword. Thus, if you change the prosodic
 strings using the “transform” keyword, you also need to change the
 vowel string, to make sure that “vscale” works as wanted in the
-<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function.</p>
+<a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_scorer</span></code></a> function.</p>
 </div></blockquote>
 <p><strong>check</strong> : bool (default=False)</p>
 <blockquote>
 <div><p>If set to <strong>True</strong>, the input file will first be checked for errors
 before the calculation is carried out. Errors will be written to the
-file <strong>errors</strong>, defaulting to <code class="docutils literal"><span class="pre">errors.log</span></code>. See also
-<code class="docutils literal"><span class="pre">apply_checks</span></code> apply_checks : bool (default=False)
+file <strong>errors</strong>, defaulting to <code class="docutils literal notranslate"><span class="pre">errors.log</span></code>. See also
+<code class="docutils literal notranslate"><span class="pre">apply_checks</span></code> apply_checks : bool (default=False)
 If set to <strong>True</strong>, any errors identified by <cite>check</cite> will be handled
 silently.</p>
 </div></blockquote>
@@ -175,7 +168,7 @@ Unless specific explicitly, this is automatically created.</p>
 </div></blockquote>
 <p><strong>prostrings</strong> : str (default=”prostrings”)</p>
 <blockquote>
-<div><p>Name of the column containing prosodic strings (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code>
+<div><p>Name of the column containing prosodic strings (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code>
 for more details) of the segmented transcriptions, containing one
 character per prosodic string.  Prostrings add a contextual component
 to phonetic sequences. They are automatically created, but can likewise
@@ -187,19 +180,19 @@ be submitted from the initial data.</p>
 sequence. Gap weights are positive floats for each segment in a string,
 which modify the gap opening penalty during alignment.</p>
 </div></blockquote>
-<p><strong>tokenize</strong> : function             (default=:py:class:<cite>~lingpy.sequence.sound_classes.ipa2tokens</cite>)</p>
+<p><strong>tokenize</strong> : function (default=ipa2tokens)</p>
 <blockquote>
 <div><p>The function which should be used to tokenize the entries in the column
 storing the transcriptions in case no segmentation is provided by the
 user.</p>
 </div></blockquote>
-<p><strong>get_prostring</strong> : function             (default=:py:class:<cite>~lingpy.sequence.sound_classes.prosodic_string</cite>)</p>
+<p><strong>get_prostring</strong> : function (default=prosodic_string)</p>
 <blockquote class="last">
 <div><p>The function which should be used to create prosodic strings from the
 segmented transcription data. If you want to completely ignore prosodic
 strings in LexStat calculations, you could just pass the following
 function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="s1">&#39;inputfile.tsv&#39;</span><span class="p">,</span> <span class="n">get_prostring</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span> <span class="k">for</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="s1">&#39;inputfile.tsv&#39;</span><span class="p">,</span> <span class="n">get_prostring</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span> <span class="k">for</span>
 <span class="go">    y in x])</span>
 </pre></div>
 </div>
@@ -227,7 +220,7 @@ pointing to unique combinations of words with the same meaning in all
 language pairs.</td>
 </tr>
 <tr class="row-even"><td>model</td>
-<td><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></td>
+<td><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></td>
 <td>The sound class model instance which serves to convert the phonetic
 data into sound classes.</td>
 </tr>
@@ -257,7 +250,7 @@ class value.</td>
 </tr>
 <tr class="row-odd"><td>scorer</td>
 <td>dict</td>
-<td><p class="first">A collection of <a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">ScoreDict</span></code></a>
+<td><p class="first">A collection of <a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
 objects, which are used to score the strings. LexStat distinguishes
 two different scoring functions:</p>
 <ul class="last simple">
@@ -266,14 +259,14 @@ only of sound class values and prosodic string values. This scorer is
 traditionally used to carry out the first alignment in order to
 calculate the language-specific scorer. It is directly accessible as
 an attribute of the LexStat class
-(<code class="xref py py-class docutils literal"><span class="pre">rscorer</span></code>). The characters
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">rscorer</span></code>). The characters
 which constitute the values in this scorer are accessible via the
 “rchars” attribue of each lexstat class.</li>
 <li>bscorer: The language-specific scorer. This scorer is made of unique
 language-specific characters. These are accessible via the “chars”
 attribute of each LexStat class. As the “rscorer”, the “bscorer” can
 also be accessed directly as an attribute of the LexStat class
-(<code class="xref py py-class docutils literal"><span class="pre">bscorer</span></code>).</li>
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</li>
 </ul>
 </td>
 </tr>
@@ -286,22 +279,22 @@ also be accessed directly as an attribute of the LexStat class
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.align_pairs" title="lingpy.compare.lexstat.LexStat.align_pairs"><code class="xref py py-obj docutils literal"><span class="pre">align_pairs</span></code></a>(idxA,&nbsp;idxB[,&nbsp;concept])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.align_pairs" title="lingpy.compare.lexstat.LexStat.align_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairs</span></code></a>(idxA,&nbsp;idxB[,&nbsp;concept])</td>
 <td>Align all or some words of a given pair of languages.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.cluster" title="lingpy.compare.lexstat.LexStat.cluster"><code class="xref py py-obj docutils literal"><span class="pre">cluster</span></code></a>([method,&nbsp;cluster_method,&nbsp;threshold,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.cluster" title="lingpy.compare.lexstat.LexStat.cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cluster</span></code></a>([method,&nbsp;cluster_method,&nbsp;threshold,&nbsp;…])</td>
 <td>Function for flat clustering of words into cognate sets.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_distances" title="lingpy.compare.lexstat.LexStat.get_distances"><code class="xref py py-obj docutils literal"><span class="pre">get_distances</span></code></a>([method,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_distances" title="lingpy.compare.lexstat.LexStat.get_distances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_distances</span></code></a>([method,&nbsp;mode,&nbsp;gop,&nbsp;scale,&nbsp;…])</td>
 <td>Method calculates different distance estimates for language pairs.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_random_distances" title="lingpy.compare.lexstat.LexStat.get_random_distances"><code class="xref py py-obj docutils literal"><span class="pre">get_random_distances</span></code></a>([method,&nbsp;runs,&nbsp;mode,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_random_distances" title="lingpy.compare.lexstat.LexStat.get_random_distances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_random_distances</span></code></a>([method,&nbsp;runs,&nbsp;mode,&nbsp;…])</td>
 <td>Method calculates randoms scores for unrelated words in a dataset.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-obj docutils literal"><span class="pre">get_scorer</span></code></a>(**keywords)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scorer</span></code></a>(**keywords)</td>
 <td>Create a scoring function based on sound correspondences.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.output" title="lingpy.compare.lexstat.LexStat.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat.output" title="lingpy.compare.lexstat.LexStat.output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
 <td>Write data to file.</td>
 </tr>
 </tbody>
@@ -313,52 +306,52 @@ also be accessed directly as an attribute of the LexStat class
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><code class="xref py py-obj docutils literal"><span class="pre">pickle</span></code></a>([filename])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParser.pickle" title="lingpy.basic.parser.QLCParser.pickle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pickle</span></code></a>([filename])</td>
 <td>Store the QLCParser instance in a pickle file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries"><code class="xref py py-obj docutils literal"><span class="pre">get_entries</span></code></a>(entry)</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_entries</span></code></a>(entry)</td>
 <td>Return all entries matching the given entry-type as a two-dimensional list.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">add_entries</span></code></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_entries</span></code></a>(entry,&nbsp;source,&nbsp;function[,&nbsp;override])</td>
 <td>Add new entry-types to the word list by modifying given ones.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal"><span class="pre">calculate</span></code></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(data[,&nbsp;taxa,&nbsp;concepts,&nbsp;ref])</td>
 <td>Function calculates specific data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;…])</td>
 <td>Export the wordlist to specific fileformats.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code></a>(fileformat[,&nbsp;sections,&nbsp;entries,&nbsp;…])</td>
 <td>Export the wordlist to specific fileformats.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
 <td>Function returns dictionaries of the cells matched by the indices.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dict</span></code></a>([col,&nbsp;row,&nbsp;entry])</td>
 <td>Function returns dictionaries of the cells matched by the indices.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
 <td>Return an etymological dictionary representation of the word list.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_etymdict</span></code></a>([ref,&nbsp;entry,&nbsp;modify_ref])</td>
 <td>Return an etymological dictionary representation of the word list.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
 <td>Function returns lists of rows and columns specified by their name.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_list</span></code></a>([row,&nbsp;col,&nbsp;entry,&nbsp;flat])</td>
 <td>Function returns lists of rows and columns specified by their name.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
 <td>Function returns a list of present-absent-patterns of a given word list.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_paps</span></code></a>([ref,&nbsp;entry,&nbsp;missing,&nbsp;modify_ref])</td>
 <td>Function returns a list of present-absent-patterns of a given word list.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output</span></code></a>(fileformat,&nbsp;**keywords)</td>
 <td>Write wordlist to file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal"><span class="pre">renumber</span></code></a>(source[,&nbsp;target,&nbsp;override])</td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renumber</span></code></a>(source[,&nbsp;target,&nbsp;override])</td>
 <td>Renumber a given set of string identifiers by replacing the ids by integers.</td>
 </tr>
 </tbody>
@@ -385,12 +378,14 @@ also be accessed directly as an attribute of the LexStat class
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -429,7 +424,7 @@ also be accessed directly as an attribute of the LexStat class
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

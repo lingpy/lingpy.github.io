@@ -1,11 +1,11 @@
-lingpy\.tests\.meaning package
-==============================
+lingpy.tests.meaning package
+============================
 
 Submodules
 ----------
 
-lingpy\.tests\.meaning\.test\_colexification module
----------------------------------------------------
+lingpy.tests.meaning.test\_colexification module
+------------------------------------------------
 
 .. automodule:: lingpy.tests.meaning.test_colexification
     :members:

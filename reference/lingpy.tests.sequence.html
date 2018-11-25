@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.tests.sequence package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -71,11 +64,12 @@ LingPy
 <dl class="class">
 <dt id="lingpy.tests.sequence.test_generate.Tests">
 <em class="property">class </em><code class="descclassname">lingpy.tests.sequence.test_generate.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_generate.Tests" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
 <dt id="lingpy.tests.sequence.test_generate.Tests.setUp">
 <code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_generate.Tests.setUp" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.sequence.test_generate.Tests.test_evaluate_string">
@@ -90,11 +84,386 @@ LingPy
 </dd></dl>
 
 </div>
-<div class="section" id="lingpy-tests-sequence-test-profile-module">
-<h2>lingpy.tests.sequence.test_profile module<a class="headerlink" href="#lingpy-tests-sequence-test-profile-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-lingpy.tests.sequence.test_ngrams">
+<span id="lingpy-tests-sequence-test-ngrams-module"></span><h2>lingpy.tests.sequence.test_ngrams module<a class="headerlink" href="#module-lingpy.tests.sequence.test_ngrams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests">
+<em class="property">class </em><code class="descclassname">lingpy.tests.sequence.test_ngrams.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_all_ngrams">
+<code class="descname">test_all_ngrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_all_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_bigrams">
+<code class="descname">test_bigrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_bigrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_fourgrams">
+<code class="descname">test_fourgrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_fourgrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_get_all_ngrams_by_order">
+<code class="descname">test_get_all_ngrams_by_order</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_get_all_ngrams_by_order" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_get_all_posngrams">
+<code class="descname">test_get_all_posngrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_get_all_posngrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_get_n_grams">
+<code class="descname">test_get_n_grams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_get_n_grams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_get_posngrams">
+<code class="descname">test_get_posngrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_get_posngrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_get_skipngrams">
+<code class="descname">test_get_skipngrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_get_skipngrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_ngram_class">
+<code class="descname">test_ngram_class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_ngram_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_ngrams.Tests.test_trigrams">
+<code class="descname">test_trigrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.Tests.test_trigrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.tests.sequence.test_ngrams.bigrams">
+<code class="descclassname">lingpy.tests.sequence.test_ngrams.</code><code class="descname">bigrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=2</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.bigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all bigrams of a sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the bigrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the bigrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">bigrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;)</span>
+</pre></div>
 </div>
-<div class="section" id="lingpy-tests-sequence-test-sound-classes-module">
-<h2>lingpy.tests.sequence.test_sound_classes module<a class="headerlink" href="#lingpy-tests-sequence-test-sound-classes-module" title="Permalink to this headline">¶</a></h2>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.tests.sequence.test_ngrams.fourgrams">
+<code class="descclassname">lingpy.tests.sequence.test_ngrams.</code><code class="descname">fourgrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=4</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.fourgrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all fourgrams of a sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the fourgrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the fourgrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">fourgrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.tests.sequence.test_ngrams.trigrams">
+<code class="descclassname">lingpy.tests.sequence.test_ngrams.</code><code class="descname">trigrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=3</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_ngrams.trigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all trigrams of a  sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the trigrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the trigrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">trigrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.tests.sequence.test_profile">
+<span id="lingpy-tests-sequence-test-profile-module"></span><h2>lingpy.tests.sequence.test_profile module<a class="headerlink" href="#module-lingpy.tests.sequence.test_profile" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lingpy.tests.sequence.test_profile.Tests">
+<em class="property">class </em><code class="descclassname">lingpy.tests.sequence.test_profile.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_profile.Tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_profile.Tests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_profile.Tests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_profile.Tests.test_context_profile">
+<code class="descname">test_context_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_profile.Tests.test_context_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_profile.Tests.test_simple_profile">
+<code class="descname">test_simple_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_profile.Tests.test_simple_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.tests.sequence.test_smoothing">
+<span id="lingpy-tests-sequence-test-smoothing-module"></span><h2>lingpy.tests.sequence.test_smoothing module<a class="headerlink" href="#module-lingpy.tests.sequence.test_smoothing" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests">
+<em class="property">class </em><code class="descclassname">lingpy.tests.sequence.test_smoothing.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_certaintydegree_dist">
+<code class="descname">test_certaintydegree_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_certaintydegree_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the Degree of Certainty distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_ele_dist">
+<code class="descname">test_ele_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_ele_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the Expected-Likelihood estimation distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_laplace_dist">
+<code class="descname">test_laplace_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_laplace_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the Laplace distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_mle_dist">
+<code class="descname">test_mle_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_mle_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the Maximum-Likelihood Estimation distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_random_dist">
+<code class="descname">test_random_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_random_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the random distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_sgt_dist">
+<code class="descname">test_sgt_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_sgt_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the Simple Good-Turing distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_uniform_dist">
+<code class="descname">test_uniform_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_uniform_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the uniform distribution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_smoothing.Tests.test_wittenbell_dist">
+<code class="descname">test_wittenbell_dist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_smoothing.Tests.test_wittenbell_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the Witten-Bell distribution.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.tests.sequence.test_sound_classes">
+<span id="lingpy-tests-sequence-test-sound-classes-module"></span><h2>lingpy.tests.sequence.test_sound_classes module<a class="headerlink" href="#module-lingpy.tests.sequence.test_sound_classes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests">
+<em class="property">class </em><code class="descclassname">lingpy.tests.sequence.test_sound_classes.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_check_tokens">
+<code class="descname">test_check_tokens</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_check_tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_class2tokens">
+<code class="descname">test_class2tokens</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_class2tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_clean_string">
+<code class="descname">test_clean_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_clean_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_codepoint">
+<code class="descname">test_codepoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_codepoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_ipa2tokens">
+<code class="descname">test_ipa2tokens</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_ipa2tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_onoparse">
+<code class="descname">test_onoparse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_onoparse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_pgrams">
+<code class="descname">test_pgrams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_pgrams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_pid">
+<code class="descname">test_pid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_pid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_prosodic_string">
+<code class="descname">test_prosodic_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_prosodic_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_prosodic_weights">
+<code class="descname">test_prosodic_weights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_prosodic_weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_sampa2uni">
+<code class="descname">test_sampa2uni</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_sampa2uni" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_syllabify">
+<code class="descname">test_syllabify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_syllabify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_token2class">
+<code class="descname">test_token2class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_token2class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_tokens2class">
+<code class="descname">test_tokens2class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_tokens2class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lingpy.tests.sequence.test_sound_classes.Tests.test_tokens2morphemes">
+<code class="descname">test_tokens2morphemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.sequence.test_sound_classes.Tests.test_tokens2morphemes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.tests.sequence">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.tests.sequence" title="Permalink to this headline">¶</a></h2>
@@ -110,13 +479,15 @@ LingPy
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.tests.sequence package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-lingpy.tests.sequence.test_generate">lingpy.tests.sequence.test_generate module</a></li>
-<li><a class="reference internal" href="#lingpy-tests-sequence-test-profile-module">lingpy.tests.sequence.test_profile module</a></li>
-<li><a class="reference internal" href="#lingpy-tests-sequence-test-sound-classes-module">lingpy.tests.sequence.test_sound_classes module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.sequence.test_ngrams">lingpy.tests.sequence.test_ngrams module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.sequence.test_profile">lingpy.tests.sequence.test_profile module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.sequence.test_smoothing">lingpy.tests.sequence.test_smoothing module</a></li>
+<li><a class="reference internal" href="#module-lingpy.tests.sequence.test_sound_classes">lingpy.tests.sequence.test_sound_classes module</a></li>
 <li><a class="reference internal" href="#module-lingpy.tests.sequence">Module contents</a></li>
 </ul>
 </li>
@@ -131,12 +502,14 @@ LingPy
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -175,7 +548,7 @@ LingPy
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.algorithm.cython package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -66,1004 +59,8 @@ LingPy
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-lingpy.algorithm.cython.calign">
-<span id="lingpy-algorithm-cython-calign-module"></span><h2>lingpy.algorithm.cython.calign module<a class="headerlink" href="#module-lingpy.algorithm.cython.calign" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.align_pair">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">align_pair</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.align_pair" title="Permalink to this definition">¶</a></dt>
-<dd><p>Align a pair of sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>mode</strong> : { “global”, “local”, “overlap”, “dialign” }</p>
-<blockquote>
-<div><p>Select one of the four basic modes for alignment analyses.</p>
-</div></blockquote>
-<p><strong>restricted_chars</strong> : str</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-<p><strong>distance</strong> : int (default=0)</p>
-<blockquote>
-<div><p>Select whether you want to calculate the normalized distance or the
-similarity between two strings (following <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Downey2008"><span class="pre">Downey2008</span></a></code> for
-normalization).</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>The aligned sequences and the similarity or distance.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is a utility function that allows calls any of the four classical
-alignment functions (<a class="reference internal" href="#lingpy.algorithm.cython.calign.globalign" title="lingpy.algorithm.cython.calign.globalign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.calign.globalign</span></code></a>
-<a class="reference internal" href="#lingpy.algorithm.cython.calign.semi_globalign" title="lingpy.algorithm.cython.calign.semi_globalign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.calign.semi_globalign</span></code></a>,
-<a class="reference internal" href="#lingpy.algorithm.cython.calign.localign" title="lingpy.algorithm.cython.calign.localign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.calign.localign</span></code></a>,
-<a class="reference internal" href="#lingpy.algorithm.cython.calign.dialign" title="lingpy.algorithm.cython.calign.dialign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.calign.dialign</span></code></a>,) and their secondary counterparts.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.align_pairs">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">align_pairs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.align_pairs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Align multiple sequence pairs.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqs</strong> : list</p>
-<blockquote>
-<div><p>A two-dimensional list containing one pair of sequences each.</p>
-</div></blockquote>
-<p><strong>gops</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>pros</strong> : list</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>mode</strong> : { “global”, “local”, “overlap”, “dialign” }</p>
-<blockquote>
-<div><p>Select one of the four basic modes for alignment analyses.</p>
-</div></blockquote>
-<p><strong>restricted_chars</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-<p><strong>distance</strong> : int (default=0)</p>
-<blockquote>
-<div><p>Select whether you want to calculate the normalized distance or the
-similarity between two strings (following <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Downey2008"><span class="pre">Downey2008</span></a></code> for
-normalization). If you set this value to 2, both distances and
-similarities will be returned.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignments</strong> : list</p>
-<blockquote class="last">
-<div><p>A list of tuples of size 3 or 4, containing the alignments, and the
-similarity or the distance (or both, if distance is set to 2).</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This function computes alignments of all pairs passed in the list
-of sequence pairs (a two-dimensional list with two sequences each)
-and is basically used in LingPy’s module for cognate detection
-(<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a>).</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.align_pairwise">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">align_pairwise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.align_pairwise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Align a list of sequences pairwise.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqs</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gops</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>pros</strong> : list</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, ~lingpy.algorithm.cython.misc.ScoreDict }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>mode</strong> : { “global”, “local”, “overlap”, “dialign” }</p>
-<blockquote>
-<div><p>Select one of the four basic modes for alignment analyses.</p>
-</div></blockquote>
-<p><strong>r</strong> : str</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignments</strong> : list</p>
-<blockquote class="last">
-<div><p>A list of tuples of size 4, containing the alignment, the
-similarity and the distance for each sequence pair.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This function computes alignments of all possible pairs passed in the list
-of sequences and is basically used in LingPy’s module for multiple
-alignment analyses (<a class="reference internal" href="lingpy.align.html#module-lingpy.align.multiple" title="lingpy.align.multiple"><code class="xref py py-class docutils literal"><span class="pre">lingpy.align.multiple</span></code></a>).</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.align_profile">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">align_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.align_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Align two profiles using the basic modes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>profileA, profileB</strong> : list</p>
-<blockquote>
-<div><p>Two-dimensional list for each of the profiles.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as profileA and profileB.</p>
-</div></blockquote>
-<p><strong>gop</strong> : int</p>
-<blockquote>
-<div><p>The general gap opening penalty which will be used to introduce a gap
-between the two profiles.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in the two profiles.</p>
-</div></blockquote>
-<p><strong>restricted_chars</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.
-They need to be computed by computing a consensus string from all
-prosodic strings in the profile.</p>
-</div></blockquote>
-<p><strong>mode</strong> : { “global”, “local”, “overlap”, “dialign” }</p>
-<blockquote>
-<div><p>Select one of the four basic modes for alignment analyses.</p>
-</div></blockquote>
-<p><strong>gap_weight</strong> : float</p>
-<blockquote>
-<div><p>This handles the weight that is given to gaps in a column. If you set
-it to 0, for example, this means that all gaps will be ignored when
-determining the score for two columns in the profile.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>The aligned profiles, and the overall similarity of the profiles.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This function computes alignments of two profiles of multiple sequences
-(see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Durbin2002"><span class="pre">Durbin2002</span></a></code> for details on profiles)
-and is basically used in LingPy’s module for multiple alignment
-(<a class="reference internal" href="lingpy.align.html#module-lingpy.align.multiple" title="lingpy.align.multiple"><code class="xref py py-class docutils literal"><span class="pre">lingpy.align.multiple</span></code></a>).</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.corrdist">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">corrdist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.corrdist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a correspondence distribution for a given language pair.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
-<blockquote>
-<div><p>The threshold of sequence distance which determines whether a sequence
-pair is included or excluded from the calculation of the distribution.</p>
-</div></blockquote>
-<p><strong>seqs</strong> : list</p>
-<blockquote>
-<div><p>The sequences passed as a two-dimensional list of sequence pairs.</p>
-</div></blockquote>
-<p><strong>gops</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties, passed as individual lists of penalties for each
-sequence.</p>
-</div></blockquote>
-<p><strong>pros</strong> : list</p>
-<blockquote>
-<div><p>The list of prosodic strings for each sequence.</p>
-</div></blockquote>
-<p><strong>gop</strong> : int</p>
-<blockquote>
-<div><p>The general gap opening penalty which will be used to introduce a gap
-between the two profiles.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in the two profiles.</p>
-</div></blockquote>
-<p><strong>mode</strong> : { “global”, “local”, “overlap”, “dialign” }</p>
-<blockquote>
-<div><p>Select one of the four basic modes for alignment analyses.</p>
-</div></blockquote>
-<p><strong>restricted_chars</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.
-They need to be computed by computing a consensus string from all
-prosodic strings in the profile.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>results</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A dictionary containing the distribution, and the number of included
-sequences.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This function is the core of the
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> function to compute
-distributions of aligned segment pairs.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.dialign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">dialign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.dialign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out dialign alignment of two sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out local dialign alignment
-analyses (keyword “dialign”)
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. Dialign (see
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>) is an alignment algorithm that does not require
-gap penalties and generally works in a rather local fashion.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.globalign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">globalign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.globalign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out global alignment of two sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out global alignment analyses
-when using many of LingPy’s classes for alignment analyses, like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. It differs from classical
-Needleman-Wunsch alignment (compare <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>) in a couple of aspects.
-These include, among others, the use of a gap extension <em>scale</em> rather than
-a gap extension penalty (the scale consecutively reduces the gap penalty
-and thus lets gap penalties approach zero if gapped regions are large), the
-use of individual gap opening penalties for all positions of a sequence,
-and the use of prosodic strings, and prosodic factors that raise scores
-when segments occur in the same prosodic environment.</p>
-<p>If one sets certain of these parameters to zero or one and uses the same
-gap opening penalties, however, the function will
-behave like the traditional Needleman-Wunsch algorithm, and since it is
-implemented in Cython, it will work faster than a pure Python
-implementation for alignment algorithms.</p>
-<p class="rubric">Examples</p>
-<p>We show that the Needleman-Wunsch algorithms yields the same result as the
-globalign algorithm, provided we adjust the parameters:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.cython.calign</span> <span class="k">import</span> <span class="n">globalign</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.align.pairwise</span> <span class="k">import</span> <span class="n">nw_align</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nw_align</span><span class="p">(</span><span class="s1">&#39;abab&#39;</span><span class="p">,</span> <span class="s1">&#39;baba&#39;</span><span class="p">)</span>
-<span class="go">([&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;-&#39;], [&#39;-&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;], 1)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">globalign</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abab&#39;</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;baba&#39;</span><span class="p">),</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">})</span>
-<span class="go">([&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;-&#39;], [&#39;-&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;], 1.0)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.localign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">localign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.localign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out semi-global alignment of two sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score. The alignments
-are each a list of suffix, alignment, and prefix.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out local alignment
-analyses
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. Local alignment means
-that only the best matching substring between two sequences is returned
-(compare <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>), also called the Smith-Waterman algorithm.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.score_profile">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">score_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.score_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Basic function for the scoring of profiles.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>colA, colB</strong> : list</p>
-<blockquote>
-<div><p>The two columns of a profile.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in the two profiles.</p>
-</div></blockquote>
-<p><strong>gap_weight</strong> : float (default=0.0)</p>
-<blockquote>
-<div><p>This handles the weight that is given to gaps in a column. If you set
-it to 0, for example, this means that all gaps will be ignored when
-determining the score for two columns in the profile.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>score</strong> : float</p>
-<blockquote class="last">
-<div><p>The score for the profile</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This function handles how profiles are scored.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.secondary_dialign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">secondary_dialign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.secondary_dialign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out dialign alignment of two sequences with sensitivity for secondary     sequence structures.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>r</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out local dialign alignment
-analyses (keyword “dialign”)
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. Dialign (see
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>) is an alignment algorithm that does not require
-gap penalties and generally works in a rather local fashion.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.secondary_globalign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">secondary_globalign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.secondary_globalign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out global alignment of two sequences with secondary sequence structures.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>r</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out global alignment analyses
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. It differs from classical
-Needleman-Wunsch alignment (compare <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>) in a couple of aspects.
-These include, among others, the use of a gap extension <em>scale</em> rather than
-a gap extension penalty (the scale consecutively reduces the gap penalty
-and thus lets gap penalties approach zero if gapped regions are large), the
-use of individual gap opening penalties for all positions of a sequence,
-and the use of prosodic strings, and prosodic factors that raise scores
-when segments occur in the same prosodic environment.</p>
-<p>If one sets certain of these parameters to zero or one and uses the same
-gap opening penalties, however, the function will
-behave like the traditional Needleman-Wunsch algorithm, and since it is
-implemented in Cython, it will work faster than a pure Python
-implementation for alignment algorithms.</p>
-<p class="rubric">Examples</p>
-<dl class="docutils">
-<dt>We compare globalign with secondary_globalign::</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.cython.calign</span> <span class="k">import</span> <span class="n">globalign</span><span class="p">,</span> <span class="n">secondary_globalign</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">globalign</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abab&#39;</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;baba&#39;</span><span class="p">),</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">})</span>
-<span class="go">([&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;-&#39;], [&#39;-&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;], 1.0)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">secondary_globalign</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ab.ab&#39;</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ba.ba&#39;</span><span class="p">),</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;ab.ab&#39;</span><span class="p">,</span> <span class="s1">&#39;ba.ba&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">):</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
-<span class="go">([&#39;a&#39;, &#39;b&#39;, &#39;-&#39;, &#39;.&#39;, &#39;a&#39;, &#39;b&#39;, &#39;-&#39;],</span>
-<span class="go">[&#39;-&#39;, &#39;b&#39;, &#39;a&#39;, &#39;.&#39;, &#39;-&#39;, &#39;b&#39;, &#39;a&#39;],</span>
-<span class="go">-2.0)</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.secondary_localign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">secondary_localign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.secondary_localign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out lobal alignment of two sequences with sensitivity to secondary sequence structures.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>r</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score. The alignments
-are each a list of suffix, alignment, and prefix.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out local alignment
-analyses
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. Local alignment means
-that only the best matching substring between two sequences is returned
-(compare <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>), also called the Smith-Waterman algorithm.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.secondary_semi_globalign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">secondary_semi_globalign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.secondary_semi_globalign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out semi-global alignment of two sequences with sensitivity to secondary sequence structures.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-<p><strong>r</strong> : { str }</p>
-<blockquote>
-<div><p>The string containing restricted characters. Restricted characters
-occur, as a rule, in the prosodic strings, not in the normal sequence.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out semi-global alignment
-analyses (keyword “overlap”)
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. Semi-global alignment means
-that the suffixes or prefixes in one of the words are not penalized.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.semi_globalign">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">semi_globalign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.semi_globalign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out semi-global alignment of two sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : list</p>
-<blockquote>
-<div><p>The list containing the sequences.</p>
-</div></blockquote>
-<p><strong>gopA, gopB</strong> : list</p>
-<blockquote>
-<div><p>The gap opening penalties (individual for each sequence, therefore
-passed as a list of floats or integers).</p>
-</div></blockquote>
-<p><strong>proA, proB</strong> : str</p>
-<blockquote>
-<div><p>The prosodic strings which have the same length as seqA and seqB.</p>
-</div></blockquote>
-<p><strong>M, N</strong> : int</p>
-<blockquote>
-<div><p>The lengths of seqA and seqB.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
-uses a scale rather than a constant gap extension penalty.</p>
-</div></blockquote>
-<p><strong>factor</strong> : float</p>
-<blockquote>
-<div><p>The factor by which matches are increased when two segments occur in
-the same prosodic position of an alignment.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in seqA and seqB.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignment</strong> : tuple</p>
-<blockquote class="last">
-<div><p>A tuple of the two alignments and the alignment score.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This is the function that is called to carry out semi-global alignment
-analyses (keyword “overlap”)
-when using many of LingPy’s classes for alignment analyses which is at the
-same time sensitive for secondary sequence structures (see the description
-of secondary alignment in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code> for details), like
-<a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code></a>,
-<a class="reference internal" href="lingpy.align.html#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code></a>, or
-<a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>. Semi-global alignment means
-that the suffixes or prefixes in one of the words are not penalized.</p>
-<p class="rubric">Examples</p>
-<dl class="docutils">
-<dt>We compare globalign with semi_globalign::</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorithm.cython.calign</span> <span class="k">import</span> <span class="n">globalign</span><span class="p">,</span> <span class="n">semi_globalign</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">globalign</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abab&#39;</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;baba&#39;</span><span class="p">),</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">})</span>
-<span class="go">([&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;-&#39;], [&#39;-&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;], 1.0)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">semi_globalign</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abab&#39;</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;baba&#39;</span><span class="p">),</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">):</span> <span class="mi">1</span><span class="p">})</span>
-<span class="go">([&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;-&#39;], [&#39;-&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;], 3.0)</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.algorithm.cython.calign.swap_score_profile">
-<code class="descclassname">lingpy.algorithm.cython.calign.</code><code class="descname">swap_score_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.calign.swap_score_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Basic function for the scoring of profiles which contain swapped sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>colA, colB</strong> : list</p>
-<blockquote>
-<div><p>The two columns of a profile.</p>
-</div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
-<blockquote>
-<div><p>The scoring function which needs to provide scores for all
-segments in the two profiles.</p>
-</div></blockquote>
-<p><strong>gap_weight</strong> : float (default=0.0)</p>
-<blockquote>
-<div><p>This handles the weight that is given to gaps in a column. If you set
-it to 0, for example, this means that all gaps will be ignored when
-determining the score for two columns in the profile.</p>
-</div></blockquote>
-<p><strong>swap_penalty</strong> : int (default=-5)</p>
-<blockquote>
-<div><p>The swap penalty applied to swapped columns.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>score</strong> : float</p>
-<blockquote class="last">
-<div><p>The score for the profile.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>This function handles how profiles with swapped segments are scored.</p>
-</dd></dl>
-
+<div class="section" id="lingpy-algorithm-cython-calign-module">
+<h2>lingpy.algorithm.cython.calign module<a class="headerlink" href="#lingpy-algorithm-cython-calign-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-lingpy.algorithm.cython.cluster">
 <span id="lingpy-algorithm-cython-cluster-module"></span><h2>lingpy.algorithm.cython.cluster module<a class="headerlink" href="#module-lingpy.algorithm.cython.cluster" title="Permalink to this headline">¶</a></h2>
@@ -1083,7 +80,7 @@ determining the score for two columns in the profile.</p>
 <blockquote>
 <div><p>The threshold which terminates the algorithm.</p>
 </div></blockquote>
-<p><strong>matrix</strong> : list or <code class="xref py py-class docutils literal"><span class="pre">numpy.array</span></code></p>
+<p><strong>matrix</strong> : list or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code></p>
 <blockquote>
 <div><p>A two-dimensional list containing the distances.</p>
 </div></blockquote>
@@ -1105,15 +102,15 @@ corresponding to the respective ID as values.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">array([[ 0.  ,  0.5 ,  0.67,  0.8 ,  0.2 ],</span>
 <span class="go">       [ 0.5 ,  0.  ,  0.4 ,  0.7 ,  0.6 ],</span>
@@ -1123,7 +120,7 @@ corresponding to the respective ID as values.</p>
 </pre></div>
 </div>
 <p>Carry out the flat cluster analysis.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{0: [&#39;German&#39;, &#39;Dutch&#39;, &#39;English&#39;], 1: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
 </pre></div>
 </div>
@@ -1132,7 +129,7 @@ corresponding to the respective ID as values.</p>
 <dl class="function">
 <dt id="lingpy.algorithm.cython.cluster.flat_upgma">
 <code class="descclassname">lingpy.algorithm.cython.cluster.</code><code class="descname">flat_upgma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.cluster.flat_upgma" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out a flat cluster analysis based on the UPGMA algorithm     (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
+<dd><p>Carry out a flat cluster analysis based on the UPGMA algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1141,7 +138,7 @@ corresponding to the respective ID as values.</p>
 <blockquote>
 <div><p>The threshold which terminates the algorithm.</p>
 </div></blockquote>
-<p><strong>matrix</strong> : list or <code class="xref py py-class docutils literal"><span class="pre">numpy.array</span></code></p>
+<p><strong>matrix</strong> : list or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code></p>
 <blockquote>
 <div><p>A two-dimensional list containing the distances.</p>
 </div></blockquote>
@@ -1163,15 +160,15 @@ corresponding to the respective ID as values.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Create a list of arbitrary taxa.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary distance matrix.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span>
 <span class="go">array([[ 0.  ,  0.5 ,  0.67,  0.8 ,  0.2 ],</span>
 <span class="go">       [ 0.5 ,  0.  ,  0.4 ,  0.7 ,  0.6 ],</span>
@@ -1181,7 +178,7 @@ corresponding to the respective ID as values.</p>
 </pre></div>
 </div>
 <p>Carry out the flat cluster analysis.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flat_upgma</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">{0: [&#39;German&#39;, &#39;Dutch&#39;, &#39;English&#39;], 1: [&#39;Swedish&#39;, &#39;Icelandic&#39;]}</span>
 </pre></div>
 </div>
@@ -1190,12 +187,12 @@ corresponding to the respective ID as values.</p>
 <dl class="function">
 <dt id="lingpy.algorithm.cython.cluster.neighbor">
 <code class="descclassname">lingpy.algorithm.cython.cluster.</code><code class="descname">neighbor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.cluster.neighbor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function clusters data according to the Neighbor-Joining algorithm     (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>).</p>
+<dd><p>Function clusters data according to the Neighbor-Joining algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list or <code class="xref py py-class docutils literal"><span class="pre">numpy.array</span></code></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code></p>
 <blockquote>
 <div><p>A two-dimensional list containing the distances.</p>
 </div></blockquote>
@@ -1206,7 +203,7 @@ in the matrix.</p>
 </div></blockquote>
 <p><strong>distances</strong> : bool</p>
 <blockquote>
-<div><p>If set to <code class="docutils literal"><span class="pre">False</span></code>, only the topology of the tree will be returned.</p>
+<div><p>If set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, only the topology of the tree will be returned.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1221,19 +218,19 @@ software packages to view and plot the tree.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>Function is automatically imported when importing lingpy.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Create an arbitrary list of taxa.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Norwegian&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Norwegian&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary matrix.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Carry out the cluster analysis.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">neighbor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">neighbor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span>
 <span class="go">&#39;(((Norwegian,(Swedish,Icelandic)),English),Dutch);&#39;</span>
 </pre></div>
 </div>
@@ -1242,12 +239,12 @@ software packages to view and plot the tree.</p>
 <dl class="function">
 <dt id="lingpy.algorithm.cython.cluster.upgma">
 <code class="descclassname">lingpy.algorithm.cython.cluster.</code><code class="descname">upgma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.cluster.upgma" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carry out a cluster analysis based on the UPGMA algorithm     (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
+<dd><p>Carry out a cluster analysis based on the UPGMA algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list or <code class="xref py py-class docutils literal"><span class="pre">numpy.array</span></code></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code></p>
 <blockquote>
 <div><p>A two-dimensional list containing the distances.</p>
 </div></blockquote>
@@ -1258,7 +255,7 @@ in the matrix.</p>
 </div></blockquote>
 <p><strong>distances</strong> : bool</p>
 <blockquote>
-<div><p>If set to <code class="docutils literal"><span class="pre">False</span></code>, only the topology of the tree will be returned.</p>
+<div><p>If set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, only the topology of the tree will be returned.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1273,19 +270,19 @@ software packages to view and plot the tree.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>Function is automatically imported when importing lingpy.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Create an arbitrary list of taxa.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">taxa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="s1">&#39;Swedish&#39;</span><span class="p">,</span><span class="s1">&#39;Icelandic&#39;</span><span class="p">,</span><span class="s1">&#39;English&#39;</span><span class="p">,</span><span class="s1">&#39;Dutch&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create an arbitrary matrix.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">squareform</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.67</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Carry out the cluster analysis.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgma</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="n">distances</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgma</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="n">distances</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="go">&#39;((Swedish,Icelandic),(English,(German,Dutch)));&#39;</span>
 </pre></div>
 </div>
@@ -1371,13 +368,13 @@ values.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This function is a very straightforward implementation of the
-Needleman-Wunsch algorithm (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>). We recommend to use
+Needleman-Wunsch algorithm (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>). We recommend to use
 the function if you want to test your own scoring dictionaries and profit
 from a fast implementation (as we use Cython, the implementation is indeed
 faster than pure Python implementations, as long as you use Python 3 and
 have Cython installed). If you want to test the NW algorithm without
 specifying a scoring dictionary, we recommend to have a look at our wrapper
-function with the same name in the <a class="reference internal" href="lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-class docutils literal"><span class="pre">pairwise</span></code></a>
+function with the same name in the <a class="reference internal" href="lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-class docutils literal notranslate"><span class="pre">pairwise</span></code></a>
 module.</p>
 </dd></dl>
 
@@ -1410,7 +407,7 @@ edit distance.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>Restrictions follow the definition of <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></code>: Segments that
+<p>Restrictions follow the definition of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></code>: Segments that
 are not allowed to match are given a penalty of <img class="math" src="../_images/math/d86a156e85d4797975fed9e864dd306e4076e326.png" alt="\infty"/>. We model
 restrictions as strings, for example consisting of letters “c” and “v”. So
 the sequence “woldemort” could be modeled as “cvccvcvcc”, and when aligning
@@ -1483,13 +480,13 @@ values.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This function is a very straightforward implementation of the
-Smith-Waterman algorithm (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>). We recommend to use
+Smith-Waterman algorithm (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>). We recommend to use
 the function if you want to test your own scoring dictionaries and profit
 from a fast implementation (as we use Cython, the implementation is indeed
 faster than pure Python implementations, as long as you use Python 3 and
 have Cython installed). If you want to test the SW algorithm without
 specifying a scoring dictionary, we recommend to have a look at our wrapper
-function with the same name in the <a class="reference internal" href="lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-class docutils literal"><span class="pre">pairwise</span></code></a>
+function with the same name in the <a class="reference internal" href="lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-class docutils literal notranslate"><span class="pre">pairwise</span></code></a>
 module.</p>
 </dd></dl>
 
@@ -1529,13 +526,13 @@ the score of the alignment.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This function is a very straightforward implementation of the
-Waterman-Eggert algorithm (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Waterman1987"><span class="pre">Waterman1987</span></a></code>). We recommend to use
+Waterman-Eggert algorithm (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Waterman1987"><span class="pre">Waterman1987</span></a></code>). We recommend to use
 the function if you want to test your own scoring dictionaries and profit
 from a fast implementation (as we use Cython, the implementation is indeed
 faster than pure Python implementations, as long as you use Python 3 and
 have Cython installed). If you want to test the WE algorithm without
 specifying a scoring dictionary, we recommend to have a look at our wrapper
-function with the same name in the <a class="reference internal" href="lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-class docutils literal"><span class="pre">pairwise</span></code></a>
+function with the same name in the <a class="reference internal" href="lingpy.align.html#module-lingpy.align.pairwise" title="lingpy.align.pairwise"><code class="xref py py-class docutils literal notranslate"><span class="pre">pairwise</span></code></a>
 module.</p>
 </dd></dl>
 
@@ -1545,7 +542,7 @@ module.</p>
 <dl class="class">
 <dt id="lingpy.algorithm.cython.misc.ScoreDict">
 <em class="property">class </em><code class="descclassname">lingpy.algorithm.cython.misc.</code><code class="descname">ScoreDict</code><a class="headerlink" href="#lingpy.algorithm.cython.misc.ScoreDict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class allows quick access to scoring functions using dictionary     syntax.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1572,13 +569,13 @@ positive values similarity.</p>
 <p class="rubric">Examples</p>
 <dl class="docutils">
 <dt>Initialize a ScoreDict object::</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorith.cython.misc</span> <span class="k">import</span> <span class="n">ScoreDict</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.algorith.cython.misc</span> <span class="k">import</span> <span class="n">ScoreDict</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="n">ScoreDict</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </dd>
 <dt>Retrieve scores::</dt>
-<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
 <span class="go">-1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
 <span class="go">1</span>
@@ -1593,18 +590,18 @@ positive values similarity.</p>
 <dl class="function">
 <dt id="lingpy.algorithm.cython.misc.squareform">
 <code class="descclassname">lingpy.algorithm.cython.misc.</code><code class="descname">squareform</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cython.misc.squareform" title="Permalink to this definition">¶</a></dt>
-<dd><p>A simplified version of the <code class="xref py py-func docutils literal"><span class="pre">scipy.spatial.distance.squareform()</span></code>     function.</p>
+<dd><p>A simplified version of the <code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.spatial.distance.squareform()</span></code>     function.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : <code class="xref py py-class docutils literal"><span class="pre">numpy.array</span></code> or list</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code> or list</p>
 <blockquote>
 <div><p>The one-dimensional flat representation of a symmetrix distance matrix.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>matrix</strong> : <code class="xref py py-class docutils literal"><span class="pre">numpy.array</span></code></p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>matrix</strong> : <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.array</span></code></p>
 <blockquote class="last">
 <div><p>The two-dimensional redundant representation of a symmetric distance matrix.</p>
 </div></blockquote>
@@ -1682,10 +679,10 @@ indicates similarities, 1 indicates distances, 2 indicates both).</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This is a utility function that allows calls any of the four classical
-alignment functions (<a class="reference internal" href="#lingpy.algorithm.cython.talign.globalign" title="lingpy.algorithm.cython.talign.globalign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.talign.globalign</span></code></a>
-<a class="reference internal" href="#lingpy.algorithm.cython.talign.semi_globalign" title="lingpy.algorithm.cython.talign.semi_globalign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.talign.semi_globalign</span></code></a>,
-<code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.talign.lotalign</span></code>,
-<a class="reference internal" href="#lingpy.algorithm.cython.talign.dialign" title="lingpy.algorithm.cython.talign.dialign"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.talign.dialign</span></code></a>,) and their secondary counterparts.</p>
+alignment functions (<a class="reference internal" href="#lingpy.algorithm.cython.talign.globalign" title="lingpy.algorithm.cython.talign.globalign"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.talign.globalign</span></code></a>
+<a class="reference internal" href="#lingpy.algorithm.cython.talign.semi_globalign" title="lingpy.algorithm.cython.talign.semi_globalign"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.talign.semi_globalign</span></code></a>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.talign.lotalign</span></code>,
+<a class="reference internal" href="#lingpy.algorithm.cython.talign.dialign" title="lingpy.algorithm.cython.talign.dialign"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.talign.dialign</span></code></a>,) and their secondary counterparts.</p>
 </dd></dl>
 
 <dl class="function">
@@ -1806,7 +803,7 @@ construct the guide tree.</p>
 <div><p>The gap extension scale by which consecutive gaps are reduced. LingPy
 uses a scale rather than a constant gap extension penalty.</p>
 </div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
+<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
 <blockquote>
 <div><p>The scoring function which needs to provide scores for all
 segments in the two profiles.</p>
@@ -1833,7 +830,7 @@ determining the score for two columns in the profile.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This function computes alignments of two profiles of multiple sequences
-(see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Durbin2002"><span class="pre">Durbin2002</span></a></code> for details on profiles)
+(see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Durbin2002"><span class="pre">Durbin2002</span></a></code> for details on profiles)
 and is important for multiple alignment analyses.</p>
 </dd></dl>
 
@@ -1874,7 +871,7 @@ combinations in the two sequences.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This algorithm carries out dialign alignment 
-(<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>).</p>
+(<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>).</p>
 </dd></dl>
 
 <dl class="function">
@@ -1918,7 +915,7 @@ combinations in the two sequences.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This algorithm carries out classical Needleman-Wunsch alignment
-(<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>).</p>
+(<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>).</p>
 </dd></dl>
 
 <dl class="function">
@@ -1962,7 +959,7 @@ combinations in the two sequences.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This algorithm carries out local alignment 
-(<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>).</p>
+(<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>).</p>
 </dd></dl>
 
 <dl class="function">
@@ -1977,7 +974,7 @@ combinations in the two sequences.</p>
 <blockquote>
 <div><p>The two columns of a profile.</p>
 </div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
+<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
 <blockquote>
 <div><p>The scoring function which needs to provide scores for all
 segments in the two profiles.</p>
@@ -2043,7 +1040,7 @@ combinations in the two sequences.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>This algorithm carries out semi-global alignment 
-(<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Durbin2002"><span class="pre">Durbin2002</span></a></code>).</p>
+(<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Durbin2002"><span class="pre">Durbin2002</span></a></code>).</p>
 </dd></dl>
 
 <dl class="function">
@@ -2058,7 +1055,7 @@ combinations in the two sequences.</p>
 <blockquote>
 <div><p>The two columns of a profile.</p>
 </div></blockquote>
-<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
+<p><strong>scorer</strong> : { dict, <a class="reference internal" href="#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.misc.ScoreDict</span></code></a> }</p>
 <blockquote>
 <div><p>The scoring function which needs to provide scores for all
 segments in the two profiles.</p>
@@ -2103,11 +1100,11 @@ determining the score for two columns in the profile.</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.algorithm.cython package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-lingpy.algorithm.cython.calign">lingpy.algorithm.cython.calign module</a></li>
+<li><a class="reference internal" href="#lingpy-algorithm-cython-calign-module">lingpy.algorithm.cython.calign module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.cython.cluster">lingpy.algorithm.cython.cluster module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.cython.compilePYX">lingpy.algorithm.cython.compilePYX module</a></li>
 <li><a class="reference internal" href="#module-lingpy.algorithm.cython.malign">lingpy.algorithm.cython.malign module</a></li>
@@ -2127,12 +1124,14 @@ determining the score for two columns in the profile.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -2171,7 +1170,7 @@ determining the score for two columns in the profile.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

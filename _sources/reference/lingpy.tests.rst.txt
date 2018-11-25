@@ -1,5 +1,5 @@
-lingpy\.tests package
-=====================
+lingpy.tests package
+====================
 
 Subpackages
 -----------
@@ -21,50 +21,66 @@ Subpackages
 Submodules
 ----------
 
-lingpy\.tests\.test\_cache module
----------------------------------
+lingpy.tests.test\_basictypes module
+------------------------------------
+
+.. automodule:: lingpy.tests.test_basictypes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+lingpy.tests.test\_cache module
+-------------------------------
 
 .. automodule:: lingpy.tests.test_cache
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.tests\.test\_cli module
--------------------------------
+lingpy.tests.test\_cli module
+-----------------------------
 
 .. automodule:: lingpy.tests.test_cli
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.tests\.test\_config module
-----------------------------------
+lingpy.tests.test\_config module
+--------------------------------
 
 .. automodule:: lingpy.tests.test_config
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.tests\.test\_log module
--------------------------------
+lingpy.tests.test\_log module
+-----------------------------
 
 .. automodule:: lingpy.tests.test_log
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.tests\.test\_util module
---------------------------------
+lingpy.tests.test\_util module
+------------------------------
 
 .. automodule:: lingpy.tests.test_util
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.tests\.util module
---------------------------
+lingpy.tests.util module
+------------------------
 
 .. automodule:: lingpy.tests.util
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+lingpy.tests.util\_testing module
+---------------------------------
+
+.. automodule:: lingpy.tests.util_testing
     :members:
     :undoc-members:
     :show-inheritance:

@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.sequence package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -72,7 +65,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.sequence.generate.MCBasic">
 <em class="property">class </em><code class="descclassname">lingpy.sequence.generate.</code><code class="descname">MCBasic</code><span class="sig-paren">(</span><em>seqs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for creating Markov chains from sequence training data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -98,7 +91,7 @@ should be either passed as lists or as tuples.</p>
 <dl class="class">
 <dt id="lingpy.sequence.generate.MCPhon">
 <em class="property">class </em><code class="descclassname">lingpy.sequence.generate.</code><code class="descname">MCPhon</code><span class="sig-paren">(</span><em>words</em>, <em>tokens=False</em>, <em>prostrings=[]</em>, <em>classes=False</em>, <em>class_model=&lt;sca-model &quot;sca&quot;&gt;</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><code class="xref py py-class docutils literal"><span class="pre">lingpy.sequence.generate.MCBasic</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.sequence.generate.MCBasic</span></code></a></p>
 <p>Class for the creation of phonetic sequences (“pseudo words”).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -151,6 +144,882 @@ represent the sequences as a Markov chain is returned.</p>
 </table>
 </dd></dl>
 
+</dd></dl>
+
+</div>
+<div class="section" id="module-lingpy.sequence.ngrams">
+<span id="lingpy-sequence-ngrams-module"></span><h2>lingpy.sequence.ngrams module<a class="headerlink" href="#module-lingpy.sequence.ngrams" title="Permalink to this headline">¶</a></h2>
+<p>This modules provides methods for generating and collecting ngrams.</p>
+<p>The methods allow to collect different kind of subsequences, such as standard
+ngrams (preceding context), skip ngrams with both single or multiple gap
+openings (both preceding and following context), and positional ngrams (both
+preceding and following context).</p>
+<dl class="class">
+<dt id="lingpy.sequence.ngrams.NgramModel">
+<em class="property">class </em><code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">NgramModel</code><span class="sig-paren">(</span><em>pre_order=0</em>, <em>post_order=0</em>, <em>pad_symbol='$$$'</em>, <em>sequences=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class for operation upon sequences using ngrams models.</p>
+<p>This class allows different operations upon sequences after training ngram
+models, such as sequence relative likelihood computation (both per state
+and overall), random sequence generation, computation of a model entropy
+and of cross-entropy/perplexity of a sequence, etc. As model training is
+computationally and time consuming for large datasets, trained models can
+be saved and loaded (“serialized”) from disk.</p>
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.add_sequences">
+<code class="descname">add_sequences</code><span class="sig-paren">(</span><em>sequences</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.add_sequences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds sequences to a model, collecting their ngrams.</p>
+<p>This method does not return any value, but cleans the internal
+matrix probability, if one was previously computed, and automatically
+updates the ngram counters. The actual training, with the computation
+of smoothed log-probabilities, is not performed automatically, and
+must be requested by the user by calling the <cite>.train()</cite> method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequences: list</strong> :</p>
+<blockquote class="last">
+<div><p>A list of sequences to be added to the model.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.entropy">
+<code class="descname">entropy</code><span class="sig-paren">(</span><em>sequence</em>, <em>base=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the cross-entropy of a sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list</strong> :</p>
+<blockquote>
+<div><p>The sequence whose cross-entropy will be calculated.</p>
+</div></blockquote>
+<p><strong>base: float</strong> :</p>
+<blockquote>
+<div><p>The logarithmic base for the cross-entropy calculation. Defaults to
+2.0, following the standard approach set by Shannon that allows
+to consider entropy in terms of bits needed for unique
+representation.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>ch: float</strong> :</p>
+<blockquote class="last">
+<div><p>The cross-entropy calculated for the sequence, a real number.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.model_entropy">
+<code class="descname">model_entropy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.model_entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the model entropy.</p>
+<p>This methods collects the P x log(P) for all contexts, returning
+their sum. This is different from a sequence cross-entropy,
+and should be used to estimate the complexity of a model.</p>
+<p>Please note that for very large models the computation of this
+entropy might run into underflow problems.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>h: float</strong> :</p>
+<blockquote class="last">
+<div><p>The model entropy.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.perplexity">
+<code class="descname">perplexity</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.perplexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the perplexity of a model.</p>
+<p>As per definition, this is simply 2.0 to the cross-entropy of the
+given sequence on logarithmic base of 2.0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list</strong> :</p>
+<blockquote>
+<div><p>The sequence whose perplexity should be calculated.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>perplexity: float</strong> :</p>
+<blockquote class="last">
+<div><p>The calculated perplexity for the sequence.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.random_seqs">
+<code class="descname">random_seqs</code><span class="sig-paren">(</span><em>k=1</em>, <em>seq_len=None</em>, <em>scale=2</em>, <em>only_longest=False</em>, <em>attempts=10</em>, <em>seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.random_seqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a set of random sequences based in the observed transition
+frequencies.</p>
+<p>This function tries to generate a set of <cite>k</cite> random sequences from the
+internal model. Given that the random selection and the parameters
+might lead to a long or infinite search loop, the number of attempts
+for each word generation is limited, meaning that there is no guarantee
+that the returned list will be of length <cite>k</cite>, but only that it will be
+at most of length <cite>k</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>k: int</strong> :</p>
+<blockquote>
+<div><p>The desired and maximum number of random sequences to be returned.
+While the algorithm should be robust enough for most cases, there
+is no guarantee that the desired number or even that a single
+random sequence will be returned. In case of missing sequences, try
+increasing the parameter <cite>attempts</cite>.</p>
+</div></blockquote>
+<p><strong>seq_len: int or list</strong> :</p>
+<blockquote>
+<div><p>An optional integer with length of the sequences to be generated or
+a list of lengths to be uniformly drawn for the generated
+sequences. If the parameter is not specified, the length of the
+sequences will be drawn by the sequence lengths observed in
+training according to their frequencies.</p>
+</div></blockquote>
+<p><strong>scale: numeric</strong> :</p>
+<blockquote>
+<div><p>The exponent used for weighting ngram probabilities according to
+their length in number of states. The higher this value, the less
+likely the algorithm will be to drawn shorter ngrams, which
+contribute to a higher variety in words but can also result in less
+likely sequences. Defaults to 2.</p>
+</div></blockquote>
+<p><strong>only_longest: bool</strong> :</p>
+<blockquote>
+<div><p>Whether the algorithm should only collect the longest possible
+ngrams when computing the search space from which each new random
+character is obtained. This usually translates into less variation
+in the generated sequences and a longer searching time, which might
+need to be increased via the <cite>attempts</cite> parameters. Defaults to
+False.</p>
+</div></blockquote>
+<p><strong>tries: int</strong> :</p>
+<blockquote>
+<div><p>The number of times the algorithm will try to generate a random
+sequence. If the algorithm is unable to generate a suitable random
+sequence after the specified number of <cite>attempts</cite>, the loop will
+advance to the following sequence (if any). Defaults to 10.</p>
+</div></blockquote>
+<p><strong>seed: obj</strong> :</p>
+<blockquote>
+<div><p>Any hasheable object, used to feed the random number generator and
+thus reproduce the generated set of random sequences.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>seqs: list</strong> :</p>
+<blockquote class="last">
+<div><p>A list of size <cite>k</cite> with random sequences.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>sequence</em>, <em>use_length=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative likelihood of a sequence.</p>
+<p>The model must have been trained before using this function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list</strong> :</p>
+<blockquote>
+<div><p>A list of states to be scored.</p>
+</div></blockquote>
+<p><strong>use_length: bool</strong> :</p>
+<blockquote>
+<div><p>Whether to correct the sequence relative likelihood by using
+length probability. Defaults to True.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>prob: list</strong> :</p>
+<blockquote class="last">
+<div><p>A list of floats, of the same length of <cite>sequence</cite>, with the
+individual log-probability for each state.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.state_score">
+<code class="descname">state_score</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.state_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative likelihood for each state in a sequence.</p>
+<p>Please note that this does not perform correction due to sequence
+length, as optionally and by default performed by the <cite>.score()</cite>
+method. The model must have been trained in advance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list</strong> :</p>
+<blockquote>
+<div><p>A list of states to be scored.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>prob: list</strong> :</p>
+<blockquote class="last">
+<div><p>A list of floats, of the same length of <cite>sequence</cite>, with the
+individual log-probability for each state.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lingpy.sequence.ngrams.NgramModel.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>method='laplace'</em>, <em>normalize=False</em>, <em>bins=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a model after ngrams have been collected.</p>
+<p>This method does not return any value, but sets the internal variables
+with smoothed probabilities (such as <cite>self._p</cite> and <cite>self._p0</cite>) and
+internally marks the model as having been trained.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method: str</strong> :</p>
+<blockquote>
+<div><p>The name of the smoothing method to be used, as used by
+<cite>smooth_dist()</cite>. Either “uniform”, “random”, “mle”, “lidstone”,
+“laplace”, “ele”, “wittenbell”, “certaintydegree”, or “sgt”.
+Defaults to “laplace”.</p>
+</div></blockquote>
+<p><strong>normalize: boolean</strong> :</p>
+<blockquote>
+<div><p>Whether to normalize the log-probabilities for each ngram in the
+model after smoothing, i.e., to guarantee that the probabilities
+(with the probability for unobserved transitions counted a single
+time) sum to 1.0. This is computationally expansive, and should be
+only used if the model is intended for later serialization. While
+experiments with real data demonstrated that this normalization
+does not improve the results or performance of the methods, the
+computational cost of normalizing the probabilities might be
+justified if descriptive statistics of the model, like samples
+from the matrix of transition probabilities or the
+entropy/perplexity of a sequence, are needed (such as for
+publication), as they will be more in line with what is generally
+expected and will facilitate the comparison of different models.</p>
+</div></blockquote>
+<p><strong>bins: int</strong> :</p>
+<blockquote class="last">
+<div><p>The number of bins to be assumed when smoothing, for the smoothing
+methods that use this information. Defaults to the number of
+unique states observed, as gathered from the count of ngrams with
+no context.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.bigrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">bigrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=2</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.bigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all bigrams of a sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the bigrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the bigrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">bigrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.confirm">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">confirm</code><span class="sig-paren">(</span><em>question</em>, <em>*</em>, <em>default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask a yes/no question interactively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>question</strong> – The text of the question to ask.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the answer was “yes”, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.data_path">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">data_path</code><span class="sig-paren">(</span><em>*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.data_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.dotjoin">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">dotjoin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.dotjoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
+<p class="rubric">Notes</p>
+<p>An implicit conversion of objects to strings is performed as well.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.fourgrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">fourgrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=4</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.fourgrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all fourgrams of a sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the fourgrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the fourgrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">fourgrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.get_all_ngrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">get_all_ngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns all possible n-grams of a given sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : list or str</p>
+<blockquote>
+<div><p>The sequence that shall be converted into it’s ngram-representation.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : list</p>
+<blockquote class="last">
+<div><p>A list of all ngrams of the input word, sorted in decreasing order of
+length.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_all_ngrams</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
+<span class="go">[&#39;abcde&#39;, &#39;bcde&#39;, &#39;abcd&#39;, &#39;cde&#39;, &#39;abc&#39;, &#39;bcd&#39;, &#39;ab&#39;, &#39;de&#39;, &#39;cd&#39;, &#39;bc&#39;, &#39;a&#39;, &#39;e&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.get_all_ngrams_by_order">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">get_all_ngrams_by_order</code><span class="sig-paren">(</span><em>sequence</em>, <em>orders=None</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_ngrams_by_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all ngrams of a given set of orders.</p>
+<p>If no set of orders (i.e., “lengths”) is provided, this will collect all
+possible ngrams in the sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the ngrams will be collected.</p>
+</div></blockquote>
+<p><strong>orders: list</strong> :</p>
+<blockquote>
+<div><p>An optional list of the orders of the ngrams to be collected. Can be
+larger than the length of the sequence, in which case the latter will
+be padded accordingly if requested. Defaults to the collection of all
+possible ngrams in the sequence with the minimum padding.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the ngrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents were killed&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_all_ngrams_by_order</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;Insurgents&#39;,)</span>
+<span class="go">(&#39;were&#39;,)</span>
+<span class="go">(&#39;killed&#39;,)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;were&#39;)</span>
+<span class="go">(&#39;were&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;were&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;were&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;were&#39;, &#39;killed&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.get_all_posngrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">get_all_posngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>pre_orders</em>, <em>post_orders</em>, <em>pad_symbol='$$$'</em>, <em>elm_symbol='###'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_posngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all positional ngrams of a sequence.</p>
+<p>The elements of the iterator, as returned by “get_posngrams()”, include a
+tuple of the context, which can be hashed (as any tuple), the transition
+symbol, and the position of the symbol in the sequence. Such output is
+primarily intended for state-by-state relative likelihood computations with
+stochastics models, and can be approximated to a collection of “shingles”.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the ngrams will be collected.</p>
+</div></blockquote>
+<p><strong>pre-orders: int or list</strong> :</p>
+<blockquote>
+<div><p>An integer with the maximum length of the preceding context or a list
+with all preceding context lengths to be collected. If an integer is
+passed, all lengths from zero to the informed one will be collected.</p>
+</div></blockquote>
+<p><strong>post-orders: int or list</strong> :</p>
+<blockquote>
+<div><p>An integer with the maximum length of the following context or a list
+with all following context lengths to be collected. If an integer is
+passed, all lengths from zero to the informed one will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+<p><strong>elm_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as transition symbol replacement in the
+context tuples (the first element in the returned iterator). Defaults
+to “###”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the positional ngrams of the sequence, returned as
+tuples whose elements are: (1) a tuple representing the context (thus
+including preceding context, the transition symbol, and the following
+context), (2) an object with the value of the transition symbol, and
+(3) the index of the transition symbol in the sequence.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents were killed&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_all_posngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">((&#39;###&#39;,), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;###&#39;,), &#39;were&#39;, 1)</span>
+<span class="go">((&#39;###&#39;,), &#39;killed&#39;, 2)</span>
+<span class="go">((&#39;###&#39;, &#39;were&#39;), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;###&#39;, &#39;killed&#39;), &#39;were&#39;, 1)</span>
+<span class="go">((&#39;###&#39;, &#39;$$$&#39;), &#39;killed&#39;, 2)</span>
+<span class="go">((&#39;$$$&#39;, &#39;###&#39;), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;Insurgents&#39;, &#39;###&#39;), &#39;were&#39;, 1)</span>
+<span class="go">((&#39;were&#39;, &#39;###&#39;), &#39;killed&#39;, 2)</span>
+<span class="go">((&#39;$$$&#39;, &#39;###&#39;, &#39;were&#39;), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;Insurgents&#39;, &#39;###&#39;, &#39;killed&#39;), &#39;were&#39;, 1)</span>
+<span class="go">((&#39;were&#39;, &#39;###&#39;, &#39;$$$&#39;), &#39;killed&#39;, 2)</span>
+<span class="go">((&#39;$$$&#39;, &#39;$$$&#39;, &#39;###&#39;), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;###&#39;), &#39;were&#39;, 1)</span>
+<span class="go">((&#39;Insurgents&#39;, &#39;were&#39;, &#39;###&#39;), &#39;killed&#39;, 2)</span>
+<span class="go">((&#39;$$$&#39;, &#39;$$$&#39;, &#39;###&#39;, &#39;were&#39;), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;###&#39;, &#39;killed&#39;), &#39;were&#39;, 1)</span>
+<span class="go">((&#39;Insurgents&#39;, &#39;were&#39;, &#39;###&#39;, &#39;$$$&#39;), &#39;killed&#39;, 2)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.get_n_ngrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">get_n_ngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>order</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_n_ngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all ngrams of a given order.</p>
+<p>The sequence can optionally be padded with boundary symbols which are
+equal for before and and after sequence boundaries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the ngrams will be collected.</p>
+</div></blockquote>
+<p><strong>order: int</strong> :</p>
+<blockquote>
+<div><p>The order of the ngrams to be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the ngrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_n_ngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_n_ngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;Insurgents&#39;,)</span>
+<span class="go">(&#39;killed&#39;,)</span>
+<span class="go">(&#39;in&#39;,)</span>
+<span class="go">(&#39;ongoing&#39;,)</span>
+<span class="go">(&#39;fighting&#39;,)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_n_ngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.get_posngrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">get_posngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>pre_order=0</em>, <em>post_order=0</em>, <em>pad_symbol='$$$'</em>, <em>elm_symbol='###'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_posngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all positional ngrams of a sequence.</p>
+<p>The preceding and a following orders (i.e., “contexts”) must always be
+informed. The elements of the iterator include a tuple of the context,
+which can be hashed as any tuple, the transition symbol, and the position
+of the symbol in the sequence. Such output is primarily intended for
+state-by-state relative likelihood computations with stochastics models.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the ngrams will be collected.</p>
+</div></blockquote>
+<p><strong>pre_order: int</strong> :</p>
+<blockquote>
+<div><p>An optional integer specifying the length of the preceding context.
+Defaults to zero.</p>
+</div></blockquote>
+<p><strong>post_order: int</strong> :</p>
+<blockquote>
+<div><p>An optional integer specifying the length of the following context.
+Defaults to zero.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+<p><strong>elm_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as transition symbol replacement in the
+context tuples (the first element in the returned iterator). Defaults
+to “###”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the positional ngrams of the sequence, returned as
+tuples whose elements are: (1) a tuple representing the context
+(thus including preceding context, the transition symbol, and the
+following context), (2) an object with the value of the transition
+symbol, and (3) the index of the transition symbol in the sequence.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_posngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">((&#39;$$$&#39;, &#39;$$$&#39;, &#39;###&#39;, &#39;killed&#39;), &#39;Insurgents&#39;, 0)</span>
+<span class="go">((&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;###&#39;, &#39;in&#39;), &#39;killed&#39;, 1)</span>
+<span class="go">((&#39;Insurgents&#39;, &#39;killed&#39;, &#39;###&#39;, &#39;ongoing&#39;), &#39;in&#39;, 2)</span>
+<span class="go">((&#39;killed&#39;, &#39;in&#39;, &#39;###&#39;, &#39;fighting&#39;), &#39;ongoing&#39;, 3)</span>
+<span class="go">((&#39;in&#39;, &#39;ongoing&#39;, &#39;###&#39;, &#39;$$$&#39;), &#39;fighting&#39;, 4)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.get_skipngrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">get_skipngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>order</em>, <em>max_gaps</em>, <em>pad_symbol='$$$'</em>, <em>single_gap=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_skipngrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all skip ngrams of a given length.</p>
+<p>The function requires an information of the length of the skip ngrams to be
+collected, allowing to either collect ngrams with an unlimited number
+of gap openings (as described and implemented in Guthrie et al. 2006) or
+with at most one gap opening.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the ngrams will be collected. Must not include
+“None” as an element, as it is used as a sentinel during skip ngram
+collection following the implementation offered by Bird et al. 2018
+(NLTK), which is a de facto standard.</p>
+</div></blockquote>
+<p><strong>order: int</strong> :</p>
+<blockquote>
+<div><p>The order of the ngrams to be collected (parameter “n” in Guthrie et
+al. 2006).</p>
+</div></blockquote>
+<p><strong>max_gaps: int</strong> :</p>
+<blockquote>
+<div><p>The maximum number of gaps in the ngrams to be collected (parameter “k”
+in Guthrie et al. 2006).</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+<p><strong>single_gap: boolean</strong> :</p>
+<blockquote>
+<div><p>An optional logic value indicating if multiple gap openings are to be
+allowed, as in Guthrie et al. (2006) and Bird et al. (2018), or if at
+most one gap_opening is to be allowed. Defaults to True.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the ngrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_skipngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;$$$&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">get_skipngrams</span><span class="p">(</span><span class="n">sent</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">single_gap</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.tabjoin">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">tabjoin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.tabjoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
+<p class="rubric">Notes</p>
+<p>An implicit conversion of objects to strings is performed as well.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.ngrams.trigrams">
+<code class="descclassname">lingpy.sequence.ngrams.</code><code class="descname">trigrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=3</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.trigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all trigrams of a  sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the trigrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the trigrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">trigrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
@@ -313,6 +1182,500 @@ and the unicode-codepoints.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-lingpy.sequence.smoothing">
+<span id="lingpy-sequence-smoothing-module"></span><h2>lingpy.sequence.smoothing module<a class="headerlink" href="#module-lingpy.sequence.smoothing" title="Permalink to this headline">¶</a></h2>
+<p>Module providing various methods for using Ngram models.</p>
+<p>The smoothing methods are implemented to be as compatible as possible with
+those offered by NLTK. In fact, both implementation and comments try to follow
+Bird at al. as close as possible.</p>
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.certaintydegree_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">certaintydegree_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.certaintydegree_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a log-probability distribution based on the degree of certainty.</p>
+<p>In this distribution a mass probability is reserved for unobserved samples
+from a computation of the degree of certainty that the are no unobserved
+samples.</p>
+<p>Under development and test by Tiago Tresoldi, this is an experimental
+probability distribution that should not be used as the sole or main
+distribution for the time being.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>bins: int</strong> :</p>
+<blockquote>
+<div><p>The optional number of sample bins that can be generated by the
+experiment that is described by the probability distribution. If not
+specified, it will default to the number of samples in the frequency
+distribution.</p>
+</div></blockquote>
+<p><strong>unobs_prob</strong> : float</p>
+<blockquote>
+<div><p>An optional mass probability to be reserved for unobserved states,
+from 0.0 to 1.0.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.ele_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">ele_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.ele_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Expected-Likelihood estimate log-probability distribution.</p>
+<p>In an Expected-Likelihood estimate log-probability the frequency
+distribution of observed samples is used to estimate the probability
+distribution of the experiment that generated such observation, following a
+parameter given by a real number <em>gamma</em> set by definition to 0.5. As such,
+it is a generalization of the Lidstone estimate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>bins: int</strong> :</p>
+<blockquote>
+<div><p>The optional number of sample bins that can be generated by the
+experiment that is described by the probability distribution. If not
+specified, it will default to the number of samples in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.laplace_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">laplace_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.laplace_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Laplace estimate log-probability distribution.</p>
+<p>In a Laplace estimate log-probability the frequency distribution of
+observed samples is used to estimate the probability distribution of the
+experiment that generated such observation, following a parameter given by
+a real number <em>gamma</em> set by definition to 1. As such, it is a
+generalization of the Lidstone estimate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>bins: int</strong> :</p>
+<blockquote>
+<div><p>The optional number of sample bins that can be generated by the
+experiment that is described by the probability distribution. If
+not specified, it will default to the number of samples in
+the frequency distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.lidstone_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">lidstone_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.lidstone_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Lidstone estimate log-probability distribution.</p>
+<p>In a Lidstone estimate log-probability the frequency distribution of
+observed samples is used to estimate the probability distribution of the
+experiment that generated such observation, following a parameter given by
+a real number <em>gamma</em> typycally randing from 0.0 to 1.0. The Lidstone
+estimate approximates the probability of a sample with count <em>c</em> from an
+experiment with <em>N</em> outcomes and <em>B</em> bins as <em>(c+gamma)/(N+B*gamma)</em>. This
+is equivalent to adding <em>gamma</em> to the count of each bin and taking the
+Maximum-Likelihood estimate of the resulting frequency distribution, with
+the corrected space of observation; the probability for an unobserved
+sample is given by frequency of a sample with gamma observations.</p>
+<p>Also called “additive smoothing”, this estimation method is frequently
+used with a <em>gamma</em> of 1.0 (the so-called “Laplace smoothing”) or of 0.5
+(the so-called “Expected likelihood estimate”, or ELE).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>gamma</strong> : float</p>
+<blockquote>
+<div><p>A real number used to parameterize the estimate.</p>
+</div></blockquote>
+<p><strong>bins: int</strong> :</p>
+<blockquote>
+<div><p>The optional number of sample bins that can be generated by the
+experiment that is described by the probability distribution. If not
+specified, it will default to the number of samples in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.mle_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">mle_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.mle_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Maximum-Likelihood Estimation log-probability distribution.</p>
+<p>In an MLE log-probability distribution the probability of each sample is
+approximated as the frequency of the same sample in the frequency
+distribution of observed samples. It is the distribution people intuitively
+adopt when thinking of probability distributions. A mass probability can
+optionally be reserved for unobserved samples.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>unobs_prob</strong> : float</p>
+<blockquote>
+<div><p>An optional mass probability to be reserved for unobserved states,
+from 0.0 to 1.0.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.random_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">random_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.random_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a random log-probability distribution.</p>
+<p>In a random log-probability distribution all samples, no matter the
+observed counts, will have a random log-probability computed from a set of
+randomly drawn floating point values. A mass probability can optionally be
+reserved for unobserved samples.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>unobs_prob</strong> : float</p>
+<blockquote>
+<div><p>An optional mass probability to be reserved for unobserved states,
+from 0.0 to 1.0.</p>
+</div></blockquote>
+<p><strong>seed</strong> : any hasheable value</p>
+<blockquote>
+<div><p>An optional seed for the random number generator, defaulting to None.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in
+the frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.sgt_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">sgt_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.sgt_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Simple Good-Turing log-probability distribution.</p>
+<p>The returned log-probability distribution is based on the Good-Turing
+frequency estimation, as first developed by Alan Turing and I. J. Good and
+implemented in a more easily computable way by Gale and Sampson’s
+(1995/2001 reprint) in the so-called “Simple Good-Turing”.</p>
+<p>This implementation is based mostly in the one by “maxbane” (2011)
+(<a class="reference external" href="https://github.com/maxbane/simplegoodturing/blob/master/sgt.py">https://github.com/maxbane/simplegoodturing/blob/master/sgt.py</a>), as well
+as in the original one in C by Geoffrey Sampson (1995; 2000; 2005; 2008)
+(<a class="reference external" href="https://www.grsampson.net/Resources.html">https://www.grsampson.net/Resources.html</a>), and in the one by
+Loper, Bird et al. (2001-2018, NLTK Project)
+(<a class="reference external" href="http://www.nltk.org/_modules/nltk/probability.html">http://www.nltk.org/_modules/nltk/probability.html</a>). Please note that
+due to minor differences in implementation intended to guarantee non-zero
+probabilities even in cases of expected underflow, as well as our
+relience on scipy’s libraries for speed and our way of handling
+probabilities that are not computable when the assumptions of SGT are
+not met, most results will not exactly match those of the ‘gold standard’
+of Gale and Sampson, even though the differences are never expected to
+be significative and are equally distributed across the samples.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>p_value</strong> : float</p>
+<blockquote>
+<div><p>The p-value for calculating the confidence interval of the empirical
+Turing estimate, which guides the decision of using either the Turing
+estimate “x” or the loglinear smoothed “y”. Defaults to 0.05, as per
+the reference implementation by Sampson, but consider that the authors,
+both in their paper and in the code following suggestions credited to
+private communication with Fan Yang, consider using a value of 0.1.</p>
+</div></blockquote>
+<p><strong>allow_fail</strong> : bool</p>
+<blockquote>
+<div><p>A logic value informing if the function is allowed to fail, throwing
+RuntimeWarning exceptions, if the essential assumptions on the
+frequency distribution are not met, i.e., if the slope of the loglinear
+regression is &gt; -1.0 or if an unobserved count is reached before we are
+able to cross the smoothing threshold. If set to False, the estimation
+might result in an unreliable probability distribution; defaults to
+True.</p>
+</div></blockquote>
+<p><strong>default_p0</strong> : float</p>
+<blockquote>
+<div><p>An optional value indicating the probability for unobserved samples
+(“p0”) in cases where no samples with a single count are observed; if
+this value is not specified, “p0” will default to a Laplace estimation
+for the current frequency distribution. Please note that this is
+intended change from the reference implementation by Gale and Sampson.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.smooth_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">smooth_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>method</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.smooth_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a smoothed log-probability distribution from a named method.</p>
+<p>This method is used to generalize over all implemented smoothing methods,
+especially in terms of serialization. The <cite>method</cite> argument informs which
+smoothing mehtod to use and passes all the arguments to the appropriate
+function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the log-probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>method: str</strong> :</p>
+<blockquote>
+<div><p>The name of the probability smoothing method to use. Either “uniform”,
+“random”, “mle”, “lidstone”, “laplace”, “ele”, “wittenbell”,
+“certaintydegree”, or “sgt”.</p>
+</div></blockquote>
+<p><strong>kwargs: additional arguments</strong> :</p>
+<blockquote>
+<div><p>Additional arguments passed to the appropriate smoothing method
+function.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in
+the frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.uniform_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">uniform_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.uniform_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a uniform log-probability distribution.</p>
+<p>In a uniform log-probability distribution all samples, no matter the
+observed counts, will have the same log-probability. A mass probability can
+optionally be reserved for unobserved samples.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the log-probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>unobs_prob</strong> : float</p>
+<blockquote>
+<div><p>An optional mass probability to be reserved for unobserved states,
+from 0.0 to 1.0.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in
+the frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.smoothing.wittenbell_dist">
+<code class="descclassname">lingpy.sequence.smoothing.</code><code class="descname">wittenbell_dist</code><span class="sig-paren">(</span><em>freqdist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.wittenbell_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Witten-Bell estimate log-probability distribution.</p>
+<p>In a Witten-Bell estimate log-probability a uniform probability mass is
+allocated to yet unobserved samples by using the number of samples that
+have only been observed once. The probability mass reserved for unobserved
+samples is equal to <em>T / (N +T)</em>, where <em>T</em> is the number of observed
+samples and <em>N</em> the number of total observations. This equates to the
+Maximum-Likelihood Estimate of a new type of sample occurring. The
+remaining probability mass is discounted such that all probability
+estimates sum to one, yielding:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>p = T / Z (N + T)</em>, if count == 0</li>
+<li><em>p = c / (N + T)</em>, otherwise</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>freqdist</strong> : dict</p>
+<blockquote>
+<div><p>Frequency distribution of samples (keys) and counts (values) from
+which the probability distribution will be calculated.</p>
+</div></blockquote>
+<p><strong>bins: int</strong> :</p>
+<blockquote>
+<div><p>The optional number of sample bins that can be generated by the
+experiment that is described by the probability distribution. If not
+specified, it will default to the number of samples in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>state_prob: dict</strong> :</p>
+<blockquote>
+<div><p>A dictionary of sample to log-probabilities for all the samples in the
+frequency distribution.</p>
+</div></blockquote>
+<p><strong>unobserved_prob: float</strong> :</p>
+<blockquote class="last">
+<div><p>The log-probability for samples not found in the frequency
+distribution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="module-lingpy.sequence.sound_classes">
 <span id="lingpy-sequence-sound-classes-module"></span><h2>lingpy.sequence.sound_classes module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
 <p>Module provides various methods for the handling of sound classes.</p>
@@ -320,12 +1683,6 @@ and the unicode-codepoints.</p>
 <dt id="lingpy.sequence.sound_classes.asjp2tokens">
 <code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">asjp2tokens</code><span class="sig-paren">(</span><em>seq</em>, <em>merge_vowels=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.asjp2tokens" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.sound_classes.bigrams">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">bigrams</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.bigrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a given sequence into a sequence of bigrams.</p>
-</dd></dl>
 
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.check_tokens">
@@ -371,10 +1728,10 @@ alignment of the class string.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tokens2class</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">aligned_sequence</span> <span class="o">=</span> <span class="s1">&#39;CU-KE&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">class2tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="n">aligned_sequence</span><span class="p">))</span>
@@ -427,7 +1784,7 @@ into separate entries.</p>
 <blockquote>
 <div><p>The characters which force the automatic splitting of an entry.</p>
 </div></blockquote>
-<p><strong>prepares</strong> : list</p>
+<p><strong>preparse</strong> : list</p>
 <blockquote>
 <div><p>List of tuples, giving simple replacement patterns (source and target),
 which are applied before every processing starts.</p>
@@ -454,12 +1811,6 @@ entry. If there are no splitters, the list has only size one.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="lingpy.sequence.sound_classes.fourgrams">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">fourgrams</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.fourgrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a given sequence into a sequence of trigrams.</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="lingpy.sequence.sound_classes.get_all_ngrams">
 <code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">get_all_ngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns all possible n-grams of a given sequence.</p>
@@ -483,16 +1834,10 @@ length.</p>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_all_ngrams</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_all_ngrams</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
 <span class="go">[&#39;abcde&#39;, &#39;bcde&#39;, &#39;abcd&#39;, &#39;cde&#39;, &#39;abc&#39;, &#39;bcd&#39;, &#39;ab&#39;, &#39;de&#39;, &#39;cd&#39;, &#39;bc&#39;, &#39;a&#39;, &#39;e&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;]</span>
 </pre></div>
 </div>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.sound_classes.get_n_ngrams">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">get_n_ngrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>ngram=4</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.get_n_ngrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>convert a given sequence into a sequence of ngrams.</p>
 </dd></dl>
 
 <dl class="function">
@@ -573,10 +1918,10 @@ brackets are removed along with the brackets, and</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal"><span class="pre">tokens2class</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tokens2class</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class2tokens</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">myseq</span> <span class="o">=</span> <span class="s1">&#39;t͡sɔyɡə&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ipa2tokens</span><span class="p">(</span><span class="n">myseq</span><span class="p">)</span>
 <span class="go">[&#39;t͡s&#39;, &#39;ɔy&#39;, &#39;ɡ&#39;, &#39;ə&#39;]</span>
@@ -624,7 +1969,7 @@ tokens of the original sequence.</p>
 </div></blockquote>
 <p><strong>mode</strong> : { 1, 2, 3, 4, 5 }</p>
 <blockquote>
-<div><p>Indicate which of the four possible PID scores described in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></code>
+<div><p>Indicate which of the four possible PID scores described in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></code>
 should be calculated, the fifth possibility is added for linguistic
 purposes:</p>
 <ol class="arabic simple">
@@ -649,27 +1994,27 @@ pos.)</li>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.compare.Multiple.get_pid</span></code>, <code class="xref py py-obj docutils literal"></code></p>
+<p class="last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.compare.Multiple.get_pid</span></code>, <code class="xref py py-obj docutils literal notranslate"></code></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The PID score is a common measure for the diversity of a given alignment.
 The implementation employed by LingPy follows the description of
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></code> where four different variants of PID scores are
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></code> where four different variants of PID scores are
 distinguished. Essentially, the PID score is based on the comparison of
 identical residue pairs with the total number of residue pairs in a given
 alignment.</p>
 <p class="rubric">Examples</p>
 <p>Load an alignment from the test suite.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="n">PSA</span><span class="p">(</span><span class="n">get_file</span><span class="p">(</span><span class="s1">&#39;test.psa&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Extract the alignments of the first aligned sequence pair.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">,</span><span class="n">score</span> <span class="o">=</span> <span class="n">pairs</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">,</span><span class="n">score</span> <span class="o">=</span> <span class="n">pairs</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Calculate the PID score of the alignment.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pid</span><span class="p">(</span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pid</span><span class="p">(</span><span class="n">almA</span><span class="p">,</span><span class="n">almB</span><span class="p">)</span>
 <span class="go">0.44444444444444442</span>
 </pre></div>
 </div>
@@ -705,7 +2050,7 @@ symbols which cannot be completely resolved (e.g., laryngeal h₂ in
 Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
 specifications (in particular the specifications for writing
 transcriptions in segmented strings, as employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in cases of insecurity
-of pronunciation, users can adopt a <code class="docutils literal"><span class="pre">`source/target`</span></code> style, where
+of pronunciation, users can adopt a <code class="docutils literal notranslate"><span class="pre">`source/target`</span></code> style, where
 the source is the symbol used, e.g., in a reconstruction system, and
 the target is a proposed phonetic interpretation. This practice is also
 accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
@@ -723,27 +2068,27 @@ underlying sequence.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>A prosodic string is a sequence of specific characters which indicating
-their resprective prosodic context (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description).
+their resprective prosodic context (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description).
 In contrast to the previous model, the current implementation allows for a
 more fine-graded distinction between different prosodic segments. The
 current scheme distinguishes 9 prosodic positions:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">A</span></code>: sequence-initial consonant</li>
-<li><code class="docutils literal"><span class="pre">B</span></code>: syllable-initial, non-sequence initial consonant in a context of
+<li><code class="docutils literal notranslate"><span class="pre">A</span></code>: sequence-initial consonant</li>
+<li><code class="docutils literal notranslate"><span class="pre">B</span></code>: syllable-initial, non-sequence initial consonant in a context of
 ascending sonority</li>
-<li><code class="docutils literal"><span class="pre">C</span></code>: non-syllable, non-initial consonant in ascending sonority context</li>
-<li><code class="docutils literal"><span class="pre">L</span></code>: non-syllable-final consonant in descending environment</li>
-<li><code class="docutils literal"><span class="pre">M</span></code>: syllable-final consonant in descending environment</li>
-<li><code class="docutils literal"><span class="pre">N</span></code>: word-final consonant</li>
-<li><code class="docutils literal"><span class="pre">X</span></code>: first vowel in a word</li>
-<li><code class="docutils literal"><span class="pre">Y</span></code>: non-final vowel in a word</li>
-<li><code class="docutils literal"><span class="pre">Z</span></code>: vowel occuring in the last position of a word</li>
-<li><code class="docutils literal"><span class="pre">T</span></code>: tone</li>
-<li><code class="docutils literal"><span class="pre">_</span></code>: word break</li>
+<li><code class="docutils literal notranslate"><span class="pre">C</span></code>: non-syllable, non-initial consonant in ascending sonority context</li>
+<li><code class="docutils literal notranslate"><span class="pre">L</span></code>: non-syllable-final consonant in descending environment</li>
+<li><code class="docutils literal notranslate"><span class="pre">M</span></code>: syllable-final consonant in descending environment</li>
+<li><code class="docutils literal notranslate"><span class="pre">N</span></code>: word-final consonant</li>
+<li><code class="docutils literal notranslate"><span class="pre">X</span></code>: first vowel in a word</li>
+<li><code class="docutils literal notranslate"><span class="pre">Y</span></code>: non-final vowel in a word</li>
+<li><code class="docutils literal notranslate"><span class="pre">Z</span></code>: vowel occuring in the last position of a word</li>
+<li><code class="docutils literal notranslate"><span class="pre">T</span></code>: tone</li>
+<li><code class="docutils literal notranslate"><span class="pre">_</span></code>: word break</li>
 </ul>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_string</span><span class="p">(</span><span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_string</span><span class="p">(</span><span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
 <span class="go">&#39;AXBZ&#39;</span>
 </pre></div>
 </div>
@@ -759,7 +2104,7 @@ ascending sonority</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>prostring</strong> : string</p>
 <blockquote>
-<div><p>A prosodic string as it is returned by <a class="reference internal" href="#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-func docutils literal"><span class="pre">prosodic_string()</span></code></a>.</p>
+<div><p>A prosodic string as it is returned by <a class="reference internal" href="#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">prosodic_string()</span></code></a>.</p>
 </div></blockquote>
 <p><strong>_transform</strong> : dict</p>
 <blockquote>
@@ -779,14 +2124,14 @@ strings to your own user-defined prosodic weight schema.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-obj docutils literal"><span class="pre">prosodic_string</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prosodic_string</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>Prosodic weights are specific scaling factors which decrease or increase
-the gap score of a given segment in alignment analyses (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description).</p>
+the gap score of a given segment in alignment analyses (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for a detailed description).</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">prostring</span> <span class="o">=</span> <span class="s1">&#39;#vC&gt;&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">prosodic_weights</span><span class="p">(</span><span class="n">prostring</span><span class="p">)</span>
 <span class="go">[2.0, 1.3, 1.5, 0.7]</span>
@@ -850,8 +2195,8 @@ the alignment is passed in segmented form.</p>
 <dl class="docutils">
 <dt>tokens <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
 <dd>A token (phonetic segment).</dd>
-<dt>model <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></span></dt>
-<dd>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object.</dd>
+<dt>model <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></span></dt>
+<dd>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object.</dd>
 <dt>stress <span class="classifier-delimiter">:</span> <span class="classifier">str (default=rcParams[‘stress’])</span></dt>
 <dd>A string containing the stress symbols used in the analysis. Defaults
 to the stress as defined in ~lingpy.settings.rcParams.</dd>
@@ -864,7 +2209,7 @@ symbols which cannot be completely resolved (e.g., laryngeal h₂ in
 Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
 specifications (in particular the specifications for writing
 transcriptions in segmented strings, as employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in cases of insecurity
-of pronunciation, users can adopt a <code class="docutils literal"><span class="pre">`source/target`</span></code> style, where
+of pronunciation, users can adopt a <code class="docutils literal notranslate"><span class="pre">`source/target`</span></code> style, where
 the source is the symbol used, e.g., in a reconstruction system, and
 the target is a proposed phonetic interpretation. This practice is also
 accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</dd>
@@ -885,7 +2230,7 @@ cannot be resolved, the respective string will be rendered as “0”
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal"><span class="pre">token2class</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">token2class</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -899,11 +2244,11 @@ cannot be resolved, the respective string will be rendered as “0”
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tokens</strong> : list</p>
 <blockquote>
-<div><p>A list of tokens as they are returned from <a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-func docutils literal"><span class="pre">ipa2tokens()</span></code></a>.</p>
+<div><p>A list of tokens as they are returned from <a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-func docutils literal notranslate"><span class="pre">ipa2tokens()</span></code></a>.</p>
 </div></blockquote>
-<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></p>
+<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p>
 <blockquote>
-<div><p>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a> object.</p>
+<div><p>A <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object.</p>
 </div></blockquote>
 <p><strong>stress</strong> : str (default=rcParams[‘stress’])</p>
 <blockquote>
@@ -923,7 +2268,7 @@ Indo-European). Following the <a class="reference external" href="http://cldf.cl
 specifications for writing transcriptions in segmented strings, as
 employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in
 cases of insecurity of pronunciation, users can adopt a
-<code class="docutils literal"><span class="pre">`source/target`</span></code> style, where the source is the symbol used, e.g.,
+<code class="docutils literal notranslate"><span class="pre">`source/target`</span></code> style, where the source is the symbol used, e.g.,
 in a reconstruction system, and the target is a proposed phonetic
 interpretation. This practice is also accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
 </div></blockquote>
@@ -941,7 +2286,7 @@ be rendered as “0” (zero).</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal"><span class="pre">token2class</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ipa2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class2tokens</span></code></a>, <a class="reference internal" href="#lingpy.sequence.sound_classes.token2class" title="lingpy.sequence.sound_classes.token2class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">token2class</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The function ~lingpy.sequence.sound_classes.token2class returns a “0”
@@ -951,7 +2296,7 @@ algorithms, we have some unwanted and often even unforeseeable behavior,
 if the sequence is completely unknown. For this reason, this function
 raises a ValueError, if a resulting sequence only contains unknown sounds.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">ipa2tokens</span><span class="p">(</span><span class="s1">&#39;t͡sɔyɡə&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">classes</span> <span class="o">=</span> <span class="n">tokens2class</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span><span class="s1">&#39;sca&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">classes</span><span class="p">)</span>
@@ -963,8 +2308,7 @@ raises a ValueError, if a resulting sequence only contains unknown sounds.</p>
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.tokens2morphemes">
 <code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">tokens2morphemes</code><span class="sig-paren">(</span><em>tokens</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2morphemes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function splits a list of tokens into subsequent lists of morphemes if the list
-contains morpheme separators.</p>
+<dd><p>Split a string into morphemes if it contains separators.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -987,71 +2331,192 @@ contains morpheme separators.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.sound_classes.trigrams">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">trigrams</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.trigrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a given sequence into a sequence of trigrams.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-lingpy.sequence.tiers">
-<span id="lingpy-sequence-tiers-module"></span><h2>lingpy.sequence.tiers module<a class="headerlink" href="#module-lingpy.sequence.tiers" title="Permalink to this headline">¶</a></h2>
-<p>Module provides tools to handle transcriptions as multi-tiered sequences.</p>
-<dl class="function">
-<dt id="lingpy.sequence.tiers.cvcv">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">cvcv</code><span class="sig-paren">(</span><em>sequence</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.cvcv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CV-template representation out of a sound sequence.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.get_stress">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">get_stress</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.get_stress" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.is_consonant">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_consonant</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_consonant" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.is_sound">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_sound</code><span class="sig-paren">(</span><em>sound</em>, <em>what</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_sound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check whether a sound is a vowel or not.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.is_stressed">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_stressed</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_stressed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Quick check for stress.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.is_tone">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_tone</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_tone" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.is_vowel">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">is_vowel</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.is_vowel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.remove_stress">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">remove_stress</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.remove_stress" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="lingpy.sequence.tiers.sound_type">
-<code class="descclassname">lingpy.sequence.tiers.</code><code class="descname">sound_type</code><span class="sig-paren">(</span><em>sound</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tiers.sound_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Shortcut to determine basic sound type (C, V, or T).</p>
+<p class="rubric">Notes</p>
+<p>Function splits a list of tokens into subsequent lists of morphemes if the list
+contains morpheme separators. If no separators are found, but tonemarkers,
+it will still split the string according to the tones. If you want to avoid
+this behavior, set the keyword <strong>split_on_tones</strong> to False.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="module-lingpy.sequence">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.sequence" title="Permalink to this headline">¶</a></h2>
 <p>Module provides methods and functions for dealing with linguistic sequences.</p>
+<dl class="function">
+<dt id="lingpy.sequence.bigrams">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">bigrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=2</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.bigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all bigrams of a sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the bigrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the bigrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">bigrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.confirm">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">confirm</code><span class="sig-paren">(</span><em>question</em>, <em>*</em>, <em>default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask a yes/no question interactively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>question</strong> – The text of the question to ask.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the answer was “yes”, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.data_path">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">data_path</code><span class="sig-paren">(</span><em>*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.data_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.dotjoin">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">dotjoin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.dotjoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
+<p class="rubric">Notes</p>
+<p>An implicit conversion of objects to strings is performed as well.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.fourgrams">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">fourgrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=4</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.fourgrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all fourgrams of a sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the fourgrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the fourgrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">fourgrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.tabjoin">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">tabjoin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.tabjoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
+<p class="rubric">Notes</p>
+<p>An implicit conversion of objects to strings is performed as well.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.sequence.trigrams">
+<code class="descclassname">lingpy.sequence.</code><code class="descname">trigrams</code><span class="sig-paren">(</span><em>sequence</em>, <em>*</em>, <em>order=3</em>, <em>pad_symbol='$$$'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.trigrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an iterator for collecting all trigrams of a  sequence.</p>
+<p>The sequence is padded by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence: list or str</strong> :</p>
+<blockquote>
+<div><p>The sequence from which the trigrams will be collected.</p>
+</div></blockquote>
+<p><strong>pad_symbol: object</strong> :</p>
+<blockquote>
+<div><p>An optional symbol to be used as start-of- and end-of-sequence
+boundaries. The same symbol is used for both boundaries. Must be a
+value different from None, defaults to “$$$”.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out: iterable</strong> :</p>
+<blockquote class="last">
+<div><p>An iterable over the trigrams of the sequence, returned as tuples.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;Insurgents killed in ongoing fighting&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ngram</span> <span class="ow">in</span> <span class="n">trigrams</span><span class="p">(</span><span class="n">sent</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ngram</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(&#39;$$$&#39;, &#39;$$$&#39;, &#39;Insurgents&#39;)</span>
+<span class="go">(&#39;$$$&#39;, &#39;Insurgents&#39;, &#39;killed&#39;)</span>
+<span class="go">(&#39;Insurgents&#39;, &#39;killed&#39;, &#39;in&#39;)</span>
+<span class="go">(&#39;killed&#39;, &#39;in&#39;, &#39;ongoing&#39;)</span>
+<span class="go">(&#39;in&#39;, &#39;ongoing&#39;, &#39;fighting&#39;)</span>
+<span class="go">(&#39;ongoing&#39;, &#39;fighting&#39;, &#39;$$$&#39;)</span>
+<span class="go">(&#39;fighting&#39;, &#39;$$$&#39;, &#39;$$$&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 </div>
 
@@ -1064,14 +2529,15 @@ contains morpheme separators.</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.sequence package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence.generate">lingpy.sequence.generate module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.ngrams">lingpy.sequence.ngrams module</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence.profile">lingpy.sequence.profile module</a></li>
+<li><a class="reference internal" href="#module-lingpy.sequence.smoothing">lingpy.sequence.smoothing module</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence.sound_classes">lingpy.sequence.sound_classes module</a></li>
-<li><a class="reference internal" href="#module-lingpy.sequence.tiers">lingpy.sequence.tiers module</a></li>
 <li><a class="reference internal" href="#module-lingpy.sequence">Module contents</a></li>
 </ul>
 </li>
@@ -1086,12 +2552,14 @@ contains morpheme separators.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1130,7 +2598,7 @@ contains morpheme separators.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

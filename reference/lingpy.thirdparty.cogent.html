@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.thirdparty.cogent package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -86,7 +79,7 @@ Spaces and quote marks are OK inside unquoted labels.</dd>
 <dl class="exception">
 <dt id="lingpy.thirdparty.cogent.newick.TreeParseError">
 <em class="property">exception </em><code class="descclassname">lingpy.thirdparty.cogent.newick.</code><code class="descname">TreeParseError</code><a class="headerlink" href="#lingpy.thirdparty.cogent.newick.TreeParseError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ValueError</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a></p>
 </dd></dl>
 
 <dl class="function">
@@ -124,7 +117,7 @@ with spaces in all names read.</p>
 <dl class="class">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode">
 <em class="property">class </em><code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">PhyloNode</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="lingpy.thirdparty.cogent.tree.TreeNode"><code class="xref py py-class docutils literal"><span class="pre">lingpy.thirdparty.cogent.tree.TreeNode</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="lingpy.thirdparty.cogent.tree.TreeNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.thirdparty.cogent.tree.TreeNode</span></code></a></p>
 <dl class="attribute">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.Length">
 <code class="descname">Length</code><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.Length" title="Permalink to this definition">¶</a></dt>
@@ -172,7 +165,24 @@ a complete matrix (i.e. a,b and b,a).</dd>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.getNewick">
 <code class="descname">getNewick</code><span class="sig-paren">(</span><em>with_distances=False</em>, <em>semicolon=True</em>, <em>escape_name=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.getNewick" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return the newick string for this tree.</p>
+<dl class="docutils">
+<dt>Arguments:</dt>
+<dd><ul class="first last simple">
+<li>with_distances: whether branch lengths are included.</li>
+<li>semicolon: end tree string with a semicolon</li>
+<li><dl class="first docutils">
+<dt>escape_name: if any of these characters []’”(),:;_ exist in a</dt>
+<dd>nodes name, wrap the name in single quotes</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>NOTE: This method returns the Newick representation of this node
+and its descendents. This method is a modification of an implementation
+by Zongzhi Liu</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.PhyloNode.prune">
@@ -259,7 +269,7 @@ confusing in some cases).</p>
 <dl class="class">
 <dt id="lingpy.thirdparty.cogent.tree.TreeBuilder">
 <em class="property">class </em><code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">TreeBuilder</code><span class="sig-paren">(</span><em>mutable=False</em>, <em>constructor=&lt;class 'lingpy.thirdparty.cogent.tree.PhyloNode'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge">
 <code class="descname">createEdge</code><span class="sig-paren">(</span><em>children</em>, <em>name</em>, <em>params</em>, <em>nameLoaded=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge" title="Permalink to this definition">¶</a></dt>
@@ -277,13 +287,13 @@ confusing in some cases).</p>
 <dl class="exception">
 <dt id="lingpy.thirdparty.cogent.tree.TreeError">
 <em class="property">exception </em><code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">TreeError</code><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.thirdparty.cogent.tree.TreeNode">
 <em class="property">class </em><code class="descclassname">lingpy.thirdparty.cogent.tree.</code><code class="descname">TreeNode</code><span class="sig-paren">(</span><em>Name=None</em>, <em>Children=None</em>, <em>Parent=None</em>, <em>Params=None</em>, <em>NameLoaded=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Store information about a tree node. Mutable.</p>
 <dl class="docutils">
 <dt>Parameters:</dt>
@@ -935,7 +945,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.thirdparty.cogent package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -955,12 +965,14 @@ This version from Raymond Hettinger, 2006/03/23</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -999,7 +1011,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

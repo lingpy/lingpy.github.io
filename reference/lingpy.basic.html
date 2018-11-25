@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.basic package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -198,7 +191,7 @@ the headers.</p>
 <dl class="class">
 <dt id="lingpy.basic.parser.QLCParser">
 <em class="property">class </em><code class="descclassname">lingpy.basic.parser.</code><code class="descname">QLCParser</code><span class="sig-paren">(</span><em>filename</em>, <em>conf=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for the handling of text files in QLC format.</p>
 <dl class="method">
 <dt id="lingpy.basic.parser.QLCParser.add_entries">
@@ -245,12 +238,12 @@ and to modify it with help of a function.</p>
 <code class="descname">pickle</code><span class="sig-paren">(</span><em>filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser.pickle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store the QLCParser instance in a pickle file.</p>
 <p class="rubric">Notes</p>
-<p>The function stores a binary file called <code class="docutils literal"><span class="pre">FILENAME.pkl</span></code> with <code class="docutils literal"><span class="pre">FILENAME</span></code>
+<p>The function stores a binary file called <code class="docutils literal notranslate"><span class="pre">FILENAME.pkl</span></code> with <code class="docutils literal notranslate"><span class="pre">FILENAME</span></code>
 corresponding to the name of the original file in the
 <a class="reference external" href="https://github.com/ActiveState/appdirs#some-example-output">user cache dir</a>
 for lingpy on your system.
 To restore the instance from the pickle call
-<a class="reference internal" href="#lingpy.basic.parser.QLCParser.unpickle" title="lingpy.basic.parser.QLCParser.unpickle"><code class="xref py py-meth docutils literal"><span class="pre">unpickle()</span></code></a>.</p>
+<a class="reference internal" href="#lingpy.basic.parser.QLCParser.unpickle" title="lingpy.basic.parser.QLCParser.unpickle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unpickle()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -263,7 +256,7 @@ To restore the instance from the pickle call
 <dl class="class">
 <dt id="lingpy.basic.parser.QLCParserWithRowsAndCols">
 <em class="property">class </em><code class="descclassname">lingpy.basic.parser.</code><code class="descname">QLCParserWithRowsAndCols</code><span class="sig-paren">(</span><em>filename</em>, <em>row</em>, <em>col</em>, <em>conf</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParser" title="lingpy.basic.parser.QLCParser"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.parser.QLCParser</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParser" title="lingpy.basic.parser.QLCParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.parser.QLCParser</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries">
 <code class="descname">get_entries</code><span class="sig-paren">(</span><em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="Permalink to this definition">¶</a></dt>
@@ -285,6 +278,22 @@ format.</p>
 
 </dd></dl>
 
+<dl class="function">
+<dt id="lingpy.basic.parser.confirm">
+<code class="descclassname">lingpy.basic.parser.</code><code class="descname">confirm</code><span class="sig-paren">(</span><em>question</em>, <em>*</em>, <em>default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask a yes/no question interactively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>question</strong> – The text of the question to ask.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the answer was “yes”, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-lingpy.basic.tree">
 <span id="lingpy-basic-tree-module"></span><h2>lingpy.basic.tree module<a class="headerlink" href="#module-lingpy.basic.tree" title="Permalink to this headline">¶</a></h2>
@@ -292,7 +301,7 @@ format.</p>
 <dl class="class">
 <dt id="lingpy.basic.tree.Tree">
 <em class="property">class </em><code class="descclassname">lingpy.basic.tree.</code><code class="descname">Tree</code><span class="sig-paren">(</span><em>tree</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="lingpy.thirdparty.cogent.html#lingpy.thirdparty.cogent.tree.PhyloNode" title="lingpy.thirdparty.cogent.tree.PhyloNode"><code class="xref py py-class docutils literal"><span class="pre">lingpy.thirdparty.cogent.tree.PhyloNode</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="lingpy.thirdparty.cogent.html#lingpy.thirdparty.cogent.tree.PhyloNode" title="lingpy.thirdparty.cogent.tree.PhyloNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.thirdparty.cogent.tree.PhyloNode</span></code></a></p>
 <p>Basic class for the handling of phylogenetic trees.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -409,9 +418,24 @@ the total number of internal branches.</p>
 <span id="lingpy-basic-wordlist-module"></span><h2>lingpy.basic.wordlist module<a class="headerlink" href="#module-lingpy.basic.wordlist" title="Permalink to this headline">¶</a></h2>
 <p>This module provides a basic class for the handling of word lists.</p>
 <dl class="class">
+<dt id="lingpy.basic.wordlist.BounceAsID">
+<em class="property">class </em><code class="descclassname">lingpy.basic.wordlist.</code><code class="descname">BounceAsID</code><a class="headerlink" href="#lingpy.basic.wordlist.BounceAsID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A helper class for CLDF conversion when tables are missing.</p>
+<p>A class with trivial ‘item lookup’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">BounceAsID</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">{&quot;ID&quot;: 5}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="s2">&quot;long_id&quot;</span><span class="p">]</span>
+<span class="go">{&quot;ID&quot;: &quot;long_id&quot;}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
 <dt id="lingpy.basic.wordlist.Wordlist">
 <em class="property">class </em><code class="descclassname">lingpy.basic.wordlist.</code><code class="descname">Wordlist</code><span class="sig-paren">(</span><em>filename</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="lingpy.basic.parser.QLCParserWithRowsAndCols"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.parser.QLCParserWithRowsAndCols</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="lingpy.basic.parser.QLCParserWithRowsAndCols"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.parser.QLCParserWithRowsAndCols</span></code></a></p>
 <p>Basic class for the handling of multilingual word lists.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -540,6 +564,38 @@ publication of data, using specific, nested statements to create, for
 example, HTML or LaTeX files from the wordlist data.</p>
 </dd></dl>
 
+<dl class="classmethod">
+<dt id="lingpy.basic.wordlist.Wordlist.from_cldf">
+<em class="property">classmethod </em><code class="descname">from_cldf</code><span class="sig-paren">(</span><em>path</em>, <em>columns=[]</em>, <em>filter=&lt;function Wordlist.&lt;lambda&gt;&gt;</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a CLDF dataset.</p>
+<p>Open a CLDF Dataset – with metadata or metadata-free – (only Wordlist
+datasets are supported for now, because other modules don’t seem to
+make sense for LingPy) and transform it into this Class. Columns from
+the FormTable are imported in lowercase, columns from LanguageTable,
+ParameterTable and CognateTable are prefixed with <cite>langage_</cite>,
+<cite>concept_</cite> and <a href="#id1"><span class="problematic" id="id2">`</span></a>cogid_`and converted to lowercase.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>columns: list of strings</strong> :</p>
+<blockquote>
+<div><p>The list of columns to import. (default: all columns)</p>
+</div></blockquote>
+<p><strong>filter: function: rowdict → bool</strong> :</p>
+<blockquote>
+<div><p>A condition function for importing only some rows. (default: lambda row: row[“form”])</p>
+</div></blockquote>
+<p><strong>All other parameters are passed on to the `cls`</strong> :</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>A `cls` object representing the CLDF dataset</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_dict">
 <code class="descname">get_dict</code><span class="sig-paren">(</span><em>col=''</em>, <em>row=''</em>, <em>entry=''</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_dict" title="Permalink to this definition">¶</a></dt>
@@ -552,14 +608,14 @@ example, HTML or LaTeX files from the wordlist data.</p>
 <blockquote>
 <div><p>The column index evaluated by the method. It should contain one of the
 values in the row of the
-<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> instance, usually a
+<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> instance, usually a
 taxon (language) name.</p>
 </div></blockquote>
 <p><strong>row</strong> : string (default=”“)</p>
 <blockquote>
 <div><p>The row index evaluated by the method. It should contain one of the
 values in the row of the
-<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> instance, usually a
+<a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> instance, usually a
 taxon (language) name.</p>
 </div></blockquote>
 <p><strong>entry</strong> : string (default=”“)</p>
@@ -583,34 +639,34 @@ keyword.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.get_list</span></code></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.add_entries</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Wordlist.get_list</span></code></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Wordlist.add_entries</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The “col” and “row” keywords in the function are all aliased according
-to the description in the <code class="docutils literal"><span class="pre">wordlist.rc</span></code> file. Thus, instead of
+to the description in the <code class="docutils literal notranslate"><span class="pre">wordlist.rc</span></code> file. Thus, instead of
 using these attributes, the aliases can also be taken. For selecting a
 language, one may type something like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and for the selection of a concept, one may type something like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s1">&#39;CONCEPT&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s1">&#39;CONCEPT&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>See the examples below for details.</p>
 <p class="rubric">Examples</p>
-<p>Load the <code class="docutils literal"><span class="pre">harry_potter.csv</span></code> file:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
+<p>Load the <code class="docutils literal notranslate"><span class="pre">harry_potter.csv</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Select all IPA-entries for the language “German”:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span><span class="p">)</span>
 <span class="go">{&#39;Harry&#39;: [&#39;haralt&#39;], &#39;hand&#39;: [&#39;hant&#39;], &#39;leg&#39;: [&#39;bain&#39;]}</span>
 </pre></div>
 </div>
 <p>Select all words (orthographical representation) for the concept
 “Harry”:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_dict</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
 <span class="go">{&#39;English&#39;: [&#39;hæri&#39;], &#39;German&#39;: [&#39;haralt&#39;], &#39;Russian&#39;: [&#39;gari&#39;],             &#39;Ukrainian&#39;: [&#39;gari&#39;]}</span>
 </pre></div>
 </div>
@@ -705,28 +761,28 @@ data.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.get_list</span></code></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal"><span class="pre">Wordlist.add_entries</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Wordlist.get_list</span></code></a>, <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Wordlist.add_entries</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The ‘col’ and ‘row’ keywords in the function are all aliased according
-to the description in the <code class="docutils literal"><span class="pre">wordlist.rc</span></code> file. Thus, instead of
+to the description in the <code class="docutils literal notranslate"><span class="pre">wordlist.rc</span></code> file. Thus, instead of
 using these attributes, the aliases can also be taken. For selecting a
 language, one may type something like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and for the selection of a concept, one may type something like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s1">&#39;CONCEPT&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Wordlist</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s1">&#39;CONCEPT&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>See the examples below for details.</p>
 <p class="rubric">Examples</p>
-<p>Load the <code class="docutils literal"><span class="pre">harry_potter.csv</span></code> file:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
+<p>Load the <code class="docutils literal notranslate"><span class="pre">harry_potter.csv</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="s1">&#39;harry_potter.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Select all IPA-entries for the language “German”:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s1">&#39;ipa&#39;</span>
 <span class="go">[&#39;bain&#39;, &#39;hant&#39;, &#39;haralt&#39;]</span>
 </pre></div>
 </div>
@@ -735,7 +791,7 @@ don’t have a word in the given language). If one wants to avoid this,
 the ‘flat’ keyword should be set to <em>True</em>.</p>
 <p>Select all words (orthographical representation) for the concept
 “Harry”:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
 <span class="go">[[&#39;Harry&#39;, &#39;Harald&#39;, &#39;Гари&#39;, &#39;Гарi&#39;]]</span>
 </pre></div>
 </div>
@@ -745,7 +801,7 @@ lists, since it is possible that the original file contains synonyms
 (multiple words corresponding to the same concept). If one wants to
 have a flat representation of the entries, the ‘flat’ keyword should be
 set to <em>True</em>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="n">concept</span><span class="o">=</span><span class="s2">&quot;Harry&quot;</span><span class="p">,</span><span class="n">entry</span><span class="o">=</span><span class="s2">&quot;words&quot;</span><span class="p">,</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">[&#39;hæri&#39;, &#39;haralt&#39;, &#39;gari&#39;, &#39;hari&#39;]</span>
 </pre></div>
 </div>
@@ -808,7 +864,7 @@ columns as specified.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>Load a wordlist from LingPy’s test data:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="n">Wordlist</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s2">&quot;KSL.qlc&quot;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">wl</span><span class="o">.</span><span class="n">iter_rows</span><span class="p">(</span><span class="s1">&#39;ipa&#39;</span><span class="p">))[:</span><span class="mi">10</span><span class="p">]</span>
@@ -945,7 +1001,7 @@ or directly as an attribute of the wordlist.</p>
 
 <dl class="function">
 <dt id="lingpy.basic.wordlist.from_cldf">
-<code class="descclassname">lingpy.basic.wordlist.</code><code class="descname">from_cldf</code><span class="sig-paren">(</span><em>path</em>, <em>to=&lt;class 'lingpy.basic.wordlist.Wordlist'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.basic.wordlist.</code><code class="descname">from_cldf</code><span class="sig-paren">(</span><em>path</em>, <em>to=&lt;class 'lingpy.basic.wordlist.Wordlist'&gt;</em>, <em>concept='Name'</em>, <em>concepticon='Concepticon_ID'</em>, <em>glottocode='Glottocode'</em>, <em>language='Name'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load data from CLDF into a LingPy Wordlist object or similar.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -956,9 +1012,26 @@ or directly as an attribute of the wordlist.</p>
 <div><p>The path to the metadata-file of your CLDF dataset.</p>
 </div></blockquote>
 <p><strong>to</strong> : ~lingpy.basic.wordlist.Wordlist</p>
-<blockquote class="last">
+<blockquote>
 <div><p>A ~lingpy.basic.wordlist.Wordlist object or one of the descendants
 (LexStat, Alignmnent).</p>
+</div></blockquote>
+<p><strong>concept</strong> : str (default=’gloss’)</p>
+<blockquote>
+<div><p>The name used for the basic gloss in the <cite>parameters.csv</cite> table.</p>
+</div></blockquote>
+<p><strong>glottocode</strong> : str (default=’glottocode’)</p>
+<blockquote>
+<div><p>The default name for the column storing the Glottolog ID in the
+<cite>languages.csv</cite> table.</p>
+</div></blockquote>
+<p><strong>language</strong> : str (default=’name’)</p>
+<blockquote>
+<div><p>The default name for the language name in the <cite>languages.csv</cite> table.</p>
+</div></blockquote>
+<p><strong>concepticon</strong> : str (default=’conceptset’)</p>
+<blockquote class="last">
+<div><p>The default name for the concept set in the <cite>paramters.csv</cite> table.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1005,7 +1078,7 @@ basis for the tabular representation of the word list.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>This function returns a <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> object.
+<p>This function returns a <a class="reference internal" href="#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> object.
 In contrast to the normal way to load a wordlist from a tab-separated file,
 however, this allows to directly load a wordlist from any “normal”
 csv-file, with your own specified delimiters and quote characters. If the
@@ -1031,7 +1104,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.basic package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -1053,12 +1126,14 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1097,7 +1172,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

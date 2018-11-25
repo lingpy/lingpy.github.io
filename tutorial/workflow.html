@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Workflow Example &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -64,20 +57,20 @@ LingPy
   <div class="section" id="workflow-example">
 <h1>Workflow Example<a class="headerlink" href="#workflow-example" title="Permalink to this headline">¶</a></h1>
 <p>This is an example workflow that illustrates some of the functionality of LingPy. We will use a
-small dataset by <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kessler2001"><span class="pre">Kessler2001</span></a></code> in order to illustrate how to get from word list data to
+small dataset by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kessler2001"><span class="pre">Kessler2001</span></a></code> in order to illustrate how to get from word list data to
 aligned cognate sets.</p>
 <p>We start by loading the data, which is located in LingPy’s test suite, and can be accessed with help
-of the <a class="reference internal" href="../reference/lingpy.tests.html#lingpy.tests.util.test_data" title="lingpy.tests.util.test_data"><code class="xref py py-class docutils literal"><span class="pre">test_data</span></code></a> function. We use this function to load the file <cite>KSL.qlc</cite> (it provides the exact path to the file), and load the file as a <a class="reference internal" href="../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> object:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+of the <a class="reference internal" href="../reference/lingpy.tests.html#lingpy.tests.util.test_data" title="lingpy.tests.util.test_data"><code class="xref py py-class docutils literal notranslate"><span class="pre">test_data</span></code></a> function. We use this function to load the file <cite>KSL.qlc</cite> (it provides the exact path to the file), and load the file as a <a class="reference internal" href="../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>After we loaded the data, which is given in the general LingPy format for wordlists (see
 <a class="reference internal" href="lingpy.basic.wordlist.html"><span class="doc">Handling Wordlists</span></a> for details), we can access some of its basic statistics, which are
-provided by the <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a> class upon which the LexStat class is
+provided by the <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> class upon which the LexStat class is
 based, like width (number of languages), or height (number of concepts), or length (number of words):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">lex</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lex</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">lex</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lex</span><span class="p">)</span>
 <span class="go">(7, 200, 1400)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">cols</span>
 <span class="go">[&#39;Albanian&#39;, &#39;English&#39;, &#39;French&#39;, &#39;German&#39;, &#39;Hawaiian&#39;, &#39;Navajo&#39;, &#39;Turkish&#39;]</span>
@@ -85,7 +78,7 @@ based, like width (number of languages), or height (number of concepts), or leng
 </div>
 <p>We can also determine the coverage, which is a dictionary with language name as key and number of
 concepts as value:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">coverage</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">coverage</span><span class="p">()</span>
 <span class="go">{&#39;Albanian&#39;: 200,</span>
 <span class="go"> &#39;English&#39;: 200,</span>
 <span class="go"> &#39;French&#39;: 200,</span>
@@ -99,39 +92,39 @@ concepts as value:</p>
 any strange characters and erros), this should work out of the box. However, if you encounter
 difficulties, we recommend to make an explicit check by loading the LexStat object with the
 check-keyword set to <strong>True</strong>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">),</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">),</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If the class is loaded normally, this means, your data is fine. But now let’s start with cognate
-judgments, and let’s try the LexStat algorithm (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code>), which derives individual scorers for all language
+judgments, and let’s try the LexStat algorithm (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code>), which derives individual scorers for all language
 pairs based on randomized alignments. In order to use LexStat, we first need to compute the scorer. There are many parameters, but let’s just stick to defaults for now:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">get_scorer</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">get_scorer</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Once this is done, we can compute the cognate sets. Here, we should tell LingPy in which column they
 should be stored, so we pass the keyword argument “ref” and specify it as “cognates”. We also need
 to pass a threshold. Here, for the LexStat method, a threshold of 0.6 normally works quite well:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">cluster</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;lexstat&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;cognates&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">cluster</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;lexstat&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;cognates&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now, we could already write the data to file, where we choose “tsv” as fileformat and specify
 “KSL_new” as our filename:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;tsv&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;KSL_new&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;tsv&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;KSL_new&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This resulting output file will be very large, since it contains all parameters and the computed
 scoring functions for all language pairs. If you want to avoid that and only have the raw TSV
 format, specify the “ignore” keyword and set “prettify” to “False”:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;tsv&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;KSL_new&quot;</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">prettify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;tsv&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;KSL_new&quot;</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">prettify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>How well was this automatic cognate detection? Let’s test it by computing the B-Cubed scores
-(<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1999"><span class="pre">Bagga1999</span></a></code>). These rank between 0 and 1, with one being good and 0 being bad, and come in
+(<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1999"><span class="pre">Bagga1999</span></a></code>). These rank between 0 and 1, with one being good and 0 being bad, and come in
 three flavors of precision (amount of false positives), recall (amount of false negatives) and
 F-Score (combined score). We compute them by passing the wordlist object, the gold standard (stored
 in column “cogid” in our “KSL.qlc” file), and our computed cognate sets (stored in “cognates”, as we
 specified using the “ref” keyword):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="k">import</span> <span class="n">bcubes</span><span class="p">,</span> <span class="n">diff</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="k">import</span> <span class="n">bcubes</span><span class="p">,</span> <span class="n">diff</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bcubes</span><span class="p">(</span><span class="n">lex</span><span class="p">,</span> <span class="s2">&quot;cogid&quot;</span><span class="p">,</span> <span class="s2">&quot;cognates&quot;</span><span class="p">)</span>
 <span class="go">*************************&#39;</span>
 <span class="go">* B-Cubed-Scores        *</span>
@@ -147,11 +140,11 @@ specified using the “ref” keyword):</p>
 small. Note that the scores may differ on your computer, since LexStat shuffles the word lists to
 create a random distribution. Normally, however, the differences should not be too huge.</p>
 <p>Now that we know that our data has been properly analyzed with good cognate scores, lets align it,
-using the <a class="reference internal" href="../reference/lingpy.align.html#lingpy.align.sca.Alignments" title="lingpy.align.sca.Alignments"><code class="xref py py-class docutils literal"><span class="pre">Alignments</span></code></a> class. We can directly initialize it from the
+using the <a class="reference internal" href="../reference/lingpy.align.html#lingpy.align.sca.Alignments" title="lingpy.align.sca.Alignments"><code class="xref py py-class docutils literal notranslate"><span class="pre">Alignments</span></code></a> class. We can directly initialize it from the
 LexStat object, but we need to pass the “cognates” column as “ref” (this tells LingPy, where to
 search for cognate sets which are then multiply aligned), and then, we call the function
-<a class="reference internal" href="../reference/lingpy.align.html#lingpy.align.sca.Alignments.align" title="lingpy.align.sca.Alignments.align"><code class="xref py py-class docutils literal"><span class="pre">align</span></code></a>, using the defaults for convenience:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alm</span> <span class="o">=</span> <span class="n">Alignments</span><span class="p">(</span><span class="n">lex</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s1">&#39;cognates&#39;</span><span class="p">)</span>
+<a class="reference internal" href="../reference/lingpy.align.html#lingpy.align.sca.Alignments.align" title="lingpy.align.sca.Alignments.align"><code class="xref py py-class docutils literal notranslate"><span class="pre">align</span></code></a>, using the defaults for convenience:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alm</span> <span class="o">=</span> <span class="n">Alignments</span><span class="p">(</span><span class="n">lex</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s1">&#39;cognates&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">alm</span><span class="o">.</span><span class="n">align</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -159,15 +152,15 @@ search for cognate sets which are then multiply aligned), and then, we call the 
 also difficult to see the alignments, since they are in a TSV-file in just another column, called
 “alignment” as a default. Another possibility is to write data to HTML format instead. This means
 you can’t re-import the data into LingPy, but you can inspect the results:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alm</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;KSL&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alm</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;KSL&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This will create the file <a class="reference external" href="examples/KSL.html">KSL.html</a> which you can inspect by loading it in your webbrowser.</p>
 <p>Finally, let’s make a tree of the data. This is very straightforward by passing the “cognates”
-column as a reference to the <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-class docutils literal"><span class="pre">calculate</span></code></a> function. Printing of the resulting “tree” which is
+column as a reference to the <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-class docutils literal notranslate"><span class="pre">calculate</span></code></a> function. Printing of the resulting “tree” which is
 created as an attribute of the LexStat object, is possible with help of LingPy’s
-<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.tree.Tree" title="lingpy.basic.tree.Tree"><code class="xref py py-class docutils literal"><span class="pre">Tree</span></code></a> class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="s1">&#39;tree&#39;</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s1">&#39;cognates&#39;</span><span class="p">)</span>
+<a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.tree.Tree" title="lingpy.basic.tree.Tree"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tree</span></code></a> class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="s1">&#39;tree&#39;</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s1">&#39;cognates&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lex</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">asciiArt</span><span class="p">())</span>
 <span class="go">          /-Hawaiian</span>
 <span class="go">         |</span>
@@ -207,12 +200,14 @@ languages all together.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -251,7 +246,7 @@ languages all together.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

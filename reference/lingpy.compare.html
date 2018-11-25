@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.compare package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -71,7 +64,7 @@ LingPy
 <dl class="class">
 <dt id="lingpy.compare.lexstat.LexStat">
 <em class="property">class </em><code class="descclassname">lingpy.compare.lexstat.</code><code class="descname">LexStat</code><span class="sig-paren">(</span><em>filename</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Basic class for automatic cognate detection.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -81,7 +74,7 @@ LingPy
 <blockquote>
 <div><p>The name of the file that shall be loaded.</p>
 </div></blockquote>
-<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></p>
+<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p>
 <blockquote>
 <div><p>The sound-class model that shall be used for the analysis. Defaults to
 the SCA sound-class model.</p>
@@ -98,17 +91,17 @@ tokens or kept apart as separate tokens.</p>
 key referring to the original prosodic context and the value to the new
 value.
 Currently, prosodic strings (see
-<a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal"><span class="pre">prosodic_string()</span></code></a>) offer 11
+<a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal notranslate"><span class="pre">prosodic_string()</span></code></a>) offer 11
 different prosodic contexts. Since not all these are helpful in
 preliminary analyses for cognate detection, it is useful to merge some
 of these contexts into one. The default settings distinguish only 5
 instead of 11 available contexts, namely:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
-<li><code class="docutils literal"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
-<li><code class="docutils literal"><span class="pre">V</span></code> for all vowels,</li>
-<li><code class="docutils literal"><span class="pre">T</span></code> for all tones, and</li>
-<li><code class="docutils literal"><span class="pre">_</span></code> for word-breaks.</li>
+<li><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
+<li><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
+<li><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</li>
+<li><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</li>
+<li><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</li>
 </ul>
 <p>Make sure to check also the “vowel” keyword when initialising a LexStat
 object, since the symbols you use for vowels and tones should be
@@ -117,7 +110,7 @@ identical with the ones you define in your transform dictionary.</p>
 <p><strong>vowels</strong> : str (default=”<a href="#id1"><span class="problematic" id="id2">VT_</span></a>”)</p>
 <blockquote>
 <div><p>For scoring function creation using the
-<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function, you
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_scorer</span></code></a> function, you
 have the possibility to use reduced scores for the matching of tones
 and vowels by modifying the “vscale” parameter, which is set to 0.5 as
 a default.  In order to make sure that vowels and tones are properly
@@ -125,14 +118,14 @@ detected, make sure your prosodic string representation of vowels
 matches the one in this keyword. Thus, if you change the prosodic
 strings using the “transform” keyword, you also need to change the
 vowel string, to make sure that “vscale” works as wanted in the
-<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function.</p>
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_scorer</span></code></a> function.</p>
 </div></blockquote>
 <p><strong>check</strong> : bool (default=False)</p>
 <blockquote>
 <div><p>If set to <strong>True</strong>, the input file will first be checked for errors
 before the calculation is carried out. Errors will be written to the
-file <strong>errors</strong>, defaulting to <code class="docutils literal"><span class="pre">errors.log</span></code>. See also
-<code class="docutils literal"><span class="pre">apply_checks</span></code> apply_checks : bool (default=False)
+file <strong>errors</strong>, defaulting to <code class="docutils literal notranslate"><span class="pre">errors.log</span></code>. See also
+<code class="docutils literal notranslate"><span class="pre">apply_checks</span></code> apply_checks : bool (default=False)
 If set to <strong>True</strong>, any errors identified by <cite>check</cite> will be handled
 silently.</p>
 </div></blockquote>
@@ -181,7 +174,7 @@ Unless specific explicitly, this is automatically created.</p>
 </div></blockquote>
 <p><strong>prostrings</strong> : str (default=”prostrings”)</p>
 <blockquote>
-<div><p>Name of the column containing prosodic strings (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code>
+<div><p>Name of the column containing prosodic strings (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014d"><span class="pre">List2014d</span></a></code>
 for more details) of the segmented transcriptions, containing one
 character per prosodic string.  Prostrings add a contextual component
 to phonetic sequences. They are automatically created, but can likewise
@@ -193,19 +186,19 @@ be submitted from the initial data.</p>
 sequence. Gap weights are positive floats for each segment in a string,
 which modify the gap opening penalty during alignment.</p>
 </div></blockquote>
-<p><strong>tokenize</strong> : function             (default=:py:class:<cite>~lingpy.sequence.sound_classes.ipa2tokens</cite>)</p>
+<p><strong>tokenize</strong> : function (default=ipa2tokens)</p>
 <blockquote>
 <div><p>The function which should be used to tokenize the entries in the column
 storing the transcriptions in case no segmentation is provided by the
 user.</p>
 </div></blockquote>
-<p><strong>get_prostring</strong> : function             (default=:py:class:<cite>~lingpy.sequence.sound_classes.prosodic_string</cite>)</p>
+<p><strong>get_prostring</strong> : function (default=prosodic_string)</p>
 <blockquote class="last">
 <div><p>The function which should be used to create prosodic strings from the
 segmented transcription data. If you want to completely ignore prosodic
 strings in LexStat calculations, you could just pass the following
 function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="s1">&#39;inputfile.tsv&#39;</span><span class="p">,</span> <span class="n">get_prostring</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span> <span class="k">for</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="s1">&#39;inputfile.tsv&#39;</span><span class="p">,</span> <span class="n">get_prostring</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span> <span class="k">for</span>
 <span class="go">    y in x])</span>
 </pre></div>
 </div>
@@ -233,7 +226,7 @@ pointing to unique combinations of words with the same meaning in all
 language pairs.</td>
 </tr>
 <tr class="row-even"><td>model</td>
-<td><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></td>
+<td><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></td>
 <td>The sound class model instance which serves to convert the phonetic
 data into sound classes.</td>
 </tr>
@@ -263,7 +256,7 @@ class value.</td>
 </tr>
 <tr class="row-odd"><td>scorer</td>
 <td>dict</td>
-<td><p class="first">A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">ScoreDict</span></code></a>
+<td><p class="first">A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
 objects, which are used to score the strings. LexStat distinguishes
 two different scoring functions:</p>
 <ul class="last simple">
@@ -272,14 +265,14 @@ only of sound class values and prosodic string values. This scorer is
 traditionally used to carry out the first alignment in order to
 calculate the language-specific scorer. It is directly accessible as
 an attribute of the LexStat class
-(<code class="xref py py-class docutils literal"><span class="pre">rscorer</span></code>). The characters
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">rscorer</span></code>). The characters
 which constitute the values in this scorer are accessible via the
 “rchars” attribue of each lexstat class.</li>
 <li>bscorer: The language-specific scorer. This scorer is made of unique
 language-specific characters. These are accessible via the “chars”
 attribute of each LexStat class. As the “rscorer”, the “bscorer” can
 also be accessed directly as an attribute of the LexStat class
-(<code class="xref py py-class docutils literal"><span class="pre">bscorer</span></code>).</li>
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</li>
 </ul>
 </td>
 </tr>
@@ -357,9 +350,9 @@ will be returned.</p>
 </div></blockquote>
 <p><strong>cluster_method</strong> : {‘upgma’,’single’,’complete’, ‘mcl’} (default=’upgma’)</p>
 <blockquote>
-<div><p>Select the cluster method. ‘upgma’ (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>) refers to
+<div><p>Select the cluster method. ‘upgma’ (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>) refers to
 average linkage clustering, ‘mcl’ refers to the “Markov Clustering
-Algorithm” (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dongen2000"><span class="pre">Dongen2000</span></a></code>).</p>
+Algorithm” (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dongen2000"><span class="pre">Dongen2000</span></a></code>).</p>
 </div></blockquote>
 <p><strong>threshold</strong> : float (default=0.3)</p>
 <blockquote>
@@ -399,7 +392,7 @@ Currently, only “cv” is supported. If <em>edit-dist</em> is selected as
 <em>method</em> and <em>restriction</em> is set to <em>cv</em>, consonant-vowel matches
 will be prohibited in the calculations and the edit distance will
 be normalized by the length of the alignment rather than the length
-of the longest sequence, as described in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></code>.</p>
+of the longest sequence, as described in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></code>.</p>
 </div></blockquote>
 <p><strong>inflation</strong> : {int, float} (default=2)</p>
 <blockquote>
@@ -786,7 +779,7 @@ in plain “tsv”.</p>
 <dl class="class">
 <dt id="lingpy.compare.partial.Partial">
 <em class="property">class </em><code class="descclassname">lingpy.compare.partial.</code><code class="descname">Partial</code><span class="sig-paren">(</span><em>infile</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
 <p>Extended class for automatic detection of partial cognates.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -796,7 +789,7 @@ in plain “tsv”.</p>
 <blockquote>
 <div><p>The name of the file that shall be loaded.</p>
 </div></blockquote>
-<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></p>
+<p><strong>model</strong> : <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p>
 <blockquote>
 <div><p>The sound-class model that shall be used for the analysis. Defaults to
 the SCA sound-class model.</p>
@@ -812,26 +805,26 @@ apart as separate tokens.</p>
 (or generally transformed), using a simple key-value structure with the
 key referring to the original prosodic context and the value to the new
 value.  Currently, prosodic strings (see
-<a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal"><span class="pre">prosodic_string()</span></code></a>) offer 11
+<a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-meth docutils literal notranslate"><span class="pre">prosodic_string()</span></code></a>) offer 11
 different prosodic contexts. Since not all these are helpful in
 preliminary analyses for cognate detection, it is useful to merge
 some of these contexts into one. The default settings distinguish only
 5 instead of 11 available contexts, namely:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
-<li><code class="docutils literal"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
-<li><code class="docutils literal"><span class="pre">V</span></code> for all vowels,</li>
-<li><code class="docutils literal"><span class="pre">T</span></code> for all tones, and</li>
-<li><code class="docutils literal"><span class="pre">_</span></code> for word-breaks.</li>
+<li><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
+<li><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
+<li><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</li>
+<li><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</li>
+<li><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</li>
 </ul>
 <p>Make sure to check also the “vowel” keyword when initialising a LexStat
 object, since the symbols you use for vowels and tones should be
 identical with the ones you define in your transform dictionary.</p>
 </div></blockquote>
-<p><strong>vowels</strong> : str (default=”VT_”)</p>
+<p><strong>vowels</strong> : str (default=”<a href="#id11"><span class="problematic" id="id12">VT_</span></a>”)</p>
 <blockquote>
 <div><p>For scoring function creation using the
-<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function, you
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_scorer</span></code></a> function, you
 have the possibility to use reduced scores for the matching of tones
 and vowels by modifying the “vscale” parameter, which is set to 0.5 as
 a default.  In order to make sure that vowels and tones are properly
@@ -839,13 +832,13 @@ detected, make sure your prosodic string representation of vowels
 matches the one in this keyword. Thus, if you change the prosodic
 strings using the “transform” keyword, you also need to change the
 vowel string, to make sure that “vscale” works as wanted in the
-<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal"><span class="pre">get_scorer</span></code></a> function.</p>
+<a class="reference internal" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="lingpy.compare.lexstat.LexStat.get_scorer"><code class="xref py py-class docutils literal notranslate"><span class="pre">get_scorer</span></code></a> function.</p>
 </div></blockquote>
 <p><strong>check</strong> : bool (default=False)</p>
 <blockquote>
 <div><p>If set to <strong>True</strong>, the input file will first be checked for errors
 before the calculation is carried out. Errors will be written to the
-file <strong>errors</strong>, defaulting to <code class="docutils literal"><span class="pre">errors.log</span></code>. See also <code class="docutils literal"><span class="pre">apply_checks</span></code></p>
+file <strong>errors</strong>, defaulting to <code class="docutils literal notranslate"><span class="pre">errors.log</span></code>. See also <code class="docutils literal notranslate"><span class="pre">apply_checks</span></code></p>
 </div></blockquote>
 <p><strong>apply_checks</strong> : bool (default=False)</p>
 <blockquote>
@@ -884,7 +877,7 @@ previously morphologically segmented.</p>
 <td>A dictionary with tuples of language names as key and indices as value,         pointing to unique combinations of words with the same meaning in all         language pairs.</td>
 </tr>
 <tr class="row-even"><td>model</td>
-<td><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal"><span class="pre">Model</span></code></a></td>
+<td><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></td>
 <td>The sound class model instance which serves to convert the phonetic
 data into sound classes.</td>
 </tr>
@@ -914,7 +907,7 @@ class value.</td>
 </tr>
 <tr class="row-odd"><td>scorer</td>
 <td>dict</td>
-<td><p class="first">A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal"><span class="pre">ScoreDict</span></code></a>
+<td><p class="first">A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
 objects, which are used to score the strings. LexStat distinguishes two
 different scoring functions:</p>
 <ul class="last simple">
@@ -923,14 +916,14 @@ only of sound class values and prosodic string values. This scorer is
 traditionally used to carry out the first alignment in order to
 calculate the language-specific scorer. It is directly accessible as an
 attribute of the LexStat class
-(<code class="xref py py-class docutils literal"><span class="pre">rscorer</span></code>). The characters
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">rscorer</span></code>). The characters
 which constitute the values in this scorer are accessible via the
 “rchars” attribue of each lexstat class.</li>
 <li>bscorer: The language-specific scorer. This scorer is made of unique
 language-specific characters. These are accessible via the “chars”
 attribute of each LexStat class. As the “rscorer”, the “bscorer” can
 also be accessed directly as an attribute of the LexStat class
-(<code class="xref py py-class docutils literal"><span class="pre">bscorer</span></code>).</li>
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</li>
 </ul>
 </td>
 </tr>
@@ -975,7 +968,7 @@ network as cognate.</p>
 
 <dl class="method">
 <dt id="lingpy.compare.partial.Partial.partial_cluster">
-<code class="descname">partial_cluster</code><span class="sig-paren">(</span><em>method='sca'</em>, <em>threshold=0.45</em>, <em>scale=0.5</em>, <em>factor=0.3</em>, <em>restricted_chars='_T'</em>, <em>mode='overlap'</em>, <em>cluster_method='infomap'</em>, <em>gop=-1</em>, <em>restriction=''</em>, <em>ref=''</em>, <em>external_function=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.partial_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descname">partial_cluster</code><span class="sig-paren">(</span><em>method='sca'</em>, <em>threshold=0.45</em>, <em>scale=0.5</em>, <em>factor=0.3</em>, <em>restricted_chars='_T'</em>, <em>mode='overlap'</em>, <em>cluster_method='infomap'</em>, <em>gop=-1</em>, <em>restriction=''</em>, <em>ref=''</em>, <em>external_function=None</em>, <em>split_on_tones=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.partial_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cluster the words into partial cognate sets.</p>
 <p>Function for flat clustering of words into cognate sets.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -988,9 +981,9 @@ network as cognate.</p>
 </div></blockquote>
 <p><strong>cluster_method</strong> : {‘upgma’,’single’,’complete’, ‘mcl’} (default=’upgma’)</p>
 <blockquote>
-<div><p>Select the cluster method. ‘upgma’ (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>) refers to
+<div><p>Select the cluster method. ‘upgma’ (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>) refers to
 average linkage clustering, ‘mcl’ refers to the “Markov Clustering
-Algorithm” (<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dongen2000"><span class="pre">Dongen2000</span></a></code>).</p>
+Algorithm” (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dongen2000"><span class="pre">Dongen2000</span></a></code>).</p>
 </div></blockquote>
 <p><strong>threshold</strong> : float (default=0.3)</p>
 <blockquote>
@@ -1006,7 +999,7 @@ average distance of unrelated sequences (use with care).</p>
 <blockquote>
 <div><p>Select the factor for extra scores for identical prosodic segments.</p>
 </div></blockquote>
-<p><strong>restricted_chars</strong> : str (default=”<a href="#id11"><span class="problematic" id="id12">T_</span></a>”)</p>
+<p><strong>restricted_chars</strong> : str (default=”<a href="#id13"><span class="problematic" id="id14">T_</span></a>”)</p>
 <blockquote>
 <div><p>Select the restricted chars (boundary markers) in the prosodic
 strings in order to enable secondary alignment.</p>
@@ -1030,7 +1023,7 @@ Currently, only “cv” is supported. If <em>edit-dist</em> is selected as
 <em>method</em> and <em>restriction</em> is set to <em>cv</em>, consonant-vowel matches
 will be prohibited in the calculations and the edit distance will
 be normalized by the length of the alignment rather than the length
-of the longest sequence, as described in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></code>.</p>
+of the longest sequence, as described in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Heeringa2006"><span class="pre">Heeringa2006</span></a></code>.</p>
 </div></blockquote>
 <p><strong>inflation</strong> : {int, float} (default=2)</p>
 <blockquote>
@@ -1055,7 +1048,7 @@ of the longest sequence, as described in <code class="docutils literal"><a class
 <dl class="class">
 <dt id="lingpy.compare.phylogeny.PhyBo">
 <em class="property">class </em><code class="descclassname">lingpy.compare.phylogeny.</code><code class="descname">PhyBo</code><span class="sig-paren">(</span><em>dataset</em>, <em>tree=None</em>, <em>paps='pap'</em>, <em>ref='cogid'</em>, <em>tree_calc='neighbor'</em>, <em>output_dir=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Basic class for calculations using the TreBor method.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1113,7 +1106,7 @@ language. If set to 0, missing data is treated as absence.</p>
 <li>‘default’: weighted analysis, using parsimony and weights for
 gains and losses</li>
 <li>‘topdown’: use the traditional approach by
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code></li>
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code></li>
 <li>‘restriction’: use the restriction approach</li>
 </ul>
 <p>You can also define your own mix of models.</p>
@@ -1182,7 +1175,7 @@ GML-format.</p>
 modes refer to the following frameworks:</p>
 <ul class="simple">
 <li>“weighted” refers to the weighted parsimony framework described in
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014b"><span class="pre">List2014b</span></a></code> and <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014a"><span class="pre">List2014a</span></a></code>.
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014b"><span class="pre">List2014b</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014a"><span class="pre">List2014a</span></a></code>.
 Weights are
 specified with help of a ratio for the scoring of gain and loss
 events. The ratio can be defined with help of the <em>ratio</em>
@@ -1192,8 +1185,8 @@ specific amount of gain events
 is allowed. The maximally allowed number of gain events can be
 defined with help of the <em>restriction</em> keyword.</li>
 <li>“topdown” refers to the top-down method outlined in
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dagan2007"><span class="pre">Dagan2007</span></a></code> and first applied to linguistic data in
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code>. This method also defines a maximal
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dagan2007"><span class="pre">Dagan2007</span></a></code> and first applied to linguistic data in
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code>. This method also defines a maximal
 number of gain events, but in contrast to the “restriction”
 approach, it starts from the top of the tree and stops if the
 maximal number of restrictions has been reached. The maximally
@@ -1243,7 +1236,7 @@ setting this parameter to -1.</p>
 <div><p>In bottom-up calculations, there will often be multiple scenarios
 upon which only one is selected by the method. In order to define
 consistent criteria for scenario selection, we follow
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Mirkin2003"><span class="pre">Mirkin2003</span></a></code> in allowing to force the algorithm to prefer
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Mirkin2003"><span class="pre">Mirkin2003</span></a></code> in allowing to force the algorithm to prefer
 those scenarios in which gains are pushed to the leaves. This
 behaviour is handle by this parameter. Setting it to <em>True</em> will
 force the algorithm to push gain events to the leaves of the tree.
@@ -1381,8 +1374,8 @@ dataset.</dd>
 <dt>usetex <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
 <dd>Specify whether you want to use LaTeX to render plots.</dd>
 <dt>colormap <span class="classifier-delimiter">:</span> <span class="classifier">{None matplotlib.cm}</span></dt>
-<dd>A <code class="xref py py-class docutils literal"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
-defaults to <code class="xref py py-class docutils literal"><span class="pre">jet</span></code>.</dd>
+<dd>A <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
+defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">jet</span></code>.</dd>
 <dt>taxon_labels <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’taxon.short_labels’)</span></dt>
 <dd>Specify the taxon labels that should be included in the plot.</dd>
 </dl>
@@ -1406,8 +1399,8 @@ dataset.</dd>
 <dt>usetex <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
 <dd>Specify whether you want to use LaTeX to render plots.</dd>
 <dt>colormap <span class="classifier-delimiter">:</span> <span class="classifier">{None matplotlib.cm}</span></dt>
-<dd>A <code class="xref py py-class docutils literal"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
-defaults to <code class="xref py py-class docutils literal"><span class="pre">jet</span></code>.</dd>
+<dd>A <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
+defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">jet</span></code>.</dd>
 <dt>taxon_labels <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’taxon.short_labels’)</span></dt>
 <dd>Specify the taxon labels that should be included in the plot.</dd>
 </dl>
@@ -1439,7 +1432,7 @@ geographic space.</p>
 <dl class="attribute">
 <dt id="lingpy.compare.phylogeny.TreBor">
 <code class="descclassname">lingpy.compare.phylogeny.</code><code class="descname">TreBor</code><a class="headerlink" href="#lingpy.compare.phylogeny.TreBor" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#lingpy.compare.phylogeny.PhyBo" title="lingpy.compare.phylogeny.PhyBo"><code class="xref py py-class docutils literal"><span class="pre">PhyBo</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#lingpy.compare.phylogeny.PhyBo" title="lingpy.compare.phylogeny.PhyBo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.phylogeny.PhyBo</span></code></a></p>
 </dd></dl>
 
 <dl class="function">
@@ -1508,6 +1501,49 @@ also outperformed other approaches by finding more parsimonious solutions.</p>
 <span id="lingpy-compare-sanity-module"></span><h2>lingpy.compare.sanity module<a class="headerlink" href="#module-lingpy.compare.sanity" title="Permalink to this headline">¶</a></h2>
 <p>Module provides basic checks for wordlists.</p>
 <dl class="function">
+<dt id="lingpy.compare.sanity.average_coverage">
+<code class="descclassname">lingpy.compare.sanity.</code><code class="descname">average_coverage</code><span class="sig-paren">(</span><em>wordlist</em>, <em>concepts='concepts'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.average_coverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute average mutual coverage for a given wordlist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<blockquote>
+<div><p>Your Wordlist object (or a descendant class).</p>
+</div></blockquote>
+<p><strong>concepts</strong> : str (default=”concept”)</p>
+<blockquote>
+<div><p>The column which stores your concepts.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>coverage</strong> : dict</p>
+<blockquote class="last">
+<div><p>A dictionary of dictionaries whose value is the number of items two
+languages share.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a></p>
+</div>
+<p class="rubric">Examples</p>
+<p>Compute coverage for the KSL.qlc dataset:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">average_coverage</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">average_coverage</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span>
+<span class="go">1.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.compare.sanity.mutual_coverage">
 <code class="descclassname">lingpy.compare.sanity.</code><code class="descname">mutual_coverage</code><span class="sig-paren">(</span><em>wordlist</em>, <em>concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute mutual coverage for all language pairs in your data.</p>
@@ -1536,11 +1572,11 @@ languages share.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal"><span class="pre">mutual_coverage_subset</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute coverage for the KSL.qlc dataset:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
@@ -1584,11 +1620,11 @@ otherwise.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal"><span class="pre">mutual_coverage_subset</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute minimal mutual coverage for the KSL dataset:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
@@ -1636,11 +1672,11 @@ pair and the list of languages.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal"><span class="pre">mutual_coverage_check</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute all sets of languages with coverage at 200 for the KSL dataset:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage_subset</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage_subset</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
@@ -1685,7 +1721,7 @@ synonyms as value.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>Calculate synonymy in KSL.qlc dataset:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">synonymy</span>      
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">synonymy</span>      
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
@@ -1696,7 +1732,7 @@ synonyms as value.</p>
 </pre></div>
 </div>
 <p>There is no case where synonymy exceeds 1 word per concept per language,
-since <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kessler2001"><span class="pre">Kessler2001</span></a></code> was paying particular attention to avoid
+since <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kessler2001"><span class="pre">Kessler2001</span></a></code> was paying particular attention to avoid
 synonyms.</p>
 </dd></dl>
 
@@ -1792,7 +1828,7 @@ bigrams is defined as the number of matching 1-grams at each position.</p>
 <dd><p>Basic Levenshtein distance without swap operation (all operations are equal costs).</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.edit_dist" title="lingpy.align.pairwise.edit_dist"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.align.pairwise.edit_dist</span></code></a>, <a class="reference internal" href="#lingpy.compare.strings.ldn_swap" title="lingpy.compare.strings.ldn_swap"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.compare.strings.ldn_swap</span></code></a></p>
+<p class="last"><a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.edit_dist" title="lingpy.align.pairwise.edit_dist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.align.pairwise.edit_dist</span></code></a>, <a class="reference internal" href="#lingpy.compare.strings.ldn_swap" title="lingpy.compare.strings.ldn_swap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.compare.strings.ldn_swap</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -1854,7 +1890,7 @@ similarity of trigrams.</p>
 <dd><p>Computes tri-sim “the comprehensive version”.</p>
 <p class="rubric">Notes</p>
 <p>Simply computes the number of common 1-grams between two n-grams instead of
-calling LCS as should be done in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kondrak2005"><span class="pre">Kondrak2005</span></a></code> paper. Note that the
+calling LCS as should be done in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kondrak2005"><span class="pre">Kondrak2005</span></a></code> paper. Note that the
 LCS for a trigram can be computed in O(n) time if we asssume that list
 lookup is in constant time.</p>
 </dd></dl>
@@ -1879,7 +1915,7 @@ number of matching 1-grams in each position.</p>
 <code class="descclassname">lingpy.compare.strings.</code><code class="descname">xxdice</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.xxdice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the XXDice between two strings.</p>
 <p class="rubric">Notes</p>
-<p>Taken from <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brew1996"><span class="pre">Brew1996</span></a></code>.</p>
+<p>Taken from <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brew1996"><span class="pre">Brew1996</span></a></code>.</p>
 </dd></dl>
 
 </div>
@@ -1901,7 +1937,7 @@ number of matching 1-grams in each position.</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.compare package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -1925,12 +1961,14 @@ number of matching 1-grams in each position.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -1969,7 +2007,7 @@ number of matching 1-grams in each position.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

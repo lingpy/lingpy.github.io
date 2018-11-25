@@ -1,37 +1,45 @@
-lingpy\.sequence package
-========================
+lingpy.sequence package
+=======================
 
 Submodules
 ----------
 
-lingpy\.sequence\.generate module
----------------------------------
+lingpy.sequence.generate module
+-------------------------------
 
 .. automodule:: lingpy.sequence.generate
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.sequence\.profile module
---------------------------------
+lingpy.sequence.ngrams module
+-----------------------------
+
+.. automodule:: lingpy.sequence.ngrams
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+lingpy.sequence.profile module
+------------------------------
 
 .. automodule:: lingpy.sequence.profile
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.sequence\.sound\_classes module
----------------------------------------
+lingpy.sequence.smoothing module
+--------------------------------
 
-.. automodule:: lingpy.sequence.sound_classes
+.. automodule:: lingpy.sequence.smoothing
     :members:
     :undoc-members:
     :show-inheritance:
 
-lingpy\.sequence\.tiers module
-------------------------------
+lingpy.sequence.sound\_classes module
+-------------------------------------
 
-.. automodule:: lingpy.sequence.tiers
+.. automodule:: lingpy.sequence.sound_classes
     :members:
     :undoc-members:
     :show-inheritance:

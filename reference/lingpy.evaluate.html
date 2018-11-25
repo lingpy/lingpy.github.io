@@ -4,30 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>lingpy.evaluate package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.6',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
 
-  </head>
-  <body>
+  </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
 LingPy
 </div>
@@ -77,10 +70,10 @@ LingPy
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <blockquote>
-<div><p>A <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a> class or a daughter class,
-(like the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
+<div><p>A <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a> class or a daughter class,
+(like the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> class used for the
 computation). It should have two columns indicating cognate IDs.</p>
 </div></blockquote>
 <p><strong>gold</strong> : str (default=’cogid’)</p>
@@ -123,12 +116,12 @@ piece.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal"><span class="pre">pairs</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairs</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
-<p>B-Cubed scores were first described by <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1998"><span class="pre">Bagga1998</span></a></code> as part of an
-algorithm. Later on, <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Amigo2009"><span class="pre">Amigo2009</span></a></code> showed that they can also used as
-to compare cluster decisions. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Hauer2011"><span class="pre">Hauer2011</span></a></code> applied the B-Cubed
+<p>B-Cubed scores were first described by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1998"><span class="pre">Bagga1998</span></a></code> as part of an
+algorithm. Later on, <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Amigo2009"><span class="pre">Amigo2009</span></a></code> showed that they can also used as
+to compare cluster decisions. <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Hauer2011"><span class="pre">Hauer2011</span></a></code> applied the B-Cubed
 scores first to the task of automatic cognate detection.</p>
 </dd></dl>
 
@@ -137,8 +130,8 @@ scores first to the task of automatic cognate detection.</p>
 <code class="descclassname">lingpy.evaluate.acd.</code><code class="descname">diff</code><span class="sig-paren">(</span><em>wordlist</em>, <em>gold='cogid'</em>, <em>test='lexstatid'</em>, <em>modify_ref=False</em>, <em>pprint=True</em>, <em>filename=''</em>, <em>tofile=True</em>, <em>transcription='ipa'</em>, <em>concepts=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write differences in classifications on an item-basis to file.</p>
 <dl class="docutils">
-<dt>lex <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></span></dt>
-<dd>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
+<dt>lex <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></span></dt>
+<dd>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> class used for the
 computation. It should have two columns indicating cognate IDs.</dd>
 <dt>gold <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’cogid’)</span></dt>
 <dd>The name of the column containing the gold standard cognate
@@ -156,8 +149,8 @@ absolute value.</dd>
 <dd>Print out the results</dd>
 <dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’‘)</span></dt>
 <dd>Name of the output file. If not specified, it is identical with the
-name of the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a>, but with the
-extension <code class="docutils literal"><span class="pre">diff</span></code>.</dd>
+name of the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a>, but with the
+extension <code class="docutils literal notranslate"><span class="pre">diff</span></code>.</dd>
 <dt>tofile <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
 <dd>If set to c{False}, no data will be written to file, but instead, the
 data will be returned.</dd>
@@ -181,11 +174,11 @@ containing precision, recall, and harmonic mean
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal"><span class="pre">bcubes</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal"><span class="pre">pairs</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bcubes</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairs</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>If the <strong>tofile</strong> option is chosen, the results are written to a specific
-file with the extension <code class="docutils literal"><span class="pre">diff</span></code>. This file contains all cognate sets in
+file with the extension <code class="docutils literal notranslate"><span class="pre">diff</span></code>. This file contains all cognate sets in
 which there are differences between gold standard and test sets. It also
 gives detailed information regarding false positives, false negatives, and
 the words involved in these wrong decisions.</p>
@@ -248,12 +241,12 @@ non-cognate words, you should set this keyword to “True”.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>This follows the description in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kondrak2002"><span class="pre">Kondrak2002</span></a></code>. The n-point average
+<p>This follows the description in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kondrak2002"><span class="pre">Kondrak2002</span></a></code>. The n-point average
 precision is useful to compare the discriminative force of different
 algorithms for string similarity, or to train the parameters of a given
 algorithm.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cognates</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="k">import</span> <span class="n">npoint_ap</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">npoint_ap</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">cognates</span><span class="p">)</span>
@@ -270,9 +263,9 @@ algorithm.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>lex</strong> : <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
 <blockquote>
-<div><p>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal"><span class="pre">LexStat</span></code></a> class used for the
+<div><p>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> class used for the
 computation. It should have two columns indicating cognate IDs.</p>
 </div></blockquote>
 <p><strong>gold</strong> : str (default=’cogid’)</p>
@@ -310,11 +303,11 @@ absolute value.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal"><span class="pre">bcubes</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bcubes</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>Pair-scores can be computed in different ways, with often different
-results. This variant follows the description by <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bouchard-Cote2013"><span class="pre">Bouchard-Cote2013</span></a></code>.</p>
+results. This variant follows the description by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bouchard-Cote2013"><span class="pre">Bouchard-Cote2013</span></a></code>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -325,10 +318,10 @@ results. This variant follows the description by <code class="docutils literal">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a></p>
 <blockquote>
-<div><p>A <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal"><span class="pre">Wordlist</span></code></a>, or one of it’s daughter
-classes (like, e.g., the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.partial.Partial" title="lingpy.compare.partial.Partial"><code class="xref py py-class docutils literal"><span class="pre">Partial</span></code></a>
+<div><p>A <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a>, or one of it’s daughter
+classes (like, e.g., the <a class="reference internal" href="lingpy.compare.html#lingpy.compare.partial.Partial" title="lingpy.compare.partial.Partial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Partial</span></code></a>
 class used for computation of partial cognates. It should have two
 columns indicating cognate IDs.</p>
 </div></blockquote>
@@ -359,12 +352,12 @@ assignments.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal"><span class="pre">bcubes</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal"><span class="pre">pairs</span></code></a></p>
+<p class="last"><a class="reference internal" href="#lingpy.evaluate.acd.bcubes" title="lingpy.evaluate.acd.bcubes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bcubes</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.diff" title="lingpy.evaluate.acd.diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diff</span></code></a>, <a class="reference internal" href="#lingpy.evaluate.acd.pairs" title="lingpy.evaluate.acd.pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairs</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
-<p>B-Cubed scores were first described by <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1998"><span class="pre">Bagga1998</span></a></code> as part of an
-algorithm. Later on, <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Amigo2009"><span class="pre">Amigo2009</span></a></code> showed that they can also used as
-to compare cluster decisions. <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Hauer2011"><span class="pre">Hauer2011</span></a></code> applied the B-Cubed
+<p>B-Cubed scores were first described by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Bagga1998"><span class="pre">Bagga1998</span></a></code> as part of an
+algorithm. Later on, <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Amigo2009"><span class="pre">Amigo2009</span></a></code> showed that they can also used as
+to compare cluster decisions. <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Hauer2011"><span class="pre">Hauer2011</span></a></code> applied the B-Cubed
 scores first to the task of automatic cognate detection.</p>
 </dd></dl>
 
@@ -435,7 +428,7 @@ symbols which cannot be completely resolved (e.g., laryngeal h₂ in
 Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
 specifications (in particular the specifications for writing
 transcriptions in segmented strings, as employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in cases of insecurity
-of pronunciation, users can adopt a <code class="docutils literal"><span class="pre">`source/target`</span></code> style, where
+of pronunciation, users can adopt a <code class="docutils literal notranslate"><span class="pre">`source/target`</span></code> style, where
 the source is the symbol used, e.g., in a reconstruction system, and
 the target is a proposed phonetic interpretation. This practice is also
 accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
@@ -467,22 +460,22 @@ results.</p>
 <dl class="class">
 <dt id="lingpy.evaluate.apa.Eval">
 <em class="property">class </em><code class="descclassname">lingpy.evaluate.apa.</code><code class="descname">Eval</code><span class="sig-paren">(</span><em>gold</em>, <em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.Eval" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Base class for evaluation objects.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.evaluate.apa.EvalMSA">
 <em class="property">class </em><code class="descclassname">lingpy.evaluate.apa.</code><code class="descname">EvalMSA</code><span class="sig-paren">(</span><em>gold</em>, <em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.evaluate.apa.Eval" title="lingpy.evaluate.apa.Eval"><code class="xref py py-class docutils literal"><span class="pre">lingpy.evaluate.apa.Eval</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.evaluate.apa.Eval" title="lingpy.evaluate.apa.Eval"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.evaluate.apa.Eval</span></code></a></p>
 <p>Base class for the evaluation of automatic multiple sequence analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gold, test</strong> : <a class="reference internal" href="lingpy.align.html#lingpy.align.sca.MSA" title="lingpy.align.sca.MSA"><code class="xref py py-class docutils literal"><span class="pre">MSA</span></code></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gold, test</strong> : <a class="reference internal" href="lingpy.align.html#lingpy.align.sca.MSA" title="lingpy.align.sca.MSA"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSA</span></code></a></p>
 <blockquote class="last">
-<div><p>The <code class="xref py py-class docutils literal"><span class="pre">Multiple</span></code> objects which shall be
+<div><p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Multiple</span></code> objects which shall be
 compared. The first object should be the gold standard and the second
 object should be the test set.</p>
 </div></blockquote>
@@ -493,8 +486,8 @@ object should be the test set.</p>
 <p class="rubric">Notes</p>
 <p>Most of the scores which can be calculated with help of this class are standard
 evaluation scores in evolutionary biology. For a close description on how
-these scores are calculated, see, for example, <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
+these scores are calculated, see, for example, <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
 <dl class="method">
 <dt id="lingpy.evaluate.apa.EvalMSA.c_score">
 <code class="descname">c_score</code><span class="sig-paren">(</span><em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.c_score" title="Permalink to this definition">¶</a></dt>
@@ -509,7 +502,7 @@ these scores are calculated, see, for example, <code class="docutils literal"><a
 <ol class="arabic simple">
 <li>divide the number of common columns in reference and test
 alignment by the total number of columns in the test alignment
-(the traditional C score described in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
+(the traditional C score described in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
 also known as “precision” score in applications of information
 retrieval),</li>
 <li>divide the number of common columns in reference and test
@@ -519,10 +512,10 @@ information retrieval),</li>
 <li>divide the number of common columns in reference and test
 alignment by the average number of columns in reference and test
 alignment, or</li>
-<li>combine the scores of mode <code class="docutils literal"><span class="pre">1</span></code> and mode <code class="docutils literal"><span class="pre">2</span></code> by computing
+<li>combine the scores of mode <code class="docutils literal notranslate"><span class="pre">1</span></code> and mode <code class="docutils literal notranslate"><span class="pre">2</span></code> by computing
 their F-score, using the formula <img class="math" src="../_images/math/8adf729d042071eca0031f550cfc2ade9da347eb.png" alt="2 * \frac{pr}{p+r}"/>,
-where <em>p</em> is the precision (mode <code class="docutils literal"><span class="pre">1</span></code>) and <em>r</em> is the recall
-(mode <code class="docutils literal"><span class="pre">2</span></code>).</li>
+where <em>p</em> is the precision (mode <code class="docutils literal notranslate"><span class="pre">1</span></code>) and <em>r</em> is the recall
+(mode <code class="docutils literal notranslate"><span class="pre">2</span></code>).</li>
 </ol>
 </div></blockquote>
 </td>
@@ -595,10 +588,10 @@ there is a false positive in the testset, and</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><code class="xref py py-obj docutils literal"><span class="pre">lingpy.test.evaluate.EvalPSA.jc_score</span></code></p>
+<p class="last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.test.evaluate.EvalPSA.jc_score</span></code></p>
 </div>
 <p class="rubric">Notes</p>
-<p>The Jaccard score (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>) is calculated by dividing the size of
+<p>The Jaccard score (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>) is calculated by dividing the size of
 the intersection of residue pairs in reference and test alignment by
 the size of the union of residue pairs in reference and test alignment.</p>
 </dd></dl>
@@ -639,7 +632,7 @@ alignment divided by the total number of rows.</p>
 <li>divide the number of common residue pairs in reference and test
 alignment by the total number of residue pairs in the test
 alignment (the traditional SP score described in
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>, also known as “precision” score in
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>, also known as “precision” score in
 applications of information retrieval),</li>
 <li>divide the number of common residue pairs in reference and test
 alignment by the total number of residue pairs in the reference
@@ -661,7 +654,7 @@ and test alignment.</li>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>The SP score (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>) is calculated by dividing the number of
+<p>The SP score (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>) is calculated by dividing the number of
 identical residue pairs in reference and test alignment by the total
 number of residue pairs in the reference alignment.</p>
 </dd></dl>
@@ -671,15 +664,15 @@ number of residue pairs in the reference alignment.</p>
 <dl class="class">
 <dt id="lingpy.evaluate.apa.EvalPSA">
 <em class="property">class </em><code class="descclassname">lingpy.evaluate.apa.</code><code class="descname">EvalPSA</code><span class="sig-paren">(</span><em>gold</em>, <em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#lingpy.evaluate.apa.Eval" title="lingpy.evaluate.apa.Eval"><code class="xref py py-class docutils literal"><span class="pre">lingpy.evaluate.apa.Eval</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#lingpy.evaluate.apa.Eval" title="lingpy.evaluate.apa.Eval"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.evaluate.apa.Eval</span></code></a></p>
 <p>Base class for the evaluation of automatic pairwise sequence analyses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gold, test</strong> : <a class="reference internal" href="lingpy.align.html#lingpy.align.sca.PSA" title="lingpy.align.sca.PSA"><code class="xref py py-class docutils literal"><span class="pre">lingpy.align.sca.PSA</span></code></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gold, test</strong> : <a class="reference internal" href="lingpy.align.html#lingpy.align.sca.PSA" title="lingpy.align.sca.PSA"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.align.sca.PSA</span></code></a></p>
 <blockquote class="last">
-<div><p>The <code class="xref py py-class docutils literal"><span class="pre">Pairwise</span></code> objects which shall be
+<div><p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Pairwise</span></code> objects which shall be
 compared. The first object should be the gold standard and the second
 object should be the test set.</p>
 </div></blockquote>
@@ -690,8 +683,8 @@ object should be the test set.</p>
 <p class="rubric">Notes</p>
 <p>Moste of the scores which can be calculated with help of this class are standard
 evaluation scores in evolutionary biology. For a close description on how
-these scores are calculated, see, for example, <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
-<code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
+these scores are calculated, see, for example, <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
 <dl class="method">
 <dt id="lingpy.evaluate.apa.EvalPSA.c_score">
 <code class="descname">c_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.c_score" title="Permalink to this definition">¶</a></dt>
@@ -709,7 +702,7 @@ these scores are calculated, see, for example, <code class="docutils literal"><a
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>The C score, as it is described in <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>, is calculated by
+<p>The C score, as it is described in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>, is calculated by
 dividing the number of columns which are identical in the gold
 standarad and the test alignment by the total number of columns in the
 test alignment.</p>
@@ -750,7 +743,7 @@ test alignment.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>The Jaccard score (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>) is calculated by dividing the size of
+<p>The Jaccard score (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>) is calculated by dividing the size of
 the intersection of residue pairs in reference and test alignment by
 the size of the union of residue pairs in reference and test alignment.</p>
 </dd></dl>
@@ -774,8 +767,8 @@ by Thompson et al. (1999).</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>mode</strong> : { 1, 2 }</p>
 <blockquote>
-<div><p>Select between mode <code class="docutils literal"><span class="pre">1</span></code>, where all sequences are compared with
-each other, and mode <code class="docutils literal"><span class="pre">2</span></code>, where only whole alignments are
+<div><p>Select between mode <code class="docutils literal notranslate"><span class="pre">1</span></code>, where all sequences are compared with
+each other, and mode <code class="docutils literal notranslate"><span class="pre">2</span></code>, where only whole alignments are
 compared.</p>
 </div></blockquote>
 </td>
@@ -810,7 +803,7 @@ alignment divided by the total number of rows.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>The SP score (see <code class="docutils literal"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>) is calculated by dividing the number of
+<p>The SP score (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>) is calculated by dividing the number of
 identical residue pairs in reference and test alignment by the total
 number of residue pairs in the reference alignment.</p>
 </dd></dl>
@@ -833,7 +826,7 @@ number of residue pairs in the reference alignment.</p>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lingpy.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">lingpy.evaluate package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -854,12 +847,14 @@ number of residue pairs in the reference alignment.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -898,7 +893,7 @@ number of residue pairs in the reference alignment.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 22, 2017<br>
+    on Nov 25, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -14,6 +14,7 @@ Sequence Modelling
    sequence/sound_classes
    sequence/generate
    sequence/profile
+   sequence/ngrams
    data/model
    data/data
    data/derive
