@@ -55,7 +55,7 @@ LingPy
           <div class="body" role="main">
             
   <div class="section" id="helper-functions-for-sca-alignment-calign-and-misc">
-<h1>Helper Functions for SCA Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">calign</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">misc</span></code>)<a class="headerlink" href="#helper-functions-for-sca-alignment-calign-and-misc" title="Permalink to this headline">¶</a></h1>
+<h1>Helper Functions for SCA Alignment (<a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#module-lingpy.algorithm.cython.calign" title="lingpy.algorithm.cython.calign"><code class="xref py py-class docutils literal notranslate"><span class="pre">calign</span></code></a>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">misc</span></code>)<a class="headerlink" href="#helper-functions-for-sca-alignment-calign-and-misc" title="Permalink to this headline">¶</a></h1>
 <p>The helper functions and classes below play an important role in all SCA alignment algorithms in LingPy (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>).
 They are implemented both in pure Python and in Cython (only supported for Python 3), in order to
 allow for faster implementations of the core alignment functions. Instead of using these functions
@@ -70,50 +70,50 @@ which are based on the helper functions we list below.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.globalign</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.globalign" title="lingpy.algorithm.cython.calign.globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalign</span></code></a></td>
+<td>Carry out global alignment of two sequences.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.secondary_globalign</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_globalign" title="lingpy.algorithm.cython.calign.secondary_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_globalign</span></code></a></td>
+<td>Carry out global alignment of two sequences with secondary sequence structures.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.localign</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.localign" title="lingpy.algorithm.cython.calign.localign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">localign</span></code></a></td>
+<td>Carry out semi-global alignment of two sequences.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.secondary_localign</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_localign" title="lingpy.algorithm.cython.calign.secondary_localign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_localign</span></code></a></td>
+<td>Carry out lobal alignment of two sequences with sensitivity to secondary sequence structures.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.semi_globalign</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.semi_globalign" title="lingpy.algorithm.cython.calign.semi_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">semi_globalign</span></code></a></td>
+<td>Carry out semi-global alignment of two sequences.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.secondary_semi_globalign</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_semi_globalign" title="lingpy.algorithm.cython.calign.secondary_semi_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_semi_globalign</span></code></a></td>
+<td>Carry out semi-global alignment of two sequences with sensitivity to secondary sequence structures.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.dialign</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.dialign" title="lingpy.algorithm.cython.calign.dialign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dialign</span></code></a></td>
+<td>Carry out dialign alignment of two sequences.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.secondary_dialign</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_dialign" title="lingpy.algorithm.cython.calign.secondary_dialign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_dialign</span></code></a></td>
+<td>Carry out dialign alignment of two sequences with sensitivity for secondary     sequence structures.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.align_pair</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_pair" title="lingpy.algorithm.cython.calign.align_pair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pair</span></code></a></td>
+<td>Align a pair of sequences.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.align_pairwise</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_pairwise" title="lingpy.algorithm.cython.calign.align_pairwise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairwise</span></code></a></td>
+<td>Align a list of sequences pairwise.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.align_pairs</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_pairs" title="lingpy.algorithm.cython.calign.align_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairs</span></code></a></td>
+<td>Align multiple sequence pairs.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.align_profile</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_profile" title="lingpy.algorithm.cython.calign.align_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_profile</span></code></a></td>
+<td>Align two profiles using the basic modes.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.score_profile</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.score_profile" title="lingpy.algorithm.cython.calign.score_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score_profile</span></code></a></td>
+<td>Basic function for the scoring of profiles.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.swap_score_profile</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.swap_score_profile" title="lingpy.algorithm.cython.calign.swap_score_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swap_score_profile</span></code></a></td>
+<td>Basic function for the scoring of profiles which contain swapped sequences.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.algorithm.cython.calign.corrdist</span></code></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.corrdist" title="lingpy.algorithm.cython.calign.corrdist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">corrdist</span></code></a></td>
+<td>Create a correspondence distribution for a given language pair.</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ which are based on the helper functions we list below.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 25, 2018<br>
+    on Nov 26, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

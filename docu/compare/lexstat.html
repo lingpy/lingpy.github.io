@@ -187,7 +187,7 @@ storing the transcriptions in case no segmentation is provided by the
 user.</p>
 </div></blockquote>
 <p><strong>get_prostring</strong> : function (default=prosodic_string)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The function which should be used to create prosodic strings from the
 segmented transcription data. If you want to completely ignore prosodic
 strings in LexStat calculations, you could just pass the following
@@ -196,6 +196,21 @@ function:</p>
 <span class="go">    y in x])</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p><strong>cldf</strong> : bool (default=True)</p>
+<blockquote class="last">
+<div><p>If set to True, as by default, this will allow for a specific treatment
+of phonetic
+symbols which cannot be completely resolved when internally
+converting tokens to classes (e.g., laryngeal h₂ in
+Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
+specifications (in particular the
+specifications for writing transcriptions in segmented strings, as
+employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in
+cases of insecurity of pronunciation, users can adopt a
+<code class="docutils literal notranslate"><span class="pre">`source/target`</span></code> style, where the source is the symbol used, e.g.,
+in a reconstruction system, and the target is a proposed phonetic
+interpretation. This practice is also accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -424,7 +439,7 @@ also be accessed directly as an attribute of the LexStat class
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 25, 2018<br>
+    on Nov 26, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

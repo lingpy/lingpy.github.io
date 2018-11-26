@@ -2066,6 +2066,10 @@ underlying sequence.</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prosodic</span></code></p>
+</div>
 <p class="rubric">Notes</p>
 <p>A prosodic string is a sequence of specific characters which indicating
 their resprective prosodic context (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code> or
@@ -2236,7 +2240,7 @@ cannot be resolved, the respective string will be rendered as “0”
 
 <dl class="function">
 <dt id="lingpy.sequence.sound_classes.tokens2class">
-<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">tokens2class</code><span class="sig-paren">(</span><em>tokens</em>, <em>model</em>, <em>stress=None</em>, <em>diacritics=None</em>, <em>cldf=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">lingpy.sequence.sound_classes.</code><code class="descname">tokens2class</code><span class="sig-paren">(</span><em>tokens</em>, <em>model</em>, <em>stress=None</em>, <em>diacritics=None</em>, <em>cldf=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert tokenized IPA strings into their respective class strings.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2260,11 +2264,13 @@ to the stress as defined in ~lingpy.settings.rcParams.</p>
 <div><p>A string containing diacritic symbols used in the analysis. Defaults to
 the diacritic symbolds defined in ~lingpy.settings.rcParams.</p>
 </div></blockquote>
-<p><strong>cldf</strong> : bool (default=False)</p>
+<p><strong>cldf</strong> : bool (default=True)</p>
 <blockquote>
-<div><p>If set to True, this will allow for a specific treatment of phonetic
+<div><p>If set to True, as by default, this will allow for a specific treatment
+of phonetic
 symbols which cannot be completely resolved (e.g., laryngeal h₂ in
-Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a> specifications (in particular the
+Indo-European). Following the <a class="reference external" href="http://cldf.clld.org">CLDF</a>
+specifications (in particular the
 specifications for writing transcriptions in segmented strings, as
 employed by the <a class="reference external" href="http://calc.digling.org/clts/">CLTS</a> initiative), in
 cases of insecurity of pronunciation, users can adopt a
@@ -2598,7 +2604,7 @@ value different from None, defaults to “$$$”.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 25, 2018<br>
+    on Nov 26, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

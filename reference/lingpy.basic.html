@@ -130,6 +130,17 @@ the headers.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>Use this function to quickly iterate over specified fields in the
+wordlist. For example, when trying to access all pairs of language
+names and concepts, you may write:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">concept</span> <span class="ow">in</span> <span class="n">iter_rows</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="p">,</span> <span class="s1">&#39;concept&#39;</span><span class="p">):</span>
+<span class="go">        print(k, language, concept)</span>
+</pre></div>
+</div>
+<p>Note that this function returns the key of the given row as a first
+value. So if you do not specify anything, the output will just be the
+key.</p>
 </dd></dl>
 
 <dl class="function">
@@ -594,6 +605,16 @@ ParameterTable and CognateTable are prefixed with <cite>langage_</cite>,
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>CLDFs default column names for wordlists are different from LingPy’s,
+so you probably have to use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lingpy</span><span class="o">.</span><span class="n">Wordlist</span><span class="o">.</span><span class="n">from_cldf</span><span class="p">(</span>
+</pre></div>
+</div>
+<blockquote>
+<div>“Wordlist-metadata.json”,
+col=”language_id”, row=”parameter_id”, segments=”segments”, transcription=”form”)</div></blockquote>
+<p>in order to avoid errors from LingPy not finding required columns.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1037,6 +1058,10 @@ or directly as an attribute of the wordlist.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>This function does not offer absolute flexibility regarding the data you
+can input so far. However, it can regularly read CLDF-formatted data into
+LingPy and thus allow you to use CLDF data in LingPy analyses.</p>
 </dd></dl>
 
 <dl class="function">
@@ -1172,7 +1197,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 25, 2018<br>
+    on Nov 26, 2018<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>
