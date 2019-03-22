@@ -1,0 +1,16 @@
+String Comparison (:py:mod:`~lingpy.compare.strings`)
+======================================================
+
+.. currentmodule:: lingpy.compare.strings
+
+This module provides basic functions for various ways of string comparison.
+
+Functions
+---------
+
+.. autosummary::
+
+  ldn
+  ldn_swap
+  
+
