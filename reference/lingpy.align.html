@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>lingpy.align package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,60 +63,50 @@ LingPy
 <p>Module provides classes and functions for multiple alignment analyses.</p>
 <dl class="class">
 <dt id="lingpy.align.multiple.Multiple">
-<em class="property">class </em><code class="descclassname">lingpy.align.multiple.</code><code class="descname">Multiple</code><span class="sig-paren">(</span><em>seqs</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.multiple.</code><code class="sig-name descname">Multiple</code><span class="sig-paren">(</span><em class="sig-param">seqs</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">clldutils.misc.UnicodeMixin</span></code></p>
 <p>Basic class for multiple sequence alignment analyses.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqs</strong> : list</p>
-<blockquote class="last">
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqs</strong> : list</p>
+<blockquote>
 <div><p>List of sequences that shall be aligned.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Depending on the structure of the sequences, further keywords can be
 specified that manage how the items get tokenized.</p>
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.align">
-<code class="descname">align</code><span class="sig-paren">(</span><em>method</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">method</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.align" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.get_local_peaks">
-<code class="descname">get_local_peaks</code><span class="sig-paren">(</span><em>threshold=2</em>, <em>gap_weight=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_local_peaks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_local_peaks</code><span class="sig-paren">(</span><em class="sig-param">threshold=2</em>, <em class="sig-param">gap_weight=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_local_peaks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all peaks in a given alignment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : { int, float } (default=2)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : { int, float } (default=2)</p>
 <blockquote>
 <div><p>The threshold to determine whether a given column is a peak or not.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : float (default=0.0)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The weight for gaps.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.get_pairwise_alignments">
-<code class="descname">get_pairwise_alignments</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pairwise_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_pairwise_alignments</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pairwise_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function creates a dictionary of all pairwise alignments  scores.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>new_calc</strong> : bool (default=True)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>new_calc</strong> : bool (default=True)</p>
 <blockquote>
 <div><p>Specify, whether the analysis should be repeated from the
 beginning, or whether already conducted analyses should be carried
@@ -128,13 +117,13 @@ out.</p>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>“sca” – an extension of the “dolgo” sound-class model based on
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>“asjp” – an independent sound-class model which is based on the
+<li><p>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</p></li>
+<li><p>“sca” – an extension of the “dolgo” sound-class model based on
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</p></li>
+<li><p>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>mode</strong> : string (default=”global”)</p>
@@ -142,10 +131,10 @@ of <code class="docutils literal notranslate"><a class="reference external" href
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>“global” – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>“dialign” – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
+<li><p>“global” – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>“dialign” – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>gop</strong> : int (default=-3)</p>
@@ -172,95 +161,83 @@ ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
 <p><strong>restricted_chars</strong> : string (default=”T”)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
 should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.get_peaks">
-<code class="descname">get_peaks</code><span class="sig-paren">(</span><em>gap_weight=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_peaks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_peaks</code><span class="sig-paren">(</span><em class="sig-param">gap_weight=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_peaks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the profile score for each column of the alignment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gap_weight</strong> : float (default=0)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gap_weight</strong> : float (default=0)</p>
 <blockquote>
 <div><p>The factor by which gaps in aligned columns contribute to the
 calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>peaks</strong> : list</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>peaks</strong> : list</p>
+<blockquote>
 <div><p>A list containing the profile scores for each column of the given
 alignment.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.get_pid">
-<code class="descname">get_pid</code><span class="sig-paren">(</span><em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_pid</code><span class="sig-paren">(</span><em class="sig-param">mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the Percentage Identity (PID) score of the calculated MSA.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>mode</strong> : { 1, 2, 3, 4, 5 } (default=1)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> : { 1, 2, 3, 4, 5 } (default=1)</p>
 <blockquote>
 <div><p>Indicate which of the four possible PID scores described in
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Raghava2006"><span class="pre">Raghava2006</span></a></code> should be calculated, the fifth possibility is added
 for linguistic purposes:</p>
 <ol class="arabic simple">
-<li>identical positions / (aligned positions + internal gap positions),</li>
-<li>identical positions / aligned positions,</li>
-<li>identical positions / shortest sequence, or</li>
-<li>identical positions / shortest sequence (including internal gap
-pos.)</li>
-<li>identical positions / (aligned positions + 2 * number of gaps)</li>
+<li><p>identical positions / (aligned positions + internal gap positions),</p></li>
+<li><p>identical positions / aligned positions,</p></li>
+<li><p>identical positions / shortest sequence, or</p></li>
+<li><p>identical positions / shortest sequence (including internal gap
+pos.)</p></li>
+<li><p>identical positions / (aligned positions + 2 * number of gaps)</p></li>
 </ol>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>score</strong> : float</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>score</strong> : float</p>
+<blockquote>
 <div><p>The PID score of the given alignment as a floating point number between
 0 and 1.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.pid" title="lingpy.sequence.sound_classes.pid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.sequence.sound_classes.pid</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="lingpy.sequence.html#lingpy.sequence.sound_classes.pid" title="lingpy.sequence.sound_classes.pid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.sequence.sound_classes.pid</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.iterate_all_sequences">
-<code class="descname">iterate_all_sequences</code><span class="sig-paren">(</span><em>check='final'</em>, <em>mode='global'</em>, <em>gop=-3</em>, <em>scale=0.5</em>, <em>factor=0</em>, <em>gap_weight=1</em>, <em>restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iterate_all_sequences</code><span class="sig-paren">(</span><em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative refinement based on a complete realignment of all sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : { “final”, “immediate” } (default=”final”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check</strong> : { “final”, “immediate” } (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
 iteration (“immediate”) or after all iterations have been carried
@@ -271,12 +248,12 @@ out (“final”).</p>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>“global” – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>“dialign” – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>“overlap” – semi-global alignment, where gaps introduced in the
-beginning and the end of a sequence do not score.</li>
+<li><p>“global” – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>“dialign” – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
+<li><p>“overlap” – semi-global alignment, where gaps introduced in the
+beginning and the end of a sequence do not score.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>gop</strong> : int (default=-5)</p>
@@ -296,19 +273,17 @@ algorithm for affine gap penalties <code class="docutils literal notranslate"><a
 be modified.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : float (default=0)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The factor by which gaps in aligned columns contribute to the
 calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_clusters</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_similar_gap_sites</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="lingpy.align.multiple.Multiple.iterate_orphans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_orphans</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_clusters</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_similar_gap_sites</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="lingpy.align.multiple.Multiple.iterate_orphans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_orphans</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>This method essentially follows the iterative method of
@@ -318,13 +293,11 @@ calculated.</p>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.iterate_clusters">
-<code class="descname">iterate_clusters</code><span class="sig-paren">(</span><em>threshold</em>, <em>check='final'</em>, <em>mode='global'</em>, <em>gop=-3</em>, <em>scale=0.5</em>, <em>factor=0</em>, <em>gap_weight=1</em>, <em>restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iterate_clusters</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative refinement based on a flat cluster analysis of the data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold for the flat cluster analysis.</p>
 </div></blockquote>
@@ -339,12 +312,12 @@ out (“final”).</p>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>‘global’ – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>‘dialign’ – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>‘overlap’ – semi-global alignment, where gaps introduced in the
-beginning and the end of a sequence do not score.</li>
+<li><p>‘global’ – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>‘dialign’ – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
+<li><p>‘overlap’ – semi-global alignment, where gaps introduced in the
+beginning and the end of a sequence do not score.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>gop</strong> : int (default=-5)</p>
@@ -364,19 +337,17 @@ algorithm for affine gap penalties <code class="docutils literal notranslate"><a
 be modified.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : float (default=0)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The factor by which gaps in aligned columns contribute to the
 calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_similar_gap_sites</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_all_sequences</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_similar_gap_sites</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_all_sequences</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>This method uses the <a class="reference internal" href="lingpy.algorithm.html#lingpy.algorithm.clustering.flat_upgma" title="lingpy.algorithm.clustering.flat_upgma"><code class="xref py py-func docutils literal notranslate"><span class="pre">lingpy.algorithm.clustering.flat_upgma()</span></code></a>
@@ -385,13 +356,11 @@ function in order to retrieve a flat cluster of the data.</p>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.iterate_orphans">
-<code class="descname">iterate_orphans</code><span class="sig-paren">(</span><em>check='final'</em>, <em>mode='global'</em>, <em>gop=-3</em>, <em>scale=0.5</em>, <em>factor=0</em>, <em>gap_weight=1.0</em>, <em>restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iterate_orphans</code><span class="sig-paren">(</span><em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1.0</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterate over the most divergent sequences in the sample.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : string (default=”final”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check</strong> : string (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
 iteration (“immediate”) or after all iterations have been carried
@@ -402,12 +371,12 @@ out (“final”).</p>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>“global” – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>“dialign” – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>“overlap” – semi-global alignment, where gaps introduced in the
-beginning and the end of a sequence do not score.</li>
+<li><p>“global” – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>“dialign” – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
+<li><p>“overlap” – semi-global alignment, where gaps introduced in the
+beginning and the end of a sequence do not score.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>gop</strong> : int (default=-5)</p>
@@ -427,19 +396,17 @@ algorithm for affine gap penalties <code class="docutils literal notranslate"><a
 be modified.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : float (default=0)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The factor by which gaps in aligned columns contribute to the
 calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_clusters</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_similar_gap_sites</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_all_sequences</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_clusters</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="lingpy.align.multiple.Multiple.iterate_similar_gap_sites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_similar_gap_sites</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_all_sequences</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>The most divergent sequences are those whose average distance to all
@@ -448,13 +415,11 @@ other sequences is above the average distance of all sequence pairs.</p>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.iterate_similar_gap_sites">
-<code class="descname">iterate_similar_gap_sites</code><span class="sig-paren">(</span><em>check='final'</em>, <em>mode='global'</em>, <em>gop=-3</em>, <em>scale=0.5</em>, <em>factor=0</em>, <em>gap_weight=1</em>, <em>restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iterate_similar_gap_sites</code><span class="sig-paren">(</span><em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative refinement based on the <em>Similar Gap Sites</em> heuristic.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check</strong> : { “final”, “immediate” } (default=”final”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check</strong> : { “final”, “immediate” } (default=”final”)</p>
 <blockquote>
 <div><p>Specify when to check for improved sum-of-pairs scores: After each
 iteration (“immediate”) or after all iterations have been carried
@@ -465,12 +430,12 @@ out (“final”).</p>
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>‘global’ – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>‘dialign’ – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
-<li>‘overlap’ – semi-global alignment, where gaps introduced in the
-beginning and the end of a sequence do not score.</li>
+<li><p>‘global’ – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>‘dialign’ – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
+<li><p>‘overlap’ – semi-global alignment, where gaps introduced in the
+beginning and the end of a sequence do not score.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>gop</strong> : int (default=-5)</p>
@@ -490,19 +455,17 @@ algorithm for affine gap penalties <code class="docutils literal notranslate"><a
 be modified.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : float (default=1)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The factor by which gaps in aligned columns contribute to the
 calculation of the column score. When, e.g., set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_clusters</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_all_sequences</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="lingpy.align.multiple.Multiple.iterate_orphans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_orphans</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="lingpy.align.multiple.Multiple.iterate_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_clusters</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="lingpy.align.multiple.Multiple.iterate_all_sequences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_all_sequences</span></code></a>, <a class="reference internal" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="lingpy.align.multiple.Multiple.iterate_orphans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Multiple.iterate_orphans</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>This heuristic is fairly simple. The idea is to try to split a given
@@ -511,24 +474,22 @@ MSA into partitions with identical gap sites.</p>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.lib_align">
-<code class="descname">lib_align</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.lib_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lib_align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.lib_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a library-based progressive alignment analysis of the sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { “dolgo”, “sca”, “asjp” } (default=”sca”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> : { “dolgo”, “sca”, “asjp” } (default=”sca”)</p>
 <blockquote>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>“sca” – an extension of the “dolgo” sound-class model based on
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>“asjp” – an independent sound-class model which is based on the
+<li><p>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</p></li>
+<li><p>“sca” – an extension of the “dolgo” sound-class model based on
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</p></li>
+<li><p>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>mode</strong> : { “global”, “dialign” } (default=”global”)</p>
@@ -536,10 +497,10 @@ of <code class="docutils literal notranslate"><a class="reference external" href
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>“global” – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>“dialign” – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
+<li><p>“global” – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>“dialign” – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>modes</strong> : list (default=[(“global”,-10,0.6),(“local”,-1,0.6)])</p>
@@ -585,17 +546,15 @@ ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
 <p><strong>restricted_chars</strong> : string (default=”T”)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
 should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>In contrast to traditional progressive multiple sequence alignment
 approaches such as <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Feng1981"><span class="pre">Feng1981</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1994"><span class="pre">Thompson1994</span></a></code>,
@@ -608,24 +567,22 @@ progressive phase.</p>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.prog_align">
-<code class="descname">prog_align</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.prog_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">prog_align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.prog_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a progressive alignment analysis of the input sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { “dolgo”, “sca”, “asjp” } (defaul=”sca”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> : { “dolgo”, “sca”, “asjp” } (defaul=”sca”)</p>
 <blockquote>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>“sca” – an extension of the “dolgo” sound-class model based on
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>“asjp” – an independent sound-class model which is based on the
+<li><p>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</p></li>
+<li><p>“sca” – an extension of the “dolgo” sound-class model based on
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</p></li>
+<li><p>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>mode</strong> : { “global”, “dialign” } (default=”global”)</p>
@@ -633,10 +590,10 @@ of <code class="docutils literal notranslate"><a class="reference external" href
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>“global” – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>“dialign” – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
+<li><p>“global” – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>“dialign” – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>gop</strong> : int (default=-2)</p>
@@ -676,28 +633,24 @@ ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
 <p><strong>restricted_chars</strong> : string (default=”T”)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
 should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.sum_of_pairs">
-<code class="descname">sum_of_pairs</code><span class="sig-paren">(</span><em>alm_matrix='self'</em>, <em>mat=None</em>, <em>gap_weight=0.0</em>, <em>gop=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.sum_of_pairs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sum_of_pairs</code><span class="sig-paren">(</span><em class="sig-param">alm_matrix='self'</em>, <em class="sig-param">mat=None</em>, <em class="sig-param">gap_weight=0.0</em>, <em class="sig-param">gop=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.sum_of_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the sum-of-pairs score for a given alignment analysis.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>alm_matrix</strong> : { “self”, “other” } (default=”self”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alm_matrix</strong> : { “self”, “other” } (default=”self”)</p>
 <blockquote>
 <div><p>Indicate for which MSA the sum-of-pairs score shall be calculated.</p>
 </div></blockquote>
@@ -713,24 +666,20 @@ calculation of the column score. When set to 0, gaps will be
 ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>The sum-of-pairs score of the alignment.</strong> :</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>The sum-of-pairs score of the alignment.</strong> :</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.multiple.Multiple.swap_check">
-<code class="descname">swap_check</code><span class="sig-paren">(</span><em>swap_penalty=-3</em>, <em>score_mode='classes'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.swap_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">swap_check</code><span class="sig-paren">(</span><em class="sig-param">swap_penalty=-3</em>, <em class="sig-param">score_mode='classes'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.swap_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check for possibly swapped sites in the alignment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>swap_penalty</strong> : { int, float } (default=-3)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>swap_penalty</strong> : { int, float } (default=-3)</p>
 <blockquote>
 <div><p>Specify the penalty for swaps in the alignment.</p>
 </div></blockquote>
@@ -740,18 +689,16 @@ as much as other characters.</p>
 sound classes proper, or on the specific scores derived from the
 library approach.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : bool</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong> : bool</p>
+<blockquote>
 <div><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, if a swap was identified, and <code class="docutils literal notranslate"><span class="pre">False</span></code>
 otherwise. The information regarding the position of the swap is
 stored in the attribute <code class="docutils literal notranslate"><span class="pre">swap_index</span></code>.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The method for swap detection is described in detail in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>.</p>
 <p class="rubric">Examples</p>
@@ -782,7 +729,7 @@ stored in the attribute <code class="docutils literal notranslate"><span class="
 
 <dl class="function">
 <dt id="lingpy.align.multiple.dotjoin">
-<code class="descclassname">lingpy.align.multiple.</code><code class="descname">dotjoin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.dotjoin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.multiple.</code><code class="sig-name descname">dotjoin</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.dotjoin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
 <p class="rubric">Notes</p>
 <p>An implicit conversion of objects to strings is performed as well.</p>
@@ -790,13 +737,11 @@ stored in the attribute <code class="docutils literal notranslate"><span class="
 
 <dl class="function">
 <dt id="lingpy.align.multiple.mult_align">
-<code class="descclassname">lingpy.align.multiple.</code><code class="descname">mult_align</code><span class="sig-paren">(</span><em>seqs</em>, <em>gop=-1</em>, <em>scale=0.5</em>, <em>tree_calc='upgma'</em>, <em>scoredict=False</em>, <em>pprint=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.mult_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.multiple.</code><code class="sig-name descname">mult_align</code><span class="sig-paren">(</span><em class="sig-param">seqs</em>, <em class="sig-param">gop=-1</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">tree_calc='upgma'</em>, <em class="sig-param">scoredict=False</em>, <em class="sig-param">pprint=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.mult_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>A short-cut method for multiple alignment analyses.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqs</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqs</strong> : list</p>
 <blockquote>
 <div><p>The input sequences.</p>
 </div></blockquote>
@@ -816,17 +761,15 @@ stored in the attribute <code class="docutils literal notranslate"><span class="
 <blockquote>
 <div><p>Indicate whether results shall be printed onto screen.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alignments</strong> : list</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>alignments</strong> : list</p>
+<blockquote>
 <div><p>A two-dimensional list in which alignments are represented as a list of
 tokens.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">mult_align</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;vladimir&quot;</span><span class="p">],</span> <span class="n">pprint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">w   o   l   -   d   e   m   o   r   t</span>
@@ -842,36 +785,30 @@ tokens.</p>
 <p>Module provides classes and functions for pairwise alignment analyses.</p>
 <dl class="class">
 <dt id="lingpy.align.pairwise.Pairwise">
-<em class="property">class </em><code class="descclassname">lingpy.align.pairwise.</code><code class="descname">Pairwise</code><span class="sig-paren">(</span><em>seqs</em>, <em>seqB=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">Pairwise</code><span class="sig-paren">(</span><em class="sig-param">seqs</em>, <em class="sig-param">seqB=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for the handling of pairwise sequence alignments (PSA).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqs</strong> : string list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqs</strong> : string list</p>
 <blockquote>
 <div><p>Either the first string of a sequence pair that shall be aligned,
 or a list of sequence tuples.</p>
 </div></blockquote>
 <p><strong>seqB</strong> : string or bool (default=None)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Define the second sequence that shall be aligned with the first
 sequence, if only two sequences shall be compared.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <dl class="method">
 <dt id="lingpy.align.pairwise.Pairwise.align">
-<code class="descname">align</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise.align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise.align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Align a pair of sequences or multiple sequence pairs.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>gop</strong> : int (default=-1)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gop</strong> : int (default=-1)</p>
 <blockquote>
 <div><p>The gap opening penalty (GOP).</p>
 </div></blockquote>
@@ -908,26 +845,22 @@ If no model is specified, the default model of <code class="docutils literal not
 will be used.</p>
 </div></blockquote>
 <p><strong>pprint</strong> : bool (default=False)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>If set to <em>True</em>, the alignments are printed to the screen.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.edit_dist">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">edit_dist</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em>, <em>normalized=False</em>, <em>restriction=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.edit_dist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">edit_dist</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">normalized=False</em>, <em class="sig-param">restriction=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.edit_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the edit distance between two strings.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA,seqB</strong> : str</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqA,seqB</strong> : str</p>
 <blockquote>
 <div><p>The strings that shall be compared.</p>
 </div></blockquote>
@@ -939,30 +872,27 @@ the length of the longer string. If <em>restriction</em> is set to <em>cv</em>
 (consonant-vowel), the edit distance is normalized by the length of the
 alignment.</p>
 </div></blockquote>
-<p><strong>restriction</strong> : {“cv”} (default=”“)</p>
+<p><strong>restriction</strong> : {“cv”} (default=””)</p>
 <blockquote>
 <div><p>Specify the restrictions to be used. Currently, only <code class="docutils literal notranslate"><span class="pre">cv</span></code> is
 supported. This prohibits matches of vowels with consonants.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dist</strong> : {int float}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dist</strong> : {int float}</p>
+<blockquote>
 <div><p>The edit distance, which is a float if normalized is set to c{True},
 and an integer otherwise.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The edit distance was first formally defined by V. I. Levenshtein
 (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Levenshtein1965"><span class="pre">Levenshtein1965</span></a></code>). The first algorithm to compute the edit
 distance was proposed by Wagner and Fisher (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Wagner1974"><span class="pre">Wagner1974</span></a></code>).</p>
 <p class="rubric">Examples</p>
-<dl class="docutils">
-<dt>Align two sequences::</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dl>
+<dt>Align two sequences::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">edit_dist</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">3</span>
@@ -974,22 +904,20 @@ distance was proposed by Wagner and Fisher (<code class="docutils literal notran
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.nw_align">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">nw_align</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em>, <em>scorer=False</em>, <em>gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.nw_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">nw_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.nw_align" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
-<div>Carry out the traditional Needleman-Wunsch algorithm.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : {str, list, tuple}</p>
+<div><p>Carry out the traditional Needleman-Wunsch algorithm.</p>
+</div></blockquote>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqA, seqB</strong> : {str, list, tuple}</p>
 <blockquote>
 <div><blockquote>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
 </div></blockquote>
-<dl class="docutils">
-<dt>scorer <span class="classifier-delimiter">:</span> <span class="classifier">dict (default=False)</span></dt>
-<dd><p class="first last">If set to c{False} a scorer will automatically be calculated,
+<dl class="simple">
+<dt>scorer<span class="classifier">dict (default=False)</span></dt><dd><p>If set to c{False} a scorer will automatically be calculated,
 otherwise, the scorer needs to be passed as a dictionary that covers
 all segment matches between the input strings (segment matches need to
 be passed as tuples of two segments, following the order of the input
@@ -998,70 +926,65 @@ could also use it for two completely different alphabets. All you need
 to make sure is that the tuples representing the segment matches follow
 the order of your input sequences.</p>
 </dd>
-<dt>gap <span class="classifier-delimiter">:</span> <span class="classifier">int (default=-1)</span></dt>
-<dd><p class="first last">The gap penalty.</p>
+<dt>gap<span class="classifier">int (default=-1)</span></dt><dd><p>The gap penalty.</p>
 </dd>
 </dl>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alm</strong> : tuple</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>alm</strong> : tuple</p>
+<blockquote>
 <div><p>A tuple consisting of the aligments of the first and the second
 sequence, and the alignment score.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The Needleman-Wunsch algorithm (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>) returns a global
 alignment of two sequences.</p>
-<dl class="docutils">
-<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt>
-<dd><blockquote class="first">
-<div>a b a b -
-- b a b a (sim=1)</div></blockquote>
+<dl>
+<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt><dd><blockquote>
+<div><p>a b a b -
+- b a b a (sim=1)</p>
+</div></blockquote>
 <p>Nothing unexpected so far, you could reach the same result without the
 scorer. But now let’s make a scorer that favors mismatches for our little
 two-letter alphabet:</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;abab&#39;</span><span class="p">,</span> <span class="s1">&#39;baba&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span> <span class="n">almB</span><span class="p">,</span> <span class="n">sim</span> <span class="o">=</span> <span class="n">nw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">scorer</span><span class="o">=</span><span class="n">scorer</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">almA</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </dd>
-<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt>
-<dd><blockquote class="first">
-<div>a b a b
-b a b a (sim=4)</div></blockquote>
+<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt><dd><blockquote>
+<div><p>a b a b
+b a b a (sim=4)</p>
+</div></blockquote>
 <p>Now, let’s analyse two strings which are completely different, but where we
 use the scorer to define mappings between the segments. We simply do this
 by using lower case letters in one and upper case letters in the other
 case, which will, of course, be treated as different symbols in Python:</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scorer</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">):</span> <span class="mi">1</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;ABAB&#39;</span><span class="p">,</span> <span class="s1">&#39;aa&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">almA</span><span class="p">,</span> <span class="n">almB</span><span class="p">,</span> <span class="n">sim</span> <span class="o">=</span> <span class="n">nw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">scorer</span><span class="o">=</span><span class="n">scorer</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">almA</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </dd>
-<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt>
-<dd>A B A B
-a - a - (sim=0)</dd>
+<dt>‘+’ ‘.join(almB), “(sim={0})”.format(sim))</dt><dd><p>A B A B
+a - a - (sim=0)</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.pw_align">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">pw_align</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em>, <em>gop=-1</em>, <em>scale=0.5</em>, <em>scorer=False</em>, <em>mode='global'</em>, <em>distance=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.pw_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">pw_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">gop=-1</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">distance=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.pw_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Align two sequences in various ways.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : {text_type, list, tuple}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqA, seqB</strong> : {text_type, list, tuple}</p>
 <blockquote>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
@@ -1088,18 +1011,15 @@ opening penalty.</p>
 implemented in LingPy, see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code> for details.</p>
 </div></blockquote>
 <p><strong>distance</strong> : bool (default=False)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>If set to c{True} return the distance score following the formula by
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Downey2008"><span class="pre">Downey2008</span></a></code>. Otherwise, return the basic similarity score.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
-<dl class="docutils">
-<dt>Align two words using the dialign algorithm::</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dl>
+<dt>Align two words using the dialign algorithm::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;dialign&#39;</span><span class="p">)</span>
 <span class="go">([&#39;f&#39;, &#39;a&#39;, &#39;t&#39;, &#39; &#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;],</span>
@@ -1113,19 +1033,17 @@ implemented in LingPy, see <code class="docutils literal notranslate"><a class="
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.structalign">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">structalign</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.structalign" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">structalign</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.structalign" title="Permalink to this definition">¶</a></dt>
 <dd><p>Experimental function for testing structural alignment algorithms.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.sw_align">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">sw_align</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em>, <em>scorer=False</em>, <em>gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.sw_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">sw_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.sw_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out the traditional Smith-Waterman algorithm.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : {str, list, tuple}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqA, seqB</strong> : {str, list, tuple}</p>
 <blockquote>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
@@ -1140,25 +1058,22 @@ all segment matches between the input strings.</p>
 <blockquote>
 <div><p>The gap penalty.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alm</strong> : tuple</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>alm</strong> : tuple</p>
+<blockquote>
 <div><p>A tuple consisting of prefix, alignment, and suffix of the first and
 the second sequence, and the alignment score.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The Smith-Waterman algorithm (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Smith1981"><span class="pre">Smith1981</span></a></code>) returns a local
 alignment between two sequences. A local alignment is an alignment of those
 subsequences of the input sequences that yields the highest score.</p>
 <p class="rubric">Examples</p>
-<dl class="docutils">
-<dt>Align two sequences::</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dl>
+<dt>Align two sequences::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">(([], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], [&#39; &#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;]),</span>
@@ -1172,13 +1087,11 @@ subsequences of the input sequences that yields the highest score.</p>
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.turchin">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">turchin</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em>, <em>model='dolgo'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.turchin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">turchin</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">model='dolgo'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.turchin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return cognate judgment based on the method by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Turchin2010"><span class="pre">Turchin2010</span></a></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : {str, list, tuple}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqA, seqB</strong> : {str, list, tuple}</p>
 <blockquote>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
@@ -1188,28 +1101,24 @@ lists, or strings.</p>
 <div><p>A sound-class model instance or a string that denotes one of the
 standard sound class models used in LingPy.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cognacy</strong> : {0, 1}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cognacy</strong> : {0, 1}</p>
+<blockquote>
 <div><p>The cognacy assertion which is either 0 (words are probably cognate) or
 1 (words are not likely to be cognate).</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.align.pairwise.we_align">
-<code class="descclassname">lingpy.align.pairwise.</code><code class="descname">we_align</code><span class="sig-paren">(</span><em>seqA</em>, <em>seqB</em>, <em>scorer=False</em>, <em>gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.we_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">we_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.we_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out the traditional Waterman-Eggert algorithm.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>seqA, seqB</strong> : {str, list, tuple}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seqA, seqB</strong> : {str, list, tuple}</p>
 <blockquote>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
@@ -1224,26 +1133,23 @@ all segment matches between the input strings.</p>
 <blockquote>
 <div><p>The gap penalty.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>alms</strong> : list</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>alms</strong> : list</p>
+<blockquote>
 <div><p>A list consisting of tuples. Each tuple gives the alignment of one of
 the subsequences of the input sequences. Each tuple contains the
 aligned part of the first, the aligned part of the second sequence, and
 the score of the alignment.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The Waterman-Eggert algorithm (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Waterman1987"><span class="pre">Waterman1987</span></a></code>) returns <em>all</em>
 local matches between two sequences.</p>
 <p class="rubric">Examples</p>
-<dl class="docutils">
-<dt>Align two sequences::</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dl>
+<dt>Align two sequences::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">we_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">[([&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], 3.0),</span>
@@ -1264,14 +1170,12 @@ sequence perspective deals with unaligned sequences. The <em>alignment</em>
 perspective deals with aligned sequences.</p>
 <dl class="class">
 <dt id="lingpy.align.sca.Alignments">
-<em class="property">class </em><code class="descclassname">lingpy.align.sca.</code><code class="descname">Alignments</code><span class="sig-paren">(</span><em>infile</em>, <em>row='concept'</em>, <em>col='doculect'</em>, <em>conf=''</em>, <em>modify_ref=False</em>, <em>_interactive=True</em>, <em>split_on_tones=True</em>, <em>ref='cogid'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">Alignments</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">row='concept'</em>, <em class="sig-param">col='doculect'</em>, <em class="sig-param">conf=''</em>, <em class="sig-param">modify_ref=False</em>, <em class="sig-param">_interactive=True</em>, <em class="sig-param">split_on_tones=False</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Class handles Wordlists for the purpose of alignment analyses.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>infile</strong> : str</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>infile</strong> : str</p>
 <blockquote>
 <div><p>The name of the input file that should conform to the basic format of
 the <cite>~lingpy.basic.wordlist.Wordlist</cite> class and define a specific ID
@@ -1287,7 +1191,7 @@ basis for the tabular representation of the word list.</p>
 <div><p>A string indicating the name of the column that shall be taken as the
 basis for the tabular representation of the word list.</p>
 </div></blockquote>
-<p><strong>conf</strong> : string (default=’‘)</p>
+<p><strong>conf</strong> : string (default=’’)</p>
 <blockquote>
 <div><p>A string defining the path to the configuration file.</p>
 </div></blockquote>
@@ -1303,73 +1207,65 @@ loans, but you want to suppress this behaviour, just set this
 keyword to “abs”, and all cognate IDs will be converted to their
 absolute value.</p>
 </div></blockquote>
-<p><strong>split_on_tones</strong> : bool (default=True)</p>
-<blockquote class="last">
+<p><strong>split_on_tones</strong> : bool (default=False)</p>
+<blockquote>
 <div><p>If set to True, this means that in the case of fuzzy alignment mode,
 the algorithm will attempt to split words into morphemes by tones if no
 explicit morpheme markers can be found.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This class inherits from <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> and
 additionally creates instances of the
 <a class="reference internal" href="#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multiple</span></code></a> class for all cognate sets that
 are specified by the <em>ref</em> keyword.</p>
 <p class="rubric">Attributes</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="4%" />
-<col width="5%" />
-<col width="91%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 91%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>msa</td>
-<td>dict</td>
-<td>A dictionary storing multiple alignments as dictionaries which can be
+<tbody>
+<tr class="row-odd"><td><p>msa</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary storing multiple alignments as dictionaries which can be
 directly opened and aligned with help of the ~lingpy.align.sca.SCA
 function. The alignment objects are referenced by a key which is
 identical with the “reference” (ref-keyword) of the alignment, that is
-the name of the column which contains the cognate identifiers.</td>
+the name of the column which contains the cognate identifiers.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.add_alignments">
-<code class="descname">add_alignments</code><span class="sig-paren">(</span><em>ref=False</em>, <em>modify_ref=False</em>, <em>fuzzy=False</em>, <em>split_on_tones=True</em>, <em>override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_alignments</code><span class="sig-paren">(</span><em class="sig-param">ref=False</em>, <em class="sig-param">modify_ref=False</em>, <em class="sig-param">fuzzy=False</em>, <em class="sig-param">split_on_tones=True</em>, <em class="sig-param">override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function adds a new set of alignments to the data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ref: str (default=False)</strong> :</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref: str (default=False)</strong> :</p>
 <blockquote>
 <div><p>Use this to set the name of the column which contains the cognate
 sets.</p>
 </div></blockquote>
 <p><strong>fuzzy: bool (default=False)</strong> :</p>
-<blockquote class="last">
+<blockquote>
 <div><p>If set to true, force the algorithm to treat the cognate sets as
 fuzzy cognate sets, i.e., as multiple cognate sets which are in
 order assigned to a word (proper “partial cognates”).</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.align">
-<code class="descname">align</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a multiple alignment analysis of the data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { “progressive”, “library” } (default=”progressive”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : { “progressive”, “library” } (default=”progressive”)</p>
 <blockquote>
 <div><p>Select the method to use for the analysis.</p>
 </div></blockquote>
@@ -1386,13 +1282,13 @@ order assigned to a word (proper “partial cognates”).</p>
 <div><p>A string indicating the name of the <a class="reference internal" href="lingpy.data.html#module-lingpy.data.model" title="lingpy.data.model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object that shall be used for the analysis.
 Currently, three models are supported:</p>
 <ul class="simple">
-<li>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</li>
-<li>“sca” – an extension of the “dolgo” sound-class model based on
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</li>
-<li>“asjp” – an independent sound-class model which is based on the
+<li><p>“dolgo” – a sound-class model based on <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dolgopolsky1986"><span class="pre">Dolgopolsky1986</span></a></code>,</p></li>
+<li><p>“sca” – an extension of the “dolgo” sound-class model based on
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>, and</p></li>
+<li><p>“asjp” – an independent sound-class model which is based on the
 sound-class model of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and the empirical data
 of <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code> (see the description in
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</li>
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>mode</strong> : { ‘global’, ‘dialign’ }</p>
@@ -1400,10 +1296,10 @@ of <code class="docutils literal notranslate"><a class="reference external" href
 <div><p>A string indicating which kind of alignment analysis should be
 carried out during the progressive phase. Select between:</p>
 <ul class="simple">
-<li>“global” – traditional global alignment analysis based on the
-Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</li>
-<li>“dialign” – global alignment analysis which seeks to maximize
-local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</li>
+<li><p>“global” – traditional global alignment analysis based on the
+Needleman-Wunsch algorithm <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Needleman1970"><span class="pre">Needleman1970</span></a></code>,</p></li>
+<li><p>“dialign” – global alignment analysis which seeks to maximize
+local similarities <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Morgenstern1996"><span class="pre">Morgenstern1996</span></a></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>modes</strong> : list (default=[(‘global’,-2,0.5),(‘local’,-1,0.5)])</p>
@@ -1443,28 +1339,24 @@ ignored in the calculation. When set to 0.5, gaps will count half
 as much as other characters.</p>
 </div></blockquote>
 <p><strong>restricted_chars</strong> : string (default=”T”)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Define which characters of the prosodic string of a sequence
 reflect its secondary structure (cf. <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>) and
 should therefore be aligned specifically. This defaults to “T”,
 since this is the character that represents tones in the prosodic
 strings of sequences.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.get_confidence">
-<code class="descname">get_confidence</code><span class="sig-paren">(</span><em>scorer</em>, <em>ref='lexstatid'</em>, <em>gap_weight=0.25</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_confidence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_confidence</code><span class="sig-paren">(</span><em class="sig-param">scorer</em>, <em class="sig-param">ref='lexstatid'</em>, <em class="sig-param">gap_weight=0.25</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_confidence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function creates confidence scores for a given set of alignments.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>scorer</strong> : <code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scorer</strong> : <code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></p>
 <blockquote>
 <div><p>A <em>ScoreDict</em> object which gives similarity scores for all segments in
 the alignment.</p>
@@ -1475,24 +1367,20 @@ the alignment.</p>
 the analysis.</p>
 </div></blockquote>
 <p><strong>gap_weight</strong> : {loat} (default=1.0)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Determine the weight assigned to matches containing gaps.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.get_consensus">
-<code class="descname">get_consensus</code><span class="sig-paren">(</span><em>tree=False</em>, <em>gaps=False</em>, <em>classes=False</em>, <em>consensus='consensus'</em>, <em>counterpart='ipa'</em>, <em>weights=[]</em>, <em>return_data=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_consensus</code><span class="sig-paren">(</span><em class="sig-param">tree=False</em>, <em class="sig-param">gaps=False</em>, <em class="sig-param">classes=False</em>, <em class="sig-param">consensus='consensus'</em>, <em class="sig-param">counterpart='ipa'</em>, <em class="sig-param">weights=[]</em>, <em class="sig-param">return_data=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of all MSAs in the wordlist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>msa</strong> : {c{list} ~lingpy.align.multiple.Multiple}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msa</strong> : {c{list} ~lingpy.align.multiple.Multiple}</p>
 <blockquote>
 <div><p>Either an MSA object or an MSA matrix.</p>
 </div></blockquote>
@@ -1515,30 +1403,26 @@ calculated.</p>
 converted to sound-class strings.</p>
 </div></blockquote>
 <p><strong>return_data</strong> : c{bool} (default=False)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Return the data instead of adding it in a column to the wordlist
 object.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.get_msa">
-<code class="descname">get_msa</code><span class="sig-paren">(</span><em>ref</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_msa" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_msa</code><span class="sig-paren">(</span><em class="sig-param">ref</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_msa" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.output">
-<code class="descname">output</code><span class="sig-paren">(</span><em>fileformat</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write wordlist to file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : {“tsv”, “msa”, “tre”, “nwk”, “dst”, “taxa”, “starling”, “paps.nex”,</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileformat</strong> : {“tsv”, “msa”, “tre”, “nwk”, “dst”, “taxa”, “starling”, “paps.nex”,</p>
 <blockquote>
 <div><p>“paps.csv” “html”}
 The format that is written to file. This corresponds to the file
@@ -1546,11 +1430,11 @@ extension, thus ‘tsv’ creates a file in tsv-format, ‘dst’ creates
 a file in Phylip-distance format, etc. Specific output is created
 for the formats “html” and “msa”:</p>
 <ul class="simple">
-<li>“msa” will create a folder containing all alignments of all
-cognate sets in “msa”-format</li>
-<li>“html” will create html-output in which words are sorted
+<li><p>“msa” will create a folder containing all alignments of all
+cognate sets in “msa”-format</p></li>
+<li><p>“html” will create html-output in which words are sorted
 according to meaning, cognate set, and all cognate words are
-aligned</li>
+aligned</p></li>
 </ul>
 </div></blockquote>
 <p><strong>filename</strong> : str</p>
@@ -1612,21 +1496,19 @@ string and not a list, this will ignore all additional blocks and
 output only plain “tsv”.</p>
 </div></blockquote>
 <p><strong>prettify</strong> : bool (default=True)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Inserts comment characters between concepts in the “tsv” file
 output format, which makes it easier to see blocks of words
 denoting the same concept. Switching this off will output the file
 in plain “tsv”.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.align.sca.Alignments.reduce_alignments">
-<code class="descname">reduce_alignments</code><span class="sig-paren">(</span><em>alignment=False</em>, <em>ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reduce_alignments</code><span class="sig-paren">(</span><em class="sig-param">alignment=False</em>, <em class="sig-param">ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reduces alignments which contain columns that are marked to be                 ignored by the user.</p>
 <p class="rubric">Notes</p>
 <p>This function changes the data only internally: All alignments are
@@ -1642,14 +1524,12 @@ place in the dictionary.</p>
 
 <dl class="class">
 <dt id="lingpy.align.sca.MSA">
-<em class="property">class </em><code class="descclassname">lingpy.align.sca.</code><code class="descname">MSA</code><span class="sig-paren">(</span><em>infile</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">MSA</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.align.multiple.Multiple</span></code></a></p>
 <p>Basic class for carrying out multiple sequence alignment analyses.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>infile</strong> : file</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>infile</strong> : file</p>
 <blockquote>
 <div><p>A file in <code class="docutils literal notranslate"><span class="pre">msq</span></code>-format or <code class="docutils literal notranslate"><span class="pre">msa</span></code>-format.</p>
 </div></blockquote>
@@ -1665,15 +1545,13 @@ analysis.</p>
 prevents that line from being read.</p>
 </div></blockquote>
 <p><strong>normalize</strong> : bool (default=True)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Normalize the alignment, that is, add gap characters for all sequences
 which are shorter than the longest sequence, and delete all columns
 from the alignment in which only gaps occur.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>There are two possible input formats for this class: the MSQ-format, and
 the MSA-format (see <a class="reference internal" href="../tutorial/formats.html#msa-formats"><span class="std std-ref">Multiple Alignments (MSQ and MSA)</span></a> for details). This class directly
@@ -1702,21 +1580,17 @@ class.</p>
 </div>
 <dl class="method">
 <dt id="lingpy.align.sca.MSA.ipa2cls">
-<code class="descname">ipa2cls</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.ipa2cls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ipa2cls</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.ipa2cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve sound-class strings from aligned IPA sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : str (default=’sca’)</p>
-<blockquote class="last">
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> : str (default=’sca’)</p>
+<blockquote>
 <div><p>The sound-class model according to which the sequences shall be
 converted.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This function is only useful when an <code class="docutils literal notranslate"><span class="pre">msa</span></code>-file with already
 conducted alignment analyses was loaded.</p>
@@ -1724,20 +1598,18 @@ conducted alignment analyses was loaded.</p>
 
 <dl class="method">
 <dt id="lingpy.align.sca.MSA.output">
-<code class="descname">output</code><span class="sig-paren">(</span><em>fileformat='msa'</em>, <em>filename=None</em>, <em>sorted_seqs=False</em>, <em>unique_seqs=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat='msa'</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">sorted_seqs=False</em>, <em class="sig-param">unique_seqs=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write data to file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : { “psa”, “msa”, “msq” }</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileformat</strong> : { “psa”, “msa”, “msq” }</p>
 <blockquote>
 <div><p>Indicate which data should be written to file. Select between:</p>
 <ul class="simple">
-<li>“psa” – output of all pairwise alignments in <code class="docutils literal notranslate"><span class="pre">psa</span></code>-format,</li>
-<li>“msa” – output of the multiple alignment in <code class="docutils literal notranslate"><span class="pre">msa</span></code>-format, or</li>
-<li>“msq” – output of the multiple sequences in <code class="docutils literal notranslate"><span class="pre">msq</span></code>-format.</li>
-<li>“html” – output of the multiple alignment in <code class="docutils literal notranslate"><span class="pre">html</span></code>-format.</li>
+<li><p>“psa” – output of all pairwise alignments in <code class="docutils literal notranslate"><span class="pre">psa</span></code>-format,</p></li>
+<li><p>“msa” – output of the multiple alignment in <code class="docutils literal notranslate"><span class="pre">msa</span></code>-format, or</p></li>
+<li><p>“msq” – output of the multiple sequences in <code class="docutils literal notranslate"><span class="pre">msq</span></code>-format.</p></li>
+<li><p>“html” – output of the multiple alignment in <code class="docutils literal notranslate"><span class="pre">html</span></code>-format.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>filename</strong> : str</p>
@@ -1751,28 +1623,24 @@ the infile will be taken by default.</p>
 to ‘msa’ and ‘msq’ output.</p>
 </div></blockquote>
 <p><strong>unique_seqs</strong> : bool</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Indicate whether only unique sequences should be written to file or
 not.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.align.sca.PSA">
-<em class="property">class </em><code class="descclassname">lingpy.align.sca.</code><code class="descname">PSA</code><span class="sig-paren">(</span><em>infile</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">PSA</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.align.pairwise.Pairwise</span></code></a></p>
 <p>Basic class for dealing with the pairwise alignment of sequences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>infile</strong> : file</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>infile</strong> : file</p>
 <blockquote>
 <div><p>A file in <code class="docutils literal notranslate"><span class="pre">psq</span></code>-format.</p>
 </div></blockquote>
@@ -1783,73 +1651,67 @@ diphtongs, or whether they should be kept separated during the
 analysis.</p>
 </div></blockquote>
 <p><strong>comment</strong> : char (default=’#’)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The comment character which, inserted in the beginning of a line,
 prevents that line from being read.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>In order to read in data from text files, two different file formats can be
 used along with this class: the PSQ-format, and the PSA-format (see
 <a class="reference internal" href="../tutorial/formats.html#psa-formats"><span class="std std-ref">Pairwise Alignments (PSQ and PSA)</span></a> for details). This class inherits the methods of the
 <a class="reference internal" href="#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pairwise</span></code></a> class.</p>
 <p class="rubric">Attributes</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="8%" />
-<col width="5%" />
-<col width="87%" />
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 87%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>taxa</td>
-<td>list</td>
-<td>A list of tuples containing the taxa of all sequence pairs.</td>
+<tbody>
+<tr class="row-odd"><td><p>taxa</p></td>
+<td><p>list</p></td>
+<td><p>A list of tuples containing the taxa of all sequence pairs.</p></td>
 </tr>
-<tr class="row-even"><td>seqs</td>
-<td>list</td>
-<td>A list of tuples containing all sequence pairs.</td>
+<tr class="row-even"><td><p>seqs</p></td>
+<td><p>list</p></td>
+<td><p>A list of tuples containing all sequence pairs.</p></td>
 </tr>
-<tr class="row-odd"><td>tokens</td>
-<td>list</td>
-<td>A list of tuples containing all sequence pairs in a tokenized form.</td>
+<tr class="row-odd"><td><p>tokens</p></td>
+<td><p>list</p></td>
+<td><p>A list of tuples containing all sequence pairs in a tokenized form.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="lingpy.align.sca.PSA.output">
-<code class="descname">output</code><span class="sig-paren">(</span><em>fileformat='psa'</em>, <em>filename=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat='psa'</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the results of the analyses to a text file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : { ‘psa’, ‘psq’ }</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileformat</strong> : { ‘psa’, ‘psq’ }</p>
 <blockquote>
 <div><p>Indicate which data should be written to file. Select between:</p>
 <ul class="simple">
-<li>‘psa’ – output of all pairwise alignments in <code class="docutils literal notranslate"><span class="pre">psa</span></code>-format,</li>
-<li>‘psq’ – output of the multiple sequences in <code class="docutils literal notranslate"><span class="pre">psq</span></code>-format.</li>
+<li><p>‘psa’ – output of all pairwise alignments in <code class="docutils literal notranslate"><span class="pre">psa</span></code>-format,</p></li>
+<li><p>‘psq’ – output of the multiple sequences in <code class="docutils literal notranslate"><span class="pre">psq</span></code>-format.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>filename</strong> : str</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Select a specific name for the outfile, otherwise, the name of
 the infile will be taken by default.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.align.sca.SCA">
-<code class="descclassname">lingpy.align.sca.</code><code class="descname">SCA</code><span class="sig-paren">(</span><em>infile</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.SCA" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">SCA</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.SCA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method returns alignment objects depending on input file or input data.</p>
 <p class="rubric">Notes</p>
 <p>This method checks for the type of an alignment object and returns an
@@ -1858,13 +1720,11 @@ alignment object of the respective type.</p>
 
 <dl class="function">
 <dt id="lingpy.align.sca.get_consensus">
-<code class="descclassname">lingpy.align.sca.</code><code class="descname">get_consensus</code><span class="sig-paren">(</span><em>msa</em>, <em>gaps=False</em>, <em>taxa=False</em>, <em>classes=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.get_consensus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">get_consensus</code><span class="sig-paren">(</span><em class="sig-param">msa</em>, <em class="sig-param">gaps=False</em>, <em class="sig-param">taxa=False</em>, <em class="sig-param">classes=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of a given MSA.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>msa</strong> : {c{list} ~lingpy.align.multiple.Multiple}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msa</strong> : {c{list} ~lingpy.align.multiple.Multiple}</p>
 <blockquote>
 <div><p>Either an MSA object or an MSA matrix.</p>
 </div></blockquote>
@@ -1894,16 +1754,14 @@ reference to remove low-scoring columns from the alignment. If set to
 “gaps”, the columns with the highest proportion of gaps will be
 excluded.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cons</strong> : c{str}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cons</strong> : c{str}</p>
+<blockquote>
 <div><p>A consensus string of the given MSA.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -1942,13 +1800,11 @@ excluded.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1989,7 +1845,7 @@ excluded.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

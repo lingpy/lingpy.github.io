@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>lingpy.data package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -81,11 +80,11 @@ access when loading the library, the models are compiled and stored in binary
 files.</p>
 <dl class="function">
 <dt id="lingpy.data.derive.compile_dvt">
-<code class="descclassname">lingpy.data.derive.</code><code class="descname">compile_dvt</code><span class="sig-paren">(</span><em>path=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_dvt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.data.derive.</code><code class="sig-name descname">compile_dvt</code><span class="sig-paren">(</span><em class="sig-param">path=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_dvt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function compiles diacritics, vowels, and tones.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.model.Model</span></code></a>, <a class="reference internal" href="#lingpy.data.derive.compile_model" title="lingpy.data.derive.compile_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_model</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.model.Model</span></code></a>, <a class="reference internal" href="#lingpy.data.derive.compile_model" title="lingpy.data.derive.compile_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_model</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>Diacritics, vowels, and tones are defined in the <code class="file docutils literal notranslate"><span class="pre">data/models/dv/</span></code> directory
@@ -104,27 +103,23 @@ character, whereas diacritics are preceded by a dash.</p>
 
 <dl class="function">
 <dt id="lingpy.data.derive.compile_model">
-<code class="descclassname">lingpy.data.derive.</code><code class="descname">compile_model</code><span class="sig-paren">(</span><em>model</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.data.derive.</code><code class="sig-name descname">compile_model</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function compiles customized sound-class models.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : str</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> : str</p>
 <blockquote>
 <div><p>A string indicating the name of the model which shall be created.</p>
 </div></blockquote>
 <p><strong>path</strong> : str</p>
-<blockquote class="last">
+<blockquote>
 <div><p>A string indication the path where the model-folder is stored.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.model.Model</span></code></a>, <a class="reference internal" href="#lingpy.data.derive.compile_dvt" title="lingpy.data.derive.compile_dvt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compile_dvt</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.model.Model</span></code></a>, <a class="reference internal" href="#lingpy.data.derive.compile_dvt" title="lingpy.data.derive.compile_dvt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compile_dvt</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>A model is defined by a folder placed in <code class="file docutils literal notranslate"><span class="pre">data/models</span></code> directory of
@@ -132,9 +127,8 @@ the LingPy package. The name of the folder reflects the name of the model.
 It contains three files: the file <code class="file docutils literal notranslate"><span class="pre">converter</span></code>, the file <code class="file docutils literal notranslate"><span class="pre">INFO</span></code>,
 and the optional file <code class="file docutils literal notranslate"><span class="pre">scorer</span></code>. The format requirements for these
 files are as follows:</p>
-<dl class="docutils">
-<dt><code class="file docutils literal notranslate"><span class="pre">INFO</span></code></dt>
-<dd><p class="first">The <code class="docutils literal notranslate"><span class="pre">INFO</span></code>-file serves as a reference for a given sound-class model.
+<dl>
+<dt><code class="file docutils literal notranslate"><span class="pre">INFO</span></code></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">INFO</span></code>-file serves as a reference for a given sound-class model.
 It can contain arbitrary information (and also be empty). If one wants
 to define specific characteristics, like the <code class="docutils literal notranslate"><span class="pre">source</span></code>, the
 <code class="docutils literal notranslate"><span class="pre">compiler</span></code>, the <code class="docutils literal notranslate"><span class="pre">date</span></code>, or a <code class="docutils literal notranslate"><span class="pre">description</span></code> of a given model,
@@ -144,16 +138,15 @@ right next to the key in the same line, e.g.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@source</span><span class="p">:</span> <span class="n">Dolgopolsky</span> <span class="p">(</span><span class="mi">1986</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="last">This information will then be read from the <code class="docutils literal notranslate"><span class="pre">INFO</span></code> file and rendered
+<p>This information will then be read from the <code class="docutils literal notranslate"><span class="pre">INFO</span></code> file and rendered
 when printing the model to screen with help of the <a class="reference external" href="https://docs.python.org/3/library/functions.html#print" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>
 function.</p>
 </dd>
-<dt><code class="file docutils literal notranslate"><span class="pre">converter</span></code></dt>
-<dd><p class="first">The <code class="docutils literal notranslate"><span class="pre">converter</span></code> file contains all sound classes which are matched
+<dt><code class="file docutils literal notranslate"><span class="pre">converter</span></code></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">converter</span></code> file contains all sound classes which are matched
 with their respective sound values. Each line is reserved for one
 class, precede by the key (preferably an ASCII-letter) representing the
 class:</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="p">:</span> <span class="n">ɸ</span><span class="p">,</span> <span class="n">β</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">p͡f</span><span class="p">,</span> <span class="n">p͜f</span><span class="p">,</span> <span class="n">ƀ</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="p">:</span> <span class="n">ɸ</span><span class="p">,</span> <span class="n">β</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">p͡f</span><span class="p">,</span> <span class="n">p͜f</span><span class="p">,</span> <span class="n">ƀ</span>
 <span class="n">E</span> <span class="p">:</span> <span class="n">ɛ</span><span class="p">,</span> <span class="n">æ</span><span class="p">,</span> <span class="n">ɜ</span><span class="p">,</span> <span class="n">ɐ</span><span class="p">,</span> <span class="n">ʌ</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">ᴇ</span><span class="p">,</span> <span class="n">ə</span><span class="p">,</span> <span class="n">ɘ</span><span class="p">,</span> <span class="n">ɤ</span><span class="p">,</span> <span class="n">è</span><span class="p">,</span> <span class="n">é</span><span class="p">,</span> <span class="n">ē</span><span class="p">,</span> <span class="n">ě</span><span class="p">,</span> <span class="n">ê</span><span class="p">,</span> <span class="n">ɚ</span>
 <span class="n">D</span> <span class="p">:</span> <span class="n">θ</span><span class="p">,</span> <span class="n">ð</span><span class="p">,</span> <span class="n">ŧ</span><span class="p">,</span> <span class="n">þ</span><span class="p">,</span> <span class="n">đ</span>
 <span class="n">G</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">ɣ</span><span class="p">,</span> <span class="n">χ</span>
@@ -161,21 +154,19 @@ class:</p>
 </pre></div>
 </div>
 </dd>
-<dt><code class="file docutils literal notranslate"><span class="pre">matrix</span></code></dt>
-<dd><p class="first">A scoring matrix indicating the alignment scores of all sound-class
+<dt><code class="file docutils literal notranslate"><span class="pre">matrix</span></code></dt><dd><p>A scoring matrix indicating the alignment scores of all sound-class
 characters defined by the model. The scoring is structured as a simple
 tab-delimited text file. The first cell contains the character names,
 the following cells contain the scores in redundant form (with both
 triangles being filled):</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span>  <span class="mf">10.0</span> <span class="o">-</span><span class="mf">10.0</span>   <span class="mf">5.0</span> <span class="o">...</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span>  <span class="mf">10.0</span> <span class="o">-</span><span class="mf">10.0</span>   <span class="mf">5.0</span> <span class="o">...</span>
 <span class="n">E</span> <span class="o">-</span><span class="mf">10.0</span>   <span class="mf">5.0</span> <span class="o">-</span><span class="mf">10.0</span> <span class="o">...</span>
 <span class="n">F</span>   <span class="mf">5.0</span> <span class="o">-</span><span class="mf">10.0</span>  <span class="mf">10.0</span> <span class="o">...</span>
 <span class="o">...</span>
 </pre></div>
 </div>
 </dd>
-<dt><code class="file docutils literal notranslate"><span class="pre">scorer</span></code></dt>
-<dd><p class="first">The <code class="docutils literal notranslate"><span class="pre">scorer</span></code> file (which is optional) contains the graph of
+<dt><code class="file docutils literal notranslate"><span class="pre">scorer</span></code></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">scorer</span></code> file (which is optional) contains the graph of
 class-transitions which is used for the calculation of the scoring
 dictionary. Each class is listed in a separate line, followed by the
 symbols <code class="docutils literal notranslate"><span class="pre">v</span></code>,``c``, or <code class="docutils literal notranslate"><span class="pre">t</span></code> (indicating whether the class
@@ -191,7 +182,7 @@ classes):</p>
 <span class="o">...</span>
 </pre></div>
 </div>
-<p class="last">The information in such a file is automatically converted into a
+<p>The information in such a file is automatically converted into a
 scoring dictionary (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code> for details).</p>
 </dd>
 </dl>
@@ -208,51 +199,47 @@ and functions provided by the library.</p>
 <p>Module for handling sequence models.</p>
 <dl class="class">
 <dt id="lingpy.data.model.Model">
-<em class="property">class </em><code class="descclassname">lingpy.data.model.</code><code class="descname">Model</code><span class="sig-paren">(</span><em>model</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.data.model.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for the handling of sound-class models.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { ‘sca’, ‘dolgo’, ‘asjp’, ‘art’, ‘_color’ }</p>
-<blockquote class="last">
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> : { ‘sca’, ‘dolgo’, ‘asjp’, ‘art’, ‘_color’ }</p>
+<blockquote>
 <div><p>A string indicating the name of the model which shall be loaded.
 Select between:</p>
 <ul class="simple">
-<li>‘sca’ - the SCA sound-class model (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code>),</li>
-<li>‘dolgo’ - the DOLGO sound-class model (see:
-:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986’),</li>
-<li>‘asjp’ - the ASJP sound-class model (see
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code>),</li>
-<li>‘art’ - the sound-class model which is used for the calculation of
-sonority profiles and prosodic strings (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>), and</li>
-<li>‘_color’ - the sound-class model which is used for the coloring of
-sound-tokens when creating html-output.</li>
+<li><p>‘sca’ - the SCA sound-class model (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code>),</p></li>
+<li><p>‘dolgo’ - the DOLGO sound-class model (see:
+:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986’),</p></li>
+<li><p>‘asjp’ - the ASJP sound-class model (see
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code>),</p></li>
+<li><p>‘art’ - the sound-class model which is used for the calculation of
+sonority profiles and prosodic strings (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>), and</p></li>
+<li><p>‘_color’ - the sound-class model which is used for the coloring of
+sound-tokens when creating html-output.</p></li>
 </ul>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.data.derive.compile_model" title="lingpy.data.derive.compile_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_model</span></code></a>, <a class="reference internal" href="#lingpy.data.derive.compile_dvt" title="lingpy.data.derive.compile_dvt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_dvt</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.data.derive.compile_model" title="lingpy.data.derive.compile_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_model</span></code></a>, <a class="reference internal" href="#lingpy.data.derive.compile_dvt" title="lingpy.data.derive.compile_dvt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_dvt</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>Models are loaded from binary files which can be found in the
 <code class="file docutils literal notranslate"><span class="pre">data/models/</span></code> folder of the LingPy package. A model has two
 essential attributes:</p>
 <ul class="simple">
-<li><code class="xref py py-attr docutils literal notranslate"><span class="pre">converter</span></code> – a dictionary with IPA-tokens as keys and
-sound-class characters as values, and</li>
-<li><code class="xref py py-attr docutils literal notranslate"><span class="pre">scorer</span></code> – a scoring dictionary with tuples of sound-class
-characters as keys and scores (integers or floats) as values.</li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">converter</span></code> – a dictionary with IPA-tokens as keys and
+sound-class characters as values, and</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">scorer</span></code> – a scoring dictionary with tuples of sound-class
+characters as keys and scores (integers or floats) as values.</p></li>
 </ul>
 <p class="rubric">Examples</p>
 <p>When loading LingPy, the models <code class="docutils literal notranslate"><span class="pre">sca</span></code>, <code class="docutils literal notranslate"><span class="pre">asjp</span></code>, <code class="docutils literal notranslate"><span class="pre">dolgo</span></code>, and <code class="docutils literal notranslate"><span class="pre">art</span></code>
 are automatically loaded, and they are accessible via the
-<a class="reference internal" href="lingpy.html#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-func docutils literal notranslate"><span class="pre">rc()</span></code></a> function for
+<a class="reference internal" href="#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-func docutils literal notranslate"><span class="pre">rc()</span></code></a> function for
 global settings:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
@@ -286,31 +273,31 @@ global settings:</p>
 </pre></div>
 </div>
 <p class="rubric">Attributes</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="11%" />
-<col width="5%" />
-<col width="84%" />
+<col style="width: 11%" />
+<col style="width: 5%" />
+<col style="width: 84%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>converter</td>
-<td>dict</td>
-<td>A dictionary with IPA tokens as keys and sound-class characters as
-values.</td>
+<tbody>
+<tr class="row-odd"><td><p>converter</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary with IPA tokens as keys and sound-class characters as
+values.</p></td>
 </tr>
-<tr class="row-even"><td>scorer</td>
-<td>dict</td>
-<td>A scoring dictionary with tuples of sound-class characters as keys and
-similarity scores as values.</td>
+<tr class="row-even"><td><p>scorer</p></td>
+<td><p>dict</p></td>
+<td><p>A scoring dictionary with tuples of sound-class characters as keys and
+similarity scores as values.</p></td>
 </tr>
-<tr class="row-odd"><td>info</td>
-<td>dict</td>
-<td>A dictionary storing the key-value pairs defined in the <code class="docutils literal notranslate"><span class="pre">INFO</span></code>.</td>
+<tr class="row-odd"><td><p>info</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary storing the key-value pairs defined in the <code class="docutils literal notranslate"><span class="pre">INFO</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td>name</td>
-<td>str</td>
-<td>The name of the model which is identical with the name of the folder
-from wich the model is loaded.</td>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>str</p></td>
+<td><p>The name of the model which is identical with the name of the folder
+from wich the model is loaded.</p></td>
 </tr>
 </tbody>
 </table>
@@ -318,7 +305,7 @@ from wich the model is loaded.</td>
 
 <dl class="function">
 <dt id="lingpy.data.model.load_dvt">
-<code class="descclassname">lingpy.data.model.</code><code class="descname">load_dvt</code><span class="sig-paren">(</span><em>path=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.load_dvt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.data.model.</code><code class="sig-name descname">load_dvt</code><span class="sig-paren">(</span><em class="sig-param">path=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.load_dvt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function loads the default characters for IPA diacritics and IPA vowels of LingPy.</p>
 </dd></dl>
 
@@ -331,17 +318,17 @@ all LingPy modules:</p>
 <blockquote>
 <div><dl class="data">
 <dt>
-<code class="descname">rcParams : dict</code></dt>
+<code class="sig-name descname">rcParams : dict</code></dt>
 <dd><p>As an alternative to all global variables, this dictionary
 contains all these variables, and additional ones. This dictionary is used
 for internal coding purposes and stores parameters that are globally set (if
 not defined otherwise by the user), such as</p>
 <blockquote>
 <div><ul class="simple">
-<li>specific debugging messages (warnings, messages, errors)</li>
-<li>default values, such as “gop” (gap opening penalty), “scale” (scaling factor</li>
-<li>by which extended gaps are penalized), or “figsize” (the default size of</li>
-<li>figures if data is plotted using matplotlib).</li>
+<li><p>specific debugging messages (warnings, messages, errors)</p></li>
+<li><p>default values, such as “gop” (gap opening penalty), “scale” (scaling factor</p></li>
+<li><p>by which extended gaps are penalized), or “figsize” (the default size of</p></li>
+<li><p>figures if data is plotted using matplotlib).</p></li>
 </ul>
 </div></blockquote>
 <p>These default values can be changed with help of the <code class="docutils literal notranslate"><span class="pre">rc</span></code> function that takes any
@@ -366,27 +353,23 @@ for this purpose.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="lingpy.settings.rc">
-<code class="descclassname">lingpy.settings.</code><code class="descname">rc</code><span class="sig-paren">(</span><em>rval=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.settings.rc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.settings.</code><code class="sig-name descname">rc</code><span class="sig-paren">(</span><em class="sig-param">rval=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.settings.rc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function changes parameters globally set for LingPy sessions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>rval</strong> : string (default=None)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rval</strong> : string (default=None)</p>
 <blockquote>
 <div><p>Use this keyword to specify a return-value for the rc-function.</p>
 </div></blockquote>
 <p><strong>schema</strong> : {“ipa”, “asjp”}</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Change the basic schema for sequence comparison. When switching to
 “asjp”, this means that sequences will be treated as sequences in ASJP
 code, otherwise, they will be treated as sequences written in basic
 IPA.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This function is the standard way to communicate with the <em>rcParams</em>
 dictionary which is not imported as a default. If you want to see which
@@ -447,13 +430,11 @@ unexpected behavior.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -494,7 +475,7 @@ unexpected behavior.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

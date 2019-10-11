@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Predefined Datasets (data) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -62,17 +61,17 @@ all LingPy modules:</p>
 <blockquote>
 <div><dl class="data">
 <dt>
-<code class="descname">rcParams : dict</code></dt>
+<code class="sig-name descname">rcParams : dict</code></dt>
 <dd><p>As an alternative to all global variables, this dictionary
 contains all these variables, and additional ones. This dictionary is used
 for internal coding purposes and stores parameters that are globally set (if
 not defined otherwise by the user), such as</p>
 <blockquote>
 <div><ul class="simple">
-<li>specific debugging messages (warnings, messages, errors)</li>
-<li>default values, such as “gop” (gap opening penalty), “scale” (scaling factor</li>
-<li>by which extended gaps are penalized), or “figsize” (the default size of</li>
-<li>figures if data is plotted using matplotlib).</li>
+<li><p>specific debugging messages (warnings, messages, errors)</p></li>
+<li><p>default values, such as “gop” (gap opening penalty), “scale” (scaling factor</p></li>
+<li><p>by which extended gaps are penalized), or “figsize” (the default size of</p></li>
+<li><p>figures if data is plotted using matplotlib).</p></li>
 </ul>
 </div></blockquote>
 <p>These default values can be changed with help of the <code class="docutils literal notranslate"><span class="pre">rc</span></code> function that takes any
@@ -97,27 +96,23 @@ for this purpose.</p>
 </div></blockquote>
 <dl class="function">
 <dt id="lingpy.settings.rc">
-<code class="descclassname">lingpy.settings.</code><code class="descname">rc</code><span class="sig-paren">(</span><em>rval=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.settings.rc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.settings.</code><code class="sig-name descname">rc</code><span class="sig-paren">(</span><em class="sig-param">rval=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.settings.rc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function changes parameters globally set for LingPy sessions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>rval</strong> : string (default=None)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rval</strong> : string (default=None)</p>
 <blockquote>
 <div><p>Use this keyword to specify a return-value for the rc-function.</p>
 </div></blockquote>
 <p><strong>schema</strong> : {“ipa”, “asjp”}</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Change the basic schema for sequence comparison. When switching to
 “asjp”, this means that sequences will be treated as sequences in ASJP
 code, otherwise, they will be treated as sequences written in basic
 IPA.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This function is the standard way to communicate with the <em>rcParams</em>
 dictionary which is not imported as a default. If you want to see which
@@ -148,14 +143,14 @@ unexpected behavior.</p>
 
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.html#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rc</span></code></a>([rval])</td>
-<td>Function changes parameters globally set for LingPy sessions.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rc</span></code></a>([rval])</p></td>
+<td><p>Function changes parameters globally set for LingPy sessions.</p></td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +168,7 @@ unexpected behavior.</p>
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Predefined Datasets (<code class="docutils literal notranslate"><span class="pre">data</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Predefined Datasets (<code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
@@ -187,13 +182,11 @@ unexpected behavior.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -234,7 +227,7 @@ unexpected behavior.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

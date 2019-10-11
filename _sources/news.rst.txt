@@ -2,19 +2,42 @@
 Whats New in Version |version|?
 ===============================
 
-Version |version| of LingPy introduces a couple of refinements of LingPy, but it does not introduce
-many new algorithms. New algorithms can now mostly be found in additional packages, such as SinoPy
-(https://github.com/lingpy/sinopy) or LingRex (https://github.com/lingpy/lingrex). While SinoPy is a
-very specialized package to be used for manipulation of SEA and Chinese language data, LingRex
-offers a couple of new algorithms that we may consider including in a future version of LingPy, but
-which have not been sufficiently tested to be included right now.
+Version |version| of LingPy serves in primary instance as a bugfix release that helps to make sure
+that LingPy can be used properly. Nevertheless, there are certain things that have changed, and that
+should also be mentioned in this context.
 
-What was introduced in this new version, is a new module to manipulate ngrams and Markov Models (provided by
-Tiago Tresoldi) and a new function to import CLDF data with help of the Wordlist class and its
-derivatives.
+In the following, we list both the new features introduced in version 2.6.3 and 2.6.4, as well as the new
+functions from the new version |version|.
 
-In the following, we list both the new features introduced in version 2.6.3, as well as the new
-functions from the new version 2.6.4.
+Partial Cognate Detection with Customized Scorer (2.6.5)
+--------------------------------------------------------
+
+A problem of partial cognate detection with LingPy was so far, that the scorer in our
+:py:class:`~lingpy.compare.partial.Partial` class was computed from
+`LexStat` directly, without assuming that the data involved there should also be partial cognates.
+This has been addressed now, and a function `get_partial_scorer` has been added, that consistently
+computes the scoring function by only considering morphemes, never full words.
+
+Enhanced Loading of CLDF into Wordlist (2.6.5)
+----------------------------------------------
+
+To make sure that CLDF data can be loaded from within LingPy more properly, we further enhanced the
+`from_cldf` function by adding a more consistent conversion between name spaces. As of now, users
+can first choose the columns they want to load from a given CLDF dataset, and then define, by
+passing a list of tuples of source and target, how these should be named from within LingPy. 
+
+As an example, try::
+  
+  >>> from lingpy import *
+  >>> from lingpy.tests.util import test_data
+  >>> wl = Wordlist.from_cldf(
+  ...     test_data('cldf', 'test-metadata.json'), columns=("parameter_id", "language_id",
+  ...     "segments"), namespace=(("language_id", "doculect"), ("parameter_id", "concept"),
+  ...     ("segments", "tokens"))
+
+This will load the columns `parameter_id`, `language_id`, and `segments` from the CLDF dataset and
+represent them with the namespace `doculect`, `concept`, and `tokens`.
+
 
 Loading CLDF Data from Wordlist Objects (2.6.4)
 -----------------------------------------------

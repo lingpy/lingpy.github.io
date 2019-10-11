@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Whats New in Version 2.6.4? &#8212; LingPy</title>
+    <meta charset="utf-8" />
+    <title>Whats New in Version 2.6.5? &#8212; LingPy</title>
     <link rel="stylesheet" href="_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -55,18 +54,38 @@ LingPy
           <div class="body" role="main">
             
   <div class="section" id="whats-new-in-version-version">
-<h1>Whats New in Version 2.6.4?<a class="headerlink" href="#whats-new-in-version-version" title="Permalink to this headline">¶</a></h1>
-<p>Version 2.6.4 of LingPy introduces a couple of refinements of LingPy, but it does not introduce
-many new algorithms. New algorithms can now mostly be found in additional packages, such as SinoPy
-(<a class="reference external" href="https://github.com/lingpy/sinopy">https://github.com/lingpy/sinopy</a>) or LingRex (<a class="reference external" href="https://github.com/lingpy/lingrex">https://github.com/lingpy/lingrex</a>). While SinoPy is a
-very specialized package to be used for manipulation of SEA and Chinese language data, LingRex
-offers a couple of new algorithms that we may consider including in a future version of LingPy, but
-which have not been sufficiently tested to be included right now.</p>
-<p>What was introduced in this new version, is a new module to manipulate ngrams and Markov Models (provided by
-Tiago Tresoldi) and a new function to import CLDF data with help of the Wordlist class and its
-derivatives.</p>
-<p>In the following, we list both the new features introduced in version 2.6.3, as well as the new
-functions from the new version 2.6.4.</p>
+<h1>Whats New in Version 2.6.5?<a class="headerlink" href="#whats-new-in-version-version" title="Permalink to this headline">¶</a></h1>
+<p>Version 2.6.5 of LingPy serves in primary instance as a bugfix release that helps to make sure
+that LingPy can be used properly. Nevertheless, there are certain things that have changed, and that
+should also be mentioned in this context.</p>
+<p>In the following, we list both the new features introduced in version 2.6.3 and 2.6.4, as well as the new
+functions from the new version 2.6.5.</p>
+<div class="section" id="partial-cognate-detection-with-customized-scorer-2-6-5">
+<h2>Partial Cognate Detection with Customized Scorer (2.6.5)<a class="headerlink" href="#partial-cognate-detection-with-customized-scorer-2-6-5" title="Permalink to this headline">¶</a></h2>
+<p>A problem of partial cognate detection with LingPy was so far, that the scorer in our
+<a class="reference internal" href="reference/lingpy.compare.html#lingpy.compare.partial.Partial" title="lingpy.compare.partial.Partial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Partial</span></code></a> class was computed from
+<cite>LexStat</cite> directly, without assuming that the data involved there should also be partial cognates.
+This has been addressed now, and a function <cite>get_partial_scorer</cite> has been added, that consistently
+computes the scoring function by only considering morphemes, never full words.</p>
+</div>
+<div class="section" id="enhanced-loading-of-cldf-into-wordlist-2-6-5">
+<h2>Enhanced Loading of CLDF into Wordlist (2.6.5)<a class="headerlink" href="#enhanced-loading-of-cldf-into-wordlist-2-6-5" title="Permalink to this headline">¶</a></h2>
+<p>To make sure that CLDF data can be loaded from within LingPy more properly, we further enhanced the
+<cite>from_cldf</cite> function by adding a more consistent conversion between name spaces. As of now, users
+can first choose the columns they want to load from a given CLDF dataset, and then define, by
+passing a list of tuples of source and target, how these should be named from within LingPy.</p>
+<p>As an example, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="o">.</span><span class="n">from_cldf</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;cldf&#39;</span><span class="p">,</span> <span class="s1">&#39;test-metadata.json&#39;</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;parameter_id&quot;</span><span class="p">,</span> <span class="s2">&quot;language_id&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;segments&quot;</span><span class="p">),</span> <span class="n">namespace</span><span class="o">=</span><span class="p">((</span><span class="s2">&quot;language_id&quot;</span><span class="p">,</span> <span class="s2">&quot;doculect&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;parameter_id&quot;</span><span class="p">,</span> <span class="s2">&quot;concept&quot;</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s2">&quot;segments&quot;</span><span class="p">,</span> <span class="s2">&quot;tokens&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This will load the columns <cite>parameter_id</cite>, <cite>language_id</cite>, and <cite>segments</cite> from the CLDF dataset and
+represent them with the namespace <cite>doculect</cite>, <cite>concept</cite>, and <cite>tokens</cite>.</p>
+</div>
 <div class="section" id="loading-cldf-data-from-wordlist-objects-2-6-4">
 <h2>Loading CLDF Data from Wordlist Objects (2.6.4)<a class="headerlink" href="#loading-cldf-data-from-wordlist-objects-2-6-4" title="Permalink to this headline">¶</a></h2>
 <p>Instead of using the <cite>from_cldf</cite> function, you can now simply use the <cite>Wordlist</cite> class to load a
@@ -250,7 +269,9 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
             </a></p>
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Whats New in Version 2.6.4?</a><ul>
+<li><a class="reference internal" href="#">Whats New in Version 2.6.5?</a><ul>
+<li><a class="reference internal" href="#partial-cognate-detection-with-customized-scorer-2-6-5">Partial Cognate Detection with Customized Scorer (2.6.5)</a></li>
+<li><a class="reference internal" href="#enhanced-loading-of-cldf-into-wordlist-2-6-5">Enhanced Loading of CLDF into Wordlist (2.6.5)</a></li>
 <li><a class="reference internal" href="#loading-cldf-data-from-wordlist-objects-2-6-4">Loading CLDF Data from Wordlist Objects (2.6.4)</a></li>
 <li><a class="reference internal" href="#handling-ngrams-2-6-4">Handling Ngrams (2.6.4)</a></li>
 <li><a class="reference internal" href="#bugfixes-in-wordlist-class-2-6-3">Bugfixes in Wordlist Class (2.6.3)</a></li>
@@ -274,13 +295,11 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -321,7 +340,7 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Sound Class Models (Model) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -58,50 +57,46 @@ LingPy
 <h1>Sound Class Models (<a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a>)<a class="headerlink" href="#sound-class-models-model" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="lingpy.data.model.Model">
-<em class="property">class </em><code class="descclassname">lingpy.data.model.</code><code class="descname">Model</code><span class="sig-paren">(</span><em>model</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.data.model.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for the handling of sound-class models.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : { ‘sca’, ‘dolgo’, ‘asjp’, ‘art’, ‘_color’ }</p>
-<blockquote class="last">
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> : { ‘sca’, ‘dolgo’, ‘asjp’, ‘art’, ‘_color’ }</p>
+<blockquote>
 <div><p>A string indicating the name of the model which shall be loaded.
 Select between:</p>
 <ul class="simple">
-<li>‘sca’ - the SCA sound-class model (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code>),</li>
-<li>‘dolgo’ - the DOLGO sound-class model (see:
-:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986’),</li>
-<li>‘asjp’ - the ASJP sound-class model (see
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code>),</li>
-<li>‘art’ - the sound-class model which is used for the calculation of
-sonority profiles and prosodic strings (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>), and</li>
-<li>‘_color’ - the sound-class model which is used for the coloring of
-sound-tokens when creating html-output.</li>
+<li><p>‘sca’ - the SCA sound-class model (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012a"><span class="pre">List2012a</span></a></code>),</p></li>
+<li><p>‘dolgo’ - the DOLGO sound-class model (see:
+:evobib:<a href="#id1"><span class="problematic" id="id2">`</span></a>Dolgopolsky1986’),</p></li>
+<li><p>‘asjp’ - the ASJP sound-class model (see
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2008"><span class="pre">Brown2008</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brown2011"><span class="pre">Brown2011</span></a></code>),</p></li>
+<li><p>‘art’ - the sound-class model which is used for the calculation of
+sonority profiles and prosodic strings (see <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>), and</p></li>
+<li><p>‘_color’ - the sound-class model which is used for the coloring of
+sound-tokens when creating html-output.</p></li>
 </ul>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.derive.compile_model" title="lingpy.data.derive.compile_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_model</span></code></a>, <a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.derive.compile_dvt" title="lingpy.data.derive.compile_dvt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_dvt</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.derive.compile_model" title="lingpy.data.derive.compile_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_model</span></code></a>, <a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.derive.compile_dvt" title="lingpy.data.derive.compile_dvt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.data.derive.compile_dvt</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>Models are loaded from binary files which can be found in the
 <code class="file docutils literal notranslate"><span class="pre">data/models/</span></code> folder of the LingPy package. A model has two
 essential attributes:</p>
 <ul class="simple">
-<li><code class="xref py py-attr docutils literal notranslate"><span class="pre">converter</span></code> – a dictionary with IPA-tokens as keys and
-sound-class characters as values, and</li>
-<li><code class="xref py py-attr docutils literal notranslate"><span class="pre">scorer</span></code> – a scoring dictionary with tuples of sound-class
-characters as keys and scores (integers or floats) as values.</li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">converter</span></code> – a dictionary with IPA-tokens as keys and
+sound-class characters as values, and</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">scorer</span></code> – a scoring dictionary with tuples of sound-class
+characters as keys and scores (integers or floats) as values.</p></li>
 </ul>
 <p class="rubric">Examples</p>
 <p>When loading LingPy, the models <code class="docutils literal notranslate"><span class="pre">sca</span></code>, <code class="docutils literal notranslate"><span class="pre">asjp</span></code>, <code class="docutils literal notranslate"><span class="pre">dolgo</span></code>, and <code class="docutils literal notranslate"><span class="pre">art</span></code>
 are automatically loaded, and they are accessible via the
-<a class="reference internal" href="../../reference/lingpy.html#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-func docutils literal notranslate"><span class="pre">rc()</span></code></a> function for
+<a class="reference internal" href="../../reference/lingpy.data.html#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-func docutils literal notranslate"><span class="pre">rc()</span></code></a> function for
 global settings:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
@@ -135,31 +130,31 @@ global settings:</p>
 </pre></div>
 </div>
 <p class="rubric">Attributes</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="11%" />
-<col width="5%" />
-<col width="84%" />
+<col style="width: 11%" />
+<col style="width: 5%" />
+<col style="width: 84%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>converter</td>
-<td>dict</td>
-<td>A dictionary with IPA tokens as keys and sound-class characters as
-values.</td>
+<tbody>
+<tr class="row-odd"><td><p>converter</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary with IPA tokens as keys and sound-class characters as
+values.</p></td>
 </tr>
-<tr class="row-even"><td>scorer</td>
-<td>dict</td>
-<td>A scoring dictionary with tuples of sound-class characters as keys and
-similarity scores as values.</td>
+<tr class="row-even"><td><p>scorer</p></td>
+<td><p>dict</p></td>
+<td><p>A scoring dictionary with tuples of sound-class characters as keys and
+similarity scores as values.</p></td>
 </tr>
-<tr class="row-odd"><td>info</td>
-<td>dict</td>
-<td>A dictionary storing the key-value pairs defined in the <code class="docutils literal notranslate"><span class="pre">INFO</span></code>.</td>
+<tr class="row-odd"><td><p>info</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary storing the key-value pairs defined in the <code class="docutils literal notranslate"><span class="pre">INFO</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td>name</td>
-<td>str</td>
-<td>The name of the model which is identical with the name of the folder
-from wich the model is loaded.</td>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>str</p></td>
+<td><p>The name of the model which is identical with the name of the folder
+from wich the model is loaded.</p></td>
 </tr>
 </tbody>
 </table>
@@ -184,13 +179,11 @@ from wich the model is loaded.</td>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -231,7 +224,7 @@ from wich the model is loaded.</td>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

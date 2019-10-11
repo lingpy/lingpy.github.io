@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Converting Data to Strings (strings) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -71,32 +70,32 @@ especially the ~lingpy.convert.strings.write_nexus function may prove useful to 
 nexus-output of wordlist data.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.scorer2str" title="lingpy.convert.strings.scorer2str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scorer2str</span></code></a>(scorer)</td>
-<td>Convert a scoring function to a string.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.scorer2str" title="lingpy.convert.strings.scorer2str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scorer2str</span></code></a>(scorer)</p></td>
+<td><p>Convert a scoring function to a string.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.msa2str" title="lingpy.convert.strings.msa2str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msa2str</span></code></a>(msa[,&nbsp;wordlist,&nbsp;comment,&nbsp;_arange,&nbsp;merge])</td>
-<td>Function converts an MSA object into a string.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.msa2str" title="lingpy.convert.strings.msa2str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">msa2str</span></code></a>(msa[, wordlist, comment, _arange, merge])</p></td>
+<td><p>Function converts an MSA object into a string.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.matrix2dst" title="lingpy.convert.strings.matrix2dst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix2dst</span></code></a>(matrix[,&nbsp;taxa,&nbsp;stamp,&nbsp;filename,&nbsp;…])</td>
-<td>Convert matrix to dst-format.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.matrix2dst" title="lingpy.convert.strings.matrix2dst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix2dst</span></code></a>(matrix[, taxa, stamp, filename, …])</p></td>
+<td><p>Convert matrix to dst-format.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.pap2nex" title="lingpy.convert.strings.pap2nex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pap2nex</span></code></a>(taxa,&nbsp;paps[,&nbsp;missing,&nbsp;filename,&nbsp;…])</td>
-<td>Function converts a list of paps into nexus file format.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.pap2nex" title="lingpy.convert.strings.pap2nex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pap2nex</span></code></a>(taxa, paps[, missing, filename, …])</p></td>
+<td><p>Function converts a list of paps into nexus file format.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.pap2csv" title="lingpy.convert.strings.pap2csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pap2csv</span></code></a>(taxa,&nbsp;paps[,&nbsp;filename])</td>
-<td>Write paps created by the Wordlist class to a csv-file.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.pap2csv" title="lingpy.convert.strings.pap2csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pap2csv</span></code></a>(taxa, paps[, filename])</p></td>
+<td><p>Write paps created by the Wordlist class to a csv-file.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.multistate2nex" title="lingpy.convert.strings.multistate2nex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multistate2nex</span></code></a>(taxa,&nbsp;matrix[,&nbsp;filename,&nbsp;missing])</td>
-<td>Convert the data in a given wordlist to NEXUS-format for multistate analyses in PAUP.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.multistate2nex" title="lingpy.convert.strings.multistate2nex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multistate2nex</span></code></a>(taxa, matrix[, filename, missing])</p></td>
+<td><p>Convert the data in a given wordlist to NEXUS-format for multistate analyses in PAUP.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.write_nexus" title="lingpy.convert.strings.write_nexus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_nexus</span></code></a>(wordlist[,&nbsp;mode,&nbsp;filename,&nbsp;ref,&nbsp;…])</td>
-<td>Write a nexus file for phylogenetic analyses.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.strings.write_nexus" title="lingpy.convert.strings.write_nexus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_nexus</span></code></a>(wordlist[, mode, filename, ref, …])</p></td>
+<td><p>Write a nexus file for phylogenetic analyses.</p></td>
 </tr>
 </tbody>
 </table>
@@ -114,7 +113,7 @@ nexus-output of wordlist data.</p>
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Converting Data to Strings (<code class="docutils literal notranslate"><span class="pre">strings</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Converting Data to Strings (<code class="xref py py-mod docutils literal notranslate"><span class="pre">strings</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
@@ -128,13 +127,11 @@ nexus-output of wordlist data.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -175,7 +172,7 @@ nexus-output of wordlist data.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

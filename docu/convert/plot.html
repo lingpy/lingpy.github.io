@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Plotting Data and Results (plot) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -67,23 +66,23 @@ results. This module is not imported as a default, so you need to import it expl
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_gls" title="lingpy.convert.plot.plot_gls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_gls</span></code></a>(gls,&nbsp;treestring[,&nbsp;degree,&nbsp;fileformat])</td>
-<td>Plot a gain-loss scenario for a given reference tree.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_gls" title="lingpy.convert.plot.plot_gls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_gls</span></code></a>(gls, treestring[, degree, fileformat])</p></td>
+<td><p>Plot a gain-loss scenario for a given reference tree.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_tree" title="lingpy.convert.plot.plot_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tree</span></code></a>(treestring[,&nbsp;degree,&nbsp;fileformat,&nbsp;root])</td>
-<td>Plot a Newick tree to PDF or other graphical formats.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_tree" title="lingpy.convert.plot.plot_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tree</span></code></a>(treestring[, degree, fileformat, root])</p></td>
+<td><p>Plot a Newick tree to PDF or other graphical formats.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_concept_evolution" title="lingpy.convert.plot.plot_concept_evolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_concept_evolution</span></code></a>(scenarios,&nbsp;tree[,&nbsp;…])</td>
-<td>Plot the evolution according to the MLN method of all words for a given concept.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_concept_evolution" title="lingpy.convert.plot.plot_concept_evolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_concept_evolution</span></code></a>(scenarios, tree[, …])</p></td>
+<td><p>Plot the evolution according to the MLN method of all words for a given concept.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_heatmap" title="lingpy.convert.plot.plot_heatmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_heatmap</span></code></a>(wordlist[,&nbsp;filename,&nbsp;…])</td>
-<td>Create a heatmap-representation of shared cognates for a given wordlist.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.plot.plot_heatmap" title="lingpy.convert.plot.plot_heatmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_heatmap</span></code></a>(wordlist[, filename, …])</p></td>
+<td><p>Create a heatmap-representation of shared cognates for a given wordlist.</p></td>
 </tr>
 </tbody>
 </table>
@@ -101,7 +100,7 @@ results. This module is not imported as a default, so you need to import it expl
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Plotting Data and Results (<code class="docutils literal notranslate"><span class="pre">plot</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Plotting Data and Results (<code class="xref py py-mod docutils literal notranslate"><span class="pre">plot</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
@@ -115,13 +114,11 @@ results. This module is not imported as a default, so you need to import it expl
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -162,7 +159,7 @@ results. This module is not imported as a default, so you need to import it expl
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

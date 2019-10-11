@@ -8,23 +8,23 @@ lingpy.tests.data.test\_derive module
 -------------------------------------
 
 .. automodule:: lingpy.tests.data.test_derive
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 lingpy.tests.data.test\_sound\_class\_models module
 ---------------------------------------------------
 
 .. automodule:: lingpy.tests.data.test_sound_class_models
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 
 Module contents
 ---------------
 
 .. automodule:: lingpy.tests.data
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:

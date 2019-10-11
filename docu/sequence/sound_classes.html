@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Sound Classes (sound_classes) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -66,49 +65,49 @@ sound classes have been applied in a couple of approaches, including phonetic al
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>).</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ipa2tokens</span></code></a>(istring,&nbsp;**keywords)</td>
-<td>Tokenize IPA-encoded strings.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.ipa2tokens" title="lingpy.sequence.sound_classes.ipa2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ipa2tokens</span></code></a>(istring, **keywords)</p></td>
+<td><p>Tokenize IPA-encoded strings.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tokens2class</span></code></a>(tokens,&nbsp;model[,&nbsp;stress,&nbsp;…])</td>
-<td>Convert tokenized IPA strings into their respective class strings.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.tokens2class" title="lingpy.sequence.sound_classes.tokens2class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tokens2class</span></code></a>(tokens, model[, stress, …])</p></td>
+<td><p>Convert tokenized IPA strings into their respective class strings.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prosodic_string</span></code></a>(string[,&nbsp;_output])</td>
-<td>Create a prosodic string of the sonority profile of a sequence.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_string" title="lingpy.sequence.sound_classes.prosodic_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prosodic_string</span></code></a>(string[, _output])</p></td>
+<td><p>Create a prosodic string of the sonority profile of a sequence.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_weights" title="lingpy.sequence.sound_classes.prosodic_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prosodic_weights</span></code></a>(prostring[,&nbsp;_transform])</td>
-<td>Calculate prosodic weights for each position of a sequence.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.prosodic_weights" title="lingpy.sequence.sound_classes.prosodic_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prosodic_weights</span></code></a>(prostring[, _transform])</p></td>
+<td><p>Calculate prosodic weights for each position of a sequence.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class2tokens</span></code></a>(tokens,&nbsp;classes[,&nbsp;gap_char,&nbsp;local])</td>
-<td>Turn aligned sound-class sequences into an aligned sequences of IPA tokens.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.class2tokens" title="lingpy.sequence.sound_classes.class2tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">class2tokens</span></code></a>(tokens, classes[, gap_char, local])</p></td>
+<td><p>Turn aligned sound-class sequences into an aligned sequences of IPA tokens.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.pid" title="lingpy.sequence.sound_classes.pid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pid</span></code></a>(almA,&nbsp;almB[,&nbsp;mode])</td>
-<td>Calculate the Percentage Identity (PID) score for aligned sequence pairs.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.pid" title="lingpy.sequence.sound_classes.pid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pid</span></code></a>(almA, almB[, mode])</p></td>
+<td><p>Calculate the Percentage Identity (PID) score for aligned sequence pairs.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.get_all_ngrams" title="lingpy.sequence.sound_classes.get_all_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams</span></code></a>(sequence[,&nbsp;sort])</td>
-<td>Function returns all possible n-grams of a given sequence.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.get_all_ngrams" title="lingpy.sequence.sound_classes.get_all_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams</span></code></a>(sequence[, sort])</p></td>
+<td><p>Function returns all possible n-grams of a given sequence.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.sampa2uni" title="lingpy.sequence.sound_classes.sampa2uni"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sampa2uni</span></code></a>(seq)</td>
-<td>Convert sequence in IPA-sampa-format to IPA-unicode.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.sound_classes.sampa2uni" title="lingpy.sequence.sound_classes.sampa2uni"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sampa2uni</span></code></a>(seq)</p></td>
+<td><p>Convert sequence in IPA-sampa-format to IPA-unicode.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a>(model[,&nbsp;path])</td>
-<td>Class for the handling of sound-class models.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a>(model[, path])</p></td>
+<td><p>Class for the handling of sound-class models.</p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +125,7 @@ sound classes have been applied in a couple of approaches, including phonetic al
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Sound Classes (<code class="docutils literal notranslate"><span class="pre">sound_classes</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Sound Classes (<code class="xref py py-mod docutils literal notranslate"><span class="pre">sound_classes</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 </ul>
@@ -141,13 +140,11 @@ sound classes have been applied in a couple of approaches, including phonetic al
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -188,7 +185,7 @@ sound classes have been applied in a couple of approaches, including phonetic al
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

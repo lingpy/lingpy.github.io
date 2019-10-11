@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>lingpy.compare package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -63,14 +62,12 @@ LingPy
 <span id="lingpy-compare-lexstat-module"></span><h2>lingpy.compare.lexstat module<a class="headerlink" href="#module-lingpy.compare.lexstat" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.compare.lexstat.LexStat">
-<em class="property">class </em><code class="descclassname">lingpy.compare.lexstat.</code><code class="descname">LexStat</code><span class="sig-paren">(</span><em>filename</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.compare.lexstat.</code><code class="sig-name descname">LexStat</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Basic class for automatic cognate detection.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>filename</strong> : str</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> : str</p>
 <blockquote>
 <div><p>The name of the file that shall be loaded.</p>
 </div></blockquote>
@@ -97,11 +94,11 @@ preliminary analyses for cognate detection, it is useful to merge some
 of these contexts into one. The default settings distinguish only 5
 instead of 11 available contexts, namely:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
-<li><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
-<li><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</li>
-<li><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</li>
-<li><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</p></li>
 </ul>
 <p>Make sure to check also the “vowel” keyword when initialising a LexStat
 object, since the symbols you use for vowels and tones should be
@@ -204,7 +201,7 @@ function:</p>
 </div>
 </div></blockquote>
 <p><strong>cldf</strong> : bool (default=True)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>If set to True, as by default, this will allow for a specific treatment
 of phonetic
 symbols which cannot be completely resolved when internally
@@ -218,76 +215,74 @@ cases of insecurity of pronunciation, users can adopt a
 in a reconstruction system, and the target is a proposed phonetic
 interpretation. This practice is also accepted by the <a class="reference external" href="http://edictor.digling.org">EDICTOR</a> tool.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Instantiating this class does not require a lot of parameters. However,
 the user may modify its behaviour by providing additional attributes in the
 input file.</p>
 <p class="rubric">Attributes</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="5%" />
-<col width="32%" />
-<col width="63%" />
+<col style="width: 5%" />
+<col style="width: 32%" />
+<col style="width: 63%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>pairs</td>
-<td>dict</td>
-<td>A dictionary with tuples of language names as key and indices as value,
+<tbody>
+<tr class="row-odd"><td><p>pairs</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary with tuples of language names as key and indices as value,
 pointing to unique combinations of words with the same meaning in all
-language pairs.</td>
+language pairs.</p></td>
 </tr>
-<tr class="row-even"><td>model</td>
-<td><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></td>
-<td>The sound class model instance which serves to convert the phonetic
-data into sound classes.</td>
+<tr class="row-even"><td><p>model</p></td>
+<td><p><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p></td>
+<td><p>The sound class model instance which serves to convert the phonetic
+data into sound classes.</p></td>
 </tr>
-<tr class="row-odd"><td>chars</td>
-<td>list</td>
-<td><p class="first">A list of all unique language-specific character types in the
+<tr class="row-odd"><td><p>chars</p></td>
+<td><p>list</p></td>
+<td><p>A list of all unique language-specific character types in the
 instantiated LexStat object. The characters in this list consist of</p>
 <ul class="simple">
-<li>the language identifier (numeric, referenced as “langid” as a
-default, but customizable via the keyword “langid”)</li>
-<li>the sound class symbol for the respective IPA transcription value</li>
-<li>the prosodic class value</li>
+<li><p>the language identifier (numeric, referenced as “langid” as a
+default, but customizable via the keyword “langid”)</p></li>
+<li><p>the sound class symbol for the respective IPA transcription value</p></li>
+<li><p>the prosodic class value</p></li>
 </ul>
-<p class="last">All values are represented in the above order as one string, separated
+<p>All values are represented in the above order as one string, separated
 by a dot. Gaps are also included in this collection. They are
 traditionally represented as “X” for the sound class and “-” for the
 prosodic string.</p>
 </td>
 </tr>
-<tr class="row-even"><td>rchars</td>
-<td>list</td>
-<td>A list containing all unique character types across languages. In
+<tr class="row-even"><td><p>rchars</p></td>
+<td><p>list</p></td>
+<td><p>A list containing all unique character types across languages. In
 contrast to the chars-attribute, the “rchars” (raw chars) do not
 contain the language identifier, thus they only consist of two values,
 separated by a dot, namely, the sound class symbol, and the prosodic
-class value.</td>
+class value.</p></td>
 </tr>
-<tr class="row-odd"><td>scorer</td>
-<td>dict</td>
-<td><p class="first">A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
+<tr class="row-odd"><td><p>scorer</p></td>
+<td><p>dict</p></td>
+<td><p>A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
 objects, which are used to score the strings. LexStat distinguishes
 two different scoring functions:</p>
-<ul class="last simple">
-<li>rscorer: A “raw” scorer that is not language-specific and consists
+<ul class="simple">
+<li><p>rscorer: A “raw” scorer that is not language-specific and consists
 only of sound class values and prosodic string values. This scorer is
 traditionally used to carry out the first alignment in order to
 calculate the language-specific scorer. It is directly accessible as
 an attribute of the LexStat class
 (<code class="xref py py-class docutils literal notranslate"><span class="pre">rscorer</span></code>). The characters
 which constitute the values in this scorer are accessible via the
-“rchars” attribue of each lexstat class.</li>
-<li>bscorer: The language-specific scorer. This scorer is made of unique
+“rchars” attribue of each lexstat class.</p></li>
+<li><p>bscorer: The language-specific scorer. This scorer is made of unique
 language-specific characters. These are accessible via the “chars”
 attribute of each LexStat class. As the “rscorer”, the “bscorer” can
 also be accessed directly as an attribute of the LexStat class
-(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</li>
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</p></li>
 </ul>
 </td>
 </tr>
@@ -295,13 +290,11 @@ also be accessed directly as an attribute of the LexStat class
 </table>
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.align_pairs">
-<code class="descname">align_pairs</code><span class="sig-paren">(</span><em>idxA</em>, <em>idxB</em>, <em>concept=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.align_pairs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">align_pairs</code><span class="sig-paren">(</span><em class="sig-param">idxA</em>, <em class="sig-param">idxB</em>, <em class="sig-param">concept=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.align_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Align all or some words of a given pair of languages.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>idxA,idxB</strong> : {int, str}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idxA,idxB</strong> : {int, str}</p>
 <blockquote>
 <div><p>Use an integer to refer to the words by their unique internal ID,
 use language names to select all words for a given language.</p>
@@ -341,25 +334,21 @@ score.</p>
 <div><p>If set to c{True}, print the results to the terminal.</p>
 </div></blockquote>
 <p><strong>return_distance</strong> : bool (default=False)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>If set to c{True}, return the distance score, otherwise, nothing
 will be returned.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.cluster">
-<code class="descname">cluster</code><span class="sig-paren">(</span><em>method='sca'</em>, <em>cluster_method='upgma'</em>, <em>threshold=0.3</em>, <em>scale=0.5</em>, <em>factor=0.3</em>, <em>restricted_chars='_T'</em>, <em>mode='overlap'</em>, <em>gop=-2</em>, <em>restriction=''</em>, <em>ref=''</em>, <em>external_function=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster</code><span class="sig-paren">(</span><em class="sig-param">method='sca'</em>, <em class="sig-param">cluster_method='upgma'</em>, <em class="sig-param">threshold=0.3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0.3</em>, <em class="sig-param">restricted_chars='_T'</em>, <em class="sig-param">mode='overlap'</em>, <em class="sig-param">gop=-2</em>, <em class="sig-param">restriction=''</em>, <em class="sig-param">ref=''</em>, <em class="sig-param">external_function=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function for flat clustering of words into cognate sets.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
 <blockquote>
 <div><p>Select the method that shall be used for the calculation.</p>
 </div></blockquote>
@@ -400,7 +389,7 @@ strings in order to enable secondary alignment.</p>
 <blockquote>
 <div><p>If ‘sca’ is selected as a method, define the gap opening penalty.</p>
 </div></blockquote>
-<p><strong>restriction</strong> : {‘cv’} (default=”“)</p>
+<p><strong>restriction</strong> : {‘cv’} (default=””)</p>
 <blockquote>
 <div><p>Specify the restriction for calculations using the edit-distance.
 Currently, only “cv” is supported. If <em>edit-dist</em> is selected as
@@ -414,24 +403,20 @@ of the longest sequence, as described in <code class="docutils literal notransla
 <div><p>Specify the inflation parameter for the use of the MCL algorithm.</p>
 </div></blockquote>
 <p><strong>expansion</strong> : int (default=2)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Specify the expansion parameter for the use of the MCL algorithm.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.get_distances">
-<code class="descname">get_distances</code><span class="sig-paren">(</span><em>method='sca'</em>, <em>mode='overlap'</em>, <em>gop=-2</em>, <em>scale=0.5</em>, <em>factor=0.3</em>, <em>restricted_chars='T_'</em>, <em>aggregate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_distances" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_distances</code><span class="sig-paren">(</span><em class="sig-param">method='sca'</em>, <em class="sig-param">mode='overlap'</em>, <em class="sig-param">gop=-2</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0.3</em>, <em class="sig-param">restricted_chars='T_'</em>, <em class="sig-param">aggregate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_distances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method calculates different distance estimates for language pairs.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
 <blockquote>
 <div><p>Select the method that shall be used for the calculation.</p>
 </div></blockquote>
@@ -465,27 +450,23 @@ strings in order to enable secondary alignment.</p>
 <div><p>Return aggregated distances in form of a distance matrix for all
 taxa in the data.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>D</strong> : c{numpy.array}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>D</strong> : c{numpy.array}</p>
+<blockquote>
 <div><p>An array with all distances calculated for each sequence pair.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.get_frequencies">
-<code class="descname">get_frequencies</code><span class="sig-paren">(</span><em>ftype='sounds'</em>, <em>ref='tokens'</em>, <em>aggregated=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_frequencies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_frequencies</code><span class="sig-paren">(</span><em class="sig-param">ftype='sounds'</em>, <em class="sig-param">ref='tokens'</em>, <em class="sig-param">aggregated=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_frequencies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the frequencies of a given wordlist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ftype: str (default=’sounds’)</strong> :</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ftype: str (default=’sounds’)</strong> :</p>
 <blockquote>
 <div><p>The type of frequency which shall be calculated. Select between
 “sounds” (type-token frequencies of sounds), and “wordlength”
@@ -505,29 +486,25 @@ Make sure to modify this keyword in case you want to check for the
 <div><p>Determine whether frequencies should be calculated in an aggregated
 way, for all languages, or on a language-per-language basis.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>freqs</strong> : {dict, float}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>freqs</strong> : {dict, float}</p>
+<blockquote>
 <div><p>Depending on the selection of the datatype you chose, this returns
 either a dictionary containing the frequencies or a float
 indicating the ratio.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.get_random_distances">
-<code class="descname">get_random_distances</code><span class="sig-paren">(</span><em>method='lexstat'</em>, <em>runs=100</em>, <em>mode='overlap'</em>, <em>gop=-2</em>, <em>scale=0.5</em>, <em>factor=0.3</em>, <em>restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_random_distances" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_random_distances</code><span class="sig-paren">(</span><em class="sig-param">method='lexstat'</em>, <em class="sig-param">runs=100</em>, <em class="sig-param">mode='overlap'</em>, <em class="sig-param">gop=-2</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0.3</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_random_distances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method calculates randoms scores for unrelated words in a dataset.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
 <blockquote>
 <div><p>Select the method that shall be used for the calculation.</p>
 </div></blockquote>
@@ -556,27 +533,23 @@ indicating the ratio.</p>
 <div><p>Select the restricted chars (boundary markers) in the prosodic
 strings in order to enable secondary alignment.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>D</strong> : c{numpy.array}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>D</strong> : c{numpy.array}</p>
+<blockquote>
 <div><p>An array with all distances calculated for each sequence pair.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.get_scorer">
-<code class="descname">get_scorer</code><span class="sig-paren">(</span><em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_scorer</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_scorer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a scoring function based on sound correspondences.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : str (default=’shuffle’)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : str (default=’shuffle’)</p>
 <blockquote>
 <div><p>Select between “markov”, for automatically generated random
 strings, and “shuffle”, for random strings taken directly from the
@@ -654,7 +627,7 @@ well be that we miss a potentially good pairing in the first runs
 of alignment analyses. Use this keyword to adjust this parameter.</p>
 </div></blockquote>
 <p><strong>unexpected</strong> : {int, float} (default=0.000001)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>If a pair is encountered in a given alignment but not expected
 according to the randomized alignments, the score would be not
 calculable, since we had to divide by zero. For this reason, we set
@@ -662,33 +635,27 @@ a very small constant, by which the score is divided in this case.
 Not that this constant is only relevant in those cases where the
 shuffling procedure was not carried out long enough.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.get_subset">
-<code class="descname">get_subset</code><span class="sig-paren">(</span><em>sublist</em>, <em>ref='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_subset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_subset</code><span class="sig-paren">(</span><em class="sig-param">sublist</em>, <em class="sig-param">ref='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.get_subset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function creates a specific subset of all word pairs.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sublist</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sublist</strong> : list</p>
 <blockquote>
 <div><p>A list which contains those items which should be considered for
 the subset creation, for example, a list of concepts.</p>
 </div></blockquote>
 <p><strong>ref</strong> : string (default=”concept”)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The reference point to compare the given sublist.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This function can be used to consider only a smaller part of word pairs
 when creating a scorer. Normally, all words are compared, but defining
@@ -698,13 +665,11 @@ list (Swadesh list).</p>
 
 <dl class="method">
 <dt id="lingpy.compare.lexstat.LexStat.output">
-<code class="descname">output</code><span class="sig-paren">(</span><em>fileformat</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.LexStat.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write data to file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileformat</strong> : {‘tsv’, ‘tre’,’nwk’,’dst’, ‘taxa’,’starling’,                 ‘paps.nex’, ‘paps.csv’}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileformat</strong> : {‘tsv’, ‘tre’,’nwk’,’dst’, ‘taxa’,’starling’,                 ‘paps.nex’, ‘paps.csv’}</p>
 <blockquote>
 <div><p>The format that is written to file. This corresponds to the file
 extension, thus ‘tsv’ creates a file in tsv-format, ‘dst’ creates
@@ -763,28 +728,26 @@ string and not a list, this will ignore all additional blocks and
 output only plain “tsv”.</p>
 </div></blockquote>
 <p><strong>prettify</strong> : bool (default=True)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Inserts comment characters between concepts in the “tsv” file
 output format, which makes it easier to see blocks of words
 denoting the same concept. Switching this off will output the file
 in plain “tsv”.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.lexstat.char_from_charstring">
-<code class="descclassname">lingpy.compare.lexstat.</code><code class="descname">char_from_charstring</code><span class="sig-paren">(</span><em>cstring</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.char_from_charstring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.lexstat.</code><code class="sig-name descname">char_from_charstring</code><span class="sig-paren">(</span><em class="sig-param">cstring</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.char_from_charstring" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.lexstat.get_score_dict">
-<code class="descclassname">lingpy.compare.lexstat.</code><code class="descname">get_score_dict</code><span class="sig-paren">(</span><em>chars</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.get_score_dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.lexstat.</code><code class="sig-name descname">get_score_dict</code><span class="sig-paren">(</span><em class="sig-param">chars</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.lexstat.get_score_dict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -793,14 +756,12 @@ in plain “tsv”.</p>
 <p>Module provides a class for partial cognate detection, expanding the LexStat class.</p>
 <dl class="class">
 <dt id="lingpy.compare.partial.Partial">
-<em class="property">class </em><code class="descclassname">lingpy.compare.partial.</code><code class="descname">Partial</code><span class="sig-paren">(</span><em>infile</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.compare.partial.</code><code class="sig-name descname">Partial</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></p>
 <p>Extended class for automatic detection of partial cognates.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>filename</strong> : str</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> : str</p>
 <blockquote>
 <div><p>The name of the file that shall be loaded.</p>
 </div></blockquote>
@@ -826,11 +787,11 @@ preliminary analyses for cognate detection, it is useful to merge
 some of these contexts into one. The default settings distinguish only
 5 instead of 11 available contexts, namely:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</li>
-<li><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</li>
-<li><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</li>
-<li><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</li>
-<li><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> for all consonants in prosodically ascending position,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> for all consonants in prosodically descending position,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> for all vowels,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> for all tones, and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_</span></code> for word-breaks.</p></li>
 </ul>
 <p>Make sure to check also the “vowel” keyword when initialising a LexStat
 object, since the symbols you use for vowels and tones should be
@@ -869,76 +830,74 @@ you use the “lexstat” method, however, this needs to be set to
 <strong>False</strong>.</p>
 </div></blockquote>
 <p><strong>errors</strong> : str</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The name of the error log.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This method automatically infers partial cognate sets from data which was
 previously morphologically segmented.</p>
 <p class="rubric">Attributes</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="3%" />
-<col width="17%" />
-<col width="80%" />
+<col style="width: 3%" />
+<col style="width: 17%" />
+<col style="width: 80%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>pairs</td>
-<td>dict</td>
-<td>A dictionary with tuples of language names as key and indices as value,         pointing to unique combinations of words with the same meaning in all         language pairs.</td>
+<tbody>
+<tr class="row-odd"><td><p>pairs</p></td>
+<td><p>dict</p></td>
+<td><p>A dictionary with tuples of language names as key and indices as value,         pointing to unique combinations of words with the same meaning in all         language pairs.</p></td>
 </tr>
-<tr class="row-even"><td>model</td>
-<td><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></td>
-<td>The sound class model instance which serves to convert the phonetic
-data into sound classes.</td>
+<tr class="row-even"><td><p>model</p></td>
+<td><p><a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a></p></td>
+<td><p>The sound class model instance which serves to convert the phonetic
+data into sound classes.</p></td>
 </tr>
-<tr class="row-odd"><td>chars</td>
-<td>list</td>
-<td><p class="first">A list of all unique language-specific character types in the
+<tr class="row-odd"><td><p>chars</p></td>
+<td><p>list</p></td>
+<td><p>A list of all unique language-specific character types in the
 instantiated LexStat object. The characters in this list consist of</p>
 <ul class="simple">
-<li>the language identifier (numeric, referenced as “langid” as a
-default, but customizable via the keyword “langid”)</li>
-<li>the sound class symbol for the respective IPA transcription value</li>
-<li>the prosodic class value</li>
+<li><p>the language identifier (numeric, referenced as “langid” as a
+default, but customizable via the keyword “langid”)</p></li>
+<li><p>the sound class symbol for the respective IPA transcription value</p></li>
+<li><p>the prosodic class value</p></li>
 </ul>
-<p class="last">All values are represented in the above order as one string, separated
+<p>All values are represented in the above order as one string, separated
 by a dot. Gaps are also included in this collection. They are
 traditionally represented as “X” for the sound class and “-” for the
 prosodic string.</p>
 </td>
 </tr>
-<tr class="row-even"><td>rchars</td>
-<td>list</td>
-<td>A list containing all unique character types across languages. In
+<tr class="row-even"><td><p>rchars</p></td>
+<td><p>list</p></td>
+<td><p>A list containing all unique character types across languages. In
 contrast to the chars-attribute, the “rchars” (raw chars) do not
 contain the language identifier, thus they only consist of two values,
 separated by a dot, namely, the sound class symbol, and the prosodic
-class value.</td>
+class value.</p></td>
 </tr>
-<tr class="row-odd"><td>scorer</td>
-<td>dict</td>
-<td><p class="first">A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
+<tr class="row-odd"><td><p>scorer</p></td>
+<td><p>dict</p></td>
+<td><p>A collection of <a class="reference internal" href="lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScoreDict</span></code></a>
 objects, which are used to score the strings. LexStat distinguishes two
 different scoring functions:</p>
-<ul class="last simple">
-<li>rscorer: A “raw” scorer that is not language-specific and consists
+<ul class="simple">
+<li><p>rscorer: A “raw” scorer that is not language-specific and consists
 only of sound class values and prosodic string values. This scorer is
 traditionally used to carry out the first alignment in order to
 calculate the language-specific scorer. It is directly accessible as an
 attribute of the LexStat class
 (<code class="xref py py-class docutils literal notranslate"><span class="pre">rscorer</span></code>). The characters
 which constitute the values in this scorer are accessible via the
-“rchars” attribue of each lexstat class.</li>
-<li>bscorer: The language-specific scorer. This scorer is made of unique
+“rchars” attribue of each lexstat class.</p></li>
+<li><p>bscorer: The language-specific scorer. This scorer is made of unique
 language-specific characters. These are accessible via the “chars”
 attribute of each LexStat class. As the “rscorer”, the “bscorer” can
 also be accessed directly as an attribute of the LexStat class
-(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</li>
+(<code class="xref py py-class docutils literal notranslate"><span class="pre">bscorer</span></code>).</p></li>
 </ul>
 </td>
 </tr>
@@ -946,13 +905,11 @@ also be accessed directly as an attribute of the LexStat class
 </table>
 <dl class="method">
 <dt id="lingpy.compare.partial.Partial.add_cognate_ids">
-<code class="descname">add_cognate_ids</code><span class="sig-paren">(</span><em>source</em>, <em>target</em>, <em>idtype='strict'</em>, <em>override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.add_cognate_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_cognate_ids</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">idtype='strict'</em>, <em class="sig-param">override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.add_cognate_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute normal cognate identifiers from partial cognate sets.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>source: str</strong> :</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>source: str</strong> :</p>
 <blockquote>
 <div><p>Name of the source column in your wordlist file.</p>
 </div></blockquote>
@@ -965,13 +922,11 @@ also be accessed directly as an attribute of the LexStat class
 <div><p>Select between “strict” and “loose”.</p>
 </div></blockquote>
 <p><strong>override: bool (default=False)</strong> :</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Specify whether you want to override existing columns.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>While the computation of strict cognate IDs from partial cognate IDs is
 straightforward and just judges those words as cognate which are
@@ -982,15 +937,109 @@ network as cognate.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="lingpy.compare.partial.Partial.get_partial_scorer">
+<code class="sig-name descname">get_partial_scorer</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.get_partial_scorer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a scoring function based on sound correspondences.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : str (default=’shuffle’)</p>
+<blockquote>
+<div><p>Select between “markov”, for automatically generated random
+strings, and “shuffle”, for random strings taken directly from the
+data.</p>
+</div></blockquote>
+<p><strong>ratio</strong> : tuple (default=3,2)</p>
+<blockquote>
+<div><p>Define the ratio between derived and original score for
+sound-matches.</p>
+</div></blockquote>
+<p><strong>vscale</strong> : float (default=0.5)</p>
+<blockquote>
+<div><p>Define a scaling factor for vowels, in order to decrease their
+score in the calculations.</p>
+</div></blockquote>
+<p><strong>runs</strong> : int (default=1000)</p>
+<blockquote>
+<div><p>Choose the number of random runs that shall be made in order to
+derive the random distribution.</p>
+</div></blockquote>
+<p><strong>threshold</strong> : float (default=0.7)</p>
+<blockquote>
+<div><p>The threshold which used to select those words that are compared
+in order to derive the attested distribution.</p>
+</div></blockquote>
+<p><strong>modes</strong> : list (default = [(“global”,-2,0.5),(“local”,-1,0.5)])</p>
+<blockquote>
+<div><p>The modes which are used in order to derive the distributions from
+pairwise alignments.</p>
+</div></blockquote>
+<p><strong>factor</strong> : float (default=0.3)</p>
+<blockquote>
+<div><p>The scaling factor for sound segments with identical prosodic
+environment.</p>
+</div></blockquote>
+<p><strong>force</strong> : bool (default=False)</p>
+<blockquote>
+<div><p>Force recalculation of existing distribution.</p>
+</div></blockquote>
+<p><strong>preprocessing: bool (default=False)</strong> :</p>
+<blockquote>
+<div><p>Select whether SCA-analysis shall be used to derive a preliminary
+set of cognates from which the attested distribution shall be
+derived.</p>
+</div></blockquote>
+<p><strong>rands</strong> : int (default=1000)</p>
+<blockquote>
+<div><p>If “method” is set to “markov”, this parameter defines the number
+of strings to produce for the calculation of the random
+distribution.</p>
+</div></blockquote>
+<p><strong>limit</strong> : int (default=10000)</p>
+<blockquote>
+<div><p>If “method” is set to “markov”, this parameter defines the limit
+above which no more search for unique strings will be carried out.</p>
+</div></blockquote>
+<p><strong>cluster_method</strong> : {“upgma” “single” “complete”} (default=”upgma”)</p>
+<blockquote>
+<div><p>Select the method to be used for the calculation of cognates in the
+preprocessing phase, if “preprocessing” is set to c{True}.</p>
+</div></blockquote>
+<p><strong>gop</strong> : int (default=-2)</p>
+<blockquote>
+<div><p>If “preprocessing” is selected, define the gap opening penalty for
+the preprocessing calculation of cognates.</p>
+</div></blockquote>
+<p><strong>unattested</strong> : {int, float} (default=-5)</p>
+<blockquote>
+<div><p>If a pair of sounds is not attested in the data, but expected by
+the alignment algorithm that computes the expected distribution,
+the score would be -infinity. Yet in order to allow to smooth this
+behaviour and to reduce the strictness, we set a default negative
+value which does not necessarily need to be too high, since it may
+well be that we miss a potentially good pairing in the first runs
+of alignment analyses. Use this keyword to adjust this parameter.</p>
+</div></blockquote>
+<p><strong>unexpected</strong> : {int, float} (default=0.000001)</p>
+<blockquote>
+<div><p>If a pair is encountered in a given alignment but not expected
+according to the randomized alignments, the score would be not
+calculable, since we had to divide by zero. For this reason, we set
+a very small constant, by which the score is divided in this case.
+Not that this constant is only relevant in those cases where the
+shuffling procedure was not carried out long enough.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="lingpy.compare.partial.Partial.partial_cluster">
-<code class="descname">partial_cluster</code><span class="sig-paren">(</span><em>method='sca'</em>, <em>threshold=0.45</em>, <em>scale=0.5</em>, <em>factor=0.3</em>, <em>restricted_chars='_T'</em>, <em>mode='overlap'</em>, <em>cluster_method='infomap'</em>, <em>gop=-1</em>, <em>restriction=''</em>, <em>ref=''</em>, <em>external_function=None</em>, <em>split_on_tones=True</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.partial_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">partial_cluster</code><span class="sig-paren">(</span><em class="sig-param">method='sca'</em>, <em class="sig-param">threshold=0.45</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0.3</em>, <em class="sig-param">restricted_chars='_T'</em>, <em class="sig-param">mode='overlap'</em>, <em class="sig-param">cluster_method='infomap'</em>, <em class="sig-param">gop=-1</em>, <em class="sig-param">restriction=''</em>, <em class="sig-param">ref=''</em>, <em class="sig-param">external_function=None</em>, <em class="sig-param">split_on_tones=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.partial.Partial.partial_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cluster the words into partial cognate sets.</p>
 <p>Function for flat clustering of words into cognate sets.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : {‘sca’,’lexstat’,’edit-dist’,’turchin’} (default=’sca’)</p>
 <blockquote>
 <div><p>Select the method that shall be used for the calculation.</p>
 </div></blockquote>
@@ -1031,7 +1080,7 @@ strings in order to enable secondary alignment.</p>
 <blockquote>
 <div><p>If ‘sca’ is selected as a method, define the gap opening penalty.</p>
 </div></blockquote>
-<p><strong>restriction</strong> : {‘cv’} (default=”“)</p>
+<p><strong>restriction</strong> : {‘cv’} (default=””)</p>
 <blockquote>
 <div><p>Specify the restriction for calculations using the edit-distance.
 Currently, only “cv” is supported. If <em>edit-dist</em> is selected as
@@ -1045,13 +1094,11 @@ of the longest sequence, as described in <code class="docutils literal notransla
 <div><p>Specify the inflation parameter for the use of the MCL algorithm.</p>
 </div></blockquote>
 <p><strong>expansion</strong> : int (default=2)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Specify the expansion parameter for the use of the MCL algorithm.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1062,14 +1109,12 @@ of the longest sequence, as described in <code class="docutils literal notransla
 <p>Phylogeny-based detection of borrowings in lexicostatistical wordlists.</p>
 <dl class="class">
 <dt id="lingpy.compare.phylogeny.PhyBo">
-<em class="property">class </em><code class="descclassname">lingpy.compare.phylogeny.</code><code class="descname">PhyBo</code><span class="sig-paren">(</span><em>dataset</em>, <em>tree=None</em>, <em>paps='pap'</em>, <em>ref='cogid'</em>, <em>tree_calc='neighbor'</em>, <em>output_dir=None</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.compare.phylogeny.</code><code class="sig-name descname">PhyBo</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">tree=None</em>, <em class="sig-param">paps='pap'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">tree_calc='neighbor'</em>, <em class="sig-param">output_dir=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Basic class for calculations using the TreBor method.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>dataset</strong> : string</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset</strong> : string</p>
 <blockquote>
 <div><p>Name of the dataset that shall be analyzed.</p>
 </div></blockquote>
@@ -1099,30 +1144,26 @@ can account for both presence or absence of a cognate set in the given
 language. If set to 0, missing data is treated as absence.</p>
 </div></blockquote>
 <p><strong>degree</strong> : int (default=100)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The degree which is chosen for the projection of the tree layout.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.analyze">
-<code class="descname">analyze</code><span class="sig-paren">(</span><em>runs='default'</em>, <em>mixed=False</em>, <em>output_gml=False</em>, <em>tar=False</em>, <em>full_analysis=True</em>, <em>plot_dists=False</em>, <em>output_plot=False</em>, <em>plot_mln=False</em>, <em>plot_msn=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.analyze" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">analyze</code><span class="sig-paren">(</span><em class="sig-param">runs='default'</em>, <em class="sig-param">mixed=False</em>, <em class="sig-param">output_gml=False</em>, <em class="sig-param">tar=False</em>, <em class="sig-param">full_analysis=True</em>, <em class="sig-param">plot_dists=False</em>, <em class="sig-param">output_plot=False</em>, <em class="sig-param">plot_mln=False</em>, <em class="sig-param">plot_msn=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.analyze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a full analysis using various parameters.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>runs</strong> : {str list} (default=”default”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>runs</strong> : {str list} (default=”default”)</p>
 <blockquote>
 <div><p>Define a couple of different models to be analyzed. Select between:</p>
 <ul class="simple">
-<li>‘default’: weighted analysis, using parsimony and weights for
-gains and losses</li>
-<li>‘topdown’: use the traditional approach by
-<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code></li>
-<li>‘restriction’: use the restriction approach</li>
+<li><p>‘default’: weighted analysis, using parsimony and weights for
+gains and losses</p></li>
+<li><p>‘topdown’: use the traditional approach by
+<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code></p></li>
+<li><p>‘restriction’: use the restriction approach</p></li>
 </ul>
 <p>You can also define your own mix of models.</p>
 </div></blockquote>
@@ -1149,64 +1190,60 @@ GML-format.</p>
 <div><p>Select or unselect output plot for the MLN.</p>
 </div></blockquote>
 <p><strong>plot_msn</strong> : bool (default=False)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Select or unselect output plot for the MSN.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_ACS">
-<code class="descname">get_ACS</code><span class="sig-paren">(</span><em>glm</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_ACS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_ACS</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_ACS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the ancestral character states (ACS) for all internal nodes.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_AVSD">
-<code class="descname">get_AVSD</code><span class="sig-paren">(</span><em>glm</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_AVSD" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_AVSD</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_AVSD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function retrieves all pap s for ancestor languages in a given tree.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_CVSD">
-<code class="descname">get_CVSD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_CVSD" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_CVSD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_CVSD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Contemporary Vocabulary Size Distribution (CVSD).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_GLS">
-<code class="descname">get_GLS</code><span class="sig-paren">(</span><em>mode='weighted'</em>, <em>ratio=(1</em>, <em>1)</em>, <em>restriction=3</em>, <em>output_gml=False</em>, <em>output_plot=False</em>, <em>tar=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_GLS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_GLS</code><span class="sig-paren">(</span><em class="sig-param">mode='weighted'</em>, <em class="sig-param">ratio=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">restriction=3</em>, <em class="sig-param">output_gml=False</em>, <em class="sig-param">output_plot=False</em>, <em class="sig-param">tar=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_GLS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create gain-loss-scenarios for all non-singleton paps in the data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>mode</strong> : string (default=”weighted”)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> : string (default=”weighted”)</p>
 <blockquote>
 <div><p>Select between “weighted”, “restriction” and “topdown”. The three
 modes refer to the following frameworks:</p>
 <ul class="simple">
-<li>“weighted” refers to the weighted parsimony framework described in
+<li><p>“weighted” refers to the weighted parsimony framework described in
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014b"><span class="pre">List2014b</span></a></code> and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2014a"><span class="pre">List2014a</span></a></code>.
 Weights are
 specified with help of a ratio for the scoring of gain and loss
 events. The ratio can be defined with help of the <em>ratio</em>
-keyword.</li>
-<li>“restrictino” refers to a simple method in which only a
+keyword.</p></li>
+<li><p>“restrictino” refers to a simple method in which only a
 specific amount of gain events
 is allowed. The maximally allowed number of gain events can be
-defined with help of the <em>restriction</em> keyword.</li>
-<li>“topdown” refers to the top-down method outlined in
+defined with help of the <em>restriction</em> keyword.</p></li>
+<li><p>“topdown” refers to the top-down method outlined in
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dagan2007"><span class="pre">Dagan2007</span></a></code> and first applied to linguistic data in
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Nelson-Sathi2011"><span class="pre">Nelson-Sathi2011</span></a></code>. This method also defines a maximal
 number of gain events, but in contrast to the “restriction”
 approach, it starts from the top of the tree and stops if the
 maximal number of restrictions has been reached. The maximally
 allowed number of gain events can, again, be specified with help
-of the <em>restriction</em> keyword.</li>
+of the <em>restriction</em> keyword.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>ratio</strong> : tuple (default=(1,1))</p>
@@ -1247,7 +1284,7 @@ the overall evolutionary scenario. This behaviour can be evoked by
 setting this parameter to -1.</p>
 </div></blockquote>
 <p><strong>push_gains: bool (default=True)</strong> :</p>
-<blockquote class="last">
+<blockquote>
 <div><p>In bottom-up calculations, there will often be multiple scenarios
 upon which only one is selected by the method. In order to define
 consistent criteria for scenario selection, we follow
@@ -1258,27 +1295,23 @@ force the algorithm to push gain events to the leaves of the tree.
 Setting it to <em>False</em> will force it to prefer those scenarios where
 the gains are closer to the root.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_IVSD">
-<code class="descname">get_IVSD</code><span class="sig-paren">(</span><em>output_gml=False</em>, <em>output_plot=False</em>, <em>tar=True</em>, <em>leading_model=False</em>, <em>mixed_threshold=0.0</em>, <em>evaluation='mwu'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_IVSD" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_IVSD</code><span class="sig-paren">(</span><em class="sig-param">output_gml=False</em>, <em class="sig-param">output_plot=False</em>, <em class="sig-param">tar=True</em>, <em class="sig-param">leading_model=False</em>, <em class="sig-param">mixed_threshold=0.0</em>, <em class="sig-param">evaluation='mwu'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_IVSD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate VSD on the basis of each item.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_MLN">
-<code class="descname">get_MLN</code><span class="sig-paren">(</span><em>glm</em>, <em>threshold=1</em>, <em>method='mr'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_MLN" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_MLN</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">threshold=1</em>, <em class="sig-param">method='mr'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_MLN" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute an Minimal Lateral Network for a given model.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>glm</strong> : str</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>glm</strong> : str</p>
 <blockquote>
 <div><p>The dictionary key for the gain-loss-model.</p>
 </div></blockquote>
@@ -1287,34 +1320,30 @@ the gains are closer to the root.</p>
 <div><p>The threshold used to exclude edges.</p>
 </div></blockquote>
 <p><strong>method</strong> : str (default=’mr’)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Select the method for MLN calculation. Choose between:
 * “mr”: majority-rule, multiple links are resolved by selecting</p>
 <blockquote>
 <div><p>those which occur most frequently</p>
 </div></blockquote>
 <ul class="simple">
-<li>“td”: tree-distance, multiple links are resolved by selecting
-those which are closest on the tree</li>
-<li>“bc”: betweenness-centrality, multiple links are resolved by
-selecting those which have the highest betweenness centrality</li>
+<li><p>“td”: tree-distance, multiple links are resolved by selecting
+those which are closest on the tree</p></li>
+<li><p>“bc”: betweenness-centrality, multiple links are resolved by
+selecting those which have the highest betweenness centrality</p></li>
 </ul>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_MSN">
-<code class="descname">get_MSN</code><span class="sig-paren">(</span><em>glm=''</em>, <em>external_edges=False</em>, <em>deep_nodes=False</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_MSN" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_MSN</code><span class="sig-paren">(</span><em class="sig-param">glm=''</em>, <em class="sig-param">external_edges=False</em>, <em class="sig-param">deep_nodes=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_MSN" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the Minimal Spatial Network.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>glm</strong> : str (default=’‘)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>glm</strong> : str (default=’’)</p>
 <blockquote>
 <div><p>A string that encodes which model should be plotted.</p>
 </div></blockquote>
@@ -1332,110 +1361,108 @@ selecting those which have the highest betweenness centrality</li>
 plotted.</p>
 </div></blockquote>
 <p><strong>usetex</strong> : bool (default=True)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Specify whether LaTeX shall be used for the plot.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_PDC">
-<code class="descname">get_PDC</code><span class="sig-paren">(</span><em>glm</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_PDC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_PDC</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_PDC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate Patchily Distributed Cognates.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_edge">
-<code class="descname">get_edge</code><span class="sig-paren">(</span><em>glm</em>, <em>nodeA</em>, <em>nodeB</em>, <em>entries=''</em>, <em>msn=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_edge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_edge</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">nodeA</em>, <em class="sig-param">nodeB</em>, <em class="sig-param">entries=''</em>, <em class="sig-param">msn=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the edge data for a given gain-loss model.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.get_stats">
-<code class="descname">get_stats</code><span class="sig-paren">(</span><em>glm</em>, <em>subset=''</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_stats" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_stats</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">subset=''</em>, <em class="sig-param">filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.get_stats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate basic statistics for a given gain-loss model.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_ACS">
-<code class="descname">plot_ACS</code><span class="sig-paren">(</span><em>glm</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_ACS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_ACS</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_ACS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a tree in which the node size correlates with the size of the ancestral node.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_GLS">
-<code class="descname">plot_GLS</code><span class="sig-paren">(</span><em>glm</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_GLS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_GLS</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_GLS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the inferred scenarios for a given model.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_MLN">
-<code class="descname">plot_MLN</code><span class="sig-paren">(</span><em>glm=''</em>, <em>fileformat='pdf'</em>, <em>threshold=1</em>, <em>usetex=False</em>, <em>taxon_labels='taxon_short_labels'</em>, <em>alphat=False</em>, <em>alpha=0.75</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_MLN" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_MLN</code><span class="sig-paren">(</span><em class="sig-param">glm=''</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">threshold=1</em>, <em class="sig-param">usetex=False</em>, <em class="sig-param">taxon_labels='taxon_short_labels'</em>, <em class="sig-param">alphat=False</em>, <em class="sig-param">alpha=0.75</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_MLN" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the MLN with help of Matplotlib.</p>
-<dl class="docutils">
-<dt>glm <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’‘)</span></dt>
-<dd>Identifier for the gain-loss model that is plotted. Defaults to the
-model that had the best scores in terms of probability.</dd>
-<dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’‘)</span></dt>
-<dd>If no filename is selected, the filename is identical with the
-dataset.</dd>
-<dt>fileformat <span class="classifier-delimiter">:</span> <span class="classifier">{‘svg’,’png’,’jpg’,’pdf’} (default=’pdf’)</span></dt>
-<dd>Select the format of the output plot.</dd>
-<dt>threshold <span class="classifier-delimiter">:</span> <span class="classifier">int (default=1)</span></dt>
-<dd>Select the threshold for drawing lateral edges.</dd>
-<dt>usetex <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
-<dd>Specify whether you want to use LaTeX to render plots.</dd>
-<dt>colormap <span class="classifier-delimiter">:</span> <span class="classifier">{None matplotlib.cm}</span></dt>
-<dd>A <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
-defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">jet</span></code>.</dd>
-<dt>taxon_labels <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’taxon.short_labels’)</span></dt>
-<dd>Specify the taxon labels that should be included in the plot.</dd>
+<dl class="simple">
+<dt>glm<span class="classifier">str (default=’’)</span></dt><dd><p>Identifier for the gain-loss model that is plotted. Defaults to the
+model that had the best scores in terms of probability.</p>
+</dd>
+<dt>filename<span class="classifier">str (default=’’)</span></dt><dd><p>If no filename is selected, the filename is identical with the
+dataset.</p>
+</dd>
+<dt>fileformat<span class="classifier">{‘svg’,’png’,’jpg’,’pdf’} (default=’pdf’)</span></dt><dd><p>Select the format of the output plot.</p>
+</dd>
+<dt>threshold<span class="classifier">int (default=1)</span></dt><dd><p>Select the threshold for drawing lateral edges.</p>
+</dd>
+<dt>usetex<span class="classifier">bool (default=True)</span></dt><dd><p>Specify whether you want to use LaTeX to render plots.</p>
+</dd>
+<dt>colormap<span class="classifier">{None matplotlib.cm}</span></dt><dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
+defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">jet</span></code>.</p>
+</dd>
+<dt>taxon_labels<span class="classifier">str (default=’taxon.short_labels’)</span></dt><dd><p>Specify the taxon labels that should be included in the plot.</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_MLN_3d">
-<code class="descname">plot_MLN_3d</code><span class="sig-paren">(</span><em>glm=''</em>, <em>filename=''</em>, <em>fileformat='pdf'</em>, <em>threshold=1</em>, <em>usetex=True</em>, <em>colormap=None</em>, <em>taxon_labels='taxon_short_labels'</em>, <em>alphat=False</em>, <em>alpha=0.75</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_MLN_3d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_MLN_3d</code><span class="sig-paren">(</span><em class="sig-param">glm=''</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">threshold=1</em>, <em class="sig-param">usetex=True</em>, <em class="sig-param">colormap=None</em>, <em class="sig-param">taxon_labels='taxon_short_labels'</em>, <em class="sig-param">alphat=False</em>, <em class="sig-param">alpha=0.75</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_MLN_3d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the MLN with help of Matplotlib in 3d.</p>
-<dl class="docutils">
-<dt>glm <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’‘)</span></dt>
-<dd>Identifier for the gain-loss model that is plotted. Defaults to the
-model that had the best scores in terms of probability.</dd>
-<dt>filename <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’‘)</span></dt>
-<dd>If no filename is selected, the filename is identical with the
-dataset.</dd>
-<dt>fileformat <span class="classifier-delimiter">:</span> <span class="classifier">{‘svg’,’png’,’jpg’,’pdf’} (default=’pdf’)</span></dt>
-<dd>Select the format of the output plot.</dd>
-<dt>threshold <span class="classifier-delimiter">:</span> <span class="classifier">int (default=1)</span></dt>
-<dd>Select the threshold for drawing lateral edges.</dd>
-<dt>usetex <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=True)</span></dt>
-<dd>Specify whether you want to use LaTeX to render plots.</dd>
-<dt>colormap <span class="classifier-delimiter">:</span> <span class="classifier">{None matplotlib.cm}</span></dt>
-<dd>A <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
-defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">jet</span></code>.</dd>
-<dt>taxon_labels <span class="classifier-delimiter">:</span> <span class="classifier">str (default=’taxon.short_labels’)</span></dt>
-<dd>Specify the taxon labels that should be included in the plot.</dd>
+<dl class="simple">
+<dt>glm<span class="classifier">str (default=’’)</span></dt><dd><p>Identifier for the gain-loss model that is plotted. Defaults to the
+model that had the best scores in terms of probability.</p>
+</dd>
+<dt>filename<span class="classifier">str (default=’’)</span></dt><dd><p>If no filename is selected, the filename is identical with the
+dataset.</p>
+</dd>
+<dt>fileformat<span class="classifier">{‘svg’,’png’,’jpg’,’pdf’} (default=’pdf’)</span></dt><dd><p>Select the format of the output plot.</p>
+</dd>
+<dt>threshold<span class="classifier">int (default=1)</span></dt><dd><p>Select the threshold for drawing lateral edges.</p>
+</dd>
+<dt>usetex<span class="classifier">bool (default=True)</span></dt><dd><p>Specify whether you want to use LaTeX to render plots.</p>
+</dd>
+<dt>colormap<span class="classifier">{None matplotlib.cm}</span></dt><dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colormap</span></code> instance. If set to c{None}, this
+defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">jet</span></code>.</p>
+</dd>
+<dt>taxon_labels<span class="classifier">str (default=’taxon.short_labels’)</span></dt><dd><p>Specify the taxon labels that should be included in the plot.</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_MSN">
-<code class="descname">plot_MSN</code><span class="sig-paren">(</span><em>glm=''</em>, <em>fileformat='pdf'</em>, <em>threshold=1</em>, <em>usetex=False</em>, <em>alphat=False</em>, <em>alpha=0.75</em>, <em>only=[]</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_MSN" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_MSN</code><span class="sig-paren">(</span><em class="sig-param">glm=''</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">threshold=1</em>, <em class="sig-param">usetex=False</em>, <em class="sig-param">alphat=False</em>, <em class="sig-param">alpha=0.75</em>, <em class="sig-param">only=[]</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_MSN" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a minimal spatial network.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_concept_evolution">
-<code class="descname">plot_concept_evolution</code><span class="sig-paren">(</span><em>glm</em>, <em>concept=''</em>, <em>fileformat='png'</em>, <em>**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_concept_evolution" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_concept_evolution</code><span class="sig-paren">(</span><em class="sig-param">glm</em>, <em class="sig-param">concept=''</em>, <em class="sig-param">fileformat='png'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_concept_evolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the evolution of specific concepts along the reference tree.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.compare.phylogeny.PhyBo.plot_two_concepts">
-<code class="descname">plot_two_concepts</code><span class="sig-paren">(</span><em>concept</em>, <em>cogA</em>, <em>cogB</em>, <em>labels={1: '1'</em>, <em>2: '2'</em>, <em>3: '3'</em>, <em>4: '4'}</em>, <em>tcolor={1: 'white'</em>, <em>2: 'black'</em>, <em>3: '0.5'</em>, <em>4: '0.1'}</em>, <em>filename='pdf'</em>, <em>fileformat='pdf'</em>, <em>usetex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_two_concepts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_two_concepts</code><span class="sig-paren">(</span><em class="sig-param">concept</em>, <em class="sig-param">cogA</em>, <em class="sig-param">cogB</em>, <em class="sig-param">labels={1: '1'</em>, <em class="sig-param">2: '2'</em>, <em class="sig-param">3: '3'</em>, <em class="sig-param">4: '4'}</em>, <em class="sig-param">tcolor={1: 'white'</em>, <em class="sig-param">2: 'black'</em>, <em class="sig-param">3: '0.5'</em>, <em class="sig-param">4: '0.1'}</em>, <em class="sig-param">filename='pdf'</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">usetex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo.plot_two_concepts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the evolution of two concepts in space.</p>
 <p class="rubric">Notes</p>
 <p>This function may be useful to contrast patterns of different words in
@@ -1446,19 +1473,17 @@ geographic space.</p>
 
 <dl class="attribute">
 <dt id="lingpy.compare.phylogeny.TreBor">
-<code class="descclassname">lingpy.compare.phylogeny.</code><code class="descname">TreBor</code><a class="headerlink" href="#lingpy.compare.phylogeny.TreBor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.phylogeny.</code><code class="sig-name descname">TreBor</code><a class="headerlink" href="#lingpy.compare.phylogeny.TreBor" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#lingpy.compare.phylogeny.PhyBo" title="lingpy.compare.phylogeny.PhyBo"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.phylogeny.PhyBo</span></code></a></p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.phylogeny.get_gls">
-<code class="descclassname">lingpy.compare.phylogeny.</code><code class="descname">get_gls</code><span class="sig-paren">(</span><em>paps</em>, <em>taxa</em>, <em>tree</em>, <em>gpl=1</em>, <em>weights=(1</em>, <em>1)</em>, <em>push_gains=True</em>, <em>missing_data=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.get_gls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.phylogeny.</code><code class="sig-name descname">get_gls</code><span class="sig-paren">(</span><em class="sig-param">paps</em>, <em class="sig-param">taxa</em>, <em class="sig-param">tree</em>, <em class="sig-param">gpl=1</em>, <em class="sig-param">weights=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">push_gains=True</em>, <em class="sig-param">missing_data=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.get_gls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a gain-loss scenario.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>paps</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>paps</strong> : list</p>
 <blockquote>
 <div><p>A list containing the presence-absence patterns for all leaves of the
 reference tree. Presence is indicated by 1, and absence by 0. Missing
@@ -1494,16 +1519,14 @@ should be retained that show gains closer to the leaves of the tree or
 not.</p>
 </div></blockquote>
 <p><strong>missing_data</strong> : int (default=0)</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Determine how missing data should be represented. If set to 0
 (default), missing data will be treated in the same way as absence
 character states. If you want missing data to be accounted for in the
 algorithm, set this parameter to -1.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This is an enhanced version of the older approach to parsimony-based
 gain-loss mapping. The algorithm is much faster than the previous one and
@@ -1517,13 +1540,11 @@ also outperformed other approaches by finding more parsimonious solutions.</p>
 <p>Module provides basic checks for wordlists.</p>
 <dl class="function">
 <dt id="lingpy.compare.sanity.average_coverage">
-<code class="descclassname">lingpy.compare.sanity.</code><code class="descname">average_coverage</code><span class="sig-paren">(</span><em>wordlist</em>, <em>concepts='concepts'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.average_coverage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">average_coverage</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">concepts='concepts'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.average_coverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute average mutual coverage for a given wordlist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
 <blockquote>
 <div><p>Your Wordlist object (or a descendant class).</p>
 </div></blockquote>
@@ -1531,20 +1552,18 @@ also outperformed other approaches by finding more parsimonious solutions.</p>
 <blockquote>
 <div><p>The column which stores your concepts.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>coverage</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>coverage</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary of dictionaries whose value is the number of items two
 languages share.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute coverage for the KSL.qlc dataset:</p>
@@ -1559,14 +1578,36 @@ languages share.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="lingpy.compare.sanity.check_cognates">
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">check_cognates</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">ref='crossids'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.check_cognates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function checks for internal consistency of partial cognates.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.sanity.check_length">
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">check_length</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">dimA=1</em>, <em class="sig-param">dimB=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.check_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom function to check the length of two basictypes in LingPy.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.sanity.check_sequence_length">
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">check_sequence_length</code><span class="sig-paren">(</span><em class="sig-param">wordlist, entities=['tokens', 'crossids', 'morphemes', 'structure'], dimensions=[2, 1, 2, 1]</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.check_sequence_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function checks for identical sequence length in different columns.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lingpy.compare.sanity.check_strict_cognates">
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">check_strict_cognates</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">ref='crossids'</em>, <em class="sig-param">segments='tokens'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.check_strict_cognates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if cognates are really strict.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="lingpy.compare.sanity.mutual_coverage">
-<code class="descclassname">lingpy.compare.sanity.</code><code class="descname">mutual_coverage</code><span class="sig-paren">(</span><em>wordlist</em>, <em>concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">mutual_coverage</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute mutual coverage for all language pairs in your data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
 <blockquote>
 <div><p>Your Wordlist object (or a descendant class).</p>
 </div></blockquote>
@@ -1574,20 +1615,18 @@ languages share.</p>
 <blockquote>
 <div><p>The column which stores your concepts.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>coverage</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>coverage</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary of dictionaries whose value is the number of items two
 languages share.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute coverage for the KSL.qlc dataset:</p>
@@ -1604,13 +1643,11 @@ languages share.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.sanity.mutual_coverage_check">
-<code class="descclassname">lingpy.compare.sanity.</code><code class="descname">mutual_coverage_check</code><span class="sig-paren">(</span><em>wordlist</em>, <em>threshold</em>, <em>concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">mutual_coverage_check</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">threshold</em>, <em class="sig-param">concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check whether a given mutual coverage is fulfilled by the dataset.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
 <blockquote>
 <div><p>Your Wordlist object (or a descendant class).</p>
 </div></blockquote>
@@ -1622,20 +1659,18 @@ languages share.</p>
 <blockquote>
 <div><p>The threshold which should be checked.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>c: bool</strong> :</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>c: bool</strong> :</p>
+<blockquote>
 <div><p>True, if coverage is fulfilled for all language pairs, False if
 otherwise.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_subset" title="lingpy.compare.sanity.mutual_coverage_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_subset</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute minimal mutual coverage for the KSL dataset:</p>
@@ -1654,13 +1689,11 @@ otherwise.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.sanity.mutual_coverage_subset">
-<code class="descclassname">lingpy.compare.sanity.</code><code class="descname">mutual_coverage_subset</code><span class="sig-paren">(</span><em>wordlist</em>, <em>threshold</em>, <em>concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage_subset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">mutual_coverage_subset</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">threshold</em>, <em class="sig-param">concepts='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.mutual_coverage_subset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute maximal mutual coverage for all language in a wordlist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
 <blockquote>
 <div><p>Your Wordlist object (or a descendant class).</p>
 </div></blockquote>
@@ -1672,22 +1705,20 @@ otherwise.</p>
 <blockquote>
 <div><p>The threshold which should be checked.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>coverage</strong> : tuple</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>coverage</strong> : tuple</p>
+<blockquote>
 <div><p>A tuple consisting of the number of languages for which the coverage
 could be found as well as a list of all pairings in which this coverage
 is possible. The list itself contains the mutual coverage inside each
 pair and the list of languages.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage" title="lingpy.compare.sanity.mutual_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.mutual_coverage_check" title="lingpy.compare.sanity.mutual_coverage_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutual_coverage_check</span></code></a>, <a class="reference internal" href="#lingpy.compare.sanity.average_coverage" title="lingpy.compare.sanity.average_coverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_coverage</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Compute all sets of languages with coverage at 200 for the KSL dataset:</p>
@@ -1705,13 +1736,11 @@ pair and the list of languages.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.sanity.synonymy">
-<code class="descclassname">lingpy.compare.sanity.</code><code class="descname">synonymy</code><span class="sig-paren">(</span><em>wordlist</em>, <em>concepts='concept'</em>, <em>languages='doculect'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.synonymy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.sanity.</code><code class="sig-name descname">synonymy</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">concepts='concept'</em>, <em class="sig-param">languages='doculect'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.sanity.synonymy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the number of synonyms per language and concept.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wordlist</strong> : ~lingpy.basic.wordlist.Wordlist</p>
 <blockquote>
 <div><p>Your Wordlist object (or a descendant class).</p>
 </div></blockquote>
@@ -1723,17 +1752,15 @@ pair and the list of languages.</p>
 <blockquote>
 <div><p>The column which stores your language names.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>synonyms</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>synonyms</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary with language and concept as key and the number of
 synonyms as value.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <p>Calculate synonymy in KSL.qlc dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">synonymy</span>      
@@ -1757,7 +1784,7 @@ synonyms.</p>
 <p>Module provides various string similarity metrics.</p>
 <dl class="function">
 <dt id="lingpy.compare.strings.bidist1">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">bidist1</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bidist1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">bidist1</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bidist1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes bigram-based distance.</p>
 <p class="rubric">Notes</p>
 <p>The binary version.
@@ -1766,7 +1793,7 @@ Checks if two bigrams are equal or not.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.bidist2">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">bidist2</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bidist2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">bidist2</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bidist2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes bigram based distance.</p>
 <p class="rubric">Notes</p>
 <p>The comprehensive version of the
@@ -1775,7 +1802,7 @@ bigram distance.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.bidist3">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">bidist3</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bidist3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">bidist3</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bidist3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes bigram based distance.</p>
 <p class="rubric">Notes</p>
 <p>Computes the positional version of the
@@ -1785,13 +1812,13 @@ similarity of bigrams.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.bisim1">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">bisim1</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bisim1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">bisim1</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bisim1" title="Permalink to this definition">¶</a></dt>
 <dd><p>computes the binary version of bigram similarity.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.bisim2">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">bisim2</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bisim2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">bisim2</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bisim2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes bigram similarity “the comprehensive version”.</p>
 <p class="rubric">Notes</p>
 <p>Computes the
@@ -1800,7 +1827,7 @@ number of common 1-grams between two n-grams.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.bisim3">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">bisim3</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bisim3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">bisim3</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.bisim3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes bi-sim the positional version.</p>
 <p class="rubric">Notes</p>
 <p>The partial similarity between two
@@ -1809,59 +1836,59 @@ bigrams is defined as the number of matching 1-grams at each position.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.dice">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">dice</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.dice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">dice</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.dice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the Dice measure that measures the number of common bigrams.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.ident">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">ident</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.ident" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">ident</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.ident" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the identity between two strings. If yes, returns 1, else, returns 0.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.jcd">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">jcd</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.jcd" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">jcd</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.jcd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the bigram-based Jaccard Index.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.jcdn">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">jcdn</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.jcdn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">jcdn</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.jcdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the bigram and trigram-based Jaccard Index</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.lcs">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">lcs</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.lcs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">lcs</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.lcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the longest common subsequence between two strings.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.ldn">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">ldn</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.ldn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">ldn</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.ldn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic Levenshtein distance without swap operation (all operations are equal costs).</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.edit_dist" title="lingpy.align.pairwise.edit_dist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.align.pairwise.edit_dist</span></code></a>, <a class="reference internal" href="#lingpy.compare.strings.ldn_swap" title="lingpy.compare.strings.ldn_swap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.compare.strings.ldn_swap</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="lingpy.align.html#lingpy.align.pairwise.edit_dist" title="lingpy.align.pairwise.edit_dist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.align.pairwise.edit_dist</span></code></a>, <a class="reference internal" href="#lingpy.compare.strings.ldn_swap" title="lingpy.compare.strings.ldn_swap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.compare.strings.ldn_swap</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.ldn_swap">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">ldn_swap</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.ldn_swap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">ldn_swap</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.ldn_swap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic Levenshtein distance with swap operation included (identifies metathesis).</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.prefix">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">prefix</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">prefix</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the longest common prefix between two strings.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.tridist1">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">tridist1</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.tridist1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">tridist1</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.tridist1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes trigram-based distance.</p>
 <p class="rubric">Notes</p>
 <p>The binary version.
@@ -1870,7 +1897,7 @@ Checks if two trigrams are equal or not.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.tridist2">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">tridist2</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.tridist2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">tridist2</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.tridist2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes bigram based distance.</p>
 <p class="rubric">Notes</p>
 <p>The comprehensive version of the
@@ -1879,7 +1906,7 @@ bigram distance.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.tridist3">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">tridist3</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.tridist3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">tridist3</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.tridist3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes trigram based distance.</p>
 <p class="rubric">Notes</p>
 <p>Computes the positional version of the
@@ -1889,19 +1916,19 @@ similarity of trigrams.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.trigram">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">trigram</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trigram" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">trigram</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trigram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the number of common trigrams between two strings.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.trisim1">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">trisim1</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trisim1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">trisim1</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trisim1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the binary version of trigram similarity.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.trisim2">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">trisim2</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trisim2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">trisim2</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trisim2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes tri-sim “the comprehensive version”.</p>
 <p class="rubric">Notes</p>
 <p>Simply computes the number of common 1-grams between two n-grams instead of
@@ -1912,7 +1939,7 @@ lookup is in constant time.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.trisim3">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">trisim3</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trisim3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">trisim3</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.trisim3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes tri-sim the “positional version”.</p>
 <p class="rubric">Notes</p>
 <p>Simply computes the
@@ -1921,13 +1948,13 @@ number of matching 1-grams in each position.</p>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.xdice">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">xdice</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.xdice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">xdice</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.xdice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the skip 1 character version of Dice.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.compare.strings.xxdice">
-<code class="descclassname">lingpy.compare.strings.</code><code class="descname">xxdice</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.xxdice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.compare.strings.</code><code class="sig-name descname">xxdice</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.strings.xxdice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the XXDice between two strings.</p>
 <p class="rubric">Notes</p>
 <p>Taken from <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Brew1996"><span class="pre">Brew1996</span></a></code>.</p>
@@ -1975,13 +2002,11 @@ number of matching 1-grams in each position.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -2022,7 +2047,7 @@ number of matching 1-grams in each position.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>lingpy.tests package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -72,6 +71,7 @@ LingPy
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lingpy.tests.align.html">lingpy.tests.align package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.align.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.tests.align.html#module-lingpy.tests.align.test_align_confidence">lingpy.tests.align.test_align_confidence module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.align.html#module-lingpy.tests.align.test_multiple">lingpy.tests.align.test_multiple module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.align.html#module-lingpy.tests.align.test_pairwise">lingpy.tests.align.test_pairwise module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.align.html#module-lingpy.tests.align.test_sca">lingpy.tests.align.test_sca module</a></li>
@@ -127,7 +127,10 @@ LingPy
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lingpy.tests.meaning.html">lingpy.tests.meaning package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.meaning.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning.test_basvoc">lingpy.tests.meaning.test_basvoc module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning.test_colexification">lingpy.tests.meaning.test_colexification module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.tests.meaning.html#lingpy-tests-meaning-test-glosses-module">lingpy.tests.meaning.test_glosses module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lingpy.tests.meaning.html#lingpy-tests-meaning-test-init-module">lingpy.tests.meaning.test_init module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lingpy.tests.meaning.html#module-lingpy.tests.meaning">Module contents</a></li>
 </ul>
 </li>
@@ -167,41 +170,41 @@ LingPy
 <span id="lingpy-tests-test-basictypes-module"></span><h2>lingpy.tests.test_basictypes module<a class="headerlink" href="#module-lingpy.tests.test_basictypes" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.test_basictypes.Tests">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_basictypes.</code><code class="descname">Tests</code><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_basictypes.</code><code class="sig-name descname">Tests</code><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.app">
-<code class="descname">app</code><em class="property"> = ['1', '2', '3']</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.app" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">app</code><em class="property"> = ['1', '2', '3']</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.app" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.f">
-<code class="descname">f</code><em class="property"> = [1.0, 2.0, 3.0, 1.0, 2.0, 3.0]</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.f" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">f</code><em class="property"> = [1.0, 2.0, 3.0, 1.0, 2.0, 3.0]</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.i">
-<code class="descname">i</code><em class="property"> = [1, 2, 3]</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.i" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">i</code><em class="property"> = [1, 2, 3]</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.i" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.l">
-<code class="descname">l</code><em class="property"> = ['1', '2', '3', '+', '1', '2', '3']</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.l" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">l</code><em class="property"> = ['1', '2', '3', '+', '1', '2', '3']</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.l" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.s">
-<code class="descname">s</code><em class="property"> = ['1', '2', '3']</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.s" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">s</code><em class="property"> = ['1', '2', '3']</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.s" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.string1">
-<code class="descname">string1</code><em class="property"> = '1 2 3 + 1 2 3'</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.string1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">string1</code><em class="property"> = '1 2 3 + 1 2 3'</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.string1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="lingpy.tests.test_basictypes.Tests.string2">
-<code class="descname">string2</code><em class="property"> = '1 2 3 1 2 3'</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.string2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">string2</code><em class="property"> = '1 2 3 1 2 3'</em><a class="headerlink" href="#lingpy.tests.test_basictypes.Tests.string2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -211,11 +214,11 @@ LingPy
 <span id="lingpy-tests-test-cache-module"></span><h2>lingpy.tests.test_cache module<a class="headerlink" href="#module-lingpy.tests.test_cache" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.test_cache.TestCache">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_cache.</code><code class="descname">TestCache</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cache.TestCache" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_cache.</code><code class="sig-name descname">TestCache</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cache.TestCache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.tests.util_testing.WithTempDir" title="lingpy.tests.util_testing.WithTempDir"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.tests.util_testing.WithTempDir</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.tests.test_cache.TestCache.test_cache">
-<code class="descname">test_cache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cache.TestCache.test_cache" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_cache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cache.TestCache.test_cache" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -225,58 +228,58 @@ LingPy
 <span id="lingpy-tests-test-cli-module"></span><h2>lingpy.tests.test_cli module<a class="headerlink" href="#module-lingpy.tests.test_cli" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.test_cli.Tests">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_cli.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_cli.</code><code class="sig-name descname">Tests</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.tests.util_testing.WithTempDir" title="lingpy.tests.util_testing.WithTempDir"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.tests.util_testing.WithTempDir</span></code></a></p>
-<dl class="staticmethod">
+<dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.run_cli">
-<em class="property">static </em><code class="descname">run_cli</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.run_cli" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">run_cli</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.run_cli" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_alignments">
-<code class="descname">test_alignments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_alignments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_alignments" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_lexstat">
-<code class="descname">test_lexstat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_lexstat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_lexstat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_lexstat" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_multiple">
-<code class="descname">test_multiple</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_multiple</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_multiple" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_ortho_profile">
-<code class="descname">test_ortho_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_ortho_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_ortho_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_ortho_profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_pairwise">
-<code class="descname">test_pairwise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_pairwise" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_pairwise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_pairwise" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_profile">
-<code class="descname">test_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_settings">
-<code class="descname">test_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_settings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_settings" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_cli.Tests.test_wordlist">
-<code class="descname">test_wordlist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_wordlist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_wordlist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.Tests.test_wordlist" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.tests.test_cli.capture">
-<code class="descclassname">lingpy.tests.test_cli.</code><code class="descname">capture</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.capture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.tests.test_cli.</code><code class="sig-name descname">capture</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_cli.capture" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -284,27 +287,27 @@ LingPy
 <span id="lingpy-tests-test-config-module"></span><h2>lingpy.tests.test_config module<a class="headerlink" href="#module-lingpy.tests.test_config" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.test_config.ConfigTest">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_config.</code><code class="descname">ConfigTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_config.</code><code class="sig-name descname">ConfigTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.tests.util_testing.WithTempDir" title="lingpy.tests.util_testing.WithTempDir"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.tests.util_testing.WithTempDir</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.tests.test_config.ConfigTest.setUp">
-<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.setUp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.setUp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook method for setting up the test fixture before exercising it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_config.ConfigTest.test_default">
-<code class="descname">test_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.test_default" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.test_default" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_config.ConfigTest.test_existing_config">
-<code class="descname">test_existing_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.test_existing_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_existing_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.test_existing_config" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_config.ConfigTest.test_new_config">
-<code class="descname">test_new_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.test_new_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_new_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_config.ConfigTest.test_new_config" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -314,32 +317,32 @@ LingPy
 <span id="lingpy-tests-test-log-module"></span><h2>lingpy.tests.test_log module<a class="headerlink" href="#module-lingpy.tests.test_log" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.test_log.LogTest">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_log.</code><code class="descname">LogTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_log.</code><code class="sig-name descname">LogTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.tests.util_testing.WithTempDir" title="lingpy.tests.util_testing.WithTempDir"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.tests.util_testing.WithTempDir</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.tests.test_log.LogTest.tearDown">
-<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.tearDown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.tearDown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook method for deconstructing the test fixture after testing it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_log.LogTest.test_Logging_context_manager">
-<code class="descname">test_Logging_context_manager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_Logging_context_manager" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_Logging_context_manager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_Logging_context_manager" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="lingpy.tests.test_log.LogTest.test_convenience">
-<em class="property">static </em><code class="descname">test_convenience</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_convenience" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">test_convenience</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_convenience" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_log.LogTest.test_default_config">
-<code class="descname">test_default_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_default_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_default_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_default_config" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_log.LogTest.test_new_config">
-<code class="descname">test_new_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_new_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_new_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_log.LogTest.test_new_config" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -349,48 +352,48 @@ LingPy
 <span id="lingpy-tests-test-util-module"></span><h2>lingpy.tests.test_util module<a class="headerlink" href="#module-lingpy.tests.test_util" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.test_util.Test">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_util.</code><code class="descname">Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.Test" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_util.</code><code class="sig-name descname">Test</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.Test" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.tests.util_testing.WithTempDir" title="lingpy.tests.util_testing.WithTempDir"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.tests.util_testing.WithTempDir</span></code></a></p>
 <dl class="method">
 <dt id="lingpy.tests.test_util.Test.test_TextFile">
-<code class="descname">test_TextFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.Test.test_TextFile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_TextFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.Test.test_TextFile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_util.Test.test_write_text_file">
-<code class="descname">test_write_text_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.Test.test_write_text_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_write_text_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.Test.test_write_text_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.tests.test_util.TestCombinations">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_util.</code><code class="descname">TestCombinations</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestCombinations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_util.</code><code class="sig-name descname">TestCombinations</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestCombinations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
 <dt id="lingpy.tests.test_util.TestCombinations.test_combinations2">
-<code class="descname">test_combinations2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestCombinations.test_combinations2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_combinations2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestCombinations.test_combinations2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.tests.test_util.TestJoin">
-<em class="property">class </em><code class="descclassname">lingpy.tests.test_util.</code><code class="descname">TestJoin</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.test_util.</code><code class="sig-name descname">TestJoin</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
 <dt id="lingpy.tests.test_util.TestJoin.test_as_string">
-<code class="descname">test_as_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin.test_as_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_as_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin.test_as_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_util.TestJoin.test_dotjoin">
-<code class="descname">test_dotjoin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin.test_dotjoin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_dotjoin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin.test_dotjoin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.test_util.TestJoin.test_join">
-<code class="descname">test_join</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin.test_join" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">test_join</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.test_util.TestJoin.test_join" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -401,31 +404,25 @@ LingPy
 <p>Utilities used in lingpy tests</p>
 <dl class="function">
 <dt id="lingpy.tests.util.get_log">
-<code class="descclassname">lingpy.tests.util.</code><code class="descname">get_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util.get_log" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.tests.util.</code><code class="sig-name descname">get_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util.get_log" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mock object for <cite>lingpy.log</cite> to test whether log messages
 have been emitted.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Mock instance.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Mock instance.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.tests.util.test_data">
-<code class="descclassname">lingpy.tests.util.</code><code class="descname">test_data</code><span class="sig-paren">(</span><em>*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util.test_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.tests.util.</code><code class="sig-name descname">test_data</code><span class="sig-paren">(</span><em class="sig-param">*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util.test_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Access test data files.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>comps</strong> – Path components of the data file path relative to</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>comps</strong> – Path components of the data file path relative to</p>
+</dd>
+</dl>
 <p>the test_data dir.
 :return: Absolute path to the specified test data file.</p>
 </dd></dl>
@@ -435,42 +432,42 @@ have been emitted.</p>
 <span id="lingpy-tests-util-testing-module"></span><h2>lingpy.tests.util_testing module<a class="headerlink" href="#module-lingpy.tests.util_testing" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="lingpy.tests.util_testing.WithTempDir">
-<em class="property">class </em><code class="descclassname">lingpy.tests.util_testing.</code><code class="descname">WithTempDir</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDir" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.util_testing.</code><code class="sig-name descname">WithTempDir</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.tests.util_testing.WithTempDirMixin" title="lingpy.tests.util_testing.WithTempDirMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.tests.util_testing.WithTempDirMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Backwards compatible test base class.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="lingpy.tests.util_testing.WithTempDirMixin">
-<em class="property">class </em><code class="descclassname">lingpy.tests.util_testing.</code><code class="descname">WithTempDirMixin</code><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">lingpy.tests.util_testing.</code><code class="sig-name descname">WithTempDirMixin</code><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Composable test fixture providing access to a temporary directory.</p>
 <p><a class="reference external" href="http://nedbatchelder.com/blog/201210/multiple_inheritance_is_hard.html">http://nedbatchelder.com/blog/201210/multiple_inheritance_is_hard.html</a></p>
 <dl class="method">
 <dt id="lingpy.tests.util_testing.WithTempDirMixin.setUp">
-<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin.setUp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin.setUp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.util_testing.WithTempDirMixin.tearDown">
-<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin.tearDown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin.tearDown" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="lingpy.tests.util_testing.WithTempDirMixin.tmp_path">
-<code class="descname">tmp_path</code><span class="sig-paren">(</span><em>*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin.tmp_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tmp_path</code><span class="sig-paren">(</span><em class="sig-param">*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.WithTempDirMixin.tmp_path" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.tests.util_testing.capture">
-<code class="descclassname">lingpy.tests.util_testing.</code><code class="descname">capture</code><span class="sig-paren">(</span><em>func</em>, <em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.capture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.tests.util_testing.</code><code class="sig-name descname">capture</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.capture" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.tests.util_testing.capture_all">
-<code class="descclassname">lingpy.tests.util_testing.</code><code class="descname">capture_all</code><span class="sig-paren">(</span><em>func</em>, <em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.capture_all" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.tests.util_testing.</code><code class="sig-name descname">capture_all</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.tests.util_testing.capture_all" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -514,13 +511,11 @@ have been emitted.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -561,7 +556,7 @@ have been emitted.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

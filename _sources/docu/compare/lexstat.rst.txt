@@ -18,19 +18,13 @@ Cognate Detection (:py:class:`~lingpy.compare.lexstat.LexStat`)
    .. rubric:: Inherited WordList Methods
    .. autosummary::
 
-      ~lingpy.basic.parser.QLCParser.pickle
       ~lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries
       ~lingpy.basic.wordlist.Wordlist.add_entries
       ~lingpy.basic.wordlist.Wordlist.calculate
       ~lingpy.basic.wordlist.Wordlist.export
-      ~lingpy.basic.wordlist.Wordlist.export
-      ~lingpy.basic.wordlist.Wordlist.get_dict
       ~lingpy.basic.wordlist.Wordlist.get_dict
       ~lingpy.basic.wordlist.Wordlist.get_etymdict
-      ~lingpy.basic.wordlist.Wordlist.get_etymdict
       ~lingpy.basic.wordlist.Wordlist.get_list
-      ~lingpy.basic.wordlist.Wordlist.get_list
-      ~lingpy.basic.wordlist.Wordlist.get_paps
       ~lingpy.basic.wordlist.Wordlist.get_paps
       ~lingpy.basic.wordlist.Wordlist.output
       ~lingpy.basic.wordlist.Wordlist.renumber

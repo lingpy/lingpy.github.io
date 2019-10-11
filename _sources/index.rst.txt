@@ -22,8 +22,8 @@ Quote this library as:
    .. image:: https://img.shields.io/badge/PyPi_Package-2.6-brightgreen.svg
       :target: https://badge.fury.io/py/lingpy/
    
-   .. image:: https://img.shields.io/badge/BibTex-List2017i-deb887.svg
-      :target: http://bibliography.lingpy.org/evobib/raw.php?key=List2017i
+   .. image:: https://img.shields.io/badge/BibTex-LingPy-deb887.svg
+      :target: http://bibliography.lingpy.org/evobib/raw.php?key=LingPy
    
    .. image:: https://img.shields.io/badge/GitHub-lingpy-000000.svg
       :target: https://github.com/lingpy/lingpy

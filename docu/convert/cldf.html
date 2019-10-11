@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Converting Data to CLDF (cldf) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -58,17 +57,17 @@ LingPy
 <h1>Converting Data to CLDF (<a class="reference internal" href="../../reference/lingpy.convert.html#module-lingpy.convert.cldf" title="lingpy.convert.cldf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cldf</span></code></a>)<a class="headerlink" href="#converting-data-to-cldf-cldf" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.cldf.to_cldf" title="lingpy.convert.cldf.to_cldf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_cldf</span></code></a>(wordlist[,&nbsp;path,&nbsp;source_path,&nbsp;ref,&nbsp;…])</td>
-<td>Convert a wordlist in LingPy to CLDF.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.convert.html#lingpy.convert.cldf.to_cldf" title="lingpy.convert.cldf.to_cldf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_cldf</span></code></a>(wordlist[, path, source_path, ref, …])</p></td>
+<td><p>Convert a wordlist in LingPy to CLDF.</p></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_cldf</span></code>(path[,&nbsp;to,&nbsp;concept,&nbsp;concepticon,&nbsp;…])</td>
-<td>Load data from CLDF into a LingPy Wordlist object or similar.</td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_cldf</span></code>(path[, to, concept, concepticon, …])</p></td>
+<td><p>Load data from CLDF into a LingPy Wordlist object or similar.</p></td>
 </tr>
 </tbody>
 </table>
@@ -86,7 +85,7 @@ LingPy
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Converting Data to CLDF (<code class="docutils literal notranslate"><span class="pre">cldf</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Converting Data to CLDF (<code class="xref py py-mod docutils literal notranslate"><span class="pre">cldf</span></code>)</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
@@ -100,13 +99,11 @@ LingPy
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -147,7 +144,7 @@ LingPy
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>lingpy.algorithm package &#8212; LingPy</title>
     <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -82,35 +81,29 @@ LingPy
 <p>Various utility functions which are useful for algorithmic operations</p>
 <dl class="function">
 <dt id="lingpy.algorithm.cluster_util.generate_all_clusters">
-<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">generate_all_clusters</code><span class="sig-paren">(</span><em>numbers</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.cluster_util.</code><code class="sig-name descname">generate_all_clusters</code><span class="sig-paren">(</span><em class="sig-param">numbers</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate all possible clusters for a number of elements.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clr</strong> : iterator</p>
-<blockquote class="last">
+<dl class="field-list">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>clr</strong> : iterator</p>
+<blockquote>
 <div><p>An iterator that will yield the next of all possible clusters.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.algorithm.cluster_util.generate_random_cluster">
-<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">generate_random_cluster</code><span class="sig-paren">(</span><em>numbers</em>, <em>bias=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.cluster_util.</code><code class="sig-name descname">generate_random_cluster</code><span class="sig-paren">(</span><em class="sig-param">numbers</em>, <em class="sig-param">bias=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a random cluster for a number of elements.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>numbers</strong> : int</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>numbers</strong> : int</p>
 <blockquote>
 <div><p>Number of separate entities which should be clustered.</p>
 </div></blockquote>
@@ -119,31 +112,27 @@ LingPy
 <div><p>When set to “lumper” will tend to create larger groups, when set to
 “splitter” it will tend to produce smaller groups.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cluster</strong> : list</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cluster</strong> : list</p>
+<blockquote>
 <div><p>A list with consecutive ordering of clusters, starting from zero.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.algorithm.cluster_util.mutate_cluster">
-<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">mutate_cluster</code><span class="sig-paren">(</span><em>clr</em>, <em>chance=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.cluster_util.</code><code class="sig-name descname">mutate_cluster</code><span class="sig-paren">(</span><em class="sig-param">clr</em>, <em class="sig-param">chance=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mutate a cluster.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>clr</strong> : cluster</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clr</strong> : cluster</p>
 <blockquote>
 <div><p>A list with ordered clusters.</p>
 </div></blockquote>
@@ -153,78 +142,68 @@ LingPy
 means that in 50% of the cases, an element will be assigned to another
 cluster or a new cluster.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>valid_cluster</strong> : list</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>valid_cluster</strong> : list</p>
+<blockquote>
 <div><p>A newly clustered list in consecutive order.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.algorithm.cluster_util.order_cluster">
-<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">order_cluster</code><span class="sig-paren">(</span><em>clr</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.order_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.cluster_util.</code><code class="sig-name descname">order_cluster</code><span class="sig-paren">(</span><em class="sig-param">clr</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.order_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order a cluster into the form of a valid cluster.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>clr</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clr</strong> : list</p>
 <blockquote>
 <div><p>A list with clusters assigned by given each element a specific clusuter
 ID.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>valid_cluster</strong> : list</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>valid_cluster</strong> : list</p>
+<blockquote>
 <div><p>A list in which the IDs start from zero and increase consecutively with
 each new cluster introduced.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.cluster_util.valid_cluster" title="lingpy.algorithm.cluster_util.valid_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.algorithm.cluster_util.valid_cluster">
-<code class="descclassname">lingpy.algorithm.cluster_util.</code><code class="descname">valid_cluster</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.valid_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.cluster_util.</code><code class="sig-name descname">valid_cluster</code><span class="sig-paren">(</span><em class="sig-param">sequence</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.valid_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Only allow to have sequences which have consecutive ordering of elements.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sequence</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sequence</strong> : list</p>
 <blockquote>
 <div><p>A cluster sequence in which elements should be consecutively ordered, starting from
 0, and identical segments in the sequence retrieve the same number.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>valid_cluster</strong> : bool</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>valid_cluster</strong> : bool</p>
+<blockquote>
 <div><p>True, if the cluster is valid, and False if it judged to be invalid.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="lingpy.algorithm.cluster_util.generate_all_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_all_clusters</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="lingpy.algorithm.cluster_util.generate_random_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.order_cluster" title="lingpy.algorithm.cluster_util.order_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="lingpy.algorithm.cluster_util.mutate_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate_cluster</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>We define a valid and an invalid cluster sequence:</p>
@@ -245,7 +224,7 @@ each new cluster introduced.</p>
 <p>Module provides general clustering functions for LingPy.</p>
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.best_threshold">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">best_threshold</code><span class="sig-paren">(</span><em>matrix</em>, <em>trange=(0.3</em>, <em>0.7</em>, <em>0.05)</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.best_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">best_threshold</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">trange=(0.3</em>, <em class="sig-param">0.7</em>, <em class="sig-param">0.05)</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.best_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the best threshold by maximizing partition density for a given range of
 thresholds.</p>
 <p class="rubric">Notes</p>
@@ -255,19 +234,17 @@ thresholds.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.check_taxon_names">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">check_taxon_names</code><span class="sig-paren">(</span><em>taxa</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.check_taxon_names" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">check_taxon_names</code><span class="sig-paren">(</span><em class="sig-param">taxa</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.check_taxon_names" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.find_threshold">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">find_threshold</code><span class="sig-paren">(</span><em>matrix, thresholds=[0.9, 0.8500000000000001, 0.8, 0.75, 0.7000000000000001, 0.65, 0.6000000000000001, 0.55, 0.5, 0.45, 0.4, 0.35000000000000003, 0.30000000000000004, 0.25, 0.2, 0.15000000000000002, 0.1, 0.05], logs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.find_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">find_threshold</code><span class="sig-paren">(</span><em class="sig-param">matrix, thresholds=[0.9, 0.8500000000000001, 0.8, 0.75, 0.7000000000000001, 0.65, 0.6000000000000001, 0.55, 0.5, 0.45, 0.4, 0.35000000000000003, 0.30000000000000004, 0.25, 0.2, 0.15000000000000002, 0.1, 0.05], logs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.find_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use a variant of the method by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Apeltsin2011"><span class="pre">Apeltsin2011</span></a></code> in order to find an optimal
 threshold.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>matrix</strong> : list</p>
 <blockquote>
 <div><p>The distance matrix for which the threshold shall be determined.</p>
 </div></blockquote>
@@ -282,17 +259,15 @@ be assigned as weight to the graph. If set to c{False} all weights will
 be set to 1. Use a custom function to define individual ways to
 calculate the weights.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>threshold</strong> : {float,None}</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>threshold</strong> : {float,None}</p>
+<blockquote>
 <div><p>If a float is returned, this is the threshold identified by the method.
 If <strong>None</strong> is returned, no threshold could be identified.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This is a very simple method that may not work well depending on the
 dataset. So we recommend to use it with great care.</p>
@@ -300,13 +275,11 @@ dataset. So we recommend to use it with great care.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.flat_cluster">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">flat_cluster</code><span class="sig-paren">(</span><em>method</em>, <em>threshold</em>, <em>matrix</em>, <em>taxa=None</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">flat_cluster</code><span class="sig-paren">(</span><em class="sig-param">method</em>, <em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa=None</em>, <em class="sig-param">revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a flat cluster analysis based on linkage algorithms.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>method</strong> : { “upgma”, “single”, “complete”, “ward”}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> : { “upgma”, “single”, “complete”, “ward”}</p>
 <blockquote>
 <div><p>Select between ‘ugpma’, ‘single’, and ‘complete’. You can also test
 “ward”, but there’s no guarantee that this is the correct algorithm.</p>
@@ -324,20 +297,18 @@ dataset. So we recommend to use it with great care.</p>
 <div><p>A list containing the names of the taxa. If the list is left empty, the
 indices of the taxa will be returned instead of their names.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>clusters</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary with cluster-IDs as keys and a list of the taxa
 corresponding to the respective ID as values.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.clustering.flat_cluster" title="lingpy.algorithm.clustering.flat_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.flat_upgma" title="lingpy.algorithm.clustering.flat_upgma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_upgma</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.fuzzy" title="lingpy.algorithm.clustering.fuzzy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fuzzy</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.link_clustering" title="lingpy.algorithm.clustering.link_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link_clustering</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.mcl" title="lingpy.algorithm.clustering.mcl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mcl</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.clustering.flat_cluster" title="lingpy.algorithm.clustering.flat_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.flat_upgma" title="lingpy.algorithm.clustering.flat_upgma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_upgma</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.fuzzy" title="lingpy.algorithm.clustering.fuzzy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fuzzy</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.link_clustering" title="lingpy.algorithm.clustering.link_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link_clustering</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.mcl" title="lingpy.algorithm.clustering.mcl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mcl</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
@@ -368,13 +339,11 @@ corresponding to the respective ID as values.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.flat_upgma">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">flat_upgma</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa=None</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_upgma" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">flat_upgma</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa=None</em>, <em class="sig-param">revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_upgma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a flat cluster analysis based on the UPGMA algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold which terminates the algorithm.</p>
 </div></blockquote>
@@ -387,20 +356,18 @@ corresponding to the respective ID as values.</p>
 <div><p>A list containing the names of the taxa. If the list is left empty, the
 indices of the taxa will be returned instead of their names.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>clusters</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary with cluster-IDs as keys and a list of the taxa
 corresponding to the respective ID as values.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.clustering.flat_cluster" title="lingpy.algorithm.clustering.flat_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.flat_upgma" title="lingpy.algorithm.clustering.flat_upgma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_upgma</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.fuzzy" title="lingpy.algorithm.clustering.fuzzy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fuzzy</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.link_clustering" title="lingpy.algorithm.clustering.link_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link_clustering</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.mcl" title="lingpy.algorithm.clustering.mcl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mcl</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.clustering.flat_cluster" title="lingpy.algorithm.clustering.flat_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_cluster</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.flat_upgma" title="lingpy.algorithm.clustering.flat_upgma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flat_upgma</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.fuzzy" title="lingpy.algorithm.clustering.fuzzy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fuzzy</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.link_clustering" title="lingpy.algorithm.clustering.link_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link_clustering</span></code></a>, <a class="reference internal" href="#lingpy.algorithm.clustering.mcl" title="lingpy.algorithm.clustering.mcl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mcl</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
@@ -431,13 +398,11 @@ corresponding to the respective ID as values.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.fuzzy">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">fuzzy</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>method='upgma'</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.fuzzy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">fuzzy</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">method='upgma'</em>, <em class="sig-param">revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.fuzzy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create fuzzy cluster of a given distance matrix.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold that shall be used for the basic clustering of the data.</p>
 </div></blockquote>
@@ -462,20 +427,18 @@ in the matrix.</p>
 <blockquote>
 <div><p>Specify whether a reverted dictionary should be returned.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cluster</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cluster</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary with cluster-IDs as keys and a list as value, containing
 the taxa that are assigned to a given cluster-ID.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.clustering.link_clustering" title="lingpy.algorithm.clustering.link_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link_clustering</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.clustering.link_clustering" title="lingpy.algorithm.clustering.link_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">link_clustering</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>This is a very simple fuzzy clustering algorithm. It basically does nothing
@@ -512,13 +475,11 @@ clusters.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.link_clustering">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">link_clustering</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>link_threshold=False</em>, <em>revert=False</em>, <em>matrix_type='distances'</em>, <em>fuzzy=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.link_clustering" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">link_clustering</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">link_threshold=False</em>, <em class="sig-param">revert=False</em>, <em class="sig-param">matrix_type='distances'</em>, <em class="sig-param">fuzzy=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.link_clustering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a link clustering analysis using the method by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Ahn2010"><span class="pre">Ahn2010</span></a></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : {float, bool}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : {float, bool}</p>
 <blockquote>
 <div><p>The threshold that shall be used for the initial selection of links
 assigned to the data. If set to c{False}, the weights from the matrix
@@ -546,20 +507,18 @@ no adaptation is needed. If it contains “weights”, a weighted version
 of link clustering (see the supplementary in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Ahn2010"><span class="pre">Ahn2010</span></a></code> for
 details) ]will be carried out.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>cluster</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cluster</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary with cluster-IDs as keys and a list as value, containing
 the taxa that are assigned to a given cluster-ID.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.clustering.fuzzy" title="lingpy.algorithm.clustering.fuzzy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fuzzy</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.clustering.fuzzy" title="lingpy.algorithm.clustering.fuzzy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fuzzy</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
@@ -590,13 +549,11 @@ the taxa that are assigned to a given cluster-ID.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.matrix2groups">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">matrix2groups</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>cluster_method='upgma'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">matrix2groups</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">cluster_method='upgma'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate flat cluster of distance matrix.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold to be used for the calculation.</p>
 </div></blockquote>
@@ -609,16 +566,14 @@ the taxa that are assigned to a given cluster-ID.</p>
 <div><p>A list of the taxa in the distance matrix.</p>
 </div></blockquote>
 <p><strong>cluster_method</strong> : {“upgma”, “mcl”, “single”, “complete”} (default=”upgma”)</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>groups</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>groups</strong> : dict</p>
+<blockquote>
 <div><p>A dictionary with the taxa as keys and the group assignment as values.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This function is important for internal calculations within wordlist. It is
 not recommended for further use.</p>
@@ -626,13 +581,11 @@ not recommended for further use.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.matrix2tree">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">matrix2tree</code><span class="sig-paren">(</span><em>matrix</em>, <em>taxa</em>, <em>tree_calc='neighbor'</em>, <em>distances=True</em>, <em>filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">matrix2tree</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">tree_calc='neighbor'</em>, <em class="sig-param">distances=True</em>, <em class="sig-param">filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a tree of a given distance matrix.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>matrix</strong> : list</p>
 <blockquote>
 <div><p>The distance matrix to be used.</p>
 </div></blockquote>
@@ -644,8 +597,8 @@ not recommended for further use.</p>
 <blockquote>
 <div><p>The method for tree calculation that shall be used. Select between:</p>
 <ul class="simple">
-<li>“neighbor”: Neighbor-joining method (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>)</li>
-<li>“upgma” : UPGMA method (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>)</li>
+<li><p>“neighbor”: Neighbor-joining method (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>)</p></li>
+<li><p>“upgma” : UPGMA method (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>)</p></li>
 </ul>
 </div></blockquote>
 <p><strong>distances</strong> : bool (default=True)</p>
@@ -653,32 +606,28 @@ not recommended for further use.</p>
 <div><p>If set to c{True}, distances will be included in the
 tree-representation.</p>
 </div></blockquote>
-<p><strong>filename</strong> : str (default=’‘)</p>
+<p><strong>filename</strong> : str (default=’’)</p>
 <blockquote>
 <div><p>If a filename is specified, the data will be written to that file.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tree</strong> : ~lingpy.thirdparty.cogent.tree.PhyloNode</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tree</strong> : ~lingpy.thirdparty.cogent.tree.PhyloNode</p>
+<blockquote>
 <div><p>A ~lingpy.thirdparty.cogent.tree.PhyloNode object for handling tree
 files.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.mcl">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">mcl</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>max_steps=1000</em>, <em>inflation=2</em>, <em>expansion=2</em>, <em>add_self_loops=True</em>, <em>revert=False</em>, <em>logs=True</em>, <em>matrix_type='distances'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.mcl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">mcl</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">max_steps=1000</em>, <em class="sig-param">inflation=2</em>, <em class="sig-param">expansion=2</em>, <em class="sig-param">add_self_loops=True</em>, <em class="sig-param">revert=False</em>, <em class="sig-param">logs=True</em>, <em class="sig-param">matrix_type='distances'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.mcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a clustering using the MCL algorithm (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dongen2000"><span class="pre">Dongen2000</span></a></code>).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : {float, bool}</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : {float, bool}</p>
 <blockquote>
 <div><p>The threshold that shall be used for the initial selection of links
 assigned to the data. If set to c{False}, the weights from the matrix
@@ -720,15 +669,13 @@ be set to 1. Use a custom function to define individual ways to
 calculate the weights.</p>
 </div></blockquote>
 <p><strong>matrix_type</strong> : { “distances”, “similarities” }</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Specify the type of the matrix. If the matrix contains distance data,
 it will be adapted to similarity data. If it contains “similarities”,
 no adaptation is needed.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <p>The function is automatically imported along with LingPy.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
@@ -758,13 +705,11 @@ no adaptation is needed.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.neighbor">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">neighbor</code><span class="sig-paren">(</span><em>matrix</em>, <em>taxa</em>, <em>distances=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.neighbor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">neighbor</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">distances=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.neighbor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function clusters data according to the Neighbor-Joining algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>matrix</strong> : list</p>
 <blockquote>
 <div><p>A two-dimensional list containing the distances.</p>
 </div></blockquote>
@@ -777,20 +722,18 @@ in the matrix.</p>
 <blockquote>
 <div><p>If set to <strong>False</strong>, only the topology of the tree will be returned.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newick</strong> : str</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>newick</strong> : str</p>
+<blockquote>
 <div><p>A string in newick-format which can be further used in biological
 software packages to view and plot the tree.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.clustering.upgma" title="lingpy.algorithm.clustering.upgma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upgma</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.clustering.upgma" title="lingpy.algorithm.clustering.upgma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upgma</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Function is automatically imported when importing lingpy.</p>
@@ -815,7 +758,7 @@ software packages to view and plot the tree.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.partition_density">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">partition_density</code><span class="sig-paren">(</span><em>matrix</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.partition_density" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">partition_density</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">t</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.partition_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate partition density for a given threshold on a distance matrix.</p>
 <p class="rubric">Notes</p>
 <p>See <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Ahn2012"><span class="pre">Ahn2012</span></a></code> for details on the calculation of partition density
@@ -824,13 +767,11 @@ in a given network.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.clustering.upgma">
-<code class="descclassname">lingpy.algorithm.clustering.</code><code class="descname">upgma</code><span class="sig-paren">(</span><em>matrix</em>, <em>taxa</em>, <em>distances=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.upgma" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.clustering.</code><code class="sig-name descname">upgma</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">distances=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.upgma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a cluster analysis based on the UPGMA algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : list</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>matrix</strong> : list</p>
 <blockquote>
 <div><p>A two-dimensional list containing the distances.</p>
 </div></blockquote>
@@ -843,20 +784,18 @@ in the matrix.</p>
 <blockquote>
 <div><p>If set to <strong>False</strong>, only the topology of the tree will be returned.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newick</strong> : str</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>newick</strong> : str</p>
+<blockquote>
 <div><p>A string in newick-format which can be further used in biological
 software packages to view and plot the tree.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#lingpy.algorithm.clustering.neighbor" title="lingpy.algorithm.clustering.neighbor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbor</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#lingpy.algorithm.clustering.neighbor" title="lingpy.algorithm.clustering.neighbor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbor</span></code></a></p>
 </div>
 <p class="rubric">Examples</p>
 <p>Function is automatically imported when importing lingpy.</p>
@@ -885,13 +824,11 @@ software packages to view and plot the tree.</p>
 <p>Adapting specific cluster algorithms from scikit-learn to LingPy.</p>
 <dl class="function">
 <dt id="lingpy.algorithm.extra.affinity_propagation">
-<code class="descclassname">lingpy.algorithm.extra.</code><code class="descname">affinity_propagation</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.affinity_propagation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.extra.</code><code class="sig-name descname">affinity_propagation</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.affinity_propagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute affinity propagation from the matrix.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold for clustering you want to use.</p>
 </div></blockquote>
@@ -911,17 +848,15 @@ each column in the matrix.</p>
 identifiers and their labels as a dictionary. Otherwise returns a
 dictionary with labels as keys and list of taxon names as values.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>clusters</strong> : dict</p>
+<blockquote>
 <div><p>Either a dictionary of taxon identifiers and labels, or a dictionary of
 labels and taxon names.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Affinity propagation is a clustering method originally proposed by
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Frey2007"><span class="pre">Frey2007</span></a></code>.</p>
@@ -930,13 +865,11 @@ labels and taxon names.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.extra.dbscan">
-<code class="descclassname">lingpy.algorithm.extra.</code><code class="descname">dbscan</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa</em>, <em>revert=False</em>, <em>min_samples=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.dbscan" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.extra.</code><code class="sig-name descname">dbscan</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa</em>, <em class="sig-param">revert=False</em>, <em class="sig-param">min_samples=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.dbscan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute DBSCAN cluster analysis.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold for clustering you want to use.</p>
 </div></blockquote>
@@ -961,17 +894,15 @@ dictionary with labels as keys and list of taxon names as values.</p>
 <div><p>The minimal samples parameter of the DBCSCAN method from the SKLEARN
 package.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>clusters</strong> : dict</p>
+<blockquote>
 <div><p>Either a dictionary of taxon identifiers and labels, or a dictionary of
 labels and taxon names.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>This method does not work as expected, probably since it normally requires
 distances between points as input. We list it only for completeness here,
@@ -982,13 +913,11 @@ implementation in the source code.</p>
 
 <dl class="function">
 <dt id="lingpy.algorithm.extra.infomap_clustering">
-<code class="descclassname">lingpy.algorithm.extra.</code><code class="descname">infomap_clustering</code><span class="sig-paren">(</span><em>threshold</em>, <em>matrix</em>, <em>taxa=False</em>, <em>revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.infomap_clustering" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lingpy.algorithm.extra.</code><code class="sig-name descname">infomap_clustering</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">matrix</em>, <em class="sig-param">taxa=False</em>, <em class="sig-param">revert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.infomap_clustering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the Infomap clustering analysis of the data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>threshold</strong> : float</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> : float</p>
 <blockquote>
 <div><p>The threshold for clustering you want to use.</p>
 </div></blockquote>
@@ -1008,17 +937,15 @@ each column in the matrix.</p>
 identifiers and their labels as a dictionary. Otherwise returns a
 dictionary with labels as keys and list of taxon names as values.</p>
 </div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clusters</strong> : dict</p>
-<blockquote class="last">
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>clusters</strong> : dict</p>
+<blockquote>
 <div><p>Either a dictionary of taxon identifiers and labels, or a dictionary of
 labels and taxon names.</p>
 </div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Infomap clustering is a community detection method originally proposed by
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosvall2008"><span class="pre">Rosvall2008</span></a></code>. This method requires the igraph package,
@@ -1062,13 +989,11 @@ downloadable from <a class="reference external" href="http://igraph.org/">http:/
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1109,7 +1034,7 @@ downloadable from <a class="reference external" href="http://igraph.org/">http:/
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

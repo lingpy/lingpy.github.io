@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Methods for generating and manipulating ngrams (ngrams) &#8212; LingPy</title>
     <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,6 +12,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -58,43 +57,43 @@ LingPy
 <h1>Methods for generating and manipulating ngrams (<a class="reference internal" href="../../reference/lingpy.sequence.html#module-lingpy.sequence.ngrams" title="lingpy.sequence.ngrams"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ngrams</span></code></a>)<a class="headerlink" href="#methods-for-generating-and-manipulating-ngrams-ngrams" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.NgramModel" title="lingpy.sequence.ngrams.NgramModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NgramModel</span></code></a>([pre_order,&nbsp;post_order,&nbsp;…])</td>
-<td>Class for operation upon sequences using ngrams models.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.NgramModel" title="lingpy.sequence.ngrams.NgramModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NgramModel</span></code></a>([pre_order, post_order, …])</p></td>
+<td><p>Class for operation upon sequences using ngrams models.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_n_ngrams" title="lingpy.sequence.ngrams.get_n_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_n_ngrams</span></code></a>(sequence,&nbsp;order[,&nbsp;pad_symbol])</td>
-<td>Build an iterator for collecting all ngrams of a given order.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_n_ngrams" title="lingpy.sequence.ngrams.get_n_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_n_ngrams</span></code></a>(sequence, order[, pad_symbol])</p></td>
+<td><p>Build an iterator for collecting all ngrams of a given order.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_ngrams_by_order" title="lingpy.sequence.ngrams.get_all_ngrams_by_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams_by_order</span></code></a>(sequence[,&nbsp;orders,&nbsp;…])</td>
-<td>Build an iterator for collecting all ngrams of a given set of orders.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_ngrams_by_order" title="lingpy.sequence.ngrams.get_all_ngrams_by_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams_by_order</span></code></a>(sequence[, orders, …])</p></td>
+<td><p>Build an iterator for collecting all ngrams of a given set of orders.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_skipngrams" title="lingpy.sequence.ngrams.get_skipngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_skipngrams</span></code></a>(sequence,&nbsp;order,&nbsp;max_gaps[,&nbsp;…])</td>
-<td>Build an iterator for collecting all skip ngrams of a given length.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_skipngrams" title="lingpy.sequence.ngrams.get_skipngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_skipngrams</span></code></a>(sequence, order, max_gaps[, …])</p></td>
+<td><p>Build an iterator for collecting all skip ngrams of a given length.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_posngrams" title="lingpy.sequence.ngrams.get_posngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_posngrams</span></code></a>(sequence[,&nbsp;pre_order,&nbsp;…])</td>
-<td>Build an iterator for collecting all positional ngrams of a sequence.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_posngrams" title="lingpy.sequence.ngrams.get_posngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_posngrams</span></code></a>(sequence[, pre_order, …])</p></td>
+<td><p>Build an iterator for collecting all positional ngrams of a sequence.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_posngrams" title="lingpy.sequence.ngrams.get_all_posngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_posngrams</span></code></a>(sequence,&nbsp;pre_orders,&nbsp;…)</td>
-<td>Build an iterator for collecting all positional ngrams of a sequence.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_posngrams" title="lingpy.sequence.ngrams.get_all_posngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_posngrams</span></code></a>(sequence, pre_orders, …)</p></td>
+<td><p>Build an iterator for collecting all positional ngrams of a sequence.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_ngrams" title="lingpy.sequence.ngrams.get_all_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams</span></code></a>(sequence[,&nbsp;sort])</td>
-<td>Function returns all possible n-grams of a given sequence.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.sequence.html#lingpy.sequence.ngrams.get_all_ngrams" title="lingpy.sequence.ngrams.get_all_ngrams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ngrams</span></code></a>(sequence[, sort])</p></td>
+<td><p>Function returns all possible n-grams of a given sequence.</p></td>
 </tr>
 </tbody>
 </table>
@@ -112,7 +111,7 @@ LingPy
             </a></p>
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Methods for generating and manipulating ngrams (<code class="docutils literal notranslate"><span class="pre">ngrams</span></code>)</a><ul>
+<li><a class="reference internal" href="#">Methods for generating and manipulating ngrams (<code class="xref py py-mod docutils literal notranslate"><span class="pre">ngrams</span></code>)</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
@@ -127,13 +126,11 @@ LingPy
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -174,7 +171,7 @@ LingPy
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Nov 26, 2018<br>
+    on Oct 11, 2019<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>
