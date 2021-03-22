@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Helper Functions for SCA Alignment (calign, and misc) &#8212; LingPy</title>
-    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Helper Functions for SCA Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">calign</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">misc</span></code>)</a></li> 
       </ul>
     </div>
 
@@ -54,7 +57,7 @@ LingPy
           <div class="body" role="main">
             
   <div class="section" id="helper-functions-for-sca-alignment-calign-and-misc">
-<h1>Helper Functions for SCA Alignment (<a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#module-lingpy.algorithm.cython.calign" title="lingpy.algorithm.cython.calign"><code class="xref py py-class docutils literal notranslate"><span class="pre">calign</span></code></a>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">misc</span></code>)<a class="headerlink" href="#helper-functions-for-sca-alignment-calign-and-misc" title="Permalink to this headline">¶</a></h1>
+<h1>Helper Functions for SCA Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">calign</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">misc</span></code>)<a class="headerlink" href="#helper-functions-for-sca-alignment-calign-and-misc" title="Permalink to this headline">¶</a></h1>
 <p>The helper functions and classes below play an important role in all SCA alignment algorithms in LingPy (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>).
 They are implemented both in pure Python and in Cython (only supported for Python 3), in order to
 allow for faster implementations of the core alignment functions. Instead of using these functions
@@ -69,51 +72,6 @@ which are based on the helper functions we list below.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.globalign" title="lingpy.algorithm.cython.calign.globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalign</span></code></a></p></td>
-<td><p>Carry out global alignment of two sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_globalign" title="lingpy.algorithm.cython.calign.secondary_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_globalign</span></code></a></p></td>
-<td><p>Carry out global alignment of two sequences with secondary sequence structures.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.localign" title="lingpy.algorithm.cython.calign.localign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">localign</span></code></a></p></td>
-<td><p>Carry out semi-global alignment of two sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_localign" title="lingpy.algorithm.cython.calign.secondary_localign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_localign</span></code></a></p></td>
-<td><p>Carry out lobal alignment of two sequences with sensitivity to secondary sequence structures.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.semi_globalign" title="lingpy.algorithm.cython.calign.semi_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">semi_globalign</span></code></a></p></td>
-<td><p>Carry out semi-global alignment of two sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_semi_globalign" title="lingpy.algorithm.cython.calign.secondary_semi_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_semi_globalign</span></code></a></p></td>
-<td><p>Carry out semi-global alignment of two sequences with sensitivity to secondary sequence structures.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.dialign" title="lingpy.algorithm.cython.calign.dialign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dialign</span></code></a></p></td>
-<td><p>Carry out dialign alignment of two sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.secondary_dialign" title="lingpy.algorithm.cython.calign.secondary_dialign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">secondary_dialign</span></code></a></p></td>
-<td><p>Carry out dialign alignment of two sequences with sensitivity for secondary     sequence structures.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_pair" title="lingpy.algorithm.cython.calign.align_pair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pair</span></code></a></p></td>
-<td><p>Align a pair of sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_pairwise" title="lingpy.algorithm.cython.calign.align_pairwise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairwise</span></code></a></p></td>
-<td><p>Align a list of sequences pairwise.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_pairs" title="lingpy.algorithm.cython.calign.align_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairs</span></code></a></p></td>
-<td><p>Align multiple sequence pairs.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.align_profile" title="lingpy.algorithm.cython.calign.align_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_profile</span></code></a></p></td>
-<td><p>Align two profiles using the basic modes.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.score_profile" title="lingpy.algorithm.cython.calign.score_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score_profile</span></code></a></p></td>
-<td><p>Basic function for the scoring of profiles.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.swap_score_profile" title="lingpy.algorithm.cython.calign.swap_score_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swap_score_profile</span></code></a></p></td>
-<td><p>Basic function for the scoring of profiles which contain swapped sequences.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.calign.corrdist" title="lingpy.algorithm.cython.calign.corrdist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">corrdist</span></code></a></p></td>
-<td><p>Create a correspondence distribution for a given language pair.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -125,15 +83,13 @@ which are based on the helper functions we list below.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.misc.ScoreDict" title="lingpy.algorithm.cython.misc.ScoreDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScoreDict</span></code></a></p></td>
-<td><p>Class allows quick access to scoring functions using dictionary     syntax.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -167,7 +123,7 @@ which are based on the helper functions we list below.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -188,9 +144,9 @@ which are based on the helper functions we list below.</p>
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Helper Functions for SCA Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">calign</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">misc</span></code>)</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -204,7 +160,7 @@ which are based on the helper functions we list below.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lingpy.meaning package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.meaning package</a></li> 
       </ul>
     </div>
 
@@ -58,192 +61,12 @@ LingPy
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-lingpy.meaning.basvoc">
-<span id="lingpy-meaning-basvoc-module"></span><h2>lingpy.meaning.basvoc module<a class="headerlink" href="#module-lingpy.meaning.basvoc" title="Permalink to this headline">¶</a></h2>
-<p>Class for the handling of basic vocabulary lists.</p>
-<dl class="class">
-<dt id="lingpy.meaning.basvoc.BasVoc">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.meaning.basvoc.</code><code class="sig-name descname">BasVoc</code><span class="sig-paren">(</span><em class="sig-param">infile=None</em>, <em class="sig-param">col='list'</em>, <em class="sig-param">row='key'</em>, <em class="sig-param">conf=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.basvoc.BasVoc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols" title="lingpy.basic.parser.QLCParserWithRowsAndCols"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.parser.QLCParserWithRowsAndCols</span></code></a></p>
-<p>Load a comparative collection of Swadesh lists (concepticon).</p>
-<p class="rubric">Notes</p>
-<p>This collection may be useful for retrieving a subset of a given dataset,
-or for converting between conceptual items.</p>
-<p class="rubric">Examples</p>
-<p>Load a BasVoc object without arguments in order to get the default object:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning</span> <span class="k">import</span> <span class="n">BasVoc</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">concepticon</span> <span class="o">=</span> <span class="n">BasVoc</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Alternatively, load a pre-compiled object from LingPy:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning</span> <span class="k">import</span> <span class="n">concepticon</span>
-</pre></div>
-</div>
-<p>Retrieve all original words in Jachontov’s list concept list:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">concepticon</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="s1">&#39;jachontov&#39;</span><span class="p">,</span><span class="s1">&#39;number&#39;</span><span class="p">,</span><span class="s1">&#39;item&#39;</span><span class="p">)</span>
-<span class="go">[[&#39;94&#39;, &#39;water&#39;],</span>
-<span class="go"> [&#39;25&#39;, &#39;eye&#39;],</span>
-<span class="go"> [&#39;45&#39;, &#39;know&#39;],</span>
-<span class="go"> [&#39;86&#39;, &#39;this&#39;],</span>
-<span class="go"> [&#39;84&#39;, &#39;tail&#39;],</span>
-<span class="go"> [&#39;87&#39;, &#39;thou&#39;],</span>
-<span class="go"> [&#39;28&#39;, &#39;fire&#39;],</span>
-<span class="go"> [&#39;89&#39;, &#39;tooth&#39;],</span>
-<span class="go"> [&#39;63&#39;, &#39;one&#39;],</span>
-<span class="go"> [&#39;32&#39;, &#39;full&#39;],</span>
-<span class="go"> [&#39;59&#39;, &#39;new&#39;],</span>
-<span class="go"> [&#39;42&#39;, &#39;I&#39;],</span>
-<span class="go"> [&#39;96&#39;, &#39;what&#39;],</span>
-<span class="go"> [&#39;82&#39;, &#39;sun&#39;],</span>
-<span class="go"> [&#39;61&#39;, &#39;nose&#39;],</span>
-<span class="go"> [&#39;37&#39;, &#39;hand&#39;],</span>
-<span class="go"> [&#39;18&#39;, &#39;dog&#39;],</span>
-<span class="go"> [&#39;24&#39;, &#39;egg&#39;],</span>
-<span class="go"> [&#39;81&#39;, &#39;stone&#39;],</span>
-<span class="go"> [&#39;88&#39;, &#39;tongue&#39;],</span>
-<span class="go"> [&#39;54&#39;, &#39;moon&#39;],</span>
-<span class="go"> [&#39;108&#39;, &#39;wind&#39;],</span>
-<span class="go"> [&#39;98&#39;, &#39;who&#39;],</span>
-<span class="go"> [&#39;104&#39;, &#39;salt&#39;],</span>
-<span class="go"> [&#39;50&#39;, &#39;louse&#39;],</span>
-<span class="go"> [&#39;91&#39;, &#39;two&#39;],</span>
-<span class="go"> [&#39;29&#39;, &#39;fish&#39;],</span>
-<span class="go"> [&#39;21&#39;, &#39;ear&#39;],</span>
-<span class="go"> [&#39;41&#39;, &#39;horn&#39;],</span>
-<span class="go"> [&#39;9&#39;, &#39;blood&#39;],</span>
-<span class="go"> [&#39;17&#39;, &#39;die&#39;],</span>
-<span class="go"> [&#39;110&#39;, &#39;year&#39;],</span>
-<span class="go"> [&#39;57&#39;, &#39;name&#39;],</span>
-<span class="go"> [&#39;10&#39;, &#39;bone&#39;],</span>
-<span class="go"> [&#39;33&#39;, &#39;give&#39;]]</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="lingpy.meaning.basvoc.BasVoc.get_dict">
-<code class="sig-name descname">get_dict</code><span class="sig-paren">(</span><em class="sig-param">col=''</em>, <em class="sig-param">row=''</em>, <em class="sig-param">entry=''</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.basvoc.BasVoc.get_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dictionary representation for a given concept list.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>col</strong> : str</p>
-<blockquote>
-<div><p>The concept list.</p>
-</div></blockquote>
-<p><strong>row</strong> : str</p>
-<blockquote>
-<div><p>The concept (referenced by its unique ID).</p>
-</div></blockquote>
-<p><strong>entry</strong> : str</p>
-<blockquote>
-<div><p>The entry that shall serve as key for the dictionary.</p>
-</div></blockquote>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>d</strong> : dict</p>
-<blockquote>
-<div><p>A dictionary with the unique IDs as key and the specified entry as
-value.</p>
-</div></blockquote>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.meaning.basvoc.BasVoc.get_list">
-<code class="sig-name descname">get_list</code><span class="sig-paren">(</span><em class="sig-param">swadlist</em>, <em class="sig-param">*entries</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.basvoc.BasVoc.get_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a given concept list with the specified entries.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>swadlist</strong> : str</p>
-<blockquote>
-<div><p>The concept list that shall be selected.</p>
-</div></blockquote>
-<p><strong>*entries</strong> : str</p>
-<blockquote>
-<div><p>The entries that shall be included in the list.</p>
-</div></blockquote>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>l</strong> : list</p>
-<blockquote>
-<div><p>A list that contains the entries as specified.</p>
-</div></blockquote>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning</span> <span class="k">import</span> <span class="n">concepticon</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lst</span> <span class="o">=</span> <span class="n">concepticon</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="s1">&#39;jachontov&#39;</span><span class="p">,</span> <span class="s1">&#39;item&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lst</span>
-<span class="go">[&#39;water&#39;, &#39;eye&#39;, &#39;know&#39;, &#39;this&#39;, &#39;tail&#39;]</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="lingpy.meaning.basvoc.BasVoc.get_sublist">
-<code class="sig-name descname">get_sublist</code><span class="sig-paren">(</span><em class="sig-param">sublist</em>, <em class="sig-param">baselist</em>, <em class="sig-param">*entries</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.basvoc.BasVoc.get_sublist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the entries of one list that also occur in another list.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>sublist</strong> : str</p>
-<blockquote>
-<div><p>The sublist whose entries shall be selected.</p>
-</div></blockquote>
-<p><strong>baselst</strong> : str</p>
-<blockquote>
-<div><p>The name of the basic list of which the sublist shall be taken.</p>
-</div></blockquote>
-<p><strong>*entries</strong> : str</p>
-<blockquote>
-<div><p>The entries (“item”, “number”, etc.) which shall be selected from
-the lists.</p>
-</div></blockquote>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>l</strong> : list</p>
-<blockquote>
-<div><p>A list containing the entries as specified.</p>
-</div></blockquote>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning</span> <span class="k">import</span> <span class="n">concepticon</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">concepticon</span><span class="o">.</span><span class="n">get_sublist</span><span class="p">(</span><span class="s1">&#39;dolgopolsky&#39;</span><span class="p">,</span><span class="s1">&#39;jachontov&#39;</span><span class="p">,</span><span class="s1">&#39;item&#39;</span><span class="p">)</span>
-<span class="go">[&#39;water&#39;,</span>
-<span class="go"> &#39;eye&#39;,</span>
-<span class="go"> &#39;thou&#39;,</span>
-<span class="go"> &#39;tooth&#39;,</span>
-<span class="go"> &#39;I&#39;,</span>
-<span class="go"> &#39;what&#39;,</span>
-<span class="go"> &#39;tongue&#39;,</span>
-<span class="go"> &#39;who&#39;,</span>
-<span class="go"> &#39;louse&#39;,</span>
-<span class="go"> &#39;two&#39;,</span>
-<span class="go"> &#39;name&#39;]</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="lingpy.meaning.basvoc.Concepticon">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.meaning.basvoc.</code><code class="sig-name descname">Concepticon</code><a class="headerlink" href="#lingpy.meaning.basvoc.Concepticon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="lingpy.meaning.basvoc.Concepticon.compare">
-<code class="sig-name descname">compare</code><span class="sig-paren">(</span><em class="sig-param">*lists</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.basvoc.Concepticon.compare" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compare multiple concept lists with each other.</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-lingpy.meaning.colexification">
 <span id="lingpy-meaning-colexification-module"></span><h2>lingpy.meaning.colexification module<a class="headerlink" href="#module-lingpy.meaning.colexification" title="Permalink to this headline">¶</a></h2>
 <p>Module offers methods to handle colexification patterns in wordlist objects.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.meaning.colexification.colexification_network">
-<code class="sig-prename descclassname">lingpy.meaning.colexification.</code><code class="sig-name descname">colexification_network</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">entry='ipa'</em>, <em class="sig-param">concept='concept'</em>, <em class="sig-param">output=''</em>, <em class="sig-param">filename='network'</em>, <em class="sig-param">bipartite=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.colexification_network" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.meaning.colexification.</span></code><code class="sig-name descname"><span class="pre">colexification_network</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concept'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'network'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bipartite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.colexification_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a colexification network from a given wordlist object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -275,128 +98,16 @@ textfile in GML format.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.meaning.colexification.compare_colexifications">
-<code class="sig-prename descclassname">lingpy.meaning.colexification.</code><code class="sig-name descname">compare_colexifications</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">entry='ipa'</em>, <em class="sig-param">concept='concept'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.compare_colexifications" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.meaning.colexification.</span></code><code class="sig-name descname"><span class="pre">compare_colexifications</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concept'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.compare_colexifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compare colexification patterns for a given wordlist.</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="lingpy.meaning.colexification.dotjoin">
-<code class="sig-prename descclassname">lingpy.meaning.colexification.</code><code class="sig-name descname">dotjoin</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.dotjoin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
-<p class="rubric">Notes</p>
-<p>An implicit conversion of objects to strings is performed as well.</p>
-</dd></dl>
-
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.meaning.colexification.evaluate_colexifications">
-<code class="sig-prename descclassname">lingpy.meaning.colexification.</code><code class="sig-name descname">evaluate_colexifications</code><span class="sig-paren">(</span><em class="sig-param">G</em>, <em class="sig-param">weight='wordWeight'</em>, <em class="sig-param">outfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.evaluate_colexifications" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.meaning.colexification.</span></code><code class="sig-name descname"><span class="pre">evaluate_colexifications</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'wordWeight'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.colexification.evaluate_colexifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function calculates most frequent colexifications in a wordlist.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-lingpy.meaning.glosses">
-<span id="lingpy-meaning-glosses-module"></span><h2>lingpy.meaning.glosses module<a class="headerlink" href="#module-lingpy.meaning.glosses" title="Permalink to this headline">¶</a></h2>
-<p>Module provides functions for the handling of concept glosses in linguistic datasets.</p>
-<dl class="function">
-<dt id="lingpy.meaning.glosses.compare_conceptlists">
-<code class="sig-prename descclassname">lingpy.meaning.glosses.</code><code class="sig-name descname">compare_conceptlists</code><span class="sig-paren">(</span><em class="sig-param">list1</em>, <em class="sig-param">list2</em>, <em class="sig-param">output=''</em>, <em class="sig-param">match=None</em>, <em class="sig-param">filename='matches'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.glosses.compare_conceptlists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function compares two concept lists and outputs suggestions for mapping.</p>
-<p class="rubric">Notes</p>
-<p>Idea is to take one conceptlist as the basic list and then to search for a
-plausible mapping of concepts in the second list to the first list. All
-suggestions can then be output in various forms, both with multiple matches
-excluded or included, and in textform or in other forms.</p>
-<p>What is important, regarding the output here, is, that the output contains
-all matches, including non-matched items which occur <strong>in the second list
-but not in the first list</strong>. Non-matched items which occur in the first
-list but not in the second list are ignored.</p>
-<p>The syntax for matching types is organized as follows:</p>
-<ul class="simple">
-<li><p>1 indicates a full match between glosses, including information on part
-speech and the like</p></li>
-<li><p>2 indicates a very good match between a full gloss and the main part of a
-gloss or the two main parts of a gloss</p></li>
-<li><p>3 indicates a very good match between the main parts of two glosses with
-non-matching information regarding part of speech</p></li>
-<li><p>4 indicates that the longest part of two glosses matches along with the
-part-of-speech information.</p></li>
-<li><p>5 indicates that the longest part of two glosses matches with
-non-matching part-of-speech information.</p></li>
-<li><p>6 indicates that the longest part of the first list is matched by one of
-the parts in the second list</p></li>
-<li><p>7 indicates that the longest part of the second list is matched by one of
-the parts in the first list</p></li>
-<li><p>8 indicates that no match could be found.</p></li>
-</ul>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.meaning.glosses.compare_concepts">
-<code class="sig-prename descclassname">lingpy.meaning.glosses.</code><code class="sig-name descname">compare_concepts</code><span class="sig-paren">(</span><em class="sig-param">c1</em>, <em class="sig-param">c2</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.glosses.compare_concepts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Debug-function for concept comparison.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="lingpy.meaning.glosses.parse_gloss">
-<code class="sig-prename descclassname">lingpy.meaning.glosses.</code><code class="sig-name descname">parse_gloss</code><span class="sig-paren">(</span><em class="sig-param">gloss</em>, <em class="sig-param">output='list'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.meaning.glosses.parse_gloss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parse a gloss into its constituents by applying some general logic.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>gloss</strong> : str</p>
-<blockquote>
-<div><p>The gloss as found in various sources (we assume that we are dealing
-with English glosses here.</p>
-</div></blockquote>
-<p><strong>output</strong> : str (default=”list”)</p>
-<blockquote>
-<div><p>Determine the output of the parsing routine. Select between “list”
-which will return a list of tuples, or “dict”, which will return a list
-of dictionaries.</p>
-</div></blockquote>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>constituents</strong> : {list, dict}</p>
-<blockquote>
-<div><p>A list of tuples, or a list of dictionaries, with each tuple consisting of 6 items, namely:
-* the main part (“main”),
-* the start character indicating a potential comment (“comment_start”),
-* the comment (everything occurring in brackets in the input string (“comment”),
-* the end character indicating the end of a potential comment (“comment_end”),
-* the part of speech, in case this was specificied by a preceding “the” or a preceding “to” in the mainpart of the string (“pos”),
-* the prefix, that is, words, like, eg. “be”, “in”, which may precede the main gloss in concept lists, as in “be quiet” (“prefix”),
-* the longest constituent, which is identical with the main part if there’s no whitespace in the main part, otherwise the longest part part of the main gloss split by whitespace (“longest_part”)
-* the parts of a gloss, if the constituent contains multiple words (“parts”)
-* the original gloss (for the purpose of testing, labelled “gloss”)</p>
-<p>If “dict” is chosen as output, this returns a list of dictionaries with
-the keys as specified in brackets above.</p>
-</div></blockquote>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>The basic purpose of this function is to provide a means to make it easier
-to compare meanings across different resources. Often, linguists will
-annotate their resources quite differently, and for one and the same
-concept, we may find very different glosses. The concept “kill [verb]”, for
-example may be glossed as “to kill”, “kill”, “kill (v.)”, “kill
-(somebody)”, etc. In order to guarantee comparability, this function tries
-to use basic knowledge of glossing tendencies to disentangle the variety of
-glossing styles which can be found in the literature. Thus, in the case of
-“kill [verb]”, the function will analyze the different strings as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.meaning.glosses</span> <span class="k">import</span> <span class="n">parse_gloss</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">glosses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;to kill&quot;</span><span class="p">,</span> <span class="s2">&quot;kill&quot;</span><span class="p">,</span> <span class="s2">&quot;kill (v.)&quot;</span><span class="p">,</span> <span class="s2">&quot;kill (somebody)&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">gloss</span> <span class="ow">in</span> <span class="n">glosses</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="n">parsed_gloss</span> <span class="o">=</span> <span class="n">parse_gloss</span><span class="p">(</span><span class="n">gloss</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;dict&#39;</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">parsed_gloss</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;gloss&#39;</span><span class="p">],</span> <span class="n">parsed_gloss</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;pos&#39;</span><span class="p">])</span>
-<span class="go">kill verb</span>
-<span class="go">kill</span>
-<span class="go">kill verb</span>
-<span class="go">kill</span>
-</pre></div>
-</div>
-<p>As can be seen: it seeks to extract the most important part of the gloss
-and may thus help to compare different glosses across different resources.</p>
 </dd></dl>
 
 </div>
@@ -406,6 +117,7 @@ and may thus help to compare different glosses across different resources.</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -418,9 +130,7 @@ and may thus help to compare different glosses across different resources.</p>
   <ul>
 <li><a class="reference internal" href="#">lingpy.meaning package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-lingpy.meaning.basvoc">lingpy.meaning.basvoc module</a></li>
 <li><a class="reference internal" href="#module-lingpy.meaning.colexification">lingpy.meaning.colexification module</a></li>
-<li><a class="reference internal" href="#module-lingpy.meaning.glosses">lingpy.meaning.glosses module</a></li>
 <li><a class="reference internal" href="#module-lingpy.meaning">Module contents</a></li>
 </ul>
 </li>
@@ -442,7 +152,7 @@ and may thus help to compare different glosses across different resources.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -463,9 +173,9 @@ and may thus help to compare different glosses across different resources.</p>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.meaning package</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -479,7 +189,7 @@ and may thus help to compare different glosses across different resources.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    lingpy.data.ipa
 
@@ -26,7 +27,6 @@ lingpy.data.model module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

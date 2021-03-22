@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Borrowing Detection (phylogeny) &#8212; LingPy</title>
-    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Borrowing Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">phylogeny</span></code>)</a></li> 
       </ul>
     </div>
 
@@ -55,9 +58,9 @@ LingPy
             
   <div class="section" id="borrowing-detection-phylogeny">
 <h1>Borrowing Detection (<a class="reference internal" href="../../reference/lingpy.compare.html#module-lingpy.compare.phylogeny" title="lingpy.compare.phylogeny"><code class="xref py py-mod docutils literal notranslate"><span class="pre">phylogeny</span></code></a>)<a class="headerlink" href="#borrowing-detection-phylogeny" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.compare.phylogeny.PhyBo">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.compare.phylogeny.</code><code class="sig-name descname">PhyBo</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">tree=None</em>, <em class="sig-param">paps='pap'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">tree_calc='neighbor'</em>, <em class="sig-param">output_dir=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.compare.phylogeny.</span></code><code class="sig-name descname"><span class="pre">PhyBo</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pap'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_calc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'neighbor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.compare.phylogeny.PhyBo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic class for calculations using the TreBor method.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -154,37 +157,34 @@ language. If set to 0, missing data is treated as absence.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">lingpy.basic.parser.QLCParser.pickle</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_entries</span></code></a>(entry)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_entries</span></code></a>(entry)</p></td>
 <td><p>Return all entries matching the given entry-type as a two-dimensional list.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_entries</span></code></a>(entry, source, function[, override])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.add_entries" title="lingpy.basic.wordlist.Wordlist.add_entries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_entries</span></code></a>(entry, source, function[, override])</p></td>
 <td><p>Add new entry-types to the word list by modifying given ones.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(data[, taxa, concepts, ref])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.calculate" title="lingpy.basic.wordlist.Wordlist.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(data[, taxa, concepts, ref])</p></td>
 <td><p>Function calculates specific data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code></a>(fileformat[, sections, entries, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.export" title="lingpy.basic.wordlist.Wordlist.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code></a>(fileformat[, sections, entries, …])</p></td>
 <td><p>Export the wordlist to specific fileformats.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dict</span></code></a>([col, row, entry])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_dict" title="lingpy.basic.wordlist.Wordlist.get_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dict</span></code></a>([col, row, entry])</p></td>
 <td><p>Function returns dictionaries of the cells matched by the indices.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_etymdict</span></code></a>([ref, entry, modify_ref])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_etymdict" title="lingpy.basic.wordlist.Wordlist.get_etymdict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_etymdict</span></code></a>([ref, entry, modify_ref])</p></td>
 <td><p>Return an etymological dictionary representation of the word list.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_list</span></code></a>([row, col, entry, flat])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_list" title="lingpy.basic.wordlist.Wordlist.get_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_list</span></code></a>([row, col, entry, flat])</p></td>
 <td><p>Function returns lists of rows and columns specified by their name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_paps</span></code></a>([ref, entry, missing, modify_ref])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.get_paps" title="lingpy.basic.wordlist.Wordlist.get_paps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_paps</span></code></a>([ref, entry, missing, modify_ref])</p></td>
 <td><p>Function returns a list of present-absent-patterns of a given word list.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output</span></code></a>(fileformat, **keywords)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.output" title="lingpy.basic.wordlist.Wordlist.output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output</span></code></a>(fileformat, **keywords)</p></td>
 <td><p>Write wordlist to file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renumber</span></code></a>(source[, target, override])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist.renumber" title="lingpy.basic.wordlist.Wordlist.renumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renumber</span></code></a>(source[, target, override])</p></td>
 <td><p>Renumber a given set of string identifiers by replacing the ids by integers.</p></td>
 </tr>
 </tbody>
@@ -194,6 +194,7 @@ language. If set to 0, missing data is treated as absence.</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -218,7 +219,7 @@ language. If set to 0, missing data is treated as absence.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -239,9 +240,9 @@ language. If set to 0, missing data is treated as absence.</p>
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Borrowing Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">phylogeny</span></code>)</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -255,7 +256,7 @@ language. If set to 0, missing data is treated as absence.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -28,7 +28,6 @@ lingpy.align.sca module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    lingpy.algorithm.cython
 
@@ -34,7 +35,6 @@ lingpy.algorithm.extra module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

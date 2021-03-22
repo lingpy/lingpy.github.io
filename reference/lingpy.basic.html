@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lingpy.basic package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.basic package</a></li> 
       </ul>
     </div>
 
@@ -61,9 +64,9 @@ LingPy
 <div class="section" id="module-lingpy.basic.ops">
 <span id="lingpy-basic-ops-module"></span><h2>lingpy.basic.ops module<a class="headerlink" href="#module-lingpy.basic.ops" title="Permalink to this headline">¶</a></h2>
 <p>Module provides basic operations on Wordlist-Objects.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.calculate_data">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">calculate_data</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">data</em>, <em class="sig-param">taxa='taxa'</em>, <em class="sig-param">concepts='concepts'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.calculate_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">calculate_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'taxa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concepts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concepts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.calculate_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manipulate a wordlist object by adding different kinds of data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -80,26 +83,26 @@ LingPy
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.clean_taxnames">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">clean_taxnames</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">column='doculect'</em>, <em class="sig-param">f=&lt;function &lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">clean_taxnames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">wordlist</span></em>, <em class="sig-param"><span class="pre">column='doculect'</span></em>, <em class="sig-param"><span class="pre">f=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.clean_taxnames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function cleans taxon names for use in Newick files.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.coverage">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">coverage</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.coverage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">coverage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.coverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine the average coverage of a wordlist.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.get_score">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">get_score</code><span class="sig-paren">(</span><em class="sig-param">wl</em>, <em class="sig-param">ref</em>, <em class="sig-param">mode</em>, <em class="sig-param">taxA</em>, <em class="sig-param">taxB</em>, <em class="sig-param">concepts_attr='concepts'</em>, <em class="sig-param">ignore_missing=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.get_score" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">get_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concepts_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concepts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.get_score" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.iter_rows">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">iter_rows</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">*values</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.iter_rows" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">iter_rows</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.iter_rows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function generates a list of the specified values in a wordlist.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -134,21 +137,21 @@ value. So if you do not specify anything, the output will just be the
 key.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.renumber">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">renumber</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">source</em>, <em class="sig-param">target=''</em>, <em class="sig-param">override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.renumber" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">renumber</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.renumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create numerical identifiers from string identifiers.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.triple2tsv">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">triple2tsv</code><span class="sig-paren">(</span><em class="sig-param">triples_or_fname</em>, <em class="sig-param">output='table'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.triple2tsv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">triple2tsv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">triples_or_fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'table'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.triple2tsv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reads a triple file and converts it to a tabular data structure.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.tsv2triple">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">tsv2triple</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">outfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.tsv2triple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">tsv2triple</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.tsv2triple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a wordlist to a triple data structure.</p>
 <p class="rubric">Notes</p>
 <dl class="simple">
@@ -161,27 +164,27 @@ key.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.wl2dict">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">wl2dict</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">sections</em>, <em class="sig-param">entries</em>, <em class="sig-param">exclude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">wl2dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a wordlist to a complex dictionary with headings as keys.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.wl2dst">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">wl2dst</code><span class="sig-paren">(</span><em class="sig-param">wl</em>, <em class="sig-param">taxa='taxa'</em>, <em class="sig-param">concepts='concepts'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">refB=''</em>, <em class="sig-param">mode='swadesh'</em>, <em class="sig-param">ignore_missing=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dst" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">wl2dst</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'taxa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concepts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concepts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'swadesh'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2dst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts wordlist to distance matrix.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.wl2multistate">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">wl2multistate</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">ref</em>, <em class="sig-param">missing</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2multistate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">wl2multistate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2multistate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a wordlist to multistate format (compatible with PAUP).</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.ops.wl2qlc">
-<code class="sig-prename descclassname">lingpy.basic.ops.</code><code class="sig-name descname">wl2qlc</code><span class="sig-paren">(</span><em class="sig-param">header</em>, <em class="sig-param">data</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">formatter='concept'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2qlc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.ops.</span></code><code class="sig-name descname"><span class="pre">wl2qlc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formatter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concept'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.ops.wl2qlc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the basic data of a wordlist to file.</p>
 </dd></dl>
 
@@ -189,14 +192,14 @@ key.</p>
 <div class="section" id="module-lingpy.basic.parser">
 <span id="lingpy-basic-parser-module"></span><h2>lingpy.basic.parser module<a class="headerlink" href="#module-lingpy.basic.parser" title="Permalink to this headline">¶</a></h2>
 <p>Basic parser for text files in QLC format.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.basic.parser.QLCParser">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.basic.parser.</code><code class="sig-name descname">QLCParser</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">conf=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.basic.parser.</span></code><code class="sig-name descname"><span class="pre">QLCParser</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for the handling of text files in QLC format.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.parser.QLCParser.add_entries">
-<code class="sig-name descname">add_entries</code><span class="sig-paren">(</span><em class="sig-param">entry</em>, <em class="sig-param">source</em>, <em class="sig-param">function</em>, <em class="sig-param">override=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser.add_entries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_entries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParser.add_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add new entry-types to the word list by modifying given ones.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -232,13 +235,13 @@ and to modify it with help of a function.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.basic.parser.QLCParserWithRowsAndCols">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.basic.parser.</code><code class="sig-name descname">QLCParserWithRowsAndCols</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">row</em>, <em class="sig-param">col</em>, <em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.basic.parser.</span></code><code class="sig-name descname"><span class="pre">QLCParserWithRowsAndCols</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParser" title="lingpy.basic.parser.QLCParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.parser.QLCParser</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries">
-<code class="sig-name descname">get_entries</code><span class="sig-paren">(</span><em class="sig-param">entry</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_entries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.QLCParserWithRowsAndCols.get_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all entries matching the given entry-type as a two-dimensional list.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -253,32 +256,18 @@ format.</p>
 
 </dd></dl>
 
-<dl class="function">
-<dt id="lingpy.basic.parser.confirm">
-<code class="sig-prename descclassname">lingpy.basic.parser.</code><code class="sig-name descname">confirm</code><span class="sig-paren">(</span><em class="sig-param">question</em>, <em class="sig-param">*</em>, <em class="sig-param">default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.confirm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Ask a yes/no question interactively.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>question</strong> – The text of the question to ask.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>True if the answer was “yes”, False otherwise.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.parser.read_conf">
-<code class="sig-prename descclassname">lingpy.basic.parser.</code><code class="sig-name descname">read_conf</code><span class="sig-paren">(</span><em class="sig-param">conf=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.read_conf" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.parser.</span></code><code class="sig-name descname"><span class="pre">read_conf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.parser.read_conf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-lingpy.basic.tree">
 <span id="lingpy-basic-tree-module"></span><h2>lingpy.basic.tree module<a class="headerlink" href="#module-lingpy.basic.tree" title="Permalink to this headline">¶</a></h2>
 <p>Basic module for the handling of language trees.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.basic.tree.Tree">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.basic.tree.</code><code class="sig-name descname">Tree</code><span class="sig-paren">(</span><em class="sig-param">tree</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.basic.tree.</span></code><code class="sig-name descname"><span class="pre">Tree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="lingpy.thirdparty.cogent.html#lingpy.thirdparty.cogent.tree.PhyloNode" title="lingpy.thirdparty.cogent.tree.PhyloNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.thirdparty.cogent.tree.PhyloNode</span></code></a></p>
 <p>Basic class for the handling of phylogenetic trees.</p>
 <dl class="field-list">
@@ -298,9 +287,9 @@ of the maximum number of the total number of internal branches.</p>
 </div></blockquote>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.tree.Tree.getDistanceToRoot">
-<code class="sig-name descname">getDistanceToRoot</code><span class="sig-paren">(</span><em class="sig-param">node</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.getDistanceToRoot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getDistanceToRoot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.getDistanceToRoot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the distance from the given node to the root.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -318,9 +307,9 @@ of the maximum number of the total number of internal branches.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.tree.Tree.get_distance">
-<code class="sig-name descname">get_distance</code><span class="sig-paren">(</span><em class="sig-param">other</em>, <em class="sig-param">distance='grf'</em>, <em class="sig-param">debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.get_distance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_distance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'grf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.Tree.get_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns the Robinson-Foulds distance between the two trees.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -348,9 +337,9 @@ intitial tree.</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.tree.random_tree">
-<code class="sig-prename descclassname">lingpy.basic.tree.</code><code class="sig-name descname">random_tree</code><span class="sig-paren">(</span><em class="sig-param">taxa</em>, <em class="sig-param">branch_lengths=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.random_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.tree.</span></code><code class="sig-name descname"><span class="pre">random_tree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_lengths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.tree.random_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a random tree from a list of taxa.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -379,13 +368,13 @@ the total number of internal branches.</p>
 <div class="section" id="module-lingpy.basic.wordlist">
 <span id="lingpy-basic-wordlist-module"></span><h2>lingpy.basic.wordlist module<a class="headerlink" href="#module-lingpy.basic.wordlist" title="Permalink to this headline">¶</a></h2>
 <p>This module provides a basic class for the handling of word lists.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.basic.wordlist.BounceAsID">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.basic.wordlist.</code><code class="sig-name descname">BounceAsID</code><a class="headerlink" href="#lingpy.basic.wordlist.BounceAsID" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.basic.wordlist.</span></code><code class="sig-name descname"><span class="pre">BounceAsID</span></code><a class="headerlink" href="#lingpy.basic.wordlist.BounceAsID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A helper class for CLDF conversion when tables are missing.</p>
 <p>A class with trivial ‘item lookup’:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">BounceAsID</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">BounceAsID</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="go">{&quot;ID&quot;: 5}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="s2">&quot;long_id&quot;</span><span class="p">]</span>
@@ -394,9 +383,9 @@ the total number of internal branches.</p>
 </div>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.basic.wordlist.Wordlist">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.basic.wordlist.</code><code class="sig-name descname">Wordlist</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">row='concept'</em>, <em class="sig-param">col='doculect'</em>, <em class="sig-param">conf=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.basic.wordlist.</span></code><code class="sig-name descname"><span class="pre">Wordlist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concept'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'doculect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.basic.parser.QLCParserWithRowsAndCols" title="lingpy.basic.parser.QLCParserWithRowsAndCols"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.parser.QLCParserWithRowsAndCols</span></code></a></p>
 <p>Basic class for the handling of multilingual word lists.</p>
 <dl class="field-list">
@@ -442,9 +431,9 @@ entry type should be returned. Thus, if a word list consists not only of
 simple orthographical entries but also of IPA encoded phonetic
 transcriptions, both the orthographical source and the IPA transcriptions
 can be easily accessed as two separate two-dimensional lists.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.add_entries">
-<code class="sig-name descname">add_entries</code><span class="sig-paren">(</span><em class="sig-param">entry</em>, <em class="sig-param">source</em>, <em class="sig-param">function</em>, <em class="sig-param">override=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_entries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.add_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add new entry-types to the word list by modifying given ones.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -478,9 +467,9 @@ entries, but the most basic procedure is to use an existing entry-type
 and to modify it with help of a function.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">taxa='taxa'</em>, <em class="sig-param">concepts='concepts'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.calculate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'taxa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concepts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concepts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function calculates specific data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -497,15 +486,15 @@ and to modify it with help of a function.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.coverage">
-<code class="sig-name descname">coverage</code><span class="sig-paren">(</span><em class="sig-param">stats='absolute'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.coverage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">coverage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'absolute'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.coverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function determines the coverage of a wordlist.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.export">
-<code class="sig-name descname">export</code><span class="sig-paren">(</span><em class="sig-param">fileformat</em>, <em class="sig-param">sections=None</em>, <em class="sig-param">entries=None</em>, <em class="sig-param">entry_sep=''</em>, <em class="sig-param">item_sep=''</em>, <em class="sig-param">template=''</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.export" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">export</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileformat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export the wordlist to specific fileformats.</p>
 <p class="rubric">Notes</p>
 <p>The difference between export and output is that the latter mostly
@@ -514,9 +503,9 @@ publication of data, using specific, nested statements to create, for
 example, HTML or LaTeX files from the wordlist data.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.from_cldf">
-<em class="property">classmethod </em><code class="sig-name descname">from_cldf</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">columns=('parameter_id'</em>, <em class="sig-param">'concept_name'</em>, <em class="sig-param">'language_id'</em>, <em class="sig-param">'language_name'</em>, <em class="sig-param">'value'</em>, <em class="sig-param">'form'</em>, <em class="sig-param">'segments'</em>, <em class="sig-param">'language_glottocode'</em>, <em class="sig-param">'concept_concepticon_id'</em>, <em class="sig-param">'language_latitude'</em>, <em class="sig-param">'language_longitude'</em>, <em class="sig-param">'cognacy')</em>, <em class="sig-param">namespace=(('concept_name'</em>, <em class="sig-param">'concept')</em>, <em class="sig-param">('language_id'</em>, <em class="sig-param">'doculect')</em>, <em class="sig-param">('segments'</em>, <em class="sig-param">'tokens')</em>, <em class="sig-param">('language_glottocode'</em>, <em class="sig-param">'glottolog')</em>, <em class="sig-param">('concept_concepticon_id'</em>, <em class="sig-param">'concepticon')</em>, <em class="sig-param">('language_latitude'</em>, <em class="sig-param">'latitude')</em>, <em class="sig-param">('language_longitude'</em>, <em class="sig-param">'longitude')</em>, <em class="sig-param">('cognacy'</em>, <em class="sig-param">'cognacy')</em>, <em class="sig-param">('cogid_cognateset_id'</em>, <em class="sig-param">'cogid'))</em>, <em class="sig-param">filter=&lt;function Wordlist.&lt;lambda&gt;&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_cldf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">path</span></em>, <em class="sig-param"><span class="pre">columns=('parameter_id'</span></em>, <em class="sig-param"><span class="pre">'concept_name'</span></em>, <em class="sig-param"><span class="pre">'language_id'</span></em>, <em class="sig-param"><span class="pre">'language_name'</span></em>, <em class="sig-param"><span class="pre">'value'</span></em>, <em class="sig-param"><span class="pre">'form'</span></em>, <em class="sig-param"><span class="pre">'segments'</span></em>, <em class="sig-param"><span class="pre">'language_glottocode'</span></em>, <em class="sig-param"><span class="pre">'concept_concepticon_id'</span></em>, <em class="sig-param"><span class="pre">'language_latitude'</span></em>, <em class="sig-param"><span class="pre">'language_longitude'</span></em>, <em class="sig-param"><span class="pre">'cognacy')</span></em>, <em class="sig-param"><span class="pre">namespace=(('concept_name'</span></em>, <em class="sig-param"><span class="pre">'concept')</span></em>, <em class="sig-param"><span class="pre">('language_id'</span></em>, <em class="sig-param"><span class="pre">'doculect')</span></em>, <em class="sig-param"><span class="pre">('segments'</span></em>, <em class="sig-param"><span class="pre">'tokens')</span></em>, <em class="sig-param"><span class="pre">('language_glottocode'</span></em>, <em class="sig-param"><span class="pre">'glottolog')</span></em>, <em class="sig-param"><span class="pre">('concept_concepticon_id'</span></em>, <em class="sig-param"><span class="pre">'concepticon')</span></em>, <em class="sig-param"><span class="pre">('language_latitude'</span></em>, <em class="sig-param"><span class="pre">'latitude')</span></em>, <em class="sig-param"><span class="pre">('language_longitude'</span></em>, <em class="sig-param"><span class="pre">'longitude')</span></em>, <em class="sig-param"><span class="pre">('cognacy'</span></em>, <em class="sig-param"><span class="pre">'cognacy')</span></em>, <em class="sig-param"><span class="pre">('cogid_cognateset_id'</span></em>, <em class="sig-param"><span class="pre">'cogid'))</span></em>, <em class="sig-param"><span class="pre">filter=&lt;function</span> <span class="pre">Wordlist.&lt;lambda&gt;&gt;</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a CLDF dataset.</p>
 <p>Open a CLDF Dataset – with metadata or metadata-free – (only Wordlist
 datasets are supported for now, because other modules don’t seem to
@@ -553,9 +542,9 @@ so you probably have to use:</p>
 <p>in order to avoid errors from LingPy not finding required columns.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_dict">
-<code class="sig-name descname">get_dict</code><span class="sig-paren">(</span><em class="sig-param">col=''</em>, <em class="sig-param">row=''</em>, <em class="sig-param">entry=''</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns dictionaries of the cells matched by the indices.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -628,14 +617,14 @@ lists, since it is possible that the original file contains synonyms
 (multiple words corresponding to the same concept).</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_distances">
-<code class="sig-name descname">get_distances</code><span class="sig-paren">(</span><em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_distances" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_distances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_distances" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_etymdict">
-<code class="sig-name descname">get_etymdict</code><span class="sig-paren">(</span><em class="sig-param">ref='cogid'</em>, <em class="sig-param">entry=''</em>, <em class="sig-param">modify_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_etymdict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_etymdict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_etymdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an etymological dictionary representation of the word list.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -672,9 +661,9 @@ or partial cognate IDs, the etymological dictionary will return one
 cognate set for each of the IDs.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_list">
-<code class="sig-name descname">get_list</code><span class="sig-paren">(</span><em class="sig-param">row=''</em>, <em class="sig-param">col=''</em>, <em class="sig-param">entry=''</em>, <em class="sig-param">flat=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_list</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns lists of rows and columns specified by their name.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -752,9 +741,9 @@ set to <em>True</em>:</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_paps">
-<code class="sig-name descname">get_paps</code><span class="sig-paren">(</span><em class="sig-param">ref='cogid'</em>, <em class="sig-param">entry='concept'</em>, <em class="sig-param">missing=0</em>, <em class="sig-param">modify_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_paps" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_paps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concept'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_paps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns a list of present-absent-patterns of a given word list.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -774,14 +763,14 @@ set to <em>True</em>:</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.get_tree">
-<code class="sig-name descname">get_tree</code><span class="sig-paren">(</span><em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_tree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.get_tree" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.iter_rows">
-<code class="sig-name descname">iter_rows</code><span class="sig-paren">(</span><em class="sig-param">*entries</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.iter_rows" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">iter_rows</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">entries</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.iter_rows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterate over the columns in a wordlist.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -801,8 +790,8 @@ columns as specified.</p>
 </dl>
 <p class="rubric">Examples</p>
 <p>Load a wordlist from LingPy’s test data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="n">Wordlist</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="kn">import</span> <span class="n">test_data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="n">Wordlist</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s2">&quot;KSL.qlc&quot;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">wl</span><span class="o">.</span><span class="n">iter_rows</span><span class="p">(</span><span class="s1">&#39;ipa&#39;</span><span class="p">))[:</span><span class="mi">10</span><span class="p">]</span>
 <span class="go">[[1, &#39;ɟiθ&#39;],</span>
@@ -821,9 +810,9 @@ columns as specified.</p>
 as the specified entry.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.output">
-<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">output</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileformat</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write wordlist to file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -896,9 +885,9 @@ in plain “tsv”.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.basic.wordlist.Wordlist.renumber">
-<code class="sig-name descname">renumber</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target=''</em>, <em class="sig-param">override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.renumber" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">renumber</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.Wordlist.renumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Renumber a given set of string identifiers by replacing the ids by integers.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -928,9 +917,9 @@ or directly as an attribute of the wordlist.</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.wordlist.from_cldf">
-<code class="sig-prename descclassname">lingpy.basic.wordlist.</code><code class="sig-name descname">from_cldf</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">to=&lt;class 'lingpy.basic.wordlist.Wordlist'&gt;</em>, <em class="sig-param">concept='Name'</em>, <em class="sig-param">concepticon='Concepticon_ID'</em>, <em class="sig-param">glottocode='Glottocode'</em>, <em class="sig-param">language='Name'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.wordlist.</span></code><code class="sig-name descname"><span class="pre">from_cldf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">path</span></em>, <em class="sig-param"><span class="pre">to=&lt;class</span> <span class="pre">'lingpy.basic.wordlist.Wordlist'&gt;</span></em>, <em class="sig-param"><span class="pre">concept='Name'</span></em>, <em class="sig-param"><span class="pre">concepticon='Concepticon_ID'</span></em>, <em class="sig-param"><span class="pre">glottocode='Glottocode'</span></em>, <em class="sig-param"><span class="pre">language='Name'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.from_cldf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load data from CLDF into a LingPy Wordlist object or similar.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -968,9 +957,9 @@ can input so far. However, it can regularly read CLDF-formatted data into
 LingPy and thus allow you to use CLDF data in LingPy analyses.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.basic.wordlist.get_wordlist">
-<code class="sig-prename descclassname">lingpy.basic.wordlist.</code><code class="sig-name descname">get_wordlist</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">delimiter='</em>, <em class="sig-param">'</em>, <em class="sig-param">quotechar='&quot;'</em>, <em class="sig-param">normalization_form='NFC'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.get_wordlist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.basic.wordlist.</span></code><code class="sig-name descname"><span class="pre">get_wordlist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">','</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quotechar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&quot;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.basic.wordlist.get_wordlist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a wordlist from a normal CSV file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1021,6 +1010,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -1058,7 +1048,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1079,9 +1069,9 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.basic package</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -1095,7 +1085,7 @@ linguistic datatypes (spreadsheets, wordlists) in a consistent way.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

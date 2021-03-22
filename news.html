@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Whats New in Version 2.6.5? &#8212; LingPy</title>
-    <link rel="stylesheet" href="_static/lingpy.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whats New in Version 2.6.7? &#8212; LingPy</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="download.html">Download </a> </li>
+  <li><a href="download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Whats New in Version 2.6.7?</a></li> 
       </ul>
     </div>
 
@@ -54,12 +57,12 @@ LingPy
           <div class="body" role="main">
             
   <div class="section" id="whats-new-in-version-version">
-<h1>Whats New in Version 2.6.5?<a class="headerlink" href="#whats-new-in-version-version" title="Permalink to this headline">¶</a></h1>
-<p>Version 2.6.5 of LingPy serves in primary instance as a bugfix release that helps to make sure
+<h1>Whats New in Version 2.6.7?<a class="headerlink" href="#whats-new-in-version-version" title="Permalink to this headline">¶</a></h1>
+<p>Version 2.6.7 of LingPy serves in primary instance as a bugfix release that helps to make sure
 that LingPy can be used properly. Nevertheless, there are certain things that have changed, and that
 should also be mentioned in this context.</p>
 <p>In the following, we list both the new features introduced in version 2.6.3 and 2.6.4, as well as the new
-functions from the new version 2.6.5.</p>
+functions from the new version 2.6.7.</p>
 <div class="section" id="partial-cognate-detection-with-customized-scorer-2-6-5">
 <h2>Partial Cognate Detection with Customized Scorer (2.6.5)<a class="headerlink" href="#partial-cognate-detection-with-customized-scorer-2-6-5" title="Permalink to this headline">¶</a></h2>
 <p>A problem of partial cognate detection with LingPy was so far, that the scorer in our
@@ -75,8 +78,8 @@ computes the scoring function by only considering morphemes, never full words.</
 can first choose the columns they want to load from a given CLDF dataset, and then define, by
 passing a list of tuples of source and target, how these should be named from within LingPy.</p>
 <p>As an example, try:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="kn">import</span> <span class="n">test_data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="o">.</span><span class="n">from_cldf</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;cldf&#39;</span><span class="p">,</span> <span class="s1">&#39;test-metadata.json&#39;</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;parameter_id&quot;</span><span class="p">,</span> <span class="s2">&quot;language_id&quot;</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="s2">&quot;segments&quot;</span><span class="p">),</span> <span class="n">namespace</span><span class="o">=</span><span class="p">((</span><span class="s2">&quot;language_id&quot;</span><span class="p">,</span> <span class="s2">&quot;doculect&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;parameter_id&quot;</span><span class="p">,</span> <span class="s2">&quot;concept&quot;</span><span class="p">),</span>
@@ -90,7 +93,7 @@ represent them with the namespace <cite>doculect</cite>, <cite>concept</cite>, a
 <h2>Loading CLDF Data from Wordlist Objects (2.6.4)<a class="headerlink" href="#loading-cldf-data-from-wordlist-objects-2-6-4" title="Permalink to this headline">¶</a></h2>
 <p>Instead of using the <cite>from_cldf</cite> function, you can now simply use the <cite>Wordlist</cite> class to load a
 CLDF dataset:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="o">.</span><span class="n">from_cldf</span><span class="p">(</span><span class="s1">&#39;path/to/metadata/json&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -99,7 +102,7 @@ CLDF dataset:</p>
 <h2>Handling Ngrams (2.6.4)<a class="headerlink" href="#handling-ngrams-2-6-4" title="Permalink to this headline">¶</a></h2>
 <p>This module offers a general class to handle Markov Models and many utility functions for the
 manipulation of ngrams:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence.ngrams</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.sequence.ngrams</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">get_n_ngrams</span><span class="p">(</span><span class="s1">&#39;LingPy&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="go">[(&#39;$$$&#39;, &#39;$$$&#39;, &#39;$$$&#39;, &#39;L&#39;),</span>
 <span class="go"> (&#39;$$$&#39;, &#39;$$$&#39;, &#39;L&#39;, &#39;i&#39;),</span>
@@ -121,8 +124,8 @@ before, including shortcuts for creating bigrams and trigrams.</p>
 <p>We fixed some problems related to the <a class="reference internal" href="reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> class in LingPy. First, if you
 make the transition from a Wordlist object to a <a class="reference internal" href="reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> object, the data
 will be deep-copied. As a result, writing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="k">import</span> <span class="n">test_data</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="kn">import</span> <span class="n">test_data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span><span class="o">.</span><span class="n">add_entries</span><span class="p">(</span><span class="s1">&#39;segments&#39;</span><span class="p">,</span> <span class="s1">&#39;tokens&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">)</span>
@@ -151,7 +154,7 @@ extremely low. As a rule of thumb, if your data’s mutual coverage is below 100
 divergent language samples, you should not run an analysis using the “lexstat” algorithm of the
 ~lingpy.compare.lexstat.LexStat class, but instead turn to the “sca” method provided by the same
 class. Mutual coverage can be computed in a straightforward manner:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="k">import</span> <span class="n">mutual_coverage_check</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.compare.sanity</span> <span class="kn">import</span> <span class="n">mutual_coverage_check</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">wl</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
 <span class="go">        if mutual_coverage_check(wl, i):</span>
@@ -180,14 +183,14 @@ random clusters. The module <a class="reference internal" href="reference/lingpy
 create a random cluster, or to create all possible clusters for a given size of entities. This
 module was originally prepared to allow to add random cognate sets to a wordlist in order to compare
 this random output with non-random algorithms for cognate detection:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="k">import</span> <span class="n">random_clusters</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="kn">import</span> <span class="n">random_clusters</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">random_clusters</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;randomid&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We then figured that it would also be interesting to compare random clusters with “extreme”
 clusters, namely, the clusters provided by “lumpers” and “splitters”. Thus, we added another custom
 function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="k">import</span> <span class="n">extreme_clusters</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.evaluate.acd</span> <span class="kn">import</span> <span class="n">extreme_clusters</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">extreme_clusters</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s1">&#39;lumperid&#39;</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="s1">&#39;lumper&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -204,7 +207,7 @@ provides standardized formats for wordlists and cognate judgments. The <a class=
 into CLDF format. LingPy now also provides support to read CLDF-files and convert them into
 ~lingpy.basic.wordlist.Wordlist objects:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.convert.cldf</span> <span class="k">import</span> <span class="n">to_cldf</span><span class="p">,</span> <span class="n">from_cldf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.convert.cldf</span> <span class="kn">import</span> <span class="n">to_cldf</span><span class="p">,</span> <span class="n">from_cldf</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">to_cldf</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">from_cldf</span><span class="p">(</span><span class="s1">&#39;cldf/Wordlist-metadata.json&#39;</span><span class="p">)</span>
 </pre></div>
@@ -216,7 +219,7 @@ into CLDF format. LingPy now also provides support to read CLDF-files and conver
 both MrBayes and Beast, also including the situation where you want to calculate rates for each
 concept class:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wl</span> <span class="o">=</span> <span class="n">Wordlist</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s2">&quot;KSL.qlc&quot;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.convert.strings</span> <span class="k">import</span> <span class="n">write_nexus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.convert.strings</span> <span class="kn">import</span> <span class="n">write_nexus</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mb</span> <span class="o">=</span> <span class="n">write_nexus</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span> <span class="s1">&#39;mrbayes&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;ksl-mrbayes.nex&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">beast</span> <span class="o">=</span> <span class="n">write_nexus</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span> <span class="s1">&#39;beastwords&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;ksl-beast.nex&#39;</span><span class="p">)</span>
 </pre></div>
@@ -259,6 +262,7 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -269,7 +273,7 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
             </a></p>
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Whats New in Version 2.6.5?</a><ul>
+<li><a class="reference internal" href="#">Whats New in Version 2.6.7?</a><ul>
 <li><a class="reference internal" href="#partial-cognate-detection-with-customized-scorer-2-6-5">Partial Cognate Detection with Customized Scorer (2.6.5)</a></li>
 <li><a class="reference internal" href="#enhanced-loading-of-cldf-into-wordlist-2-6-5">Enhanced Loading of CLDF into Wordlist (2.6.5)</a></li>
 <li><a class="reference internal" href="#loading-cldf-data-from-wordlist-objects-2-6-4">Loading CLDF Data from Wordlist Objects (2.6.4)</a></li>
@@ -303,7 +307,7 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -324,9 +328,9 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
 	<li><a href="tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="download.html">Download </a> </li>
+  <li><a href="download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Whats New in Version 2.6.7?</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -340,7 +344,7 @@ can fine <a class="reference external" href="https://github.com/lingpy/cookbook"
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

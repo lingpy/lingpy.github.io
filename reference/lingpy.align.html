@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lingpy.align package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.align package</a></li> 
       </ul>
     </div>
 
@@ -61,10 +64,10 @@ LingPy
 <div class="section" id="module-lingpy.align.multiple">
 <span id="lingpy-align-multiple-module"></span><h2>lingpy.align.multiple module<a class="headerlink" href="#module-lingpy.align.multiple" title="Permalink to this headline">¶</a></h2>
 <p>Module provides classes and functions for multiple alignment analyses.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.align.multiple.Multiple">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.multiple.</code><code class="sig-name descname">Multiple</code><span class="sig-paren">(</span><em class="sig-param">seqs</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">clldutils.misc.UnicodeMixin</span></code></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.align.multiple.</span></code><code class="sig-name descname"><span class="pre">Multiple</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for multiple sequence alignment analyses.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -77,14 +80,14 @@ LingPy
 <p class="rubric">Notes</p>
 <p>Depending on the structure of the sequences, further keywords can be
 specified that manage how the items get tokenized.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.align">
-<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">method</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.align" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.get_local_peaks">
-<code class="sig-name descname">get_local_peaks</code><span class="sig-paren">(</span><em class="sig-param">threshold=2</em>, <em class="sig-param">gap_weight=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_local_peaks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_local_peaks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_local_peaks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all peaks in a given alignment.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -100,9 +103,9 @@ specified that manage how the items get tokenized.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.get_pairwise_alignments">
-<code class="sig-name descname">get_pairwise_alignments</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pairwise_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_pairwise_alignments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pairwise_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function creates a dictionary of all pairwise alignments  scores.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -172,9 +175,9 @@ strings of sequences.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.get_peaks">
-<code class="sig-name descname">get_peaks</code><span class="sig-paren">(</span><em class="sig-param">gap_weight=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_peaks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_peaks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_peaks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the profile score for each column of the alignment.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -196,9 +199,9 @@ alignment.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.get_pid">
-<code class="sig-name descname">get_pid</code><span class="sig-paren">(</span><em class="sig-param">mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_pid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.get_pid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the Percentage Identity (PID) score of the calculated MSA.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -231,9 +234,9 @@ pos.)</p></li>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.iterate_all_sequences">
-<code class="sig-name descname">iterate_all_sequences</code><span class="sig-paren">(</span><em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">iterate_all_sequences</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'global'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restricted_chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'T_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_all_sequences" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative refinement based on a complete realignment of all sequences.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -291,9 +294,9 @@ as much as other characters.</p>
 calculated.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.iterate_clusters">
-<code class="sig-name descname">iterate_clusters</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">iterate_clusters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'global'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restricted_chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'T_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative refinement based on a flat cluster analysis of the data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -354,9 +357,9 @@ as much as other characters.</p>
 function in order to retrieve a flat cluster of the data.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.iterate_orphans">
-<code class="sig-name descname">iterate_orphans</code><span class="sig-paren">(</span><em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1.0</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">iterate_orphans</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'global'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restricted_chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'T_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_orphans" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterate over the most divergent sequences in the sample.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -413,9 +416,9 @@ as much as other characters.</p>
 other sequences is above the average distance of all sequence pairs.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.iterate_similar_gap_sites">
-<code class="sig-name descname">iterate_similar_gap_sites</code><span class="sig-paren">(</span><em class="sig-param">check='final'</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">gop=-3</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">factor=0</em>, <em class="sig-param">gap_weight=1</em>, <em class="sig-param">restricted_chars='T_'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">iterate_similar_gap_sites</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'global'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restricted_chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'T_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.iterate_similar_gap_sites" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative refinement based on the <em>Similar Gap Sites</em> heuristic.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -472,9 +475,9 @@ as much as other characters.</p>
 MSA into partitions with identical gap sites.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.lib_align">
-<code class="sig-name descname">lib_align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.lib_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">lib_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.lib_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a library-based progressive alignment analysis of the sequences.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -565,9 +568,9 @@ refined scoring function (<em>library</em>) which is later used in the
 progressive phase.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.prog_align">
-<code class="sig-name descname">prog_align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.prog_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">prog_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.prog_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a progressive alignment analysis of the input sequences.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -644,9 +647,9 @@ strings of sequences.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.sum_of_pairs">
-<code class="sig-name descname">sum_of_pairs</code><span class="sig-paren">(</span><em class="sig-param">alm_matrix='self'</em>, <em class="sig-param">mat=None</em>, <em class="sig-param">gap_weight=0.0</em>, <em class="sig-param">gop=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.sum_of_pairs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">sum_of_pairs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alm_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'self'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.sum_of_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the sum-of-pairs score for a given alignment analysis.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -673,9 +676,9 @@ as much as other characters.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.multiple.Multiple.swap_check">
-<code class="sig-name descname">swap_check</code><span class="sig-paren">(</span><em class="sig-param">swap_penalty=-3</em>, <em class="sig-param">score_mode='classes'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.swap_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">swap_check</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">swap_penalty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'classes'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.Multiple.swap_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check for possibly swapped sites in the alignment.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -703,21 +706,21 @@ stored in the attribute <code class="docutils literal notranslate"><span class="
 <p>The method for swap detection is described in detail in <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012b"><span class="pre">List2012b</span></a></code>.</p>
 <p class="rubric">Examples</p>
 <p>Define a set of strings whose alignment contans a swap.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span> <span class="o">=</span> <span class="n">Multiple</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;wladimir&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Align the data, using the progressive approach.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Check for swaps.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
 <span class="go">True</span>
 </pre></div>
 </div>
 <p>Print the alignment</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
 <span class="go">w   o   l   -   d   e   m   o   r   t</span>
 <span class="go">w   a   l   -   d   e   m   a   r   -</span>
 <span class="go">v   -   l   a   d   i   m   i   r   -</span>
@@ -727,17 +730,9 @@ stored in the attribute <code class="docutils literal notranslate"><span class="
 
 </dd></dl>
 
-<dl class="function">
-<dt id="lingpy.align.multiple.dotjoin">
-<code class="sig-prename descclassname">lingpy.align.multiple.</code><code class="sig-name descname">dotjoin</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.dotjoin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience shortcut. Strings to be joined do not have to be passed as list or tuple.</p>
-<p class="rubric">Notes</p>
-<p>An implicit conversion of objects to strings is performed as well.</p>
-</dd></dl>
-
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.multiple.mult_align">
-<code class="sig-prename descclassname">lingpy.align.multiple.</code><code class="sig-name descname">mult_align</code><span class="sig-paren">(</span><em class="sig-param">seqs</em>, <em class="sig-param">gop=-1</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">tree_calc='upgma'</em>, <em class="sig-param">scoredict=False</em>, <em class="sig-param">pprint=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.mult_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.multiple.</span></code><code class="sig-name descname"><span class="pre">mult_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_calc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'upgma'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoredict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.multiple.mult_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>A short-cut method for multiple alignment analyses.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -771,7 +766,7 @@ tokens.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">mult_align</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;vladimir&quot;</span><span class="p">],</span> <span class="n">pprint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">mult_align</span><span class="p">([</span><span class="s2">&quot;woldemort&quot;</span><span class="p">,</span> <span class="s2">&quot;waldemar&quot;</span><span class="p">,</span> <span class="s2">&quot;vladimir&quot;</span><span class="p">],</span> <span class="n">pprint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">w   o   l   -   d   e   m   o   r   t</span>
 <span class="go">w   a   l   -   d   e   m   a   r   -</span>
 <span class="go">-   v   l   a   d   i   m   i   r   -</span>
@@ -783,10 +778,10 @@ tokens.</p>
 <div class="section" id="module-lingpy.align.pairwise">
 <span id="lingpy-align-pairwise-module"></span><h2>lingpy.align.pairwise module<a class="headerlink" href="#module-lingpy.align.pairwise" title="Permalink to this headline">¶</a></h2>
 <p>Module provides classes and functions for pairwise alignment analyses.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.align.pairwise.Pairwise">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">Pairwise</code><span class="sig-paren">(</span><em class="sig-param">seqs</em>, <em class="sig-param">seqB=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">Pairwise</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for the handling of pairwise sequence alignments (PSA).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -802,9 +797,9 @@ sequence, if only two sequences shall be compared.</p>
 </div></blockquote>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.pairwise.Pairwise.align">
-<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise.align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.Pairwise.align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Align a pair of sequences or multiple sequence pairs.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -854,9 +849,9 @@ will be used.</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.edit_dist">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">edit_dist</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">normalized=False</em>, <em class="sig-param">restriction=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.edit_dist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">edit_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restriction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.edit_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the edit distance between two strings.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -892,7 +887,7 @@ and an integer otherwise.</p>
 distance was proposed by Wagner and Fisher (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Wagner1974"><span class="pre">Wagner1974</span></a></code>).</p>
 <p class="rubric">Examples</p>
 <dl>
-<dt>Align two sequences::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dt>Align two sequences::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">edit_dist</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">3</span>
@@ -902,9 +897,9 @@ distance was proposed by Wagner and Fisher (<code class="docutils literal notran
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.nw_align">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">nw_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.nw_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">nw_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scorer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.nw_align" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>Carry out the traditional Needleman-Wunsch algorithm.</p>
 </div></blockquote>
@@ -978,13 +973,13 @@ a - a - (sim=0)</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.pw_align">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">pw_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">gop=-1</em>, <em class="sig-param">scale=0.5</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">mode='global'</em>, <em class="sig-param">distance=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.pw_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">pw_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scorer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'global'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.pw_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Align two sequences in various ways.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>seqA, seqB</strong> : {text_type, list, tuple}</p>
+<dd class="field-odd"><p><strong>seqA, seqB</strong> : {str, list, tuple}</p>
 <blockquote>
 <div><p>The input strings. These should be iterables, so you can use tuples,
 lists, or strings.</p>
@@ -1019,7 +1014,7 @@ implemented in LingPy, see <code class="docutils literal notranslate"><a class="
 </dl>
 <p class="rubric">Examples</p>
 <dl>
-<dt>Align two words using the dialign algorithm::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dt>Align two words using the dialign algorithm::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;dialign&#39;</span><span class="p">)</span>
 <span class="go">([&#39;f&#39;, &#39;a&#39;, &#39;t&#39;, &#39; &#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;],</span>
@@ -1031,15 +1026,15 @@ implemented in LingPy, see <code class="docutils literal notranslate"><a class="
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.structalign">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">structalign</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.structalign" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">structalign</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.structalign" title="Permalink to this definition">¶</a></dt>
 <dd><p>Experimental function for testing structural alignment algorithms.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.sw_align">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">sw_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.sw_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">sw_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scorer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.sw_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out the traditional Smith-Waterman algorithm.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1073,7 +1068,7 @@ alignment between two sequences. A local alignment is an alignment of those
 subsequences of the input sequences that yields the highest score.</p>
 <p class="rubric">Examples</p>
 <dl>
-<dt>Align two sequences::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dt>Align two sequences::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sw_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">(([], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], [&#39; &#39;, &#39;c&#39;, &#39;a&#39;, &#39;t&#39;]),</span>
@@ -1085,9 +1080,9 @@ subsequences of the input sequences that yields the highest score.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.turchin">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">turchin</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">model='dolgo'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.turchin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">turchin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dolgo'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.turchin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return cognate judgment based on the method by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Turchin2010"><span class="pre">Turchin2010</span></a></code>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1112,9 +1107,9 @@ standard sound class models used in LingPy.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.pairwise.we_align">
-<code class="sig-prename descclassname">lingpy.align.pairwise.</code><code class="sig-name descname">we_align</code><span class="sig-paren">(</span><em class="sig-param">seqA</em>, <em class="sig-param">seqB</em>, <em class="sig-param">scorer=False</em>, <em class="sig-param">gap=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.we_align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.pairwise.</span></code><code class="sig-name descname"><span class="pre">we_align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scorer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.pairwise.we_align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out the traditional Waterman-Eggert algorithm.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1149,7 +1144,7 @@ the score of the alignment.</p>
 local matches between two sequences.</p>
 <p class="rubric">Examples</p>
 <dl>
-<dt>Align two sequences::</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
+<dt>Align two sequences::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seqA</span> <span class="o">=</span> <span class="s1">&#39;fat cat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">seqB</span> <span class="o">=</span> <span class="s1">&#39;catfat&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">we_align</span><span class="p">(</span><span class="n">seqA</span><span class="p">,</span> <span class="n">seqB</span><span class="p">)</span>
 <span class="go">[([&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], [&#39;f&#39;, &#39;a&#39;, &#39;t&#39;], 3.0),</span>
@@ -1168,9 +1163,9 @@ local matches between two sequences.</p>
 sequence comparison from the <em>sequence</em> and the <em>alignment</em> perspective. The
 sequence perspective deals with unaligned sequences. The <em>alignment</em>
 perspective deals with aligned sequences.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.align.sca.Alignments">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">Alignments</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">row='concept'</em>, <em class="sig-param">col='doculect'</em>, <em class="sig-param">conf=''</em>, <em class="sig-param">modify_ref=False</em>, <em class="sig-param">_interactive=True</em>, <em class="sig-param">split_on_tones=False</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.align.sca.</span></code><code class="sig-name descname"><span class="pre">Alignments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'concept'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'doculect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_interactive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_on_tones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.basic.wordlist.Wordlist</span></code></a></p>
 <p>Class handles Wordlists for the purpose of alignment analyses.</p>
 <dl class="field-list">
@@ -1238,9 +1233,9 @@ the name of the column which contains the cognate identifiers.</p></td>
 </tr>
 </tbody>
 </table>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.add_alignments">
-<code class="sig-name descname">add_alignments</code><span class="sig-paren">(</span><em class="sig-param">ref=False</em>, <em class="sig-param">modify_ref=False</em>, <em class="sig-param">fuzzy=False</em>, <em class="sig-param">split_on_tones=True</em>, <em class="sig-param">override=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_alignments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fuzzy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_on_tones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.add_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function adds a new set of alignments to the data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1259,9 +1254,9 @@ order assigned to a word (proper “partial cognates”).</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.align">
-<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.align" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.align" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a multiple alignment analysis of the data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1350,9 +1345,9 @@ strings of sequences.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.get_confidence">
-<code class="sig-name descname">get_confidence</code><span class="sig-paren">(</span><em class="sig-param">scorer</em>, <em class="sig-param">ref='lexstatid'</em>, <em class="sig-param">gap_weight=0.25</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_confidence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_confidence</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scorer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_confidence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function creates confidence scores for a given set of alignments.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1374,9 +1369,9 @@ the analysis.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.get_consensus">
-<code class="sig-name descname">get_consensus</code><span class="sig-paren">(</span><em class="sig-param">tree=False</em>, <em class="sig-param">gaps=False</em>, <em class="sig-param">classes=False</em>, <em class="sig-param">consensus='consensus'</em>, <em class="sig-param">counterpart='ipa'</em>, <em class="sig-param">weights=[]</em>, <em class="sig-param">return_data=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_consensus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gaps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consensus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'consensus'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counterpart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of all MSAs in the wordlist.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1411,14 +1406,14 @@ object.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.get_msa">
-<code class="sig-name descname">get_msa</code><span class="sig-paren">(</span><em class="sig-param">ref</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_msa" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_msa</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.get_msa" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.output">
-<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">output</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileformat</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write wordlist to file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1506,9 +1501,9 @@ in plain “tsv”.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.Alignments.reduce_alignments">
-<code class="sig-name descname">reduce_alignments</code><span class="sig-paren">(</span><em class="sig-param">alignment=False</em>, <em class="sig-param">ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">reduce_alignments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.Alignments.reduce_alignments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reduces alignments which contain columns that are marked to be                 ignored by the user.</p>
 <p class="rubric">Notes</p>
 <p>This function changes the data only internally: All alignments are
@@ -1522,9 +1517,9 @@ place in the dictionary.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.align.sca.MSA">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">MSA</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.align.sca.</span></code><code class="sig-name descname"><span class="pre">MSA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.align.multiple.Multiple" title="lingpy.align.multiple.Multiple"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.align.multiple.Multiple</span></code></a></p>
 <p>Basic class for carrying out multiple sequence alignment analyses.</p>
 <dl class="field-list">
@@ -1559,28 +1554,28 @@ inherits all methods of the <a class="reference internal" href="#lingpy.align.mu
 class.</p>
 <p class="rubric">Examples</p>
 <p>Get the path to a file from the testset.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s2">&quot;test_path&quot;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;harry.msq&#39;</span>
 </pre></div>
 </div>
 <p>Load the file into the Multiple class.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span> <span class="o">=</span> <span class="n">Multiple</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span> <span class="o">=</span> <span class="n">Multiple</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Carry out a progressive alignment analysis of the sequences.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mult</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Print the result to the screen:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mult</span><span class="p">)</span>
 <span class="go">w    o    l    -    d    e    m    o    r    t</span>
 <span class="go">w    a    l    -    d    e    m    a    r    -</span>
 <span class="go">v    -    l    a    d    i    m    i    r    -</span>
 </pre></div>
 </div>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.MSA.ipa2cls">
-<code class="sig-name descname">ipa2cls</code><span class="sig-paren">(</span><em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.ipa2cls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ipa2cls</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.ipa2cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve sound-class strings from aligned IPA sequences.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1596,9 +1591,9 @@ converted.</p>
 conducted alignment analyses was loaded.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.MSA.output">
-<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat='msa'</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">sorted_seqs=False</em>, <em class="sig-param">unique_seqs=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">output</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'msa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sorted_seqs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique_seqs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.MSA.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write data to file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1633,9 +1628,9 @@ not.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.align.sca.PSA">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">PSA</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.align.sca.</span></code><code class="sig-name descname"><span class="pre">PSA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.align.pairwise.Pairwise" title="lingpy.align.pairwise.Pairwise"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.align.pairwise.Pairwise</span></code></a></p>
 <p>Basic class for dealing with the pairwise alignment of sequences.</p>
 <dl class="field-list">
@@ -1684,9 +1679,9 @@ used along with this class: the PSQ-format, and the PSA-format (see
 </tr>
 </tbody>
 </table>
-<dl class="method">
+<dl class="py method">
 <dt id="lingpy.align.sca.PSA.output">
-<code class="sig-name descname">output</code><span class="sig-paren">(</span><em class="sig-param">fileformat='psa'</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA.output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">output</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'psa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.PSA.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the results of the analyses to a text file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1709,18 +1704,18 @@ the infile will be taken by default.</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.sca.SCA">
-<code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">SCA</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.SCA" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.sca.</span></code><code class="sig-name descname"><span class="pre">SCA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.SCA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method returns alignment objects depending on input file or input data.</p>
 <p class="rubric">Notes</p>
 <p>This method checks for the type of an alignment object and returns an
 alignment object of the respective type.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.align.sca.get_consensus">
-<code class="sig-prename descclassname">lingpy.align.sca.</code><code class="sig-name descname">get_consensus</code><span class="sig-paren">(</span><em class="sig-param">msa</em>, <em class="sig-param">gaps=False</em>, <em class="sig-param">taxa=False</em>, <em class="sig-param">classes=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.get_consensus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.align.sca.</span></code><code class="sig-name descname"><span class="pre">get_consensus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gaps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.align.sca.get_consensus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a consensus string of a given MSA.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1772,6 +1767,7 @@ excluded.</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -1808,7 +1804,7 @@ excluded.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1829,9 +1825,9 @@ excluded.</p>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.align package</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -1845,7 +1841,7 @@ excluded.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

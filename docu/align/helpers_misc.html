@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Helper Functions for Traditional Alignment (talign) &#8212; LingPy</title>
-    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Helper Functions for Traditional Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">talign</span></code>)</a></li> 
       </ul>
     </div>
 
@@ -54,7 +57,7 @@ LingPy
           <div class="body" role="main">
             
   <div class="section" id="helper-functions-for-traditional-alignment-talign">
-<h1>Helper Functions for Traditional Alignment (<a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#module-lingpy.algorithm.cython.talign" title="lingpy.algorithm.cython.talign"><code class="xref py py-class docutils literal notranslate"><span class="pre">talign</span></code></a>)<a class="headerlink" href="#helper-functions-for-traditional-alignment-talign" title="Permalink to this headline">¶</a></h1>
+<h1>Helper Functions for Traditional Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">talign</span></code>)<a class="headerlink" href="#helper-functions-for-traditional-alignment-talign" title="Permalink to this headline">¶</a></h1>
 <p>The helper functions and classes below play an important role in traditional alignment algorithms in
 LingPy which do not make use of sound classes.  They are implemented both in pure Python and in
 Cython (only supported for Python 3), in order to allow for faster implementations of the core
@@ -70,42 +73,13 @@ list below.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.globalign" title="lingpy.algorithm.cython.talign.globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalign</span></code></a></p></td>
-<td><p>Carry out global alignment of two sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.localign" title="lingpy.algorithm.cython.talign.localign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">localign</span></code></a></p></td>
-<td><p>Carry out semi-global alignment of two sequences.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.semi_globalign" title="lingpy.algorithm.cython.talign.semi_globalign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">semi_globalign</span></code></a></p></td>
-<td><p>Carry out semi-global alignment of two sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.dialign" title="lingpy.algorithm.cython.talign.dialign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dialign</span></code></a></p></td>
-<td><p>Carry out dialign alignment of two sequences.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.align_pair" title="lingpy.algorithm.cython.talign.align_pair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pair</span></code></a></p></td>
-<td><p>Align a pair of sequences.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.align_pairwise" title="lingpy.algorithm.cython.talign.align_pairwise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairwise</span></code></a></p></td>
-<td><p>Align all sequences pairwise.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.align_pairs" title="lingpy.algorithm.cython.talign.align_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_pairs</span></code></a></p></td>
-<td><p>Align multiple sequence pairs.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.align_profile" title="lingpy.algorithm.cython.talign.align_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_profile</span></code></a></p></td>
-<td><p>Align two profiles using the basic modes.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.score_profile" title="lingpy.algorithm.cython.talign.score_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score_profile</span></code></a></p></td>
-<td><p>Basic function for the scoring of profiles.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../reference/lingpy.algorithm.cython.html#lingpy.algorithm.cython.talign.swap_score_profile" title="lingpy.algorithm.cython.talign.swap_score_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swap_score_profile</span></code></a></p></td>
-<td><p>Basic function for the scoring of profiles in swapped sequences.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -138,7 +112,7 @@ list below.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -159,9 +133,9 @@ list below.</p>
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Helper Functions for Traditional Alignment (<code class="xref py py-class docutils literal notranslate"><span class="pre">talign</span></code>)</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -175,7 +149,7 @@ list below.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

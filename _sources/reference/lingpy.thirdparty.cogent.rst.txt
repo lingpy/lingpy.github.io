@@ -20,7 +20,6 @@ lingpy.thirdparty.cogent.tree module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

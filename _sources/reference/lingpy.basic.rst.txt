@@ -36,7 +36,6 @@ lingpy.basic.wordlist module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

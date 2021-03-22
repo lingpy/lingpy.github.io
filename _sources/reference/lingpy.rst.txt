@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    lingpy.algorithm
    lingpy.align
@@ -16,7 +17,6 @@ Subpackages
    lingpy.meaning
    lingpy.read
    lingpy.sequence
-   lingpy.tests
    lingpy.thirdparty
 
 Submodules
@@ -42,14 +42,6 @@ lingpy.cli module
 -----------------
 
 .. automodule:: lingpy.cli
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-lingpy.compat module
---------------------
-
-.. automodule:: lingpy.compat
    :members:
    :undoc-members:
    :show-inheritance:
@@ -85,7 +77,6 @@ lingpy.util module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

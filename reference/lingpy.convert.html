@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lingpy.convert package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.convert package</a></li> 
       </ul>
     </div>
 
@@ -61,14 +64,9 @@ LingPy
 <div class="section" id="module-lingpy.convert.cldf">
 <span id="lingpy-convert-cldf-module"></span><h2>lingpy.convert.cldf module<a class="headerlink" href="#module-lingpy.convert.cldf" title="Permalink to this headline">¶</a></h2>
 <p>Basic functions for the conversion from LingPy to CLDF and vice versa.</p>
-<dl class="function">
-<dt id="lingpy.convert.cldf.template_path">
-<code class="sig-prename descclassname">lingpy.convert.cldf.</code><code class="sig-name descname">template_path</code><span class="sig-paren">(</span><em class="sig-param">*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.cldf.template_path" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.cldf.to_cldf">
-<code class="sig-prename descclassname">lingpy.convert.cldf.</code><code class="sig-name descname">to_cldf</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">path='cldf'</em>, <em class="sig-param">source_path=None</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">segments='tokens'</em>, <em class="sig-param">form='ipa'</em>, <em class="sig-param">note='note'</em>, <em class="sig-param">form_in_source='value'</em>, <em class="sig-param">source=None</em>, <em class="sig-param">alignment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.cldf.to_cldf" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.cldf.</span></code><code class="sig-name descname"><span class="pre">to_cldf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cldf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tokens'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'note'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">form_in_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.cldf.to_cldf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a wordlist in LingPy to CLDF.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -120,9 +118,9 @@ LingPy
 <div class="section" id="module-lingpy.convert.graph">
 <span id="lingpy-convert-graph-module"></span><h2>lingpy.convert.graph module<a class="headerlink" href="#module-lingpy.convert.graph" title="Permalink to this headline">¶</a></h2>
 <p>Conversion routines for the GML format.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.graph.gls2gml">
-<code class="sig-prename descclassname">lingpy.convert.graph.</code><code class="sig-name descname">gls2gml</code><span class="sig-paren">(</span><em class="sig-param">gls</em>, <em class="sig-param">graph</em>, <em class="sig-param">tree</em>, <em class="sig-param">filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.gls2gml" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.graph.</span></code><code class="sig-name descname"><span class="pre">gls2gml</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.gls2gml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create GML-representation of a given gain-loss-scenario (GLS).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -142,20 +140,20 @@ LingPy
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.graph.igraph2networkx">
-<code class="sig-prename descclassname">lingpy.convert.graph.</code><code class="sig-name descname">igraph2networkx</code><span class="sig-paren">(</span><em class="sig-param">graph</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.igraph2networkx" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.graph.</span></code><code class="sig-name descname"><span class="pre">igraph2networkx</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.igraph2networkx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.graph.networkx2igraph">
-<code class="sig-prename descclassname">lingpy.convert.graph.</code><code class="sig-name descname">networkx2igraph</code><span class="sig-paren">(</span><em class="sig-param">graph</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.networkx2igraph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.graph.</span></code><code class="sig-name descname"><span class="pre">networkx2igraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.networkx2igraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper function converts networkx graph to igraph graph object.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.graph.nwk2gml">
-<code class="sig-prename descclassname">lingpy.convert.graph.</code><code class="sig-name descname">nwk2gml</code><span class="sig-paren">(</span><em class="sig-param">treefile</em>, <em class="sig-param">filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.nwk2gml" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.graph.</span></code><code class="sig-name descname"><span class="pre">nwk2gml</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treefile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.nwk2gml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a tree in newick format to a network in gml-format.</p>
 <dl class="simple">
 <dt>treefile<span class="classifier">str</span></dt><dd><p>Either a str defining the path to a file containing the tree in
@@ -172,9 +170,9 @@ function returns a <code class="xref py py-class docutils literal notranslate"><
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.graph.radial_layout">
-<code class="sig-prename descclassname">lingpy.convert.graph.</code><code class="sig-name descname">radial_layout</code><span class="sig-paren">(</span><em class="sig-param">treestring</em>, <em class="sig-param">change=&lt;function &lt;lambda&gt;&gt;</em>, <em class="sig-param">degree=100</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">start=0</em>, <em class="sig-param">root='root'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.radial_layout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.graph.</span></code><code class="sig-name descname"><span class="pre">radial_layout</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">treestring</span></em>, <em class="sig-param"><span class="pre">change=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em>, <em class="sig-param"><span class="pre">degree=100</span></em>, <em class="sig-param"><span class="pre">filename=''</span></em>, <em class="sig-param"><span class="pre">start=0</span></em>, <em class="sig-param"><span class="pre">root='root'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.graph.radial_layout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function calculates a simple radial tree layout.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -211,9 +209,9 @@ Newick format.</p>
 <div class="section" id="module-lingpy.convert.html">
 <span id="lingpy-convert-html-module"></span><h2>lingpy.convert.html module<a class="headerlink" href="#module-lingpy.convert.html" title="Permalink to this headline">¶</a></h2>
 <p>Basic functions for HTML-plots.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.alm2html">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">alm2html</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">title=''</em>, <em class="sig-param">shorttitle=''</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">colored=False</em>, <em class="sig-param">main_template=''</em>, <em class="sig-param">table_template=''</em>, <em class="sig-param">dataset=''</em>, <em class="sig-param">confidence=False</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.alm2html" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">alm2html</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shorttitle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colored</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main_template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.alm2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert files in <code class="docutils literal notranslate"><span class="pre">alm</span></code>-format into colored <code class="docutils literal notranslate"><span class="pre">html</span></code>-format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -240,18 +238,18 @@ to is based on the definitions given in the
 and adapted.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.colorRange">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">colorRange</code><span class="sig-paren">(</span><em class="sig-param">number</em>, <em class="sig-param">brightness=300</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.colorRange" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">colorRange</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brightness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">300</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.colorRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns different colors for the given range.</p>
 <p class="rubric">Notes</p>
 <p>Idea taken from
 <a class="reference external" href="http://stackoverflow.com/questions/876853/generating-color-ranges-in-python">http://stackoverflow.com/questions/876853/generating-color-ranges-in-python</a> .</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.msa2html">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">msa2html</code><span class="sig-paren">(</span><em class="sig-param">msa</em>, <em class="sig-param">shorttitle=''</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">template=''</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2html" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">msa2html</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shorttitle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert files in <code class="docutils literal notranslate"><span class="pre">msa</span></code>-format into colored <code class="docutils literal notranslate"><span class="pre">html</span></code>-format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -287,15 +285,15 @@ to is based on the definitions given in the <code class="docutils literal notran
 <a class="reference internal" href="lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a>. It can easily be changed and adapted.</p>
 <p class="rubric">Examples</p>
 <p>Load the libary.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>Load an <code class="docutils literal notranslate"><span class="pre">msq</span></code>-file from the test-sets.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span> <span class="o">=</span> <span class="n">MSA</span><span class="p">(</span><span class="s1">&#39;harry.msq&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span> <span class="o">=</span> <span class="n">MSA</span><span class="p">(</span><span class="s1">&#39;harry.msq&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Align the data progressively and carry out a check for swapped sites.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">prog_align</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">swap_check</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">msa</span><span class="p">)</span>
 <span class="go">w    o    l    -    d    e    m    o    r    t</span>
@@ -304,43 +302,38 @@ to is based on the definitions given in the <code class="docutils literal notran
 </pre></div>
 </div>
 <p>Save the data to the file <code class="docutils literal notranslate"><span class="pre">harry.msa</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;msa&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;msa&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Save the <code class="docutils literal notranslate"><span class="pre">msa</span></code>-object as <code class="docutils literal notranslate"><span class="pre">html</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msa</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;harry&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.msa2tex">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">msa2tex</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">template=''</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2tex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">msa2tex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.msa2tex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an MSA to a tabular representation which can easily be used in
 LaTeX documents.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.psa2html">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">psa2html</code><span class="sig-paren">(</span><em class="sig-param">infile</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.psa2html" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">psa2html</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.psa2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a PSA-file into colored html-format.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.string2html">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">string2html</code><span class="sig-paren">(</span><em class="sig-param">taxon</em>, <em class="sig-param">string</em>, <em class="sig-param">swaps=[]</em>, <em class="sig-param">tax_len=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.string2html" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">string2html</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swaps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tax_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.string2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an (aligned) string into colored html-format.</p>
 <p>&#64;deprecated</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="lingpy.convert.html.template_path">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">template_path</code><span class="sig-paren">(</span><em class="sig-param">*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.template_path" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.html.tokens2html">
-<code class="sig-prename descclassname">lingpy.convert.html.</code><code class="sig-name descname">tokens2html</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">swaps=[]</em>, <em class="sig-param">tax_len=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.tokens2html" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.html.</span></code><code class="sig-name descname"><span class="pre">tokens2html</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swaps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tax_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.html.tokens2html" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an (aligned) string into colored html-format.</p>
 <p class="rubric">Notes</p>
 <p>This function is currently not used by any other program. So it might be
@@ -353,9 +346,9 @@ useful to just deprecate it.</p>
 <span id="lingpy-convert-plot-module"></span><h2>lingpy.convert.plot module<a class="headerlink" href="#module-lingpy.convert.plot" title="Permalink to this headline">¶</a></h2>
 <p>Module provides functions for the transformation of text data into visually appealing
 format.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.plot.plot_concept_evolution">
-<code class="sig-prename descclassname">lingpy.convert.plot.</code><code class="sig-name descname">plot_concept_evolution</code><span class="sig-paren">(</span><em class="sig-param">scenarios</em>, <em class="sig-param">tree</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">degree=90</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_concept_evolution" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.plot.</span></code><code class="sig-name descname"><span class="pre">plot_concept_evolution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenarios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pdf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_concept_evolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the evolution according to the MLN method of all words for a given concept.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -376,15 +369,15 @@ yields a tree filling half of the space of a circle.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.plot.plot_gls">
-<code class="sig-prename descclassname">lingpy.convert.plot.</code><code class="sig-name descname">plot_gls</code><span class="sig-paren">(</span><em class="sig-param">gls</em>, <em class="sig-param">treestring</em>, <em class="sig-param">degree=90</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_gls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.plot.</span></code><code class="sig-name descname"><span class="pre">plot_gls</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treestring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pdf'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_gls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a gain-loss scenario for a given reference tree.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.plot.plot_heatmap">
-<code class="sig-prename descclassname">lingpy.convert.plot.</code><code class="sig-name descname">plot_heatmap</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">filename='heatmap'</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">normalized=False</em>, <em class="sig-param">refB=''</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_heatmap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.plot.</span></code><code class="sig-name descname"><span class="pre">plot_heatmap</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'heatmap'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pdf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_heatmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a heatmap-representation of shared cognates for a given wordlist.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -446,9 +439,9 @@ the method looks for a tree object in the Wordlist.</p>
 <p>This function plots shared cognate percentages.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.plot.plot_tree">
-<code class="sig-prename descclassname">lingpy.convert.plot.</code><code class="sig-name descname">plot_tree</code><span class="sig-paren">(</span><em class="sig-param">treestring</em>, <em class="sig-param">degree=90</em>, <em class="sig-param">fileformat='pdf'</em>, <em class="sig-param">root='root'</em>, <em class="sig-param">**keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.plot.</span></code><code class="sig-name descname"><span class="pre">plot_tree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treestring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pdf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'root'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.plot.plot_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a Newick tree to PDF or other graphical formats.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -482,9 +475,9 @@ Defaults to a timestamp.</p>
 <div class="section" id="module-lingpy.convert.strings">
 <span id="lingpy-convert-strings-module"></span><h2>lingpy.convert.strings module<a class="headerlink" href="#module-lingpy.convert.strings" title="Permalink to this headline">¶</a></h2>
 <p>Basic functions for the conversion of Python-internal data into strings.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.matrix2dst">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">matrix2dst</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">taxa=None</em>, <em class="sig-param">stamp=''</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">taxlen=10</em>, <em class="sig-param">comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.matrix2dst" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">matrix2dst</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.matrix2dst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert matrix to dst-format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -528,15 +521,15 @@ the “stamp”.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.msa2str">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">msa2str</code><span class="sig-paren">(</span><em class="sig-param">msa</em>, <em class="sig-param">wordlist=False</em>, <em class="sig-param">comment='#'</em>, <em class="sig-param">_arange='{stamp}{comment}\n{meta}{comment}\n{body}'</em>, <em class="sig-param">merge=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.msa2str" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">msa2str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wordlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_arange</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{stamp}{comment}\n{meta}{comment}\n{body}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.msa2str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts an MSA object into a string.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.multistate2nex">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">multistate2nex</code><span class="sig-paren">(</span><em class="sig-param">taxa</em>, <em class="sig-param">matrix</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">missing='?'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.multistate2nex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">multistate2nex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'?'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.multistate2nex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the data in a given wordlist to NEXUS-format for multistate analyses in PAUP.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -559,15 +552,15 @@ written.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.pap2csv">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">pap2csv</code><span class="sig-paren">(</span><em class="sig-param">taxa</em>, <em class="sig-param">paps</em>, <em class="sig-param">filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2csv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">pap2csv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2csv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write paps created by the Wordlist class to a csv-file.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.pap2nex">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">pap2nex</code><span class="sig-paren">(</span><em class="sig-param">taxa</em>, <em class="sig-param">paps</em>, <em class="sig-param">missing=0</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">datatype='STANDARD'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2nex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">pap2nex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'STANDARD'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.pap2nex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function converts a list of paps into nexus file format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -594,20 +587,15 @@ The following two structures will thus be treated identically:</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.scorer2str">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">scorer2str</code><span class="sig-paren">(</span><em class="sig-param">scorer</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.scorer2str" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">scorer2str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scorer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.scorer2str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a scoring function to a string.</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="lingpy.convert.strings.template_path">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">template_path</code><span class="sig-paren">(</span><em class="sig-param">*comps</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.template_path" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.strings.write_nexus">
-<code class="sig-prename descclassname">lingpy.convert.strings.</code><code class="sig-name descname">write_nexus</code><span class="sig-paren">(</span><em class="sig-param">wordlist</em>, <em class="sig-param">mode='mrbayes'</em>, <em class="sig-param">filename='mrbayes.nex'</em>, <em class="sig-param">ref='cogid'</em>, <em class="sig-param">missing='?'</em>, <em class="sig-param">gap='-'</em>, <em class="sig-param">custom=None</em>, <em class="sig-param">custom_name='lingpy'</em>, <em class="sig-param">commands=None</em>, <em class="sig-param">commands_name='mrbayes'</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.write_nexus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.strings.</span></code><code class="sig-name descname"><span class="pre">write_nexus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mrbayes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mrbayes.nex'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'?'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lingpy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mrbayes'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.strings.write_nexus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a nexus file for phylogenetic analyses.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -688,9 +676,9 @@ written.</p>
 <div class="section" id="module-lingpy.convert.tree">
 <span id="lingpy-convert-tree-module"></span><h2>lingpy.convert.tree module<a class="headerlink" href="#module-lingpy.convert.tree" title="Permalink to this headline">¶</a></h2>
 <p>Functions for tree calculations and working with trees.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="lingpy.convert.tree.nwk2tree_matrix">
-<code class="sig-prename descclassname">lingpy.convert.tree.</code><code class="sig-name descname">nwk2tree_matrix</code><span class="sig-paren">(</span><em class="sig-param">newick</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.nwk2tree_matrix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">lingpy.convert.tree.</span></code><code class="sig-name descname"><span class="pre">nwk2tree_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newick</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.convert.tree.nwk2tree_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a newick file to a tree matrix.</p>
 <p class="rubric">Notes</p>
 <p>This is an additional function that can be used for plots with help of
@@ -706,6 +694,7 @@ that scipy’s linkage functions create.</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -745,7 +734,7 @@ that scipy’s linkage functions create.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -766,9 +755,9 @@ that scipy’s linkage functions create.</p>
 	<li><a href="../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../download.html">Download </a> </li>
+  <li><a href="../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">lingpy.convert package</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -782,7 +771,7 @@ that scipy’s linkage functions create.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

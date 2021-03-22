@@ -263,3 +263,6 @@ div.code-block-caption {
     color: #efefef;
     background-color: #1c4e63;
 }
+li.nav-item {
+  display: None;
+}

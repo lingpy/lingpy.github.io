@@ -12,7 +12,6 @@ lingpy.thirdparty.linkcomm.link\_clustering module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

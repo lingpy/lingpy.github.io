@@ -36,7 +36,6 @@ lingpy.read.starling module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

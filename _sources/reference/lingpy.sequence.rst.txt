@@ -44,15 +44,6 @@ lingpy.sequence.sound\_classes module
    :undoc-members:
    :show-inheritance:
 
-lingpy.sequence.tiers module
-----------------------------
-
-.. automodule:: lingpy.sequence.tiers
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
 Module contents
 ---------------
 

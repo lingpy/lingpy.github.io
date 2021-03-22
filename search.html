@@ -1,27 +1,31 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search &#8212; LingPy</title>
-    <link rel="stylesheet" href="_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lingpy.css" type="text/css" />
     
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     
-    <script type="text/javascript" src="_static/searchtools.js"></script>
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="#" />
-  <script type="text/javascript" src="searchindex.js" defer></script>
+  <script src="searchindex.js" defer></script>
   
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
 
   </head><body>
@@ -45,9 +49,9 @@ LingPy
 	<li><a href="tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="download.html">Download </a> </li>
+  <li><a href="download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Search</a></li> 
       </ul>
     </div>
 
@@ -60,17 +64,15 @@ LingPy
             
   <h1 id="search-documentation">Search</h1>
   <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
+  <script>$('#fallback').hide();</script>
   <p>
     Please activate JavaScript to enable the search
     functionality.
   </p>
   </div>
   <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
+    Searching for multiple words only shows matches that contain
+    all words.
   </p>
   <form action="" method="get">
     <input type="text" name="q" aria-labelledby="search-documentation" value="" />
@@ -82,6 +84,7 @@ LingPy
   
   </div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -110,9 +113,9 @@ LingPy
 	<li><a href="tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="docu/index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="download.html">Download </a> </li>
+  <li><a href="download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Search</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -126,7 +129,7 @@ LingPy
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

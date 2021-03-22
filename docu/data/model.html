@@ -1,23 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sound Class Models (Model) &#8212; LingPy</title>
-    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/lingpy.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link rel="stylesheet" type="text/css" href="_static/handheld.css" media="screen and (max-device-width: 720px)" />
+<style>
+li.nav-item{display: None!important};
+</style>
 
   </head><body>
 <div style="color: black;background-color: white; font-size: 3.2em; text-align: left; padding: 15px 10px 10px 15px">
@@ -40,9 +43,9 @@ LingPy
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Sound Class Models (<code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code>)</a></li> 
       </ul>
     </div>
 
@@ -55,9 +58,9 @@ LingPy
             
   <div class="section" id="sound-class-models-model">
 <h1>Sound Class Models (<a class="reference internal" href="../../reference/lingpy.data.html#lingpy.data.model.Model" title="lingpy.data.model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a>)<a class="headerlink" href="#sound-class-models-model" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="lingpy.data.model.Model">
-<em class="property">class </em><code class="sig-prename descclassname">lingpy.data.model.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.data.model.</span></code><code class="sig-name descname"><span class="pre">Model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for the handling of sound-class models.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -98,20 +101,20 @@ characters as keys and scores (integers or floats) as values.</p></li>
 are automatically loaded, and they are accessible via the
 <a class="reference internal" href="../../reference/lingpy.data.html#lingpy.settings.rc" title="lingpy.settings.rc"><code class="xref py py-func docutils literal notranslate"><span class="pre">rc()</span></code></a> function for
 global settings:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="k">import</span> <span class="o">*</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
 <span class="go">&lt;sca-model &quot;asjp&quot;&gt;</span>
 </pre></div>
 </div>
 <p>Define variables for the standard models for convenience:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">asjp</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">asjp</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;asjp&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sca</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;sca&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dolgo</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;dolgo&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">art</span> <span class="o">=</span> <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;art&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Check how the letter <code class="docutils literal notranslate"><span class="pre">a</span></code> is converted in the various models:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="n">asjp</span><span class="p">,</span><span class="n">sca</span><span class="p">,</span><span class="n">dolgo</span><span class="p">,</span><span class="n">art</span><span class="p">]:</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="n">asjp</span><span class="p">,</span><span class="n">sca</span><span class="p">,</span><span class="n">dolgo</span><span class="p">,</span><span class="n">art</span><span class="p">]:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> &gt; </span><span class="si">{1}</span><span class="s1"> (</span><span class="si">{2}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">converter</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
 <span class="gp">...</span>
 <span class="go">a &gt; a (asjp)</span>
@@ -121,7 +124,7 @@ global settings:</p>
 </pre></div>
 </div>
 <p>Retrieve basic information of a given model:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sca</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sca</span><span class="p">)</span>
 <span class="go">Model:    sca</span>
 <span class="go">Info:     Extended sound class model based on Dolgopolsky (1986)</span>
 <span class="go">Source:   List (2012)</span>
@@ -163,6 +166,7 @@ from wich the model is loaded.</p></td>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -187,7 +191,7 @@ from wich the model is loaded.</p></td>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -208,9 +212,9 @@ from wich the model is loaded.</p></td>
 	<li><a href="../../tutorial/index.html">Tutorial</a> |&nbsp;</li>
 	<li><a href="../index.html">Documentation</a> |&nbsp;</li>
 	<li><a href="../../reference/modules.html">Reference</a> |&nbsp;</li>
-        <li><a href="../../download.html">Download </a> </li>
+  <li><a href="../../download.html">Download</a></li>
 
- 
+        <li class="nav-item nav-item-this"><a href="">Sound Class Models (<code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code>)</a></li> 
       </ul>
     </div>
  <div id="footer" style="align-items:center;padding-top:5px;padding-left:0px;display:flex;justify-content:space-between;">
@@ -224,7 +228,7 @@ from wich the model is loaded.</p></td>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Oct 11, 2019<br>
+    on Mar 22, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

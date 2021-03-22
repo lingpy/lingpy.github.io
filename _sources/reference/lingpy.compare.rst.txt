@@ -52,7 +52,6 @@ lingpy.compare.util module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

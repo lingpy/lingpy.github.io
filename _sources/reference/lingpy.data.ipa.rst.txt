@@ -12,7 +12,6 @@ lingpy.data.ipa.sampa module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 
