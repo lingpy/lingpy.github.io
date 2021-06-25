@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>lingpy.evaluate package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,17 +60,17 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-evaluate-package">
+  <section id="lingpy-evaluate-package">
 <h1>lingpy.evaluate package<a class="headerlink" href="#lingpy-evaluate-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-lingpy.evaluate.acd">
+</section>
+<section id="module-lingpy.evaluate.acd">
 <span id="lingpy-evaluate-acd-module"></span><h2>lingpy.evaluate.acd module<a class="headerlink" href="#module-lingpy.evaluate.acd" title="Permalink to this headline">¶</a></h2>
 <p>Evaluation methods for automatic cognate detection.</p>
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.bcubes">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">bcubes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_concept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.bcubes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.bcubes">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">bcubes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_concept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.bcubes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute B-Cubed scores for test and reference datasets.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -124,8 +128,8 @@ scores first to the task of automatic cognate detection.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.diff">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">diff</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tofile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transcription</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concepts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.diff" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.diff">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tofile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transcription</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concepts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write differences in classifications on an item-basis to file.</p>
 <dl>
 <dt>lex<span class="classifier"><a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.compare.lexstat.LexStat</span></code></a></span></dt><dd><p>The <a class="reference internal" href="lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> class used for the
@@ -179,8 +183,8 @@ the words involved in these wrong decisions.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.extreme_cognates">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">extreme_cognates</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'extremeid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lumper'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.extreme_cognates" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.extreme_cognates">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">extreme_cognates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'extremeid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lumper'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.extreme_cognates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return extreme cognates, either lump all words together or split them.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -204,8 +208,8 @@ ID.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.npoint_ap">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">npoint_ap</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cognates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.npoint_ap" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.npoint_ap">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">npoint_ap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cognates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.npoint_ap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the n-point average precision.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -242,8 +246,8 @@ algorithm.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.pairs">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">pairs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_return_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.pairs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.pairs">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lexstatid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_return_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute pair scores for the evaluation of cognate detection algorithms.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -293,8 +297,8 @@ results. This variant follows the description by <code class="docutils literal n
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.partial_bcubes">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">partial_bcubes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.partial_bcubes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.partial_bcubes">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">partial_bcubes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.partial_bcubes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute B-Cubed scores for test and reference datasets for partial cognate            detection.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -340,8 +344,8 @@ scores first to the task of automatic cognate detection.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.acd.random_cognates">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></code><code class="sig-name descname"><span class="pre">random_cognates</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'randomid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.random_cognates" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.acd.random_cognates">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.acd.</span></span><span class="sig-name descname"><span class="pre">random_cognates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'randomid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.acd.random_cognates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Populate a wordlist with random cognates for each entry.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -363,13 +367,13 @@ overestimate the results. The function which creates the random clusters is
 based on simple functions for randomization and thus probably</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.evaluate.alr">
+</section>
+<section id="module-lingpy.evaluate.alr">
 <span id="lingpy-evaluate-alr-module"></span><h2>lingpy.evaluate.alr module<a class="headerlink" href="#module-lingpy.evaluate.alr" title="Permalink to this headline">¶</a></h2>
 <p>Module provides methods for the evaluation of automatic linguistic reconstruction analyses.</p>
 <dl class="py function">
-<dt id="lingpy.evaluate.alr.mean_edit_distance">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.alr.</span></code><code class="sig-name descname"><span class="pre">mean_edit_distance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'proto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'consensus'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.alr.mean_edit_distance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.alr.mean_edit_distance">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.alr.</span></span><span class="sig-name descname"><span class="pre">mean_edit_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'proto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'consensus'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cogid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.alr.mean_edit_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function computes the edit distance between gold standard and test set.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -423,24 +427,24 @@ results.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.evaluate.alr.med">
-<code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.alr.</span></code><code class="sig-name descname"><span class="pre">med</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.alr.med" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.alr.med">
+<span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.alr.</span></span><span class="sig-name descname"><span class="pre">med</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.alr.med" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.evaluate.apa">
+</section>
+<section id="module-lingpy.evaluate.apa">
 <span id="lingpy-evaluate-apa-module"></span><h2>lingpy.evaluate.apa module<a class="headerlink" href="#module-lingpy.evaluate.apa" title="Permalink to this headline">¶</a></h2>
 <p>Basic module for the comparison of automatic phonetic alignments.</p>
 <dl class="py class">
-<dt id="lingpy.evaluate.apa.Eval">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.apa.</span></code><code class="sig-name descname"><span class="pre">Eval</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.Eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.Eval">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.apa.</span></span><span class="sig-name descname"><span class="pre">Eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.Eval" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Base class for evaluation objects.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="lingpy.evaluate.apa.EvalMSA">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.apa.</span></code><code class="sig-name descname"><span class="pre">EvalMSA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.apa.</span></span><span class="sig-name descname"><span class="pre">EvalMSA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.evaluate.apa.Eval" title="lingpy.evaluate.apa.Eval"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.evaluate.apa.Eval</span></code></a></p>
 <p>Base class for the evaluation of automatic multiple sequence analyses.</p>
 <dl class="field-list">
@@ -459,8 +463,8 @@ evaluation scores in evolutionary biology. For a close description on how
 these scores are calculated, see, for example, <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalMSA.c_score">
-<code class="sig-name descname"><span class="pre">c_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.c_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA.c_score">
+<span class="sig-name descname"><span class="pre">c_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.c_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the column (C) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -499,14 +503,14 @@ where <em>p</em> is the precision (mode <code class="docutils literal notranslat
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="lingpy.evaluate.apa.EvalMSA.c_scores">
-<code class="sig-name descname"><span class="pre">c_scores</span></code><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.c_scores" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA.c_scores">
+<span class="sig-name descname"><span class="pre">c_scores</span></span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.c_scores" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the c-scores.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalMSA.check_swaps">
-<code class="sig-name descname"><span class="pre">check_swaps</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.check_swaps" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA.check_swaps">
+<span class="sig-name descname"><span class="pre">check_swaps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.check_swaps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check for possibly identical swapped sites.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -530,8 +534,8 @@ there is a false positive in the testset, and</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalMSA.jc_score">
-<code class="sig-name descname"><span class="pre">jc_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.jc_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA.jc_score">
+<span class="sig-name descname"><span class="pre">jc_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.jc_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Jaccard (JC) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -552,8 +556,8 @@ the size of the union of residue pairs in reference and test alignment.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalMSA.r_score">
-<code class="sig-name descname"><span class="pre">r_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.r_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA.r_score">
+<span class="sig-name descname"><span class="pre">r_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.r_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the rows (R) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -569,8 +573,8 @@ alignment divided by the total number of rows.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalMSA.sp_score">
-<code class="sig-name descname"><span class="pre">sp_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.sp_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalMSA.sp_score">
+<span class="sig-name descname"><span class="pre">sp_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalMSA.sp_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the sum-of-pairs (SP) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -609,8 +613,8 @@ number of residue pairs in the reference alignment.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="lingpy.evaluate.apa.EvalPSA">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.evaluate.apa.</span></code><code class="sig-name descname"><span class="pre">EvalPSA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.evaluate.apa.</span></span><span class="sig-name descname"><span class="pre">EvalPSA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.evaluate.apa.Eval" title="lingpy.evaluate.apa.Eval"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.evaluate.apa.Eval</span></code></a></p>
 <p>Base class for the evaluation of automatic pairwise sequence analyses.</p>
 <dl class="field-list">
@@ -629,8 +633,8 @@ evaluation scores in evolutionary biology. For a close description on how
 these scores are calculated, see, for example, <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Thompson1999"><span class="pre">Thompson1999</span></a></code>,
 <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=List2012"><span class="pre">List2012</span></a></code>, and <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Rosenberg2009b"><span class="pre">Rosenberg2009b</span></a></code>.</p>
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalPSA.c_score">
-<code class="sig-name descname"><span class="pre">c_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.c_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA.c_score">
+<span class="sig-name descname"><span class="pre">c_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.c_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate column (C) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -648,8 +652,8 @@ test alignment.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalPSA.diff">
-<code class="sig-name descname"><span class="pre">diff</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.diff" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA.diff">
+<span class="sig-name descname"><span class="pre">diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write all differences between two sets to a file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -662,8 +666,8 @@ test alignment.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalPSA.jc_score">
-<code class="sig-name descname"><span class="pre">jc_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.jc_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA.jc_score">
+<span class="sig-name descname"><span class="pre">jc_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.jc_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Jaccard (JC) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -680,8 +684,8 @@ the size of the union of residue pairs in reference and test alignment.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="lingpy.evaluate.apa.EvalPSA.pairwise_column_scores">
-<code class="sig-name descname"><span class="pre">pairwise_column_scores</span></code><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.pairwise_column_scores" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA.pairwise_column_scores">
+<span class="sig-name descname"><span class="pre">pairwise_column_scores</span></span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.pairwise_column_scores" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the different column scores for pairwise alignments. The method
 returns the precision, the recall score, and the f-score, following the
 proposal of Bergsma and Kondrak (2007), and the column score proposed
@@ -689,8 +693,8 @@ by Thompson et al. (1999).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalPSA.r_score">
-<code class="sig-name descname"><span class="pre">r_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.r_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA.r_score">
+<span class="sig-name descname"><span class="pre">r_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.r_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the percentage of identical rows (PIR) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -714,8 +718,8 @@ alignment divided by the total number of rows.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.evaluate.apa.EvalPSA.sp_score">
-<code class="sig-name descname"><span class="pre">sp_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.sp_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.evaluate.apa.EvalPSA.sp_score">
+<span class="sig-name descname"><span class="pre">sp_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.evaluate.apa.EvalPSA.sp_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the sum-of-pairs (SP) score.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -733,12 +737,12 @@ number of residue pairs in the reference alignment.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.evaluate">
+</section>
+<section id="module-lingpy.evaluate">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.evaluate" title="Permalink to this headline">¶</a></h2>
 <p>Basic module for the evaluation of algorithms.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -815,7 +819,7 @@ number of residue pairs in the reference alignment.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

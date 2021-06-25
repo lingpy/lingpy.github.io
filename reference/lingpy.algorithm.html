@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>lingpy.algorithm package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,9 +60,9 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-algorithm-package">
+  <section id="lingpy-algorithm-package">
 <h1>lingpy.algorithm package<a class="headerlink" href="#lingpy-algorithm-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
+<section id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -68,16 +72,16 @@ LingPy
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="submodules">
+</section>
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-lingpy.algorithm.cluster_util">
+</section>
+<section id="module-lingpy.algorithm.cluster_util">
 <span id="lingpy-algorithm-cluster-util-module"></span><h2>lingpy.algorithm.cluster_util module<a class="headerlink" href="#module-lingpy.algorithm.cluster_util" title="Permalink to this headline">¶</a></h2>
 <p>Various utility functions which are useful for algorithmic operations</p>
 <dl class="py function">
-<dt id="lingpy.algorithm.cluster_util.generate_all_clusters">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></code><code class="sig-name descname"><span class="pre">generate_all_clusters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.cluster_util.generate_all_clusters">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></span><span class="sig-name descname"><span class="pre">generate_all_clusters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_all_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate all possible clusters for a number of elements.</p>
 <dl class="field-list">
 <dt class="field-odd">Returns</dt>
@@ -94,8 +98,8 @@ LingPy
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.cluster_util.generate_random_cluster">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></code><code class="sig-name descname"><span class="pre">generate_random_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.cluster_util.generate_random_cluster">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></span><span class="sig-name descname"><span class="pre">generate_random_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.generate_random_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a random cluster for a number of elements.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -123,8 +127,8 @@ LingPy
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.cluster_util.mutate_cluster">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></code><code class="sig-name descname"><span class="pre">mutate_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.cluster_util.mutate_cluster">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></span><span class="sig-name descname"><span class="pre">mutate_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.mutate_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mutate a cluster.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -153,8 +157,8 @@ cluster or a new cluster.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.cluster_util.order_cluster">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></code><code class="sig-name descname"><span class="pre">order_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.order_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.cluster_util.order_cluster">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></span><span class="sig-name descname"><span class="pre">order_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.order_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order a cluster into the form of a valid cluster.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -179,8 +183,8 @@ each new cluster introduced.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.cluster_util.valid_cluster">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></code><code class="sig-name descname"><span class="pre">valid_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.valid_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.cluster_util.valid_cluster">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.cluster_util.</span></span><span class="sig-name descname"><span class="pre">valid_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.cluster_util.valid_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Only allow to have sequences which have consecutive ordering of elements.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -214,13 +218,13 @@ each new cluster introduced.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.algorithm.clustering">
+</section>
+<section id="module-lingpy.algorithm.clustering">
 <span id="lingpy-algorithm-clustering-module"></span><h2>lingpy.algorithm.clustering module<a class="headerlink" href="#module-lingpy.algorithm.clustering" title="Permalink to this headline">¶</a></h2>
 <p>Module provides general clustering functions for LingPy.</p>
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.best_threshold">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">best_threshold</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trange</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.3,</span> <span class="pre">0.7,</span> <span class="pre">0.05)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.best_threshold" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.best_threshold">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">best_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trange</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.3,</span> <span class="pre">0.7,</span> <span class="pre">0.05)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.best_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the best threshold by maximizing partition density for a given range of
 thresholds.</p>
 <p class="rubric">Notes</p>
@@ -229,13 +233,13 @@ thresholds.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.check_taxon_names">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">check_taxon_names</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.check_taxon_names" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.check_taxon_names">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">check_taxon_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.check_taxon_names" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.find_threshold">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">find_threshold</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresholds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.9,</span> <span class="pre">0.8500000000000001,</span> <span class="pre">0.8,</span> <span class="pre">0.75,</span> <span class="pre">0.7000000000000001,</span> <span class="pre">0.65,</span> <span class="pre">0.6000000000000001,</span> <span class="pre">0.55,</span> <span class="pre">0.5,</span> <span class="pre">0.45,</span> <span class="pre">0.4,</span> <span class="pre">0.35000000000000003,</span> <span class="pre">0.30000000000000004,</span> <span class="pre">0.25,</span> <span class="pre">0.2,</span> <span class="pre">0.15000000000000002,</span> <span class="pre">0.1,</span> <span class="pre">0.05]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.find_threshold" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.find_threshold">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">find_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresholds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.9,</span> <span class="pre">0.8500000000000001,</span> <span class="pre">0.8,</span> <span class="pre">0.75,</span> <span class="pre">0.7000000000000001,</span> <span class="pre">0.65,</span> <span class="pre">0.6000000000000001,</span> <span class="pre">0.55,</span> <span class="pre">0.5,</span> <span class="pre">0.45,</span> <span class="pre">0.4,</span> <span class="pre">0.35000000000000003,</span> <span class="pre">0.30000000000000004,</span> <span class="pre">0.25,</span> <span class="pre">0.2,</span> <span class="pre">0.15000000000000002,</span> <span class="pre">0.1,</span> <span class="pre">0.05]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.find_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use a variant of the method by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Apeltsin2011"><span class="pre">Apeltsin2011</span></a></code> in order to find an optimal
 threshold.</p>
 <dl class="field-list">
@@ -270,8 +274,8 @@ dataset. So we recommend to use it with great care.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.flat_cluster">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">flat_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.flat_cluster">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">flat_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a flat cluster analysis based on linkage algorithms.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -334,8 +338,8 @@ corresponding to the respective ID as values.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.flat_upgma">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">flat_upgma</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_upgma" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.flat_upgma">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">flat_upgma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.flat_upgma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a flat cluster analysis based on the UPGMA algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -393,8 +397,8 @@ corresponding to the respective ID as values.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.fuzzy">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">fuzzy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'upgma'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.fuzzy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.fuzzy">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">fuzzy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'upgma'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.fuzzy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create fuzzy cluster of a given distance matrix.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -470,8 +474,8 @@ clusters.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.link_clustering">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">link_clustering</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'distances'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fuzzy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.link_clustering" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.link_clustering">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">link_clustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'distances'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fuzzy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.link_clustering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a link clustering analysis using the method by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Ahn2010"><span class="pre">Ahn2010</span></a></code>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -544,8 +548,8 @@ the taxa that are assigned to a given cluster-ID.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.matrix2groups">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">matrix2groups</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'upgma'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2groups" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.matrix2groups">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">matrix2groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'upgma'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate flat cluster of distance matrix.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -576,8 +580,8 @@ not recommended for further use.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.matrix2tree">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">matrix2tree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_calc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'neighbor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2tree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.matrix2tree">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">matrix2tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_calc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'neighbor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.matrix2tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a tree of a given distance matrix.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -618,8 +622,8 @@ files.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.mcl">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">mcl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inflation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_self_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'distances'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.mcl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.mcl">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">mcl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inflation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_self_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'distances'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.mcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a clustering using the MCL algorithm (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Dongen2000"><span class="pre">Dongen2000</span></a></code>).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -700,8 +704,8 @@ no adaptation is needed.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.neighbor">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">neighbor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.neighbor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.neighbor">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">neighbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.neighbor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function clusters data according to the Neighbor-Joining algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Saitou1987"><span class="pre">Saitou1987</span></a></code>).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -753,8 +757,8 @@ software packages to view and plot the tree.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.partition_density">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">partition_density</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.partition_density" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.partition_density">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">partition_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.partition_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate partition density for a given threshold on a distance matrix.</p>
 <p class="rubric">Notes</p>
 <p>See <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Ahn2012"><span class="pre">Ahn2012</span></a></code> for details on the calculation of partition density
@@ -762,8 +766,8 @@ in a given network.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.clustering.upgma">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></code><code class="sig-name descname"><span class="pre">upgma</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.upgma" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.clustering.upgma">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.clustering.</span></span><span class="sig-name descname"><span class="pre">upgma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.clustering.upgma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a cluster analysis based on the UPGMA algorithm     (<code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Sokal1958"><span class="pre">Sokal1958</span></a></code>).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -814,13 +818,13 @@ software packages to view and plot the tree.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.algorithm.extra">
+</section>
+<section id="module-lingpy.algorithm.extra">
 <span id="lingpy-algorithm-extra-module"></span><h2>lingpy.algorithm.extra module<a class="headerlink" href="#module-lingpy.algorithm.extra" title="Permalink to this headline">¶</a></h2>
 <p>Adapting specific cluster algorithms from scikit-learn to LingPy.</p>
 <dl class="py function">
-<dt id="lingpy.algorithm.extra.affinity_propagation">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.extra.</span></code><code class="sig-name descname"><span class="pre">affinity_propagation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.affinity_propagation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.extra.affinity_propagation">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.extra.</span></span><span class="sig-name descname"><span class="pre">affinity_propagation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.affinity_propagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute affinity propagation from the matrix.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -860,8 +864,8 @@ labels and taxon names.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.extra.dbscan">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.extra.</span></code><code class="sig-name descname"><span class="pre">dbscan</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.dbscan" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.extra.dbscan">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.extra.</span></span><span class="sig-name descname"><span class="pre">dbscan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.dbscan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute DBSCAN cluster analysis.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -908,8 +912,8 @@ implementation in the source code.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.algorithm.extra.infomap_clustering">
-<code class="sig-prename descclassname"><span class="pre">lingpy.algorithm.extra.</span></code><code class="sig-name descname"><span class="pre">infomap_clustering</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.infomap_clustering" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.algorithm.extra.infomap_clustering">
+<span class="sig-prename descclassname"><span class="pre">lingpy.algorithm.extra.</span></span><span class="sig-name descname"><span class="pre">infomap_clustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.algorithm.extra.infomap_clustering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the Infomap clustering analysis of the data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -948,12 +952,12 @@ labels and taxon names.</p>
 downloadable from <a class="reference external" href="http://igraph.org/">http://igraph.org/</a>.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.algorithm">
+</section>
+<section id="module-lingpy.algorithm">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.algorithm" title="Permalink to this headline">¶</a></h2>
 <p>Package for specific algorithms and time-intensive routines.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -1031,7 +1035,7 @@ downloadable from <a class="reference external" href="http://igraph.org/">http:/
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>lingpy.read package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,17 +60,17 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-read-package">
+  <section id="lingpy-read-package">
 <h1>lingpy.read package<a class="headerlink" href="#lingpy-read-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-lingpy.read.csv">
+</section>
+<section id="module-lingpy.read.csv">
 <span id="lingpy-read-csv-module"></span><h2>lingpy.read.csv module<a class="headerlink" href="#module-lingpy.read.csv" title="Permalink to this headline">¶</a></h2>
 <p>Module provides functions for reading csv-files.</p>
 <dl class="py function">
-<dt id="lingpy.read.csv.csv2dict">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></code><code class="sig-name descname"><span class="pre">csv2dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.csv2dict" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.csv.csv2dict">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></span><span class="sig-name descname"><span class="pre">csv2dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.csv2dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Very simple function to get quick access to CSV-files.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -117,8 +121,8 @@ used as key and the rest of the rows as values.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.csv.csv2list">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></code><code class="sig-name descname"><span class="pre">csv2list</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.csv2list" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.csv.csv2list">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></span><span class="sig-name descname"><span class="pre">csv2list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.csv2list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Very simple function to get quick (and somewhat naive) access to CSV-files.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -168,23 +172,23 @@ out.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.csv.csv2multidict">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></code><code class="sig-name descname"><span class="pre">csv2multidict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.csv2multidict" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.csv.csv2multidict">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></span><span class="sig-name descname"><span class="pre">csv2multidict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.csv2multidict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reads a csv-file into a multi-dimensional dictionary structure.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.csv.read_asjp">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></code><code class="sig-name descname"><span class="pre">read_asjp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">infile</span></em>, <em class="sig-param"><span class="pre">family='Indo-European'</span></em>, <em class="sig-param"><span class="pre">classification='hh'</span></em>, <em class="sig-param"><span class="pre">max_synonyms=2</span></em>, <em class="sig-param"><span class="pre">min_population=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em>, <em class="sig-param"><span class="pre">merge_vowels=True</span></em>, <em class="sig-param"><span class="pre">evaluate=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.read_asjp" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.csv.read_asjp">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.csv.</span></span><span class="sig-name descname"><span class="pre">read_asjp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">infile</span></em>, <em class="sig-param"><span class="pre">family='Indo-European'</span></em>, <em class="sig-param"><span class="pre">classification='hh'</span></em>, <em class="sig-param"><span class="pre">max_synonyms=2</span></em>, <em class="sig-param"><span class="pre">min_population=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></em>, <em class="sig-param"><span class="pre">merge_vowels=True</span></em>, <em class="sig-param"><span class="pre">evaluate=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.csv.read_asjp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.read.phylip">
+</section>
+<section id="module-lingpy.read.phylip">
 <span id="lingpy-read-phylip-module"></span><h2>lingpy.read.phylip module<a class="headerlink" href="#module-lingpy.read.phylip" title="Permalink to this headline">¶</a></h2>
 <p>Module provides functions to read in various formats from the Phylip package.</p>
 <dl class="py function">
-<dt id="lingpy.read.phylip.read_dst">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.phylip.</span></code><code class="sig-name descname"><span class="pre">read_dst</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.phylip.read_dst" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.phylip.read_dst">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.phylip.</span></span><span class="sig-name descname"><span class="pre">read_dst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taxlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.phylip.read_dst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reads files in Phylip dst-format.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -219,8 +223,8 @@ information which should be ignored.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.phylip.read_scorer">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.phylip.</span></code><code class="sig-name descname"><span class="pre">read_scorer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.phylip.read_scorer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.phylip.read_scorer">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.phylip.</span></span><span class="sig-name descname"><span class="pre">read_scorer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.phylip.read_scorer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a scoring function in a file into a ScoreDict object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -245,12 +249,12 @@ functions.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.read.qlc">
+</section>
+<section id="module-lingpy.read.qlc">
 <span id="lingpy-read-qlc-module"></span><h2>lingpy.read.qlc module<a class="headerlink" href="#module-lingpy.read.qlc" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="lingpy.read.qlc.normalize_alignment">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></code><code class="sig-name descname"><span class="pre">normalize_alignment</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.normalize_alignment" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.qlc.normalize_alignment">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></span><span class="sig-name descname"><span class="pre">normalize_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.normalize_alignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function normalizes an alignment.</p>
 <p>Normalization here means that columns consisting only of gaps will be
 deleted, and all sequences will be stretched to equal length by adding
@@ -258,8 +262,8 @@ additional gap characters in the end of smaller sequences.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.qlc.read_msa">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></code><code class="sig-name descname"><span class="pre">read_msa</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.read_msa" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.qlc.read_msa">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></span><span class="sig-name descname"><span class="pre">read_msa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.read_msa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simple function to load an MSA object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -290,8 +294,8 @@ functions, such as <code class="xref py py-class docutils literal notranslate"><
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.qlc.read_qlc">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></code><code class="sig-name descname"><span class="pre">read_qlc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.read_qlc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.qlc.read_qlc">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></span><span class="sig-name descname"><span class="pre">read_qlc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.read_qlc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simple function that loads qlc-format into a dictionary.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -316,8 +320,8 @@ of the input file. The header is given 0 as a specific key.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.read.qlc.reduce_alignment">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></code><code class="sig-name descname"><span class="pre">reduce_alignment</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.reduce_alignment" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.qlc.reduce_alignment">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.qlc.</span></span><span class="sig-name descname"><span class="pre">reduce_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.qlc.reduce_alignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function reduces a given alignment.</p>
 <p class="rubric">Notes</p>
 <p>Reduction here means that the output alignment consists only of those parts
@@ -327,21 +331,21 @@ throw a warning, and all brackets are simply removed in the output
 alignment.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.read.starling">
+</section>
+<section id="module-lingpy.read.starling">
 <span id="lingpy-read-starling-module"></span><h2>lingpy.read.starling module<a class="headerlink" href="#module-lingpy.read.starling" title="Permalink to this headline">¶</a></h2>
 <p>Basic parser for Starling data.</p>
 <dl class="py function">
-<dt id="lingpy.read.starling.star2qlc">
-<code class="sig-prename descclassname"><span class="pre">lingpy.read.starling.</span></code><code class="sig-name descname"><span class="pre">star2qlc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean_taxnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.starling.star2qlc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.read.starling.star2qlc">
+<span class="sig-prename descclassname"><span class="pre">lingpy.read.starling.</span></span><span class="sig-name descname"><span class="pre">star2qlc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean_taxnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.read.starling.star2qlc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a file directly output from starling to LingPy-QLC format.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.read">
+</section>
+<section id="module-lingpy.read">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.read" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -419,7 +423,7 @@ alignment.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

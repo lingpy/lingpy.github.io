@@ -26,12 +26,12 @@ To make sure that CLDF data can be loaded from within LingPy more properly, we f
 can first choose the columns they want to load from a given CLDF dataset, and then define, by
 passing a list of tuples of source and target, how these should be named from within LingPy. 
 
-As an example, try::
+As an example, open a terminal in the tests folder and try::
   
   >>> from lingpy import *
-  >>> from lingpy.tests.util import test_data
+  >>> from pathlib import Path
   >>> wl = Wordlist.from_cldf(
-  ...     test_data('cldf', 'test-metadata.json'), columns=("parameter_id", "language_id",
+  ...     Path("test_data", "cldf", "test-metadata.json").as_posix(), columns=("parameter_id", "language_id",
   ...     "segments"), namespace=(("language_id", "doculect"), ("parameter_id", "concept"),
   ...     ("segments", "tokens"))
 
@@ -76,11 +76,10 @@ Bugfixes in Wordlist Class (2.6.3)
 
 We fixed some problems related to the :py:class:`~lingpy.basic.wordlist.Wordlist` class in LingPy. First, if you
 make the transition from a Wordlist object to a :py:class:`~lingpy.compare.lexstat.LexStat` object, the data
-will be deep-copied. As a result, writing::
+will be deep-copied. As a result, if you open a terminal in the folder tests, and write::
   
-  >>> from lingpy.tests.util import test_data
   >>> from lingpy import *
-  >>> wl = Wordlist(test_data('KSL.qlc'))
+  >>> wl = Wordlist('test_data/KSL.qlc')
   >>> lex = LexStat(wl)
   >>> lex.add_entries('segments', 'tokens', lambda x: x)
   >>> 'segments' in wl.header
@@ -89,7 +88,7 @@ will be deep-copied. As a result, writing::
 will no longer add the same number of new entries to the Wordlist object (as it happened before).
 You can now also easily access the header of a wordlist in its current order::
 
-  >>> wl = Wordlist(test_data('KSL.qlc'))
+  >>> wl = Wordlist('test_data/KSL.qlc'))
   >>> wl.columns
   ['doculect', 'concept', 'glossid', 'orthography', 'ipa', 'tokens', 'cogid']
 
@@ -107,10 +106,11 @@ Interestingly, you will notice, when testing certain datasets, that mutual cover
 extremely low. As a rule of thumb, if your data's mutual coverage is below 100 for moderately
 divergent language samples, you should not run an analysis using the "lexstat" algorithm of the
 ~lingpy.compare.lexstat.LexStat class, but instead turn to the "sca" method provided by the same
-class. Mutual coverage can be computed in a straightforward manner::
+class. Mutual coverage can be computed in a straightforward manner (start a terminal in the folder
+tests)::
 
   >>> from lingpy.compare.sanity import mutual_coverage_check
-  >>> wl = Wordlist(test_data('KSL.qlc'))
+  >>> wl = Wordlist('test_data/KSL.qlc')
   >>> for i in range(wl.height, 1, -1):
           if mutual_coverage_check(wl, i):
               print('mutual coverage is {0}'.format(i))
@@ -163,9 +163,9 @@ The cross-linguistic data formats (`CLDF <http://cldf.clld.org>`_) initiative (:
 provides standardized formats for wordlists and cognate judgments. The `pycldf
 <http://github.com/cldf/pycldf>`_ package provides support to convert LingPy-formatted data sets
 into CLDF format. LingPy now also provides support to read CLDF-files and convert them into
-~lingpy.basic.wordlist.Wordlist objects::
+~lingpy.basic.wordlist.Wordlist objects (start a terminal in the folder tests)::
 
-   >>> wl = Wordlist(test_data('KSL.qlc'))
+   >>> wl = Wordlist('test_data/KSL.qlc')
    >>> from lingpy.convert.cldf import to_cldf, from_cldf
    >>> to_cldf(wl)
    >>> wl = from_cldf('cldf/Wordlist-metadata.json')
@@ -176,9 +176,9 @@ Adding Nexus Output (2.6.3)
 
 We had nexus output before, but now, Simon Greenhill has helped us to provide a stable export to
 both MrBayes and Beast, also including the situation where you want to calculate rates for each
-concept class::
+concept class (start a terminal in the folder tests)::
 
-  >>> wl = Wordlist(test_data("KSL.qlc"))
+  >>> wl = Wordlist('test_data/KSL.qlc')
   >>> from lingpy.convert.strings import write_nexus
   >>> mb = write_nexus(wl, 'mrbayes', filename='ksl-mrbayes.nex')
   >>> beast = write_nexus(wl, 'beastwords', filename='ksl-beast.nex')

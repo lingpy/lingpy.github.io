@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Workflow Example &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,16 +60,14 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="workflow-example">
+  <section id="workflow-example">
 <h1>Workflow Example<a class="headerlink" href="#workflow-example" title="Permalink to this headline">¶</a></h1>
 <p>This is an example workflow that illustrates some of the functionality of LingPy. We will use a
 small dataset by <code class="docutils literal notranslate"><a class="reference external" href="http://lingulist.de/evobib/evobib.php?key=Kessler2001"><span class="pre">Kessler2001</span></a></code> in order to illustrate how to get from word list data to
 aligned cognate sets.</p>
-<p>We start by loading the data, which is located in LingPy’s test suite, and can be accessed with help
-of the <code class="xref py py-class docutils literal notranslate"><span class="pre">test_data</span></code> function. We use this function to load the file <cite>KSL.qlc</cite> (it provides the exact path to the file), and load the file as a <a class="reference internal" href="../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> object:</p>
+<p>We start by loading the data, which is located in LingPy’s test suite. We open a terminal in the <cite>tests</cite> folder in lingpy, and load the file as a <a class="reference internal" href="../reference/lingpy.compare.html#lingpy.compare.lexstat.LexStat" title="lingpy.compare.lexstat.LexStat"><code class="xref py py-class docutils literal notranslate"><span class="pre">LexStat</span></code></a> object:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lingpy.tests.util</span> <span class="kn">import</span> <span class="n">test_data</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="n">test_data</span><span class="p">(</span><span class="s1">&#39;KSL.qlc&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lex</span> <span class="o">=</span> <span class="n">LexStat</span><span class="p">(</span><span class="s1">&#39;test_data/KSL.qlc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>After we loaded the data, which is given in the general LingPy format for wordlists (see
@@ -182,7 +184,7 @@ created as an attribute of the LexStat object, is possible with help of LingPy�
 <p>Well, given that there are unrelated languages in our sample, we should be careful with any
 interpretations here, but let’s at least be glad that the algorithm did cluster the Indo-European
 languages all together.</p>
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -247,7 +249,7 @@ languages all together.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

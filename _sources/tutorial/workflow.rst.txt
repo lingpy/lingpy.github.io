@@ -6,12 +6,10 @@ This is an example workflow that illustrates some of the functionality of LingPy
 small dataset by :evobib:`Kessler2001` in order to illustrate how to get from word list data to
 aligned cognate sets.
 
-We start by loading the data, which is located in LingPy's test suite, and can be accessed with help
-of the :py:class:`~lingpy.tests.util.test_data` function. We use this function to load the file `KSL.qlc` (it provides the exact path to the file), and load the file as a :py:class:`~lingpy.compare.lexstat.LexStat` object::
+We start by loading the data, which is located in LingPy's test suite. We open a terminal in the `tests` folder in lingpy, and load the file as a :py:class:`~lingpy.compare.lexstat.LexStat` object::
 
   >>> from lingpy import *
-  >>> from lingpy.tests.util import test_data
-  >>> lex = LexStat(test_data('KSL.qlc'))
+  >>> lex = LexStat('test_data/KSL.qlc')
 
 After we loaded the data, which is given in the general LingPy format for wordlists (see
 :doc:`lingpy.basic.wordlist` for details), we can access some of its basic statistics, which are

@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>lingpy.sequence package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,17 +60,17 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-sequence-package">
+  <section id="lingpy-sequence-package">
 <h1>lingpy.sequence package<a class="headerlink" href="#lingpy-sequence-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-lingpy.sequence.generate">
+</section>
+<section id="module-lingpy.sequence.generate">
 <span id="lingpy-sequence-generate-module"></span><h2>lingpy.sequence.generate module<a class="headerlink" href="#module-lingpy.sequence.generate" title="Permalink to this headline">¶</a></h2>
 <p>Module provides simple basic classes for sequence generation using Markov models.</p>
 <dl class="py class">
-<dt id="lingpy.sequence.generate.MCBasic">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></code><code class="sig-name descname"><span class="pre">MCBasic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.generate.MCBasic">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></span><span class="sig-name descname"><span class="pre">MCBasic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for creating Markov chains from sequence training data.</p>
 <dl class="field-list">
@@ -79,16 +83,16 @@ should be either passed as lists or as tuples.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="lingpy.sequence.generate.MCBasic.walk">
-<code class="sig-name descname"><span class="pre">walk</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic.walk" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.generate.MCBasic.walk">
+<span class="sig-name descname"><span class="pre">walk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic.walk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create random sequence from the distribution.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="lingpy.sequence.generate.MCPhon">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></code><code class="sig-name descname"><span class="pre">MCPhon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">words</span></em>, <em class="sig-param"><span class="pre">tokens=False</span></em>, <em class="sig-param"><span class="pre">prostrings=[]</span></em>, <em class="sig-param"><span class="pre">classes=False</span></em>, <em class="sig-param"><span class="pre">class_model=&lt;sca-model</span> <span class="pre">&quot;sca&quot;&gt;</span></em>, <em class="sig-param"><span class="pre">**keywords</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.generate.MCPhon">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></span><span class="sig-name descname"><span class="pre">MCPhon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">words</span></em>, <em class="sig-param"><span class="pre">tokens=False</span></em>, <em class="sig-param"><span class="pre">prostrings=[]</span></em>, <em class="sig-param"><span class="pre">classes=False</span></em>, <em class="sig-param"><span class="pre">class_model=&lt;sca-model</span> <span class="pre">&quot;sca&quot;&gt;</span></em>, <em class="sig-param"><span class="pre">**keywords</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.sequence.generate.MCBasic</span></code></a></p>
 <p>Class for the creation of phonetic sequences (“pseudo words”).</p>
 <dl class="field-list">
@@ -110,13 +114,13 @@ list is empty, the profiles are generated automatically.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="lingpy.sequence.generate.MCPhon.evaluate_string">
-<code class="sig-name descname"><span class="pre">evaluate_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.evaluate_string" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.generate.MCPhon.evaluate_string">
+<span class="sig-name descname"><span class="pre">evaluate_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.evaluate_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.generate.MCPhon.get_string">
-<code class="sig-name descname"><span class="pre">get_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.get_string" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.generate.MCPhon.get_string">
+<span class="sig-name descname"><span class="pre">get_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon.get_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a string from the Markov chain created from the training data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -136,8 +140,8 @@ represent the sequences as a Markov chain is returned.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.sequence.ngrams">
+</section>
+<section id="module-lingpy.sequence.ngrams">
 <span id="lingpy-sequence-ngrams-module"></span><h2>lingpy.sequence.ngrams module<a class="headerlink" href="#module-lingpy.sequence.ngrams" title="Permalink to this headline">¶</a></h2>
 <p>This modules provides methods for generating and collecting ngrams.</p>
 <p>The methods allow to collect different kind of subsequences, such as standard
@@ -145,8 +149,8 @@ ngrams (preceding context), skip ngrams with both single or multiple gap
 openings (both preceding and following context), and positional ngrams (both
 preceding and following context).</p>
 <dl class="py class">
-<dt id="lingpy.sequence.ngrams.NgramModel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">NgramModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pre_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">NgramModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pre_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for operation upon sequences using ngrams models.</p>
 <p>This class allows different operations upon sequences after training ngram
@@ -156,8 +160,8 @@ and of cross-entropy/perplexity of a sequence, etc. As model training is
 computationally and time consuming for large datasets, trained models can
 be saved and loaded (“serialized”) from disk.</p>
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.add_sequences">
-<code class="sig-name descname"><span class="pre">add_sequences</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequences</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.add_sequences" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.add_sequences">
+<span class="sig-name descname"><span class="pre">add_sequences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequences</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.add_sequences" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds sequences to a model, collecting their ngrams.</p>
 <p>This method does not return any value, but cleans the internal
 matrix probability, if one was previously computed, and automatically
@@ -175,8 +179,8 @@ must be requested by the user by calling the <cite>.train()</cite> method.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.entropy">
-<code class="sig-name descname"><span class="pre">entropy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.entropy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.entropy">
+<span class="sig-name descname"><span class="pre">entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.entropy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the cross-entropy of a sequence.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -202,8 +206,8 @@ representation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.model_entropy">
-<code class="sig-name descname"><span class="pre">model_entropy</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.model_entropy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.model_entropy">
+<span class="sig-name descname"><span class="pre">model_entropy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.model_entropy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the model entropy.</p>
 <p>This methods collects the P x log(P) for all contexts, returning
 their sum. This is different from a sequence cross-entropy,
@@ -221,8 +225,8 @@ entropy might run into underflow problems.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.perplexity">
-<code class="sig-name descname"><span class="pre">perplexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.perplexity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.perplexity">
+<span class="sig-name descname"><span class="pre">perplexity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.perplexity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the perplexity of a model.</p>
 <p>As per definition, this is simply 2.0 to the cross-entropy of the
 given sequence on logarithmic base of 2.0.</p>
@@ -243,8 +247,8 @@ given sequence on logarithmic base of 2.0.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.random_seqs">
-<code class="sig-name descname"><span class="pre">random_seqs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_longest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attempts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.random_seqs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.random_seqs">
+<span class="sig-name descname"><span class="pre">random_seqs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_longest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attempts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.random_seqs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a set of random sequences based in the observed transition
 frequencies.</p>
 <p>This function tries to generate a set of <cite>k</cite> random sequences from the
@@ -311,8 +315,8 @@ thus reproduce the generated set of random sequences.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.score">
-<code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the relative likelihood of a sequence.</p>
 <p>The model must have been trained before using this function.</p>
 <dl class="field-list">
@@ -338,8 +342,8 @@ individual log-probability for each state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.state_score">
-<code class="sig-name descname"><span class="pre">state_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.state_score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.state_score">
+<span class="sig-name descname"><span class="pre">state_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.state_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the relative likelihood for each state in a sequence.</p>
 <p>Please note that this does not perform correction due to sequence
 length, as optionally and by default performed by the <cite>.score()</cite>
@@ -362,8 +366,8 @@ individual log-probability for each state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.sequence.ngrams.NgramModel.train">
-<code class="sig-name descname"><span class="pre">train</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'laplace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.train" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'laplace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Train a model after ngrams have been collected.</p>
 <p>This method does not return any value, but sets the internal variables
 with smoothed probabilities (such as <cite>self._p</cite> and <cite>self._p0</cite>) and
@@ -407,8 +411,8 @@ no context.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.bigrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">bigrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.bigrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.bigrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">bigrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.bigrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all bigrams of a sequence.</p>
 <p>The sequence is padded by default.</p>
 <dl class="field-list">
@@ -448,8 +452,8 @@ value different from None, defaults to “$$$”.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.fourgrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">fourgrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.fourgrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.fourgrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">fourgrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.fourgrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all fourgrams of a sequence.</p>
 <p>The sequence is padded by default.</p>
 <dl class="field-list">
@@ -491,8 +495,8 @@ value different from None, defaults to “$$$”.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.get_all_ngrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">get_all_ngrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.get_all_ngrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">get_all_ngrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns all possible n-grams of a given sequence.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -517,8 +521,8 @@ length.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.get_all_ngrams_by_order">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">get_all_ngrams_by_order</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_ngrams_by_order" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.get_all_ngrams_by_order">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">get_all_ngrams_by_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_ngrams_by_order" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all ngrams of a given set of orders.</p>
 <p>If no set of orders (i.e., “lengths”) is provided, this will collect all
 possible ngrams in the sequence.</p>
@@ -572,8 +576,8 @@ value different from None, defaults to “$$$”.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.get_all_posngrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">get_all_posngrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_orders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_orders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elm_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'###'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_posngrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.get_all_posngrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">get_all_posngrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_orders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_orders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elm_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'###'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_all_posngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all positional ngrams of a sequence.</p>
 <p>The elements of the iterator, as returned by “get_posngrams()”, include a
 tuple of the context, which can be hashed (as any tuple), the transition
@@ -651,8 +655,8 @@ context), (2) an object with the value of the transition symbol, and
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.get_n_ngrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">get_n_ngrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_n_ngrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.get_n_ngrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">get_n_ngrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_n_ngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all ngrams of a given order.</p>
 <p>The sequence can optionally be padded with boundary symbols which are
 equal for before and and after sequence boundaries.</p>
@@ -712,8 +716,8 @@ value different from None, defaults to “$$$”.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.get_posngrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">get_posngrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elm_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'###'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_posngrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.get_posngrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">get_posngrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elm_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'###'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_posngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all positional ngrams of a sequence.</p>
 <p>The preceding and a following orders (i.e., “contexts”) must always be
 informed. The elements of the iterator include a tuple of the context,
@@ -776,8 +780,8 @@ symbol, and (3) the index of the transition symbol in the sequence.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.get_skipngrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">get_skipngrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_gaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_skipngrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.get_skipngrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">get_skipngrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_gaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.get_skipngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all skip ngrams of a given length.</p>
 <p>The function requires an information of the length of the skip ngrams to be
 collected, allowing to either collect ngrams with an unlimited number
@@ -866,8 +870,8 @@ most one gap_opening is to be allowed. Defaults to True.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.ngrams.trigrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></code><code class="sig-name descname"><span class="pre">trigrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.trigrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.ngrams.trigrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">trigrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.trigrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an iterator for collecting all trigrams of a  sequence.</p>
 <p>The sequence is padded by default.</p>
 <dl class="field-list">
@@ -907,13 +911,13 @@ value different from None, defaults to “$$$”.</p>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.sequence.profile">
+</section>
+<section id="module-lingpy.sequence.profile">
 <span id="lingpy-sequence-profile-module"></span><h2>lingpy.sequence.profile module<a class="headerlink" href="#module-lingpy.sequence.profile" title="Permalink to this headline">¶</a></h2>
 <p>Module provides methods for the handling of orthography profiles.</p>
 <dl class="py function">
-<dt id="lingpy.sequence.profile.context_profile">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.profile.</span></code><code class="sig-name descname"><span class="pre">context_profile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'doculect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semi_diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hsʃ̢ɕʂʐʑʒw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/,;~'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_geminates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;???&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;?&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unknown_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'!{0}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">examples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_entries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.profile.context_profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.profile.context_profile">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.profile.</span></span><span class="sig-name descname"><span class="pre">context_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'doculect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semi_diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hsʃ̢ɕʂʐʑʒw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/,;~'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_geminates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;???&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;?&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unknown_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'!{0}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">examples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_entries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.profile.context_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an advanced Orthography Profile with context and doculect information.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -990,8 +994,8 @@ and the unicode-codepoints.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.profile.simple_profile">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.profile.</span></code><code class="sig-name descname"><span class="pre">simple_profile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semi_diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hsʃ̢ɕʂʐʑʒw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/,;~'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_geminates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;???&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;?&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unknown_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'!{0}'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.profile.simple_profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.profile.simple_profile">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.profile.</span></span><span class="sig-name descname"><span class="pre">simple_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wordlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ipa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semi_diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hsʃ̢ɕʂʐʑʒw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/,;~'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_geminates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_word</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;???&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;?&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unknown_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'!{0}'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.profile.simple_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an initial Orthography Profile using Lingpy’s clean_string procedure.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1058,16 +1062,16 @@ and the unicode-codepoints.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.sequence.smoothing">
+</section>
+<section id="module-lingpy.sequence.smoothing">
 <span id="lingpy-sequence-smoothing-module"></span><h2>lingpy.sequence.smoothing module<a class="headerlink" href="#module-lingpy.sequence.smoothing" title="Permalink to this headline">¶</a></h2>
 <p>Module providing various methods for using Ngram models.</p>
 <p>The smoothing methods are implemented to be as compatible as possible with
 those offered by NLTK. In fact, both implementation and comments try to follow
 Bird at al. as close as possible.</p>
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.certaintydegree_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">certaintydegree_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.certaintydegree_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.certaintydegree_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">certaintydegree_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.certaintydegree_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a log-probability distribution based on the degree of certainty.</p>
 <p>In this distribution a mass probability is reserved for unobserved samples
 from a computation of the degree of certainty that the are no unobserved
@@ -1111,8 +1115,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.ele_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">ele_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.ele_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.ele_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">ele_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.ele_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an Expected-Likelihood estimate log-probability distribution.</p>
 <p>In an Expected-Likelihood estimate log-probability the frequency
 distribution of observed samples is used to estimate the probability
@@ -1150,8 +1154,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.laplace_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">laplace_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.laplace_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.laplace_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">laplace_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.laplace_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Laplace estimate log-probability distribution.</p>
 <p>In a Laplace estimate log-probability the frequency distribution of
 observed samples is used to estimate the probability distribution of the
@@ -1189,8 +1193,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.lidstone_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">lidstone_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.lidstone_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.lidstone_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">lidstone_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.lidstone_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Lidstone estimate log-probability distribution.</p>
 <p>In a Lidstone estimate log-probability the frequency distribution of
 observed samples is used to estimate the probability distribution of the
@@ -1240,8 +1244,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.mle_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">mle_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.mle_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.mle_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">mle_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.mle_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Maximum-Likelihood Estimation log-probability distribution.</p>
 <p>In an MLE log-probability distribution the probability of each sample is
 approximated as the frequency of the same sample in the frequency
@@ -1277,8 +1281,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.random_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">random_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.random_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.random_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">random_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.random_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a random log-probability distribution.</p>
 <p>In a random log-probability distribution all samples, no matter the
 observed counts, will have a random log-probability computed from a set of
@@ -1317,8 +1321,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.sgt_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">sgt_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.sgt_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.sgt_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">sgt_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.sgt_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Simple Good-Turing log-probability distribution.</p>
 <p>The returned log-probability distribution is based on the Good-Turing
 frequency estimation, as first developed by Alan Turing and I. J. Good and
@@ -1388,8 +1392,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.smooth_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">smooth_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.smooth_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.smooth_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">smooth_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.smooth_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a smoothed log-probability distribution from a named method.</p>
 <p>This method is used to generalize over all implemented smoothing methods,
 especially in terms of serialization. The <cite>method</cite> argument informs which
@@ -1430,8 +1434,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.uniform_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">uniform_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.uniform_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.uniform_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">uniform_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.uniform_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a uniform log-probability distribution.</p>
 <p>In a uniform log-probability distribution all samples, no matter the
 observed counts, will have the same log-probability. A mass probability can
@@ -1465,8 +1469,8 @@ distribution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.smoothing.wittenbell_dist">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></code><code class="sig-name descname"><span class="pre">wittenbell_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.wittenbell_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.smoothing.wittenbell_dist">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.smoothing.</span></span><span class="sig-name descname"><span class="pre">wittenbell_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freqdist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.smoothing.wittenbell_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Witten-Bell estimate log-probability distribution.</p>
 <p>In a Witten-Bell estimate log-probability a uniform probability mass is
 allocated to yet unobserved samples by using the number of samples that
@@ -1512,24 +1516,24 @@ distribution.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.sequence.sound_classes">
+</section>
+<section id="module-lingpy.sequence.sound_classes">
 <span id="lingpy-sequence-sound-classes-module"></span><h2>lingpy.sequence.sound_classes module<a class="headerlink" href="#module-lingpy.sequence.sound_classes" title="Permalink to this headline">¶</a></h2>
 <p>Module provides various methods for the handling of sound classes.</p>
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.asjp2tokens">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">asjp2tokens</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.asjp2tokens" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.asjp2tokens">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">asjp2tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.asjp2tokens" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.check_tokens">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">check_tokens</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.check_tokens" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.check_tokens">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">check_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.check_tokens" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function checks whether tokens are given in a consistent input format.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.class2tokens">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">class2tokens</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.class2tokens" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.class2tokens">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">class2tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.class2tokens" title="Permalink to this definition">¶</a></dt>
 <dd><p>Turn aligned sound-class sequences into an aligned sequences of IPA tokens.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1574,8 +1578,8 @@ alignment of the class string.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.clean_string">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">clean_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semi_diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hsʃ̢ɕʂʐʑʒw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segmentized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_entries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/,;~'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_geminates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.clean_string" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.clean_string">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">clean_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semi_diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hsʃ̢ɕʂʐʑʒw'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_vowels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segmentized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_entries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/,;~'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_geminates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NFC'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.clean_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function exhaustively checks how well a sequence is understood by             LingPy.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1634,14 +1638,14 @@ entry. If there are no splitters, the list has only size one.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.codepoint">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">codepoint</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.codepoint" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.codepoint">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">codepoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.codepoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return unicode codepoint(s) for a character set.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.get_all_ngrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">get_all_ngrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.get_all_ngrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">get_all_ngrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.get_all_ngrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function returns all possible n-grams of a given sequence.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1666,8 +1670,8 @@ length.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.ipa2tokens">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">ipa2tokens</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">istring</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.ipa2tokens" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.ipa2tokens">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">ipa2tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">istring</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.ipa2tokens" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tokenize IPA-encoded strings.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1751,8 +1755,8 @@ brackets are removed along with the brackets, and</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.ono_parse">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">ono_parse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.ono_parse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.ono_parse">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">ono_parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.ono_parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a rough onset-nucleus-offset parse of a word in IPA.</p>
 <p class="rubric">Notes</p>
 <p>Method is an approximation and not supposed to do without flaws. It is,
@@ -1770,15 +1774,15 @@ in which 7 different contexts for each word are distinguished:</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.pgrams">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">pgrams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.pgrams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.pgrams">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">pgrams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.pgrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a given sequence into bigrams consisting of prosodic string symbols and the
 tokens of the original sequence.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.pid">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">pid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">almA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">almB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.pid" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.pid">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">pid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">almA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">almB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.pid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Percentage Identity (PID) score for aligned sequence pairs.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1838,8 +1842,8 @@ alignment.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.prosodic_string">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">prosodic_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.prosodic_string" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.prosodic_string">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">prosodic_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.prosodic_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a prosodic string of the sonority profile of a sequence.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1912,8 +1916,8 @@ ascending sonority</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.prosodic_weights">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">prosodic_weights</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prostring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.prosodic_weights" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.prosodic_weights">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">prosodic_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prostring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.prosodic_weights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate prosodic weights for each position of a sequence.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1953,8 +1957,8 @@ the gap score of a given segment in alignment analyses (see <code class="docutil
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.sampa2uni">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">sampa2uni</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.sampa2uni" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.sampa2uni">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">sampa2uni</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.sampa2uni" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert sequence in IPA-sampa-format to IPA-unicode.</p>
 <p class="rubric">Notes</p>
 <p>This function is based on code taken from Peter Kleiweg
@@ -1962,8 +1966,8 @@ the gap score of a given segment in alignment analyses (see <code class="docutil
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.syllabify">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">syllabify</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'flat'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.syllabify" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.syllabify">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">syllabify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'flat'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.syllabify" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a simple syllabification of a sequence, using sonority as a proxy.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1998,8 +2002,8 @@ the alignment is passed in segmented form.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.token2class">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">token2class</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cldf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.token2class" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.token2class">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">token2class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cldf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.token2class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a single token into a sound-class.</p>
 <dl>
 <dt>tokens<span class="classifier">str</span></dt><dd><p>A token (phonetic segment).</p>
@@ -2040,8 +2044,8 @@ cannot be resolved, the respective string will be rendered as “0”
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.tokens2class">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">tokens2class</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cldf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.tokens2class">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">tokens2class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diacritics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cldf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert tokenized IPA strings into their respective class strings.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2109,8 +2113,8 @@ raises a ValueError, if a resulting sequence only contains unknown sounds.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.sequence.sound_classes.tokens2morphemes">
-<code class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></code><code class="sig-name descname"><span class="pre">tokens2morphemes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2morphemes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.sequence.sound_classes.tokens2morphemes">
+<span class="sig-prename descclassname"><span class="pre">lingpy.sequence.sound_classes.</span></span><span class="sig-name descname"><span class="pre">tokens2morphemes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.sound_classes.tokens2morphemes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split a string into morphemes if it contains separators.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -2137,12 +2141,12 @@ it will still split the string according to the tones. If you want to avoid
 this behavior, set the keyword <strong>split_on_tones</strong> to False.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.sequence">
+</section>
+<section id="module-lingpy.sequence">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.sequence" title="Permalink to this headline">¶</a></h2>
 <p>Module provides methods and functions for dealing with linguistic sequences.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -2221,7 +2225,7 @@ this behavior, set the keyword <strong>split_on_tones</strong> to False.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

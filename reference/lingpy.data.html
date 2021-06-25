@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>lingpy.data package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,9 +60,9 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-data-package">
+  <section id="lingpy-data-package">
 <h1>lingpy.data package<a class="headerlink" href="#lingpy-data-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
+<section id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -70,11 +74,11 @@ LingPy
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="submodules">
+</section>
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-lingpy.data.derive">
+</section>
+<section id="module-lingpy.data.derive">
 <span id="lingpy-data-derive-module"></span><h2>lingpy.data.derive module<a class="headerlink" href="#module-lingpy.data.derive" title="Permalink to this headline">¶</a></h2>
 <p>Module for the derivation of sound class models.</p>
 <p>The module provides functions for the customized compilation of sound-class models.
@@ -82,8 +86,8 @@ All models are defined in simple text files. In order to guarantee their quick
 access when loading the library, the models are compiled and stored in binary
 files.</p>
 <dl class="py function">
-<dt id="lingpy.data.derive.compile_dvt">
-<code class="sig-prename descclassname"><span class="pre">lingpy.data.derive.</span></code><code class="sig-name descname"><span class="pre">compile_dvt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_dvt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.data.derive.compile_dvt">
+<span class="sig-prename descclassname"><span class="pre">lingpy.data.derive.</span></span><span class="sig-name descname"><span class="pre">compile_dvt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_dvt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function compiles diacritics, vowels, and tones.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -105,8 +109,8 @@ character, whereas diacritics are preceded by a dash.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.data.derive.compile_model">
-<code class="sig-prename descclassname"><span class="pre">lingpy.data.derive.</span></code><code class="sig-name descname"><span class="pre">compile_model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.data.derive.compile_model">
+<span class="sig-prename descclassname"><span class="pre">lingpy.data.derive.</span></span><span class="sig-name descname"><span class="pre">compile_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.derive.compile_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function compiles customized sound-class models.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -196,13 +200,13 @@ created and stored as a binary.  The model can be loaded with help of the
 and functions provided by the library.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.data.model">
+</section>
+<section id="module-lingpy.data.model">
 <span id="lingpy-data-model-module"></span><h2>lingpy.data.model module<a class="headerlink" href="#module-lingpy.data.model" title="Permalink to this headline">¶</a></h2>
 <p>Module for handling sequence models.</p>
 <dl class="py class">
-<dt id="lingpy.data.model.Model">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.data.model.</span></code><code class="sig-name descname"><span class="pre">Model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.data.model.Model">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.data.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for the handling of sound-class models.</p>
 <dl class="field-list">
@@ -307,21 +311,21 @@ from wich the model is loaded.</p></td>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.data.model.load_dvt">
-<code class="sig-prename descclassname"><span class="pre">lingpy.data.model.</span></code><code class="sig-name descname"><span class="pre">load_dvt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.load_dvt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.data.model.load_dvt">
+<span class="sig-prename descclassname"><span class="pre">lingpy.data.model.</span></span><span class="sig-name descname"><span class="pre">load_dvt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.data.model.load_dvt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function loads the default characters for IPA diacritics and IPA vowels of LingPy.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.data">
+</section>
+<section id="module-lingpy.data">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.data" title="Permalink to this headline">¶</a></h2>
 <p>LingPy comes along with many different kinds of predefined data. When loading
 the library, the following dictionary is automatically loaded and employed by
 all LingPy modules:</p>
 <blockquote>
 <div><dl class="py data">
-<dt>
-<code class="sig-name descname"><span class="pre">rcParams</span> <span class="pre">:</span> <span class="pre">dict</span></code></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">rcParams</span> <span class="pre">:</span> <span class="pre">dict</span></span></dt>
 <dd><p>As an alternative to all global variables, this dictionary
 contains all these variables, and additional ones. This dictionary is used
 for internal coding purposes and stores parameters that are globally set (if
@@ -355,8 +359,8 @@ for this purpose.</p>
 
 </div></blockquote>
 <dl class="py function">
-<dt id="lingpy.settings.rc">
-<code class="sig-prename descclassname"><span class="pre">lingpy.settings.</span></code><code class="sig-name descname"><span class="pre">rc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rcParams_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.settings.rc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.settings.rc">
+<span class="sig-prename descclassname"><span class="pre">lingpy.settings.</span></span><span class="sig-name descname"><span class="pre">rc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rcParams_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.settings.rc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function changes parameters globally set for LingPy sessions.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -402,8 +406,8 @@ unexpected behavior.</p>
 </div>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -480,7 +484,7 @@ unexpected behavior.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

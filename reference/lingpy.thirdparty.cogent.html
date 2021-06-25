@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>lingpy.thirdparty.cogent package &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,12 +60,12 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lingpy-thirdparty-cogent-package">
+  <section id="lingpy-thirdparty-cogent-package">
 <h1>lingpy.thirdparty.cogent package<a class="headerlink" href="#lingpy-thirdparty-cogent-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-lingpy.thirdparty.cogent.newick">
+</section>
+<section id="module-lingpy.thirdparty.cogent.newick">
 <span id="lingpy-thirdparty-cogent-newick-module"></span><h2>lingpy.thirdparty.cogent.newick module<a class="headerlink" href="#module-lingpy.thirdparty.cogent.newick" title="Permalink to this headline">¶</a></h2>
 <dl class="simple">
 <dt>Newick format with all features as per the specs at:</dt><dd><p><a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newick_doc.html">http://evolution.genetics.washington.edu/phylip/newick_doc.html</a>
@@ -79,14 +83,14 @@ Spaces and quote marks are OK inside unquoted labels.</p>
 </dd>
 </dl>
 <dl class="py exception">
-<dt id="lingpy.thirdparty.cogent.newick.TreeParseError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.newick.</span></code><code class="sig-name descname"><span class="pre">TreeParseError</span></code><a class="headerlink" href="#lingpy.thirdparty.cogent.newick.TreeParseError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.newick.TreeParseError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.newick.</span></span><span class="sig-name descname"><span class="pre">TreeParseError</span></span><a class="headerlink" href="#lingpy.thirdparty.cogent.newick.TreeParseError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.thirdparty.cogent.newick.parse_string">
-<code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.newick.</span></code><code class="sig-name descname"><span class="pre">parse_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.newick.parse_string" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.newick.parse_string">
+<span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.newick.</span></span><span class="sig-name descname"><span class="pre">parse_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.newick.parse_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses a Newick-format string, using specified constructor for tree.</p>
 <p>Calls constructor(children, name, attributes)</p>
 <p>Note: underscore_unmunge, if True, replaces underscores with spaces in
@@ -94,8 +98,8 @@ the data that’s read in. This is part of the Newick format, but it is
 often useful to suppress this behavior.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.thirdparty.cogent.tree">
+</section>
+<section id="module-lingpy.thirdparty.cogent.tree">
 <span id="lingpy-thirdparty-cogent-tree-module"></span><h2>lingpy.thirdparty.cogent.tree module<a class="headerlink" href="#module-lingpy.thirdparty.cogent.tree" title="Permalink to this headline">¶</a></h2>
 <p>Classes for storing and manipulating a phylogenetic tree.</p>
 <p>These trees can be either strictly binary, or have polytomies
@@ -125,8 +129,8 @@ from a node</p></li>
 </dd>
 </dl>
 <dl class="py function">
-<dt id="lingpy.thirdparty.cogent.tree.LoadTree">
-<code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">LoadTree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treestring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underscore_unmunge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.LoadTree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.LoadTree">
+<span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">LoadTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treestring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">underscore_unmunge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.LoadTree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor for tree.</p>
 <dl class="simple">
 <dt>Arguments, use only one of:</dt><dd><ul class="simple">
@@ -143,17 +147,17 @@ with spaces in all names read.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">PhyloNode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">PhyloNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="lingpy.thirdparty.cogent.tree.TreeNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.thirdparty.cogent.tree.TreeNode</span></code></a></p>
-<dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.Length">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">Length</span></code><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.Length" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.Length">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Length</span></span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.Length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.balanced">
-<code class="sig-name descname"><span class="pre">balanced</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.balanced" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.balanced">
+<span class="sig-name descname"><span class="pre">balanced</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.balanced" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tree ‘rooted’ here with no neighbour having &gt; 50% of the edges.</p>
 <p class="rubric">Notes</p>
 <p>Using a balanced tree can substantially improve performance of
@@ -164,24 +168,24 @@ stems for model parameterisation should be done using the
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.bifurcating">
-<code class="sig-name descname"><span class="pre">bifurcating</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.bifurcating" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.bifurcating">
+<span class="sig-name descname"><span class="pre">bifurcating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.bifurcating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.compareByPartitions">
-<code class="sig-name descname"><span class="pre">compareByPartitions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.compareByPartitions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.compareByPartitions">
+<span class="sig-name descname"><span class="pre">compareByPartitions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.compareByPartitions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.distance">
-<code class="sig-name descname"><span class="pre">distance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.distance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns branch length between self and other.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.getDistances">
-<code class="sig-name descname"><span class="pre">getDistances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.getDistances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.getDistances">
+<span class="sig-name descname"><span class="pre">getDistances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.getDistances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The distance matrix as a dictionary.</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>Grabs the branch lengths (evolutionary distances) as
@@ -191,8 +195,8 @@ a complete matrix (i.e. a,b and b,a).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.getNewick">
-<code class="sig-name descname"><span class="pre">getNewick</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semicolon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.getNewick" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.getNewick">
+<span class="sig-name descname"><span class="pre">getNewick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semicolon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.getNewick" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the newick string for this tree.</p>
 <dl class="simple">
 <dt>Arguments:</dt><dd><ul class="simple">
@@ -212,24 +216,24 @@ by Zongzhi Liu</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.prune">
-<code class="sig-name descname"><span class="pre">prune</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.prune" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.prune">
+<span class="sig-name descname"><span class="pre">prune</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.prune" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reconstructs correct tree after nodes have been removed.</p>
 <p>Internal nodes with only one child will be removed and new connections
 and Branch lengths will be made to reflect change.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.rootAtMidpoint">
-<code class="sig-name descname"><span class="pre">rootAtMidpoint</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootAtMidpoint" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.rootAtMidpoint">
+<span class="sig-name descname"><span class="pre">rootAtMidpoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootAtMidpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>return a new tree rooted at midpoint of the two tips farthest apart</p>
 <p>this fn doesn’t preserve the internal node naming or structure,
 but does keep tip to tip distances correct.  uses unrootedDeepcopy()</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.rootedAt">
-<code class="sig-name descname"><span class="pre">rootedAt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootedAt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.rootedAt">
+<span class="sig-name descname"><span class="pre">rootedAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootedAt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a new tree rooted at the provided node.</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>This can be useful for drawing unrooted trees with an orientation
@@ -239,20 +243,20 @@ that reflects knowledge of the true root location.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.rootedWithTip">
-<code class="sig-name descname"><span class="pre">rootedWithTip</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outgroup_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootedWithTip" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.rootedWithTip">
+<span class="sig-name descname"><span class="pre">rootedWithTip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outgroup_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.rootedWithTip" title="Permalink to this definition">¶</a></dt>
 <dd><p>A new tree with the named tip as one of the root’s children</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.sameTopology">
-<code class="sig-name descname"><span class="pre">sameTopology</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.sameTopology" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.sameTopology">
+<span class="sig-name descname"><span class="pre">sameTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.sameTopology" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tests whether two trees have the same topology.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.scaleBranchLengths">
-<code class="sig-name descname"><span class="pre">scaleBranchLengths</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ultrametric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.scaleBranchLengths" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.scaleBranchLengths">
+<span class="sig-name descname"><span class="pre">scaleBranchLengths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ultrametric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.scaleBranchLengths" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scales BranchLengths in place to integers for ascii output.</p>
 <p>Warning: tree might not be exactly the length you specify.</p>
 <p>Set ultrametric=True if you want all the root-tip distances to end
@@ -260,14 +264,14 @@ up precisely the same.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.setTipDistances">
-<code class="sig-name descname"><span class="pre">setTipDistances</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.setTipDistances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.setTipDistances">
+<span class="sig-name descname"><span class="pre">setTipDistances</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.setTipDistances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets distance from each node to the most distant tip.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.tipToTipDistances">
-<code class="sig-name descname"><span class="pre">tipToTipDistances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.tipToTipDistances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.tipToTipDistances">
+<span class="sig-name descname"><span class="pre">tipToTipDistances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.tipToTipDistances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns distance matrix between all pairs of tips, and a tip order.</p>
 <p>Warning: .__start and .__stop added to self and its descendants.</p>
 <p>tip_order contains the actual node objects, not their names (may be
@@ -275,51 +279,51 @@ confusing in some cases).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.totalDescendingBranchLength">
-<code class="sig-name descname"><span class="pre">totalDescendingBranchLength</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.totalDescendingBranchLength" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.totalDescendingBranchLength">
+<span class="sig-name descname"><span class="pre">totalDescendingBranchLength</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.totalDescendingBranchLength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns total descending branch length from self</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.unrooted">
-<code class="sig-name descname"><span class="pre">unrooted</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.unrooted" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.unrooted">
+<span class="sig-name descname"><span class="pre">unrooted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.unrooted" title="Permalink to this definition">¶</a></dt>
 <dd><p>A tree with at least 3 children at the root.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.PhyloNode.unrootedDeepcopy">
-<code class="sig-name descname"><span class="pre">unrootedDeepcopy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.unrootedDeepcopy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.PhyloNode.unrootedDeepcopy">
+<span class="sig-name descname"><span class="pre">unrootedDeepcopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.PhyloNode.unrootedDeepcopy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="lingpy.thirdparty.cogent.tree.TreeBuilder">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">TreeBuilder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mutable=False</span></em>, <em class="sig-param"><span class="pre">constructor=&lt;class</span> <span class="pre">'lingpy.thirdparty.cogent.tree.PhyloNode'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeBuilder">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">TreeBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mutable=False</span></em>, <em class="sig-param"><span class="pre">constructor=&lt;class</span> <span class="pre">'lingpy.thirdparty.cogent.tree.PhyloNode'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge">
-<code class="sig-name descname"><span class="pre">createEdge</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">children</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameLoaded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge">
+<span class="sig-name descname"><span class="pre">createEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">children</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameLoaded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder.createEdge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Callback for newick parser</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeBuilder.edgeFromEdge">
-<code class="sig-name descname"><span class="pre">edgeFromEdge</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder.edgeFromEdge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeBuilder.edgeFromEdge">
+<span class="sig-name descname"><span class="pre">edgeFromEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeBuilder.edgeFromEdge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Callback for tree-to-tree transforms like getSubTree</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py exception">
-<dt id="lingpy.thirdparty.cogent.tree.TreeError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">TreeError</span></code><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">TreeError</span></span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">TreeNode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NameLoaded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">TreeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NameLoaded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Store information about a tree node. Mutable.</p>
 <dl class="simple">
@@ -329,9 +333,9 @@ Params: dict containing arbitrary parameters for the node.
 NameLoaded: ?</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.Parent">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">Parent</span></code><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.Parent" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.Parent">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Parent</span></span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.Parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Accessor for parent.</p>
 <p>If using an algorithm that accesses Parent a lot, it will be much
 faster to access self._parent directly, but don’t do it if mutating
@@ -339,20 +343,20 @@ self._parent! (or, if you must, remember to clean up the refs).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.ancestors">
-<code class="sig-name descname"><span class="pre">ancestors</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.ancestors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.ancestors">
+<span class="sig-name descname"><span class="pre">ancestors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.ancestors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all ancestors back to the root. Dynamically calculated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.append">
-<code class="sig-name descname"><span class="pre">append</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.append" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.append" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends i to self.Children, in-place, cleaning up refs.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.asciiArt">
-<code class="sig-name descname"><span class="pre">asciiArt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_internal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.asciiArt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.asciiArt">
+<span class="sig-name descname"><span class="pre">asciiArt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_internal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.asciiArt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a string containing an ascii drawing of the tree.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -375,21 +379,21 @@ self._parent! (or, if you must, remember to clean up the refs).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.childGroups">
-<code class="sig-name descname"><span class="pre">childGroups</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.childGroups" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.childGroups">
+<span class="sig-name descname"><span class="pre">childGroups</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.childGroups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns list containing lists of children sharing a state.</p>
 <p>In other words, returns runs of tip and nontip children.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.compareByNames">
-<code class="sig-name descname"><span class="pre">compareByNames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareByNames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.compareByNames">
+<span class="sig-name descname"><span class="pre">compareByNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareByNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Equality test for trees by name</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.compareBySubsets">
-<code class="sig-name descname"><span class="pre">compareBySubsets</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_absent_taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareBySubsets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.compareBySubsets">
+<span class="sig-name descname"><span class="pre">compareBySubsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_absent_taxa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareBySubsets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns fraction of overlapping subsets where self and other differ.</p>
 <p>Other is expected to be a tree object compatible with PhyloNode.</p>
 <p class="rubric">Notes</p>
@@ -399,27 +403,27 @@ tips first.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.compareName">
-<code class="sig-name descname"><span class="pre">compareName</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareName" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.compareName">
+<span class="sig-name descname"><span class="pre">compareName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.compareName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compares TreeNode by name</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nil</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ignored'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nil</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ignored'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of self using an iterative approach</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive">
-<code class="sig-name descname"><span class="pre">copyRecursive</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nil</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ignored'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive">
+<span class="sig-name descname"><span class="pre">copyRecursive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nil</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ignored'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyRecursive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns copy of self’s structure, including shallow copy of attrs.</p>
 <p>constructor is ignored; required to support old tree unit tests.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.copyTopology">
-<code class="sig-name descname"><span class="pre">copyTopology</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyTopology" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.copyTopology">
+<span class="sig-name descname"><span class="pre">copyTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.copyTopology" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies only the topology and labels of a tree, not any extra data.</p>
 <p>Useful when you want another copy of the tree with the same structure
 and labels, but want to e.g. assign different branch lengths and
@@ -428,14 +432,14 @@ faster than the copy() method.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.deepcopy">
-<code class="sig-name descname"><span class="pre">deepcopy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nil</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ignored'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.deepcopy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.deepcopy">
+<span class="sig-name descname"><span class="pre">deepcopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_nil</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ignored'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.deepcopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of self using an iterative approach</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.descendantArray">
-<code class="sig-name descname"><span class="pre">descendantArray</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tip_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.descendantArray" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.descendantArray">
+<span class="sig-name descname"><span class="pre">descendantArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tip_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.descendantArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns numpy array with nodes in rows and descendants in columns.</p>
 <p>A value of 1 indicates that the decendant is a descendant of that node/
 A value of 0 indicates that it is not</p>
@@ -447,27 +451,27 @@ nodes will appear as rows in preorder traversal order.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.extend">
-<code class="sig-name descname"><span class="pre">extend</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.extend" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.extend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extends self.Children by items, in-place, cleaning up refs.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getConnectingEdges">
-<code class="sig-name descname"><span class="pre">getConnectingEdges</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getConnectingEdges" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getConnectingEdges">
+<span class="sig-name descname"><span class="pre">getConnectingEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getConnectingEdges" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a list of edges connecting two nodes</p>
 <p>includes self and other in the list</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getConnectingNode">
-<code class="sig-name descname"><span class="pre">getConnectingNode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getConnectingNode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getConnectingNode">
+<span class="sig-name descname"><span class="pre">getConnectingNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getConnectingNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the last common ancestor of the two named edges.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getDistances">
-<code class="sig-name descname"><span class="pre">getDistances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getDistances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getDistances">
+<span class="sig-name descname"><span class="pre">getDistances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getDistances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The distance matrix as a dictionary.</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>Grabs the branch lengths (evolutionary distances) as
@@ -477,8 +481,8 @@ a complete matrix (i.e. a,b and b,a).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getEdgeNames">
-<code class="sig-name descname"><span class="pre">getEdgeNames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tip1name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip2name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getclade</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getstem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outgroup_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getEdgeNames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getEdgeNames">
+<span class="sig-name descname"><span class="pre">getEdgeNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tip1name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip2name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getclade</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getstem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outgroup_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getEdgeNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the list of stem and/or sub tree (clade) edge name(s).
 This is done by finding the common intersection, and then getting
 the list of names. If the clade traverses the root, then use the
@@ -503,21 +507,21 @@ method <cite>setParamRule()</cite> along with the parameter name etc..</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getEdgeVector">
-<code class="sig-name descname"><span class="pre">getEdgeVector</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getEdgeVector" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getEdgeVector">
+<span class="sig-name descname"><span class="pre">getEdgeVector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getEdgeVector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collect the list of edges in postfix order</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getMaxTipTipDistance">
-<code class="sig-name descname"><span class="pre">getMaxTipTipDistance</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getMaxTipTipDistance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getMaxTipTipDistance">
+<span class="sig-name descname"><span class="pre">getMaxTipTipDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getMaxTipTipDistance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the max tip tip distance between any pair of tips</p>
 <p>Returns (dist, tip_names, internal_node)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getNewick">
-<code class="sig-name descname"><span class="pre">getNewick</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semicolon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNewick" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getNewick">
+<span class="sig-name descname"><span class="pre">getNewick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semicolon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNewick" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the newick string for this tree.</p>
 <dl class="simple">
 <dt>Arguments:</dt><dd><ul class="simple">
@@ -537,8 +541,8 @@ by Zongzhi Liu</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getNewickRecursive">
-<code class="sig-name descname"><span class="pre">getNewickRecursive</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semicolon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNewickRecursive" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getNewickRecursive">
+<span class="sig-name descname"><span class="pre">getNewickRecursive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semicolon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNewickRecursive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the newick string for this edge.</p>
 <dl class="simple">
 <dt>Arguments:</dt><dd><ul class="simple">
@@ -555,34 +559,34 @@ by Zongzhi Liu</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getNodeMatchingName">
-<code class="sig-name descname"><span class="pre">getNodeMatchingName</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNodeMatchingName" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getNodeMatchingName">
+<span class="sig-name descname"><span class="pre">getNodeMatchingName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNodeMatchingName" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getNodeNames">
-<code class="sig-name descname"><span class="pre">getNodeNames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">includeself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipsonly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNodeNames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getNodeNames">
+<span class="sig-name descname"><span class="pre">getNodeNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">includeself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipsonly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNodeNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of edges from this edge - may or may not include self.
 This node (or first connection) will be the first, and then they will
 be listed in the natural traverse order.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getNodesDict">
-<code class="sig-name descname"><span class="pre">getNodesDict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNodesDict" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getNodesDict">
+<span class="sig-name descname"><span class="pre">getNodesDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getNodesDict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a dict keyed by node name, value is node</p>
 <p>Will raise TreeError if non-unique names are encountered</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getParamValue">
-<code class="sig-name descname"><span class="pre">getParamValue</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getParamValue" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getParamValue">
+<span class="sig-name descname"><span class="pre">getParamValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getParamValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the parameter value for named edge</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getSubTree">
-<code class="sig-name descname"><span class="pre">getSubTree</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getSubTree" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getSubTree">
+<span class="sig-name descname"><span class="pre">getSubTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getSubTree" title="Permalink to this definition">¶</a></dt>
 <dd><p>A new instance of a sub tree that contains all the otus that are
 listed in name_list.</p>
 <p>ignore_missing: if False, getSubTree will raise a ValueError if 
@@ -595,14 +599,14 @@ have one child node.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.getTipNames">
-<code class="sig-name descname"><span class="pre">getTipNames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">includeself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getTipNames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.getTipNames">
+<span class="sig-name descname"><span class="pre">getTipNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">includeself</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.getTipNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>return the list of the names of all tips contained by this edge</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.get_LCA">
-<code class="sig-name descname"><span class="pre">get_LCA</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.get_LCA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.get_LCA">
+<span class="sig-name descname"><span class="pre">get_LCA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.get_LCA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find lowest common ancestor of a given number of nodes.</p>
 <p class="rubric">Notes</p>
 <p>This function is supposed to yield the same output as
@@ -614,86 +618,86 @@ nodes).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.indexInParent">
-<code class="sig-name descname"><span class="pre">indexInParent</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.indexInParent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.indexInParent">
+<span class="sig-name descname"><span class="pre">indexInParent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.indexInParent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns index of self in parent.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.insert">
-<code class="sig-name descname"><span class="pre">insert</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.insert" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.insert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inserts an item at specified position in self.Children.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.isRoot">
-<code class="sig-name descname"><span class="pre">isRoot</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.isRoot" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.isRoot">
+<span class="sig-name descname"><span class="pre">isRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.isRoot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if the current is a root, i.e. has no parent.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.isTip">
-<code class="sig-name descname"><span class="pre">isTip</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.isTip" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.isTip">
+<span class="sig-name descname"><span class="pre">isTip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.isTip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if the current node is a tip, i.e. has no children.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.isroot">
-<code class="sig-name descname"><span class="pre">isroot</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.isroot" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.isroot">
+<span class="sig-name descname"><span class="pre">isroot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.isroot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if root of a tree, i.e. no parent.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.istip">
-<code class="sig-name descname"><span class="pre">istip</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.istip" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.istip">
+<span class="sig-name descname"><span class="pre">istip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.istip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if is tip, i.e. no children.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.iterNontips">
-<code class="sig-name descname"><span class="pre">iterNontips</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.iterNontips" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.iterNontips">
+<span class="sig-name descname"><span class="pre">iterNontips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.iterNontips" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterates over nontips descended from self, [] if none.</p>
 <p>include_self, if True (default is False), will return the current
 node as part of the list of nontips if it is a nontip.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.iterTips">
-<code class="sig-name descname"><span class="pre">iterTips</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.iterTips" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.iterTips">
+<span class="sig-name descname"><span class="pre">iterTips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.iterTips" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterates over tips descended from self, [] if self is a tip.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.lastCommonAncestor">
-<code class="sig-name descname"><span class="pre">lastCommonAncestor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.lastCommonAncestor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.lastCommonAncestor">
+<span class="sig-name descname"><span class="pre">lastCommonAncestor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.lastCommonAncestor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds last common ancestor of self and other, or None.</p>
 <p>Always tests by identity.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.lca">
-<code class="sig-name descname"><span class="pre">lca</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.lca" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.lca">
+<span class="sig-name descname"><span class="pre">lca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.lca" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds last common ancestor of self and other, or None.</p>
 <p>Always tests by identity.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.levelorder">
-<code class="sig-name descname"><span class="pre">levelorder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.levelorder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.levelorder">
+<span class="sig-name descname"><span class="pre">levelorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.levelorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs levelorder iteration over tree</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.lowestCommonAncestor">
-<code class="sig-name descname"><span class="pre">lowestCommonAncestor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.lowestCommonAncestor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.lowestCommonAncestor">
+<span class="sig-name descname"><span class="pre">lowestCommonAncestor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.lowestCommonAncestor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lowest common ancestor for a list of tipnames</p>
 <p>This should be around O(H sqrt(n)), where H is height and n is the
 number of tips passed in.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.makeTreeArray">
-<code class="sig-name descname"><span class="pre">makeTreeArray</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dec_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.makeTreeArray" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.makeTreeArray">
+<span class="sig-name descname"><span class="pre">makeTreeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dec_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.makeTreeArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes an array with nodes in rows and descendants in columns.</p>
 <p>A value of 1 indicates that the decendant is a descendant of that node/
 A value of 0 indicates that it is not</p>
@@ -702,41 +706,41 @@ in the array</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.maxTipTipDistance">
-<code class="sig-name descname"><span class="pre">maxTipTipDistance</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.maxTipTipDistance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.maxTipTipDistance">
+<span class="sig-name descname"><span class="pre">maxTipTipDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.maxTipTipDistance" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the max distance between any pair of tips</p>
 <p>Also returns the tip names  that it is between as a tuple</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.nameUnnamedNodes">
-<code class="sig-name descname"><span class="pre">nameUnnamedNodes</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.nameUnnamedNodes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.nameUnnamedNodes">
+<span class="sig-name descname"><span class="pre">nameUnnamedNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.nameUnnamedNodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the Data property of unnamed nodes to an arbitrary value</p>
 <p>Internal nodes are often unnamed and so this function assigns a
 value for referencing.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.nonTipChildren">
-<code class="sig-name descname"><span class="pre">nonTipChildren</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.nonTipChildren" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.nonTipChildren">
+<span class="sig-name descname"><span class="pre">nonTipChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.nonTipChildren" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns direct children in self that have descendants.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.nontips">
-<code class="sig-name descname"><span class="pre">nontips</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.nontips" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.nontips">
+<span class="sig-name descname"><span class="pre">nontips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.nontips" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns nontips descended from self.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.pop">
-<code class="sig-name descname"><span class="pre">pop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.pop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.pop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns and deletes child of self at index (default: -1)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.postorder">
-<code class="sig-name descname"><span class="pre">postorder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.postorder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.postorder">
+<span class="sig-name descname"><span class="pre">postorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.postorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs postorder iteration over tree.</p>
 <p>This is somewhat inelegant compared to saving the node and its index
 on the stack, but is 30% faster in the average case and 3x faster in
@@ -762,68 +766,68 @@ stack.append([curr.Children[child_idx], 0])</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.pre_and_postorder">
-<code class="sig-name descname"><span class="pre">pre_and_postorder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.pre_and_postorder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.pre_and_postorder">
+<span class="sig-name descname"><span class="pre">pre_and_postorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.pre_and_postorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs iteration over tree, visiting node before and after.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.preorder">
-<code class="sig-name descname"><span class="pre">preorder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.preorder" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.preorder">
+<span class="sig-name descname"><span class="pre">preorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.preorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs preorder iteration over tree.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.prune">
-<code class="sig-name descname"><span class="pre">prune</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.prune" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.prune">
+<span class="sig-name descname"><span class="pre">prune</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.prune" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reconstructs correct topology after nodes have been removed.</p>
 <p>Internal nodes with only one child will be removed and new connections
 will be made to reflect change.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.reassignNames">
-<code class="sig-name descname"><span class="pre">reassignNames</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.reassignNames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.reassignNames">
+<span class="sig-name descname"><span class="pre">reassignNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.reassignNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reassigns node names based on a mapping dict</p>
 <p>mapping : dict, old_name -&gt; new_name
 nodes : specific nodes for renaming (such as just tips, etc…)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.remove">
-<code class="sig-name descname"><span class="pre">remove</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.remove" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes node by name instead of identity.</p>
 <p>Returns True if node was present, False otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.removeNode">
-<code class="sig-name descname"><span class="pre">removeNode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.removeNode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.removeNode">
+<span class="sig-name descname"><span class="pre">removeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.removeNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes node by identity instead of value.</p>
 <p>Returns True if node was present, False otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.root">
-<code class="sig-name descname"><span class="pre">root</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.root" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.root">
+<span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.root" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns root of the tree self is in. Dynamically calculated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.sameShape">
-<code class="sig-name descname"><span class="pre">sameShape</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.sameShape" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.sameShape">
+<span class="sig-name descname"><span class="pre">sameShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.sameShape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ignores lengths and order, so trees should be sorted first</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.separation">
-<code class="sig-name descname"><span class="pre">separation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.separation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.separation">
+<span class="sig-name descname"><span class="pre">separation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.separation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns number of edges separating self and other.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.setMaxTipTipDistance">
-<code class="sig-name descname"><span class="pre">setMaxTipTipDistance</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.setMaxTipTipDistance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.setMaxTipTipDistance">
+<span class="sig-name descname"><span class="pre">setMaxTipTipDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.setMaxTipTipDistance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Propagate tip distance information up the tree</p>
 <p>This method was originally implemented by Julia Goodrich with the intent
 of being able to determine max tip to tip distances between nodes on 
@@ -832,22 +836,22 @@ specific tips the distance is between</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.setParamValue">
-<code class="sig-name descname"><span class="pre">setParamValue</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.setParamValue" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.setParamValue">
+<span class="sig-name descname"><span class="pre">setParamValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.setParamValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>set’s the value for param at named edge</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.siblings">
-<code class="sig-name descname"><span class="pre">siblings</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.siblings" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.siblings">
+<span class="sig-name descname"><span class="pre">siblings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.siblings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all nodes that are children of the same parent as self.</p>
 <p class="rubric">Notes</p>
 <p>Excludes self from the list. Dynamically calculated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.sorted">
-<code class="sig-name descname"><span class="pre">sorted</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.sorted" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.sorted">
+<span class="sig-name descname"><span class="pre">sorted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.sorted" title="Permalink to this definition">¶</a></dt>
 <dd><p>An equivalent tree sorted into a standard order. If this is not
 specified then alphabetical order is used.  At each node starting from
 root, the algorithm will try to put the descendant which contains the
@@ -855,32 +859,32 @@ lowest scoring tip on the left.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.subset">
-<code class="sig-name descname"><span class="pre">subset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.subset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.subset">
+<span class="sig-name descname"><span class="pre">subset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.subset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns set of names that descend from specified node</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.subsets">
-<code class="sig-name descname"><span class="pre">subsets</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.subsets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.subsets">
+<span class="sig-name descname"><span class="pre">subsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.subsets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all sets of names that come from specified node and its kids</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.tipChildren">
-<code class="sig-name descname"><span class="pre">tipChildren</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.tipChildren" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.tipChildren">
+<span class="sig-name descname"><span class="pre">tipChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.tipChildren" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns direct children of self that are tips.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.tips">
-<code class="sig-name descname"><span class="pre">tips</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.tips" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.tips">
+<span class="sig-name descname"><span class="pre">tips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.tips" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns tips descended from self, [] if self is a tip.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.traverse">
-<code class="sig-name descname"><span class="pre">traverse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self_before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.traverse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.traverse">
+<span class="sig-name descname"><span class="pre">traverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self_before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.traverse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns iterator over descendants. Iterative: safe for large trees.</p>
 <p class="rubric">Notes</p>
 <p>self_before includes each node before its descendants if True.
@@ -896,8 +900,8 @@ would depend on the data in the tree and are not handled here.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.traverse_recursive">
-<code class="sig-name descname"><span class="pre">traverse_recursive</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self_before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.traverse_recursive" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.traverse_recursive">
+<span class="sig-name descname"><span class="pre">traverse_recursive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self_before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.traverse_recursive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns iterator over descendants. IMPORTANT: read notes below.</p>
 <p class="rubric">Notes</p>
 <p>traverse_recursive is slower than traverse, and can lead to stack
@@ -918,8 +922,8 @@ would depend on the data in the tree and are not handled here.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="lingpy.thirdparty.cogent.tree.TreeNode.writeToFile">
-<code class="sig-name descname"><span class="pre">writeToFile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.writeToFile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.TreeNode.writeToFile">
+<span class="sig-name descname"><span class="pre">writeToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.TreeNode.writeToFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save the tree to filename</p>
 <dl class="simple">
 <dt>Arguments:</dt><dd><ul class="simple">
@@ -935,25 +939,25 @@ the filename suffix. All attributes are saved in the xml format.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.thirdparty.cogent.tree.cmp">
-<code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">cmp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.cmp" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.cmp">
+<span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">cmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.cmp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="lingpy.thirdparty.cogent.tree.comb">
-<code class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></code><code class="sig-name descname"><span class="pre">comb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.comb" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="lingpy.thirdparty.cogent.tree.comb">
+<span class="sig-prename descclassname"><span class="pre">lingpy.thirdparty.cogent.tree.</span></span><span class="sig-name descname"><span class="pre">comb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.thirdparty.cogent.tree.comb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Yields each successive combination of n items.</p>
 <p>items: a slicable sequence.
 n: number of items in each combination
 This version from Raymond Hettinger, 2006/03/23</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-lingpy.thirdparty.cogent">
+</section>
+<section id="module-lingpy.thirdparty.cogent">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lingpy.thirdparty.cogent" title="Permalink to this headline">¶</a></h2>
 <p>Simple py3-port of PyCogent’s (<a class="reference external" href="http://pycogent.sourceforge.net">http://pycogent.sourceforge.net</a>) Tree classes.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -1029,7 +1033,7 @@ This version from Raymond Hettinger, 2006/03/23</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>

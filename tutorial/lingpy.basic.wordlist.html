@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Handling Wordlists &#8212; LingPy</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lingpy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lingpy.css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -49,6 +50,9 @@ LingPy
       </ul>
     </div>
 
+<br/><p>This documentation is for version <b>2.6.9.dev0</b>, which is
+  not released yet.</p>
+
   
 
     <div class="document">
@@ -56,9 +60,9 @@ LingPy
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="handling-wordlists">
+  <section id="handling-wordlists">
 <h1>Handling Wordlists<a class="headerlink" href="#handling-wordlists" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-a-word-list">
+<section id="what-is-a-word-list">
 <h2>What is a Word List?<a class="headerlink" href="#what-is-a-word-list" title="Permalink to this headline">¶</a></h2>
 <p>Generally, a word list is a simple tabular data structure in which multiple
 languages are structured in such a way that <strong>words</strong> are ordered in rows and
@@ -124,8 +128,8 @@ it allows to display multiple entry-types for the counterparts of a given
 concept in a given language. Moreover, this format is the basic of the
 <a class="reference internal" href="../reference/lingpy.basic.html#lingpy.basic.wordlist.Wordlist" title="lingpy.basic.wordlist.Wordlist"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wordlist</span></code></a> class in LingPy, which makes it easy
 to handle word lists with multiple entry-types of words.</p>
-</div>
-<div class="section" id="basic-operations-with-help-of-wordlists">
+</section>
+<section id="basic-operations-with-help-of-wordlists">
 <h2>Basic Operations with Help of Wordlists<a class="headerlink" href="#basic-operations-with-help-of-wordlists" title="Permalink to this headline">¶</a></h2>
 <p>The above-given csv-file <a class="reference external" href="examples/harry_potter.csv">harry_potter.csv</a> is available in the test folder of LingPy.
 In order to get it loaded, we simply pass it as first argument to the Wordlist
@@ -195,8 +199,8 @@ using the function <a class="reference internal" href="../reference/lingpy.basic
 <span class="go">  [&#39;h&#39;, &#39;a&#39;, &#39;r&#39;, &#39;i&#39;]]]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="the-wordlist-rc-file">
+</section>
+<section id="the-wordlist-rc-file">
 <h2>The wordlist.rc file<a class="headerlink" href="#the-wordlist-rc-file" title="Permalink to this headline">¶</a></h2>
 <p>The structure of word lists is defined by the configuration file <a class="reference external" href="examples/wordlist.rc">wordlist.rc</a>. This file is
 automatically loaded when initializing a Wordlist instance:</p>
@@ -229,8 +233,8 @@ further define “ipa” as the basic name for those columns and use this name w
 you output the file. It will split all entries in the column “tokens” (or
 “segments”) along spaces and store them as a list, and it will convert all
 “cogid” entries to integers.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -305,7 +309,7 @@ you output the file. It will split all entries in the column “tokens” (or
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Mar 22, 2021<br>
+    on Jun 25, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>
