@@ -67,8 +67,8 @@ LingPy
 <p>Module provides simple basic classes for sequence generation using Markov models.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="lingpy.sequence.generate.MCBasic">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></span><span class="sig-name descname"><span class="pre">MCBasic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></span><span class="sig-name descname"><span class="pre">MCBasic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCBasic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Basic class for creating Markov chains from sequence training data.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -89,7 +89,7 @@ should be either passed as lists or as tuples.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lingpy.sequence.generate.MCPhon">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></span><span class="sig-name descname"><span class="pre">MCPhon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">words</span></em>, <em class="sig-param"><span class="pre">tokens=False</span></em>, <em class="sig-param"><span class="pre">prostrings=[]</span></em>, <em class="sig-param"><span class="pre">classes=False</span></em>, <em class="sig-param"><span class="pre">class_model=&lt;sca-model</span> <span class="pre">&quot;sca&quot;&gt;</span></em>, <em class="sig-param"><span class="pre">**keywords</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.generate.</span></span><span class="sig-name descname"><span class="pre">MCPhon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">words</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prostrings=[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_model=&lt;sca-model</span> <span class="pre">&quot;sca&quot;&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.generate.MCPhon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#lingpy.sequence.generate.MCBasic" title="lingpy.sequence.generate.MCBasic"><code class="xref py py-class docutils literal notranslate"><span class="pre">lingpy.sequence.generate.MCBasic</span></code></a></p>
 <p>Class for the creation of phonetic sequences (“pseudo words”).</p>
 <dl class="field-list">
@@ -147,8 +147,8 @@ openings (both preceding and following context), and positional ngrams (both
 preceding and following context).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="lingpy.sequence.ngrams.NgramModel">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">NgramModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pre_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lingpy.sequence.ngrams.</span></span><span class="sig-name descname"><span class="pre">NgramModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pre_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$$$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lingpy.sequence.ngrams.NgramModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for operation upon sequences using ngrams models.</p>
 <p>This class allows different operations upon sequences after training ngram
 models, such as sequence relative likelihood computation (both per state
@@ -2180,7 +2180,7 @@ this behavior, set the keyword <strong>split_on_tones</strong> to False.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -2222,7 +2222,7 @@ this behavior, set the keyword <strong>split_on_tones</strong> to False.</p>
 
   <div style="max-width:300px;">
     <p style="font-size:70%">Created using <a href="http://sphinx-doc.org">Sphinx</a>. Last updated
-    on Jun 25, 2021<br>
+    on Nov 26, 2021<br>
       This work is licensed under a <a rel="license"
         href="http://creativecommons.org/licenses/by/4.0/">Creative
       Commons Attributio 4.0 International License</a>.</p>
